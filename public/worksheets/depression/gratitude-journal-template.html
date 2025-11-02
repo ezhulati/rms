@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Journal Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        h3 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .logo span span {
+            color: #3498db;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        .instructions {
+            background-color: #f0f7fb;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 25px;
+        }
+        .benefits {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .example {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .prompts {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 3px solid #2980b9;
+        }
+        .journal-entry {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .journal-date {
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .gratitude-item {
+            margin-bottom: 20px;
+        }
+        .reflection {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+        .tips {
+            background-color: #f0f7fb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .mood-tracker {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .mood-label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .mood-scale {
+            display: flex;
+            align-items: center;
+        }
+        .mood-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        .mood-description {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #666;
+        }
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <span>Real<span>Mind</span>Solutions</span>
+    </div>
+
+    <h1>Gratitude Journal Template</h1>
+
+    <div class="intro">
+        <p>Gratitude journaling is a powerful practice that can help shift your focus from negative thoughts to positive aspects of your life. Research shows that regularly practicing gratitude can improve mood, increase resilience, enhance relationships, and even improve physical health. This template will guide you through creating a consistent gratitude practice.</p>
+    </div>
+
+    <div class="benefits">
+        <h2>Benefits of Gratitude Journaling</h2>
+        <ul>
+            <li><strong>Improved mental health:</strong> Reduces symptoms of depression and anxiety</li>
+            <li><strong>Enhanced well-being:</strong> Increases positive emotions and life satisfaction</li>
+            <li><strong>Better sleep:</strong> Helps you fall asleep faster and improve sleep quality</li>
+            <li><strong>Stronger relationships:</strong> Fosters appreciation for others and strengthens social bonds</li>
+            <li><strong>Increased resilience:</strong> Helps you cope better with stress and adversity</li>
+            <li><strong>Reduced materialism:</strong> Shifts focus from what you lack to what you have</li>
+            <li><strong>Physical health benefits:</strong> Associated with lower blood pressure and improved immune function</li>
+        </ul>
+    </div>
+
+    <div class="instructions">
+        <h2>How to Use This Journal</h2>
+        <ol>
+            <li>Set aside 5-15 minutes each day for your gratitude practice, preferably at the same time (morning or evening).</li>
+            <li>Date your entry and note your mood before you begin.</li>
+            <li>Write down 3-5 things you're grateful for. Be specific and try to include different areas of your life.</li>
+            <li>For each item, briefly explain why you're grateful for it and how it affects you.</li>
+            <li>After completing your list, take a moment to reflect on how you feel.</li>
+            <li>Note your mood after the gratitude practice.</li>
+            <li>Be consistent—even on difficult days, try to find small things to appreciate.</li>
+        </ol>
+    </div>
+
+    <div class="prompts">
+        <h2>Gratitude Prompts</h2>
+        <p>If you're having trouble getting started, here are some prompts to inspire your gratitude practice:</p>
+        
+        <h3>Relationships</h3>
+        <ul>
+            <li>Who has helped you recently, and how?</li>
+            <li>What quality do you appreciate in a friend or family member?</li>
+            <li>What meaningful conversation have you had lately?</li>
+        </ul>
+        
+        <h3>Personal Growth</h3>
+        <ul>
+            <li>What skill or ability do you have that you're thankful for?</li>
+            <li>What lesson have you learned recently?</li>
+            <li>What challenge have you overcome that you're grateful for now?</li>
+        </ul>
+        
+        <h3>Simple Pleasures</h3>
+        <ul>
+            <li>What small comfort or convenience did you enjoy today?</li>
+            <li>What beauty in nature did you notice?</li>
+            <li>What made you smile or laugh today?</li>
+        </ul>
+        
+        <h3>Health & Well-being</h3>
+        <ul>
+            <li>What about your physical health are you grateful for?</li>
+            <li>What self-care practice serves you well?</li>
+            <li>What food or meal did you enjoy recently?</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h2>Example Entry</h2>
+        <div class="journal-entry">
+            <div class="journal-date">
+                <span>Date: May 15, 2025</span>
+                <span>Time: Evening</span>
+            </div>
+            
+            <div class="mood-tracker">
+                <span class="mood-label">Mood Before:</span>
+                <div class="mood-scale">
+                    <div class="mood-number">1</div>
+                    <div class="mood-number">2</div>
+                    <div class="mood-number">3</div>
+                    <div class="mood-number" style="background-color: #f0f7fb;">4</div>
+                    <div class="mood-number">5</div>
+                    <div class="mood-number">6</div>
+                    <div class="mood-number">7</div>
+                    <div class="mood-number">8</div>
+                    <div class="mood-number">9</div>
+                    <div class="mood-number">10</div>
+                </div>
+            </div>
+            <div class="mood-description">
+                <span>Low</span>
+                <span>Neutral</span>
+                <span>High</span>
+            </div>
+            
+            <h3>Today I'm grateful for:</h3>
+            
+            <div class="gratitude-item">
+                <strong>1. The phone call with my sister</strong>
+                <p>I'm grateful that she took time out of her busy day to check in on me. Our conversation made me feel connected and reminded me that I have people who care about me, even when we're far apart. Her jokes about her new job made me laugh for the first time today.</p>
+            </div>
+            
+            <div class="gratitude-item">
+                <strong>2. The warm cup of tea I had this afternoon</strong>
+                <p>I'm thankful for that moment of calm in an otherwise hectic day. The warmth of the mug in my hands and the soothing flavor helped me pause and take a few deep breaths. It was a small act of self-care that made a difference.</p>
+            </div>
+            
+            <div class="gratitude-item">
+                <strong>3. My comfortable bed</strong>
+                <p>I'm grateful for having a safe, warm place to rest at the end of each day. I often take this basic comfort for granted, but many people don't have this security. The soft pillows and warm blankets help me get the rest I need.</p>
+            </div>
+            
+            <div class="reflection">
+                <h3>Reflection:</h3>
+                <p>Writing these down has helped me notice the good things that happened today, even though it was a challenging day overall. I'm realizing that there are always small moments of connection and comfort, even on difficult days.</p>
+            </div>
+            
+            <div class="mood-tracker">
+                <span class="mood-label">Mood After:</span>
+                <div class="mood-scale">
+                    <div class="mood-number">1</div>
+                    <div class="mood-number">2</div>
+                    <div class="mood-number">3</div>
+                    <div class="mood-number">4</div>
+                    <div class="mood-number">5</div>
+                    <div class="mood-number" style="background-color: #f0f7fb;">6</div>
+                    <div class="mood-number">7</div>
+                    <div class="mood-number">8</div>
+                    <div class="mood-number">9</div>
+                    <div class="mood-number">10</div>
+                </div>
+            </div>
+            <div class="mood-description">
+                <span>Low</span>
+                <span>Neutral</span>
+                <span>High</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>Your Gratitude Journal</h2>
+
+    <div class="journal-entry">
+        <div class="journal-date">
+            <span>Date: <input type="text" style="width: 150px; padding: 5px;"></span>
+            <span>Time: <input type="text" style="width: 150px; padding: 5px;"></span>
+        </div>
+        
+        <div class="mood-tracker">
+            <span class="mood-label">Mood Before:</span>
+            <div class="mood-scale">
+                <div class="mood-number">1</div>
+                <div class="mood-number">2</div>
+                <div class="mood-number">3</div>
+                <div class="mood-number">4</div>
+                <div class="mood-number">5</div>
+                <div class="mood-number">6</div>
+                <div class="mood-number">7</div>
+                <div class="mood-number">8</div>
+                <div class="mood-number">9</div>
+                <div class="mood-number">10</div>
+            </div>
+        </div>
+        <div class="mood-description">
+            <span>Low</span>
+            <span>Neutral</span>
+            <span>High</span>
+        </div>
+        
+        <h3>Today I'm grateful for:</h3>
+        
+        <div class="gratitude-item">
+            <strong>1.</strong>
+            <textarea placeholder="What are you grateful for? Why does this matter to you?"></textarea>
+        </div>
+        
+        <div class="gratitude-item">
+            <strong>2.</strong>
+            <textarea placeholder="What are you grateful for? Why does this matter to you?"></textarea>
+        </div>
+        
+        <div class="gratitude-item">
+            <strong>3.</strong>
+            <textarea placeholder="What are you grateful for? Why does this matter to you?"></textarea>
+        </div>
+        
+        <div class="gratitude-item">
+            <strong>4. (Optional)</strong>
+            <textarea placeholder="What are you grateful for? Why does this matter to you?"></textarea>
+        </div>
+        
+        <div class="gratitude-item">
+            <strong>5. (Optional)</strong>
+            <textarea placeholder="What are you grateful for? Why does this matter to you?"></textarea>
+        </div>
+        
+        <div class="reflection">
+            <h3>Reflection:</h3>
+            <textarea placeholder="How do you feel after writing down what you're grateful for? Did you notice any shift in your mood or perspective?"></textarea>
+        </div>
+        
+        <div class="mood-tracker">
+            <span class="mood-label">Mood After:</span>
+            <div class="mood-scale">
+                <div class="mood-number">1</div>
+                <div class="mood-number">2</div>
+                <div class="mood-number">3</div>
+                <div class="mood-number">4</div>
+                <div class="mood-number">5</div>
+                <div class="mood-number">6</div>
+                <div class="mood-number">7</div>
+                <div class="mood-number">8</div>
+                <div class="mood-number">9</div>
+                <div class="mood-number">10</div>
+            </div>
+        </div>
+        <div class="mood-description">
+            <span>Low</span>
+            <span>Neutral</span>
+            <span>High</span>
+        </div>
+    </div>
+
+    <div class="tips">
+        <h2>Tips for a Meaningful Gratitude Practice</h2>
+        <ul>
+            <li><strong>Be specific:</strong> Instead of "I'm grateful for my friend," try "I'm grateful for my friend Sarah who listened to me for an hour yesterday when I was upset."</li>
+            <li><strong>Focus on people:</strong> Expressing gratitude for people in your life tends to have a stronger positive effect than material things.</li>
+            <li><strong>Surprise gratitude:</strong> Notice the unexpected positive events or things you might normally take for granted.</li>
+            <li><strong>Write in detail:</strong> Elaborate on why you're grateful and how it affects you.</li>
+            <li><strong>Focus on quality over quantity:</strong> Writing thoughtfully about a few things is more beneficial than listing many items without reflection.</li>
+            <li><strong>Consider subtraction:</strong> Sometimes it helps to imagine what your life would be like without certain people or things.</li>
+            <li><strong>Avoid repetition:</strong> Try to identify new things to be grateful for each day to keep the practice fresh.</li>
+            <li><strong>Make it a habit:</strong> Consistency is key—try to practice at the same time each day.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 RealMindSolutions | For personal use only | This worksheet is not a substitute for professional mental health treatment</p>
+    </div>
+
+    <div class="no-print" style="text-align: center; margin-top: 30px;">
+        <button onclick="window.print();" style="padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Print Worksheet</button>
+    </div>
+
+    <script>
+        // Simple script to highlight selected mood numbers
+        document.addEventListener('DOMContentLoaded', function() {
+            const moodNumbers = document.querySelectorAll('.mood-number');
+            
+            moodNumbers.forEach(number => {
+                number.addEventListener('click', function() {
+                    // Clear all selections in this mood scale
+                    const parentScale = this.parentElement;
+                    parentScale.querySelectorAll('.mood-number').forEach(num => {
+                        num.style.backgroundColor = '';
+                    });
+                    
+                    // Highlight selected number
+                    this.style.backgroundColor = '#f0f7fb';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

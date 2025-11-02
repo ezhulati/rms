@@ -1,0 +1,123 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import Button from '../../../components/Button';
+import HowWeReviewed from '../../../components/HowWeReviewed';
+
+const OnlineTherapyComReview: React.FC = () => {
+  // Render stars based on rating
+  const renderStars = (rating: number) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= Math.floor(rating)) {
+        stars.push(<Star key={i} className="h-5 w-5 fill-current" />);
+      } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+        stars.push(<Star key={i} className="h-5 w-5 fill-current" />);
+      } else {
+        stars.push(<Star key={i} className="h-5 w-5" strokeWidth={1} />);
+      }
+    }
+    return <div className="flex text-yellow-400">{stars}</div>;
+  };
+
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div className="md:flex">
+            <div className="md:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                alt="Online-Therapy.com Review" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 md:w-1/2">
+              <h1 className="text-3xl font-bold text-gray-800 mb-4">Online-Therapy.com Review</h1>
+              <div className="flex items-center mb-4">
+                <div className="mr-2">
+                  {renderStars(4)}
+                </div>
+                <span className="text-gray-600 font-medium">4.0/5</span>
+              </div>
+              <p className="text-xl text-gray-600 mb-6">
+                A structured CBT-focused platform with comprehensive self-help tools and resources
+              </p>
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-2">Price</h3>
+                  <p className="text-gray-600">$40-$88/week</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-2">Insurance</h3>
+                  <p className="text-gray-600">Not accepted</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-2">Therapy Types</h3>
+                  <p className="text-gray-600">CBT, Messaging, Video</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-2">Medication</h3>
+                  <p className="text-gray-600">Not available</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Button 
+                  as="a" 
+                  href="https://www.online-therapy.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  variant="primary"
+                >
+                  Visit Online-Therapy.com
+                </Button>
+                <Button 
+                  as={Link} 
+                  to="/tools/matchers/therapy-platform-matcher" 
+                  variant="outline"
+                >
+                  Find Your Perfect Match
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How We Reviewed */}
+        <HowWeReviewed />
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
+          <h2 className="text-2xl font-bold mb-4">Ready to Try Online-Therapy.com?</h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Start your journey to better mental health with a structured CBT approach and comprehensive self-help tools.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              as="a"
+              href="https://www.online-therapy.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              variant="light"
+              size="lg"
+            >
+              Visit Online-Therapy.com
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Find Your Perfect Match
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OnlineTherapyComReview;

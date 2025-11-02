@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Breathing Log | RealMindSolutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #3949ab;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #5c6bc0;
+            margin-top: 30px;
+            font-size: 22px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .intro {
+            background-color: #f5f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .instructions {
+            background-color: #f0f4ff;
+            padding: 15px;
+            border-left: 4px solid #3949ab;
+            margin-bottom: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e8eaf6;
+            color: #3949ab;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        .log-section {
+            margin-bottom: 40px;
+        }
+        .reflection-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            min-height: 100px;
+            border-radius: 4px;
+        }
+        .print-button {
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #303f9f;
+        }
+        .tips {
+            background-color: #e8eaf6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .tips h3 {
+            margin-top: 0;
+            color: #3949ab;
+        }
+        .tips ul {
+            margin-bottom: 0;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                padding: 0;
+                font-size: 12pt;
+            }
+            .reflection-box {
+                min-height: 150px;
+            }
+            .log-table {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <button onclick="window.print()" class="print-button">Print This Log</button>
+    </div>
+
+    <h1>Mindful Breathing Log</h1>
+
+    <div class="intro">
+        <p>This log is designed to help you track your daily mindful breathing practice and observe its effects on your mental and physical well-being. Regular mindful breathing can help reduce stress, improve focus, and promote emotional regulation.</p>
+    </div>
+
+    <div class="instructions no-print">
+        <h2>How to Use This Log</h2>
+        <p>1. Set aside time each day for your mindful breathing practice.</p>
+        <p>2. After each session, record the details in the daily log table.</p>
+        <p>3. At the end of each week, reflect on your overall experience and note any patterns or changes.</p>
+        <p>4. Print this log or save it digitally to track your progress over time.</p>
+    </div>
+
+    <div class="log-section">
+        <h2>Daily Mindful Breathing Log</h2>
+        <table class="log-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>Technique Used</th>
+                    <th>Before Practice<br>(1-10 scale)</th>
+                    <th>After Practice<br>(1-10 scale)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="log-section">
+        <h2>Weekly Reflection</h2>
+        <p>Take a moment to reflect on your mindful breathing practice this week. Consider the following questions:</p>
+        <ul>
+            <li>What patterns did you notice in how you felt before and after practice?</li>
+            <li>Which breathing techniques worked best for you?</li>
+            <li>What challenges did you face in maintaining your practice?</li>
+            <li>How has regular mindful breathing affected your overall well-being?</li>
+        </ul>
+        <div class="reflection-box"></div>
+    </div>
+
+    <div class="log-section">
+        <h2>Monthly Progress</h2>
+        <p>At the end of each month, note any significant changes or improvements you've experienced:</p>
+        <div class="reflection-box"></div>
+    </div>
+
+    <div class="tips no-print">
+        <h3>Common Mindful Breathing Techniques</h3>
+        <ul>
+            <li><strong>4-7-8 Breathing:</strong> Inhale for 4 counts, hold for 7 counts, exhale for 8 counts</li>
+            <li><strong>Box Breathing:</strong> Inhale for 4 counts, hold for 4 counts, exhale for 4 counts, hold for 4 counts</li>
+            <li><strong>Diaphragmatic Breathing:</strong> Deep breathing that engages the diaphragm (belly breathing)</li>
+            <li><strong>Alternate Nostril Breathing:</strong> Alternating breath between left and right nostrils</li>
+            <li><strong>Counted Breathing:</strong> Simply counting your breaths (typically from 1 to 10, then starting over)</li>
+        </ul>
+    </div>
+
+    <div class="tips no-print">
+        <h3>Tips for Consistent Practice</h3>
+        <ul>
+            <li>Practice at the same time each day to build a habit</li>
+            <li>Start with just 5 minutes and gradually increase your time</li>
+            <li>Use a gentle timer to keep track of your practice duration</li>
+            <li>Find a quiet, comfortable space where you won't be disturbed</li>
+            <li>If you miss a day, don't be discouraged - simply resume the next day</li>
+            <li>Experiment with different techniques to find what works best for you</li>
+        </ul>
+    </div>
+
+    <footer class="no-print" style="margin-top: 40px; text-align: center; font-size: 14px; color: #666;">
+        <p>© 2025 RealMindSolutions. This worksheet is for personal use only.</p>
+    </footer>
+</body>
+</html>

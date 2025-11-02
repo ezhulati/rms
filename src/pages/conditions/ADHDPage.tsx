@@ -1,0 +1,299 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Activity, AlertCircle, CheckCircle, XCircle, Clock, Zap } from 'lucide-react';
+import Button from '../../components/Button';
+
+const ADHDPage = () => {
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Attention-Deficit/Hyperactivity Disorder (ADHD)</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Understanding ADHD, its symptoms, treatment options, and how therapy can help manage this common neurodevelopmental condition.
+          </p>
+        </div>
+
+        {/* Overview Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Brain className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">What is ADHD?</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-4">
+            Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning or development. These patterns are more frequent and severe than typically observed in individuals at a comparable level of development.
+          </p>
+          
+          <p className="text-gray-700 mb-4">
+            ADHD affects approximately 5-7% of children and about 2.5% of adults worldwide. While often first identified in childhood, ADHD can persist throughout adolescence and adulthood, though symptoms may change over time.
+          </p>
+          
+          <div className="bg-indigo-50 rounded-lg p-6 mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-3">Key Facts About ADHD</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Affects approximately 5-7% of children and 2.5% of adults worldwide</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>More commonly diagnosed in males, though this may reflect diagnostic biases</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Has a strong genetic component, with heritability estimated at around 74%</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Involves differences in brain structure, function, and neurotransmitter systems</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Highly treatable with a combination of medication, therapy, and support strategies</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p className="text-gray-700">
+            While ADHD presents challenges, it's also associated with many positive traits, including creativity, enthusiasm, energy, and the ability to hyperfocus on topics of interest.
+          </p>
+        </div>
+
+        {/* Types and Symptoms Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Activity className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Types and Symptoms</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            According to the DSM-5, ADHD is categorized into three presentation types based on the predominant symptom pattern:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Predominantly Inattentive</h3>
+              <p className="text-gray-600 mb-4">
+                Characterized by difficulty sustaining attention, following through on tasks, and organizing activities.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Often fails to give close attention to details</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Difficulty sustaining attention in tasks</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Struggles to follow through on instructions</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Predominantly Hyperactive-Impulsive</h3>
+              <p className="text-gray-600 mb-4">
+                Characterized by excessive movement, restlessness, and hasty actions without thought.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Fidgets or taps hands or feet</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Leaves seat when remaining seated is expected</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Talks excessively</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Combined Presentation</h3>
+              <p className="text-gray-600 mb-4">
+                Meets criteria for both inattentive and hyperactive-impulsive presentations.
+              </p>
+              <div className="bg-white rounded-lg p-4">
+                <h4 className="font-bold text-gray-800 mb-2">Diagnostic Criteria</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <span>Six or more symptoms from both categories for children</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <span>Five or more symptoms for adults (17+)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <AlertCircle className="h-5 w-5 text-yellow-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-yellow-700">
+                  <strong>Important Note:</strong> Only qualified healthcare professionals can diagnose ADHD. If you suspect you or someone you know may have ADHD, seek an evaluation from a professional experienced in ADHD assessment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Zap className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Treatment Approaches</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            ADHD is highly treatable, and many individuals experience significant improvement with appropriate interventions. The most effective approach typically involves a combination of treatments tailored to the individual's specific needs.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 className="text-lg font-bold text-gray-800 mb-3">Medication</h4>
+              <p className="text-gray-600 mb-4">
+                Medication is often a first-line treatment for ADHD, particularly for moderate to severe cases. Medications work by affecting neurotransmitters in the brain to improve attention and reduce hyperactivity and impulsivity.
+              </p>
+              
+              <div className="bg-indigo-50 rounded-lg p-6">
+                <h5 className="font-bold text-gray-800 mb-2">Common ADHD Medications</h5>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <div>
+                      <span className="font-medium">Stimulants</span>
+                      <p className="text-sm text-gray-600">Methylphenidate (Ritalin, Concerta) and Amphetamines (Adderall, Vyvanse)</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <div>
+                      <span className="font-medium">Non-stimulants</span>
+                      <p className="text-sm text-gray-600">Atomoxetine (Strattera), Guanfacine (Intuniv), and Clonidine (Kapvay)</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold text-gray-800 mb-3">Psychotherapy</h4>
+              <p className="text-gray-600 mb-4">
+                Various therapeutic approaches can help individuals with ADHD develop coping strategies, improve organizational skills, and address emotional and social challenges.
+              </p>
+              
+              <div className="bg-indigo-50 rounded-lg p-6">
+                <h5 className="font-bold text-gray-800 mb-2">Effective Therapeutic Approaches</h5>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">Cognitive Behavioral Therapy (CBT)</span>
+                      <p className="text-sm text-gray-600">Helps address negative thought patterns and develop coping strategies</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">ADHD Coaching</span>
+                      <p className="text-sm text-gray-600">Focuses on practical skills, organization, and goal-setting</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-green-50 border-l-4 border-green-400 p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-green-700">
+                  <strong>Treatment Success:</strong> Research shows that a multimodal approach—combining medication (when appropriate) with behavioral interventions and environmental supports—is most effective for managing ADHD.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Online Therapy Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Clock className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Online Therapy for ADHD</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            Online therapy has emerged as a valuable option for individuals with ADHD, offering flexibility and accessibility that can be particularly beneficial for those who struggle with traditional appointment scheduling and transportation.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Benefits for ADHD</h3>
+              
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Reduced Barriers:</strong> Eliminates transportation challenges</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Flexible Scheduling:</strong> More appointment options</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Specialist Access:</strong> Connect with ADHD specialists regardless of location</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Considerations</h3>
+              
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Medication Management:</strong> Regulations vary by state/country</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Distractions:</strong> Home environment may contain more distractions</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Technical Issues:</strong> Connectivity problems can disrupt sessions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+            >
+              Find the Right Online Therapy Platform
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ADHDPage;

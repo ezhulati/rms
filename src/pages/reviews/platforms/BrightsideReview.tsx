@@ -1,0 +1,714 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+import HowWeReviewed from '../../../components/HowWeReviewed';
+import Button from '../../../components/Button';
+import RatingBreakdown from '../../../components/RatingBreakdown';
+
+const BrightsideReview = () => {
+  // Rating categories
+  const ratingCategories = [
+    {
+      name: "Therapist Qualifications",
+      score: 4.5,
+      description: "Licensed professionals with expertise in depression and anxiety treatment."
+    },
+    {
+      name: "Platform Usability",
+      score: 4.0,
+      description: "Clean interface with good treatment tracking, though some features could be more intuitive."
+    },
+    {
+      name: "Communication Options",
+      score: 3.5,
+      description: "Video sessions and messaging available, but less flexible than some competitors."
+    },
+    {
+      name: "Privacy & Security",
+      score: 4.5,
+      description: "Strong security measures and clear privacy policies for sensitive health data."
+    },
+    {
+      name: "Value & Affordability",
+      score: 4.0,
+      description: "Good value with insurance coverage, though higher pricing without insurance."
+    },
+    {
+      name: "Client Satisfaction",
+      score: 4.2,
+      description: "High satisfaction rates for depression and anxiety treatment outcomes."
+    }
+  ];
+
+  // Render stars based on rating
+  const renderStars = (rating: number) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= Math.floor(rating)) {
+        stars.push(<Star key={i} className="h-5 w-5 fill-current" />);
+      } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+        stars.push(<Star key={i} className="h-5 w-5 fill-current" />);
+      } else {
+        stars.push(<Star key={i} className="h-5 w-5" strokeWidth={1} />);
+      }
+    }
+    return <div className="flex text-yellow-400">{stars}</div>;
+  };
+
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div className="md:flex">
+            <div className="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Brightside Review" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 md:w-2/3">
+              <div className="flex flex-wrap items-center justify-between mb-4">
+                <h1 className="text-3xl font-bold text-gray-800 mb-2 md:mb-0">Brightside Review</h1>
+                <div className="flex items-center">
+                  <div className="mr-2">
+                    {renderStars(4.2)}
+                  </div>
+                  <span className="text-lg font-bold text-gray-700">4.2/5</span>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 text-lg mb-6">
+                Brightside is a specialized online mental health platform focusing on depression and anxiety treatment through a data-driven approach combining therapy and medication management.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-3">Pros</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Data-driven treatment approach</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Specialized in depression/anxiety</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Insurance coverage available</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Integrated medication management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Evidence-based treatment protocols</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-3">Cons</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Higher pricing without insurance</span>
+                    </li>
+                    <li className="flex items-start">
+                      <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Limited to depression/anxiety focus</span>
+                    </li>
+                    <li className="flex items-start">
+                      <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Less flexible scheduling</span>
+                    </li>
+                    <li className="flex items-start">
+                      <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Not available in all states</span>
+                    </li>
+                    <li className="flex items-start">
+                      <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Fewer therapist options</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  as="a"
+                  href="https://www.brightside.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  variant="primary"
+                  icon={ExternalLink}
+                >
+                  Visit Brightside
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/compare/platforms/talkspace-vs-brightside" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Compare with Talkspace
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Rating Breakdown */}
+        <div className="mb-8">
+          <RatingBreakdown 
+            overallRating={4.2} 
+            categories={ratingCategories}
+            showDescription={true}
+          />
+        </div>
+
+        {/* Quick Facts */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Brightside at a Glance</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <DollarSign className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Pricing</h3>
+                <p className="text-gray-600">$95-$349/month</p>
+                <p className="text-sm text-gray-500 mt-1">Insurance coverage available</p>
+              </div>
+            </div>
+            
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageSquare className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Communication Options</h3>
+                <div className="flex space-x-2 mb-1">
+                  <MessageSquare className="h-4 w-4 text-indigo-600" title="Messaging" />
+                  <Video className="h-4 w-4 text-indigo-600" title="Video" />
+                </div>
+                <p className="text-sm text-gray-500">Weekly video sessions + messaging</p>
+              </div>
+            </div>
+            
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Calendar className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Subscription</h3>
+                <p className="text-gray-600">Monthly billing, cancel anytime</p>
+                <p className="text-sm text-gray-500 mt-1">Multiple plan options</p>
+              </div>
+            </div>
+            
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Insurance</h3>
+                <p className="text-gray-600">Many major providers accepted</p>
+                <p className="text-sm text-gray-500 mt-1">Coverage varies by state</p>
+              </div>
+            </div>
+            
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Provider Network</h3>
+                <p className="text-gray-600">Licensed therapists & psychiatrists</p>
+                <p className="text-sm text-gray-500 mt-1">Depression/anxiety specialists</p>
+              </div>
+            </div>
+            
+            <div className="flex">
+              <div className="mr-4">
+                <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain className="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Best For</h3>
+                <p className="text-gray-600">Depression and anxiety treatment</p>
+                <p className="text-sm text-gray-500 mt-1">Data-driven approach</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Full Review */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Full Brightside Review</h2>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">What is Brightside?</h3>
+            <p className="text-gray-600 mb-4">
+              Brightside is a specialized online mental health platform that focuses on treating depression and anxiety using a data-driven approach. The platform combines therapy with medication management, using technology to track treatment progress and adjust care plans accordingly.
+            </p>
+            <p className="text-gray-600">
+              What sets Brightside apart is their precision prescribing technology and structured treatment programs specifically designed for mood disorders. The platform uses data analytics to help providers make more informed decisions about treatment approaches and medication choices.
+            </p>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">How Brightside Works</h3>
+            
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h4 className="font-bold text-gray-800 mb-3">Getting Started</h4>
+              <ol className="list-decimal pl-5 space-y-2 text-gray-600">
+                <li>Complete comprehensive assessment about symptoms and history</li>
+                <li>Choose between therapy, medication, or combined care</li>
+                <li>Schedule initial provider consultation</li>
+                <li>Receive personalized treatment plan</li>
+                <li>Begin regular therapy sessions and/or medication management</li>
+              </ol>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Treatment Programs</h4>
+                <p className="text-gray-600 mb-3">
+                  Brightside offers three main treatment options:
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Therapy only ($95/month)</li>
+                  <li>Medication only ($145/month)</li>
+                  <li>Comprehensive Care ($349/month)</li>
+                </ul>
+                <p className="text-gray-600 mt-3">
+                  Each program includes regular check-ins and progress tracking through their proprietary PrecisionRx technology.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Treatment Approach</h4>
+                <p className="text-gray-600 mb-3">
+                  Brightside uses evidence-based approaches including:
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Structured CBT program</li>
+                  <li>Data-driven medication management</li>
+                  <li>Regular progress monitoring</li>
+                  <li>Integrated care coordination</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="font-bold text-gray-800 mb-3">PrecisionRx Technology</h4>
+              <p className="text-gray-600 mb-3">
+                Brightside's unique feature is their PrecisionRx technology, which:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Analyzes patient data to guide treatment decisions</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Tracks treatment response and symptom changes</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Helps providers make more informed medication choices</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Provides ongoing treatment optimization recommendations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Pricing & Value</h3>
+            
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                <h4 className="font-bold text-gray-800">Subscription Plans</h4>
+              </div>
+              <div className="p-4">
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-bold text-gray-800">Therapy Plan</h5>
+                    <p className="text-gray-600 mb-2">$95/month</p>
+                    <ul className="list-disc pl-5 text-sm text-gray-600">
+                      <li>Weekly video sessions</li>
+                      <li>Unlimited messaging</li>
+                      <li>Progress tracking</li>
+                      <li>Self-care tools</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 className="font-bold text-gray-800">Medication Plan</h5>
+                    <p className="text-gray-600 mb-2">$145/month</p>
+                    <ul className="list-disc pl-5 text-sm text-gray-600">
+                      <li>Psychiatric evaluation</li>
+                      <li>Monthly provider check-ins</li>
+                      <li>Medication delivery</li>
+                      <li>PrecisionRx technology</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 className="font-bold text-gray-800">Comprehensive Care</h5>
+                    <p className="text-gray-600 mb-2">$349/month</p>
+                    <ul className="list-disc pl-5 text-sm text-gray-600">
+                      <li>All Therapy Plan features</li>
+                      <li>All Medication Plan features</li>
+                      <li>Integrated care coordination</li>
+                      <li>Enhanced progress tracking</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 className="font-bold text-gray-800">Insurance Coverage</h4>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600">
+                    Brightside works with several insurance providers, including:
+                  </p>
+                  <ul className="list-disc pl-5 mt-2 text-gray-600">
+                    <li>Cigna</li>
+                    <li>Aetna</li>
+                    <li>United Healthcare</li>
+                    <li>Select BCBS plans</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 className="font-bold text-gray-800">Additional Costs</h4>
+                </div>
+                <div className="p-4">
+                  <ul className="space-y-2 text-gray-600">
+                    <li>
+                      <strong>Medication costs:</strong> Not included in subscription
+                    </li>
+                    <li>
+                      <strong>Insurance copays:</strong> Vary by provider
+                    </li>
+                    <li>
+                      <strong>Cancellation fees:</strong> None with notice
+                    </li>
+                    <li>
+                      <strong>Initial evaluation:</strong> Included in subscription
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <p className="text-gray-600 mb-3">
+                Brightside's value proposition depends on your needs and insurance coverage:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Excellent value for those with insurance coverage seeking specialized depression/anxiety treatment</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Good value for combined therapy and medication management in one platform</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Higher cost but potentially better outcomes due to specialized approach</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Less value for those seeking general therapy or treatment for other conditions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Provider Qualifications</h3>
+            
+            <p className="text-gray-600 mb-4">
+              All Brightside providers are licensed mental health professionals with:
+            </p>
+            
+            <ul className="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+              <li>Advanced degrees in their field</li>
+              <li>State licensure and certifications</li>
+              <li>Specialized training in depression/anxiety treatment</li>
+              <li>Additional training in Brightside's treatment protocols</li>
+            </ul>
+            
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="font-bold text-gray-800 mb-3">Provider Types</h4>
+              <p className="text-gray-600 mb-3">
+                Brightside maintains two types of providers:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h5 className="font-bold text-gray-800">Therapists</h5>
+                    <p className="text-gray-600">Licensed counselors and therapists specializing in CBT for depression and anxiety</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h5 className="font-bold text-gray-800">Psychiatric Providers</h5>
+                    <p className="text-gray-600">Board-certified psychiatrists and psychiatric nurse practitioners for medication management</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">User Experience</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Platform & Interface</h4>
+                <p className="text-gray-600">
+                  Brightside offers a clean, professional interface focused on treatment tracking and progress monitoring. The platform includes helpful visualizations of symptom changes and treatment response, though some users may find the structured approach less flexible than other platforms.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Privacy & Security</h4>
+                <p className="text-gray-600">
+                  The platform maintains high security standards with HIPAA compliance, data encryption, and secure video sessions. Their privacy policies are clear and comprehensive, particularly regarding medication-related data handling.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="font-bold text-gray-800 mb-3">Treatment Effectiveness</h4>
+              <p className="text-gray-600 mb-3">
+                Brightside reports strong outcomes for their treatment approach:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>86% of members show significant improvement in depression symptoms</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>71% achieve remission within 12 weeks</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Better medication response rates through PrecisionRx technology</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Consistent progress tracking and treatment adjustments</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Who Brightside Is Best For</h3>
+            
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div className="bg-green-50 p-4 border-b border-gray-200">
+                <h4 className="font-bold text-gray-800">Ideal For</h4>
+              </div>
+              <div className="p-4">
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>Individuals with depression or anxiety</strong> seeking specialized, evidence-based treatment</li>
+                  <li><strong>Those who prefer a data-driven approach</strong> to mental health treatment</li>
+                  <li><strong>People needing both therapy and medication</strong> in an integrated platform</li>
+                  <li><strong>Insurance holders</strong> looking for covered mental health care</li>
+                  <li><strong>Those who value structured treatment</strong> with regular progress tracking</li>
+                  <li><strong>Individuals seeking precision medication management</strong> for mood disorders</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <div className="bg-red-50 p-4 border-b border-gray-200">
+                <h4 className="font-bold text-gray-800">Not Recommended For</h4>
+              </div>
+              <div className="p-4">
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>Those seeking treatment for other mental health conditions</strong> beyond depression and anxiety</li>
+                  <li><strong>People who prefer a more flexible, less structured approach</strong> to therapy</li>
+                  <li><strong>Individuals seeking the lowest-cost option</strong> without insurance coverage</li>
+                  <li><strong>Those needing couples or family therapy</strong></li>
+                  <li><strong>People in crisis</strong> or with severe mental health conditions requiring intensive care</li>
+                  <li><strong>Individuals in states where Brightside isn't available</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Alternatives to Brightside</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 className="font-bold text-gray-800">Talkspace</h4>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 mb-3">
+                    <strong>Best for:</strong> More flexible care with insurance
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Price:</strong> $65-$99/week
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    Offers more therapy approaches and communication options, with insurance coverage and psychiatric services.
+                  </p>
+                  <Link to="/reviews/platforms/talkspace" className="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Talkspace review <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 className="font-bold text-gray-800">Cerebral</h4>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Combined therapy and medication
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Price:</strong> $85-$325/month
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    Offers therapy, medication management, and coaching services in one platform with various subscription plans.
+                  </p>
+                  <Link to="/reviews/platforms/cerebral" className="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Cerebral review <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 className="font-bold text-gray-800">BetterHelp</h4>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 mb-3">
+                    <strong>Best for:</strong> More comprehensive care
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Price:</strong> $60-$90/week
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    Larger platform with more features and therapist options, but higher pricing.
+                  </p>
+                  <Link to="/reviews/platforms/betterhelp" className="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read BetterHelp review <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Final Verdict</h3>
+            
+            <p className="text-gray-600 mb-4">
+              Brightside earns our 4.2/5 rating for providing a specialized, data-driven approach to treating depression and anxiety. The platform excels in combining therapy with medication management and using technology to optimize treatment outcomes.
+            </p>
+            
+            <p className="text-gray-600 mb-4">
+              While the platform's focus on specific conditions and structured approach may not suit everyone, it provides excellent value for those seeking targeted treatment for depression or anxiety, especially with insurance coverage. The PrecisionRx technology and comprehensive care model demonstrate a commitment to evidence-based treatment.
+            </p>
+            
+            <p className="text-gray-600">
+              Brightside is best suited for individuals specifically seeking treatment for depression or anxiety who appreciate a data-driven, structured approach to mental health care. The combination of therapy, medication management, and progress tracking makes it particularly effective for those who want comprehensive, measurable care. However, those seeking treatment for other conditions or preferring a more flexible approach should consider alternatives.
+            </p>
+          </div>
+        </div>
+        
+        {/* How We Review Section */}
+        <HowWeReviewed />
+        
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
+          <h2 className="text-2xl font-bold mb-4">Ready to Start Your Mental Health Journey?</h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to discover if Brightside or another platform is the best fit for your needs.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as="a"
+              href="https://www.brightside.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              variant="outline"
+              size="lg"
+              icon={ExternalLink}
+              className="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Visit Brightside
+            </Button>
+          </div>
+        </div>
+        
+        {/* Related Reviews */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Related Reviews</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link to="/reviews/platforms/talkspace" className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 className="font-bold text-gray-800 mb-2">Talkspace Review</h3>
+              <p className="text-gray-600 text-sm">Compare with another platform offering insurance coverage and medication management.</p>
+            </Link>
+            <Link to="/reviews/platforms/cerebral" className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 className="font-bold text-gray-800 mb-2">Cerebral Review</h3>
+              <p className="text-gray-600 text-sm">Explore another platform combining therapy and medication management.</p>
+            </Link>
+            <Link to="/reviews/platforms/betterhelp" className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 className="font-bold text-gray-800 mb-2">BetterHelp Review</h3>
+              <p className="text-gray-600 text-sm">See how a larger therapy platform compares.</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BrightsideReview;

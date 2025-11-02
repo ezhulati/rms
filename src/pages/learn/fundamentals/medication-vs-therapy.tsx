@@ -1,0 +1,485 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, AlertCircle, Brain, Pill, MessageSquare, Scale, Clock, Zap, Heart } from 'lucide-react';
+import Button from '../../../components/Button';
+
+const MedicationVsTherapy = () => {
+  // Treatment approaches data
+  const approaches = [
+    {
+      name: 'Medication',
+      icon: Pill,
+      description: 'Psychiatric medications work by affecting brain chemicals that regulate emotions and thought patterns.',
+      bestFor: [
+        'Moderate to severe mental health conditions',
+        'Conditions with strong biological components',
+        'When symptoms significantly impair functioning',
+        'As part of a comprehensive treatment plan'
+      ],
+      pros: [
+        'Can provide relatively quick symptom relief',
+        'May correct chemical imbalances in the brain',
+        'Often essential for severe conditions',
+        'Can make therapy more effective by reducing symptoms'
+      ],
+      cons: [
+        'Potential side effects',
+        'May not address underlying psychological issues',
+        'Finding the right medication can take time',
+        'Some medications require ongoing monitoring'
+      ]
+    },
+    {
+      name: 'Psychotherapy',
+      icon: MessageSquare,
+      description: 'Psychotherapy involves talking with a mental health professional to address symptoms, develop coping skills, and resolve underlying issues.',
+      bestFor: [
+        'Mild to moderate mental health conditions',
+        'Processing trauma or difficult life events',
+        'Developing coping skills and resilience',
+        'Addressing relationship or behavioral patterns'
+      ],
+      pros: [
+        'Addresses underlying causes, not just symptoms',
+        'Teaches long-term coping skills',
+        'No physical side effects',
+        'Benefits often continue after treatment ends'
+      ],
+      cons: [
+        'May take longer to see results',
+        'Requires active participation and commitment',
+        'May not be sufficient alone for severe symptoms',
+        'Success depends on therapist-client relationship'
+      ]
+    },
+    {
+      name: 'Combined Approach',
+      icon: Scale,
+      description: 'Using both medication and therapy together, often providing better outcomes than either treatment alone for many conditions.',
+      bestFor: [
+        'Moderate to severe depression or anxiety',
+        'Bipolar disorder',
+        'Schizophrenia and psychotic disorders',
+        'PTSD and complex trauma'
+      ],
+      pros: [
+        'Addresses both biological and psychological factors',
+        'Medication can help make therapy more effective',
+        'Higher success rates for many conditions',
+        'More comprehensive approach to treatment'
+      ],
+      cons: [
+        'Requires coordination between providers',
+        'Higher cost and time commitment',
+        'May involve managing medication side effects',
+        'Can be challenging to determine which component is helping'
+      ]
+    }
+  ];
+
+  // Common conditions and recommended approaches
+  const conditions = [
+    {
+      name: 'Depression',
+      medicationApproach: 'Antidepressants (SSRIs, SNRIs, etc.)',
+      therapyApproach: 'CBT, IPT, Psychodynamic therapy',
+      recommendation: 'Combined approach often most effective for moderate to severe depression; therapy alone may be sufficient for mild cases.'
+    },
+    {
+      name: 'Anxiety Disorders',
+      medicationApproach: 'Antidepressants, anti-anxiety medications',
+      therapyApproach: 'CBT, Exposure therapy, Mindfulness',
+      recommendation: 'Therapy (especially CBT) has strong evidence; medication helpful for severe symptoms or to facilitate therapy work.'
+    },
+    {
+      name: 'Bipolar Disorder',
+      medicationApproach: 'Mood stabilizers, antipsychotics',
+      therapyApproach: 'CBT, Interpersonal therapy, Family therapy',
+      recommendation: 'Medication typically essential; therapy provides crucial support for medication adherence and coping skills.'
+    },
+    {
+      name: 'ADHD',
+      medicationApproach: 'Stimulants, non-stimulant ADHD medications',
+      therapyApproach: 'Behavioral therapy, Coaching, CBT',
+      recommendation: 'Medication often very effective for core symptoms; therapy helps with organizational skills and coping strategies.'
+    },
+    {
+      name: 'PTSD',
+      medicationApproach: 'Antidepressants, prazosin for nightmares',
+      therapyApproach: 'Trauma-focused CBT, EMDR, CPT',
+      recommendation: 'Trauma-focused therapy has strongest evidence; medication can help manage symptoms during therapy process.'
+    }
+  ];
+
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div className="md:flex">
+            <div className="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Medication vs. Therapy" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 md:w-2/3">
+              <h1 className="text-3xl font-bold text-gray-800 mb-4">Medication vs. Therapy: Understanding Your Options</h1>
+              <p className="text-xl text-gray-600 mb-6">
+                A comprehensive guide to help you understand the differences, benefits, and considerations when choosing between medication, therapy, or a combined approach.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/assessments/mental-health-assessment" 
+                  variant="primary"
+                  icon={Brain}
+                >
+                  Take Mental Health Assessment
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/tools/matchers/therapy-platform-matcher" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Find Treatment Options
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Introduction */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Understanding Treatment Options</h2>
+          <p className="text-gray-600 mb-4">
+            When seeking help for mental health concerns, two primary treatment options are typically considered: medication (pharmacotherapy) and psychotherapy. Each approach has its own benefits, limitations, and ideal applications.
+          </p>
+          <p className="text-gray-600 mb-4">
+            While sometimes presented as an either/or choice, medication and therapy often work best when used together as complementary approaches. The right treatment plan depends on your specific condition, symptoms, preferences, and individual circumstances.
+          </p>
+          <p className="text-gray-600 mb-4">
+            This guide will help you understand the differences between these approaches, their respective strengths and limitations, and factors to consider when making treatment decisions. Remember that treatment is highly individualized, and what works best for one person may not be ideal for another.
+          </p>
+          <div className="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 className="font-bold text-gray-800 mb-3">Important Note</h3>
+            <p className="text-gray-700">
+              This guide provides general information and is not a substitute for professional medical advice. Treatment decisions should always be made in consultation with qualified healthcare providers who can assess your specific situation.
+            </p>
+          </div>
+        </div>
+
+        {/* Treatment Approaches */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Treatment Approaches</h2>
+        
+        {approaches.map((approach) => (
+          <div key={approach.name} className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div className="flex items-start mb-4">
+              <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <approach.icon className="h-6 w-6 text-indigo-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{approach.name}</h3>
+                <p className="text-gray-600">{approach.description}</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Best For:</h4>
+                <ul className="space-y-2">
+                  {approach.bestFor.map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Pros:</h4>
+                <ul className="space-y-2">
+                  {approach.pros.map((pro, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600">{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-gray-800 mb-3">Cons:</h4>
+                <ul className="space-y-2">
+                  {approach.cons.map((con, i) => (
+                    <li key={i} className="flex items-start">
+                      <AlertCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600">{con}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Conditions and Approaches */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8 mt-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Treatment Approaches by Condition</h2>
+          <p className="text-gray-600 mb-6">
+            Different mental health conditions may respond better to specific treatment approaches. Here's a general overview of common conditions and typical treatment recommendations:
+          </p>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="py-3 px-4 text-left font-bold text-gray-800">Condition</th>
+                  <th className="py-3 px-4 text-left font-bold text-gray-800">Medication Approach</th>
+                  <th className="py-3 px-4 text-left font-bold text-gray-800">Therapy Approach</th>
+                  <th className="py-3 px-4 text-left font-bold text-gray-800">Typical Recommendation</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {conditions.map((condition) => (
+                  <tr key={condition.name}>
+                    <td className="py-3 px-4 font-medium text-gray-800">{condition.name}</td>
+                    <td className="py-3 px-4 text-gray-600">{condition.medicationApproach}</td>
+                    <td className="py-3 px-4 text-gray-600">{condition.therapyApproach}</td>
+                    <td className="py-3 px-4 text-gray-600">{condition.recommendation}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 className="font-bold text-gray-800 mb-3">Remember</h3>
+            <p className="text-gray-700">
+              These are general guidelines. Treatment should always be personalized based on individual factors including symptom severity, personal preferences, treatment history, and other health considerations.
+            </p>
+          </div>
+        </div>
+
+        {/* Factors to Consider */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Factors to Consider When Choosing</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Brain className="h-5 w-5 text-indigo-600 mr-2" />
+                Symptom Severity
+              </h3>
+              <p className="text-gray-600 mb-3">
+                The severity of your symptoms is a crucial factor in determining the appropriate treatment approach:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Mild symptoms:</strong> May respond well to therapy alone</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Moderate symptoms:</strong> Often benefit from either approach or a combination</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Severe symptoms:</strong> Typically require medication, often in combination with therapy</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Clock className="h-5 w-5 text-indigo-600 mr-2" />
+                Timeline Considerations
+              </h3>
+              <p className="text-gray-600 mb-3">
+                The timeframe for symptom relief can vary between treatment approaches:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Medication:</strong> Some relief may begin within 2-4 weeks, though full effects can take 6-8 weeks</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Therapy:</strong> Some benefit may be felt after initial sessions, but meaningful change typically takes several months</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Combined:</strong> May provide both relatively quick symptom relief and long-term coping strategies</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Zap className="h-5 w-5 text-indigo-600 mr-2" />
+                Side Effects & Risks
+              </h3>
+              <p className="text-gray-600 mb-3">
+                Consider potential side effects and risks associated with each approach:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Medication:</strong> May include physical side effects, withdrawal symptoms if discontinued improperly</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Therapy:</strong> Minimal physical risks, though emotional discomfort may occur when addressing difficult topics</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Combined:</strong> Requires managing potential medication side effects while engaging in therapy</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Heart className="h-5 w-5 text-indigo-600 mr-2" />
+                Personal Preferences
+              </h3>
+              <p className="text-gray-600 mb-3">
+                Your personal values and preferences play an important role in treatment decisions:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Comfort level:</strong> Some people prefer not taking medication, while others may find therapy challenging</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Treatment goals:</strong> Consider whether symptom management or addressing underlying issues is your priority</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="h-4 w-4 text-indigo-600 mr-2 mt-1" />
+                  <span className="text-gray-600"><strong>Previous experiences:</strong> Past success or challenges with either approach may inform current decisions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Working with Providers */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Working with Healthcare Providers</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Types of Providers</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-gray-800">Psychiatrists:</span>
+                    <p className="text-gray-600">Medical doctors who can prescribe medication and sometimes provide therapy. Specialists in mental health medication management.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-gray-800">Primary Care Physicians:</span>
+                    <p className="text-gray-600">Can prescribe many psychiatric medications, especially for common conditions like depression and anxiety.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-gray-800">Psychologists:</span>
+                    <p className="text-gray-600">Provide therapy but cannot prescribe medication (in most states). Often have doctoral-level training.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-gray-800">Licensed Therapists:</span>
+                    <p className="text-gray-600">Include social workers, counselors, and marriage/family therapists who provide various forms of therapy.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Effective Communication</h3>
+              <p className="text-gray-600 mb-3">
+                To get the most from your treatment, consider these communication strategies:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">Be honest about your symptoms, concerns, and treatment preferences</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">Ask questions about treatment options, expected benefits, and potential risks</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">Report any side effects or concerns promptly</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">If using both medication and therapy, ensure your providers can communicate with each other</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">Don't hesitate to seek a second opinion if you're unsure about recommendations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 className="font-bold text-gray-800 mb-3">Finding the Right Provider</h3>
+            <p className="text-gray-700 mb-4">
+              The relationship with your healthcare provider is a crucial factor in treatment success. It's important to find providers you trust and feel comfortable with. Don't hesitate to try different providers if the initial match doesn't feel right.
+            </p>
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary"
+            >
+              Find a Provider
+            </Button>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Explore Your Treatment Options?</h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Take our assessment to get personalized recommendations based on your symptoms, preferences, and treatment goals.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/assessments/mental-health-assessment" 
+              variant="light"
+              size="lg"
+            >
+              Take Mental Health Assessment
+            </Button>
+            <Button 
+              as={Link} 
+              to="/best/platforms/best-online-therapy-platforms" 
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Explore Treatment Options
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MedicationVsTherapy;

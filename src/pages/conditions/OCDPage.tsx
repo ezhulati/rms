@@ -1,0 +1,335 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Star, Users, Search } from 'lucide-react';
+import Button from '../../components/Button';
+
+const OCDPage = () => {
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div className="md:flex">
+            <div className="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="OCD" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 md:w-2/3">
+              <h1 className="text-3xl font-bold text-gray-800 mb-4">Obsessive-Compulsive Disorder (OCD)</h1>
+              <p className="text-xl text-gray-600 mb-6">
+                OCD is a mental health condition characterized by recurring, unwanted thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) that a person feels driven to perform.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/assessments/ocd-assessment" 
+                  variant="primary"
+                  icon={Brain}
+                >
+                  Take OCD Assessment
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/best/conditions/best-for-ocd" 
+                  variant="outline"
+                  icon={Star}
+                >
+                  Find Best Treatment Options
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Common Obsessions and Compulsions */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Common Obsessions and Compulsions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Common Obsessions</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Contamination</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Fear of germs or dirt</li>
+                    <li>Concern about bodily waste</li>
+                    <li>Environmental contaminants</li>
+                    <li>Household chemicals</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Losing Control</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Fear of acting on violent thoughts</li>
+                    <li>Fear of blurting inappropriate things</li>
+                    <li>Fear of stealing things</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Perfectionism</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Need for symmetry</li>
+                    <li>Need for exactness</li>
+                    <li>Fear of losing information</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Common Compulsions</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Washing and Cleaning</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Excessive hand washing</li>
+                    <li>Excessive cleaning</li>
+                    <li>Avoiding contaminated objects</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Checking</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Checking locks, appliances, switches</li>
+                    <li>Checking for mistakes</li>
+                    <li>Checking for harm to others</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-bold text-gray-800 mb-2">Ordering</h4>
+                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                    <li>Arranging items symmetrically</li>
+                    <li>Counting rituals</li>
+                    <li>Organizing by specific rules</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Options */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Treatment Options</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Evidence-Based Therapies</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Brain className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Exposure and Response Prevention (ERP)</h4>
+                    <p className="text-gray-600">The gold standard treatment for OCD, involving gradual exposure to feared situations while preventing compulsive responses.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Brain className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Cognitive Behavioral Therapy (CBT)</h4>
+                    <p className="text-gray-600">Helps identify and change unhelpful thought patterns and behaviors.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Brain className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Acceptance and Commitment Therapy (ACT)</h4>
+                    <p className="text-gray-600">Focuses on accepting thoughts while committing to behavior change.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Additional Treatments</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Brain className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Medication</h4>
+                    <p className="text-gray-600">SSRIs and other medications can help manage OCD symptoms when prescribed by a healthcare provider.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Brain className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Lifestyle Changes</h4>
+                    <p className="text-gray-600">Stress management, regular exercise, and adequate sleep can help support treatment.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    <Users className="h-4 w-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Support Groups</h4>
+                    <p className="text-gray-600">Connecting with others who have OCD can provide understanding and coping strategies.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Finding Help */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Finding the Right Help</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Search className="h-8 w-8 text-indigo-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Compare Options</h3>
+              <p className="text-gray-600 mb-4">
+                Review and compare different treatment providers specializing in OCD.
+              </p>
+              <Button 
+                as={Link} 
+                to="/compare" 
+                variant="outline" 
+                size="sm"
+              >
+                Compare providers
+              </Button>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-indigo-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Best Options</h3>
+              <p className="text-gray-600 mb-4">
+                Discover the top-rated treatment providers for OCD.
+              </p>
+              <Button 
+                as={Link} 
+                to="/best/conditions/best-for-ocd" 
+                variant="outline" 
+                size="sm"
+              >
+                View best options
+              </Button>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Brain className="h-8 w-8 text-indigo-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Get Assessed</h3>
+              <p className="text-gray-600 mb-4">
+                Take our OCD assessment to understand your symptoms and get personalized recommendations.
+              </p>
+              <Button 
+                as={Link} 
+                to="/tools/assessments/ocd-assessment" 
+                variant="outline" 
+                size="sm"
+              >
+                Take assessment
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Educational Materials</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/learn/fundamentals/ocd" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>Understanding OCD</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/learn/fundamentals/erp-therapy-guide" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>Guide to ERP Therapy</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/learn/fundamentals/ocd-medication-guide" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>OCD Medication Guide</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Support Resources</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/resources/worksheets/ocd-exposure-hierarchy" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>Exposure Hierarchy Worksheet</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/resources/worksheets/trigger-log" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>OCD Trigger Log</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/resources/support-groups/ocd" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                    <span>Find OCD Support Groups</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Take Control of Your OCD?</h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to get matched with the perfect treatment provider for managing OCD.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/ocd-assessment" 
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Take OCD Assessment
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OCDPage;

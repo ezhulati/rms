@@ -1,0 +1,288 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Brain, Search, FileText } from 'lucide-react';
+
+const ToolsPage = () => {
+  const location = useLocation();
+  const isRootPath = location.pathname === '/tools';
+
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-gray-800 mb-4">Mental Health Tools</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Free interactive tools to help you assess your mental health needs and find the right solutions.
+              </p>
+            </div>
+
+            {/* Featured Tools */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+              {/* Assessment Tool */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="bg-indigo-600 p-6 text-white">
+                  <Brain className="h-12 w-12 mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Mental Health Assessment</h3>
+                  <p className="text-indigo-100">
+                    Take our comprehensive assessment to better understand your mental health needs.
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">5-minute comprehensive assessment</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Screens for common mental health conditions</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Personalized recommendations</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Private and confidential</span>
+                    </div>
+                  </div>
+                  <Link to="/tools/assessments/mental-health-assessment" className="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    Take the assessment <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Matcher Tool */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="bg-purple-600 p-6 text-white">
+                  <Search className="h-12 w-12 mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Therapy Platform Matcher</h3>
+                  <p className="text-purple-100">
+                    Find the perfect therapy platform based on your preferences, needs, and budget.
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">3-minute questionnaire</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Matches based on 15+ factors</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Compares pricing and features</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-gray-700">Updated monthly with new platforms</span>
+                    </div>
+                  </div>
+                  <Link to="/tools/matchers/therapy-platform-matcher" className="inline-flex items-center bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition">
+                    Find your match <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Tool Categories */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Assessments */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Assessments</h2>
+                  <p className="text-gray-600 mb-6">
+                    Tools to help you evaluate your mental health and identify potential concerns.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li>
+                      <Link to="/tools/assessments/mental-health-assessment" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Comprehensive Mental Health Assessment</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/assessments/anxiety-screening" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Anxiety Screening Tool</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/assessments/depression-screening" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Depression Screening Tool</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/assessments/stress-level-test" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Stress Level Test</span>
+                      </Link>
+                    </li>
+                  </ul>
+                  <Link to="/tools/assessments" className="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all assessments <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Matchers */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Matchers</h2>
+                  <p className="text-gray-600 mb-6">
+                    Tools to help you find the right therapy platform or approach for your specific needs.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li>
+                      <Link to="/tools/matchers/therapy-platform-matcher" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Therapy Platform Matcher</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/matchers/therapy-type-finder" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Therapy Type Finder</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/matchers/budget-friendly-finder" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Budget-Friendly Therapy Finder</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/matchers/insurance-coverage-checker" className="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight className="h-4 w-4 mr-2" />
+                        <span>Insurance Coverage Checker</span>
+                      </Link>
+                    </li>
+                  </ul>
+                  <Link to="/tools/matchers" className="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all matchers <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Tool Preview */}
+            <div className="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Mental Health Assessment Preview</h2>
+                  <Link to="/tools/assessments/mental-health-assessment" className="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    Take the full assessment <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-6 mb-8">
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">Sample Questions</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <p className="font-medium text-gray-800 mb-3">1. Over the past two weeks, how often have you felt little interest or pleasure in doing things you usually enjoy?</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Not at all</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Several days</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">More than half the days</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Nearly every day</div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p className="font-medium text-gray-800 mb-3">2. Over the past two weeks, how often have you felt nervous, anxious, or on edge?</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Not at all</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Several days</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">More than half the days</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Nearly every day</div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p className="font-medium text-gray-800 mb-3">3. How would you rate your current stress level?</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Very low</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Low</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Moderate</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">High</div>
+                        <div className="bg-white border border-gray-200 rounded-md px-4 py-2 text-center text-sm">Very high</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col md:flex-row items-start gap-8">
+                  <div className="md:w-1/2">
+                    <h3 className="text-lg font-bold text-gray-800 mb-3">What You'll Learn</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                        <span>Potential mental health concerns that may benefit from professional support</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                        <span>Severity levels of symptoms related to anxiety, depression, and stress</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                        <span>Personalized recommendations for therapy approaches</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                        <span>Suggested platforms that specialize in your specific needs</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="md:w-1/2">
+                    <h3 className="text-lg font-bold text-gray-800 mb-3">About This Tool</h3>
+                    <p className="text-gray-600 mb-4">
+                      Our Mental Health Assessment is based on clinically validated screening tools including PHQ-9 for depression, GAD-7 for anxiety, and PSS for stress. While not a diagnostic tool, it provides valuable insights to guide your mental health journey.
+                    </p>
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <FileText className="h-4 w-4 mr-2" />
+                      <span>Developed in consultation with licensed mental health professionals</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+              <h2 className="text-2xl font-bold mb-4">Ready to Find Your Mental Health Solution?</h2>
+              <p className="text-lg mb-6 max-w-2xl mx-auto">
+                Take the first step toward better mental health by using our free assessment tools to understand your needs and find the right support.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link to="/tools/assessments/mental-health-assessment" className="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                  Take the Assessment
+                </Link>
+                <Link to="/tools/matchers/therapy-platform-matcher" className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition">
+                  Find Your Match
+                </Link>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">Tool Content</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific tool content based on the current URL path.
+            </p>
+            <p className="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ToolsPage;

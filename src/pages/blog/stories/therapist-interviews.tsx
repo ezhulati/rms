@@ -1,0 +1,347 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, User, Tag, MessageCircle, Clock } from 'lucide-react';
+import BlogLayout from '../BlogLayout';
+
+const TherapistInterviews = () => {
+  return (
+    <BlogLayout>
+      {/* Breadcrumb */}
+      <div className="flex items-center text-sm text-gray-500 mb-6">
+        <Link to="/" className="hover:text-indigo-600">Home</Link>
+        <span className="mx-2">/</span>
+        <Link to="/blog" className="hover:text-indigo-600">Blog</Link>
+        <span className="mx-2">/</span>
+        <Link to="/blog/stories" className="hover:text-indigo-600">Stories</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-700">Therapist Interviews</span>
+      </div>
+
+      {/* Article Header */}
+      <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <img 
+          src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+          alt="Online Therapist Working" 
+          className="blog-featured-image h-96"
+        />
+        <div className="p-8">
+          <h1 className="blog-title">A Day in the Life of an Online Therapist</h1>
+          
+          <div className="flex flex-wrap items-center text-sm text-gray-500 mb-6">
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Calendar className="h-4 w-4 mr-1" />
+              <span>June 10, 2025</span>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <User className="h-4 w-4 mr-1" />
+              <span>By Emma Rodriguez</span>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Tag className="h-4 w-4 mr-1" />
+              <Link to="/blog/tag/interviews" className="hover:text-indigo-600">Interviews</Link>,{" "}
+              <Link to="/blog/tag/therapists" className="hover:text-indigo-600 ml-1">Therapists</Link>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Clock className="h-4 w-4 mr-1" />
+              <span>8 min read</span>
+            </div>
+          </div>
+          
+          <div className="bg-indigo-50 rounded-lg p-4 mb-6">
+            <p className="text-gray-700 italic">
+              "Online therapy has transformed how I practice. I can connect with clients from diverse backgrounds and locations, offering support without the constraints of traditional office settings." — Dr. Sarah Johnson, Licensed Clinical Psychologist
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="blog-content">
+          <p>
+            The rise of online therapy has revolutionized mental health care, making support more accessible than ever before. But what's it like to be on the other side of the screen? We interviewed several online therapists to understand their experiences, challenges, and rewards in the digital therapy space.
+          </p>
+          
+          <h2 className="blog-subtitle">The Morning Routine</h2>
+          <p>
+            For Dr. Michael Chen, a licensed psychologist who transitioned to online practice three years ago, the day begins much earlier than his previous in-office schedule.
+          </p>
+          <p>
+            "I start at 7 AM with client sessions for those in different time zones," he explains. "The flexibility of online therapy means I can accommodate clients across the country, but it also requires careful scheduling and time management."
+          </p>
+          <p>
+            Before sessions begin, most therapists report having a dedicated preparation ritual. This includes reviewing client notes, checking that their technology is functioning properly, and ensuring their workspace is private and professional.
+          </p>
+          <p>
+            "My home office is a sacred space," says Leila Patel, LMFT. "I have a 'do not disturb' sign for my family, noise-canceling features, and a backdrop that's warm but not distracting. Creating the right environment is crucial for both my focus and my clients' comfort."
+          </p>
+          
+          <h2 className="blog-subtitle">Session Structure and Adaptations</h2>
+          <p>
+            Many therapists noted that online sessions require slight modifications from traditional in-person therapy. Sessions tend to be more structured, with clearer agendas and goals for each meeting.
+          </p>
+          <p>
+            "Without the physical cues of an office setting, I've found it helpful to establish more explicit session boundaries," says Dr. Chen. "We begin with a brief check-in, set goals for our time together, and I make sure to leave a few minutes at the end to wrap up and plan for the next session."
+          </p>
+          <p>
+            Therapists have also developed creative techniques to overcome the limitations of virtual interaction. Dr. Sarah Johnson incorporates shared digital whiteboards for CBT exercises, while Robert Torres, LCSW, uses specialized apps that clients can access between sessions to practice skills and track progress.
+          </p>
+          <p>
+            "The digital format actually enhances certain therapeutic approaches," Torres explains. "I can share resources instantly, use interactive tools during sessions, and provide more consistent support between meetings through secure messaging."
+          </p>
+          
+          <div className="blog-callout">
+            <h3 className="blog-subheading">Key Adaptations for Online Therapy</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>More explicit verbal check-ins to compensate for reduced nonverbal cues</li>
+              <li>Shorter but more frequent sessions for clients with attention challenges</li>
+              <li>Digital tools and resources that clients can access between sessions</li>
+              <li>Enhanced privacy protocols and contingency plans for technical issues</li>
+              <li>More structured session formats with clear beginnings and endings</li>
+            </ul>
+          </div>
+          
+          <h2 className="blog-subtitle">The Challenges of Virtual Connection</h2>
+          <p>
+            Despite the advantages, online therapists face unique challenges. All interviewees mentioned the difficulty of reading subtle nonverbal cues through a screen.
+          </p>
+          <p>
+            "You miss certain physical signals that might indicate anxiety or discomfort," notes Patel. "I've had to become more attuned to vocal tone, facial expressions, and even the way someone positions themselves on camera."
+          </p>
+          <p>
+            Technical issues present another common challenge. Internet disruptions, audio problems, or platform glitches can interrupt the therapeutic flow. Most therapists have developed contingency plans, including backup communication methods and protocols for reconnecting.
+          </p>
+          <p>
+            "I always discuss with new clients what we'll do if we lose connection," says Dr. Johnson. "Having that plan in place prevents technology problems from becoming therapeutic ruptures."
+          </p>
+          
+          <h2 className="blog-subtitle">Boundaries and Self-Care</h2>
+          <p>
+            Working from home creates unique boundary challenges for therapists. Without the physical separation of an office, many reported initially struggling to maintain work-life balance.
+          </p>
+          <p>
+            "When your therapy room is down the hall from your bedroom, it's tempting to squeeze in 'just one more session' or check client messages at all hours," admits Torres. "I've had to create strict boundaries around my availability and working hours."
+          </p>
+          <p>
+            Self-care becomes especially important to combat the intensity of consecutive video sessions, often referred to as "Zoom fatigue." Therapists described various strategies for maintaining their own mental health:
+          </p>
+          <ul>
+            <li>Scheduling short breaks between sessions to move, stretch, or step outside</li>
+            <li>Using blue-light glasses to reduce eye strain</li>
+            <li>Maintaining a dedicated workspace that can be "closed" at the end of the day</li>
+            <li>Regular supervision and peer consultation groups with other online therapists</li>
+            <li>Mindfulness practices between sessions to reset and refocus</li>
+          </ul>
+          
+          <h2 className="blog-subtitle">The Rewards of Online Practice</h2>
+          <p>
+            Despite the challenges, all therapists expressed deep satisfaction with their online practice. The ability to reach underserved populations was frequently cited as the most rewarding aspect.
+          </p>
+          <p>
+            "I work with clients in rural areas who previously had to drive two hours to see a therapist with my specialization," says Dr. Johnson. "Now they can access care from their home, which has been transformative for their consistency in treatment."
+          </p>
+          <p>
+            Many therapists also noted that some clients open up more quickly in the comfort of their own space. "There's something about being in their familiar environment that helps certain clients feel safer to be vulnerable," observes Patel. "I've had people share traumas in our third online session that might have taken months to discuss in an office setting."
+          </p>
+          <p>
+            The flexibility extends to therapists' lives as well. Dr. Chen, who has a chronic health condition, appreciates being able to structure his schedule around his energy levels. Torres, a parent of young children, values the ability to be present for family needs while maintaining his practice.
+          </p>
+          
+          <h2 className="blog-subtitle">The Future of Online Therapy</h2>
+          <p>
+            All interviewees believe that online therapy is here to stay, even as in-person options have returned post-pandemic. Most envision a hybrid future where therapists and clients can choose the format that works best for their needs and preferences.
+          </p>
+          <p>
+            "The technology will only improve," predicts Dr. Johnson. "I'm excited about developments in virtual reality therapy, AI-assisted tools for between-session support, and platforms that better facilitate certain therapeutic techniques."
+          </p>
+          <p>
+            Torres sees online therapy continuing to evolve to meet diverse client needs: "We're already seeing platforms specializing in specific populations or therapeutic approaches. This specialization will likely continue, creating more tailored experiences for both therapists and clients."
+          </p>
+          
+          <h2 className="blog-subtitle">Advice for Aspiring Online Therapists</h2>
+          <p>
+            For mental health professionals considering the transition to online practice, our interviewees offered several pieces of advice:
+          </p>
+          <ol>
+            <li><strong>Invest in proper equipment</strong> - A reliable computer, high-quality webcam, good lighting, and stable internet connection are essential professional tools.</li>
+            <li><strong>Seek specialized training</strong> - Take courses specifically on telehealth ethics, techniques, and best practices.</li>
+            <li><strong>Start gradually</strong> - Consider a hybrid approach initially, seeing some clients online while maintaining in-person work.</li>
+            <li><strong>Join online therapist communities</strong> - Connect with others in the field to share experiences and solutions.</li>
+            <li><strong>Establish clear policies</strong> - Develop comprehensive telehealth consent forms, emergency protocols, and technical troubleshooting guides.</li>
+          </ol>
+          
+          <h2 className="blog-subtitle">Conclusion</h2>
+          <p>
+            A day in the life of an online therapist blends traditional therapeutic skills with new technological adaptations. While the medium may be different, the core of the work remains the same: creating a safe, supportive space for clients to explore their challenges and grow.
+          </p>
+          <p>
+            As Dr. Chen reflects, "The screen is just a window between two human beings. The connection, empathy, and healing work transcends the technology that facilitates it."
+          </p>
+          <p>
+            For clients considering online therapy, understanding the thoughtful preparation and adaptations therapists make can provide reassurance about the quality and effectiveness of virtual mental health care. And for therapists considering the transition to online practice, the experiences shared here offer a glimpse into both the challenges and profound rewards of this evolving modality.
+          </p>
+        </div>
+      </div>
+
+      {/* Author Bio */}
+      <div className="blog-author">
+        <img 
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+          alt="Emma Rodriguez" 
+          className="blog-author-image"
+        />
+        <div>
+          <h3 className="blog-author-name">About the Author</h3>
+          <p className="blog-author-bio">
+            Emma Rodriguez is a health journalist specializing in mental health and technology. With a background in psychology and digital media, she explores the intersection of therapeutic practices and technological innovation.
+          </p>
+          <div className="flex items-center">
+            <Link to="/blog/author/emma-rodriguez" className="text-indigo-600 hover:text-indigo-800 mr-4">
+              More from Emma
+            </Link>
+            <a href="https://twitter.com/emmarod" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+              @emmarod
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Articles */}
+      <div className="blog-related">
+        <h3 className="blog-related-title">Related Articles</h3>
+        <div className="blog-related-grid">
+          <div className="flex items-start">
+            <img 
+              src="https://images.unsplash.com/photo-1541199249251-f713e6145474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+              alt="Self-Care Practices" 
+              className="blog-related-image"
+            />
+            <div>
+              <h4 className="blog-related-item-title">5 Effective Self-Care Practices for Mental Wellness</h4>
+              <Link to="/blog/stories/self-care-practices" className="blog-related-item-link bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 inline-flex w-auto">
+                Read article <ArrowRight className="h-3 w-3 ml-1" />
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+              alt="Insurance Coverage Guide" 
+              className="blog-related-image"
+            />
+            <div>
+              <h4 className="blog-related-item-title">Navigating Insurance Coverage for Online Therapy</h4>
+              <Link to="/blog/guides/insurance-coverage-guide" className="blog-related-item-link bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 inline-flex w-auto">
+                Read article <ArrowRight className="h-3 w-3 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Comments Section */}
+      <div className="blog-comments">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-bold text-gray-800">Comments (12)</h3>
+          <button className="text-indigo-600 font-medium bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 shadow-sm border border-indigo-100">
+            Leave a comment
+          </button>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="border-b pb-6">
+            <div className="flex items-start mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="User Avatar" 
+                className="w-10 h-10 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">David Wilson</h4>
+                  <span className="text-gray-500 text-sm">3 days ago</span>
+                </div>
+                <p className="text-gray-700">
+                  As someone who's been seeing an online therapist for the past year, this was fascinating to read. It's easy to forget there's a real person managing their own challenges on the other side of the screen. The part about therapists creating strict boundaries really resonated - my therapist is always punctual with session times and response windows.
+                </p>
+                <button className="text-indigo-600 text-sm mt-2 flex items-center bg-indigo-50 px-3 py-1 rounded-md hover:bg-indigo-100 transition-all duration-200">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex items-start ml-12">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="Author Avatar" 
+                className="w-8 h-8 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">Emma Rodriguez</h4>
+                  <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Author</span>
+                  <span className="text-gray-500 text-sm ml-2">2 days ago</span>
+                </div>
+                <p className="text-gray-700">
+                  Thank you for sharing your experience, David! You're right - the boundaries are so important for both therapists and clients in the online space. I'm glad this article gave you some insight into your therapist's world.
+                </p>
+                <button className="text-indigo-600 text-sm mt-2 flex items-center bg-indigo-50 px-3 py-1 rounded-md hover:bg-indigo-100 transition-all duration-200">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div className="flex items-start">
+              <img 
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="User Avatar" 
+                className="w-10 h-10 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">Jennifer Lopez</h4>
+                  <span className="text-gray-500 text-sm">1 day ago</span>
+                </div>
+                <p className="text-gray-700">
+                  I'm a therapist who recently transitioned to online practice, and this article captures the experience perfectly! The section on creating a dedicated workspace really hit home. I've found that having a separate room just for sessions helps me maintain professional focus and then "leave work" at the end of the day, even though I'm still at home.
+                </p>
+                <button className="text-indigo-600 text-sm mt-2 flex items-center bg-indigo-50 px-3 py-1 rounded-md hover:bg-indigo-100 transition-all duration-200">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <button className="w-full py-3 text-indigo-600 font-medium bg-indigo-50 rounded-md hover:bg-indigo-100 transition-all duration-200 shadow-sm border border-indigo-100">
+            Load more comments
+          </button>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="blog-newsletter">
+        <h3 className="blog-newsletter-title">Subscribe to Our Newsletter</h3>
+        <p className="blog-newsletter-description">
+          Stay up-to-date with the latest mental health news, research, and resources delivered straight to your inbox.
+        </p>
+        <div className="blog-newsletter-form">
+          <input 
+            type="email" 
+            placeholder="Your email address" 
+            className="blog-newsletter-input"
+          />
+          <button className="blog-newsletter-button">
+            Subscribe
+          </button>
+        </div>
+        <p className="blog-newsletter-privacy">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </BlogLayout>
+  );
+};
+
+export default TherapistInterviews;

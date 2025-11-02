@@ -1,0 +1,402 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Heart, AlertCircle, CheckCircle, XCircle, Pill, Users } from 'lucide-react';
+import Button from '../../components/Button';
+
+const AddictionPage = () => {
+  return (
+    <div className="bg-gray-50 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Understanding Addiction</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            A comprehensive guide to addiction, its causes, treatment options, and how therapy can help in recovery.
+          </p>
+        </div>
+
+        {/* Overview Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Heart className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">What is Addiction?</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-4">
+            Addiction is a complex, chronic brain disorder characterized by compulsive substance use or behavior despite harmful consequences. It involves changes in brain circuits related to reward, stress, and self-control, making it difficult for individuals to stop even when they want to.
+          </p>
+          
+          <p className="text-gray-700 mb-4">
+            While substance use disorders (involving alcohol, drugs, tobacco, etc.) are the most well-known forms of addiction, behavioral addictions (such as gambling, internet, gaming, etc.) are increasingly recognized as serious conditions that can similarly impact brain function and behavior.
+          </p>
+          
+          <div className="bg-indigo-50 rounded-lg p-6 mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-3">Key Facts About Addiction</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Affects approximately 10% of Americans at some point in their lives</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Has biological, psychological, social, and environmental factors</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Often co-occurs with other mental health conditions</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Is a treatable condition with various effective approaches</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Recovery is possible, though it often involves ongoing management</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p className="text-gray-700">
+            It's important to understand that addiction is not a moral failing or lack of willpower, but a complex health condition that requires proper treatment and support. With appropriate care, many people recover from addiction and lead healthy, fulfilling lives.
+          </p>
+        </div>
+
+        {/* Types and Signs Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Pill className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Types and Signs of Addiction</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            Addiction can involve various substances or behaviors. While each type has unique characteristics, they share common patterns of compulsive use, loss of control, and continued engagement despite negative consequences.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Common Substance Addictions</h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Alcohol:</strong> One of the most prevalent addictive substances</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Opioids:</strong> Including prescription painkillers and heroin</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Stimulants:</strong> Such as cocaine, methamphetamine, and prescription stimulants</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Cannabis:</strong> Though less physically addictive than other substances</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Tobacco/Nicotine:</strong> Highly addictive despite widespread awareness of health risks</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Common Behavioral Addictions</h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Gambling:</strong> The most recognized behavioral addiction</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Internet/Gaming:</strong> Increasingly common in the digital age</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Social Media:</strong> Can involve compulsive checking and posting</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Sex/Pornography:</strong> Can severely impact relationships and daily functioning</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span><strong>Shopping:</strong> Characterized by uncontrollable urges to purchase items</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Common Signs of Addiction</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Physical Signs</h4>
+              <ul className="space-y-1">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Tolerance (needing more for the same effect)</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Withdrawal symptoms when stopping</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Changes in appearance or health</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Behavioral Signs</h4>
+              <ul className="space-y-1">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Using more or longer than intended</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Failed attempts to cut down or stop</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Neglecting responsibilities and activities</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Psychological Signs</h4>
+              <ul className="space-y-1">
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Intense cravings or urges</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Preoccupation with obtaining/using</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                  <span>Continued use despite awareness of problems</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <AlertCircle className="h-5 w-5 text-yellow-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-yellow-700">
+                  <strong>Important Note:</strong> Only qualified healthcare professionals can diagnose addiction disorders. If you or someone you know is struggling with potential addiction, seek professional evaluation and support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Users className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Treatment Approaches</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            Effective addiction treatment typically involves a comprehensive approach tailored to the individual's specific needs. Recovery is often a long-term process that may include multiple interventions and regular monitoring.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Medical Treatments</h3>
+              
+              <div className="bg-indigo-50 rounded-lg p-6">
+                <h4 className="font-bold text-gray-800 mb-2">Detoxification</h4>
+                <p className="text-gray-600 mb-4">
+                  Medically supervised withdrawal from substances, often the first step in treatment for substance use disorders. May involve medications to manage withdrawal symptoms and prevent complications.
+                </p>
+                
+                <h4 className="font-bold text-gray-800 mb-2 mt-4">Medication-Assisted Treatment (MAT)</h4>
+                <p className="text-gray-600">
+                  Medications combined with counseling and behavioral therapies. Particularly effective for opioid and alcohol use disorders. Examples include:
+                </p>
+                <ul className="space-y-1 mt-2">
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <span>Methadone, buprenorphine, and naltrexone for opioid addiction</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+                    <span>Naltrexone, acamprosate, and disulfiram for alcohol use disorder</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Behavioral Treatments</h3>
+              
+              <div className="bg-indigo-50 rounded-lg p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">Cognitive Behavioral Therapy (CBT)</span>
+                      <p className="text-sm text-gray-600">Helps identify and change harmful thought patterns and behaviors related to substance use</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">Motivational Enhancement Therapy</span>
+                      <p className="text-sm text-gray-600">Helps resolve ambivalence about treatment and stopping substance use</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">Contingency Management</span>
+                      <p className="text-sm text-gray-600">Provides positive reinforcement for desired behaviors like abstinence</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <div>
+                      <span className="font-medium">Family Therapy</span>
+                      <p className="text-sm text-gray-600">Addresses family patterns that may contribute to or maintain addiction</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Treatment Settings</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Inpatient/Residential</h4>
+              <p className="text-sm text-gray-600">
+                24-hour structured treatment in a live-in setting. Particularly helpful for severe addictions or those with co-occurring disorders.
+              </p>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Outpatient Programs</h4>
+              <p className="text-sm text-gray-600">
+                Varying levels of intensity, from intensive day programs to weekly counseling. Allows individuals to continue with work and home responsibilities.
+              </p>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-lg p-4">
+              <h4 className="font-bold text-gray-800 mb-2">Support Groups</h4>
+              <p className="text-sm text-gray-600">
+                Peer-based support like 12-step programs (AA, NA) or alternatives (SMART Recovery). Often used alongside professional treatment.
+              </p>
+            </div>
+          </div>
+          
+          <div className="bg-green-50 border-l-4 border-green-400 p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-green-700">
+                  <strong>Recovery is Possible:</strong> With appropriate treatment and support, many people recover from addiction. Recovery is often a lifelong journey that may involve periods of relapse, but each person's path is unique, and many achieve long-term sobriety and improved quality of life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Online Therapy Section */}
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <Heart className="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Online Therapy for Addiction</h2>
+          </div>
+          
+          <p className="text-gray-700 mb-6">
+            Online therapy has emerged as a valuable component in addiction treatment, particularly for ongoing support, relapse prevention, and addressing co-occurring mental health conditions.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Benefits</h3>
+              
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Accessibility:</strong> Removes transportation barriers and serves rural areas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Privacy:</strong> May reduce stigma concerns for those seeking help</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Flexibility:</strong> Can fit around work and family commitments</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Continuity:</strong> Enables ongoing support after intensive treatment</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Limitations</h3>
+              
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Not for All Stages:</strong> May not be appropriate for detox or severe addiction</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Limited Physical Assessment:</strong> Cannot directly monitor physical symptoms</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Technology Barriers:</strong> Requires reliable internet and basic tech skills</span>
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Privacy Concerns:</strong> Need for private space to participate in sessions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <AlertCircle className="h-5 w-5 text-yellow-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-yellow-700">
+                  <strong>Important Consideration:</strong> Online therapy is often most effective as part of a comprehensive treatment plan. For substance use disorders, particularly severe cases, a combination of in-person medical care and online support may be most appropriate.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+            >
+              Find the Right Online Therapy Platform
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AddictionPage;
