@@ -1,0 +1,6 @@
+{
+  "_instructions": "Add custom prompts for specific pages. Format: { 'src/pages/path/file.tsx': 'your custom prompt here' }",
+  "_example": {
+    "src/pages/reviews/platforms/BetterHelpReview.tsx": "Professional therapist conducting online video therapy session with warm lighting"
+  }
+}

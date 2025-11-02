@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Search, Brain, ArrowRight, BookOpen, Users, Star } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Conditions A-Z</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Explore our comprehensive guide to mental health conditions, including symptoms, treatments, and finding the right help.
+          </p>
+          <div class="max-w-2xl mx-auto">
+            <div class="relative">
+              <Search class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <input
+                type="text"
+                placeholder="Search conditions..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Common Conditions */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Common Mental Health Conditions</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {conditions
+              .flatMap(group => group.conditions)
+              .filter(condition => condition.common)
+              .slice(0, 6)
+              .map(condition => (
+                <Link
+                  key={condition.slug}
+                  to={`/conditions-az/${condition.slug}`}
+                  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <img
+                    src={condition.image}
+                    alt={condition.name}
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">{condition.name}</h3>
+                    <p class="text-gray-600 mb-4">{condition.description}</p>
+                    <div class="flex items-center text-indigo-600 hover:text-indigo-800">
+                      Learn more <ArrowRight class="h-4 w-4 ml-1" />
+                    </div>
+                  </div>
+                </a>
+              ))}
+          </div>
+        </div>
+
+        {/* A-Z Directory */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Conditions Directory A-Z</h2>
+          {filteredConditions.map(letterGroup => (
+            <div key={letterGroup.letter} class="mb-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-6">{letterGroup.letter}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {letterGroup.conditions.map(condition => (
+                  <Link
+                    key={condition.slug}
+                    to={`/conditions-az/${condition.slug}`}
+                    class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">{condition.name}</h4>
+                    <p class="text-gray-600 mb-4">{condition.description}</p>
+                    <div class="space-y-2">
+                      <h5 class="font-medium text-gray-700">Common symptoms:</h5>
+                      <ul class="list-disc pl-5 text-gray-600 text-sm">
+                        {condition.symptoms.map((symptom, index) => (
+                          <li key={index}>{symptom}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Resources Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Mental Health Resources</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Find Treatment</h3>
+              <p class="text-gray-600 mb-4">
+                Compare and find the right online therapy platform for your specific condition.
+              </p>
+              <Button 
+                as={Link} 
+                to="/tools/matchers/therapy-platform-matcher" 
+                variant="primary" 
+                size="sm" 
+                icon={ArrowRight}
+              >
+                Find your match
+              </Button>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <BookOpen class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Learn More</h3>
+              <p class="text-gray-600 mb-4">
+                Access our comprehensive library of mental health educational resources.
+              </p>
+              <Button 
+                as={Link} 
+                to="/learn" 
+                variant="primary" 
+                size="sm" 
+                icon={ArrowRight}
+              >
+                Explore resources
+              </Button>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Get Support</h3>
+              <p class="text-gray-600 mb-4">
+                Connect with others and find support groups for your specific condition.
+              </p>
+              <Button 
+                as={Link} 
+                to="/resources" 
+                variant="primary" 
+                size="sm" 
+                icon={ArrowRight}
+              >
+                Find support
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Need Help Finding the Right Treatment?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to get matched with the perfect online therapy platform for your specific condition.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/mental-health-assessment" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Take Mental Health Assessment
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,619 @@
+{
+  "simple": [
+    {
+      "path": "AnxietyDisorderPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/AnxietyDisorderPage.tsx"
+    },
+    {
+      "path": "BipolarDisorderPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BipolarDisorderPage.tsx"
+    },
+    {
+      "path": "GuidesPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/GuidesPage.tsx"
+    },
+    {
+      "path": "NotFoundPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/NotFoundPage.tsx"
+    },
+    {
+      "path": "PlatformFinderPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/PlatformFinderPage.tsx"
+    },
+    {
+      "path": "best/conditions/BestForOCD.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForOCD.tsx"
+    },
+    {
+      "path": "blog/guides/choosing-right-therapist.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/choosing-right-therapist.tsx"
+    },
+    {
+      "path": "blog/guides/index.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/index.tsx"
+    },
+    {
+      "path": "blog/guides/insurance-coverage-guide.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/insurance-coverage-guide.tsx"
+    },
+    {
+      "path": "blog/guides/therapy-costs-explained.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/therapy-costs-explained.tsx"
+    },
+    {
+      "path": "blog/guides/therapy-modalities-explained.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/therapy-modalities-explained.tsx"
+    },
+    {
+      "path": "blog/news/index.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/index.tsx"
+    },
+    {
+      "path": "blog/stories/index.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/index.tsx"
+    },
+    {
+      "path": "case-studies/ConditionsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/ConditionsPage.tsx"
+    },
+    {
+      "path": "case-studies/conditions/AnxietyTreatmentSuccess.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/conditions/AnxietyTreatmentSuccess.tsx"
+    },
+    {
+      "path": "comparisons/RoundupsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/RoundupsPage.tsx"
+    },
+    {
+      "path": "conditions/ADHDPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/ADHDPage.tsx"
+    },
+    {
+      "path": "learn/fundamentals/index.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/index.tsx"
+    },
+    {
+      "path": "learn/fundamentals/online-therapy-guide.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/online-therapy-guide.tsx"
+    },
+    {
+      "path": "learn/statistics/index.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/statistics/index.tsx"
+    },
+    {
+      "path": "resources/WorksheetsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/resources/WorksheetsPage.tsx"
+    },
+    {
+      "path": "reviews/ReviewsPricing.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/ReviewsPricing.tsx"
+    },
+    {
+      "path": "reviews/features/BetterHelpTherapistQuality.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/features/BetterHelpTherapistQuality.tsx"
+    },
+    {
+      "path": "reviews/features/TherapistMatchingSystems.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/features/TherapistMatchingSystems.tsx"
+    },
+    {
+      "path": "reviews/platforms/OnlineTherapyComReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/OnlineTherapyComReview.tsx"
+    },
+    {
+      "path": "reviews/specialty/OnlineTherapyForPTSD.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/specialty/OnlineTherapyForPTSD.tsx"
+    },
+    {
+      "path": "tools/MatchersPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/MatchersPage.tsx"
+    }
+  ],
+  "interactive": [
+    {
+      "path": "BestAudiences.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestAudiences.tsx"
+    },
+    {
+      "path": "BestConditions.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestConditions.tsx"
+    },
+    {
+      "path": "BestForAnxiety.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestForAnxiety.tsx"
+    },
+    {
+      "path": "BestOnlineTherapyPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestOnlineTherapyPlatforms.tsx"
+    },
+    {
+      "path": "BestPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestPage.tsx"
+    },
+    {
+      "path": "BestPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestPlatforms.tsx"
+    },
+    {
+      "path": "BestTextTherapyServices.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BestTextTherapyServices.tsx"
+    },
+    {
+      "path": "BetterHelpReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BetterHelpReview.tsx"
+    },
+    {
+      "path": "BetterHelpVsTalkspace.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BetterHelpVsTalkspace.tsx"
+    },
+    {
+      "path": "BlogPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/BlogPage.tsx"
+    },
+    {
+      "path": "CaseStudiesPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/CaseStudiesPage.tsx"
+    },
+    {
+      "path": "CerebralReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/CerebralReview.tsx"
+    },
+    {
+      "path": "ComparePage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ComparePage.tsx"
+    },
+    {
+      "path": "ConditionsAZPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ConditionsAZPage.tsx"
+    },
+    {
+      "path": "HomePage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/HomePage.tsx"
+    },
+    {
+      "path": "LearnPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/LearnPage.tsx"
+    },
+    {
+      "path": "ModalitiesPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ModalitiesPage.tsx"
+    },
+    {
+      "path": "OnlineTherapyReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/OnlineTherapyReview.tsx"
+    },
+    {
+      "path": "ResourcesPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ResourcesPage.tsx"
+    },
+    {
+      "path": "ReviewsFeatures.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ReviewsFeatures.tsx"
+    },
+    {
+      "path": "ReviewsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ReviewsPage.tsx"
+    },
+    {
+      "path": "ReviewsPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ReviewsPlatforms.tsx"
+    },
+    {
+      "path": "ReviewsSpecialty.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ReviewsSpecialty.tsx"
+    },
+    {
+      "path": "SpecializedPlatformsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/SpecializedPlatformsPage.tsx"
+    },
+    {
+      "path": "TalkspaceReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/TalkspaceReview.tsx"
+    },
+    {
+      "path": "ToolsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/ToolsPage.tsx"
+    },
+    {
+      "path": "best/audiences/BestForCouples.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForCouples.tsx"
+    },
+    {
+      "path": "best/audiences/BestForLGBTQ.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForLGBTQ.tsx"
+    },
+    {
+      "path": "best/audiences/BestForParents.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForParents.tsx"
+    },
+    {
+      "path": "best/audiences/BestForSeniors.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForSeniors.tsx"
+    },
+    {
+      "path": "best/audiences/BestForTeens.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForTeens.tsx"
+    },
+    {
+      "path": "best/audiences/BestForVeterans.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/audiences/BestForVeterans.tsx"
+    },
+    {
+      "path": "best/conditions/BestForAddiction.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForAddiction.tsx"
+    },
+    {
+      "path": "best/conditions/BestForAnxiety.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForAnxiety.tsx"
+    },
+    {
+      "path": "best/conditions/BestForDepression.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForDepression.tsx"
+    },
+    {
+      "path": "best/conditions/BestForEatingDisorders.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForEatingDisorders.tsx"
+    },
+    {
+      "path": "best/conditions/BestForPTSD.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/BestForPTSD.tsx"
+    },
+    {
+      "path": "best/conditions/best-for-depression.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/conditions/best-for-depression.tsx"
+    },
+    {
+      "path": "best/platforms/BestMedicationTherapyPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/platforms/BestMedicationTherapyPlatforms.tsx"
+    },
+    {
+      "path": "best/platforms/BestSpecializedPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/platforms/BestSpecializedPlatforms.tsx"
+    },
+    {
+      "path": "best/specific-needs/BestSpecificNeeds.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/best/specific-needs/BestSpecificNeeds.tsx"
+    },
+    {
+      "path": "blog/BlogLayout.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/BlogLayout.tsx"
+    },
+    {
+      "path": "blog/all.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/all.tsx"
+    },
+    {
+      "path": "blog/guides/therapy-first-session.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/guides/therapy-first-session.tsx"
+    },
+    {
+      "path": "blog/news/ai-therapy-tools.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/ai-therapy-tools.tsx"
+    },
+    {
+      "path": "blog/news/latest-therapy-research.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/latest-therapy-research.tsx"
+    },
+    {
+      "path": "blog/news/mental-health-policy-updates.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/mental-health-policy-updates.tsx"
+    },
+    {
+      "path": "blog/news/platform-merger.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/platform-merger.tsx"
+    },
+    {
+      "path": "blog/news/who-global-report.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/news/who-global-report.tsx"
+    },
+    {
+      "path": "blog/stories/anxiety-management-stories.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/anxiety-management-stories.tsx"
+    },
+    {
+      "path": "blog/stories/self-care-practices.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/self-care-practices.tsx"
+    },
+    {
+      "path": "blog/stories/therapist-interviews.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/therapist-interviews.tsx"
+    },
+    {
+      "path": "blog/stories/therapy-during-crisis.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/therapy-during-crisis.tsx"
+    },
+    {
+      "path": "blog/stories/therapy-success-stories.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/blog/stories/therapy-success-stories.tsx"
+    },
+    {
+      "path": "case-studies/DemographicsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/DemographicsPage.tsx"
+    },
+    {
+      "path": "case-studies/conditions/DepressionRecoveryJourney.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/conditions/DepressionRecoveryJourney.tsx"
+    },
+    {
+      "path": "case-studies/conditions/OCDManagementSuccess.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/conditions/OCDManagementSuccess.tsx"
+    },
+    {
+      "path": "case-studies/conditions/PTSDTreatmentOnline.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/conditions/PTSDTreatmentOnline.tsx"
+    },
+    {
+      "path": "case-studies/demographics/CollegeStudentStressManagement.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/demographics/CollegeStudentStressManagement.tsx"
+    },
+    {
+      "path": "case-studies/demographics/RemoteWorkerMentalHealth.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/demographics/RemoteWorkerMentalHealth.tsx"
+    },
+    {
+      "path": "case-studies/demographics/RuralAccessToTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/demographics/RuralAccessToTherapy.tsx"
+    },
+    {
+      "path": "case-studies/demographics/TherapyForNightOwls.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/case-studies/demographics/TherapyForNightOwls.tsx"
+    },
+    {
+      "path": "comparisons/AffordableBetterHelpAlternatives.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/AffordableBetterHelpAlternatives.tsx"
+    },
+    {
+      "path": "comparisons/BestTherapyAppsCompared.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/BestTherapyAppsCompared.tsx"
+    },
+    {
+      "path": "comparisons/BetterHelpVsCalmerry.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/BetterHelpVsCalmerry.tsx"
+    },
+    {
+      "path": "comparisons/BetterHelpVsCerebral.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/BetterHelpVsCerebral.tsx"
+    },
+    {
+      "path": "comparisons/BetterHelpVsOnlineTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/BetterHelpVsOnlineTherapy.tsx"
+    },
+    {
+      "path": "comparisons/CBTVsPsychodynamic.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/CBTVsPsychodynamic.tsx"
+    },
+    {
+      "path": "comparisons/CerebralVsBrightside.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/CerebralVsBrightside.tsx"
+    },
+    {
+      "path": "comparisons/CerebralVsTalkspace.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/CerebralVsTalkspace.tsx"
+    },
+    {
+      "path": "comparisons/FreeTherapyOptions.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/FreeTherapyOptions.tsx"
+    },
+    {
+      "path": "comparisons/IndividualVsGroupTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/IndividualVsGroupTherapy.tsx"
+    },
+    {
+      "path": "comparisons/InsuranceFriendlyPlatforms.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/InsuranceFriendlyPlatforms.tsx"
+    },
+    {
+      "path": "comparisons/OnlineVsTraditionalTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/OnlineVsTraditionalTherapy.tsx"
+    },
+    {
+      "path": "comparisons/TalkspaceAlternatives.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TalkspaceAlternatives.tsx"
+    },
+    {
+      "path": "comparisons/TalkspaceVsCerebral.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TalkspaceVsCerebral.tsx"
+    },
+    {
+      "path": "comparisons/TalkspaceVsOnlineTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TalkspaceVsOnlineTherapy.tsx"
+    },
+    {
+      "path": "comparisons/TextVsVideoTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TextVsVideoTherapy.tsx"
+    },
+    {
+      "path": "comparisons/TherapyAlternatives.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TherapyAlternatives.tsx"
+    },
+    {
+      "path": "comparisons/TherapyApproaches.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TherapyApproaches.tsx"
+    },
+    {
+      "path": "comparisons/TopTherapyPlatformsCompared.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/comparisons/TopTherapyPlatformsCompared.tsx"
+    },
+    {
+      "path": "conditions/AddictionPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/AddictionPage.tsx"
+    },
+    {
+      "path": "conditions/AnxietyDisorderPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/AnxietyDisorderPage.tsx"
+    },
+    {
+      "path": "conditions/BPDPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/BPDPage.tsx"
+    },
+    {
+      "path": "conditions/BipolarDisorderPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/BipolarDisorderPage.tsx"
+    },
+    {
+      "path": "conditions/DepressionPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/DepressionPage.tsx"
+    },
+    {
+      "path": "conditions/EatingDisordersPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/EatingDisordersPage.tsx"
+    },
+    {
+      "path": "conditions/OCDPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/OCDPage.tsx"
+    },
+    {
+      "path": "conditions/PTSDPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/PTSDPage.tsx"
+    },
+    {
+      "path": "conditions/SchizophreniaPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/SchizophreniaPage.tsx"
+    },
+    {
+      "path": "conditions/SocialAnxietyPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/conditions/SocialAnxietyPage.tsx"
+    },
+    {
+      "path": "guides/selection/choosing-online-therapist.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/guides/selection/choosing-online-therapist.tsx"
+    },
+    {
+      "path": "guides/selection/first-therapy-session.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/guides/selection/first-therapy-session.tsx"
+    },
+    {
+      "path": "guides/selection/red-flags-in-therapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/guides/selection/red-flags-in-therapy.tsx"
+    },
+    {
+      "path": "guides/selection/therapy-types-explained.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/guides/selection/therapy-types-explained.tsx"
+    },
+    {
+      "path": "learn/fundamentals/common-mental-health-conditions.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/common-mental-health-conditions.tsx"
+    },
+    {
+      "path": "learn/fundamentals/depression.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/depression.tsx"
+    },
+    {
+      "path": "learn/fundamentals/medication-vs-therapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/medication-vs-therapy.tsx"
+    },
+    {
+      "path": "learn/fundamentals/therapy-types-explained.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/fundamentals/therapy-types-explained.tsx"
+    },
+    {
+      "path": "learn/statistics/mental-health-statistics.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/learn/statistics/mental-health-statistics.tsx"
+    },
+    {
+      "path": "reviews/categories/GeneralTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/categories/GeneralTherapy.tsx"
+    },
+    {
+      "path": "reviews/categories/MedicationTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/categories/MedicationTherapy.tsx"
+    },
+    {
+      "path": "reviews/categories/SpecializedTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/categories/SpecializedTherapy.tsx"
+    },
+    {
+      "path": "reviews/features/Communication.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/features/Communication.tsx"
+    },
+    {
+      "path": "reviews/features/VideoSessionQuality.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/features/VideoSessionQuality.tsx"
+    },
+    {
+      "path": "reviews/platforms/AmwellReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/AmwellReview.tsx"
+    },
+    {
+      "path": "reviews/platforms/BrightsideReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/BrightsideReview.tsx"
+    },
+    {
+      "path": "reviews/platforms/CalmerryReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/CalmerryReview.tsx"
+    },
+    {
+      "path": "reviews/platforms/OnlineTherapyReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/OnlineTherapyReview.tsx"
+    },
+    {
+      "path": "reviews/platforms/ReGainReview.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/platforms/ReGainReview.tsx"
+    },
+    {
+      "path": "reviews/pricing/InsuranceCoverageGuide.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/pricing/InsuranceCoverageGuide.tsx"
+    },
+    {
+      "path": "reviews/pricing/OnlineTherapyPricingComparison.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/pricing/OnlineTherapyPricingComparison.tsx"
+    },
+    {
+      "path": "reviews/specialty/AnxietyTreatment.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/specialty/AnxietyTreatment.tsx"
+    },
+    {
+      "path": "reviews/specialty/CouplesTherapy.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/specialty/CouplesTherapy.tsx"
+    },
+    {
+      "path": "reviews/specialty/TalkspaceForDepression.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/reviews/specialty/TalkspaceForDepression.tsx"
+    },
+    {
+      "path": "tools/AssessmentsPage.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/AssessmentsPage.tsx"
+    },
+    {
+      "path": "tools/assessments/AnxietyScreening.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/AnxietyScreening.tsx"
+    },
+    {
+      "path": "tools/assessments/DepressionScreening.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/DepressionScreening.tsx"
+    },
+    {
+      "path": "tools/assessments/MentalHealthAssessment.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/MentalHealthAssessment.tsx"
+    },
+    {
+      "path": "tools/assessments/OCDAssessment.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/OCDAssessment.tsx"
+    },
+    {
+      "path": "tools/assessments/StressLevelTest.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/StressLevelTest.tsx"
+    },
+    {
+      "path": "tools/assessments/TherapyStyleAssessment.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/assessments/TherapyStyleAssessment.tsx"
+    },
+    {
+      "path": "tools/matchers/BudgetFriendlyFinder.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/matchers/BudgetFriendlyFinder.tsx"
+    },
+    {
+      "path": "tools/matchers/InsuranceCoverageChecker.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/matchers/InsuranceCoverageChecker.tsx"
+    },
+    {
+      "path": "tools/matchers/TherapyPlatformMatcher.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/matchers/TherapyPlatformMatcher.tsx"
+    },
+    {
+      "path": "tools/matchers/TherapyTypeFinder.tsx",
+      "fullPath": "/Users/ez/Desktop/AI Library/Apps/RMS/src/pages/tools/matchers/TherapyTypeFinder.tsx"
+    }
+  ],
+  "errors": []
+}

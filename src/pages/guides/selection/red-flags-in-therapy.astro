@@ -1,0 +1,580 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Red Flags in Therapy: What to Watch For</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Learn to identify warning signs that might indicate a therapist isn't the right fit for you.
+          </p>
+        </div>
+
+        {/* Introduction */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Red Flags in Therapy" 
+                class="w-full rounded-lg"
+              />
+            </div>
+            <div class="md:w-2/3">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">Why Recognizing Red Flags Matters</h2>
+              <p class="text-gray-600 mb-4">
+                Finding the right therapist is crucial for effective mental health treatment. While most therapists are ethical, skilled professionals, not every therapist will be the right fit for your specific needs. Sometimes, there are clear warning signs that a therapeutic relationship isn't working or may even be harmful.
+              </p>
+              <p class="text-gray-600 mb-4">
+                Being able to identify these red flags empowers you to make informed decisions about your mental health care. This guide will help you recognize potential warning signs in therapy and understand when it might be time to consider finding a new therapist.
+              </p>
+              <div class="bg-indigo-50 rounded-lg p-4">
+                <div class="flex items-center mb-2">
+                  <Star class="h-5 w-5 text-indigo-600 mr-2" />
+                  <h3 class="font-bold text-gray-800">Key Takeaway</h3>
+                </div>
+                <p class="text-gray-700">
+                  Trust your instincts. If something feels wrong in your therapeutic relationship, it's important to address it—either by discussing it with your therapist or by seeking a different provider.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Professional Red Flags */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <div class="flex items-center mb-6">
+            <AlertTriangle class="h-8 w-8 text-red-500 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Professional Red Flags</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            These warning signs relate to a therapist's professional conduct, qualifications, and ethical standards.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Lack of Proper Credentials</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    A legitimate therapist should have proper licensing and credentials. Be wary if:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>They can't or won't provide clear information about their qualifications</li>
+                    <li>Their credentials can't be verified through state licensing boards</li>
+                    <li>They claim to be "certified" in approaches that lack recognized accreditation</li>
+                    <li>They use vague titles like "life coach" or "counselor" without specific licensing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Confidentiality Breaches</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Confidentiality is a cornerstone of therapy. Be concerned if your therapist:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Shares information about other clients with you</li>
+                    <li>Discusses your therapy with others without your explicit consent</li>
+                    <li>Has poor security practices for your personal information</li>
+                    <li>Doesn't clearly explain the limits of confidentiality</li>
+                    <li>Conducts sessions in places where others might overhear</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Inappropriate Boundaries</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Professional boundaries protect both you and your therapist. Red flags include:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Suggesting friendship or social relationships outside of therapy</li>
+                    <li>Sharing excessive personal details about their own life</li>
+                    <li>Offering or requesting favors unrelated to therapy</li>
+                    <li>Any form of romantic or sexual advances or comments</li>
+                    <li>Frequent rescheduling or cancellations without notice</li>
+                    <li>Contacting you outside of scheduled sessions for non-emergency reasons</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Financial Impropriety</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Be cautious if your therapist:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Has unclear or constantly changing fee structures</li>
+                    <li>Pressures you to commit to expensive long-term packages upfront</li>
+                    <li>Doesn't provide receipts or documentation of payments</li>
+                    <li>Suggests bartering arrangements instead of standard payment</li>
+                    <li>Frequently "forgets" to bill or keeps inaccurate records</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Red Flags */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <div class="flex items-center mb-6">
+            <AlertTriangle class="h-8 w-8 text-red-500 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Treatment Red Flags</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            These warning signs relate to the therapeutic approach and treatment methods used by your therapist.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Guarantees and Miracle Cures</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Be skeptical if a therapist:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Promises to "cure" your condition in a specific timeframe</li>
+                    <li>Makes guarantees about treatment outcomes</li>
+                    <li>Claims their approach works for everyone</li>
+                    <li>Dismisses evidence-based approaches in favor of "revolutionary" methods</li>
+                    <li>Uses high-pressure sales tactics to commit you to treatment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Lack of Treatment Plan</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Effective therapy typically involves some form of structure. Be concerned if:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Your therapist can't explain their treatment approach</li>
+                    <li>Sessions feel aimless or without purpose over time</li>
+                    <li>There's no discussion of goals or progress</li>
+                    <li>The therapist seems to use the same approach for every issue</li>
+                    <li>They're unwilling to adjust their approach when something isn't working</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Imposing Personal Values</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    A therapist should respect your values and beliefs. Watch out if they:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Push their religious, political, or personal beliefs onto you</li>
+                    <li>Judge or criticize your lifestyle choices</li>
+                    <li>Try to convince you to make major life decisions based on their personal views</li>
+                    <li>Dismiss or belittle your cultural background or values</li>
+                    <li>Make assumptions about what's best for you without considering your perspective</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Inappropriate or Harmful Techniques</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Be wary if your therapist:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Uses techniques that make you extremely uncomfortable or distressed</li>
+                    <li>Continues with approaches that seem to worsen your symptoms</li>
+                    <li>Employs methods with no scientific basis or explanation</li>
+                    <li>Discourages you from seeking other medical or psychiatric care when needed</li>
+                    <li>Suggests going off prescribed medications without consulting your doctor</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Relationship Red Flags */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <div class="flex items-center mb-6">
+            <AlertTriangle class="h-8 w-8 text-red-500 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Relationship Red Flags</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            These warning signs relate to the quality of the therapeutic relationship and how you feel during and after sessions.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Feeling Consistently Misunderstood</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    While occasional misunderstandings are normal, be concerned if:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Your therapist repeatedly misinterprets what you're saying</li>
+                    <li>They seem to project their own issues onto your situation</li>
+                    <li>You frequently feel the need to correct their understanding</li>
+                    <li>They make assumptions about you without checking</li>
+                    <li>You don't feel heard or validated in sessions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Feeling Judged or Shamed</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    Therapy should be a non-judgmental space. Be wary if:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Your therapist makes critical or disapproving comments</li>
+                    <li>They use shame as a motivational tactic</li>
+                    <li>You feel worse about yourself after sessions</li>
+                    <li>They dismiss or minimize your feelings or experiences</li>
+                    <li>You find yourself hiding things out of fear of judgment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Power Imbalance</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    While therapists are authorities in their field, they shouldn't:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Position themselves as the ultimate authority on your life</li>
+                    <li>Discourage you from questioning their approach or methods</li>
+                    <li>Make you feel dependent on them for all decisions</li>
+                    <li>Become defensive when you provide feedback</li>
+                    <li>Use their position to control aspects of your life outside therapy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Persistent Discomfort</h3>
+              <div class="flex items-start">
+                <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <div>
+                  <p class="text-gray-600 mb-2">
+                    While therapy can sometimes be challenging, be concerned if:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>You consistently feel unsafe or uncomfortable with your therapist</li>
+                    <li>You dread attending sessions</li>
+                    <li>You feel emotionally drained after every session with no sense of progress</li>
+                    <li>Your anxiety or distress worsens significantly after therapy</li>
+                    <li>You feel like you're walking on eggshells during sessions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* What to Do If You Notice Red Flags */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">What to Do If You Notice Red Flags</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Consider Direct Communication</h3>
+              
+              <div class="bg-gray-50 rounded-lg p-6">
+                <p class="text-gray-600 mb-4">
+                  For minor concerns or misunderstandings, consider discussing the issue directly with your therapist first. Many issues can be resolved through open communication.
+                </p>
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Use "I" statements to express your concerns</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Be specific about what's bothering you</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Pay attention to how they respond to feedback</span>
+                  </div>
+                </div>
+                <div class="mt-4 pl-4 border-l-2 border-indigo-200">
+                  <p class="text-sm text-gray-600 italic">
+                    "I've noticed that I feel uncomfortable when you [specific behavior]. Could we discuss a different approach?"
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">When to Find a New Therapist</h3>
+              
+              <div class="bg-gray-50 rounded-lg p-6">
+                <p class="text-gray-600 mb-4">
+                  For serious red flags or if communication doesn't resolve the issue, it may be time to find a new therapist.
+                </p>
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Trust your instincts if something feels wrong</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>You don't need to explain your decision in detail</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>A simple email or message ending the relationship is sufficient</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Most online platforms make it easy to switch therapists</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Reporting Serious Ethical Violations</h3>
+            <p class="text-gray-600 mb-4">
+              For serious ethical violations or misconduct, consider reporting the therapist to the appropriate authorities:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>State licensing boards oversee licensed mental health professionals</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Professional associations have ethics committees that handle complaints</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Online therapy platforms have their own reporting mechanisms</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>For criminal behavior, contact local law enforcement</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Green Flags: What to Look For */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Green Flags: What to Look For in a Good Therapist</h2>
+          
+          <p class="text-gray-600 mb-6">
+            To provide contrast, here are some positive signs that indicate a healthy therapeutic relationship:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Professional Conduct</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Clear credentials and transparent about their qualifications</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Maintains appropriate boundaries</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Respects confidentiality and explains its limits</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Clear policies about fees, scheduling, and cancellations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Reliable and consistent with appointments</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Therapeutic Approach</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Can clearly explain their approach and treatment plan</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Tailors treatment to your specific needs</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sets realistic expectations about progress</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Open to feedback and willing to adjust approaches</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Respects your autonomy and decision-making</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Relationship Quality</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You feel heard, understood, and respected</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Creates a safe, non-judgmental environment</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Balances support with appropriate challenge</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You feel comfortable being honest and vulnerable</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You leave sessions feeling heard, even if challenging</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Progress and Growth</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You're developing new insights or skills</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You're making progress toward your goals</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Therapy challenges you in productive ways</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You feel more equipped to handle challenges</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Your therapist celebrates your progress</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Final Thoughts</h2>
+          
+          <p class="text-gray-600 mb-4">
+            Finding the right therapist is an important part of your mental health journey. While it's normal to experience some discomfort in therapy as you work through difficult issues, persistent red flags shouldn't be ignored.
+          </p>
+          
+          <p class="text-gray-600 mb-4">
+            Remember that you have the right to quality, ethical care. If your current therapeutic relationship isn't working, it's okay to seek a different therapist who better meets your needs. Your mental health journey is important, and finding the right therapeutic support is a crucial part of that journey.
+          </p>
+          
+          <div class="bg-indigo-50 rounded-lg p-4">
+            <h3 class="font-bold text-gray-800 mb-2">Remember</h3>
+            <p class="text-gray-700">
+              Trust your instincts. While therapy can be challenging at times, it should ultimately feel supportive, respectful, and helpful. You deserve a therapeutic relationship that helps you grow and heal.
+            </p>
+          </div>
+        </div>
+
+        {/* Related Guides */}
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Guides</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Choosing the Right Therapist</h3>
+              <p class="text-gray-600 mb-4">
+                A comprehensive guide to finding the perfect therapist for your unique needs and preferences.
+              </p>
+              <a href="/guides/selection/choosing-online-therapist" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                Read guide <ArrowRight class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">First Therapy Session</h3>
+              <p class="text-gray-600 mb-4">
+                Tips and guidance to help you prepare for and get the most out of your first online therapy session.
+              </p>
+              <a href="/guides/selection/first-therapy-session" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                Read guide <ArrowRight class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Therapy Types Explained</h3>
+              <p class="text-gray-600 mb-4">
+                A comprehensive overview of different therapy approaches and which conditions they're best suited for.
+              </p>
+              <a href="/guides/selection/therapy-types-explained" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                Read guide <ArrowRight class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

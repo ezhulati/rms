@@ -1,0 +1,359 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, CheckCircle, Brain, Users, Heart, MessageSquare, Sparkles, Leaf } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Therapy Types Explained" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <h1 class="text-3xl font-bold text-gray-800 mb-4">Therapy Types Explained</h1>
+              <p class="text-xl text-gray-600 mb-6">
+                A comprehensive guide to different therapeutic approaches, helping you understand which might be most effective for your specific needs.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/assessments/therapy-style-assessment" 
+                  variant="primary"
+                  icon={Brain}
+                >
+                  Find Your Therapy Match
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/compare/modalities/therapy-approaches" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Compare Approaches
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Introduction */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Therapeutic Approaches</h2>
+          <p class="text-gray-600 mb-4">
+            With so many different therapy types available, it can be challenging to understand which approach might be best for your specific needs. Different therapeutic approaches have been developed to address various mental health concerns, each with its own theoretical framework, techniques, and areas of focus.
+          </p>
+          <p class="text-gray-600 mb-4">
+            While many therapists integrate multiple approaches (known as "eclectic" or "integrative" therapy), understanding the core principles of each major therapy type can help you make informed decisions about your mental health care.
+          </p>
+          <p class="text-gray-600">
+            This guide breaks down the most common therapeutic modalities, their key features, and what conditions they're typically most effective for. Remember that the therapeutic relationship itself—the connection between you and your therapist—is often one of the most important factors in successful therapy outcomes, regardless of the specific approach used.
+          </p>
+        </div>
+
+        {/* Major Therapy Approaches */}
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Major Therapy Approaches</h2>
+        
+        {therapyApproaches.map((approach, index) => (
+          <div key={approach.name} class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="flex items-start mb-4">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <approach.icon class="h-6 w-6 text-indigo-600" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">{approach.name}</h3>
+                <p class="text-gray-600 mb-4">{approach.description}</p>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                <ul class="space-y-1">
+                  {approach.bestFor.map((condition, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-600">{condition}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">Key Features:</h4>
+                <ul class="space-y-1">
+                  {approach.keyFeatures.map((feature, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Therapy Formats */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8 mt-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Therapy Formats</h2>
+          <p class="text-gray-600 mb-6">
+            In addition to different therapeutic approaches, therapy can be delivered in various formats. Each format offers unique benefits and may be more suitable depending on your specific situation and preferences.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {therapyFormats.map((format) => (
+              <div key={format.name} class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">{format.name}</h3>
+                <p class="text-gray-600 mb-4">{format.description}</p>
+                <h4 class="font-bold text-gray-800 mb-2">Benefits:</h4>
+                <ul class="space-y-2">
+                  {format.benefits.map((benefit, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span class="text-gray-600">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Online vs. In-Person */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Online vs. In-Person Therapy</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Online Therapy</h3>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Convenience</h4>
+                    <p class="text-gray-600">Access therapy from anywhere with an internet connection, eliminating travel time and transportation barriers.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Accessibility</h4>
+                    <p class="text-gray-600">Ideal for those with mobility issues, busy schedules, or who live in areas with limited mental health resources.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Communication Options</h4>
+                    <p class="text-gray-600">Many platforms offer multiple communication methods including video, phone, and text messaging.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Effectiveness</h4>
+                    <p class="text-gray-600">Research shows online therapy can be as effective as in-person therapy for many conditions.</p>
+                  </div>
+                </div>
+              </div>
+              <a href="/learn/fundamentals/online-therapy-guide" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                Learn more about online therapy <ArrowRight class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">In-Person Therapy</h3>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Personal Connection</h4>
+                    <p class="text-gray-600">Face-to-face interaction may foster a stronger therapeutic alliance for some individuals.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Non-Verbal Cues</h4>
+                    <p class="text-gray-600">Therapists can observe body language and subtle non-verbal cues more easily.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Dedicated Space</h4>
+                    <p class="text-gray-600">Provides a physical environment specifically designed for therapy, free from home distractions.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Specialized Treatments</h4>
+                    <p class="text-gray-600">Some therapeutic techniques may be better suited for in-person delivery.</p>
+                  </div>
+                </div>
+              </div>
+              <a href="/compare/modalities/online-vs-traditional" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                Compare online and traditional therapy <ArrowRight class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Choosing the Right Approach */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Choosing the Right Approach for You</h2>
+          
+          <div class="space-y-6">
+            <p class="text-gray-600">
+              Finding the right therapeutic approach depends on several factors, including your specific concerns, personal preferences, and treatment goals. Here are some considerations to help guide your decision:
+            </p>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">1. Consider your specific concerns</h3>
+              <p class="text-gray-600">
+                Some approaches are particularly effective for specific conditions. For example, CBT has strong research support for anxiety and depression, while DBT was specifically developed for borderline personality disorder and emotional regulation difficulties.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">2. Think about your preferences and personality</h3>
+              <p class="text-gray-600">
+                Do you prefer a structured approach with homework and exercises (like CBT), or would you benefit more from an exploratory, insight-oriented approach (like psychodynamic therapy)? Consider what resonates with your learning and processing style.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">3. Consider your goals and timeline</h3>
+              <p class="text-gray-600">
+                Are you looking for short-term, symptom-focused treatment or longer-term personal growth and exploration? Some approaches (like CBT and IPT) are typically time-limited, while others may continue for longer periods.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">4. Remember the importance of the therapeutic relationship</h3>
+              <p class="text-gray-600">
+                Research consistently shows that the quality of the relationship between therapist and client is one of the strongest predictors of successful outcomes, regardless of the specific approach used. Finding a therapist you connect with and trust is crucial.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">5. Be open to an integrative approach</h3>
+              <p class="text-gray-600">
+                Many therapists draw from multiple therapeutic modalities, tailoring their approach to each client's unique needs. An integrative approach can combine the strengths of different therapy types for a more personalized treatment experience.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Not Sure Where to Start?</h3>
+            <p class="text-gray-600 mb-4">
+              Take our therapy style assessment to get personalized recommendations based on your specific needs, preferences, and goals.
+            </p>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/therapy-style-assessment" 
+              variant="primary"
+            >
+              Take the Assessment
+            </Button>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/learn/fundamentals/online-therapy-guide" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Online Therapy Guide</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/medication-vs-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Medication vs. Therapy: Understanding Your Options</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/statistics/therapy-outcomes-data" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Therapy Outcomes: What the Research Shows</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/matchers/therapy-platform-matcher" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Therapy Platform Matcher</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/tools/assessments/mental-health-assessment" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Mental Health Assessment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/tools/matchers/therapy-type-finder" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Therapy Type Finder</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Find the Right Therapist?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Now that you understand different therapy approaches, take the next step in your mental health journey.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Therapy Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/best/platforms/best-online-therapy-platforms" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Explore Top Platforms
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

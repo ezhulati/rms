@@ -1,0 +1,358 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/blog' || Astro.url.pathname === '/blog/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Blog</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay informed with our latest articles, news, and insights on mental health topics.
+              </p>
+            </div>
+
+            {/* Featured Posts */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* Featured Post */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="/images/concepts/blogpage.jpg" 
+                  alt="Latest Research" 
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-center text-sm text-gray-500 mb-3">
+                    <Calendar class="h-4 w-4 mr-1" />
+                    <span class="mr-4">June 15, 2025</span>
+                    <User class="h-4 w-4 mr-1" />
+                    <span>Dr. Sarah Johnson</span>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800 mb-3">Latest Research on Online Therapy Effectiveness</h2>
+                  <p class="text-gray-600 mb-4">
+                    New studies show promising results for online therapy approaches across various mental health conditions. Research indicates that virtual therapy sessions can be just as effective as in-person treatment for many people.
+                  </p>
+                  <div class="flex items-center mb-4">
+                    <Tag class="h-4 w-4 text-indigo-600 mr-1" />
+                    <span class="text-sm text-indigo-600 mr-2">Research</span>
+                    <Tag class="h-4 w-4 text-indigo-600 mr-1" />
+                    <span class="text-sm text-indigo-600">Online Therapy</span>
+                  </div>
+                  <a href="/blog/news/latest-therapy-research" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read full article <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Recent Posts */}
+              <div class="space-y-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Recent Articles</h2>
+                
+                {/* Recent Post 1 */}
+                <div class="bg-white rounded-lg shadow-sm p-5 flex">
+                  <img 
+                    src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+                    alt="Therapist Interview" 
+                    class="w-24 h-24 object-cover rounded-md mr-4"
+                  />
+                  <div>
+                    <div class="flex items-center text-xs text-gray-500 mb-1">
+                      <Calendar class="h-3 w-3 mr-1" />
+                      <span class="mr-2">June 10, 2025</span>
+                      <Tag class="h-3 w-3 mr-1" />
+                      <span>Interviews</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">A Day in the Life of an Online Therapist</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                      We interviewed several online therapists to understand their experiences, challenges, and rewards.
+                    </p>
+                    <a href="/blog/stories/therapist-interviews" class="text-sm text-indigo-600 hover:text-indigo-800">
+                      Read more
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Recent Post 2 */}
+                <div class="bg-white rounded-lg shadow-sm p-5 flex">
+                  <img 
+                    src="https://images.unsplash.com/photo-1541199249251-f713e6145474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+                    alt="Self-Care Tips" 
+                    class="w-24 h-24 object-cover rounded-md mr-4"
+                  />
+                  <div>
+                    <div class="flex items-center text-xs text-gray-500 mb-1">
+                      <Calendar class="h-3 w-3 mr-1" />
+                      <span class="mr-2">June 5, 2025</span>
+                      <Tag class="h-3 w-3 mr-1" />
+                      <span>Self-Care</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">5 Effective Self-Care Practices for Mental Wellness</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                      Simple but powerful self-care strategies you can incorporate into your daily routine.
+                    </p>
+                    <a href="/blog/stories/self-care-practices" class="text-sm text-indigo-600 hover:text-indigo-800">
+                      Read more
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Recent Post 3 */}
+                <div class="bg-white rounded-lg shadow-sm p-5 flex">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+                    alt="Insurance Guide" 
+                    class="w-24 h-24 object-cover rounded-md mr-4"
+                  />
+                  <div>
+                    <div class="flex items-center text-xs text-gray-500 mb-1">
+                      <Calendar class="h-3 w-3 mr-1" />
+                      <span class="mr-2">June 1, 2025</span>
+                      <Tag class="h-3 w-3 mr-1" />
+                      <span>Insurance</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Navigating Insurance Coverage for Online Therapy</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                      A comprehensive guide to understanding and maximizing your insurance benefits.
+                    </p>
+                    <a href="/blog/guides/insurance-coverage-guide" class="text-sm text-indigo-600 hover:text-indigo-800">
+                      Read more
+                    </a>
+                  </div>
+                </div>
+                
+                <a href="/blog/all" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800">
+                  View all articles <ArrowRight class="h-4 w-4 ml-1" />
+                </a>
+              </div>
+            </div>
+
+            {/* Blog Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* News Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">News & Research</h2>
+                  <p class="text-gray-600 mb-6">
+                    The latest developments, studies, and news in the mental health field.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/blog/news/latest-therapy-research" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Latest Research on Online Therapy Effectiveness</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/news/mental-health-policy-updates" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Mental Health Policy Updates 2025</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/news/telehealth-innovations" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>New Innovations in Telehealth Technology</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/blog/news" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all news <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Stories Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Stories & Interviews</h2>
+                  <p class="text-gray-600 mb-6">
+                    Personal experiences, therapist interviews, and success stories.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/blog/stories/therapist-interviews" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>A Day in the Life of an Online Therapist</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/stories/self-care-practices" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>5 Effective Self-Care Practices</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/stories/client-success-story" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>From Anxiety to Confidence: A Client's Journey</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/blog/stories" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all stories <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Guides Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Practical Guides</h2>
+                  <p class="text-gray-600 mb-6">
+                    Helpful guides and how-to articles for navigating mental health care.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/blog/guides/insurance-coverage-guide" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Navigating Insurance Coverage for Online Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/guides/finding-right-therapist" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>How to Find the Right Therapist for You</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/blog/guides/therapy-first-session" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>What to Expect in Your First Therapy Session</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/blog/guides" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all guides <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article */}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-16">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Featured Article</h2>
+                  <a href="/blog/news/latest-therapy-research" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    Read full article <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="col-span-1 md:col-span-1">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                      alt="Latest Research" 
+                      class="w-full rounded-lg"
+                    />
+                    <div class="mt-4">
+                      <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <Calendar class="h-4 w-4 mr-1" />
+                        <span class="mr-4">June 15, 2025</span>
+                      </div>
+                      <div class="flex items-center text-sm text-gray-500">
+                        <User class="h-4 w-4 mr-1" />
+                        <span>Dr. Sarah Johnson, Clinical Psychologist</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Latest Research on Online Therapy Effectiveness</h3>
+                    <p class="text-gray-600 mb-4">
+                      A growing body of research continues to validate the effectiveness of online therapy for a wide range of mental health conditions. A recent meta-analysis published in the Journal of Clinical Psychology examined 32 studies comparing online and in-person therapy outcomes.
+                    </p>
+                    
+                    <p class="text-gray-600 mb-4">
+                      The findings showed that for conditions like depression, anxiety, and PTSD, online therapy produced comparable outcomes to traditional face-to-face therapy. In some cases, particularly for anxiety disorders, online approaches showed slightly better retention rates and treatment adherence.
+                    </p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2">Key Findings:</h4>
+                    <ul class="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                      <li>Online CBT showed equivalent effectiveness to in-person CBT for depression and anxiety</li>
+                      <li>Video therapy sessions produced outcomes comparable to in-office sessions</li>
+                      <li>Text-based therapy showed promising results for certain populations, particularly those with social anxiety</li>
+                      <li>Higher treatment completion rates were observed in online therapy programs</li>
+                    </ul>
+                    
+                    <p class="text-gray-600">
+                      These findings are particularly significant as they help validate online therapy as a legitimate treatment option, not merely a convenient alternative to traditional therapy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Popular Topics */}
+            <div class="mb-16">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Popular Topics</h2>
+              <div class="flex flex-wrap justify-center gap-3">
+                <a href="/blog/tag/anxiety" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Anxiety
+                </a>
+                <a href="/blog/tag/depression" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Depression
+                </a>
+                <a href="/blog/tag/online-therapy" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Online Therapy
+                </a>
+                <a href="/blog/tag/self-care" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Self-Care
+                </a>
+                <a href="/blog/tag/insurance" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Insurance
+                </a>
+                <a href="/blog/tag/research" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Research
+                </a>
+                <a href="/blog/tag/mindfulness" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Mindfulness
+                </a>
+                <a href="/blog/tag/relationships" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full hover:bg-indigo-100 transition">
+                  Relationships
+                </a>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div class="bg-indigo-600 rounded-lg p-8 text-white text-center">
+              <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+              <p class="text-lg mb-6 max-w-2xl mx-auto">
+                Stay up-to-date with the latest mental health news, research, and resources delivered straight to your inbox.
+              </p>
+              <div class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-2">
+                  <input 
+                    type="email" 
+                    placeholder="Your email address" 
+                    class="flex-grow px-4 py-2 rounded-md text-gray-800 focus:outline-none bg-white shadow-sm transition-all duration-200"
+                  />
+                  <button class="bg-white text-indigo-600 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition">
+                    Subscribe
+                  </button>
+                </div>
+                <p class="text-xs mt-2 text-indigo-200">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Blog Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific blog content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

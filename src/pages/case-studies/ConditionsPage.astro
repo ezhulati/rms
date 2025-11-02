@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { FileText, Users, Clock, ArrowRight, BookOpen, Brain, Activity } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <MetaTags 
+        title="Mental Health Condition Case Studies | RealMindSolutions"
+        description="Real-world case studies of online therapy treatment for various mental health conditions including anxiety, depression, PTSD, OCD, bipolar disorder, and eating disorders."
+      />
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Condition Case Studies</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real-world examples of how online therapy has helped people manage and recover from various mental health conditions.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">About Our Case Studies</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Real Experiences</h3>
+              <p class="text-gray-600">
+                These case studies are based on real therapeutic journeys, with identifying details changed to protect privacy. They represent typical experiences and outcomes.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Evidence-Based Approaches</h3>
+              <p class="text-gray-600">
+                Each case study highlights specific therapeutic approaches and how they were applied to address particular mental health conditions effectively.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Activity class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Measured Outcomes</h3>
+              <p class="text-gray-600">
+                We document concrete outcomes and improvements using standardized assessment tools and quality of life measures to demonstrate effectiveness.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {caseStudies.map((study, index) => (
+            <div key={index} class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="h-48 overflow-hidden">
+                <img 
+                  src={study.image} 
+                  alt={study.condition} 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-3">{study.title}</h2>
+                <p class="text-gray-600 mb-4">{study.description}</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Condition</span>
+                    <p class="font-medium text-gray-800">{study.condition}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Platform</span>
+                    <p class="font-medium text-gray-800">{study.platform}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Duration</span>
+                    <p class="font-medium text-gray-800">{study.duration}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Approach</span>
+                    <p class="font-medium text-gray-800">{study.approach}</p>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <span class="text-sm font-medium text-gray-500">Key Outcomes</span>
+                  <ul class="mt-1 space-y-1">
+                    {study.outcomes.map((outcome, i) => (
+                      <li key={i} class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        <span class="text-gray-700">{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+              <Button 
+                as={Link}
+                to={`/case-studies/conditions/${study.id === 'anxiety' ? 'anxiety-treatment-success' : 
+                                              study.id === 'depression' ? 'depression-recovery-journey' : 
+                                              study.id === 'ptsd' ? 'ptsd-treatment-online' : 
+                                              study.id === 'ocd' ? 'ocd-management-success' : '#'}`}
+                variant="outline"
+                size="sm"
+                icon={FileText}
+                class="w-full justify-center"
+              >
+                Read Full Case Study
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Finding the Right Treatment for Your Condition</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-start mb-4">
+                <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                  <BookOpen class="h-5 w-5 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Learn About Your Condition</h3>
+                  <p class="text-gray-600">
+                    Understanding your specific mental health condition is the first step toward effective treatment. Our comprehensive condition guides provide evidence-based information.
+                  </p>
+                  <a href="/conditions-az" class="text-indigo-600 hover:text-indigo-800 inline-flex items-center mt-3">
+                    Explore condition guides <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-start mb-4">
+                <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                  <Users class="h-5 w-5 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Find Specialized Platforms</h3>
+                  <p class="text-gray-600">
+                    Some mental health conditions benefit from specialized treatment approaches. We've identified the best online therapy platforms for specific conditions.
+                  </p>
+                  <a href="/best/conditions" class="text-indigo-600 hover:text-indigo-800 inline-flex items-center mt-3">
+                    See condition-specific recommendations <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Research Methodology</h2>
+          <p class="text-gray-600 mb-6">
+            Our case studies are developed through a rigorous process to ensure accuracy and usefulness:
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span class="text-indigo-800 font-bold">1</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Data Collection</h3>
+                <p class="text-gray-600">
+                  We gather information from therapy platforms, practitioners, and consenting clients (with identifying details changed) to document real therapeutic journeys.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span class="text-indigo-800 font-bold">2</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Outcome Measurement</h3>
+                <p class="text-gray-600">
+                  We use standardized assessment tools and quality of life measures to quantify improvements and treatment effectiveness.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span class="text-indigo-800 font-bold">3</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Expert Review</h3>
+                <p class="text-gray-600">
+                  Mental health professionals review our case studies to ensure clinical accuracy and appropriate representation of therapeutic approaches.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span class="text-indigo-800 font-bold">4</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Regular Updates</h3>
+                <p class="text-gray-600">
+                  We continually add new case studies and follow-up on existing ones to document long-term outcomes and maintenance of improvements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

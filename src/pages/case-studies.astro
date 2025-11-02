@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, FileText, Users, Brain } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/case-studies' || Astro.url.pathname === '/case-studies/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Case Studies</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Real-world examples and success stories of online therapy treatments for various conditions and demographics.
+              </p>
+            </div>
+
+            {/* Featured Case Studies */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Case Study 1 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="/images/concepts/casestudiespage.jpg" 
+                  alt="Anxiety Treatment Success" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <Brain class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Anxiety Treatment Success Story</h3>
+                  <p class="text-gray-600 mb-4">
+                    How Sarah overcame severe anxiety through online CBT therapy and mindfulness techniques.
+                  </p>
+                  <a href="/case-studies/conditions/anxiety-treatment-success" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read case study <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Case Study 2 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Remote Worker Mental Health" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <Users class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Remote Worker Mental Health</h3>
+                  <p class="text-gray-600 mb-4">
+                    How online therapy helped John manage work-from-home burnout and isolation during his tech career.
+                  </p>
+                  <a href="/case-studies/demographics/remote-worker-mental-health" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read case study <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Case Study 3 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Therapy for Night Owls" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <Users class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Therapy for Night Owls</h3>
+                  <p class="text-gray-600 mb-4">
+                    How flexible online therapy scheduling helped Maria, a night shift nurse, access mental health care.
+                  </p>
+                  <a href="/case-studies/demographics/therapy-for-night-owls" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read case study <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Condition Case Studies */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Condition Case Studies</h2>
+                  <p class="text-gray-600 mb-6">
+                    Real-world examples of how online therapy has helped people with specific mental health conditions.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/case-studies/conditions/anxiety-treatment-success" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Anxiety Treatment Success Story</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/conditions/depression-recovery-journey" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Depression Recovery Journey</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/conditions/ptsd-treatment-online" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>PTSD Treatment Online</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/conditions/ocd-management-success" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>OCD Management Success</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/case-studies/conditions" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all condition case studies <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Demographic Case Studies */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Demographic Case Studies</h2>
+                  <p class="text-gray-600 mb-6">
+                    Success stories from people of different backgrounds, lifestyles, and demographics.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/case-studies/demographics/remote-worker-mental-health" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Remote Worker Mental Health</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/demographics/therapy-for-night-owls" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Therapy for Night Owls</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/demographics/rural-access-to-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Rural Access to Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies/demographics/college-student-stress-management" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>College Student Stress Management</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/case-studies/demographics" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all demographic case studies <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Case Study Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific case study content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

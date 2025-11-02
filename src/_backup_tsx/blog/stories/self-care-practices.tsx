@@ -1,0 +1,415 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, User, Tag, MessageCircle, Clock } from 'lucide-react';
+import BlogLayout from '../BlogLayout';
+
+const SelfCarePractices = () => {
+  return (
+    <BlogLayout>
+      {/* Breadcrumb */}
+      <div className="flex items-center text-sm text-gray-500 mb-6">
+        <Link to="/" className="hover:text-indigo-600">Home</Link>
+        <span className="mx-2">/</span>
+        <Link to="/blog" className="hover:text-indigo-600">Blog</Link>
+        <span className="mx-2">/</span>
+        <Link to="/blog/stories" className="hover:text-indigo-600">Stories</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-700">Self-Care Practices</span>
+      </div>
+
+      {/* Article Header */}
+      <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <img 
+          src="/images/blog/self-care-practices.jpg" 
+          alt="Self-Care Practices" 
+          className="blog-featured-image h-96"
+        />
+        <div className="p-8">
+          <h1 className="blog-title">5 Effective Self-Care Practices for Mental Wellness</h1>
+          
+          <div className="flex flex-wrap items-center text-sm text-gray-500 mb-6">
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Calendar className="h-4 w-4 mr-1" />
+              <span>June 5, 2025</span>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <User className="h-4 w-4 mr-1" />
+              <span>By Dr. Maya Patel</span>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Tag className="h-4 w-4 mr-1" />
+              <Link to="/blog/tag/self-care" className="hover:text-indigo-600">Self-Care</Link>,{" "}
+              <Link to="/blog/tag/mental-health" className="hover:text-indigo-600 ml-1">Mental Health</Link>
+            </div>
+            <div className="flex items-center mr-6 mb-2 sm:mb-0">
+              <Clock className="h-4 w-4 mr-1" />
+              <span>6 min read</span>
+            </div>
+          </div>
+          
+          <div className="bg-indigo-50 rounded-lg p-4 mb-6">
+            <p className="text-gray-700 italic">
+              "Self-care isn't selfish—it's essential. When we prioritize our own wellbeing, we're better equipped to show up fully in all areas of our lives." — Dr. Maya Patel, Clinical Psychologist
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="blog-content">
+          <p>
+            In our fast-paced world, self-care often falls to the bottom of our priority list. Yet research consistently shows that regular self-care practices are essential for maintaining mental health and preventing burnout. The good news is that effective self-care doesn't require expensive spa treatments or elaborate retreats—simple, consistent practices can make a profound difference in your wellbeing.
+          </p>
+          
+          <p>
+            As a clinical psychologist specializing in stress management, I've observed that the most effective self-care routines share certain qualities: they're sustainable, personally meaningful, and address multiple dimensions of wellbeing. Based on both research and clinical experience, here are five evidence-based self-care practices that can significantly improve your mental wellness.
+          </p>
+          
+          <h2 className="blog-subtitle">1. Mindful Morning Routine</h2>
+          <p>
+            How you start your day sets the tone for everything that follows. A mindful morning routine creates a foundation of calm and intention that can help you navigate daily stressors more effectively.
+          </p>
+          
+          <h3 className="blog-subheading">The Practice:</h3>
+          <p>
+            Reserve the first 15-30 minutes of your day for yourself, before checking emails or social media. This might include:
+          </p>
+          <ul>
+            <li>A brief meditation (even 5 minutes can be beneficial)</li>
+            <li>Gentle stretching or movement</li>
+            <li>Journaling about intentions for the day</li>
+            <li>Enjoying a cup of tea or coffee without distractions</li>
+          </ul>
+          
+          <h3 className="blog-subheading">The Science:</h3>
+          <p>
+            Research from the Journal of Positive Psychology found that morning routines that include mindfulness practices are associated with lower stress levels throughout the day and improved emotional regulation. The key is consistency—even a short morning practice can yield significant benefits when done regularly.
+          </p>
+          
+          <h3 className="blog-subheading">Client Story:</h3>
+          <p>
+            "I was skeptical that 15 minutes in the morning could make much difference," shares Jamie, a marketing executive and mother of two. "But after committing to a simple routine of stretching and five minutes of meditation before looking at my phone, I noticed I was less reactive to work stress and more patient with my kids. Those 15 minutes create a buffer that helps me respond rather than react throughout the day."
+          </p>
+          
+          <h2 className="blog-subtitle">2. Nature Immersion</h2>
+          <p>
+            Spending time in natural environments is one of the most accessible and powerful self-care practices available to us. Even brief exposure to nature can significantly reduce stress hormones and improve mood.
+          </p>
+          
+          <h3 className="blog-subheading">The Practice:</h3>
+          <p>
+            Aim to spend at least 20 minutes in a natural setting three times per week. This could be:
+          </p>
+          <ul>
+            <li>A walk in a local park</li>
+            <li>Gardening or tending to houseplants</li>
+            <li>Sitting by a body of water</li>
+            <li>Hiking in a natural area</li>
+          </ul>
+          
+          <h3 className="blog-subheading">The Science:</h3>
+          <p>
+            A growing body of research supports the mental health benefits of nature exposure. A 2019 study published in Scientific Reports found that people who spent at least 120 minutes in nature per week reported significantly higher levels of health and wellbeing compared to those who had no nature contact.
+          </p>
+          
+          <p>
+            The Japanese practice of "forest bathing" (shinrin-yoku) has been extensively studied, with research showing that it reduces cortisol levels, lowers blood pressure, and improves concentration and memory.
+          </p>
+          
+          <h3 className="blog-subheading">Client Story:</h3>
+          <p>
+            "During a particularly difficult period of anxiety, my therapist suggested I spend my lunch breaks at the small park near my office instead of eating at my desk," recalls Michael, a software developer. "That simple change—just 30 minutes of sitting under trees while I eat—has become a non-negotiable part of my day. I return to work feeling reset, and my afternoon productivity has actually improved."
+          </p>
+          
+          <div className="blog-callout">
+            <h3 className="blog-subheading">Nature Access Tips</h3>
+            <p className="mb-4">If you have limited access to natural environments:</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Viewing nature photographs or videos can provide some of the same benefits</li>
+              <li>Listening to nature sounds (like rainfall or birdsong) can reduce stress</li>
+              <li>Tending to houseplants connects you to natural cycles</li>
+              <li>Seek out small urban green spaces like pocket parks or community gardens</li>
+            </ul>
+          </div>
+          
+          <h2 className="blog-subtitle">3. Boundary Setting Practice</h2>
+          <p>
+            While not typically categorized as self-care, establishing and maintaining healthy boundaries is one of the most important practices for preserving mental energy and preventing burnout.
+          </p>
+          
+          <h3 className="blog-subheading">The Practice:</h3>
+          <p>
+            Regularly assess and adjust your boundaries in various life domains:
+          </p>
+          <ul>
+            <li>Digital boundaries (e.g., designated times to check email/social media)</li>
+            <li>Time boundaries (learning to say no to additional commitments)</li>
+            <li>Emotional boundaries (limiting exposure to others' negativity)</li>
+            <li>Work/life boundaries (clear delineation between work and personal time)</li>
+          </ul>
+          
+          <h3 className="blog-subheading">The Science:</h3>
+          <p>
+            Research in occupational health psychology shows that poor boundaries, particularly between work and personal life, are strongly associated with chronic stress, burnout, and decreased life satisfaction. A 2020 study in the Journal of Applied Psychology found that employees who established clear work-home boundaries reported higher levels of wellbeing and job satisfaction.
+          </p>
+          
+          <h3 className="blog-subheading">Client Story:</h3>
+          <p>
+            "I used to pride myself on being available to colleagues 24/7," says Elena, a nonprofit director. "My therapist helped me see that this wasn't sustainable. I started small—no work emails after 7 PM or on Sundays. I was terrified things would fall apart, but the opposite happened. I became more effective during work hours, and my team actually began respecting each other's time more too."
+          </p>
+          
+          <h2 className="blog-subtitle">4. Body-Centered Awareness Practice</h2>
+          <p>
+            Many of us live primarily in our heads, disconnected from the wisdom and signals of our bodies. Regular practices that foster body awareness help us recognize stress responses earlier and respond to our physical needs more effectively.
+          </p>
+          
+          <h3 className="blog-subheading">The Practice:</h3>
+          <p>
+            Incorporate body awareness practices into your routine:
+          </p>
+          <ul>
+            <li>Body scan meditation (systematically bringing attention to different parts of your body)</li>
+            <li>Yoga, tai chi, or other mindful movement practices</li>
+            <li>Tension check-ins throughout the day (noticing and releasing physical tension)</li>
+            <li>Breath awareness practices (noticing the quality of your breathing)</li>
+          </ul>
+          
+          <h3 className="blog-subheading">The Science:</h3>
+          <p>
+            Research in somatic psychology demonstrates that body-centered practices can effectively reduce symptoms of anxiety, depression, and trauma. A meta-analysis published in the Journal of Psychiatric Research found that body-oriented interventions showed significant effects on reducing psychological distress and improving wellbeing.
+          </p>
+          
+          <h3 className="blog-subheading">Client Story:</h3>
+          <p>
+            "I never realized how disconnected I was from my body until I started practicing regular body scans," shares Taylor, who sought therapy for chronic anxiety. "I discovered I was walking around with my shoulders by my ears most of the day! Learning to check in with my body has become my early warning system—now I notice the physical signs of stress before I'm in full anxiety mode, which gives me a chance to intervene earlier."
+          </p>
+          
+          <h2 className="blog-subtitle">5. Connection Cultivation</h2>
+          <p>
+            Social connection is a fundamental human need and a powerful protective factor for mental health. Yet meaningful connection doesn't happen automatically—it requires intentional cultivation.
+          </p>
+          
+          <h3 className="blog-subheading">The Practice:</h3>
+          <p>
+            Prioritize activities that foster genuine connection:
+          </p>
+          <ul>
+            <li>Schedule regular check-ins with close friends or family (even brief connections matter)</li>
+            <li>Engage in activities that allow for deeper conversations beyond small talk</li>
+            <li>Join groups organized around shared interests or values</li>
+            <li>Practice vulnerable sharing and active listening</li>
+          </ul>
+          
+          <h3 className="blog-subheading">The Science:</h3>
+          <p>
+            A landmark study published in American Psychologist found that social connection is as important to physical health as factors like smoking, obesity, and physical activity. Research consistently shows that people with stronger social connections have lower rates of anxiety and depression, higher self-esteem, and greater empathy for others.
+          </p>
+          
+          <h3 className="blog-subheading">Client Story:</h3>
+          <p>
+            "After my divorce, I realized my social circle had shrunk dramatically," recalls Sam. "My therapist encouraged me to join a local hiking group—not to make friends necessarily, but just to be around others. It felt awkward at first, but showing up consistently led to natural connections. Those Saturday hikes have become the highlight of my week, and I've developed friendships that have supported me through this transition."
+          </p>
+          
+          <h2 className="blog-subtitle">Making Self-Care Sustainable</h2>
+          <p>
+            The most effective self-care isn't about adding more to your to-do list—it's about integrating practices that replenish rather than deplete you. Here are some tips for creating a sustainable self-care practice:
+          </p>
+          
+          <h3 className="blog-subheading">Start Small</h3>
+          <p>
+            Begin with just one practice that resonates with you, and start with a duration or frequency that feels easily achievable. Success builds momentum.
+          </p>
+          
+          <h3 className="blog-subheading">Link to Existing Habits</h3>
+          <p>
+            Attach new self-care practices to habits you already have. For example, practice a body scan right after brushing your teeth, or take three mindful breaths before checking email.
+          </p>
+          
+          <h3 className="blog-subheading">Personalize Your Approach</h3>
+          <p>
+            The most sustainable self-care practices are those that feel personally meaningful and enjoyable. Experiment to discover what truly replenishes you, rather than following prescriptive lists.
+          </p>
+          
+          <h3 className="blog-subheading">Plan for Obstacles</h3>
+          <p>
+            Anticipate challenges to your self-care routine and develop specific strategies for navigating them. Having a "if-then" plan makes you more likely to maintain your practice when obstacles arise.
+          </p>
+          
+          <h3 className="blog-subheading">Practice Self-Compassion</h3>
+          <p>
+            When you inevitably miss a day or struggle to maintain your practice, respond with kindness rather than criticism. Self-compassion—treating yourself with the same kindness you would offer a good friend—is itself a powerful form of self-care.
+          </p>
+          
+          <h2 className="blog-subtitle">Conclusion</h2>
+          <p>
+            Self-care isn't a luxury or indulgence—it's a necessary practice for maintaining mental health in our demanding world. The five practices outlined here—mindful morning routines, nature immersion, boundary setting, body awareness, and connection cultivation—offer evidence-based approaches to nurturing your wellbeing.
+          </p>
+          <p>
+            Remember that effective self-care is highly individual. Use these suggestions as starting points, but trust your own experience about what truly replenishes you. With consistent practice, these small acts of self-care can create profound shifts in your relationship with yourself and your overall mental wellness.
+          </p>
+        </div>
+      </div>
+
+      {/* Author Bio */}
+      <div className="blog-author">
+        <img 
+          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+          alt="Dr. Maya Patel" 
+          className="blog-author-image"
+        />
+        <div>
+          <h3 className="blog-author-name">About the Author</h3>
+          <p className="blog-author-bio">
+            Dr. Maya Patel is a licensed clinical psychologist specializing in stress management and burnout prevention. With over 15 years of experience in private practice and as a consultant to healthcare organizations, she combines evidence-based approaches with practical wisdom to help people thrive in demanding environments.
+          </p>
+          <div className="flex items-center">
+            <Link to="/blog/author/maya-patel" className="text-indigo-600 hover:text-indigo-800 mr-4">
+              More from Dr. Patel
+            </Link>
+            <a href="https://twitter.com/drmayapatel" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+              @drmayapatel
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Articles */}
+      <div className="blog-related">
+        <h3 className="blog-related-title">Related Articles</h3>
+        <div className="blog-related-grid">
+          <div className="flex items-start">
+            <img 
+              src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+              alt="Therapist Interviews" 
+              className="blog-related-image"
+            />
+            <div>
+              <h4 className="blog-related-item-title">A Day in the Life of an Online Therapist</h4>
+              <Link to="/blog/stories/therapist-interviews" className="blog-related-item-link">
+                Read article <ArrowRight className="h-3 w-3 ml-1" />
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <img 
+              src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+              alt="Latest Research" 
+              className="blog-related-image"
+            />
+            <div>
+              <h4 className="blog-related-item-title">Latest Research on Online Therapy Effectiveness</h4>
+              <Link to="/blog/news/latest-therapy-research" className="blog-related-item-link">
+                Read article <ArrowRight className="h-3 w-3 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Comments Section */}
+      <div className="blog-comments">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-bold text-gray-800">Comments (8)</h3>
+          <button className="text-indigo-600 hover:text-indigo-800 font-medium">
+            Leave a comment
+          </button>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="border-b pb-6">
+            <div className="flex items-start mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="User Avatar" 
+                className="w-10 h-10 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">Sarah Johnson</h4>
+                  <span className="text-gray-500 text-sm">2 days ago</span>
+                </div>
+                <p className="text-gray-700">
+                  The boundary setting practice resonated with me so much. I've been working on saying no more often, and while it's still uncomfortable, it's been life-changing for my mental health. I especially appreciated the reminder that boundary setting IS self-care - I hadn't thought of it that way before.
+                </p>
+                <button className="text-gray-500 hover:text-indigo-600 text-sm mt-2 flex items-center">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex items-start ml-12">
+              <img 
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="Author Avatar" 
+                className="w-8 h-8 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">Dr. Maya Patel</h4>
+                  <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Author</span>
+                  <span className="text-gray-500 text-sm ml-2">1 day ago</span>
+                </div>
+                <p className="text-gray-700">
+                  Thank you for sharing, Sarah! You're absolutely right - boundary setting is one of the most powerful forms of self-care, though it's often the most challenging. The discomfort tends to decrease with practice, and the benefits are so worth it.
+                </p>
+                <button className="text-gray-500 hover:text-indigo-600 text-sm mt-2 flex items-center">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div className="flex items-start">
+              <img 
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
+                alt="User Avatar" 
+                className="w-10 h-10 rounded-full object-cover mr-3"
+              />
+              <div>
+                <div className="flex items-center mb-1">
+                  <h4 className="font-bold text-gray-800 mr-2">Michael Chen</h4>
+                  <span className="text-gray-500 text-sm">12 hours ago</span>
+                </div>
+                <p className="text-gray-700">
+                  I've been trying to implement a morning routine for years but always gave up because I tried to do too much at once. The suggestion to start with just 15 minutes and link it to existing habits was exactly what I needed to hear. I've been doing just 5 minutes of meditation after my coffee for a week now, and I'm shocked at the difference it's making.
+                </p>
+                <button className="text-gray-500 hover:text-indigo-600 text-sm mt-2 flex items-center">
+                  <MessageCircle className="h-3 w-3 mr-1" /> Reply
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <button className="w-full py-2 text-indigo-600 hover:text-indigo-800 font-medium border border-indigo-600 rounded-md">
+            Load more comments
+          </button>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="blog-newsletter">
+        <h3 className="blog-newsletter-title">Subscribe to Our Newsletter</h3>
+        <p className="blog-newsletter-description">
+          Stay up-to-date with the latest mental health news, research, and resources delivered straight to your inbox.
+        </p>
+        <div className="blog-newsletter-form">
+          <input 
+            type="email" 
+            placeholder="Your email address" 
+            className="blog-newsletter-input"
+          />
+          <button className="blog-newsletter-button">
+            Subscribe
+          </button>
+        </div>
+        <p className="blog-newsletter-privacy">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </BlogLayout>
+  );
+};
+
+export default SelfCarePractices;

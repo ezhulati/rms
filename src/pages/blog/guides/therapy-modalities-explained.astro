@@ -1,0 +1,139 @@
+---
+import BlogLayout from '../BlogLayout.astro';
+import { ArrowRight, Calendar, User, Tag, Clock, Brain, Target, Heart, Zap, Shield, MessageCircle } from 'lucide-react';
+---
+
+<BlogLayout>
+
+    
+      <div class="flex items-center text-sm text-gray-500 mb-6">
+        <a href="/" class="hover:text-indigo-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/guides" class="hover:text-indigo-600">Guides</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700">Therapy Modalities</span>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Therapy Modalities" class="blog-featured-image h-96" />
+        <div class="p-8">
+          <h1 class="blog-title">Therapy Modalities Explained: Finding Your Best Fit</h1>
+          <div class="flex flex-wrap items-center text-sm text-gray-500 mb-6">
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Calendar class="h-4 w-4 mr-1" />
+              <span>April 18, 2025</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <User class="h-4 w-4 mr-1" />
+              <span>By Dr. Sarah Johnson, Ph.D.</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Tag class="h-4 w-4 mr-1" />
+              <a href="/blog/tag/therapy-types" class="hover:text-indigo-600">Therapy Types</a>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Clock class="h-4 w-4 mr-1" />
+              <span>15 min read</span>
+            </div>
+          </div>
+          <div class="bg-indigo-50 rounded-lg p-4 mb-6">
+            <p class="text-gray-700 italic">
+              "Understanding different therapy approaches empowers you to make informed decisions. The best modality is the one that resonates with you and addresses your specific needs." — Dr. Sarah Johnson
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div class="blog-content">
+          <p>Walking into therapy for the first time, you might hear terms like CBT, DBT, psychodynamic therapy, or EMDR. What do these mean, and how do you know which approach is right for you? This guide breaks down the most common therapy modalities.</p>
+
+          <h2 class="blog-subtitle">Cognitive Behavioral Therapy (CBT)</h2>
+          <p><strong>Core principle:</strong> Our thoughts, feelings, and behaviors are interconnected. By identifying and challenging negative thought patterns, we can change how we feel and act.</p>
+          <p><strong>Best for:</strong> Depression, anxiety, OCD, PTSD, eating disorders, phobias</p>
+          <p><strong>Duration:</strong> Typically 12-20 sessions, short-term focused</p>
+
+          <h3 class="blog-subheading">What to Expect</h3>
+          <ul>
+            <li>Regular homework assignments between sessions</li>
+            <li>Thought records to track patterns</li>
+            <li>Behavioral experiments to test beliefs</li>
+            <li>Learning specific coping skills</li>
+            <li>Measurable goals and progress tracking</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Dialectical Behavior Therapy (DBT)</h2>
+          <p><strong>Core principle:</strong> Balance acceptance and change</p>
+          <p><strong>Best for:</strong> Borderline personality disorder, self-harm, suicidal thoughts, emotion dysregulation</p>
+          <p><strong>Duration:</strong> Typically 6-12 months or longer</p>
+
+          <h3 class="blog-subheading">Four Core Skills</h3>
+          <ol>
+            <li><strong>Mindfulness:</strong> Being present and aware</li>
+            <li><strong>Distress Tolerance:</strong> Surviving crises without making things worse</li>
+            <li><strong>Emotion Regulation:</strong> Managing intense emotions</li>
+            <li><strong>Interpersonal Effectiveness:</strong> Communicating needs effectively</li>
+          </ol>
+
+          <h2 class="blog-subtitle">Psychodynamic Therapy</h2>
+          <p><strong>Core principle:</strong> Unconscious patterns from the past shape present behavior</p>
+          <p><strong>Best for:</strong> Relationship patterns, self-exploration, chronic depression</p>
+          <p><strong>Duration:</strong> Long-term, often years</p>
+
+          <h3 class="blog-subheading">What to Expect</h3>
+          <ul>
+            <li>Free association—talking about whatever comes to mind</li>
+            <li>Dream analysis and interpretation</li>
+            <li>Exploring childhood experiences</li>
+            <li>Examining patterns in relationships</li>
+            <li>Discussion of feelings toward the therapist</li>
+          </ul>
+
+          <h2 class="blog-subtitle">EMDR (Eye Movement Desensitization and Reprocessing)</h2>
+          <p><strong>Core principle:</strong> Bilateral stimulation helps process traumatic memories</p>
+          <p><strong>Best for:</strong> PTSD, trauma, phobias, panic disorder</p>
+          <p><strong>Duration:</strong> Varies, often 6-12 sessions for single trauma</p>
+
+          <h2 class="blog-subtitle">How to Choose</h2>
+
+          <h3 class="blog-subheading">Consider Your Goals</h3>
+          <ul>
+            <li><strong>Specific symptom relief:</strong> CBT, DBT, EMDR</li>
+            <li><strong>Understanding yourself deeply:</strong> Psychodynamic</li>
+            <li><strong>Processing trauma:</strong> EMDR, trauma-focused CBT</li>
+            <li><strong>Relationship patterns:</strong> Psychodynamic, relational therapy</li>
+          </ul>
+
+          <h3 class="blog-subheading">Consider Your Learning Style</h3>
+          <ul>
+            <li><strong>Prefer structure and homework:</strong> CBT, DBT</li>
+            <li><strong>Prefer open exploration:</strong> Psychodynamic</li>
+            <li><strong>Want practical skills:</strong> DBT, CBT</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Final Thoughts</h2>
+          <p>Remember that research shows the therapeutic relationship matters more than the specific modality for most concerns. A skilled therapist you connect with using an approach that's "good enough" will likely help you more than a perfect modality with a therapist you don't click with.</p>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Dr. Sarah Johnson" class="blog-author-image" />
+        <div>
+          <h3 class="blog-author-name">About the Author</h3>
+          <p class="blog-author-bio">Dr. Sarah Johnson, Ph.D., is a licensed clinical psychologist trained in multiple therapeutic modalities.</p>
+        </div>
+      </div>
+
+      <div class="blog-newsletter">
+        <h3 class="blog-newsletter-title">Subscribe to Our Newsletter</h3>
+        <p class="blog-newsletter-description">Stay up-to-date with the latest mental health news and resources.</p>
+        <div class="blog-newsletter-form">
+          <input type="email" placeholder="Your email address" class="blog-newsletter-input" />
+          <button class="blog-newsletter-button">Subscribe</button>
+        </div>
+      </div>
+    
+  
+</BlogLayout>

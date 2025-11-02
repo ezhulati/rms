@@ -1,0 +1,285 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, FileText, Download, BookOpen } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/resources' || Astro.url.pathname === '/resources/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Resources</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Free downloadable worksheets, guides, and resources to support your mental health journey.
+              </p>
+            </div>
+
+            {/* Featured Resources */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Resource 1 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-indigo-100 p-6 flex items-center justify-center">
+                  <FileText class="h-16 w-16 text-indigo-600" />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Cognitive Distortion Worksheet</h3>
+                  <p class="text-gray-600 mb-4">
+                    Learn to identify and challenge common cognitive distortions that contribute to anxiety and depression.
+                  </p>
+                  <a href="/resources/worksheets/cognitive-distortion-worksheet" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View resource <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Resource 2 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-indigo-100 p-6 flex items-center justify-center">
+                  <FileText class="h-16 w-16 text-indigo-600" />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Therapy Session Preparation Guide</h3>
+                  <p class="text-gray-600 mb-4">
+                    A comprehensive guide to help you prepare for and get the most out of your therapy sessions.
+                  </p>
+                  <a href="/resources/worksheets/therapy-session-preparation" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View resource <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Resource 3 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-indigo-100 p-6 flex items-center justify-center">
+                  <FileText class="h-16 w-16 text-indigo-600" />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Mindfulness Practice Worksheet</h3>
+                  <p class="text-gray-600 mb-4">
+                    Simple mindfulness exercises to help reduce stress, anxiety, and improve your overall mental wellbeing.
+                  </p>
+                  <a href="/resources/worksheets/mindfulness-practice-worksheet" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View resource <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Worksheets */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Worksheets</h2>
+                  <p class="text-gray-600 mb-6">
+                    Practical worksheets to help you apply therapeutic techniques in your daily life.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/resources/worksheets/cognitive-distortion-worksheet" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Cognitive Distortion Worksheet</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/worksheets/therapy-session-preparation" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Therapy Session Preparation Guide</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/worksheets/mindfulness-practice-worksheet" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Mindfulness Practice Worksheet</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/worksheets/thought-record-worksheet" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Thought Record Worksheet</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/worksheets/stress-management-techniques" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Stress Management Techniques</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/resources/worksheets" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all worksheets <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Guides */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Guides</h2>
+                  <p class="text-gray-600 mb-6">
+                    Comprehensive guides to help you navigate various aspects of mental health care.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/resources/guides/therapy-types-explained" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Therapy Types Explained</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/guides/insurance-coverage-guide" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Insurance Coverage Guide</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/guides/talking-to-loved-ones" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talking to Loved Ones About Mental Health</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/guides/self-care-strategies" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Self-Care Strategies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/resources/guides/crisis-resources" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Crisis Resources</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/resources/guides" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all guides <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Resource Preview */}
+            <div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Featured Resource: Cognitive Distortion Worksheet</h2>
+                  <a href="/resources/worksheets/cognitive-distortion-worksheet" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    View full resource <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="col-span-1 md:col-span-1">
+                    <div class="bg-indigo-50 rounded-lg p-6 flex flex-col items-center">
+                      <FileText class="h-16 w-16 text-indigo-600 mb-4" />
+                      <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Cognitive Distortion Worksheet</h3>
+                      <p class="text-gray-600 text-sm text-center mb-4">PDF Worksheet • 3 pages</p>
+                      <button class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        <Download class="h-4 w-4 mr-2" /> Download PDF
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Understanding Cognitive Distortions</h3>
+                    <p class="text-gray-600 mb-4">
+                      Cognitive distortions are patterns of thinking that are inaccurate and negatively biased. These thought patterns can reinforce negative emotions and lead to increased anxiety and depression. This worksheet helps you identify and challenge these distortions.
+                    </p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2">What's Included:</h4>
+                    <ul class="space-y-2 mb-4">
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>Distortion Identification Guide:</strong> Descriptions and examples of common cognitive distortions</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>Thought Record Template:</strong> A structured format to document and analyze distorted thoughts</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>Reframing Exercises:</strong> Techniques to challenge and replace distorted thoughts with more balanced ones</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>Practice Scenarios:</strong> Example situations to help you apply the techniques</span>
+                      </li>
+                    </ul>
+                    
+                    <p class="text-gray-600">
+                      This worksheet is based on cognitive-behavioral therapy (CBT) principles and can be used as a self-help tool or in conjunction with therapy. Regular practice can help you develop more balanced thinking patterns over time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource Development */}
+            <div class="mt-16 bg-indigo-50 rounded-lg p-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">How Our Resources Are Developed</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <BookOpen class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Expert-Created</h3>
+                  <p class="text-gray-600">
+                    All resources are developed by licensed mental health professionals with expertise in their respective areas.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <FileText class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Evidence-Based</h3>
+                  <p class="text-gray-600">
+                    Our resources incorporate techniques and approaches that are supported by research and clinical evidence.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <Download class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Practical & Accessible</h3>
+                  <p class="text-gray-600">
+                    We design our resources to be user-friendly, practical, and applicable to real-life situations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div class="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+              <h2 class="text-2xl font-bold mb-4">Need More Personalized Support?</h2>
+              <p class="text-lg mb-6 max-w-2xl mx-auto">
+                While these resources can be helpful, they're not a substitute for professional mental health care. Consider exploring online therapy options for personalized support.
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="/compare" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                  Compare Therapy Platforms
+                </a>
+                <a href="/tools/matchers/therapy-platform-matcher" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition">
+                  Find Your Match
+                </a>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Resource Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific resource content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

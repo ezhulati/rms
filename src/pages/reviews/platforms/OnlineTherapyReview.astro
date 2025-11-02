@@ -1,0 +1,539 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Online-Therapy.com Review" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <div class="flex flex-wrap items-center justify-between mb-4">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2 md:mb-0">Online-Therapy.com Review</h1>
+                <div class="flex items-center">
+                  <div class="mr-2">
+                    {renderStars(4.0)}
+                  </div>
+                  <span class="text-lg font-bold text-gray-700">4.0/5</span>
+                </div>
+              </div>
+              
+              <p class="text-gray-600 text-lg mb-6">
+                Online-Therapy.com specializes in cognitive behavioral therapy (CBT) with a structured program that includes daily therapist feedback, worksheets, and additional wellness resources.
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-3">Pros</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Comprehensive CBT program</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Daily therapist feedback</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Extensive self-help resources</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Structured approach to therapy</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Yoga and meditation resources</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-3">Cons</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Limited therapy approaches (CBT only)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>No insurance coverage</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Smaller therapist network</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>No medication management</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Less suitable for complex conditions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as="a"
+                  href="https://www.online-therapy.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  variant="primary"
+                  icon={ExternalLink}
+                >
+                  Visit Online-Therapy.com
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/compare/platforms/betterhelp-vs-online-therapy" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Compare with BetterHelp
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Rating Breakdown */}
+        <div class="mb-8">
+          <RatingBreakdown 
+            overallRating={4.0} 
+            categories={ratingCategories}
+            showDescription={true}
+          />
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Online-Therapy.com at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <DollarSign class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Pricing</h3>
+                <p class="text-gray-600">$40-$88 per week</p>
+                <p class="text-sm text-gray-500 mt-1">Billed monthly</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageSquare class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Communication Options</h3>
+                <div class="flex space-x-2 mb-1">
+                  <MessageSquare class="h-4 w-4 text-indigo-600" title="Messaging" />
+                  <Video class="h-4 w-4 text-indigo-600" title="Video" />
+                </div>
+                <p class="text-sm text-gray-500">Daily feedback + live sessions</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Calendar class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Subscription</h3>
+                <p class="text-gray-600">Monthly billing, cancel anytime</p>
+                <p class="text-sm text-gray-500 mt-1">Multiple plan options</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Insurance</h3>
+                <p class="text-gray-600">No insurance coverage</p>
+                <p class="text-sm text-gray-500 mt-1">Self-pay only</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Therapist Network</h3>
+                <p class="text-gray-600">Licensed CBT specialists</p>
+                <p class="text-sm text-gray-500 mt-1">Focused CBT approach</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Best For</h3>
+                <p class="text-gray-600">CBT-focused therapy</p>
+                <p class="text-sm text-gray-500 mt-1">Structured self-improvement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Full Review */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Full Online-Therapy.com Review</h2>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">What is Online-Therapy.com?</h3>
+            <p class="text-gray-600 mb-4">
+              Online-Therapy.com is a specialized platform that focuses exclusively on delivering cognitive behavioral therapy (CBT) through a structured online program. Unlike general therapy platforms, it provides a comprehensive CBT toolbox including worksheets, journaling, yoga videos, and daily therapist feedback.
+            </p>
+            <p class="text-gray-600">
+              The platform stands out for its systematic approach to therapy, combining self-guided CBT modules with professional support and additional wellness resources. This structured program is designed to help users develop practical skills and strategies for managing various mental health challenges.
+            </p>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">How Online-Therapy.com Works</h3>
+            
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h4 class="font-bold text-gray-800 mb-3">Program Structure</h4>
+              <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                <li>Complete initial assessment and CBT introduction</li>
+                <li>Work through structured CBT sections at your own pace</li>
+                <li>Complete daily worksheets and activities</li>
+                <li>Receive therapist feedback on your progress</li>
+                <li>Attend weekly live sessions (higher-tier plans)</li>
+              </ol>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">CBT Program Components</h4>
+                <p class="text-gray-600 mb-3">
+                  The platform's CBT program includes eight sections covering key therapeutic concepts and skills:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Understanding your problems</li>
+                  <li>Identifying negative thoughts</li>
+                  <li>Challenging cognitive distortions</li>
+                  <li>Behavioral activation</li>
+                  <li>Exposure therapy techniques</li>
+                  <li>Mindfulness and relaxation</li>
+                  <li>Sleep improvement</li>
+                  <li>Relapse prevention</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">Additional Resources</h4>
+                <p class="text-gray-600 mb-3">
+                  Beyond the core CBT program, users get access to:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Yoga and meditation videos</li>
+                  <li>Activity planning tools</li>
+                  <li>Journaling platform</li>
+                  <li>Progress tracking</li>
+                  <li>Worksheets and exercises</li>
+                  <li>Educational materials</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Therapist Interaction</h4>
+              <p class="text-gray-600 mb-3">
+                Therapist support varies by subscription plan:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Daily feedback on worksheets and activities</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Weekly live video sessions (premium plans)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Messaging support through the platform</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Progress reviews and goal setting</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Pricing & Value</h3>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Subscription Plans</h4>
+              </div>
+              <div class="p-4">
+                <div class="space-y-4">
+                  <div>
+                    <h5 class="font-bold text-gray-800">Basic</h5>
+                    <p class="text-gray-600 mb-2">$40/week (billed monthly at $160)</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>CBT program access</li>
+                      <li>Daily therapist responses</li>
+                      <li>Worksheets and activities</li>
+                      <li>Yoga and meditation videos</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 class="font-bold text-gray-800">Standard</h5>
+                    <p class="text-gray-600 mb-2">$64/week (billed monthly at $256)</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>All Basic features</li>
+                      <li>1 weekly video session</li>
+                      <li>Express messaging replies</li>
+                      <li>Additional worksheets</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 class="font-bold text-gray-800">Premium</h5>
+                    <p class="text-gray-600 mb-2">$88/week (billed monthly at $352)</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>All Standard features</li>
+                      <li>2 weekly video sessions</li>
+                      <li>Priority support</li>
+                      <li>Advanced CBT resources</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <p class="text-gray-600 mb-3">
+                Online-Therapy.com's value proposition depends on what you're looking for:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Excellent value for those specifically seeking CBT</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Cost-effective for self-motivated individuals who will use the resources</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Good value for the comprehensive CBT program and resources</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Less value if you need more flexible therapy approaches</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Who Online-Therapy.com Is Best For</h3>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div class="bg-green-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Ideal For</h4>
+              </div>
+              <div class="p-4">
+                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>People specifically seeking CBT</strong> who want a structured, evidence-based approach</li>
+                  <li><strong>Self-motivated individuals</strong> who will engage with the program materials</li>
+                  <li><strong>Those dealing with anxiety, depression, or stress</strong> that responds well to CBT</li>
+                  <li><strong>People who want daily support</strong> through feedback and resources</li>
+                  <li><strong>Those who prefer a structured learning approach</strong> to therapy</li>
+                  <li><strong>Individuals interested in holistic wellness</strong> with yoga and meditation</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <div class="bg-red-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Not Recommended For</h4>
+              </div>
+              <div class="p-4">
+                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>Those needing medication management</strong> as this is not available</li>
+                  <li><strong>People seeking insurance coverage</strong> for therapy</li>
+                  <li><strong>Individuals who prefer other therapy approaches</strong> besides CBT</li>
+                  <li><strong>Those with severe mental health conditions</strong> requiring intensive treatment</li>
+                  <li><strong>People who prefer more flexible, unstructured therapy</strong></li>
+                  <li><strong>Those needing crisis support</strong> or immediate assistance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Alternatives to Online-Therapy.com</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">BetterHelp</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> More flexible therapy options
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $60-$90/week
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    Offers more therapy approaches and communication options, but less structured program.
+                  </p>
+                  <a href="/reviews/platforms/betterhelp" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read BetterHelp review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Talkspace</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Insurance coverage
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $65-$99/week
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    Accepts insurance and offers medication management, but less focused on CBT.
+                  </p>
+                  <a href="/reviews/platforms/talkspace" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Talkspace review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Calmerry</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Affordable therapy
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $42-$68/week
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    More affordable with flexible plans but less structured approach and fewer resources.
+                  </p>
+                  <a href="/reviews/platforms/calmerry" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Calmerry review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Final Verdict</h3>
+            
+            <p class="text-gray-600 mb-4">
+              Online-Therapy.com earns our 4.0/5 rating for providing a comprehensive, structured CBT program with excellent supporting resources and daily therapist feedback. The platform excels in delivering a systematic approach to therapy with clear progression and practical tools.
+            </p>
+            
+            <p class="text-gray-600 mb-4">
+              While the platform's focus on CBT and lack of insurance coverage may limit its appeal for some users, it provides exceptional value for those specifically seeking CBT or preferring a structured, educational approach to therapy. The addition of wellness resources like yoga and meditation adds value beyond traditional therapy.
+            </p>
+            
+            <p class="text-gray-600">
+              Online-Therapy.com is best suited for individuals who want to learn and apply CBT techniques with professional guidance. It's particularly effective for anxiety, depression, and stress management when users are committed to engaging with the program materials and completing the work between sessions. However, those needing more flexible therapy approaches or insurance coverage may want to consider other platforms.
+            </p>
+          </div>
+        </div>
+        
+        {/* How We Review Section */}
+        <HowWeReviewed />
+        
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
+          <h2 class="text-2xl font-bold mb-4">Ready to Start Your CBT Journey?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to discover if Online-Therapy.com or another platform is the best fit for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as="a"
+              href="https://www.online-therapy.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              variant="outline"
+              size="lg"
+              icon={ExternalLink}
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Visit Online-Therapy.com
+            </Button>
+          </div>
+        </div>
+        
+        {/* Related Reviews */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Reviews</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/reviews/platforms/betterhelp" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">BetterHelp Review</h3>
+              <p class="text-gray-600 text-sm">Compare with a platform offering multiple therapy approaches and communication methods.</p>
+            </a>
+            <a href="/reviews/platforms/talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">Talkspace Review</h3>
+              <p class="text-gray-600 text-sm">Explore a platform with insurance coverage and integrated services.</p>
+            </a>
+            <a href="/reviews/platforms/calmerry" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">Calmerry Review</h3>
+              <p class="text-gray-600 text-sm">See how a more affordable therapy platform compares.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { FileText, Users, Clock, ArrowRight, BookOpen, Brain, Activity, Target } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <MetaTags 
+        title="Demographic-Specific Therapy Case Studies | RealMindSolutions"
+        description="Real-world case studies of online therapy for specific demographics including teens, LGBTQ+ individuals, rural populations, military families, seniors, and immigrants."
+      />
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Demographic-Specific Therapy Case Studies</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Exploring how online therapy can be tailored to meet the unique needs of different population groups.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">The Importance of Demographic Considerations</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Target class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Unique Needs</h3>
+              <p class="text-gray-600">
+                Different demographic groups face distinct challenges and may require specialized therapeutic approaches that address their specific life experiences and contexts.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Cultural Competence</h3>
+              <p class="text-gray-600">
+                Effective therapy requires cultural sensitivity and awareness of how factors like age, ethnicity, gender identity, and life circumstances impact mental health.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Tailored Approaches</h3>
+              <p class="text-gray-600">
+                Online therapy platforms increasingly offer specialized programs and therapist matching to address the specific needs of different demographic groups.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {caseStudies.map((study, index) => (
+            <div key={index} class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="h-48 overflow-hidden">
+                <img 
+                  src={study.image} 
+                  alt={study.demographic} 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-3">{study.title}</h2>
+                <p class="text-gray-600 mb-4">{study.description}</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Demographic</span>
+                    <p class="font-medium text-gray-800">{study.demographic}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Platform</span>
+                    <p class="font-medium text-gray-800">{study.platform}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Duration</span>
+                    <p class="font-medium text-gray-800">{study.duration}</p>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-500">Approach</span>
+                    <p class="font-medium text-gray-800">{study.approach}</p>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <span class="text-sm font-medium text-gray-500">Key Outcomes</span>
+                  <ul class="mt-1 space-y-1">
+                    {study.outcomes.map((outcome, i) => (
+                      <li key={i} class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        <span class="text-gray-700">{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+              <Button 
+                as={Link}
+                to={`/case-studies/demographics/${study.id === 'remote-worker' ? 'remote-worker-mental-health' : 
+                                               study.id === 'rural' ? 'rural-access-to-therapy' : 
+                                               study.id === 'night-owl' ? 'therapy-for-night-owls' : 
+                                               study.id === 'college' ? 'college-student-stress-management' : '#'}`}
+                variant="outline"
+                size="sm"
+                icon={FileText}
+                class="w-full justify-center"
+              >
+                Read Full Case Study
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Finding Demographic-Specific Support</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-start mb-4">
+                <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                  <Users class="h-5 w-5 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Specialized Platforms</h3>
+                  <p class="text-gray-600">
+                    Some online therapy services focus specifically on certain demographics, offering specialized therapist training and tailored approaches.
+                  </p>
+                  <a href="/best/audiences" class="text-indigo-600 hover:text-indigo-800 inline-flex items-center mt-3">
+                    Explore demographic-specific platforms <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-start mb-4">
+                <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                  <Target class="h-5 w-5 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Therapist Matching</h3>
+                  <p class="text-gray-600">
+                    Many general platforms offer therapist matching based on demographic factors, allowing you to find a therapist with relevant experience and cultural competence.
+                  </p>
+                  <a href="/reviews/features/therapist-matching-systems" class="text-indigo-600 hover:text-indigo-800 inline-flex items-center mt-3">
+                    Learn about therapist matching <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Key Insights from Demographic Studies</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Accessibility Varies by Group</h3>
+              <p class="text-gray-600">
+                Our case studies reveal that different demographics face unique barriers to accessing mental health care. Online therapy can address many of these barriers, but platforms vary in how effectively they accommodate specific needs.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Specialized Training Matters</h3>
+              <p class="text-gray-600">
+                Therapists with specialized training in working with specific demographics consistently achieve better outcomes. When choosing a platform, consider whether they offer therapists with relevant specialized experience.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Communication Preferences Differ</h3>
+              <p class="text-gray-600">
+                Different demographic groups show varying preferences for communication methods. For example, teens often prefer text-based therapy, while older adults typically benefit more from video sessions after initial technology adaptation.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Community Integration Enhances Outcomes</h3>
+              <p class="text-gray-600">
+                The most successful cases often involve integration with existing support systems and communities. Online therapy that acknowledges and works with a client's cultural, family, and community context tends to be more effective.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

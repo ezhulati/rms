@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
+---
+
+<BaseLayout
+  title="RealMindSolutions | Find Your Perfect Mental Health Solution"
+  description="Compare, review, and discover the best online therapy platforms tailored to your unique needs."
+>
+  {/* Hero Section */}
+  <section class="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+    <div class="sb-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Find Your Perfect Mental Health Solution</h1>
+          <p class="text-xl mb-8">
+            Compare, review, and discover the best online therapy platforms tailored to your unique needs. Expert guides and tools to support your mental health journey.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/compare" class="inline-flex items-center px-6 py-3 bg-white text-indigo-600 rounded-md font-medium hover:bg-gray-100 transition-colors">
+              Compare Platforms
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-md font-medium hover:bg-white hover:text-indigo-600 transition-colors">
+              Take the Assessment
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img
+            src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            alt="Mental Health Solutions"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Features Section */}
+  <section class="py-16 bg-white">
+    <div class="sb-container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">How We Help You Find the Right Solution</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We provide comprehensive resources to help you navigate the world of online therapy and mental health services.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Feature 1 */}
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <Search className="h-8 w-8 text-indigo-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Compare Platforms</h3>
+          <p class="text-gray-600 mb-4">
+            Side-by-side comparisons of top online therapy platforms to help you make an informed decision.
+          </p>
+          <a href="/compare" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+            Explore Comparisons <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
+        </div>
+
+        {/* Feature 2 */}
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <Users className="h-8 w-8 text-purple-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Reviews</h3>
+          <p class="text-gray-600 mb-4">
+            In-depth, unbiased reviews of therapy platforms, features, and specialties.
+          </p>
+          <a href="/reviews" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+            Read Reviews <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
+        </div>
+
+        {/* Feature 3 */}
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="bg-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <Heart className="h-8 w-8 text-emerald-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Tools</h3>
+          <p class="text-gray-600 mb-4">
+            Assessments and matchers to help you find the perfect mental health solution for your needs.
+          </p>
+          <a href="/tools" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+            Try Our Tools <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section class="bg-indigo-50 py-16">
+    <div class="sb-container text-center">
+      <Brain className="h-16 w-16 text-indigo-600 mx-auto mb-6" />
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Start Your Mental Health Journey?</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+        Take our free assessment to get personalized recommendations for online therapy platforms that match your needs.
+      </p>
+      <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-md font-medium hover:bg-indigo-700 transition-colors text-lg">
+        Take Free Assessment <ArrowRight className="ml-2 h-5 w-5" />
+      </a>
+    </div>
+  </section>
+</BaseLayout>

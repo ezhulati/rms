@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, BookOpen, BarChart, Brain, Users } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/learn/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Learn About Mental Health</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Educational resources to help you understand mental health concepts, treatments, and best practices.
+              </p>
+            </div>
+
+            {/* Featured Learning Resources */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Learning Resource 1 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="/images/concepts/learnpage.jpg" 
+                  alt="Therapy Types" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <BookOpen class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Therapy Types Explained</h3>
+                  <p class="text-gray-600 mb-4">
+                    A comprehensive guide to different therapy approaches including CBT, DBT, psychodynamic therapy, and more.
+                  </p>
+                  <a href="/learn/fundamentals/therapy-types-explained" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read article <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Learning Resource 2 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Mental Health Statistics" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <BarChart class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Mental Health Statistics</h3>
+                  <p class="text-gray-600 mb-4">
+                    Explore current data and trends in mental health, including prevalence, treatment access, and outcomes.
+                  </p>
+                  <a href="/learn/statistics/mental-health-statistics" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read article <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Learning Resource 3 */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Online Therapy Guide" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <BookOpen class="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Online Therapy Guide</h3>
+                  <p class="text-gray-600 mb-4">
+                    Everything you need to know about online therapy, from how it works to what to expect in your first session.
+                  </p>
+                  <a href="/learn/fundamentals/online-therapy-guide" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read article <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Learning Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Statistics */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Statistics & Research</h2>
+                  <p class="text-gray-600 mb-6">
+                    Data-driven insights into mental health trends, research findings, and treatment outcomes.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/learn/statistics/mental-health-statistics" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Mental Health Statistics</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/statistics/online-therapy-effectiveness" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online Therapy Effectiveness Research</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/statistics/therapy-outcomes-data" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Therapy Outcomes Data</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/statistics/mental-health-demographics" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Mental Health Demographics</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/learn/statistics" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all statistics <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Fundamentals */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Mental Health Fundamentals</h2>
+                  <p class="text-gray-600 mb-6">
+                    Educational resources on core mental health concepts, treatments, and approaches.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/learn/fundamentals/therapy-types-explained" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Therapy Types Explained</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/fundamentals/online-therapy-guide" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online Therapy Guide</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/fundamentals/common-mental-health-conditions" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Common Mental Health Conditions</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/learn/fundamentals/medication-vs-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Medication vs. Therapy</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/learn/fundamentals" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all fundamentals <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article */}
+            <div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Featured Article: Therapy Types Explained</h2>
+                  <a href="/learn/fundamentals/therapy-types-explained" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    Read full article <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="col-span-1 md:col-span-1">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                      alt="Therapy Types" 
+                      class="w-full rounded-lg"
+                    />
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Understanding Different Therapeutic Approaches</h3>
+                    <p class="text-gray-600 mb-4">
+                      With so many different therapy types available, it can be challenging to understand which approach might be best for your specific needs. This guide breaks down the most common therapeutic modalities and their applications.
+                    </p>
+                    
+                    <div class="space-y-4 mb-4">
+                      <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Cognitive Behavioral Therapy (CBT)</h4>
+                        <p class="text-gray-600 text-sm">
+                          A structured, goal-oriented approach that focuses on identifying and changing negative thought patterns and behaviors. Particularly effective for anxiety, depression, and specific phobias.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Dialectical Behavior Therapy (DBT)</h4>
+                        <p class="text-gray-600 text-sm">
+                          Combines cognitive techniques with mindfulness practices. Originally developed for borderline personality disorder but now used for emotional regulation, interpersonal effectiveness, and distress tolerance.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Psychodynamic Therapy</h4>
+                        <p class="text-gray-600 text-sm">
+                          Focuses on unconscious processes and how they manifest in current behavior. Helps individuals understand how past experiences influence present patterns.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <p class="text-gray-600">
+                      Our full article explores these and other approaches in detail, including acceptance and commitment therapy (ACT), interpersonal therapy, and humanistic therapies, with guidance on which might be most suitable for different conditions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Statistics Highlight */}
+            <div class="mt-16 bg-indigo-50 rounded-lg p-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Key Mental Health Statistics</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">1 in 5</div>
+                  <p class="text-gray-600">
+                    U.S. adults experience mental illness each year, representing 52.9 million people
+                  </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">60%</div>
+                  <p class="text-gray-600">
+                    Of people with mental health conditions don't receive treatment
+                  </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">76%</div>
+                  <p class="text-gray-600">
+                    Of online therapy users report improved mental wellbeing after treatment
+                  </p>
+                </div>
+              </div>
+              <div class="text-center mt-6">
+                <a href="/learn/statistics/mental-health-statistics" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                  View all statistics <ArrowRight class="h-4 w-4 ml-1" />
+                </a>
+              </div>
+            </div>
+
+            {/* Topics Grid */}
+            <div class="mt-16">
+              <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Popular Learning Topics</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="/learn/fundamentals/anxiety-disorders" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Anxiety Disorders</span>
+                </a>
+                
+                <a href="/learn/fundamentals/depression" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Depression</span>
+                </a>
+                
+                <a href="/learn/fundamentals/stress-management" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Stress Management</span>
+                </a>
+                
+                <a href="/learn/fundamentals/mindfulness" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Mindfulness</span>
+                </a>
+                
+                <a href="/learn/fundamentals/trauma-ptsd" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Trauma & PTSD</span>
+                </a>
+                
+                <a href="/learn/fundamentals/relationship-counseling" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Users class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Relationship Counseling</span>
+                </a>
+                
+                <a href="/learn/fundamentals/self-care" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Self-Care</span>
+                </a>
+                
+                <a href="/learn/fundamentals/medication-basics" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                  <span>Medication Basics</span>
+                </a>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div class="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+              <h2 class="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
+              <p class="text-lg mb-6 max-w-2xl mx-auto">
+                Now that you've learned about mental health concepts and treatments, explore your options for professional support.
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="/compare" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                  Compare Therapy Platforms
+                </a>
+                <a href="/tools/assessments/mental-health-assessment" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition">
+                  Take an Assessment
+                </a>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Learning Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific learning content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

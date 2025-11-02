@@ -1,0 +1,616 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Star, Users, Brain, Heart, DollarSign, ExternalLink, CheckCircle, XCircle, MessageSquare, Video, Phone, Shield, ChevronDown, ChevronUp } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/best' || Astro.url.pathname === '/best/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Find the Best Mental Health Solutions for You</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover the top-rated online therapy platforms tailored to your specific needs, conditions, and preferences.
+              </p>
+            </div>
+
+            {/* Best Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {/* Platforms Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-indigo-600 p-4">
+                  <Star class="h-8 w-8 text-white" />
+                </div>
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-3">Best Platforms</h2>
+                  <p class="text-gray-600 mb-4">
+                    Find the top-rated online therapy platforms across different categories.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li>
+                      <a href="/best/platforms/best-online-therapy-platforms" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Overall Platforms</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/platforms/best-text-therapy-services" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Text Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/platforms/best-video-therapy-platforms" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Video Therapy</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/best/platforms" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View all platform lists <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Conditions Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-purple-600 p-4">
+                  <Brain class="h-8 w-8 text-white" />
+                </div>
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-3">Best for Conditions</h2>
+                  <p class="text-gray-600 mb-4">
+                    Find the best platforms for specific mental health conditions.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li>
+                      <a href="/best/conditions/best-for-anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for Anxiety</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/conditions/best-for-depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for Depression</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/conditions/best-for-ptsd" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for PTSD</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/best/conditions" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View all condition lists <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Audiences Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-blue-600 p-4">
+                  <Users class="h-8 w-8 text-white" />
+                </div>
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-3">Best for Audiences</h2>
+                  <p class="text-gray-600 mb-4">
+                    Find the best platforms for specific demographics and groups.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li>
+                      <a href="/best/audiences/best-for-teens" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for Teens</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/audiences/best-for-couples" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for Couples</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/audiences/best-for-lgbtq" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best for LGBTQ+</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/best/audiences" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View all audience lists <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Specific Needs Category */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-green-600 p-4">
+                  <DollarSign class="h-8 w-8 text-white" />
+                </div>
+                <div class="p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-3">Best for Specific Needs</h2>
+                  <p class="text-gray-600 mb-4">
+                    Find platforms that meet specific requirements and preferences.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li>
+                      <a href="/best/specific-needs/best-affordable-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Most Affordable Options</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/specific-needs/best-insurance-coverage" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Insurance Coverage</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/best/specific-needs/best-medication-management" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Medication Management</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/best/specific-needs" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    View all specific needs lists <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Best Lists */}
+            <div class="mb-16">
+              <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Featured Best Lists</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Best for Anxiety */}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div class="p-6">
+                    <div class="flex items-center mb-4">
+                      <Brain class="h-6 w-6 text-purple-600 mr-3" />
+                      <h3 class="text-xl font-bold text-gray-800">Best for Anxiety</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                      Our top picks for platforms specializing in anxiety treatment, based on therapist expertise, treatment approaches, and user satisfaction.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                      <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">1. BetterHelp</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          Large network of therapists specializing in anxiety disorders with multiple communication options.
+                        </p>
+                        <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit BetterHelp <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      
+                      <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">2. Talkspace</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4" strokeWidth={1} />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          Excellent for anxiety with medication management options and insurance coverage.
+                        </p>
+                        <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit Talkspace <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      
+                      <div>
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">3. Online-Therapy.com</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4" strokeWidth={1} />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          Specialized in CBT for anxiety with comprehensive toolbox and worksheets.
+                        </p>
+                        <a href="https://www.online-therapy.com" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit Online-Therapy.com <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <a href="/best/conditions/best-for-anxiety" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                      View full anxiety platforms list <ArrowRight class="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Best for Couples */}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div class="p-6">
+                    <div class="flex items-center mb-4">
+                      <Heart class="h-6 w-6 text-red-500 mr-3" />
+                      <h3 class="text-xl font-bold text-gray-800">Best for Couples</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                      Top platforms offering specialized couples therapy to improve communication and resolve relationship issues.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                      <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">1. ReGain</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          Specialized couples therapy platform with joint sessions and relationship-focused therapists.
+                        </p>
+                        <a href="https://www.regain.us" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit ReGain <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      
+                      <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">2. Talkspace</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4" strokeWidth={1} />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          Offers dedicated couples therapy with licensed relationship counselors and flexible scheduling.
+                        </p>
+                        <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit Talkspace <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      
+                      <div>
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="font-bold text-lg">3. Lasting</div>
+                          <div class="flex text-yellow-400">
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4 fill-current" />
+                            <Star class="h-4 w-4" strokeWidth={1} />
+                          </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">
+                          App-based relationship counseling with personalized programs and exercises for couples.
+                        </p>
+                        <a href="https://www.getlasting.com" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                          Visit Lasting <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <a href="/best/audiences/best-for-couples" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                      View full couples therapy list <ArrowRight class="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Comprehensive List */}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-16">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Best Online Therapy Platforms of 2025</h2>
+                  <a href="/best/platforms/best-online-therapy-platforms" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    View full detailed list <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <p class="text-gray-600 mb-8">
+                  Our comprehensive analysis of the top online therapy platforms, based on therapist qualifications, user experience, pricing, and specialized services.
+                </p>
+                
+                <div class="space-y-8">
+                  {/* Platform 1 */}
+                  <div class="border-b pb-8">
+                    <div class="flex flex-col md:flex-row">
+                      <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="flex items-center mb-2">
+                          <span class="text-2xl font-bold text-indigo-600 mr-3">1</span>
+                          <h3 class="text-xl font-bold">BetterHelp</h3>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                        </div>
+                        <div class="text-sm text-gray-600 mb-2">
+                          <strong>Price:</strong> $60-$90/week
+                        </div>
+                        <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 flex items-center text-sm">
+                          Visit Website <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      <div class="md:w-3/4 md:pl-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Why We Recommend It</h4>
+                        <p class="text-gray-600 mb-4">
+                          BetterHelp earns our top spot for its extensive network of licensed therapists, flexible communication options, and overall value. With over 25,000 therapists, users can easily find specialists for their specific needs and switch if needed.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Pros</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Large therapist network</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Multiple communication methods</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Financial aid available</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Easy therapist switching</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Cons</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">No insurance coverage</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">No medication management</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Response times can vary</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Platform 2 */}
+                  <div class="border-b pb-8">
+                    <div class="flex flex-col md:flex-row">
+                      <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="flex items-center mb-2">
+                          <span class="text-2xl font-bold text-indigo-600 mr-3">2</span>
+                          <h3 class="text-xl font-bold">Talkspace</h3>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5" strokeWidth={1} />
+                        </div>
+                        <div class="text-sm text-gray-600 mb-2">
+                          <strong>Price:</strong> $65-$99/week
+                        </div>
+                        <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 flex items-center text-sm">
+                          Visit Website <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      <div class="md:w-3/4 md:pl-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Why We Recommend It</h4>
+                        <p class="text-gray-600 mb-4">
+                          Talkspace stands out for its insurance coverage options and integrated psychiatric services. It's an excellent choice for those seeking both therapy and medication management in one platform.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Pros</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Insurance coverage available</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Medication management</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Multiple subscription tiers</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Specialized therapy options</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Cons</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Higher pricing than some competitors</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">No financial aid program</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Limited live sessions on basic plan</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Platform 3 */}
+                  <div>
+                    <div class="flex flex-col md:flex-row">
+                      <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="flex items-center mb-2">
+                          <span class="text-2xl font-bold text-indigo-600 mr-3">3</span>
+                          <h3 class="text-xl font-bold">Cerebral</h3>
+                        </div>
+                        <div class="flex text-yellow-400 mb-2">
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5 fill-current" />
+                          <Star class="h-5 w-5" strokeWidth={1} />
+                        </div>
+                        <div class="text-sm text-gray-600 mb-2">
+                          <strong>Price:</strong> $85-$325/month
+                        </div>
+                        <a href="https://www.cerebral.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 flex items-center text-sm">
+                          Visit Website <ExternalLink class="h-3 w-3 ml-1" />
+                        </a>
+                      </div>
+                      <div class="md:w-3/4 md:pl-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Why We Recommend It</h4>
+                        <p class="text-gray-600 mb-4">
+                          Cerebral offers comprehensive mental health care with therapy, coaching, and medication management options. Their subscription model provides flexibility for different levels of care.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Pros</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Comprehensive care options</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Medication delivery available</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Insurance accepted</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-2">✓</span>
+                                <span class="text-sm">Multiple plan options</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 class="font-bold text-gray-800 mb-1">Cons</h5>
+                            <ul class="space-y-1">
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Higher cost for medication plans</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Not available in all states</span>
+                              </li>
+                              <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-2">✗</span>
+                                <span class="text-sm">Limited therapist selection compared to others</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* How We Rate */}
+            <div class="bg-indigo-50 rounded-lg p-8 mb-16">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">How We Rate Mental Health Platforms</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <Star class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Therapist Qualifications</h3>
+                  <p class="text-gray-600">
+                    We evaluate the credentials, experience, and specializations of therapists on each platform, as well as the vetting process.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <DollarSign class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Value & Affordability</h3>
+                  <p class="text-gray-600">
+                    We assess pricing structures, insurance coverage, financial aid options, and overall value for the services provided.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <Users class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">User Experience</h3>
+                  <p class="text-gray-600">
+                    We analyze platform usability, communication options, session quality, and overall client satisfaction based on reviews.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+              <h2 class="text-2xl font-bold mb-4">Not Sure Which Platform Is Right For You?</h2>
+              <p class="text-lg mb-6 max-w-2xl mx-auto">
+                Take our personalized assessment to get matched with the perfect online therapy platform based on your unique needs and preferences.
+              </p>
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                Find Your Perfect Match
+              </a>
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Best For You Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific "Best For You" content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, AlertCircle, Star } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="min-h-screen bg-gray-50 py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-indigo-600 p-6 text-white">
+              <h1 class="text-2xl font-bold mb-2">Your Mental Health Assessment Results</h1>
+              <p class="text-indigo-100">
+                Based on your responses, here's an analysis of your mental wellbeing
+              </p>
+            </div>
+            
+            <div class="p-6">
+              {/* Score Summary */}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Depression Screening</h2>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-600">Severity Level</span>
+                        <span class="font-bold text-gray-800">
+                          {scores.depression <= 4 ? 'Minimal' :
+                           scores.depression <= 9 ? 'Mild' :
+                           scores.depression <= 14 ? 'Moderate' :
+                           'Severe'}
+                        </span>
+                      </div>
+                      <div class="bg-gray-200 rounded-full h-2">
+                        <div 
+                          class="bg-indigo-600 h-2 rounded-full"
+                          style={{ width: `${(scores.depression / 12) * 100}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Score: {scores.depression}/12
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Anxiety Screening</h2>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-600">Severity Level</span>
+                        <span class="font-bold text-gray-800">
+                          {scores.anxiety <= 4 ? 'Minimal' :
+                           scores.anxiety <= 9 ? 'Mild' :
+                           scores.anxiety <= 14 ? 'Moderate' :
+                           'Severe'}
+                        </span>
+                      </div>
+                      <div class="bg-gray-200 rounded-full h-2">
+                        <div 
+                          class="bg-indigo-600 h-2 rounded-full"
+                          style={{ width: `${(scores.anxiety / 12) * 100}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Score: {scores.anxiety}/12
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Scores */}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Stress Level</h2>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-600">Impact Level</span>
+                        <span class="font-bold text-gray-800">
+                          {scores.stress <= 4 ? 'Low' :
+                           scores.stress <= 8 ? 'Moderate' :
+                           'High'}
+                        </span>
+                      </div>
+                      <div class="bg-gray-200 rounded-full h-2">
+                        <div 
+                          class="bg-indigo-600 h-2 rounded-full"
+                          style={{ width: `${(scores.stress / 12) * 100}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Score: {scores.stress}/12
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Overall Wellbeing</h2>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-600">Status</span>
+                        <span class="font-bold text-gray-800">
+                          {scores.wellbeing <= 4 ? 'Needs Attention' :
+                           scores.wellbeing <= 8 ? 'Fair' :
+                           'Good'}
+                        </span>
+                      </div>
+                      <div class="bg-gray-200 rounded-full h-2">
+                        <div 
+                          class="bg-indigo-600 h-2 rounded-full"
+                          style={{ width: `${(scores.wellbeing / 12) * 100}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Score: {scores.wellbeing}/12
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Recommendations */}
+              <div class="bg-indigo-50 rounded-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Recommendations</h3>
+                <p class="text-gray-700 mb-4">{recommendations.text}</p>
+                <ul class="space-y-2">
+                  {recommendations.recommendations.map((rec, index) => (
+                    <li key={index} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>{rec}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Next Steps */}
+              <div class="space-y-4">
+                {recommendations.urgentCare && (
+                  <div class="flex items-start bg-red-50 rounded-lg p-4">
+                    <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                    <div>
+                      <h4 class="font-bold text-red-800">Important Notice</h4>
+                      <p class="text-sm text-red-700">
+                        Your responses indicate you may be experiencing significant distress. We strongly recommend speaking with a mental health professional as soon as possible.
+                      </p>
+                    </div>
+                  </div>
+                )}
+                
+                <div class="flex items-start bg-yellow-50 rounded-lg p-4">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <p class="text-sm text-yellow-700">
+                    This assessment is not a diagnostic tool. For a proper diagnosis and treatment plan, please consult with a mental health professional.
+                  </p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                  <Button 
+                    as={Link}
+                    to="/tools/matchers/therapy-platform-matcher"
+                    variant="primary"
+                    icon={ArrowRight}
+                  >
+                    Find a Therapist
+                  </Button>
+                  <Button 
+                    onClick={restartAssessment}
+                    variant="outline"
+                    icon={ArrowLeft}
+                  >
+                    Take Assessment Again
+                  </Button>
+                  <Button 
+                    as={Link}
+                    to="/learn/fundamentals/mental-health-basics"
+                    variant="outline"
+                    icon={ArrowRight}
+                  >
+                    Learn More About Mental Health
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const currentQuestion = currentQuestionId === 0 ? null : questions[currentQuestionId - 1];
+
+  return (
+    <div class="min-h-screen bg-gray-50 py-12">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          {/* Header */}
+          <div class="bg-indigo-600 p-6 text-white">
+            <h1 class="text-2xl font-bold mb-2">
+              {currentQuestionId === 0 ? 'Mental Health Assessment' : `Question ${currentQuestionId} of ${questions.length}`}
+            </h1>
+            <p class="text-indigo-100">
+              {currentQuestionId === 0 
+                ? 'Evaluate your mental wellbeing with this comprehensive assessment'
+                : `${Math.round((currentQuestionId / questions.length) * 100)}% Complete`
+              }
+            </p>
+            {currentQuestionId > 0 && (
+              <div class="w-full bg-indigo-300 rounded-full h-2 mt-4">
+                <div 
+                  class="bg-white rounded-full h-2 transition-all duration-300"
+                  style={{ width: `${(currentQuestionId / questions.length) * 100}%` }}
+                ></div>
+              </div>
+            )}
+          </div>
+
+          {/* Content */}
+          <div class="p-6">
+            {currentQuestionId === 0 ? (
+              // Introduction Screen
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">About This Assessment</h2>
+                    <p class="text-gray-600">
+                      This assessment combines validated screening tools to help evaluate your mental health across multiple dimensions.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">What It Measures</h2>
+                    <ul class="mt-2 space-y-2">
+                      {['Depression symptoms', 'Anxiety levels', 'Stress impact', 'Overall wellbeing'].map((item, index) => (
+                        <li key={index} class="flex items-center bg-gray-50 rounded-lg p-3">
+                          <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">Important Note</h2>
+                    <p class="text-gray-600">
+                      This assessment is not a diagnostic tool. It's designed to help you understand your mental health and determine if professional help might be beneficial.
+                    </p>
+                  </div>
+                </div>
+                
+                <Button 
+                  onClick={() => setCurrentQuestionId(1)} 
+                  variant="primary"
+                  size="lg"
+                  class="w-full justify-center"
+                >
+                  Begin Assessment
+                </Button>
+              </div>
+            ) : (
+              // Question Screen
+              <div class="space-y-8">
+                <h3 class="text-xl font-bold text-gray-800">
+                  {currentQuestion?.text}
+                </h3>
+                
+                <div class="space-y-6">
+                  {/* Answer Options */}
+                  <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                    {[0, 1, 2, 3].map((value) => (
+                      <button
+                        key={value}
+                        onClick={() => handleAnswer(currentQuestionId, value)}
+                        class={`p-4 rounded-lg border-2 transition-all duration-200 ${
+                          answers[currentQuestionId] === value
+                            ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                            : 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
+                        }`}
+                      >
+                        <div class="text-center">
+                          <div class="font-medium mb-2">
+                            {value === 0 ? 'Not at all' :
+                             value === 1 ? 'Several days' :
+                             value === 2 ? 'More than half the days' :
+                             'Nearly every day'}
+                          </div>
+                          <div class="text-sm text-gray-500">{value}</div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Navigation */}
+                  <div class="flex justify-between items-center pt-4">
+                    <Button
+                      onClick={handlePrevious}
+                      variant="outline"
+                      icon={ArrowLeft}
+                      disabled={currentQuestionId === 1}
+                    >
+                      Previous
+                    </Button>
+                    <Button
+                      onClick={handleNext}
+                      variant="primary"
+                      icon={ArrowRight}
+                      disabled={!answers[currentQuestionId]}
+                    >
+                      {currentQuestionId === questions.length ? 'See Results' : 'Next'}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

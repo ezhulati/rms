@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Search, Brain, DollarSign, Users, CheckCircle, AlertCircle } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Therapy Matching Tools</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Find the perfect therapy solution with our matching tools that analyze your needs, preferences, and practical requirements.
+          </p>
+          <div class="flex justify-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg" 
+              icon={Search}
+            >
+              Find your perfect therapy match
+            </Button>
+          </div>
+        </div>
+
+        {/* Featured Matcher */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-16">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src={matchers[0].image}
+                alt="Therapy Platform Matcher"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <div class="flex items-center mb-4">
+                <Search class="h-8 w-8 text-indigo-600 mr-3" />
+                <h2 class="text-2xl font-bold text-gray-800">Therapy Platform Matcher</h2>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Our most comprehensive matching tool analyzes your therapy needs, communication preferences, budget, and other factors to recommend the best online therapy platforms for you.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-2">What You'll Get</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Personalized platform recommendations</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Price and feature comparisons</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Insurance compatibility check</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Detailed platform reviews</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-2">Details</h3>
+                  <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                      <Search class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>3-5 minute questionnaire</span>
+                    </li>
+                    <li class="flex items-center">
+                      <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>15+ matching factors</span>
+                    </li>
+                    <li class="flex items-center">
+                      <Users class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>Updated monthly</span>
+                    </li>
+                    <li class="flex items-center">
+                      <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>Free to use</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <Button 
+                as={Link}
+                to="/tools/matchers/therapy-platform-matcher"
+                variant="primary"
+                icon={ArrowRight}
+              >
+                Start Matching
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* All Matchers */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {matchers.slice(1).map(matcher => (
+            <div key={matcher.id} class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img 
+                src={matcher.image}
+                alt={matcher.name}
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">{matcher.name}</h3>
+                <p class="text-gray-600 mb-4">{matcher.description}</p>
+                <div class="space-y-3 mb-4">
+                  <div class="flex items-center text-sm text-gray-600">
+                    <Search class="h-4 w-4 text-indigo-600 mr-2" />
+                    <span>{matcher.duration} to complete</span>
+                  </div>
+                  <div class="space-y-1">
+                    {matcher.features.map((feature, index) => (
+                      <div key={index} class="flex items-center text-sm">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Button 
+                  as={Link}
+                  to={`/tools/matchers/${matcher.slug}`}
+                  variant="primary"
+                  size="sm"
+                  class="w-full justify-center"
+                >
+                  Start Matching
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* How It Works */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How Our Matching Tools Work</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Smart Analysis</h3>
+              <p class="text-gray-600">
+                Our algorithms analyze multiple factors including your needs, preferences, and practical requirements to find the best matches.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Personalized Results</h3>
+              <p class="text-gray-600">
+                Get personalized recommendations based on your unique situation, with detailed explanations of why each option might work for you.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Practical Considerations</h3>
+              <p class="text-gray-600">
+                We consider practical factors like budget, insurance coverage, and availability to ensure our recommendations are realistic and accessible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Find Your Perfect Therapy Match?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Start with our comprehensive platform matcher to find the best online therapy option for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/mental-health-assessment" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Take Mental Health Assessment
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,628 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, ExternalLink, Star, CheckCircle, XCircle, Info, DollarSign, Calendar, MessageSquare, Video, Phone, Search, Filter, ChevronDown, ChevronUp, Users } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/compare' || Astro.url.pathname === '/compare/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Compare Online Therapy Platforms</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Make an informed decision with our detailed side-by-side comparisons of the leading online therapy platforms.
+              </p>
+            </div>
+
+            {/* Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* Platform Comparisons */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Platform Comparisons</h2>
+                  <p class="text-gray-600 mb-6">
+                    See how different online therapy platforms stack up against each other in terms of features, pricing, and more.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/compare/platforms/betterhelp-vs-talkspace" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp vs Talkspace</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/platforms/betterhelp-vs-cerebral" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp vs Cerebral</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/platforms/talkspace-vs-cerebral" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talkspace vs Cerebral</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/platforms/betterhelp-vs-calmerry" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp vs Calmerry</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/compare/platforms" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all platform comparisons <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Modality Comparisons */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Modality Comparisons</h2>
+                  <p class="text-gray-600 mb-6">
+                    Compare different therapy approaches and delivery methods to find what works best for your needs.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/compare/modalities/online-vs-traditional-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online vs Traditional Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/modalities/text-vs-video-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Text vs Video Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/modalities/cbt-vs-psychodynamic" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>CBT vs Psychodynamic Therapy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/modalities/individual-vs-group-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Individual vs Group Therapy</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/compare/modalities" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all modality comparisons <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Alternatives */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Alternatives</h2>
+                  <p class="text-gray-600 mb-6">
+                    Explore affordable and specialized alternatives to popular therapy platforms.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/compare/alternatives/affordable-betterhelp-alternatives" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Affordable BetterHelp Alternatives</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/alternatives/talkspace-alternatives" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talkspace Alternatives</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/alternatives/free-therapy-options" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Free Therapy Options</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/compare/alternatives" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all alternatives <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Roundups */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Roundups</h2>
+                  <p class="text-gray-600 mb-6">
+                    Comprehensive comparisons of multiple platforms in one place.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/compare/roundups/top-therapy-platforms-compared" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Top 5 Therapy Platforms Compared</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/roundups/best-therapy-apps-compared" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Best Therapy Apps Compared</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/compare/roundups/insurance-friendly-platforms" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Insurance-Friendly Platforms Compared</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/compare/roundups" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all roundups <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Comparison */}
+            <div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Featured Comparison: BetterHelp vs Talkspace</h2>
+                  <a href="/compare/platforms/betterhelp-vs-talkspace" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    View full comparison <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">BetterHelp</h3>
+                    <ul class="space-y-3">
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Unlimited messaging with therapist</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Weekly live sessions (video, phone, or chat)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>$60-$90 per week (billed monthly)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-red-500 font-bold mr-2">✗</span>
+                        <span>No insurance coverage</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Financial aid available</span>
+                      </li>
+                    </ul>
+                    <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                      Visit BetterHelp <ExternalLink class="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Talkspace</h3>
+                    <ul class="space-y-3">
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Unlimited messaging with therapist</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Live sessions (depends on plan)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>$65-$99 per week (billed monthly)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-green-500 font-bold mr-2">✓</span>
+                        <span>Some insurance coverage</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-red-500 font-bold mr-2">✗</span>
+                        <span>No financial aid program</span>
+                      </li>
+                    </ul>
+                    <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                      Visit Talkspace <ExternalLink class="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Verdict</h3>
+                    <p class="text-gray-600 mb-4">
+                      Both platforms offer quality therapy services with licensed professionals, but they differ in key areas:
+                    </p>
+                    <ul class="space-y-3 mb-4">
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>BetterHelp</strong> is better for those seeking more affordable options with financial aid.</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="font-bold mr-2">•</span>
+                        <span><strong>Talkspace</strong> is better for those with insurance coverage or needing medication management.</span>
+                      </li>
+                    </ul>
+                    <p class="text-gray-600">
+                      Read our full comparison for a detailed analysis of therapist qualifications, user experience, and specialized services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : isPlatformsPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Platform Comparisons</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Detailed side-by-side comparisons of the leading online therapy platforms to help you make an informed decision.
+              </p>
+              <div class="flex justify-center">
+                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
+                  Find your perfect match <ArrowRight class="h-5 w-5 ml-2" />
+                </a>
+              </div>
+            </div>
+
+            {/* Comparison Filter */}
+            <div class="bg-white rounded-lg shadow-md p-6 mb-10">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Compare Any Two Platforms</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <label htmlFor="platform1" class="block text-sm font-medium text-gray-700 mb-1">First Platform</label>
+                  <select 
+                    id="platform1" 
+                    value={platform1}
+                    onChange={(e) => setPlatform1(e.target.value)}
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="">Select a platform</option>
+                    {platforms.map(platform => (
+                      <option key={`p1-${platform.slug}`} value={platform.slug}>{platform.name}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="platform2" class="block text-sm font-medium text-gray-700 mb-1">Second Platform</label>
+                  <select 
+                    id="platform2" 
+                    value={platform2}
+                    onChange={(e) => setPlatform2(e.target.value)}
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="">Select a platform</option>
+                    {platforms.map(platform => (
+                      <option key={`p2-${platform.slug}`} value={platform.slug}>{platform.name}</option>
+                    ))}
+                  </select>
+                </div>
+                <div class="flex items-end">
+                  <button 
+                    onClick={handleCompare}
+                    disabled={!platform1 || !platform2}
+                    class={`w-full px-4 py-2 rounded-md transition ${
+                      platform1 && platform2 
+                        ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                  >
+                    Compare Platforms
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Popular Comparisons */}
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Popular Platform Comparisons</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {popularComparisons.map((comparison, index) => (
+                  <div key={comparison.slug} class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-gray-800 mb-4">{comparison.title}</h3>
+                      <p class="text-gray-600 mb-4">
+                        {comparison.description}
+                      </p>
+                      <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                          <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <DollarSign class="h-5 w-5 text-indigo-600" />
+                          </div>
+                          <div class="ml-3">
+                            <div class="text-sm font-medium text-gray-900">Pricing</div>
+                            <div class="text-sm text-gray-500">{comparison.priceRange}</div>
+                          </div>
+                        </div>
+                        {renderStars(comparison.rating)}
+                      </div>
+                      <Link to={`/compare/platforms/${comparison.slug}`} class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800">
+                        View full comparison <ArrowRight class="h-4 w-4 ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Comprehensive Comparison Table */}
+            <div class="mb-12">
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">At-a-Glance Platform Comparison</h2>
+                <button 
+                  onClick={() => setShowAllPlatforms(!showAllPlatforms)}
+                  class="flex items-center text-indigo-600 hover:text-indigo-800"
+                >
+                  {showAllPlatforms ? (
+                    <>Show less <ChevronUp class="h-4 w-4 ml-1" /></>
+                  ) : (
+                    <>Show all platforms <ChevronDown class="h-4 w-4 ml-1" /></>
+                  )}
+                </button>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                  <thead>
+                    <tr class="bg-gray-100 border-b">
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Platform</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Price Range</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Communication Methods</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Insurance</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Medication</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Rating</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold">Best For</th>
+                      <th class="py-3 px-4 text-left text-gray-700 font-semibold"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {displayedPlatforms.map((platform) => (
+                      <tr key={platform.slug} class="border-b hover:bg-gray-50">
+                        <td class="py-4 px-4 font-medium">{platform.name}</td>
+                        <td class="py-4 px-4">{platform.price}</td>
+                        <td class="py-4 px-4">
+                          <div class="flex space-x-1">
+                            {platform.communication.includes('messaging') && (
+                              <MessageSquare class="h-4 w-4 text-indigo-600" title="Messaging" />
+                            )}
+                            {platform.communication.includes('video') && (
+                              <Video class="h-4 w-4 text-indigo-600" title="Video" />
+                            )}
+                            {platform.communication.includes('phone') && (
+                              <Phone class="h-4 w-4 text-indigo-600" title="Phone" />
+                            )}
+                          </div>
+                        </td>
+                        <td class="py-4 px-4">
+                          {platform.insurance ? (
+                            <CheckCircle class="h-5 w-5 text-green-500" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-red-500" />
+                          )}
+                        </td>
+                        <td class="py-4 px-4">
+                          {platform.medication ? (
+                            <CheckCircle class="h-5 w-5 text-green-500" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-red-500" />
+                          )}
+                        </td>
+                        <td class="py-4 px-4">
+                          {renderStars(platform.rating)}
+                        </td>
+                        <td class="py-4 px-4 text-sm">{platform.bestFor}</td>
+                        <td class="py-4 px-4">
+                          <Link to={`/reviews/platforms/${platform.slug}`} class="text-indigo-600 hover:text-indigo-800 text-sm">
+                            Review
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div class="mt-4 text-sm text-gray-600 flex items-center">
+                <Info class="h-4 w-4 mr-2" />
+                <span>Prices and features may vary. Last updated June 2025.</span>
+              </div>
+            </div>
+
+            {/* Comparison Methodology */}
+            <div class="bg-indigo-50 rounded-lg p-8 mb-12">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Comparison Methodology</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-4 shadow-sm">
+                    <DollarSign class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Value & Pricing</h3>
+                  <p class="text-gray-600 text-sm">
+                    We analyze subscription costs, available plans, discounts, and overall value for the services provided.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-4 shadow-sm">
+                    <MessageSquare class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Communication Options</h3>
+                  <p class="text-gray-600 text-sm">
+                    We evaluate the quality and availability of messaging, live chat, video, and phone session options.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-4 shadow-sm">
+                    <Users class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Therapist Qualifications</h3>
+                  <p class="text-gray-600 text-sm">
+                    We assess therapist credentials, specializations, vetting process, and matching systems.
+                  </p>
+                </div>
+                
+                <div>
+                  <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-4 shadow-sm">
+                    <Star class="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">User Experience</h3>
+                  <p class="text-gray-600 text-sm">
+                    We analyze platform usability, app quality, customer service, and overall client satisfaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Platform Categories */}
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Platform Categories</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-3">General Therapy Platforms</h3>
+                  <p class="text-gray-600 mb-4">
+                    Platforms offering a wide range of therapy services for various mental health conditions.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>BetterHelp</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Talkspace</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Calmerry</span>
+                    </li>
+                  </ul>
+                  <a href="/compare/platforms/general-therapy" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Compare general platforms <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-3">Medication + Therapy</h3>
+                  <p class="text-gray-600 mb-4">
+                    Platforms that offer both therapy and psychiatric medication management services.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Talkspace</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Cerebral</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Brightside</span>
+                    </li>
+                  </ul>
+                  <a href="/compare/platforms/medication-therapy" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Compare medication platforms <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-3">Specialized Platforms</h3>
+                  <p class="text-gray-600 mb-4">
+                    Platforms focusing on specific demographics, conditions, or therapy approaches.
+                  </p>
+                  <ul class="space-y-2 mb-4">
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>ReGain (Couples)</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Pride Counseling (LGBTQ+)</span>
+                    </li>
+                    <li class="flex items-center">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                      <span>Online-Therapy.com (CBT)</span>
+                    </li>
+                  </ul>
+                  <a href="/compare/platforms/specialized" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Compare specialized platforms <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+              <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">How do I choose between online therapy platforms?</h3>
+                  <p class="text-gray-600">
+                    Consider your specific needs (type of therapy, communication preferences), budget constraints, insurance requirements, and whether you need medication management. Our detailed comparisons can help you identify which platform best meets your unique requirements.
+                  </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Is online therapy as effective as in-person therapy?</h3>
+                  <p class="text-gray-600">
+                    Research shows that online therapy can be just as effective as in-person therapy for many conditions, including depression, anxiety, and PTSD. The key is finding a qualified therapist and a platform that offers the communication methods that work best for you.
+                  </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Which platforms accept insurance?</h3>
+                  <p class="text-gray-600">
+                    Talkspace, Cerebral, and Brightside accept insurance from many major providers. BetterHelp and Calmerry don't work directly with insurance companies but may provide receipts for reimbursement. Check our detailed comparisons for specific insurance information.
+                  </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Can I get medication through online therapy platforms?</h3>
+                  <p class="text-gray-600">
+                    Yes, platforms like Talkspace, Cerebral, and Brightside offer medication management services with licensed psychiatrists or nurse practitioners. Other platforms like BetterHelp focus solely on therapy without medication services.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+              <h2 class="text-2xl font-bold mb-4">Not Sure Which Platform Is Right For You?</h2>
+              <p class="text-lg mb-6 max-w-2xl mx-auto">
+                Take our personalized assessment to get matched with the perfect online therapy platform based on your unique needs and preferences.
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="/tools/matchers/therapy-platform-matcher" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                  Find Your Perfect Match
+                </a>
+                <a href="/tools/assessments/mental-health-assessment" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition">
+                  Take Mental Health Assessment
+                </a>
+              </div>
+            </div>
+            
+            {/* How We Review Section */}
+            <div class="mt-16">
+              <HowWeReviewed />
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Comparison Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific comparison content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

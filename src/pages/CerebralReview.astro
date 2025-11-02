@@ -1,0 +1,652 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="/images/concepts/cerebralreview.jpg" 
+                alt="Cerebral Review" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <div class="flex flex-wrap items-center justify-between mb-4">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2 md:mb-0">Cerebral Review</h1>
+                <div class="flex items-center">
+                  <div class="mr-2">
+                    {renderStars(4)}
+                  </div>
+                  <span class="text-lg font-bold text-gray-700">4.0/5</span>
+                </div>
+              </div>
+              
+              <p class="text-gray-600 text-lg mb-6">
+                Cerebral is a comprehensive mental health platform that combines therapy with medication management services. Our in-depth review examines its integrated care approach, pricing structure, and effectiveness for various mental health conditions.
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-3">Pros</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Combined therapy and medication services</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Insurance coverage available</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Medication delivery included</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Multiple subscription options</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Regular provider check-ins</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-3">Cons</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Higher cost for medication plans</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Not available in all states</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Limited therapist selection</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Less flexible scheduling</span>
+                    </li>
+                    <li class="flex items-start">
+                      <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                      <span>Basic messaging features</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as="a"
+                  href="https://www.cerebral.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  variant="primary"
+                  icon={ExternalLink}
+                >
+                  Visit Cerebral
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/compare/platforms/talkspace-vs-cerebral" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Compare with Talkspace
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Rating Breakdown */}
+        <div class="mb-8">
+          <RatingBreakdown 
+            overallRating={4.0} 
+            categories={ratingCategories}
+            showDescription={true}
+          />
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Cerebral at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <DollarSign class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Pricing</h3>
+                <p class="text-gray-600">$85-$325 per month</p>
+                <p class="text-sm text-gray-500 mt-1">Insurance coverage available</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageSquare class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Communication Options</h3>
+                <div class="flex space-x-2 mb-1">
+                  <MessageSquare class="h-4 w-4 text-indigo-600" title="Messaging" />
+                  <Video class="h-4 w-4 text-indigo-600" title="Video" />
+                  <Phone class="h-4 w-4 text-indigo-600" title="Phone" />
+                </div>
+                <p class="text-sm text-gray-500">Video sessions + messaging support</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Calendar class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Subscription</h3>
+                <p class="text-gray-600">Monthly billing, cancel anytime</p>
+                <p class="text-sm text-gray-500 mt-1">Multiple plan options</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Insurance</h3>
+                <p class="text-gray-600">Many major providers accepted</p>
+                <p class="text-sm text-gray-500 mt-1">Coverage varies by state</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Provider Network</h3>
+                <p class="text-gray-600">Licensed therapists & prescribers</p>
+                <p class="text-sm text-gray-500 mt-1">Integrated care teams</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Best For</h3>
+                <p class="text-gray-600">Combined therapy & medication</p>
+                <p class="text-sm text-gray-500 mt-1">Anxiety, depression, ADHD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Full Review */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Full Cerebral Review</h2>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">What is Cerebral?</h3>
+            <p class="text-gray-600 mb-4">
+              Cerebral is a comprehensive mental health platform that combines therapy with medication management services. The platform aims to provide integrated care by connecting clients with both therapists and prescribing providers when needed.
+            </p>
+            <p class="text-gray-600">
+              What distinguishes Cerebral is its focus on providing complete mental health care through a combination of therapy, medication (when appropriate), and regular check-ins with care providers. The platform specializes in treating conditions like anxiety, depression, insomnia, and ADHD.
+            </p>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">How Cerebral Works</h3>
+            
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h4 class="font-bold text-gray-800 mb-3">Getting Started</h4>
+              <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                <li>Complete an initial assessment about your symptoms and medical history</li>
+                <li>Choose from available subscription plans</li>
+                <li>Schedule an evaluation with a prescribing provider if needed</li>
+                <li>Get matched with a therapist or counselor</li>
+                <li>Begin treatment through the platform</li>
+              </ol>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">Care Plans</h4>
+                <p class="text-gray-600 mb-3">
+                  Cerebral offers several care plans to match different needs:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Therapy only</li>
+                  <li>Medication only</li>
+                  <li>Medication + Care counseling</li>
+                  <li>Medication + Therapy</li>
+                </ul>
+                <p class="text-gray-600 mt-3">
+                  Each plan includes regular check-ins and ongoing support from your care team.
+                </p>
+              </div>
+              
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">Treatment Process</h4>
+                <p class="text-gray-600 mb-3">
+                  Treatment typically includes:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                  <li>Monthly video sessions with providers</li>
+                  <li>Regular progress tracking</li>
+                  <li>Medication delivery (if prescribed)</li>
+                  <li>Messaging support between sessions</li>
+                  <li>Access to self-care resources</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Medication Management</h4>
+              <p class="text-gray-600 mb-3">
+                For clients on medication plans, Cerebral provides:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                <li>Initial psychiatric evaluation</li>
+                <li>Regular follow-up appointments</li>
+                <li>Monthly medication delivery</li>
+                <li>Ongoing medication monitoring</li>
+                <li>Prescription adjustments as needed</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Pricing & Value</h3>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Subscription Plans</h4>
+              </div>
+              <div class="p-4">
+                <div class="space-y-4">
+                  <div>
+                    <h5 class="font-bold text-gray-800">Therapy Plan</h5>
+                    <p class="text-gray-600 mb-2">$85/month</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>Weekly video/phone therapy sessions</li>
+                      <li>Messaging with therapist</li>
+                      <li>Self-care tools and resources</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 class="font-bold text-gray-800">Medication + Care Counseling</h5>
+                    <p class="text-gray-600 mb-2">$95/month</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>Monthly provider visits</li>
+                      <li>Regular care counseling</li>
+                      <li>Medication delivery</li>
+                      <li>Ongoing support</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 class="font-bold text-gray-800">Medication + Therapy</h5>
+                    <p class="text-gray-600 mb-2">$325/month</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-600">
+                      <li>All features of both plans</li>
+                      <li>Integrated care approach</li>
+                      <li>Comprehensive support</li>
+                      <li>Regular provider coordination</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Insurance Coverage</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Cerebral works with several major insurance providers, including:
+                  </p>
+                  <ul class="list-disc pl-5 mt-2 text-gray-600">
+                    <li>Cigna</li>
+                    <li>Aetna</li>
+                    <li>United Healthcare</li>
+                    <li>Select Blue Cross Blue Shield plans</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Additional Costs</h4>
+                </div>
+                <div class="p-4">
+                  <ul class="space-y-2 text-gray-600">
+                    <li>
+                      <strong>Insurance copays:</strong> Vary by provider and plan
+                    </li>
+                    <li>
+                      <strong>Medication costs:</strong> Included in subscription
+                    </li>
+                    <li>
+                      <strong>Cancellation fees:</strong> None with notice
+                    </li>
+                    <li>
+                      <strong>Initial evaluation:</strong> Included in subscription
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <p class="text-gray-600 mb-3">
+                Cerebral's value proposition depends largely on your needs and insurance coverage:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Excellent value for those needing both therapy and medication management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Good value with insurance coverage</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Medication delivery adds convenience value</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Higher cost for comprehensive care without insurance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Provider Qualifications</h3>
+            
+            <p class="text-gray-600 mb-4">
+              Cerebral maintains strict standards for their providers:
+            </p>
+            
+            <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+              <li>Licensed therapists and counselors</li>
+              <li>Board-certified physicians and nurse practitioners</li>
+              <li>Care counselors with relevant certifications</li>
+              <li>Regular quality monitoring</li>
+            </ul>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Care Team Structure</h4>
+              <p class="text-gray-600 mb-3">
+                Cerebral uses a team-based approach to care:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Prescribing providers for medication management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Licensed therapists for counseling</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Care counselors for ongoing support</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Coordinated care between team members</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">User Experience</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">Platform & Interface</h4>
+                <p class="text-gray-600">
+                  Cerebral's platform offers a clean, professional interface for managing care. The mobile app (iOS and Android) provides easy access to appointments, messaging, and medication tracking. Some users report occasional technical issues with video sessions.
+                </p>
+              </div>
+              
+              <div>
+                <h4 class="font-bold text-gray-800 mb-3">Privacy & Security</h4>
+                <p class="text-gray-600">
+                  As a platform handling both therapy and medication services, Cerebral maintains strict security standards including HIPAA compliance, data encryption, and secure prescription processing.
+                </p>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Service Quality</h4>
+              <p class="text-gray-600 mb-3">
+                Our analysis and user feedback reveals several key points about service quality:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Consistent medication management services</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Regular provider check-ins and monitoring</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Some users report provider turnover</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Limited flexibility in appointment scheduling</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Who Cerebral Is Best For</h3>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+              <div class="bg-green-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Ideal For</h4>
+              </div>
+              <div class="p-4">
+                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>Individuals needing both therapy and medication</strong> who want coordinated care in one platform</li>
+                  <li><strong>People with insurance coverage</strong> looking to minimize out-of-pocket costs</li>
+                  <li><strong>Those seeking treatment for anxiety, depression, or ADHD</strong> with medication management</li>
+                  <li><strong>Individuals who prefer structured treatment plans</strong> with regular check-ins</li>
+                  <li><strong>People who value medication delivery service</strong> for convenience</li>
+                  <li><strong>Those looking for comprehensive mental health care</strong> with multiple provider types</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <div class="bg-red-50 p-4 border-b border-gray-200">
+                <h4 class="font-bold text-gray-800">Not Recommended For</h4>
+              </div>
+              <div class="p-4">
+                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                  <li><strong>Individuals in crisis</strong> or with severe mental health conditions</li>
+                  <li><strong>People seeking the lowest-cost therapy option</strong> without medication</li>
+                  <li><strong>Those needing highly flexible scheduling</strong> or frequent appointment changes</li>
+                  <li><strong>Individuals in states where Cerebral doesn't operate</strong> or have full services</li>
+                  <li><strong>People seeking specialized treatments</strong> like EMDR or couples therapy</li>
+                  <li><strong>Those who prefer complete provider choice</strong> or need frequent provider changes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Alternatives to Cerebral</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Talkspace</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Insurance coverage, flexible therapy options
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $65-$99/week
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    Similar integrated care model but with more therapy-focused approach and better messaging features.
+                  </p>
+                  <a href="/reviews/platforms/talkspace" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Talkspace review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">Brightside</h4>
+                </div>
+                <div class="p -4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Depression and anxiety focus
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $95-$349/month
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    Specialized in depression and anxiety treatment with a data-driven approach to medication management.
+                  </p>
+                  <a href="/reviews/platforms/brightside" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read Brightside review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="bg-indigo-50 p-4 border-b border-gray-200">
+                  <h4 class="font-bold text-gray-800">BetterHelp</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600 mb-3">
+                    <strong>Best for:</strong> Therapy-only services
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    <strong>Price:</strong> $60-$90/week
+                  </p>
+                  <p class="text-gray-600 mb-3">
+                    Larger therapy network with more flexible scheduling but no medication services.
+                  </p>
+                  <a href="/reviews/platforms/betterhelp" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                    Read BetterHelp review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Final Verdict</h3>
+            
+            <p class="text-gray-600 mb-4">
+              Cerebral earns our 4.0/5 rating for providing a comprehensive mental health platform that effectively combines therapy and medication management. The platform excels in providing coordinated care and convenient medication delivery, making it particularly valuable for those needing both services.
+            </p>
+            
+            <p class="text-gray-600 mb-4">
+              The platform's insurance coverage and integrated care approach are significant advantages, though higher costs for medication plans and limited availability in some areas are notable drawbacks. The structured treatment approach and regular check-ins provide good accountability, but may not suit those seeking more flexible care options.
+            </p>
+            
+            <p class="text-gray-600">
+              Cerebral is best suited for individuals seeking comprehensive mental health care who value the convenience of having therapy and medication management in one platform. It's particularly effective for treating anxiety, depression, and ADHD, especially for those with insurance coverage. However, those seeking solely therapy services or requiring more specialized treatment approaches may find better value with other platforms.
+            </p>
+          </div>
+        </div>
+        
+        {/* How We Review Section */}
+        <HowWeReviewed />
+        
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
+          <h2 class="text-2xl font-bold mb-4">Ready to Start Your Mental Health Journey?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to discover if Cerebral or another platform is the best fit for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as="a"
+              href="https://www.cerebral.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              variant="outline"
+              size="lg"
+              icon={ExternalLink}
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Visit Cerebral
+            </Button>
+          </div>
+        </div>
+        
+        {/* Related Reviews */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Reviews</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/reviews/platforms/talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">Talkspace Review</h3>
+              <p class="text-gray-600 text-sm">Compare another platform offering both therapy and medication management services.</p>
+            </a>
+            <a href="/reviews/platforms/brightside" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">Brightside Review</h3>
+              <p class="text-gray-600 text-sm">Explore a platform specializing in depression and anxiety treatment.</p>
+            </a>
+            <a href="/reviews/platforms/betterhelp" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+              <h3 class="font-bold text-gray-800 mb-2">BetterHelp Review</h3>
+              <p class="text-gray-600 text-sm">See how a therapy-only platform compares to Cerebral's integrated approach.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,464 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Brain, Heart, AlertCircle, CheckCircle, XCircle, Users, Sparkles } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Borderline Personality Disorder (BPD)</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Understanding BPD, its symptoms, treatment options, and how therapy can help manage this complex condition.
+          </p>
+        </div>
+
+        {/* Overview Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Brain class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">What is Borderline Personality Disorder?</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-4">
+            Borderline Personality Disorder (BPD) is a complex mental health condition characterized by pervasive patterns of instability in mood, self-image, interpersonal relationships, and behavior. People with BPD often experience intense emotional reactions, impulsivity, and significant challenges in maintaining stable relationships.
+          </p>
+          
+          <p class="text-gray-700 mb-4">
+            BPD affects approximately 1.4% of the adult population, with symptoms typically beginning during adolescence or early adulthood. Despite its significant impact on quality of life, BPD is treatable, and many people with this condition show substantial improvement with appropriate therapeutic interventions.
+          </p>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 mb-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Key Facts About BPD</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Affects approximately 1.4% of adults in the United States</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>More commonly diagnosed in women, though this may reflect diagnostic biases</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Symptoms typically emerge during adolescence or early adulthood</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Caused by a combination of genetic, neurobiological, and environmental factors</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Highly treatable with specialized psychotherapy approaches</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p class="text-gray-700">
+            While BPD has historically been stigmatized and misunderstood, modern research has led to more effective treatments and a better understanding of the condition. With proper support and therapy, many individuals with BPD experience significant improvement in their symptoms and quality of life.
+          </p>
+        </div>
+
+        {/* Symptoms Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <AlertCircle class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Symptoms and Diagnosis</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            BPD is characterized by a pervasive pattern of instability in interpersonal relationships, self-image, and emotions, along with marked impulsivity. According to the Diagnostic and Statistical Manual of Mental Disorders (DSM-5), a diagnosis of BPD requires at least five of the following nine criteria:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">1</div>
+                  <div>
+                    <span class="font-bold">Fear of abandonment</span>
+                    <p class="text-sm text-gray-600">Intense efforts to avoid real or imagined abandonment</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">2</div>
+                  <div>
+                    <span class="font-bold">Unstable relationships</span>
+                    <p class="text-sm text-gray-600">Pattern of intense, unstable relationships alternating between idealization and devaluation</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">3</div>
+                  <div>
+                    <span class="font-bold">Identity disturbance</span>
+                    <p class="text-sm text-gray-600">Markedly and persistently unstable self-image or sense of self</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">4</div>
+                  <div>
+                    <span class="font-bold">Impulsivity</span>
+                    <p class="text-sm text-gray-600">Impulsive behaviors in at least two potentially self-damaging areas (e.g., spending, sex, substance use, reckless driving, binge eating)</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">5</div>
+                  <div>
+                    <span class="font-bold">Suicidal behavior or self-harm</span>
+                    <p class="text-sm text-gray-600">Recurrent suicidal behavior, gestures, threats, or self-mutilating behavior</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">6</div>
+                  <div>
+                    <span class="font-bold">Emotional instability</span>
+                    <p class="text-sm text-gray-600">Affective instability due to marked reactivity of mood (e.g., intense episodic dysphoria, irritability, or anxiety)</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">7</div>
+                  <div>
+                    <span class="font-bold">Chronic emptiness</span>
+                    <p class="text-sm text-gray-600">Chronic feelings of emptiness</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">8</div>
+                  <div>
+                    <span class="font-bold">Inappropriate anger</span>
+                    <p class="text-sm text-gray-600">Inappropriate, intense anger or difficulty controlling anger</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">9</div>
+                  <div>
+                    <span class="font-bold">Dissociation or paranoia</span>
+                    <p class="text-sm text-gray-600">Transient, stress-related paranoid ideation or severe dissociative symptoms</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <AlertCircle class="h-5 w-5 text-yellow-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-yellow-700">
+                  <strong>Important Note:</strong> Only qualified mental health professionals can diagnose BPD. Self-diagnosis is not recommended. If you or someone you know is experiencing these symptoms, seek professional evaluation from a mental health provider experienced in personality disorders.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Common Experiences</h3>
+          
+          <p class="text-gray-700 mb-4">
+            People with BPD often describe their emotional experience as:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-indigo-50 rounded-lg p-4">
+              <h4 class="font-bold text-gray-800 mb-2">Emotional Intensity</h4>
+              <p class="text-sm text-gray-600">
+                Feeling emotions more intensely than others, with rapid shifts between different emotional states
+              </p>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-lg p-4">
+              <h4 class="font-bold text-gray-800 mb-2">Relationship Challenges</h4>
+              <p class="text-sm text-gray-600">
+                Difficulty maintaining stable relationships due to fear of abandonment and emotional reactivity
+              </p>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-lg p-4">
+              <h4 class="font-bold text-gray-800 mb-2">Identity Confusion</h4>
+              <p class="text-sm text-gray-600">
+                Uncertainty about who they are, their values, goals, and preferences
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Heart class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Treatment Approaches</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            BPD is highly treatable, and many people experience significant improvement with appropriate therapeutic interventions. The most effective treatments for BPD are specialized psychotherapy approaches specifically designed for the condition.
+          </p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Evidence-Based Treatments</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Dialectical Behavior Therapy (DBT)</h4>
+              <p class="text-gray-600 mb-4">
+                The most researched and validated treatment for BPD, DBT combines cognitive-behavioral techniques with mindfulness practices to help individuals:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Develop emotional regulation skills</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Improve distress tolerance</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Enhance interpersonal effectiveness</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Practice mindfulness and present-moment awareness</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h4 class="font-bold text-gray-800 mb-3">Other Effective Approaches</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-medium">Mentalization-Based Therapy (MBT)</span>
+                    <p class="text-sm text-gray-600">Focuses on improving the ability to understand one's own and others' mental states</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-medium">Schema Therapy</span>
+                    <p class="text-sm text-gray-600">Addresses early maladaptive schemas and core emotional needs</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-medium">Transference-Focused Psychotherapy (TFP)</span>
+                    <p class="text-sm text-gray-600">Psychodynamic approach focusing on the therapeutic relationship</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-medium">Systems Training for Emotional Predictability and Problem Solving (STEPPS)</span>
+                    <p class="text-sm text-gray-600">Group treatment program combining cognitive-behavioral elements with skills training</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Medication</h3>
+          
+          <p class="text-gray-700 mb-4">
+            While there is no specific medication approved to treat BPD itself, medications may be prescribed to address specific symptoms or co-occurring conditions:
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+              <span><strong>Mood stabilizers:</strong> May help with mood instability and impulsivity</span>
+            </li>
+            <li class="flex items-start">
+              <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+              <span><strong>Antidepressants:</strong> May help with co-occurring depression, anxiety, or PTSD</span>
+            </li>
+            <li class="flex items-start">
+              <div class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex items-center justify-center">•</div>
+              <span><strong>Antipsychotics:</strong> In low doses, may help with cognitive-perceptual symptoms or severe emotional dysregulation</span>
+            </li>
+          </ul>
+          
+          <div class="bg-green-50 border-l-4 border-green-400 p-4">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <CheckCircle class="h-5 w-5 text-green-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-green-700">
+                  <strong>Treatment Success:</strong> Research shows that with appropriate treatment, many people with BPD experience significant improvement over time. Studies indicate that approximately 50% of individuals no longer meet the criteria for BPD after about 10 years, and even more show reduction in symptom severity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Online Therapy Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Sparkles class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Online Therapy for BPD</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            Online therapy can be an effective component of treatment for many individuals with BPD, particularly when access to specialized in-person treatment is limited. However, it's important to understand both the benefits and limitations of online therapy for this condition.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Benefits</h3>
+              
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Increased Access:</strong> Provides access to specialized therapists who may not be available locally</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Consistency:</strong> Reduces barriers to regular attendance such as transportation issues</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Comfort:</strong> May feel safer for some individuals to engage in therapy from their own environment</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Flexibility:</strong> Can accommodate various schedules and needs</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Considerations</h3>
+              
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Crisis Management:</strong> May be less effective for acute crises requiring immediate intervention</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Group Skills Training:</strong> Some aspects of comprehensive DBT programs may be more challenging to deliver online</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Therapeutic Relationship:</strong> Building trust may take longer in an online format for some individuals</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Technical Issues:</strong> Connectivity problems can disrupt therapy sessions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <AlertCircle class="h-5 w-5 text-yellow-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-yellow-700">
+                  <strong>Important Consideration:</strong> For individuals with BPD who have severe self-harm behaviors or frequent suicidal thoughts, a combination of online and in-person care may be most appropriate. Always discuss safety planning with your therapist.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg"
+            >
+              Find the Right Online Therapy Platform
+            </Button>
+          </div>
+        </div>
+
+        {/* Resources Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Users class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Resources and Support</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            In addition to professional treatment, various resources and support systems can help individuals with BPD and their loved ones navigate this condition.
+          </p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">For Individuals with BPD</h3>
+          
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">National Education Alliance for Borderline Personality Disorder (NEA-BPD)</span>
+                <p class="text-gray-600">Offers resources, webinars, and family education programs</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">DBT Self-Help Resources</span>
+                <p class="text-gray-600">Books, workbooks, and online resources for practicing DBT skills</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Crisis Text Line</span>
+                <p class="text-gray-600">Text HOME to 741741 for crisis support</p>
+              </div>
+            </li>
+          </ul>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">For Family Members and Loved Ones</h3>
+          
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Family Connections Program</span>
+                <p class="text-gray-600">A 12-week program for relatives of people with BPD</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">TARA (Treatment and Research Advancements for BPD)</span>
+                <p class="text-gray-600">Provides education, support, and resources for families</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Books on BPD for Families</span>
+                <p class="text-gray-600">Resources like "I Hate You—Don't Leave Me" and "Stop Walking on Eggshells"</p>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 text-center">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Finding Help</h3>
+            <p class="text-gray-700 mb-4">
+              If you or someone you know is struggling with symptoms of BPD, remember that effective treatment is available. With the right support, recovery and a fulfilling life are possible.
+            </p>
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg"
+            >
+              Find Support Resources
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

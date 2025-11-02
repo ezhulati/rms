@@ -1,0 +1,466 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Brain, CheckCircle, Info, Users, Star, Search } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Anxiety Disorders" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <h1 class="text-3xl font-bold text-gray-800 mb-4">Anxiety Disorders</h1>
+              <p class="text-xl text-gray-600 mb-6">
+                Anxiety disorders are a group of mental health conditions characterized by persistent and excessive worry or fear that interferes with daily activities.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/assessments/anxiety-screening" 
+                  variant="primary"
+                >
+                  Take Anxiety Assessment
+                </Button>
+                <Button 
+                  as={Link} 
+                  to="/best/conditions/best-for-anxiety" 
+                  variant="outline"
+                >
+                  Find Anxiety Treatment
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Facts About Anxiety Disorders</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Prevalence</h3>
+                <p class="text-gray-600">Affects approximately 19% of adults and 7% of children annually</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Treatability</h3>
+                <p class="text-gray-600">Highly treatable with therapy, medication, or a combination of both</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Star class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Recovery Rate</h3>
+                <p class="text-gray-600">80% of people show improvement with proper treatment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Anxiety Disorders */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Anxiety Disorders</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Generalized Anxiety Disorder (GAD)</h3>
+              <p class="text-gray-600 mb-4">
+                Persistent and excessive worry about various aspects of life, often without a specific trigger.
+              </p>
+              <h4 class="font-bold text-gray-800 mb-2">Common Symptoms:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persistent worrying about everyday concerns</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty controlling worry</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Restlessness or feeling on edge</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Social Anxiety Disorder</h3>
+              <p class="text-gray-600 mb-4">
+                Intense fear of social situations and being judged by others.
+              </p>
+              <h4 class="font-bold text-gray-800 mb-2">Common Symptoms:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of social situations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoidance of social interactions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms in social settings</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Panic Disorder</h3>
+              <p class="text-gray-600 mb-4">
+                Recurring unexpected panic attacks and fear of future attacks.
+              </p>
+              <h4 class="font-bold text-gray-800 mb-2">Common Symptoms:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sudden intense fear or discomfort</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Heart palpitations, sweating</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of losing control</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Specific Phobias</h3>
+              <p class="text-gray-600 mb-4">
+                Intense fear of specific objects, situations, or activities.
+              </p>
+              <h4 class="font-bold text-gray-800 mb-2">Common Symptoms:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Immediate anxiety response to trigger</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoidance of feared object/situation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Recognition that fear is excessive</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Options */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Treatment Options</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Therapy Approaches</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Cognitive Behavioral Therapy (CBT)</h4>
+                  <p class="text-gray-600">
+                    The most effective therapy for anxiety disorders, helping identify and change thought patterns and behaviors.
+                  </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Exposure Therapy</h4>
+                  <p class="text-gray-600">
+                    Gradually facing feared situations in a controlled environment to reduce anxiety.
+                  </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Mindfulness-Based Approaches</h4>
+                  <p class="text-gray-600">
+                    Learning to stay present and manage anxiety through meditation and mindfulness techniques.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Additional Treatment Options</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Medication</h4>
+                  <p class="text-gray-600">
+                    Anti-anxiety medications, antidepressants, and other medications can help manage symptoms when prescribed by a healthcare provider.
+                  </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Lifestyle Changes</h4>
+                  <p class="text-gray-600">
+                    Regular exercise, stress management techniques, and maintaining a healthy sleep schedule can help reduce anxiety.
+                  </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Support Groups</h4>
+                  <p class="text-gray-600">
+                    Connecting with others who have similar experiences can provide valuable support and coping strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* When to Seek Help */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">When to Seek Help</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Warning Signs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Anxiety interferes with daily activities or relationships</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms like rapid heartbeat, sweating, or trembling</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Avoiding situations due to anxiety or fear</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Difficulty sleeping or concentrating</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Persistent worry that's hard to control</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Getting Help</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  If you're experiencing symptoms of anxiety, there are several ways to get help:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Talk to your primary care physician</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Seek a mental health professional</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Try online therapy platforms</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Join support groups</span>
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <Button 
+                    as={Link} 
+                    to="/tools/matchers/therapy-platform-matcher" 
+                    variant="primary"
+                    size="lg"
+                  >
+                    Find the Right Help
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Self-Help Strategies */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Self-Help Strategies</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Mindfulness & Relaxation</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Deep breathing exercises</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Progressive muscle relaxation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Meditation practices</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Grounding techniques</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Lifestyle Changes</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Regular exercise routine</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Healthy sleep habits</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Balanced nutrition</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Limit caffeine and alcohol</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Coping Strategies</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Journaling</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Time management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Setting boundaries</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Building support network</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Anxiety Screening Tool</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/anxiety-thought-record" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Anxiety Thought Record Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/relaxation-techniques" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Relaxation Techniques Guide</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/blog/understanding-anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Anxiety: A Comprehensive Guide</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog/anxiety-management-techniques" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>10 Proven Anxiety Management Techniques</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog/anxiety-myths-facts" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Common Myths About Anxiety Disorders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Take the First Step?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Find the right support for your anxiety with our personalized matching tool.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/anxiety-screening" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Take Anxiety Assessment
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

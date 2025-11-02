@@ -1,0 +1,382 @@
+---
+import BlogLayout from '../BlogLayout.astro';
+import { ArrowRight, Calendar, User, Tag, Clock, Globe, TrendingUp, AlertTriangle, Heart, Users, DollarSign } from 'lucide-react';
+---
+
+<BlogLayout>
+
+    
+      <div class="flex items-center text-sm text-gray-500 mb-6">
+        <a href="/" class="hover:text-indigo-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/news" class="hover:text-indigo-600">News</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700">WHO Global Report</span>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Global Mental Health" class="blog-featured-image h-96" />
+        <div class="p-8">
+          <h1 class="blog-title">WHO Releases Landmark Global Mental Health Report: Key Findings and Implications</h1>
+          <div class="flex flex-wrap items-center text-sm text-gray-500 mb-6">
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Calendar class="h-4 w-4 mr-1" />
+              <span>March 20, 2025</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <User class="h-4 w-4 mr-1" />
+              <span>By Dr. Elena Rodriguez, Global Health Correspondent</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Tag class="h-4 w-4 mr-1" />
+              <a href="/blog/tag/research" class="hover:text-indigo-600">Research</a>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Clock class="h-4 w-4 mr-1" />
+              <span>10 min read</span>
+            </div>
+          </div>
+          <div class="bg-indigo-50 rounded-lg p-4 mb-6">
+            <p class="text-gray-700 italic">
+              "Mental health is finally receiving the global attention it deserves. This WHO report provides both a sobering assessment of current challenges and a roadmap for transformative change in how we approach mental health worldwide."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div class="blog-content">
+          <p>The World Health Organization (WHO) released its most comprehensive mental health report in over a decade, painting a detailed picture of the global mental health landscape. The 300-page "World Mental Health Report 2025" analyzes data from 194 countries and offers evidence-based recommendations for improving mental health systems worldwide.</p>
+
+          <h2 class="blog-subtitle">Headline Findings</h2>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading"><AlertTriangle class="h-5 w-5 inline mr-2" />The Scale of the Crisis</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>970 million people</strong> globally living with a mental health condition (up from 792 million in 2019)</li>
+              <li><strong>1 in 8 people worldwide</strong> now affected by mental health disorders</li>
+              <li><strong>Anxiety and depression</strong> remain the most common conditions, affecting over 300 million people each</li>
+              <li><strong>12 billion working days</strong> lost annually due to mental health conditions, costing the global economy $1 trillion</li>
+              <li><strong>Suicide</strong> remains a leading cause of death, with one person dying every 40 seconds</li>
+            </ul>
+          </div>
+
+          <h3 class="blog-subheading">Post-Pandemic Mental Health</h3>
+          <p>The report confirms what many suspected: COVID-19 had a profound and lasting impact on global mental health.</p>
+          <ul>
+            <li>Depression and anxiety increased by 25% in the first year of the pandemic</li>
+            <li>Young people (ages 15-24) experienced the sharpest increases in mental health conditions</li>
+            <li>Healthcare workers, especially women, showed persistently elevated rates of burnout and PTSD</li>
+            <li>Long COVID patients report mental health symptoms in 23% of cases, even years after infection</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Treatment Gap: A Persistent Challenge</h2>
+
+          <p>Perhaps the report's most troubling finding is the continued treatment gap—the difference between those who need mental health services and those who receive them.</p>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading"><Globe class="h-5 w-5 inline mr-2" />Global Treatment Gaps</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>71% of people</strong> with psychosis worldwide receive no treatment</li>
+              <li><strong>75% in low-income countries</strong> have no access to mental health services</li>
+              <li>Only <strong>2% of healthcare budgets</strong> globally are allocated to mental health</li>
+              <li><strong>High-income countries:</strong> 1 psychiatrist per 10,000 people</li>
+              <li><strong>Low-income countries:</strong> 1 psychiatrist per 500,000+ people</li>
+              <li>Wait times for initial mental health appointments average <strong>3-6 months</strong> in many countries</li>
+            </ul>
+          </div>
+
+          <h2 class="blog-subtitle">Regional Disparities</h2>
+
+          <h3 class="blog-subheading">High-Income Countries</h3>
+          <p>While better resourced, these nations face their own challenges:</p>
+          <ul>
+            <li>Stigma remains a barrier to care despite awareness campaigns</li>
+            <li>Insurance coverage gaps limit access for many</li>
+            <li>Rural areas severely underserved compared to urban centers</li>
+            <li>Mental health workforce maldistribution (therapists concentrated in wealthy areas)</li>
+          </ul>
+
+          <h3 class="blog-subheading">Low and Middle-Income Countries</h3>
+          <p>Face more fundamental challenges:</p>
+          <ul>
+            <li>Lack of basic mental health infrastructure</li>
+            <li>Severe workforce shortages (some countries have zero psychiatrists)</li>
+            <li>Mental health not integrated into primary care</li>
+            <li>Limited medication availability and affordability</li>
+            <li>Cultural stigma often more pronounced</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Populations at Highest Risk</h2>
+
+          <p>The report identifies several groups facing disproportionate mental health challenges:</p>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading"><Users class="h-5 w-5 inline mr-2" />Vulnerable Populations</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Youth and young adults:</strong> Rising rates of anxiety, depression, and suicide ideation</li>
+              <li><strong>LGBTQ+ individuals:</strong> 2-3x higher rates of mental health conditions due to discrimination and marginalization</li>
+              <li><strong>Refugees and displaced persons:</strong> 22% meet criteria for PTSD, depression, or anxiety</li>
+              <li><strong>Indigenous populations:</strong> Higher rates of substance use disorders and suicide</li>
+              <li><strong>People with chronic physical illnesses:</strong> 30-50% develop comorbid mental health conditions</li>
+              <li><strong>Incarcerated individuals:</strong> 3-4x higher mental illness prevalence than general population</li>
+            </ul>
+          </div>
+
+          <h2 class="blog-subtitle">Bright Spots: What's Working</h2>
+
+          <p>The report isn't all dire news. It highlights successful interventions and policy approaches:</p>
+
+          <h3 class="blog-subheading">1. Digital Mental Health Expansion</h3>
+          <ul>
+            <li>Telehealth increased access in remote and underserved areas</li>
+            <li>AI-powered screening tools improved early detection</li>
+            <li>Mobile apps providing evidence-based self-help at scale</li>
+            <li>Digital cognitive behavioral therapy showing comparable outcomes to in-person care</li>
+          </ul>
+
+          <h3 class="blog-subheading">2. Task-Sharing Models</h3>
+          <p>Countries with severe workforce shortages successfully trained non-specialists to deliver mental health interventions:</p>
+          <ul>
+            <li>Community health workers providing basic counseling and psychoeducation</li>
+            <li>Peer support specialists with lived experience offering recovery support</li>
+            <li>Teachers and school staff trained in mental health first aid</li>
+          </ul>
+
+          <h3 class="blog-subheading">3. Integration into Primary Care</h3>
+          <p>Several countries successfully integrated mental health into primary healthcare:</p>
+          <ul>
+            <li>Depression and anxiety screening in routine medical visits</li>
+            <li>General practitioners prescribing psychiatric medications with specialist consultation</li>
+            <li>Collaborative care models connecting primary care with mental health specialists</li>
+          </ul>
+
+          <h3 class="blog-subheading">4. Youth-Specific Interventions</h3>
+          <ul>
+            <li>School-based mental health programs showing positive outcomes</li>
+            <li>Youth mental health hubs in Australia providing accessible, low-stigma services</li>
+            <li>Social media campaigns reducing stigma and promoting help-seeking among young people</li>
+          </ul>
+
+          <h2 class="blog-subtitle">WHO Recommendations: A Roadmap Forward</h2>
+
+          <p>The report outlines five key strategies for transforming global mental health:</p>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading"><TrendingUp class="h-5 w-5 inline mr-2" />1. Increase Investment</h3>
+            <p><strong>Goal:</strong> Countries should allocate at least 5% of healthcare budgets to mental health (currently averaging 2%)</p>
+            <ul class="list-disc pl-5 space-y-2 mt-2">
+              <li>Prioritize funding for community-based services over institutional care</li>
+              <li>Invest in mental health workforce training and retention</li>
+              <li>Support research on culturally-adapted interventions</li>
+            </ul>
+          </div>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading">2. Integrate Mental Health into All Health Services</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Screen for mental health conditions in primary care</li>
+              <li>Address mental health needs of people with chronic diseases</li>
+              <li>Include mental health in maternal and child health programs</li>
+              <li>Provide mental health support in emergency and humanitarian settings</li>
+            </ul>
+          </div>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading">3. Promote Mental Health and Prevention</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Implement anti-stigma campaigns</li>
+              <li>Teach social-emotional skills in schools</li>
+              <li>Create mentally healthy workplaces</li>
+              <li>Address social determinants (poverty, discrimination, violence)</li>
+            </ul>
+          </div>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading">4. Strengthen Information Systems</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Collect better data on mental health needs and service use</li>
+              <li>Monitor outcomes and quality of care</li>
+              <li>Use data to guide policy and resource allocation</li>
+              <li>Ensure privacy and ethical use of mental health data</li>
+            </ul>
+          </div>
+
+          <div class="blog-callout">
+            <h3 class="blog-subheading">5. Strengthen Governance and Human Rights</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Develop and enforce mental health legislation</li>
+              <li>Eliminate coercive practices (forced treatment, restraints)</li>
+              <li>Ensure people with mental health conditions participate in policy-making</li>
+              <li>Combat discrimination in employment, housing, and healthcare</li>
+            </ul>
+          </div>
+
+          <h2 class="blog-subtitle">What This Means for You</h2>
+
+          <h3 class="blog-subheading">If You're Seeking Help</h3>
+          <ul>
+            <li>Know that you're not alone—mental health challenges are incredibly common</li>
+            <li>Telehealth and digital options may be more accessible than traditional services</li>
+            <li>Peer support and community programs can provide valuable support while waiting for professional care</li>
+            <li>Self-help resources (apps, workbooks, online programs) can bridge gaps in access</li>
+          </ul>
+
+          <h3 class="blog-subheading">If You're an Advocate</h3>
+          <ul>
+            <li>Use this report's data to advocate for increased mental health funding</li>
+            <li>Push for mental health parity in insurance coverage</li>
+            <li>Support policies integrating mental health into primary care and schools</li>
+            <li>Challenge stigma and discrimination in your community</li>
+          </ul>
+
+          <h3 class="blog-subheading">If You're a Provider</h3>
+          <ul>
+            <li>Consider telehealth to expand access beyond traditional geography</li>
+            <li>Engage in task-sharing by training support staff or collaborating with peers</li>
+            <li>Integrate trauma-informed and culturally-responsive practices</li>
+            <li>Participate in policy discussions and workforce planning</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Expert Perspectives</h2>
+
+          <p><strong>Dr. Tedros Adhanom Ghebreyesus, WHO Director-General:</strong> "Everyone, everywhere has the right to the highest attainable standard of mental health. This means equitable access to quality mental health services, when and where people need them."</p>
+
+          <p><strong>Dr. Dévora Kestel, Director of WHO's Mental Health Department:</strong> "The good news is we know what works. The challenge is political will and resource allocation. Countries that have invested in community-based mental health have seen remarkable improvements in outcomes and cost-effectiveness."</p>
+
+          <p><strong>Dr. Vikram Patel, Global Mental Health Researcher:</strong> "This report should be a wake-up call. We can't therapy our way out of this crisis. We need upstream interventions addressing poverty, inequality, trauma, and social isolation—the root causes of much mental distress."</p>
+
+          <h2 class="blog-subtitle">Looking Ahead</h2>
+
+          <p>The WHO report sets an ambitious agenda for the next decade. Success will require:</p>
+
+          <ul>
+            <li><strong>Political commitment:</strong> Mental health must be a priority for governments, not an afterthought</li>
+            <li><strong>Sustained funding:</strong> Long-term investment, not just crisis responses</li>
+            <li><strong>Innovation:</strong> Leveraging technology and new service models</li>
+            <li><strong>Inclusion:</strong> Centering the voices and leadership of people with lived experience</li>
+            <li><strong>Integration:</strong> Treating mental health as inseparable from overall health and wellbeing</li>
+          </ul>
+
+          <p>The mental health crisis is daunting, but not insurmountable. Countries that have invested in evidence-based, rights-respecting mental health systems have demonstrated that transformation is possible.</p>
+
+          <p>As the report concludes: "Mental health is too important to be left to mental health professionals alone. It requires a whole-of-government, whole-of-society approach."</p>
+
+          <h2 class="blog-subtitle">Resources</h2>
+
+          <ul>
+            <li><strong>Full WHO Report:</strong> Available at who.int/publications (free download)</li>
+            <li><strong>Regional Data:</strong> Interactive dashboard with country-specific statistics</li>
+            <li><strong>Implementation Toolkit:</strong> Practical guidance for policymakers and health systems</li>
+            <li><strong>Advocacy Materials:</strong> Fact sheets and infographics for public education</li>
+          </ul>
+
+          <p>Whether you're a patient, provider, policymaker, or concerned citizen, this report offers both sobering truths and hopeful possibilities. The question is: will we rise to meet this moment?</p>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Dr. Elena Rodriguez" class="blog-author-image" />
+        <div>
+          <h3 class="blog-author-name">About the Author</h3>
+          <p class="blog-author-bio">Dr. Elena Rodriguez is a global health correspondent specializing in mental health policy and international development. She has reported from over 40 countries on health systems, equity, and human rights.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h3 class="text-xl font-bold mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="/blog/news/mental-health-policy-updates" class="block p-4 border border-gray-200 rounded-lg hover:border-indigo-600 transition-colors">
+            <h4 class="font-semibold text-gray-900 mb-2">2025 Mental Health Policy Updates You Need to Know</h4>
+            <p class="text-sm text-gray-600">Recent U.S. legislative changes affecting mental health care access and coverage.</p>
+          </a>
+          <a href="/blog/guides/therapy-costs-explained" class="block p-4 border border-gray-200 rounded-lg hover:border-indigo-600 transition-colors">
+            <h4 class="font-semibold text-gray-900 mb-2">The Real Cost of Therapy: Budgeting for Mental Health Care</h4>
+            <p class="text-sm text-gray-600">Understanding therapy costs and finding affordable options.</p>
+          </a>
+          <a href="/blog/news/ai-therapy-tools" class="block p-4 border border-gray-200 rounded-lg hover:border-indigo-600 transition-colors">
+            <h4 class="font-semibold text-gray-900 mb-2">AI-Powered Tools Enhancing Online Therapy Experiences</h4>
+            <p class="text-sm text-gray-600">How technology is helping bridge the mental health treatment gap.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h3 class="text-xl font-bold mb-6">Comments</h3>
+
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex items-start space-x-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Thomas Miller" class="w-12 h-12 rounded-full" />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-semibold">Thomas Miller</h4>
+                  <span class="text-sm text-gray-500">4 days ago</span>
+                </div>
+                <p class="text-gray-700 mt-2">The statistic about 71% of people with psychosis receiving no treatment is absolutely staggering. We really need to do better as a global community. Mental health can't continue to be the forgotten stepchild of healthcare.</p>
+                <button class="text-indigo-600 text-sm mt-2 hover:text-indigo-800">Reply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex items-start space-x-4">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Amara Okafor" class="w-12 h-12 rounded-full" />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-semibold">Amara Okafor</h4>
+                  <span class="text-sm text-gray-500">3 days ago</span>
+                </div>
+                <p class="text-gray-700 mt-2">Reading this from Nigeria where we have severe mental health workforce shortages. The task-sharing model mentioned here—training community health workers and peers—is exactly what we need. Not every intervention requires a psychiatrist with 12 years of training.</p>
+                <button class="text-indigo-600 text-sm mt-2 hover:text-indigo-800">Reply</button>
+
+                <div class="ml-8 mt-4 flex items-start space-x-4">
+                  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Dr. Elena Rodriguez" class="w-10 h-10 rounded-full" />
+                  <div>
+                    <div class="flex items-center space-x-2">
+                      <h4 class="font-semibold text-sm">Dr. Elena Rodriguez</h4>
+                      <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Author</span>
+                      <span class="text-sm text-gray-500">2 days ago</span>
+                    </div>
+                    <p class="text-gray-700 mt-1 text-sm">Absolutely, Amara. The WHO report specifically highlights successful task-sharing programs in countries like India, Ethiopia, and South Africa. These models have proven that with proper training and supervision, non-specialists can deliver effective mental health interventions. This is especially crucial in low-resource settings.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex items-start space-x-4">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Sarah Chen" class="w-12 h-12 rounded-full" />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-semibold">Sarah Chen</h4>
+                  <span class="text-sm text-gray-500">2 days ago</span>
+                </div>
+                <p class="text-gray-700 mt-2">I appreciate that the report acknowledges we can't just "therapy our way" out of this crisis. The upstream factors—poverty, discrimination, violence, inequality—are mental health issues too. We need systemic change, not just more individual treatment.</p>
+                <button class="text-indigo-600 text-sm mt-2 hover:text-indigo-800">Reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h4 class="font-semibold mb-4">Leave a Comment</h4>
+          <textarea class="w-full border border-gray-300 rounded-lg p-3 mb-4" rows={4} placeholder="What are your thoughts on the WHO report?"></textarea>
+          <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">Post Comment</button>
+        </div>
+      </div>
+
+      <div class="blog-newsletter">
+        <h3 class="blog-newsletter-title">Subscribe to Our Newsletter</h3>
+        <p class="blog-newsletter-description">Stay informed about global mental health developments and research.</p>
+        <div class="blog-newsletter-form">
+          <input type="email" placeholder="Your email address" class="blog-newsletter-input" />
+          <button class="blog-newsletter-button">Subscribe</button>
+        </div>
+      </div>
+    
+  
+</BlogLayout>

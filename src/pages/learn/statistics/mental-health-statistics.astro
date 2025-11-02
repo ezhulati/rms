@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, BarChart, PieChart, TrendingUp, Users, Brain, Globe } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Mental Health Statistics" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <h1 class="text-3xl font-bold text-gray-800 mb-4">Mental Health Statistics</h1>
+              <p class="text-xl text-gray-600 mb-6">
+                Key data and trends in mental health, including prevalence, treatment access, and outcomes to help understand the scope and impact of mental health conditions.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/assessments/mental-health-assessment" 
+                  variant="primary"
+                  icon={Brain}
+                >
+                  Take Mental Health Assessment
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/learn/statistics" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  View All Statistics
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Introduction */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Mental Health Data</h2>
+          <p class="text-gray-600 mb-4">
+            Mental health statistics provide crucial insights into the prevalence, impact, and treatment of mental health conditions. These numbers help us understand the scope of mental health challenges, identify disparities in care, and track progress in addressing these issues.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The data presented here comes from reputable sources including government agencies, research institutions, and peer-reviewed studies. While statistics can vary based on methodology, population samples, and definitions used, they collectively paint a picture of mental health in the United States and globally.
+          </p>
+          <p class="text-gray-600">
+            Understanding these statistics can help reduce stigma, inform policy decisions, and guide individuals in seeking appropriate care. It's important to remember that behind each number are real people with unique experiences and needs.
+          </p>
+        </div>
+
+        {/* Prevalence Statistics */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <BarChart class="h-6 w-6 text-indigo-600 mr-2" />
+            <h2 class="text-2xl font-bold text-gray-800">Prevalence of Mental Health Conditions</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Mental health conditions are common across all demographics, affecting millions of people worldwide. Understanding prevalence helps contextualize the scale of mental health challenges.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {prevalenceStats.map((stat, index) => (
+              <div key={index} class="bg-indigo-50 rounded-lg p-6 text-center">
+                <div class="text-3xl font-bold text-indigo-600 mb-2">{stat.title}</div>
+                <p class="text-gray-700 mb-3">{stat.description}</p>
+                <p class="text-sm text-gray-500">{stat.source}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div class="mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Most Common Mental Health Conditions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Anxiety Disorders</div>
+                <p class="text-gray-600">Affects 19.1% of U.S. adults annually (48 million people)</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Major Depression</div>
+                <p class="text-gray-600">Affects 8.4% of U.S. adults annually (21 million people)</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">PTSD</div>
+                <p class="text-gray-600">Affects 3.6% of U.S. adults annually (9 million people)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Statistics */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <PieChart class="h-6 w-6 text-indigo-600 mr-2" />
+            <h2 class="text-2xl font-bold text-gray-800">Treatment & Access Statistics</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Despite the prevalence of mental health conditions, significant gaps exist in treatment access and utilization. These statistics highlight both challenges and improvements in mental health care.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {treatmentStats.map((stat, index) => (
+              <div key={index} class="bg-indigo-50 rounded-lg p-6 text-center">
+                <div class="text-3xl font-bold text-indigo-600 mb-2">{stat.title}</div>
+                <p class="text-gray-700 mb-3">{stat.description}</p>
+                <p class="text-sm text-gray-500">{stat.source}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div class="mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Treatment Barriers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Cost & Insurance</div>
+                <p class="text-gray-600">60% of adults with mental illness cite cost as the primary barrier to seeking treatment</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Provider Availability</div>
+                <p class="text-gray-600">77 million Americans live in areas with insufficient mental health providers</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Stigma</div>
+                <p class="text-gray-600">31% of adults with mental illness report not seeking treatment due to concerns about others' perceptions</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Awareness</div>
+                <p class="text-gray-600">42% of people with symptoms of mental illness are unaware that effective treatments exist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Demographic Differences */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Users class="h-6 w-6 text-indigo-600 mr-2" />
+            <h2 class="text-2xl font-bold text-gray-800">Demographic Differences</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Mental health conditions and access to care vary significantly across different demographic groups. Understanding these disparities is crucial for developing equitable mental health services.
+          </p>
+          
+          {demographicStats.map((demographic, index) => (
+            <div key={demographic.group} class={`${index > 0 ? 'mt-6' : ''}`}>
+              <h3 class="text-lg font-bold text-gray-800 mb-3">{demographic.group}</h3>
+              <div class="bg-gray-50 rounded-lg p-5">
+                <ul class="space-y-3">
+                  {demographic.stats.map((stat, i) => (
+                    <li key={i} class="flex items-start">
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1 flex-shrink-0" />
+                      <span class="text-gray-600">{stat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+          
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Health Disparities</h3>
+            <p class="text-gray-700">
+              Mental health disparities are influenced by multiple factors including socioeconomic status, geographic location, cultural factors, and systemic barriers. Addressing these disparities requires targeted interventions, culturally competent care, and policy changes to improve access and quality of mental health services for all populations.
+            </p>
+          </div>
+        </div>
+
+        {/* Online Therapy Statistics */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Globe class="h-6 w-6 text-indigo-600 mr-2" />
+            <h2 class="text-2xl font-bold text-gray-800">Online Therapy Statistics</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Online therapy has grown significantly in recent years, particularly accelerated by the COVID-19 pandemic. These statistics highlight trends in telemental health adoption and effectiveness.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {onlineTherapyStats.map((stat, index) => (
+              <div key={index} class="bg-indigo-50 rounded-lg p-6 text-center">
+                <div class="text-3xl font-bold text-indigo-600 mb-2">{stat.title}</div>
+                <p class="text-gray-700 mb-3">{stat.description}</p>
+                <p class="text-sm text-gray-500">{stat.source}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div class="mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Online Therapy Trends</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Modality Preferences</div>
+                <p class="text-gray-600">Video sessions (52%), messaging (31%), and phone sessions (17%) are the most common online therapy formats</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">User Demographics</div>
+                <p class="text-gray-600">Adults aged 25-34 represent the largest user group of online therapy services (38%)</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Insurance Coverage</div>
+                <p class="text-gray-600">73% increase in insurance plans covering telemental health services since 2020</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="font-bold text-gray-800 mb-1">Retention Rates</div>
+                <p class="text-gray-600">Online therapy clients complete 60% more sessions on average compared to traditional therapy</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <a href="/learn/statistics/online-therapy-effectiveness" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+              Learn more about online therapy effectiveness <ArrowRight class="h-4 w-4 ml-1" />
+            </a>
+          </div>
+        </div>
+
+        {/* Economic Impact */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <div class="flex items-center mb-6">
+            <TrendingUp class="h-6 w-6 text-indigo-600 mr-2" />
+            <h2 class="text-2xl font-bold text-gray-800">Economic Impact</h2>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Mental health conditions have significant economic implications, affecting productivity, healthcare costs, and quality of life. Understanding these impacts highlights the importance of mental health investment.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Global Economic Burden</h3>
+              <p class="text-gray-600 mb-3">
+                Mental health conditions cost the global economy approximately $1 trillion annually in lost productivity, according to the World Health Organization.
+              </p>
+              <p class="text-gray-600">
+                Depression and anxiety disorders alone cost the global economy an estimated $1 trillion each year in lost productivity.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Return on Investment</h3>
+              <p class="text-gray-600 mb-3">
+                For every $1 invested in scaled-up treatment for common mental disorders, there is a return of $4 in improved health and productivity.
+              </p>
+              <p class="text-gray-600">
+                Workplace mental health programs show an average return on investment of $4.25 for every dollar spent.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Workplace Impact</h3>
+              <p class="text-gray-600 mb-3">
+                Mental health conditions account for approximately 200 million lost workdays annually in the United States.
+              </p>
+              <p class="text-gray-600">
+                Employees with untreated mental health conditions use an average of 3x more sick days than other employees.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Healthcare Costs</h3>
+              <p class="text-gray-600 mb-3">
+                People with mental health conditions have healthcare costs that are 2-3x higher than those without mental health conditions.
+              </p>
+              <p class="text-gray-600">
+                Early intervention can reduce long-term healthcare costs by 25-40% for many mental health conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Take Action for Your Mental Health</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Understanding mental health statistics is just the first step. Take action today by exploring your options for support and treatment.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/assessments/mental-health-assessment" 
+              variant="light"
+              size="lg"
+            >
+              Take Mental Health Assessment
+            </Button>
+            <Button 
+              as={Link} 
+              to="/best/platforms/best-online-therapy-platforms" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Explore Treatment Options
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

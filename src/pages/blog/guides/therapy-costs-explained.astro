@@ -1,0 +1,191 @@
+---
+import BlogLayout from '../BlogLayout.astro';
+import { ArrowRight, Calendar, User, Tag, Clock, DollarSign, CreditCard, Shield, TrendingUp, MessageCircle } from 'lucide-react';
+---
+
+<BlogLayout>
+
+    
+      <div class="flex items-center text-sm text-gray-500 mb-6">
+        <a href="/" class="hover:text-indigo-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/guides" class="hover:text-indigo-600">Guides</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700">Cost of Therapy</span>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Therapy Costs" class="blog-featured-image h-96" />
+        <div class="p-8">
+          <h1 class="blog-title">The Real Cost of Therapy: Budgeting for Mental Health Care</h1>
+          <div class="flex flex-wrap items-center text-sm text-gray-500 mb-6">
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Calendar class="h-4 w-4 mr-1" />
+              <span>March 15, 2025</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <User class="h-4 w-4 mr-1" />
+              <span>By James Wilson, Financial Health Advisor</span>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Tag class="h-4 w-4 mr-1" />
+              <a href="/blog/tag/finance" class="hover:text-indigo-600">Finance</a>
+            </div>
+            <div class="flex items-center mr-6 mb-2 sm:mb-0">
+              <Clock class="h-4 w-4 mr-1" />
+              <span>11 min read</span>
+            </div>
+          </div>
+          <div class="bg-indigo-50 rounded-lg p-4 mb-6">
+            <p class="text-gray-700 italic">
+              "Understanding therapy costs upfront helps you make informed decisions and plan sustainably for your mental health. With the right information, therapy can fit into almost any budget."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div class="blog-content">
+          <p>One of the biggest barriers to seeking therapy is cost. Understanding the financial landscape of mental health care can help you budget effectively and access the support you need.</p>
+
+          <h2 class="blog-subtitle">Average Therapy Costs</h2>
+
+          <h3 class="blog-subheading">Out-of-Pocket Session Fees</h3>
+          <ul>
+            <li><strong>Traditional in-office therapy:</strong> $100-$200 per session (45-60 minutes)</li>
+            <li><strong>Online therapy platforms:</strong> $60-$100 per session</li>
+            <li><strong>Sliding scale therapists:</strong> $30-$80 per session</li>
+            <li><strong>Community mental health centers:</strong> $0-$50 per session based on income</li>
+            <li><strong>Psychiatrists:</strong> $200-$300+ per session</li>
+          </ul>
+
+          <h3 class="blog-subheading">Geographic Variation</h3>
+          <p>Costs vary significantly by location. Urban areas and coastal cities typically charge more ($150-$250/session) while rural areas may be lower ($75-$150/session).</p>
+
+          <h2 class="blog-subtitle">Insurance Coverage</h2>
+
+          <h3 class="blog-subheading">Understanding Your Benefits</h3>
+          <p>Key questions to ask your insurance company:</p>
+          <ul>
+            <li>Does my plan cover mental health services?</li>
+            <li>What's my copay for therapy sessions?</li>
+            <li>Is there a deductible I need to meet first?</li>
+            <li>How many sessions are covered per year?</li>
+            <li>Do I need pre-authorization?</li>
+            <li>Are online therapy sessions covered?</li>
+          </ul>
+
+          <h3 class="blog-subheading">In-Network vs. Out-of-Network</h3>
+          <p><strong>In-network:</strong> Lower copays ($20-$50), but limited provider choice</p>
+          <p><strong>Out-of-network:</strong> You pay upfront and submit for reimbursement (typically 50-70% coverage after deductible)</p>
+
+          <h2 class="blog-subtitle">Making Therapy Affordable</h2>
+
+          <h3 class="blog-subheading">1. Sliding Scale Fees</h3>
+          <p>Many private practice therapists offer sliding scale based on income. Don't be afraid to ask—worst case, they say no.</p>
+
+          <h3 class="blog-subheading">2. Community Mental Health Centers</h3>
+          <p>Federally qualified health centers (FQHCs) and community clinics offer therapy on a sliding scale, sometimes as low as $5-20 per session.</p>
+
+          <h3 class="blog-subheading">3. Online Therapy Platforms</h3>
+          <p>Platforms like BetterHelp or Talkspace offer subscription models ($240-400/month) with unlimited messaging and weekly video sessions—often more affordable than traditional therapy.</p>
+
+          <h3 class="blog-subheading">4. Training Clinics</h3>
+          <p>University counseling centers and training clinics offer supervised therapy by graduate students at significantly reduced rates ($20-60/session).</p>
+
+          <h3 class="blog-subheading">5. Employee Assistance Programs (EAP)</h3>
+          <p>Many employers offer 3-8 free therapy sessions through EAPs. Check with your HR department.</p>
+
+          <h3 class="blog-subheading">6. Group Therapy</h3>
+          <p>Group sessions cost $40-80, significantly less than individual therapy while still providing professional support.</p>
+
+          <h2 class="blog-subtitle">Budgeting for Therapy</h2>
+
+          <h3 class="blog-subheading">Calculate Your Monthly Cost</h3>
+          <p><strong>Example 1 (With Insurance):</strong></p>
+          <ul>
+            <li>Weekly sessions × $30 copay = $120/month</li>
+          </ul>
+
+          <p><strong>Example 2 (Out-of-Pocket):</strong></p>
+          <ul>
+            <li>Biweekly sessions × $100/session = $200/month</li>
+          </ul>
+
+          <p><strong>Example 3 (Online Platform):</strong></p>
+          <ul>
+            <li>Monthly subscription = $260/month for weekly sessions</li>
+          </ul>
+
+          <h3 class="blog-subheading">Financial Planning Tips</h3>
+          <ul>
+            <li><strong>Use HSA/FSA funds:</strong> Therapy qualifies for tax-advantaged health savings accounts</li>
+            <li><strong>Adjust frequency:</strong> Start weekly, then move to biweekly or monthly as you progress</li>
+            <li><strong>Consider brief therapy models:</strong> Solution-focused or short-term CBT (12-16 sessions)</li>
+            <li><strong>Emergency fund for therapy:</strong> Set aside $500-1000 for mental health emergencies</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Hidden Costs to Consider</h2>
+          <ul>
+            <li><strong>Assessment fees:</strong> Initial evaluation may cost more ($150-300)</li>
+            <li><strong>Cancellation fees:</strong> Late cancellations often charged in full</li>
+            <li><strong>Medication costs:</strong> If seeing a psychiatrist, factor in prescription costs</li>
+            <li><strong>Transportation:</strong> Gas, parking, or transit for in-person sessions</li>
+            <li><strong>Time off work:</strong> Consider lost wages if appointments are during work hours</li>
+          </ul>
+
+          <h2 class="blog-subtitle">When Cost Feels Prohibitive</h2>
+
+          <h3 class="blog-subheading">Free Resources</h3>
+          <ul>
+            <li><strong>Crisis lines:</strong> 988 Suicide & Crisis Lifeline (call/text 988)</li>
+            <li><strong>Support groups:</strong> NAMI, DBSA, Al-Anon, and other peer-led groups</li>
+            <li><strong>Apps:</strong> Free mental health apps like Headspace (limited), Sanvello, MindShift</li>
+            <li><strong>Open Path Collective:</strong> $30-80 sessions with network therapists</li>
+            <li><strong>Inclusive Therapists:</strong> Directory of therapists offering reduced-fee sessions</li>
+          </ul>
+
+          <h2 class="blog-subtitle">Is Therapy Worth the Cost?</h2>
+
+          <p>Research consistently shows therapy provides significant return on investment:</p>
+          <ul>
+            <li>Improved work productivity and fewer sick days</li>
+            <li>Reduced medical costs from stress-related illness</li>
+            <li>Better relationships leading to more stable life</li>
+            <li>Enhanced quality of life and wellbeing</li>
+          </ul>
+
+          <p>The question isn't whether you can afford therapy—it's whether you can afford not to invest in your mental health.</p>
+
+          <h2 class="blog-subtitle">Action Steps</h2>
+          <ol>
+            <li>Check your insurance benefits or explore affordable options</li>
+            <li>Calculate realistic monthly therapy budget</li>
+            <li>Research therapists in your price range</li>
+            <li>Don't let cost prevent you from seeking help—ask about sliding scale and payment plans</li>
+            <li>View therapy as an investment in your future, not just an expense</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="James Wilson" class="blog-author-image" />
+        <div>
+          <h3 class="blog-author-name">About the Author</h3>
+          <p class="blog-author-bio">James Wilson is a financial health advisor who helps people navigate the intersection of healthcare costs and personal finance.</p>
+        </div>
+      </div>
+
+      <div class="blog-newsletter">
+        <h3 class="blog-newsletter-title">Subscribe to Our Newsletter</h3>
+        <p class="blog-newsletter-description">Stay up-to-date with the latest mental health resources.</p>
+        <div class="blog-newsletter-form">
+          <input type="email" placeholder="Your email address" class="blog-newsletter-input" />
+          <button class="blog-newsletter-button">Subscribe</button>
+        </div>
+      </div>
+    
+  
+</BlogLayout>

@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star, MessageSquare, Video, Phone } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="min-h-screen bg-gray-50 py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-indigo-600 p-6 text-white">
+              <h1 class="text-2xl font-bold mb-2">Your Therapy Style Results</h1>
+              <p class="text-indigo-100">
+                Based on your responses, here are the therapy approaches that might work best for you
+              </p>
+            </div>
+            
+            <div class="p-6">
+              <div class="space-y-8">
+                {matchedTypes.slice(0, 3).map(match => {
+                  const therapyType = therapyTypes[match.type];
+                  if (!therapyType) return null;
+                  
+                  return (
+                    <div key={match.type} class="bg-gray-50 rounded-lg p-6">
+                      <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">{therapyType.name}</h2>
+                        <div class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">
+                          {match.score}% Match
+                        </div>
+                      </div>
+                      
+                      <p class="text-gray-600 mb-6">{therapyType.description}</p>
+                      
+                      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                          <h3 class="font-bold text-gray-800 mb-2">Best For</h3>
+                          <ul class="space-y-1">
+                            {therapyType.bestFor.map((item, index) => (
+                              <li key={index} class="flex items-start">
+                                <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                                <span class="text-sm text-gray-600">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h3 class="font-bold text-gray-800 mb-2">Approach</h3>
+                          <ul class="space-y-1">
+                            {therapyType.approach.map((item, index) => (
+                              <li key={index} class="flex items-start">
+                                <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                                <span class="text-sm text-gray-600">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h3 class="font-bold text-gray-800 mb-2">Common Techniques</h3>
+                          <ul class="space-y-1">
+                            {therapyType.techniques.map((technique, index) => (
+                              <li key={index} class="flex items-start">
+                                <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                                <span class="text-sm text-gray-600">{technique}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div class="mt-8 space-y-6">
+                <div class="bg-yellow-50 rounded-lg p-4">
+                  <div class="flex items-start">
+                    <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                    <p class="text-sm text-yellow-700">
+                      These results are meant to guide your exploration of different therapy approaches. The best way to find the right fit is to discuss these options with a mental health professional.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                  <Button 
+                    as={Link}
+                    to="/tools/matchers/therapy-platform-matcher"
+                    variant="primary"
+                    icon={ArrowRight}
+                  >
+                    Find Matching Therapists
+                  </Button>
+                  <Button 
+                    onClick={restartAssessment}
+                    variant="outline"
+                    icon={ArrowLeft}
+                  >
+                    Take Assessment Again
+                  </Button>
+                  <Button 
+                    as={Link}
+                    to="/learn/fundamentals/therapy-types"
+                    variant="outline"
+                    icon={ArrowRight}
+                  >
+                    Learn More About Therapy Types
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div class="min-h-screen bg-gray-50 py-12">
+      <div class="container mx-auto px-4 max-w-4xl">
+        {currentQuestion === 0 ? (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+            <div class="bg-indigo-600 p-6 text-white">
+              <h1 class="text-2xl font-bold mb-2">Therapy Type Finder</h1>
+              <p class="text-indigo-100">
+                Discover which therapy approaches might work best for you
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="space-y-6 mb-8">
+                <div class="flex items-start">
+                  <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">About This Tool</h2>
+                    <p class="text-gray-600">
+                      This assessment helps identify therapy approaches that align with your communication style, preferences, and goals.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">What You'll Learn</h2>
+                    <ul class="mt-2 space-y-2">
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Which therapy approaches might suit you best</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Your preferred communication and learning styles</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Treatment preferences and goals</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Personalized therapy recommendations</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">Important Note</h2>
+                    <p class="text-gray-600">
+                      This tool provides general guidance about therapy approaches that might suit you. The best way to find the right fit is through discussion with a mental health professional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <Button 
+                onClick={() => setCurrentQuestion(1)} 
+                variant="primary"
+                size="lg"
+                class="w-full justify-center"
+              >
+                Begin Assessment
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-indigo-600 p-6">
+              <div class="flex justify-between items-center text-white mb-4">
+                <h2 class="text-lg font-semibold">Question {currentQuestion} of {questions.length}</h2>
+                <span class="text-sm text-indigo-200">
+                  {Math.round((currentQuestion / questions.length) * 100)}% Complete
+                </span>
+              </div>
+              <div class="w-full bg-indigo-300 rounded-full h-2">
+                <div 
+                  class="bg-white rounded-full h-2 transition-all duration-300"
+                  style={{ width: `${(currentQuestion / questions.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-6">
+                {questions[currentQuestion - 1].text}
+              </h3>
+              
+              {questions[currentQuestion - 1].type === 'single' && (
+                <div class="space-y-3">
+                  {questions[currentQuestion - 1].options?.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleAnswer(option.value)}
+                      class="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-indigo-500 hover:bg-indigo-50 transition-all duration-200"
+                    >
+                      <div class="font-medium text-gray-800">{option.text}</div>
+                      {option.description && (
+                        <div class="text-sm text-gray-600 mt-1">{option.description}</div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+              
+              {questions[currentQuestion - 1].type === 'multiple' && (
+                <div class="space-y-3">
+                  {questions[currentQuestion - 1].options?.map((option, index) => (
+                    <label
+                      key={index}
+                      class="flex items-center p-4 rounded-lg border border-gray-200 hover:border-indigo-500 hover:bg-indigo-50 transition-all duration-200 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        value={option.value}
+                        onChange={(e) => {
+                          const currentAnswers = answers[currentQuestion] || [];
+                          const newAnswers = e.target.checked
+                            ? [...currentAnswers, option.value]
+                            : currentAnswers.filter((v: string) => v !== option.value);
+                          setAnswers(prev => ({ ...prev, [currentQuestion]: newAnswers }));
+                        }}
+                        class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                      />
+                      <div class="ml-3">
+                        <div class="font-medium text-gray-800">{option.text}</div>
+                        {option.description && (
+                          <div class="text-sm text-gray-600">{option.description}</div>
+                        )}
+                      </div>
+                    </label>
+                  ))}
+                  <Button
+                    onClick={() => {
+                      if (answers[currentQuestion]?.length > 0) {
+                        handleAnswer(answers[currentQuestion]);
+                      }
+                    }}
+                    variant="primary"
+                    disabled={!answers[currentQuestion]?.length}
+                    class="mt-4"
+                  >
+                    Continue
+                  </Button>
+                </div>
+              )}
+              
+              {questions[currentQuestion - 1].type === 'scale' && (
+                <div class="space-y-6">
+                  <div class="flex justify-between text-sm text-gray-600 mb-2">
+                    <span>{questions[currentQuestion - 1].scaleLabels?.min}</span>
+                    <span>{questions[currentQuestion - 1].scaleLabels?.max}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="5"
+                    step="1"
+                    onChange={(e) => handleAnswer(parseInt(e.target.value))}
+                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                  />
+                  <div class="flex justify-between px-2">
+                    {[1, 2, 3, 4, 5].map((value) => (
+                      <div key={value} class="flex flex-col items-center">
+                        <div class="w-1 h-3 bg-gray-300 mb-1"></div>
+                        <span class="text-sm text-gray-600">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {currentQuestion > 1 && (
+                <button
+                  onClick={() => setCurrentQuestion(prev => prev - 1)}
+                  class="mt-6 text-indigo-600 hover:text-indigo-800 flex items-center"
+                >
+                  <ArrowLeft class="h-4 w-4 mr-1" />
+                  Previous question
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

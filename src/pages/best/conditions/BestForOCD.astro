@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <MetaTags 
+        title="Best Online Therapy for OCD | RealMindSolutions"
+        description="Compare the top online therapy platforms for OCD treatment."
+      />
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Online Therapy for OCD</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Specialized online platforms offering evidence-based treatment for OCD.
+          </p>
+        </div>
+
+        {/* Introduction Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Finding Specialized Care for OCD</h2>
+          <p class="text-gray-600 mb-4">
+            Obsessive-Compulsive Disorder (OCD) requires specialized treatment approaches. Research shows that Exposure and Response Prevention (ERP) is most effective for OCD.
+          </p>
+        </div>
+
+        {/* Platform Comparison */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Online Platforms for OCD Treatment</h2>
+          
+          {platforms.map((platform, index) => (
+            <div key={platform.slug} class="mb-8 p-6 border rounded-lg">
+              <h3 class="text-xl font-bold">{platform.name}</h3>
+              <div class="flex items-center mb-2">
+                {renderStars(platform.rating)}
+                <span class="ml-2">{platform.rating}/5</span>
+              </div>
+              <p class="mb-2">{platform.description}</p>
+              <p class="font-bold">Price: {platform.price}</p>
+              <div class="mt-4">
+                <h4 class="font-bold">Best For:</h4>
+                <p>{platform.bestFor}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-indigo-600 text-white p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-bold mb-4">Find Your Perfect OCD Treatment</h2>
+          <Button
+            as={Link}
+            to="/tools/matchers/therapy-platform-matcher"
+            variant="light"
+            size="lg"
+          >
+            Take the Assessment
+          </Button>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

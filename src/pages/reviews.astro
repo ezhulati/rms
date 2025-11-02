@@ -1,0 +1,384 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Star, ExternalLink } from 'lucide-react';
+
+const isRootPath = Astro.url.pathname === '/reviews' || Astro.url.pathname === '/reviews/';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {isRootPath ? (
+          <>
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Platform Reviews</h1>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                In-depth, unbiased reviews of the leading online therapy platforms to help you make an informed decision.
+              </p>
+            </div>
+
+            {/* Featured Reviews */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* BetterHelp Review Card */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="/images/concepts/reviewspage.jpg" 
+                  alt="BetterHelp Review" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5" strokeWidth={1} />
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0/5</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">BetterHelp Review</h3>
+                  <p class="text-gray-600 mb-4">
+                    A comprehensive review of BetterHelp's services, pricing, therapist qualifications, and user experience.
+                  </p>
+                  <a href="/reviews/platforms/betterhelp" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read full review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Talkspace Review Card */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Talkspace Review" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                    </div>
+                    <span class="ml-2 text-gray-600">4.5/5</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Talkspace Review</h3>
+                  <p class="text-gray-600 mb-4">
+                    An in-depth analysis of Talkspace's therapy services, medication management, and insurance coverage.
+                  </p>
+                  <a href="/reviews/platforms/talkspace" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read full review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Cerebral Review Card */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Cerebral Review" 
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5 fill-current" />
+                      <Star class="h-5 w-5" strokeWidth={1} />
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0/5</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">Cerebral Review</h3>
+                  <p class="text-gray-600 mb-4">
+                    A detailed review of Cerebral's combined therapy and medication management services.
+                  </p>
+                  <a href="/reviews/platforms/cerebral" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                    Read full review <ArrowRight class="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Review Categories */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* Platform Reviews */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Platform Reviews</h2>
+                  <p class="text-gray-600 mb-6">
+                    Comprehensive reviews of individual online therapy platforms.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/reviews/platforms/betterhelp" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp Review</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/platforms/talkspace" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talkspace Review</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/platforms/cerebral" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Cerebral Review</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/platforms/calmerry" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Calmerry Review</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/platforms/online-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online-Therapy.com Review</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/reviews/platforms" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all platform reviews <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Feature Reviews */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Feature Reviews</h2>
+                  <p class="text-gray-600 mb-6">
+                    Detailed reviews of specific features across therapy platforms.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/reviews/features/betterhelp-therapist-quality" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp Therapist Quality</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/features/talkspace-messaging-system" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talkspace Messaging System</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/features/cerebral-medication-management" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Cerebral Medication Management</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/features/video-session-quality" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Video Session Quality Comparison</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/reviews/features" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all feature reviews <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Specialty Reviews */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Specialty Reviews</h2>
+                  <p class="text-gray-600 mb-6">
+                    Reviews focused on how platforms handle specific mental health conditions.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/reviews/specialty/betterhelp-for-anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp for Anxiety</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/specialty/talkspace-for-depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Talkspace for Depression</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/specialty/online-therapy-for-ptsd" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online Therapy for PTSD</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/specialty/couples-therapy-platforms" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Couples Therapy Platforms</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/reviews/specialty" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all specialty reviews <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Pricing Reviews */}
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Pricing Reviews</h2>
+                  <p class="text-gray-600 mb-6">
+                    Detailed analysis of pricing structures, value, and affordability.
+                  </p>
+                  <ul class="space-y-3 mb-6">
+                    <li>
+                      <a href="/reviews/pricing/online-therapy-pricing-comparison" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Online Therapy Pricing Comparison</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/pricing/betterhelp-cost-analysis" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>BetterHelp Cost Analysis</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/pricing/insurance-coverage-guide" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Insurance Coverage Guide</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/reviews/pricing/affordable-therapy-options" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                        <ArrowRight class="h-4 w-4 mr-2" />
+                        <span>Affordable Therapy Options</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/reviews/pricing" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    View all pricing reviews <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Review */}
+            <div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Featured Review: BetterHelp</h2>
+                  <a href="/reviews/platforms/betterhelp" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                    Read full review <ArrowRight class="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="col-span-1 md:col-span-1">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                      alt="BetterHelp Review" 
+                      class="w-full rounded-lg mb-4"
+                    />
+                    <div class="flex items-center mb-2">
+                      <div class="flex text-yellow-400">
+                        <Star class="h-5 w-5 fill-current" />
+                        <Star class="h-5 w-5 fill-current" />
+                        <Star class="h-5 w-5 fill-current" />
+                        <Star class="h-5 w-5 fill-current" />
+                        <Star class="h-5 w-5" strokeWidth={1} />
+                      </div>
+                      <span class="ml-2 text-gray-600">4.0/5</span>
+                    </div>
+                    <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                      Visit BetterHelp <ExternalLink class="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                  
+                  <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">BetterHelp Review Summary</h3>
+                    <p class="text-gray-600 mb-4">
+                      BetterHelp is one of the largest online therapy platforms, offering counseling services through messaging, live chat, phone calls, and video sessions. Our comprehensive review examines the platform's strengths and limitations.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+                        <ul class="space-y-1">
+                          <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-2">✓</span>
+                            <span>Large network of licensed therapists</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-2">✓</span>
+                            <span>Multiple communication methods</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-2">✓</span>
+                            <span>Financial aid available</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-2">✓</span>
+                            <span>Therapist switching is easy</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+                        <ul class="space-y-1">
+                          <li class="flex items-start">
+                            <span class="text-red-500 font-bold mr-2">✗</span>
+                            <span>No insurance coverage</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-red-500 font-bold mr-2">✗</span>
+                            <span>No medication management</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-red-500 font-bold mr-2">✗</span>
+                            <span>Response times can vary</span>
+                          </li>
+                          <li class="flex items-start">
+                            <span class="text-red-500 font-bold mr-2">✗</span>
+                            <span>Not suitable for severe conditions</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <p class="text-gray-600">
+                      BetterHelp is best suited for individuals seeking convenient, flexible therapy for mild to moderate mental health concerns. Read our full review for an in-depth analysis of the platform's therapist qualifications, user experience, and value for money.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* How We Review Section */}
+            <div class="mt-16">
+              <HowWeReviewed />
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-20">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Review Content</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              This is a placeholder for the specific review content based on the current URL path.
+            </p>
+            <p class="text-gray-600">
+              Current path: {location.pathname}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

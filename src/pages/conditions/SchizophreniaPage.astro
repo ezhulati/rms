@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, Brain, BookOpen, Stethoscope, AlertCircle, CheckCircle, XCircle } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Understanding Schizophrenia</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            A comprehensive guide to schizophrenia, its symptoms, treatment options, and how online therapy can help manage this complex condition.
+          </p>
+        </div>
+
+        {/* Overview Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Brain class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">What is Schizophrenia?</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-4">
+            Schizophrenia is a complex, chronic mental health disorder that affects how a person thinks, feels, and behaves. 
+            It is characterized by distortions in thinking, perception, emotions, language, sense of self, and behavior. 
+            Although schizophrenia is not as common as other mental disorders, it can be disabling and significantly impact quality of life.
+          </p>
+          
+          <p class="text-gray-700 mb-4">
+            Contrary to popular misconceptions, schizophrenia is not a split or multiple personality disorder. 
+            It is a psychotic disorder that affects approximately 1% of the population worldwide, typically beginning in late adolescence or early adulthood.
+          </p>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 mb-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Key Facts About Schizophrenia</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Affects approximately 1% of the population worldwide</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Typically emerges in late adolescence to early adulthood (late teens to early 30s)</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Affects men and women equally, though symptoms may appear earlier in men</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Caused by a combination of genetic, environmental, and neurobiological factors</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span>Treatable with a combination of medication, therapy, and support services</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p class="text-gray-700">
+            While schizophrenia is a lifelong condition, with proper treatment and support, many individuals with schizophrenia can lead fulfilling, independent lives. 
+            Early diagnosis and consistent treatment are crucial factors in managing the condition effectively.
+          </p>
+        </div>
+
+        {/* Symptoms Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <AlertCircle class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Symptoms and Diagnosis</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            The symptoms of schizophrenia are typically categorized into three main groups: positive symptoms (psychotic behaviors not seen in healthy people), 
+            negative symptoms (disruptions to normal emotions and behaviors), and cognitive symptoms (changes in memory or other aspects of thinking).
+          </p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Common Symptoms Include:</h3>
+          
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <span><strong>Hallucinations:</strong> Seeing, hearing, or feeling things that aren't there</span>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <span><strong>Delusions:</strong> False beliefs not based in reality</span>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <span><strong>Disorganized thinking:</strong> Difficulty organizing thoughts or connecting them logically</span>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <span><strong>Reduced expression of emotions:</strong> Limited facial expressions, monotone voice</span>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <span><strong>Cognitive difficulties:</strong> Problems with attention, memory, and executive functioning</span>
+            </li>
+          </ul>
+          
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <AlertCircle class="h-5 w-5 text-yellow-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-yellow-700">
+                  <strong>Important Note:</strong> Only qualified mental health professionals can diagnose schizophrenia. If you or someone you know is experiencing symptoms, seek professional help immediately. Early intervention is crucial for better outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <Stethoscope class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Treatment Approaches</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            Treatment for schizophrenia is typically comprehensive and lifelong, focusing on managing symptoms and improving quality of life. 
+            The most effective approach combines medication, psychotherapy, and support services tailored to the individual's needs.
+          </p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Effective Treatments Include:</h3>
+          
+          <ul class="space-y-4 mb-6">
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Antipsychotic Medications</span>
+                <p class="text-gray-600">Help reduce hallucinations, delusions, and improve thinking and behavior</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Psychotherapy</span>
+                <p class="text-gray-600">Cognitive Behavioral Therapy (CBT), family therapy, and social skills training</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Psychosocial Interventions</span>
+                <p class="text-gray-600">Supported employment, housing support, and case management</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div>
+                <span class="font-bold">Family Support and Education</span>
+                <p class="text-gray-600">Helping families understand and support their loved ones</p>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="bg-green-50 border-l-4 border-green-400 p-4">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <CheckCircle class="h-5 w-5 text-green-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-green-700">
+                  <strong>Treatment Success:</strong> With appropriate treatment and support, many people with schizophrenia can manage their symptoms effectively and lead fulfilling lives. The combination of medication adherence, ongoing therapy, and strong support systems significantly improves outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Online Therapy Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <BookOpen class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Online Therapy for Schizophrenia</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            While online therapy can be a valuable component of schizophrenia treatment, it's important to understand its role and limitations. 
+            For individuals with schizophrenia, online therapy typically works best as a supplement to in-person psychiatric care rather than a complete replacement.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Benefits</h3>
+              
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Improved Access:</strong> Particularly valuable for individuals in rural areas</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Comfort and Convenience:</strong> Therapy from the familiar environment of home</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Family Involvement:</strong> Easier to include family members in therapy</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Limitations</h3>
+              
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Not a Replacement:</strong> Cannot replace medication management</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Crisis Management:</strong> Limited ability to respond to acute episodes</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Technology Barriers:</strong> May be challenging for some individuals</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <AlertCircle class="h-5 w-5 text-yellow-400" />
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-yellow-700">
+                  <strong>Important Consideration:</strong> Online therapy for schizophrenia should be part of a coordinated care plan that includes regular in-person psychiatric care for medication management and comprehensive assessment.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg"
+            >
+              Find the Right Online Therapy Platform
+            </Button>
+          </div>
+        </div>
+
+        {/* Resources Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <BookOpen class="h-8 w-8 text-indigo-600 mr-3" />
+            <h2 class="text-2xl font-bold text-gray-800">Resources and Support</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            Beyond professional treatment, numerous resources and support systems can help individuals with schizophrenia and their families navigate this condition.
+          </p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Organizations</h3>
+          
+          <ul class="space-y-4 mb-6">
+            <li>
+              <h4 class="font-bold text-indigo-600">National Alliance on Mental Illness (NAMI)</h4>
+              <p class="text-gray-600">Support groups, education programs, and resources for individuals and families</p>
+            </li>
+            
+            <li>
+              <h4 class="font-bold text-indigo-600">Schizophrenia & Psychosis Action Alliance</h4>
+              <p class="text-gray-600">Advocacy, support, and education specifically for schizophrenia</p>
+            </li>
+            
+            <li>
+              <h4 class="font-bold text-indigo-600">SAMHSA's National Helpline</h4>
+              <p class="text-gray-600">1-800-662-HELP (4357) - 24/7 treatment referral and information service</p>
+            </li>
+          </ul>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 text-center">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Finding Help</h3>
+            <p class="text-gray-700 mb-4">
+              If you or someone you know is struggling with symptoms of schizophrenia, don't hesitate to reach out for professional help.
+            </p>
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg"
+            >
+              Find Support Resources
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, Star, DollarSign, MessageSquare, Video, Phone, AlertCircle, XCircle, ExternalLink } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="min-h-screen bg-gray-50 py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-indigo-600 p-6 text-white">
+              <h1 class="text-2xl font-bold mb-2">Your Therapy Platform Matches</h1>
+              <p class="text-indigo-100">
+                Based on your responses, here are your best matches for online therapy
+              </p>
+            </div>
+            
+            <div class="p-6">
+              <div class="space-y-6 mb-8">
+                {matchedPlatforms.map((platform, index) => (
+                  <div key={platform.slug} class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div class="flex items-center mb-2 md:mb-0">
+                        <span class="text-2xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                        <div>
+                          <h2 class="text-xl font-bold text-gray-800">{platform.name}</h2>
+                          <div class="flex items-center mt-1">
+                            {renderStars(platform.rating)}
+                            <span class="ml-2 text-sm text-gray-600">{platform.rating}/5</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">
+                          {platform.matchScore}% Match
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="text-gray-600 mb-4">{platform.description}</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <h3 class="font-medium text-gray-800 mb-2">Key Features</h3>
+                        <ul class="space-y-1">
+                          <li class="flex items-center text-sm">
+                            <DollarSign class="h-4 w-4 text-indigo-600 mr-2" />
+                            <span>{platform.price}</span>
+                          </li>
+                          <li class="flex items-center text-sm">
+                            {platform.insurance ? (
+                              <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                            ) : (
+                              <XCircle class="h-4 w-4 text-red-500 mr-2" />
+                            )}
+                            <span>Insurance Coverage</span>
+                          </li>
+                          <li class="flex items-center text-sm">
+                            {platform.medication ? (
+                              <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                            ) : (
+                              <XCircle class="h-4 w-4 text-red-500 mr-2" />
+                            )}
+                            <span>Medication Management</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 class="font-medium text-gray-800 mb-2">Communication Methods</h3>
+                        <div class="flex space-x-2">
+                          {platform.communication.includes('messaging') && (
+                            <div class="bg-gray-100 px-2 py-1 rounded text-sm">
+                              <MessageSquare class="h-4 w-4 inline mr-1" />
+                              Messaging
+                            </div>
+                          )}
+                          {platform.communication.includes('video') && (
+                            <div class="bg-gray-100 px-2 py-1 rounded text-sm">
+                              <Video class="h-4 w-4 inline mr-1" />
+                              Video
+                            </div>
+                          )}
+                          {platform.communication.includes('phone') && (
+                            <div class="bg-gray-100 px-2 py-1 rounded text-sm">
+                              <Phone class="h-4 w-4 inline mr-1" />
+                              Phone
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                      <Button 
+                        as={Link}
+                        to={`/reviews/platforms/${platform.slug}`}
+                        variant="outline"
+                        size="sm"
+                      >
+                        Read full review
+                      </Button>
+                      <Button
+                        as="a"
+                        href={`https://www.${platform.slug}.com`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="primary"
+                        size="sm"
+                        icon={ExternalLink}
+                      >
+                        Visit Website
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex items-start bg-yellow-50 rounded-lg p-4">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <p class="text-sm text-yellow-700">
+                    These recommendations are based on your responses and our platform analysis. Always do your own research and consider consulting with a mental health professional about your specific needs.
+                  </p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                  <Button 
+                    onClick={restartMatcher}
+                    variant="outline"
+                    icon={ArrowLeft}
+                  >
+                    Start Over
+                  </Button>
+                  <Button 
+                    as={Link}
+                    to="/compare/platforms"
+                    variant="outline"
+                    icon={ArrowRight}
+                  >
+                    Compare All Platforms
+                  </Button>
+                  <Button 
+                    as={Link}
+                    to="/tools/assessments/mental-health-assessment"
+                    variant="primary"
+                    icon={Brain}
+                  >
+                    Take Mental Health Assessment
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div class="min-h-screen bg-gray-50 py-12">
+      <div class="container mx-auto px-4 max-w-4xl">
+        {currentQuestion === 0 && (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+            <div class="bg-indigo-600 p-6 text-white">
+              <h1 class="text-2xl font-bold mb-2">Therapy Platform Matcher</h1>
+              <p class="text-indigo-100">
+                Find your perfect online therapy match in just a few minutes
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="space-y-4 mb-6">
+                <div class="flex items-start">
+                  <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">About This Tool</h2>
+                    <p class="text-gray-600">
+                      Our matching algorithm analyzes your needs, preferences, and practical requirements to recommend the best online therapy platforms for you.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">What We'll Ask About</h2>
+                    <ul class="mt-2 space-y-1">
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Your therapy goals and needs</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Communication preferences</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Budget and insurance requirements</span>
+                      </li>
+                      <li class="flex items-center">
+                        <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                        <span>Therapist preferences</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <div>
+                    <h2 class="font-bold text-gray-800">Important Note</h2>
+                    <p class="text-gray-600">
+                      This tool provides recommendations based on your responses but is not a substitute for professional medical advice. If you're in crisis, please seek immediate help through emergency services or crisis hotlines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <Button 
+                onClick={() => setCurrentQuestion(1)} 
+                variant="primary"
+                size="lg"
+                class="w-full justify-center"
+              >
+                Start Matching
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {currentQuestion > 0 && (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-indigo-600 p-6">
+              <div class="flex justify-between items-center text-white mb-4">
+                <h2 class="text-lg font-semibold">Question {currentQuestion} of {questions.length}</h2>
+                <span class="text-sm text-indigo-200">
+                  {Math.round((currentQuestion / questions.length) * 100)}% Complete
+                </span>
+              </div>
+              <div class="w-full bg-indigo-300 rounded-full h-2">
+                <div 
+                  class="bg-white rounded-full h-2 transition-all duration-300"
+                  style={{ width: `${(currentQuestion / questions.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-6">
+                {questions[currentQuestion - 1].text}
+              </h3>
+              
+              {questions[currentQuestion - 1].type === 'single' && (
+                <div class="space-y-3">
+                  {questions[currentQuestion - 1].options?.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleSingleAnswer(option.value)}
+                      class="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-indigo-500 hover:bg-indigo-50 transition-all duration-200"
+                    >
+                      <div class="font-medium text-gray-800">{option.text}</div>
+                      {option.description && (
+                        <div class="text-sm text-gray-600 mt-1">{option.description}</div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+              
+              {questions[currentQuestion - 1].type === 'multiple' && (
+                <div class="space-y-3">
+                  {questions[currentQuestion - 1].options?.map((option, index) => (
+                    <label
+                      key={index}
+                      class="flex items-center p-4 rounded-lg border border-gray-200 hover:border-indigo-500 hover:bg-indigo-50 transition-all duration-200 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        value={option.value}
+                        onChange={(e) => {
+                          const currentAnswers = answers[currentQuestion] || [];
+                          const newAnswers = e.target.checked
+                            ? [...currentAnswers, option.value]
+                            : currentAnswers.filter((v: string) => v !== option.value);
+                          setAnswers(prev => ({ ...prev, [currentQuestion]: newAnswers }));
+                        }}
+                        class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                      />
+                      <div class="ml-3">
+                        <div class="font-medium text-gray-800">{option.text}</div>
+                        {option.description && (
+                          <div class="text-sm text-gray-600">{option.description}</div>
+                        )}
+                      </div>
+                    </label>
+                  ))}
+                  <Button
+                    onClick={() => {
+                      if (answers[currentQuestion]?.length > 0) {
+                        handleMultipleAnswer(answers[currentQuestion]);
+                      }
+                    }}
+                    variant="primary"
+                    disabled={!answers[currentQuestion]?.length}
+                    class="mt-4"
+                  >
+                    Continue
+                  </Button>
+                </div>
+              )}
+              
+              {questions[currentQuestion - 1].type === 'scale' && (
+                <div class="space-y-6">
+                  <div class="flex justify-between text-sm text-gray-600 mb-2">
+                    <span>{questions[currentQuestion - 1].scaleLabels?.min}</span>
+                    <span>{questions[currentQuestion - 1].scaleLabels?.max}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="5"
+                    step="1"
+                    onChange={(e) => handleScaleAnswer(parseInt(e.target.value))}
+                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                  />
+                  <div class="flex justify-between px-2">
+                    {[1, 2, 3, 4, 5].map((value) => (
+                      <div key={value} class="flex flex-col items-center">
+                        <div class="w-1 h-3 bg-gray-300 mb-1"></div>
+                        <span class="text-sm text-gray-600">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {currentQuestion > 1 && (
+                <button
+                  onClick={() => setCurrentQuestion(prev => prev - 1)}
+                  class="mt-6 text-indigo-600 hover:text-indigo-800 flex items-center"
+                >
+                  <ArrowLeft class="h-4 w-4 mr-1" />
+                  Previous question
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+</BaseLayout>

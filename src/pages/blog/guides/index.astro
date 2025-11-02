@@ -1,0 +1,248 @@
+---
+import BlogLayout from '../BlogLayout.astro';
+import { Calendar, User, Tag, Clock, ArrowRight, BookOpen, FileText, HelpCircle } from 'lucide-react';
+
+// Guides articles data
+const guidesArticles = [
+  {
+    id: 'therapy-first-session',
+    title: 'What to Expect in Your First Therapy Session: A Complete Guide',
+    excerpt: 'Starting therapy can be intimidating. This comprehensive guide helps you prepare for your first session, understand what to expect, and get the most out of your therapy journey.',
+    date: 'March 20, 2025',
+    author: 'Dr. Sarah Johnson, Licensed Therapist',
+    tags: ['Therapy', 'Mental Health', 'Beginners'],
+    readTime: '12 min read',
+    image: '/images/blog/index.jpg',
+    url: '/blog/guides/therapy-first-session'
+  },
+  {
+    id: 'insurance-coverage-guide',
+    title: 'Navigating Insurance Coverage for Online Therapy',
+    excerpt: 'A comprehensive guide to understanding how insurance works with online therapy platforms, including coverage options and reimbursement strategies.',
+    date: 'May 20, 2025',
+    author: 'Emma Rodriguez, Health Policy Analyst',
+    tags: ['Insurance', 'Coverage', 'Finance'],
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    url: '/blog/guides/insurance-coverage-guide'
+  },
+  {
+    id: 'choosing-right-therapist',
+    title: 'How to Choose the Right Therapist for Your Needs',
+    excerpt: 'Finding the right therapist is crucial for successful therapy. This guide walks you through the process of identifying what you need and how to find the perfect match.',
+    date: 'May 5, 2025',
+    author: 'Dr. Michael Chen, Clinical Psychologist',
+    tags: ['Therapist Selection', 'Therapy Basics'],
+    readTime: '10 min read',
+    image: 'https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    url: '/blog/guides/choosing-right-therapist'
+  },
+  {
+    id: 'therapy-modalities-explained',
+    title: 'Therapy Modalities Explained: Finding Your Best Fit',
+    excerpt: 'From CBT to psychodynamic therapy, this guide breaks down the most common therapy approaches and helps you understand which might work best for your situation.',
+    date: 'April 18, 2025',
+    author: 'Dr. Sarah Johnson, Ph.D.',
+    tags: ['Therapy Types', 'CBT', 'Psychodynamic'],
+    readTime: '15 min read',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    url: '/blog/guides/therapy-modalities-explained'
+  },
+  {
+    id: 'therapy-costs-explained',
+    title: 'The Real Cost of Therapy: Budgeting for Mental Health Care',
+    excerpt: 'Understanding the financial aspects of therapy, from session fees to insurance deductibles, and how to make mental health care fit into your budget.',
+    date: 'March 15, 2025',
+    author: 'James Wilson, Financial Health Advisor',
+    tags: ['Finance', 'Budgeting', 'Affordability'],
+    readTime: '11 min read',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    url: '/blog/guides/therapy-costs-explained'
+  }
+];
+
+// Featured guide (first in the list)
+const featuredGuide = guidesArticles[0];
+// Other guides
+const otherGuides = guidesArticles.slice(1);
+---
+
+<BlogLayout>
+  {/* Breadcrumb */}
+  <div class="flex items-center text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-indigo-600">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/blog" class="hover:text-indigo-600">Blog</a>
+    <span class="mx-2">/</span>
+    <span class="text-gray-700">Guides</span>
+  </div>
+
+  {/* Page Header */}
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Therapy & Mental Health Guides</h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      Comprehensive resources to help you navigate the world of therapy, mental health care, and wellness practices.
+    </p>
+  </div>
+
+  {/* Featured Guide */}
+  <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+    <div class="md:flex">
+      <div class="md:w-1/2">
+        <img
+          src={featuredGuide.image}
+          alt={featuredGuide.title}
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="p-8 md:w-1/2">
+        <div class="flex flex-wrap items-center text-sm text-gray-500 mb-3">
+          <div class="flex items-center mr-4 mb-2 sm:mb-0">
+            <Calendar className="h-4 w-4 mr-1" />
+            <span>{featuredGuide.date}</span>
+          </div>
+          <div class="flex items-center mr-4 mb-2 sm:mb-0">
+            <User className="h-4 w-4 mr-1" />
+            <span>{featuredGuide.author}</span>
+          </div>
+          <div class="flex items-center mb-2 sm:mb-0">
+            <Clock className="h-4 w-4 mr-1" />
+            <span>{featuredGuide.readTime}</span>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          <a href={featuredGuide.url} class="hover:text-indigo-600">
+            {featuredGuide.title}
+          </a>
+        </h2>
+
+        <p class="text-gray-600 mb-6">
+          {featuredGuide.excerpt}
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          {featuredGuide.tags.map((tag) => (
+            <span key={tag} class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={featuredGuide.url}
+          class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
+        >
+          Read full guide <ArrowRight className="h-4 w-4 ml-1" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Guide Grid */}
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    {otherGuides.map((guide) => (
+      <div key={guide.id} class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img
+          src={guide.image}
+          alt={guide.title}
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <div class="flex flex-wrap items-center text-sm text-gray-500 mb-3">
+            <div class="flex items-center mr-4 mb-2 sm:mb-0">
+              <Calendar className="h-4 w-4 mr-1" />
+              <span>{guide.date}</span>
+            </div>
+            <div class="flex items-center mb-2 sm:mb-0">
+              <Clock className="h-4 w-4 mr-1" />
+              <span>{guide.readTime}</span>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            <a href={guide.url} class="hover:text-indigo-600">
+              {guide.title}
+            </a>
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            {guide.excerpt}
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            {guide.tags.map((tag) => (
+              <span key={tag} class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">{guide.author}</span>
+            <a
+              href={guide.url}
+              class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
+            >
+              Read more <ArrowRight className="h-4 w-4 ml-1" />
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Guide Categories */}
+  <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+    <h3 class="text-xl font-bold text-gray-800 mb-6">Browse Guides by Topic</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="bg-blue-50 rounded-lg p-6 text-center">
+        <BookOpen className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+        <h4 class="font-bold text-gray-800 mb-2">Getting Started</h4>
+        <p class="text-sm text-gray-600 mb-3">Guides for those new to therapy and mental health care</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+          View guides <ArrowRight className="h-3 w-3 inline ml-1" />
+        </a>
+      </div>
+
+      <div class="bg-green-50 rounded-lg p-6 text-center">
+        <FileText className="h-8 w-8 text-green-600 mx-auto mb-3" />
+        <h4 class="font-bold text-gray-800 mb-2">Insurance & Payment</h4>
+        <p class="text-sm text-gray-600 mb-3">Understanding costs, coverage, and financial aspects</p>
+        <a href="#" class="text-green-600 hover:text-green-800 text-sm font-medium">
+          View guides <ArrowRight className="h-3 w-3 inline ml-1" />
+        </a>
+      </div>
+
+      <div class="bg-purple-50 rounded-lg p-6 text-center">
+        <HelpCircle className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+        <h4 class="font-bold text-gray-800 mb-2">Therapy Types</h4>
+        <p class="text-sm text-gray-600 mb-3">Explanations of different therapy approaches and modalities</p>
+        <a href="#" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+          View guides <ArrowRight className="h-3 w-3 inline ml-1" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Newsletter */}
+  <div class="bg-indigo-50 rounded-lg p-8 text-center mb-12">
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Get New Guides in Your Inbox</h3>
+    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+      Subscribe to receive our latest guides, resources, and helpful content delivered straight to your inbox.
+    </p>
+    <div class="flex flex-col sm:flex-row max-w-md mx-auto">
+      <input
+        type="email"
+        placeholder="Your email address"
+        class="flex-grow px-4 py-2 mb-2 sm:mb-0 sm:mr-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-200">
+        Subscribe
+      </button>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">
+      We respect your privacy. Unsubscribe at any time.
+    </p>
+  </div>
+</BlogLayout>

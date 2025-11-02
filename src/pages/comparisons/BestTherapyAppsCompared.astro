@@ -1,0 +1,418 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain, Search, Smartphone, Download } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Mental Health Apps Compared (2025)</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            A comprehensive comparison of the top mental health and therapy apps to help you find the right digital support for your wellbeing.
+          </p>
+          <div class="flex justify-center">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="primary" 
+              size="lg" 
+              icon={Search}
+            >
+              Find your perfect mental health app
+            </Button>
+          </div>
+        </div>
+
+        {/* App Categories */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Mental Health Apps</h2>
+          <p class="text-gray-600 mb-8">
+            Mental health apps fall into several categories, each serving different needs and offering unique features. Understanding these categories can help you choose the right app for your specific situation.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {categories.map(category => (
+              <div key={category.name} class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">{category.name}</h3>
+                <p class="text-gray-600 mb-4">
+                  {category.description}
+                </p>
+                <div class="bg-white rounded-lg p-3">
+                  <h4 class="font-medium text-gray-800 mb-1">Popular Examples:</h4>
+                  <p class="text-gray-600 text-sm">
+                    {category.examples.join(', ')}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Comparison Table */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">At-a-Glance Comparison</h2>
+          
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white">
+              <thead>
+                <tr class="bg-gray-100 border-b">
+                  <th class="py-3 px-4 text-left text-gray-700 font-semibold">App</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Category</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Price</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Platforms</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Professional Support</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Rating</th>
+                  <th class="py-3 px-4 text-center text-gray-700 font-semibold">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                {apps.map(app => (
+                  <tr key={app.name} class="border-b hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium">{app.name}</td>
+                    <td class="py-3 px-4 text-center">{app.category}</td>
+                    <td class="py-3 px-4 text-center">{app.price}</td>
+                    <td class="py-3 px-4 text-center">{app.platforms}</td>
+                    <td class="py-3 px-4 text-center">
+                      {app.category === 'Full-Service Therapy' ? (
+                        <CheckCircle class="h-5 w-5 text-green-500 mx-auto" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500 mx-auto" />
+                      )}
+                    </td>
+                    <td class="py-3 px-4 text-center">
+                      <div class="flex justify-center">
+                        {renderStars(app.rating)}
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-sm">{app.bestFor}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Detailed App Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed App Reviews</h2>
+          
+          {apps.map((app, index) => (
+            <div key={app.name} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{app.name}</h3>
+                    </div>
+                    <div class="bg-indigo-50 rounded-lg px-3 py-1 inline-block mb-3">
+                      <span class="text-indigo-700 font-medium">{app.category}</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <div class="mr-2">
+                        {renderStars(app.rating)}
+                      </div>
+                      <span class="text-gray-600">{app.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{app.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <Smartphone class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{app.platforms}</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <Button 
+                        as="a"
+                        href={`https://www.${app.name.toLowerCase()}.com`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        variant="primary"
+                        size="sm"
+                        icon={Download}
+                        class="w-full justify-center"
+                      >
+                        Download App
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  <div class="md:w-3/4 md:pl-8">
+                    <p class="text-gray-600 mb-6">
+                      {app.description}
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {app.pros.map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {app.cons.map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h5 class="font-bold text-gray-800 mb-3">Key Features</h5>
+                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {app.features.map((feature, i) => (
+                          <div key={i} class="bg-gray-50 rounded-lg p-3 flex items-center">
+                            <CheckCircle class="h-4 w-4 text-indigo-600 mr-2 flex-shrink-0" />
+                            <span class="text-gray-700 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <p class="text-gray-700">{app.bestFor}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Mental Health App</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Consider Your Needs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Professional Support vs. Self-Help</span>
+                    <p class="text-gray-600">Do you need professional therapy or are you looking for self-guided tools?</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Specific Mental Health Concerns</span>
+                    <p class="text-gray-600">Are you addressing anxiety, depression, stress, sleep issues, or something else?</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Budget Considerations</span>
+                    <p class="text-gray-600">What can you afford to spend on a mental health app?</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Time Commitment</span>
+                    <p class="text-gray-600">How much time can you dedicate to using the app regularly?</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Important Features to Look For</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Evidence-Based Approaches</span>
+                    <p class="text-gray-600">Apps using scientifically-validated methods like CBT, mindfulness, or other established therapeutic techniques.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Privacy and Security</span>
+                    <p class="text-gray-600">Strong privacy policies, data encryption, and HIPAA compliance for therapy apps.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Ease of Use</span>
+                    <p class="text-gray-600">Intuitive interface that you'll actually enjoy using regularly.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <span class="font-bold text-gray-800">Professional Credentials</span>
+                    <p class="text-gray-600">For therapy apps, check that providers are licensed mental health professionals.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Important Note About Mental Health Apps</h3>
+            <p class="text-gray-700 mb-4">
+              While mental health apps can be valuable tools for support and skill-building, they are not always a replacement for professional mental health treatment, especially for severe conditions. Consider these guidelines:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Self-help apps</strong> (meditation, mood tracking) work best as supplements to professional care or for mild symptoms</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Therapy apps</strong> with licensed professionals can provide legitimate treatment but may not be suitable for all conditions</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>AI assistants</strong> can offer support and techniques but lack the judgment and expertise of human professionals</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Specialized App Recommendations */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Specialized App Recommendations</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">For Anxiety</h3>
+              <p class="text-gray-600 mb-4">
+                Apps with breathing exercises, guided meditations, and CBT techniques specifically for anxiety management.
+              </p>
+              <ul class="space-y-1 text-gray-600">
+                <li>• Headspace</li>
+                <li>• Calm</li>
+                <li>• MindShift CBT</li>
+                <li>• Rootd</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">For Depression</h3>
+              <p class="text-gray-600 mb-4">
+                Apps with mood tracking, activity scheduling, and evidence-based techniques for managing depression.
+              </p>
+              <ul class="space-y-1 text-gray-600">
+                <li>• Woebot</li>
+                <li>• MoodMission</li>
+                <li>• Wysa</li>
+                <li>• Sanvello</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Free Options</h3>
+              <p class="text-gray-600 mb-4">
+                Quality mental health apps that offer substantial features without a subscription.
+              </p>
+              <ul class="space-y-1 text-gray-600">
+                <li>• Woebot (AI therapy)</li>
+                <li>• Insight Timer (meditation)</li>
+                <li>• Wysa (free tier)</li>
+                <li>• MindDoc (mood tracking)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Are mental health apps effective?</h3>
+              <p class="text-gray-600">
+                Research shows that mental health apps can be effective, particularly those based on evidence-based approaches like CBT and mindfulness. Apps offering professional therapy services (like BetterHelp and Talkspace) can provide similar benefits to traditional therapy for many conditions. Self-help apps are most effective for mild to moderate symptoms and as supplements to professional care.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Are therapy apps covered by insurance?</h3>
+              <p class="text-gray-600">
+                Some therapy apps like Talkspace work with certain insurance providers. BetterHelp generally doesn't accept insurance directly but may provide receipts for reimbursement. Check with your specific insurance provider about coverage for telehealth and digital mental health services.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How private are mental health apps?</h3>
+              <p class="text-gray-600">
+                Privacy varies significantly between apps. Therapy apps like BetterHelp and Talkspace are typically HIPAA-compliant and offer end-to-end encryption. Self-help apps may have different privacy standards. Always review the privacy policy before sharing sensitive information, and be particularly cautious with free apps that may monetize user data.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can AI chatbots replace human therapists?</h3>
+              <p class="text-gray-600">
+                While AI therapy assistants like Woebot and Wysa can provide valuable support and teach evidence-based techniques, they cannot fully replace human therapists. They lack the clinical judgment, empathy, and adaptability of human professionals. They're best used as supplements to professional care or for those who cannot access traditional therapy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Find Your Perfect Mental Health App</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to get matched with the mental health app that best fits your unique needs, preferences, and goals.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+            >
+              Find Your Perfect Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/tools/assessments/mental-health-assessment" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+            >
+              Take Mental Health Assessment
+            </Button>
+          </div>
+        </div>
+        
+        {/* How We Review Section */}
+        <div class="mt-16">
+          <HowWeReviewed />
+        </div>
+      </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowRight, CheckCircle, AlertCircle, MessageSquare, Video, Clock, DollarSign, Brain, Laptop } from 'lucide-react';
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        {/* Hero Section */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Text vs Video Therapy" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <h1 class="text-3xl font-bold text-gray-800 mb-4">Text vs. Video Therapy: Which Format Is Right for You?</h1>
+              <p class="text-xl text-gray-600 mb-6">
+                Compare the benefits, limitations, and ideal use cases for text-based and video-based online therapy to find the format that best suits your needs and preferences.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <Button 
+                  as={Link} 
+                  to="/tools/matchers/therapy-platform-matcher" 
+                  variant="primary"
+                  icon={Laptop}
+                >
+                  Find Your Therapy Match
+                </Button>
+                <Button 
+                  as={Link}
+                  to="/best/platforms/best-online-therapy-platforms" 
+                  variant="outline"
+                  icon={ArrowRight}
+                >
+                  Explore Top Platforms
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Introduction */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Therapy Formats</h2>
+          <p class="text-gray-600 mb-4">
+            Online therapy has revolutionized mental health care by making support more accessible than ever before. Two of the most popular formats are text-based therapy and video therapy, each offering distinct advantages and potential limitations.
+          </p>
+          <p class="text-gray-600 mb-4">
+            <span class="font-bold">Text-based therapy</span> involves communicating with your therapist through written messages, either in real-time chat sessions or through asynchronous messaging where you and your therapist respond when convenient. This format provides flexibility and the ability to engage with therapy on your own schedule.
+          </p>
+          <p class="text-gray-600 mb-4">
+            <span class="font-bold">Video therapy</span> closely resembles traditional in-person therapy, with face-to-face sessions conducted through secure video conferencing. This format preserves many elements of traditional therapy while offering the convenience of remote access.
+          </p>
+          <p class="text-gray-600">
+            Many online therapy platforms now offer both options, and some therapists use a hybrid approach combining the two formats. This comparison will help you understand the strengths and limitations of each to determine which might work best for your specific situation.
+          </p>
+        </div>
+
+        {/* Side-by-Side Comparison */}
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Side-by-Side Comparison</h2>
+        
+        {comparisonPoints.map((point) => (
+          <div key={point.aspect} class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">{point.aspect}</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-blue-50 rounded-lg p-5">
+                <div class="flex items-center mb-3">
+                  <MessageSquare class="h-5 w-5 text-blue-600 mr-2" />
+                  <h4 class="text-lg font-bold text-gray-800">Text Therapy</h4>
+                  <div class="ml-auto bg-blue-100 text-blue-800 text-sm font-bold px-2 py-1 rounded">
+                    {point.text.rating}/10
+                  </div>
+                </div>
+                <ul class="space-y-2">
+                  {point.text.points.map((item, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div class="bg-purple-50 rounded-lg p-5">
+                <div class="flex items-center mb-3">
+                  <Video class="h-5 w-5 text-purple-600 mr-2" />
+                  <h4 class="text-lg font-bold text-gray-800">Video Therapy</h4>
+                  <div class="ml-auto bg-purple-100 text-purple-800 text-sm font-bold px-2 py-1 rounded">
+                    {point.video.rating}/10
+                  </div>
+                </div>
+                <ul class="space-y-2">
+                  {point.video.points.map((item, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Ideal For Sections */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Who Is Each Format Best For?</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="flex items-center mb-4">
+                <MessageSquare class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Text Therapy Is Ideal For:</h3>
+              </div>
+              <ul class="space-y-3">
+                {idealFor.text.map((item, i) => (
+                  <li key={i} class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <span class="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <div class="flex items-center mb-4">
+                <Video class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Video Therapy Is Ideal For:</h3>
+              </div>
+              <ul class="space-y-3">
+                {idealFor.video.map((item, i) => (
+                  <li key={i} class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                    <span class="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Research & Effectiveness */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Research on Effectiveness</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="flex items-center mb-4">
+                <MessageSquare class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Text Therapy Research</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Research on text-based therapy shows promising results for certain conditions:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Studies show text therapy can be effective for mild to moderate depression and anxiety</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Research indicates high satisfaction rates, particularly among younger adults</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Some studies suggest the act of writing about emotions can have therapeutic benefits</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Less research available compared to video and in-person therapy</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <div class="flex items-center mb-4">
+                <Video class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Video Therapy Research</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Video therapy has substantial research supporting its effectiveness:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Multiple studies show comparable outcomes to in-person therapy for many conditions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Research demonstrates effective therapeutic alliance can form through video</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">Studies support effectiveness for a wider range of conditions and severities</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                  <span class="text-gray-700">More extensive research base with longer-term outcome studies</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">The Bottom Line on Effectiveness</h3>
+            <p class="text-gray-700">
+              Both text and video therapy formats have research supporting their effectiveness, though video therapy has a more robust evidence base. The most effective format often depends on individual preferences, needs, and circumstances. Many people benefit from a combination of both formats, using video for deeper therapeutic work and text for ongoing support and skill development.
+            </p>
+          </div>
+        </div>
+
+        {/* Platform Examples */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Platform Examples</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <div class="flex items-center mb-4">
+                <MessageSquare class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Text-Focused Platforms</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {platforms.textFocused.map((platform) => (
+                  <div key={platform.name} class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-1">{platform.name}</h4>
+                    <p class="text-gray-600">{platform.features}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex items-center mb-4">
+                <Video class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Video-Focused Platforms</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {platforms.videoFocused.map((platform) => (
+                  <div key={platform.name} class="bg-purple-50 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-1">{platform.name}</h4>
+                    <p class="text-gray-600">{platform.features}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex items-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Hybrid Platforms (Both Text & Video)</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {platforms.hybrid.map((platform) => (
+                  <div key={platform.name} class="bg-indigo-50 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-1">{platform.name}</h4>
+                    <p class="text-gray-600">{platform.features}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <a href="/best/platforms/best-online-therapy-platforms" class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+              View our complete reviews of top online therapy platforms <ArrowRight class="h-4 w-4 ml-1" />
+            </a>
+          </div>
+        </div>
+
+        {/* Practical Considerations */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Practical Considerations</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="flex items-center mb-3">
+                <Clock class="h-5 w-5 text-indigo-600 mr-2" />
+                <h3 class="text-lg font-bold text-gray-800">Time & Scheduling</h3>
+              </div>
+              <p class="text-gray-600 mb-3">
+                <span class="font-bold">Text:</span> Flexible, asynchronous, can message anytime, therapist typically responds 1-2 times daily.
+              </p>
+              <p class="text-gray-600">
+                <span class="font-bold">Video:</span> Scheduled sessions (30-60 minutes), requires dedicated time block, similar to traditional therapy.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="flex items-center mb-3">
+                <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                <h3 class="text-lg font-bold text-gray-800">Cost Factors</h3>
+              </div>
+              <p class="text-gray-600 mb-3">
+                <span class="font-bold">Text:</span> Often $40-80/week for unlimited messaging, sometimes with weekly live sessions included.
+              </p>
+              <p class="text-gray-600">
+                <span class="font-bold">Video:</span> Typically $60-150 per session, similar to traditional therapy pricing.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="flex items-center mb-3">
+                <Laptop class="h-5 w-5 text-indigo-600 mr-2" />
+                <h3 class="text-lg font-bold text-gray-800">Technical Requirements</h3>
+              </div>
+              <p class="text-gray-600 mb-3">
+                <span class="font-bold">Text:</span> Minimal - basic internet connection, smartphone or computer, works with intermittent connectivity.
+              </p>
+              <p class="text-gray-600">
+                <span class="font-bold">Video:</span> More demanding - stable high-speed internet, webcam, microphone, private space with good lighting.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Combining Both Formats</h3>
+            <p class="text-gray-700 mb-4">
+              Many therapists and platforms now offer hybrid approaches that combine the benefits of both text and video therapy. This might include:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span class="text-gray-700">Weekly video sessions with unlimited text messaging between sessions</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span class="text-gray-700">Primary text therapy with occasional video sessions for deeper work</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span class="text-gray-700">Flexible options to switch between formats based on your needs and schedule</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span class="text-gray-700">Using text for check-ins, homework, and skill-building with video for processing emotions and complex issues</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Find Your Ideal Therapy Format</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Whether you prefer the flexibility of text therapy, the personal connection of video sessions, or a combination of both, we can help you find the right match for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <Button 
+              as={Link} 
+              to="/tools/matchers/therapy-platform-matcher" 
+              variant="light"
+              size="lg"
+              icon={Brain}
+            >
+              Find Your Therapy Match
+            </Button>
+            <Button 
+              as={Link} 
+              to="/best/text-therapy-services" 
+              variant="outline"
+              size="lg"
+              class="border-white text-white hover:bg-white hover:bg-opacity-10"
+              icon={MessageSquare}
+            >
+              Best Text Therapy Services
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>
