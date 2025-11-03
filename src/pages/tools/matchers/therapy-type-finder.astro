@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { CheckCircle, Info, AlertCircle, Brain } from 'lucide-react';
+import { CheckCircle, Info, AlertCircle, Brain, Lightbulb, Target, Book, Heart } from 'lucide-react';
 ---
 
 <BaseLayout>
@@ -9,7 +9,7 @@ import { CheckCircle, Info, AlertCircle, Brain } from 'lucide-react';
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Type Finder</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">
-        Discover which type of therapy is right for your needs
+        Discover which therapy approach is right for your needs and goals
       </p>
     </div>
   </section>
@@ -17,82 +17,477 @@ import { CheckCircle, Info, AlertCircle, Brain } from 'lucide-react';
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
 
-        <div class="p-6">
-          <div class="space-y-4 mb-6">
-            <div class="flex items-start">
-              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">About This Tool</h2>
-                <p class="text-gray-600">
-                  This tool helps you understand different therapy types and approaches, matching you with the therapeutic modalities that best address your specific concerns and goals.
-                </p>
-              </div>
-            </div>
+      {/* Quick Start Guide */}
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Find Your Therapy Type</h2>
 
-            <div class="flex items-start">
-              <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">What It Evaluates</h2>
-                <ul class="mt-2 space-y-1">
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Your primary concerns and treatment goals</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Preferred therapeutic approaches</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Evidence-based treatments for your needs</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Therapy formats and delivery methods</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <p class="text-gray-700 mb-6">Different therapy types work better for different concerns. Choose your primary concern below to see recommended therapy approaches:</p>
 
-            <div class="flex items-start">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">Important Note</h2>
-                <p class="text-gray-600">
-                  This tool is not a diagnostic instrument. It's designed to help you understand your needs and determine if professional help might be beneficial.
-                </p>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="#anxiety" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Anxiety & Worry</h3>
+            <p class="text-sm text-gray-600">Excessive worry, panic attacks, social anxiety</p>
+          </a>
+
+          <a href="#depression" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Depression & Low Mood</h3>
+            <p class="text-sm text-gray-600">Sadness, hopelessness, loss of interest</p>
+          </a>
+
+          <a href="#trauma" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Trauma & PTSD</h3>
+            <p class="text-sm text-gray-600">Past trauma, PTSD symptoms, traumatic stress</p>
+          </a>
+
+          <a href="#relationships" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Relationship Issues</h3>
+            <p class="text-sm text-gray-600">Couples conflicts, communication problems</p>
+          </a>
+
+          <a href="#emotion-regulation" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Emotion Regulation</h3>
+            <p class="text-sm text-gray-600">Intense emotions, mood swings, impulsivity</p>
+          </a>
+
+          <a href="#self-growth" class="bg-white p-4 rounded-lg border-2 border-transparent hover:border-brand-primary transition group">
+            <h3 class="font-bold text-gray-900 group-hover:text-brand-primary transition">Personal Growth</h3>
+            <p class="text-sm text-gray-600">Self-discovery, life direction, authenticity</p>
+          </a>
+        </div>
+      </div>
+
+      {/* Condition-Based Recommendations */}
+
+      {/* Anxiety */}
+      <div id="anxiety" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <Brain class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Anxiety</h2>
+              <p class="text-gray-700">Evidence-based approaches proven effective for anxiety disorders</p>
             </div>
           </div>
 
-          <div class="bg-blue-50 rounded-lg p-6 mb-6">
-            <h3 class="font-bold text-gray-800 mb-2">Interactive Tool Coming Soon</h3>
-            <p class="text-gray-700 mb-4">
-              We're currently updating this tool. In the meantime, you can explore our comprehensive resources and find the help you need through the links below.
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">Cognitive Behavioral Therapy (CBT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> CBT helps identify and change anxious thought patterns and avoidance behaviors.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Gold standard for anxiety treatment</p>
+                <p>✓ Teaches practical coping skills</p>
+                <p>✓ Typically 12-20 sessions</p>
+                <p>✓ Structured, goal-oriented approach</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Exposure Therapy (ERP)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Gradually facing fears in a safe environment reduces anxiety over time.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Highly effective for phobias</p>
+                <p>✓ Essential for OCD treatment</p>
+                <p>✓ Reduces avoidance behaviors</p>
+                <p>✓ Long-lasting results</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Acceptance & Commitment Therapy (ACT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Focuses on accepting anxiety while living according to your values.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Reduces struggle with anxiety</p>
+                <p>✓ Mindfulness-based approach</p>
+                <p>✓ Emphasizes valued living</p>
+                <p>✓ Works for generalized anxiety</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Mindfulness-Based Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Cultivates present-moment awareness, reducing worry about future.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Reduces rumination and worry</p>
+                <p>✓ Teaches grounding techniques</p>
+                <p>✓ Helps manage physical anxiety</p>
+                <p>✓ Can combine with other approaches</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Depression */}
+      <div id="depression" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <Heart class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Depression</h2>
+              <p class="text-gray-700">Approaches with strong evidence for treating depression</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">Cognitive Behavioral Therapy (CBT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Addresses negative thought patterns and behavioral withdrawal that maintain depression.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Most researched depression treatment</p>
+                <p>✓ Teaches mood management skills</p>
+                <p>✓ Focuses on current problems</p>
+                <p>✓ Prevents relapse</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Interpersonal Therapy (IPT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Addresses relationship issues and life transitions contributing to depression.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Especially effective for grief</p>
+                <p>✓ Improves relationship skills</p>
+                <p>✓ Time-limited (12-16 sessions)</p>
+                <p>✓ Strong research support</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Behavioral Activation</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Increases engagement in rewarding activities to lift mood.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Simple, straightforward approach</p>
+                <p>✓ Breaks cycle of withdrawal</p>
+                <p>✓ Quickly actionable</p>
+                <p>✓ Works for severe depression</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Psychodynamic Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Explores underlying patterns and past experiences affecting current mood.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Addresses root causes</p>
+                <p>✓ Promotes self-understanding</p>
+                <p>✓ Long-term change focus</p>
+                <p>✓ Good for chronic depression</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trauma */}
+      <div id="trauma" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <AlertCircle class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Trauma & PTSD</h2>
+              <p class="text-gray-700">Specialized trauma-focused approaches</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">EMDR (Eye Movement Desensitization & Reprocessing)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Helps process traumatic memories through bilateral stimulation.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ WHO-recommended for PTSD</p>
+                <p>✓ Often faster than talk therapy</p>
+                <p>✓ Reduces emotional charge of memories</p>
+                <p>✓ Evidence-based approach</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Trauma-Focused CBT</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Combines CBT with trauma-specific techniques for processing.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Gold standard for PTSD</p>
+                <p>✓ Includes exposure techniques</p>
+                <p>✓ Addresses trauma cognitions</p>
+                <p>✓ Teaches coping skills</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Prolonged Exposure (PE)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Systematic exposure to trauma memories reduces their power.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Highly effective for PTSD</p>
+                <p>✓ Well-researched approach</p>
+                <p>✓ Reduces avoidance</p>
+                <p>✓ Time-limited treatment</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Somatic Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Addresses trauma stored in the body through body-based techniques.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Focuses on body sensations</p>
+                <p>✓ Gentle trauma processing</p>
+                <p>✓ Regulates nervous system</p>
+                <p>✓ Good for complex trauma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Relationships */}
+      <div id="relationships" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <Heart class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Relationship Issues</h2>
+              <p class="text-gray-700">Approaches for couples and relationship concerns</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">Emotionally Focused Therapy (EFT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Focuses on attachment and emotional bonds in relationships.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Most researched couples therapy</p>
+                <p>✓ Strengthens emotional connection</p>
+                <p>✓ Addresses attachment needs</p>
+                <p>✓ 70-75% success rate</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Gottman Method</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Research-based approach focusing on friendship and conflict management.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Based on 40+ years research</p>
+                <p>✓ Teaches communication skills</p>
+                <p>✓ Builds friendship</p>
+                <p>✓ Manages perpetual problems</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Imago Relationship Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Explores how childhood patterns affect current relationships.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Deepens understanding</p>
+                <p>✓ Heals childhood wounds</p>
+                <p>✓ Improves empathy</p>
+                <p>✓ Transforms conflict</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Discernment Counseling</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Helps couples decide whether to work on or end the relationship.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ For couples at crossroads</p>
+                <p>✓ Short-term (1-5 sessions)</p>
+                <p>✓ Clarifies next steps</p>
+                <p>✓ Reduces ambivalence</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Emotion Regulation */}
+      <div id="emotion-regulation" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <Target class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Emotion Regulation</h2>
+              <p class="text-gray-700">Skills-based approaches for managing intense emotions</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">Dialectical Behavior Therapy (DBT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Teaches four skill sets: mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Originally developed for BPD</p>
+                <p>✓ Highly structured skills training</p>
+                <p>✓ Reduces self-destructive behaviors</p>
+                <p>✓ Evidence-based approach</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Emotion-Focused Therapy (EFT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Helps understand and transform difficult emotions.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Validates emotional experience</p>
+                <p>✓ Transforms maladaptive emotions</p>
+                <p>✓ Increases emotional awareness</p>
+                <p>✓ Research-supported</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Mentalization-Based Therapy (MBT)</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Improves ability to understand own and others' mental states.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Reduces emotional dysregulation</p>
+                <p>✓ Improves relationships</p>
+                <p>✓ Increases self-awareness</p>
+                <p>✓ Good for personality issues</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Schema Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Addresses deep patterns from childhood affecting current emotions.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Integrates multiple approaches</p>
+                <p>✓ Heals core emotional wounds</p>
+                <p>✓ Changes lifelong patterns</p>
+                <p>✓ Effective for complex issues</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Personal Growth */}
+      <div id="self-growth" class="mb-12 scroll-mt-24">
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="flex items-start mb-6">
+            <Lightbulb class="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-2">Best Therapy Types for Personal Growth</h2>
+              <p class="text-gray-700">Approaches for self-discovery and authenticity</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+              <h3 class="font-bold text-gray-900 mb-2">Person-Centered Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Non-directive approach fostering self-discovery and authenticity.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Client leads the process</p>
+                <p>✓ Focuses on self-actualization</p>
+                <p>✓ Builds self-compassion</p>
+                <p>✓ Promotes authenticity</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-green-500">
+              <h3 class="font-bold text-gray-900 mb-2">Existential Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Explores meaning, purpose, freedom, and responsibility.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Addresses life meaning</p>
+                <p>✓ Explores values and purpose</p>
+                <p>✓ Embraces freedom and choice</p>
+                <p>✓ Philosophically grounded</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+              <h3 class="font-bold text-gray-900 mb-2">Gestalt Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Focuses on present awareness and personal responsibility.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Emphasizes present moment</p>
+                <p>✓ Increases self-awareness</p>
+                <p>✓ Creative techniques</p>
+                <p>✓ Holistic approach</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border-l-4 border-indigo-500">
+              <h3 class="font-bold text-gray-900 mb-2">Narrative Therapy</h3>
+              <p class="text-sm text-gray-700 mb-3"><strong>Why it works:</strong> Helps rewrite your life story and reclaim personal agency.</p>
+              <div class="text-sm text-gray-600 space-y-1">
+                <p>✓ Separates person from problem</p>
+                <p>✓ Rewrites limiting stories</p>
+                <p>✓ Empowers personal agency</p>
+                <p>✓ Culturally sensitive</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-white rounded-lg border-2 border-gray-200 p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Next Steps</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Take Our Interactive Assessments
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="/tools/assessments/therapy-style-assessment" class="text-brand-primary hover:underline">→ Therapy Style Assessment (matches your preferences to approaches)</a></li>
+              <li><a href="/tools/assessments/mental-health-assessment" class="text-brand-primary hover:underline">→ Mental Health Assessment (identify your concerns)</a></li>
+              <li><a href="/tools/assessments/anxiety-screening" class="text-brand-primary hover:underline">→ Anxiety Screening (GAD-7)</a></li>
+              <li><a href="/tools/assessments/depression-screening" class="text-brand-primary hover:underline">→ Depression Screening (PHQ-9)</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Find Therapists Specializing in These Approaches
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">→ Platform Matching Tool</a></li>
+              <li><a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">→ Best Online Therapy Platforms 2025</a></li>
+              <li><a href="/compare/platforms" class="text-brand-primary hover:underline">→ Compare All Platforms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Learn More */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Learn More About Therapy Types</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <Book class="h-6 w-6 text-brand-primary mb-3" />
+            <h3 class="font-bold text-gray-900 mb-2">Complete Guides</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary hover:underline">→ All Therapy Types Explained</a></li>
+              <li><a href="/learn/approaches" class="text-brand-primary hover:underline">→ Therapy Approaches Library</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <Info class="h-6 w-6 text-brand-primary mb-3" />
+            <h3 class="font-bold text-gray-900 mb-2">Comparison Tools</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="/compare/modalities" class="text-brand-primary hover:underline">→ Compare Therapy Approaches</a></li>
+              <li><a href="/guides/selection/choosing-therapy-type" class="text-brand-primary hover:underline">→ How to Choose</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <Target class="h-6 w-6 text-brand-primary mb-3" />
+            <h3 class="font-bold text-gray-900 mb-2">Success Stories</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="/case-studies" class="text-brand-primary hover:underline">→ Real Client Experiences</a></li>
+              <li><a href="/blog/stories" class="text-brand-primary hover:underline">→ Therapy Success Stories</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Important Note */}
+      <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-6">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">Remember</h4>
+            <p class="text-gray-700 text-sm">
+              The therapeutic relationship is more important than the specific therapy type. Many therapists integrate multiple approaches and can adapt to your needs. This guide provides general recommendations, but the best therapy is one that works for you with a therapist you trust.
             </p>
-          </div>
-
-          <div class="space-y-4">
-            <div class="flex items-start bg-yellow-50 rounded-lg p-4">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <p class="text-sm text-yellow-700">
-                If you're experiencing mental health concerns, we recommend consulting with a qualified mental health professional for personalized assessment and care.
-              </p>
-            </div>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="/learn/approaches" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                Explore Therapy Types
-              </a>
-              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                Find Matching Platforms
-              </a>
-              <a href="/best/overall/best-online-therapy" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md hover:bg-indigo-50 transition">
-                View Top Therapy Platforms
-              </a>
-            </div>
           </div>
         </div>
       </div>

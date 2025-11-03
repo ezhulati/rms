@@ -107,31 +107,4 @@ const MegaMenuDropdown: React.FC<MegaMenuDropdownProps> = ({ category, isActive 
   );
 };
 
-// Add keyframe animations
-const styles = document.createElement('style');
-styles.textContent = `
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeInStagger {
-    from {
-      opacity: 0;
-      transform: translateX(-4px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-`;
-document.head.appendChild(styles);
-
 export default MegaMenuDropdown;

@@ -8,16 +8,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-brand-primary-500 hover:bg-brand-primary-600 active:bg-brand-primary-700 text-white focus-visible:ring-brand-primary-500',
-        secondary: 'bg-brand-secondary-500 hover:bg-brand-secondary-600 active:bg-brand-secondary-700 text-white focus-visible:ring-brand-secondary-500',
-        accent: 'bg-brand-accent-400 hover:bg-brand-accent-500 active:bg-brand-accent-600 text-white focus-visible:ring-brand-accent-400',
-        coral: 'bg-brand-coral-500 hover:bg-brand-coral-600 active:bg-brand-coral-700 text-white focus-visible:ring-brand-coral-500',
-        outline: 'border-2 border-brand-primary-500 text-brand-primary-600 hover:bg-brand-primary-50 active:bg-brand-primary-100 focus-visible:ring-brand-primary-500 shadow-none',
-        outlineSecondary: 'border-2 border-brand-secondary-500 text-brand-secondary-600 hover:bg-brand-secondary-50 active:bg-brand-secondary-100 focus-visible:ring-brand-secondary-500 shadow-none',
+        primary: 'bg-brand-primary-500 hover:bg-brand-primary-600 active:bg-brand-primary-700 text-white hover:text-white focus-visible:ring-brand-primary-500',
+        secondary: 'bg-brand-secondary-500 hover:bg-brand-secondary-600 active:bg-brand-secondary-700 text-white hover:text-white focus-visible:ring-brand-secondary-500',
+        accent: 'bg-brand-accent-400 hover:bg-brand-accent-500 active:bg-brand-accent-600 text-white hover:text-white focus-visible:ring-brand-accent-400',
+        coral: 'bg-brand-coral-500 hover:bg-brand-coral-600 active:bg-brand-coral-700 text-white hover:text-white focus-visible:ring-brand-coral-500',
+        outline: 'border-2 border-brand-primary-500 text-brand-primary-600 hover:bg-brand-primary-50 hover:text-brand-primary-700 active:bg-brand-primary-100 focus-visible:ring-brand-primary-500 shadow-none',
+        outlineSecondary: 'border-2 border-brand-secondary-500 text-brand-secondary-600 hover:bg-brand-secondary-50 hover:text-brand-secondary-700 active:bg-brand-secondary-100 focus-visible:ring-brand-secondary-500 shadow-none',
         outlineWhite: 'border-2 border-white text-white hover:bg-white hover:text-brand-primary-600 focus-visible:ring-white shadow-none',
-        dark: 'bg-neutral-800 hover:bg-neutral-900 text-white focus-visible:ring-neutral-800',
-        light: 'bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200 focus-visible:ring-neutral-400',
-        ghost: 'hover:bg-neutral-100 active:bg-neutral-200 text-neutral-700 shadow-none',
+        dark: 'bg-neutral-800 hover:bg-neutral-900 text-white hover:text-white focus-visible:ring-neutral-800',
+        light: 'bg-white hover:bg-neutral-50 text-neutral-800 hover:text-neutral-800 border border-neutral-200 focus-visible:ring-neutral-400',
+        ghost: 'hover:bg-neutral-100 active:bg-neutral-200 text-neutral-700 hover:text-neutral-900 shadow-none',
         link: 'text-brand-primary-600 hover:text-brand-primary-700 underline-offset-4 hover:underline shadow-none',
       },
       size: {

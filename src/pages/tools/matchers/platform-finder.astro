@@ -1,21 +1,144 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PlatformFinder from '../../../components/PlatformFinder';
+import { CheckCircle, Info, AlertCircle, Search, Filter, TrendingUp } from 'lucide-react';
 ---
 
-<BaseLayout title="Platform Finder | RealMindSolutions" description="Therapy Platform Finder">
+<BaseLayout title="Platform Finder | RealMindSolutions" description="Find the best online therapy platform for your needs with our interactive platform finder tool.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Platform Finder</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Find your ideal therapy platform.</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Online Therapy Platform Finder</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">
+        Filter and compare therapy platforms to find your perfect match
+      </p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Additional content coming soon.</p>
+
+      {/* Information Cards */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+          <div class="flex items-start">
+            <Search class="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Comprehensive Database</h3>
+              <p class="text-gray-700 text-sm">
+                Browse our complete database of verified online therapy platforms with detailed information.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+          <div class="flex items-start">
+            <Filter class="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Advanced Filtering</h3>
+              <p class="text-gray-700 text-sm">
+                Filter by price, conditions treated, insurance acceptance, and communication preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-500">
+          <div class="flex items-start">
+            <TrendingUp class="h-6 w-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Updated Rankings</h3>
+              <p class="text-gray-700 text-sm">
+                See platforms ranked by quality, effectiveness, and user satisfaction ratings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Platform Finder Component */}
+      <PlatformFinder client:load />
+
+      {/* How It Works */}
+      <div class="mt-12 bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">How to Use the Platform Finder</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Step-by-Step Guide
+            </h4>
+            <ol class="space-y-3 text-gray-700 text-sm list-decimal list-inside">
+              <li><strong>Set Your Budget:</strong> Start by filtering platforms based on your price range</li>
+              <li><strong>Select Your Needs:</strong> Choose the mental health condition or concern you're addressing</li>
+              <li><strong>Check Insurance:</strong> Filter for platforms that accept your insurance if applicable</li>
+              <li><strong>Review Options:</strong> Compare the filtered platforms and their features</li>
+              <li><strong>Read Reviews:</strong> Click through to read detailed reviews of platforms that interest you</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              What to Look For
+            </h4>
+            <ul class="space-y-3 text-gray-700 text-sm">
+              <li><strong>Licensing:</strong> Ensure all therapists are licensed professionals in your state</li>
+              <li><strong>Specializations:</strong> Look for therapists who specialize in your specific concerns</li>
+              <li><strong>Communication Options:</strong> Choose platforms offering your preferred format (video, messaging, phone)</li>
+              <li><strong>Availability:</strong> Consider therapist availability and response times</li>
+              <li><strong>Privacy & Security:</strong> Verify HIPAA compliance and data protection measures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Helpful Resources */}
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white border rounded-lg p-6">
+          <h4 class="font-bold text-gray-900 mb-3">Not Sure Where to Start?</h4>
+          <p class="text-gray-700 text-sm mb-4">
+            Take our interactive assessments to better understand your needs and get personalized platform recommendations.
+          </p>
+          <div class="space-y-2">
+            <a href="/tools/assessments/mental-health-assessment" class="block text-brand-primary hover:underline text-sm">→ Mental Health Assessment</a>
+            <a href="/tools/assessments/therapy-style-assessment" class="block text-brand-primary hover:underline text-sm">→ Therapy Style Assessment</a>
+            <a href="/tools/matchers/therapy-type-finder" class="block text-brand-primary hover:underline text-sm">→ Therapy Type Finder</a>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg p-6">
+          <h4 class="font-bold text-gray-900 mb-3">Need More Information?</h4>
+          <p class="text-gray-700 text-sm mb-4">
+            Explore our comprehensive guides and comparison tools to make an informed decision.
+          </p>
+          <div class="space-y-2">
+            <a href="/compare/platforms" class="block text-brand-primary hover:underline text-sm">→ Platform Comparisons</a>
+            <a href="/best/overall/best-online-therapy" class="block text-brand-primary hover:underline text-sm">→ Best Online Therapy Platforms</a>
+            <a href="/guides/selection/choosing-right-therapist" class="block text-brand-primary hover:underline text-sm">→ How to Choose a Therapist</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="mt-8 bg-red-50 border-l-4 border-red-500 rounded-lg p-6">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">In Crisis?</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              If you're experiencing a mental health emergency, please contact:
+            </p>
+            <ul class="space-y-1 text-gray-700 text-sm">
+              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988 (available 24/7)</li>
+              <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+              <li><strong>Emergency Services:</strong> Call 911 or visit your nearest emergency room</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>

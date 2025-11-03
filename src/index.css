@@ -1,6 +1,6 @@
-/* Premium Google Fonts - Enterprise Navigation Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&display=swap');
+/* Premium Google Fonts - Elevated Enterprise Typography */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -269,39 +269,39 @@
   }
 
   .btn-primary {
-    @apply bg-brand-primary-500 hover:bg-brand-primary-600 active:bg-brand-primary-700 text-white shadow-sm hover:shadow-md;
+    @apply bg-brand-primary-500 hover:bg-brand-primary-600 active:bg-brand-primary-700 text-white hover:text-white shadow-sm hover:shadow-md;
   }
 
   .btn-secondary {
-    @apply bg-brand-secondary-500 hover:bg-brand-secondary-600 active:bg-brand-secondary-700 text-white shadow-sm hover:shadow-md;
+    @apply bg-brand-secondary-500 hover:bg-brand-secondary-600 active:bg-brand-secondary-700 text-white hover:text-white shadow-sm hover:shadow-md;
   }
 
   .btn-accent {
-    @apply bg-brand-accent-400 hover:bg-brand-accent-500 active:bg-brand-accent-600 text-white shadow-sm hover:shadow-md;
+    @apply bg-brand-accent-400 hover:bg-brand-accent-500 active:bg-brand-accent-600 text-white hover:text-white shadow-sm hover:shadow-md;
   }
 
   .btn-coral {
-    @apply bg-brand-coral-500 hover:bg-brand-coral-600 active:bg-brand-coral-700 text-white shadow-sm hover:shadow-md;
+    @apply bg-brand-coral-500 hover:bg-brand-coral-600 active:bg-brand-coral-700 text-white hover:text-white shadow-sm hover:shadow-md;
   }
 
   .btn-outline-primary {
-    @apply border-2 border-brand-primary-500 text-brand-primary-600 hover:bg-brand-primary-50 active:bg-brand-primary-100;
+    @apply border-2 border-brand-primary-500 text-brand-primary-600 hover:bg-brand-primary-50 active:bg-brand-primary-100 hover:text-brand-primary-700;
   }
 
   .btn-outline-secondary {
-    @apply border-2 border-brand-secondary-500 text-brand-secondary-600 hover:bg-brand-secondary-50 active:bg-brand-secondary-100;
+    @apply border-2 border-brand-secondary-500 text-brand-secondary-600 hover:bg-brand-secondary-50 active:bg-brand-secondary-100 hover:text-brand-secondary-700;
   }
 
   .btn-ghost {
-    @apply bg-transparent hover:bg-neutral-100 active:bg-neutral-200 text-neutral-700;
+    @apply bg-transparent hover:bg-neutral-100 active:bg-neutral-200 text-neutral-700 hover:text-neutral-900;
   }
 
   .btn-light {
-    @apply bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200 shadow-sm;
+    @apply bg-white hover:bg-neutral-50 text-neutral-800 hover:text-neutral-800 border border-neutral-200 shadow-sm;
   }
 
   .btn-dark {
-    @apply bg-neutral-800 hover:bg-neutral-900 text-white shadow-sm hover:shadow-md;
+    @apply bg-neutral-800 hover:bg-neutral-900 text-white hover:text-white shadow-sm hover:shadow-md;
   }
 
   .btn-sm {

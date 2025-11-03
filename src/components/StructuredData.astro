@@ -1,0 +1,136 @@
+---
+/**
+ * StructuredData Component
+ *
+ * Adds Schema.org structured data (JSON-LD) to pages for better SEO
+ * and rich search results.
+ *
+ * Usage:
+ * <StructuredData type="article" data={articleData} />
+ */
+
+export interface Props {
+  type: 'article' | 'review' | 'faq' | 'breadcrumb' | 'howto' | 'medical' | 'custom';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+
+// Base schema context
+const baseSchema = {
+  "@context": "https://schema.org",
+};
+
+// Type-specific schema builders
+const schemaBuilders = {
+  article: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "Article",
+    "headline": data.title,
+    "description": data.description,
+    "author": {
+      "@type": "Organization",
+      "name": "RealMindSolutions"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RealMindSolutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://realmindsolutions.com/images/RMS_logo_horizontal.svg"
+      }
+    },
+    "datePublished": data.datePublished,
+    "dateModified": data.dateModified || data.datePublished,
+    "image": data.image,
+    ...data.additional
+  }),
+
+  review: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": data.platformName,
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": data.rating,
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "RealMindSolutions"
+    },
+    "reviewBody": data.summary,
+    ...data.additional
+  }),
+
+  faq: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "FAQPage",
+    "mainEntity": data.questions.map((q: any) => ({
+      "@type": "Question",
+      "name": q.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": q.answer
+      }
+    }))
+  }),
+
+  breadcrumb: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "BreadcrumbList",
+    "itemListElement": data.items.map((item: any, index: number) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  }),
+
+  howto: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "HowTo",
+    "name": data.title,
+    "description": data.description,
+    "step": data.steps.map((step: any, index: number) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": step.name,
+      "text": step.text,
+      "url": step.url
+    }))
+  }),
+
+  medical: (data: Record<string, any>) => ({
+    ...baseSchema,
+    "@type": "MedicalWebPage",
+    "name": data.title,
+    "description": data.description,
+    "about": {
+      "@type": "MedicalCondition",
+      "name": data.condition
+    },
+    "audience": {
+      "@type": "Patient",
+      "audienceType": data.audienceType || "People seeking mental health support"
+    },
+    ...data.additional
+  }),
+
+  custom: (data: Record<string, any>) => ({
+    ...baseSchema,
+    ...data
+  })
+};
+
+// Build the structured data
+const structuredData = schemaBuilders[type]?.(data) || schemaBuilders.custom(data);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

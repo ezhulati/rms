@@ -104,14 +104,14 @@ export default {
         },
       },
       fontFamily: {
-        // Premium enterprise navigation fonts
-        'nav': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'heading': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'accent': ['Fraunces', 'Georgia', 'serif'],
-        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        // Premium enterprise fonts - Space Grotesk + Cormorant
+        'nav': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
+        'heading': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
+        'accent': ['Cormorant', 'Georgia', 'serif'],
+        'sans': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
         'mono': ['Consolas', 'Monaco', 'monospace'],
         // Legacy support
-        'serif': ['Fraunces', 'Georgia', 'serif'],
+        'serif': ['Cormorant', 'Georgia', 'serif'],
       },
       boxShadow: {
         'sb': '0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 24px rgba(0, 0, 0, 0.04)',

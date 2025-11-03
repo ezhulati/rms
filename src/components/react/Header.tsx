@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { X } from 'lucide-react';
+import MegaMenuDropdown from '../MegaMenuDropdown';
+import AccordionSection from '../AccordionSection';
+import { navigationCategories, directLinks, findActiveCategory } from '../../data/navigationData';
 
 const Header = () => {
   const [currentPath, setCurrentPath] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [expandedAccordion, setExpandedAccordion] = useState<number | null>(null);
 
   useEffect(() => {
     // Set initial path
@@ -16,206 +21,201 @@ const Header = () => {
     return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
+  // Scroll detection for sticky header behavior
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const isActive = (path: string) => {
     return currentPath === path || currentPath.startsWith(`${path}/`);
   };
 
-  const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
+  const activeCategory = findActiveCategory(currentPath);
+
+  const handleAccordionToggle = (index: number) => {
+    setExpandedAccordion(expandedAccordion === index ? null : index);
+  };
+
+  const NavLink = ({ to, children, icon: Icon }: { to: string; children: React.ReactNode; icon?: React.ComponentType<{ className?: string; strokeWidth?: number }> }) => (
     <a
       href={to}
-      className={`flex items-center min-h-[44px] text-neutral-700 hover:text-brand-primary-600 font-sans font-medium transition-colors duration-200 ${
-        isActive(to) ? 'text-brand-primary-600' : ''
+      className={`flex items-center gap-2 text-[15px] font-nav font-medium transition-colors duration-200 py-2 ${
+        isActive(to)
+          ? 'text-brand-primary-600'
+          : 'text-neutral-700 hover:text-brand-primary-600'
       }`}
     >
-      {children}
+      {Icon && <Icon className="h-4 w-4" strokeWidth={2.5} />}
+      <span>{children}</span>
     </a>
   );
 
-  const DropdownMenu = ({
-    title,
-    items
-  }: {
-    title: string;
-    items: { label: string; href: string }[]
-  }) => (
-    <div className="relative group">
-      <button className="flex items-center gap-1 text-neutral-700 hover:text-brand-primary-600 font-sans font-medium transition-colors duration-200 min-h-[44px]">
-        {title}
-        <ChevronDown className="h-4 w-4" />
-      </button>
-      <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[240px] z-50">
-        <div className="bg-white rounded-xl shadow-lg border border-neutral-200 py-2">
-          {items.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="flex items-center px-4 py-3 min-h-[44px] text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 transition-colors duration-200"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  const compareItems = [
-    { label: 'Platform Comparisons', href: '/compare/platforms' },
-    { label: 'Therapy Modalities', href: '/compare/modalities' },
-    { label: 'Therapy Approaches', href: '/compare/modalities/therapy-approaches' },
-    { label: 'Insurance Coverage', href: '/compare/roundups/insurance-friendly-platforms' },
-    { label: 'Therapy Alternatives', href: '/compare/alternatives' }
-  ];
-
-  const reviewItems = [
-    { label: 'Platform Reviews', href: '/reviews/platforms' },
-    { label: 'Feature Reviews', href: '/reviews/features' },
-    { label: 'Specialty Reviews', href: '/reviews/specialty' },
-    { label: 'Pricing Reviews', href: '/reviews/pricing' }
-  ];
-
-  const bestItems = [
-    { label: 'Best Platforms', href: '/best/platforms' },
-    { label: 'Best by Condition', href: '/best/conditions' },
-    { label: 'Best for Specific Needs', href: '/best/specific-needs' },
-    { label: 'Best by Audience', href: '/best/audiences' }
-  ];
-
-  const toolItems = [
-    { label: 'Mental Health Assessments', href: '/tools/assessments' },
-    { label: 'Platform Matcher', href: '/tools/matchers/therapy-platform-matcher' },
-    { label: 'Insurance Checker', href: '/tools/matchers/insurance-coverage-checker' },
-    { label: 'Therapy Style Finder', href: '/tools/matchers/therapy-type-finder' }
-  ];
-
   return (
-    <header className="bg-white border-b border-neutral-200 shadow-sm">
-      <div className="w-full">
-        <nav className="flex items-center justify-between h-16 max-w-7xl mx-auto px-6 lg:px-12">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-3">
-            <img src="/images/RMS_icon.svg" alt="RealMindSolutions Logo" className="h-10 w-10" />
-            <div className="flex flex-col leading-none">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-heading font-black text-brand-primary-600 tracking-tight">Real</span>
-                <span className="text-[22px] font-serif italic font-bold text-brand-accent-600">Mind</span>
-              </div>
-              <span className="text-[10px] font-sans font-light text-neutral-500 tracking-[0.2em] uppercase">Solutions</span>
-            </div>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <DropdownMenu title="Compare" items={compareItems} />
-            <DropdownMenu title="Reviews" items={reviewItems} />
-            <DropdownMenu title="Best For You" items={bestItems} />
-            <DropdownMenu title="Tools" items={toolItems} />
-            <NavLink to="/conditions-az">Conditions A-Z</NavLink>
-            <NavLink to="/learn">Learn</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-md text-neutral-700 hover:text-brand-primary-600 hover:bg-neutral-100"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 bg-white border-b z-50 transition-all duration-300 ${
+          scrolled
+            ? 'border-neutral-300 shadow-md'
+            : 'border-neutral-200 shadow-sm'
+        }`}
+      >
+        <div className="w-full">
+          <nav
+            className={`flex items-center justify-between max-w-7xl mx-auto px-6 lg:px-12 transition-all duration-300 ${
+              scrolled ? 'h-[60px]' : 'h-16'
+            }`}
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </nav>
+            {/* Logo with Premium Fonts */}
+            <a href="/" className="flex items-center gap-3 relative z-50">
+              <img src="/images/RMS_icon.svg" alt="RealMindSolutions Logo" className="h-10 w-10" />
+              <div className="flex flex-col leading-none">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-2xl font-nav font-black text-brand-primary-600 tracking-tight">
+                    Real
+                  </span>
+                  <span className="text-[22px] font-accent italic font-medium text-brand-accent-600">
+                    Mind
+                  </span>
+                </div>
+                <span className="text-[10px] font-nav font-light text-neutral-500 tracking-[0.2em] uppercase">
+                  Solutions
+                </span>
+              </div>
+            </a>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-4 max-w-7xl mx-auto px-6">
-            <div className="space-y-2">
-              <div className="font-heading font-semibold px-4 text-brand-primary-600">Compare</div>
-              {compareItems.map((item, index) => (
-                <a
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-6">
+              {/* Dropdown Categories */}
+              {navigationCategories.map((category, index) => (
+                <MegaMenuDropdown
                   key={index}
-                  href={item.href}
-                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                  category={category}
+                  isActive={activeCategory?.title === category.title}
+                />
               ))}
+
+              {/* Direct Links */}
+              {directLinks.map((link, index) => {
+                const Icon = link.icon;
+                return (
+                  <NavLink key={index} to={link.href} icon={Icon}>
+                    {link.label}
+                  </NavLink>
+                );
+              })}
             </div>
 
-            <div className="space-y-2">
-              <div className="font-heading font-semibold px-4 text-brand-primary-600">Reviews</div>
-              {reviewItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2 rounded-lg text-neutral-700 hover:text-brand-primary-600 hover:bg-neutral-100 transition-all duration-200 relative z-50"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </header>
 
-            <div className="space-y-2">
-              <div className="font-heading font-semibold px-4 text-brand-primary-600">Best For You</div>
-              {bestItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+      {/* Spacer to prevent content jump */}
+      <div className={scrolled ? 'h-[60px]' : 'h-16'} />
 
-            <div className="space-y-2">
-              <div className="font-heading font-semibold px-4 text-brand-primary-600">Tools</div>
-              {toolItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-neutral-900/60 backdrop-blur-sm z-40 lg:hidden animate-fade-in"
+            onClick={() => setMobileMenuOpen(false)}
+          />
 
-            <div className="space-y-2">
-              <a
-                href="/conditions-az"
-                className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
+          {/* Mobile Menu Panel */}
+          <div
+            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white shadow-2xl z-50 lg:hidden overflow-y-auto animate-slide-in-right"
+            style={{
+              animation: 'slideInRight 0.3s ease-out',
+            }}
+          >
+            {/* Mobile Menu Header */}
+            <div className="sticky top-0 bg-white border-b border-neutral-200 px-6 py-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <img src="/images/RMS_icon.svg" alt="Menu" className="h-8 w-8" />
+                <span className="font-nav font-bold text-lg text-neutral-900">Menu</span>
+              </div>
+              <button
                 onClick={() => setMobileMenuOpen(false)}
+                className="p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+                aria-label="Close menu"
               >
-                Conditions A-Z
-              </a>
-              <a
-                href="/learn"
-                className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Learn
-              </a>
-              <a
-                href="/blog"
-                className="block px-4 py-3 min-h-[44px] flex items-center text-sm font-sans text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </a>
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Accordion Categories */}
+            <div className="py-2">
+              {navigationCategories.map((category, index) => (
+                <AccordionSection
+                  key={index}
+                  category={category}
+                  isExpanded={expandedAccordion === index}
+                  onToggle={() => handleAccordionToggle(index)}
+                  onItemClick={() => setMobileMenuOpen(false)}
+                />
+              ))}
+            </div>
+
+            {/* Direct Links Section */}
+            <div className="border-t border-neutral-200 py-4 px-4">
+              <div className="space-y-1">
+                {directLinks.map((link, index) => {
+                  const Icon = link.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-100 transition-colors duration-200 group"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center group-hover:bg-brand-primary-100 transition-colors">
+                        <Icon className="h-5 w-5 text-neutral-600 group-hover:text-brand-primary-600" strokeWidth={2.5} />
+                      </div>
+                      <span className="font-nav font-medium text-[15px] text-neutral-700 group-hover:text-brand-primary-600 transition-colors">
+                        {link.label}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        )}
-      </div>
-    </header>
+        </>
+      )}
+    </>
   );
 };
 

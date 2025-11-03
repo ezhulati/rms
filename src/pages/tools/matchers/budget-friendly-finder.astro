@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { CheckCircle, Info, AlertCircle, DollarSign } from 'lucide-react';
+import { CheckCircle, Info, AlertCircle, DollarSign, TrendingDown, CreditCard, HelpCircle } from 'lucide-react';
 ---
 
 <BaseLayout>
@@ -9,7 +9,7 @@ import { CheckCircle, Info, AlertCircle, DollarSign } from 'lucide-react';
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Budget-Friendly Therapy Finder</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">
-        Find affordable therapy options that fit your budget and needs
+        Find affordable, quality therapy options that fit your budget
       </p>
     </div>
   </section>
@@ -17,82 +17,285 @@ import { CheckCircle, Info, AlertCircle, DollarSign } from 'lucide-react';
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
 
-        <div class="p-6">
-          <div class="space-y-6 mb-8">
-            <div class="flex items-start">
-              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">About This Tool</h2>
-                <p class="text-gray-600">
-                  This tool helps you find affordable therapy options by considering your budget, insurance status, and financial assistance needs.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <DollarSign class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">What You'll Learn</h2>
-                <ul class="mt-2 space-y-2">
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Affordable therapy platforms within your budget</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Available financial assistance options</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Insurance coverage possibilities</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Cost-effective therapy solutions</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">Important Note</h2>
-                <p class="text-gray-600">
-                  While we help you find affordable options, never compromise on the quality of care. Many platforms offer financial assistance or sliding scale fees to make quality therapy more accessible.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg p-6 mb-6">
-            <h3 class="font-bold text-gray-800 mb-2">Interactive Matcher Coming Soon</h3>
-            <p class="text-gray-700 mb-4">
-              We're currently updating this matching tool. In the meantime, you can explore our affordable therapy resources and compare platforms directly.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <div class="flex items-start bg-yellow-50 rounded-lg p-4">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <p class="text-sm text-yellow-700">
-                Never let cost be a barrier to getting mental health support. Many therapy platforms offer financial assistance, sliding scales, or accept insurance to make treatment more accessible.
+      {/* Information Cards */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+          <div class="flex items-start">
+            <TrendingDown class="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Affordable Options</h3>
+              <p class="text-gray-700 text-sm">
+                Quality therapy doesn't have to be expensive. Find platforms starting at just $40/week.
               </p>
             </div>
+          </div>
+        </div>
 
-            <div class="flex flex-wrap gap-4">
-              <a href="/compare/platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                Compare All Platforms
-              </a>
-              <a href="/guides/financial/affordable-therapy-options" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                View Affordability Guide
-              </a>
-              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md hover:bg-indigo-50 transition">
-                Find Your Perfect Match
-              </a>
+        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+          <div class="flex items-start">
+            <CreditCard class="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Payment Flexibility</h3>
+              <p class="text-gray-700 text-sm">
+                Many platforms offer sliding scale fees, financial assistance, and flexible payment plans.
+              </p>
             </div>
+          </div>
+        </div>
+
+        <div class="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-500">
+          <div class="flex items-start">
+            <CheckCircle class="h-6 w-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">No Quality Compromise</h3>
+              <p class="text-gray-700 text-sm">
+                All platforms feature licensed therapists providing evidence-based treatment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Budget Tiers */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Find Therapy Options by Your Budget</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Under $50/week */}
+          <div class="bg-white rounded-lg p-6 border-2 border-green-500">
+            <div class="flex items-center mb-4">
+              <DollarSign class="h-8 w-8 text-green-600 mr-3" />
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">Under $50/week</h3>
+                <p class="text-sm text-gray-600">Most affordable options</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-6">
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Calmerry</h4>
+                <p class="text-sm text-gray-600 mb-2">$42-$68/week • Messaging & Video</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Fast therapist matching</li>
+                  <li>✓ Flexible plans</li>
+                  <li>✓ No long-term commitment</li>
+                </ul>
+                <a href="/reviews/platforms/calmerry-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Online-Therapy.com</h4>
+                <p class="text-sm text-gray-600 mb-2">$40-$88/week • CBT-Focused</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Structured CBT programs</li>
+                  <li>✓ Worksheets & resources</li>
+                  <li>✓ Yoga & mindfulness tools</li>
+                </ul>
+                <a href="/reviews/platforms/online-therapy-com-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+            </div>
+
+            <a href="/tools/matchers/therapy-platform-matcher?price=budget" class="block w-full bg-green-600 text-white text-center py-2 rounded-md hover:bg-green-700 transition text-sm font-medium">
+              View All Budget Options
+            </a>
+          </div>
+
+          {/* $50-$80/week */}
+          <div class="bg-white rounded-lg p-6 border-2 border-blue-500">
+            <div class="flex items-center mb-4">
+              <DollarSign class="h-8 w-8 text-blue-600 mr-3" />
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">$50-$80/week</h3>
+                <p class="text-sm text-gray-600">Mid-range options</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-6">
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">BetterHelp</h4>
+                <p class="text-sm text-gray-600 mb-2">$60-$90/week • Most Popular</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Largest therapist network</li>
+                  <li>✓ Multiple communication options</li>
+                  <li>✓ Easy therapist switching</li>
+                </ul>
+                <a href="/reviews/platforms/betterhelp-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Talkspace</h4>
+                <p class="text-sm text-gray-600 mb-2">$65-$99/week • Insurance Accepted</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Insurance coverage available</li>
+                  <li>✓ Psychiatry services</li>
+                  <li>✓ Specialized therapists</li>
+                </ul>
+                <a href="/reviews/platforms/talkspace-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+
+              <div class="pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">ReGain</h4>
+                <p class="text-sm text-gray-600 mb-2">$60-$90/week • Couples Therapy</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Specialized couples therapists</li>
+                  <li>✓ Joint & individual sessions</li>
+                  <li>✓ Relationship-focused</li>
+                </ul>
+                <a href="/reviews/platforms/regain-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+            </div>
+
+            <a href="/tools/matchers/therapy-platform-matcher?price=mid" class="block w-full bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition text-sm font-medium">
+              View All Mid-Range Options
+            </a>
+          </div>
+
+          {/* With Insurance */}
+          <div class="bg-white rounded-lg p-6 border-2 border-purple-500">
+            <div class="flex items-center mb-4">
+              <CreditCard class="h-8 w-8 text-purple-600 mr-3" />
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">Insurance Coverage</h3>
+                <p class="text-sm text-gray-600">Reduce out-of-pocket costs</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-6">
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Talkspace</h4>
+                <p class="text-sm text-gray-600 mb-2">Accepts most major insurers</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ In-network with many plans</li>
+                  <li>✓ Insurance verification help</li>
+                  <li>✓ Lower copays available</li>
+                </ul>
+                <a href="/reviews/platforms/talkspace-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+
+              <div class="border-b pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Cerebral</h4>
+                <p class="text-sm text-gray-600 mb-2">Insurance + medication management</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Accepts insurance</li>
+                  <li>✓ Therapy + psychiatry</li>
+                  <li>✓ Medication delivery</li>
+                </ul>
+                <a href="/reviews/platforms/cerebral-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+
+              <div class="pb-3">
+                <h4 class="font-bold text-gray-800 mb-1">Brightside</h4>
+                <p class="text-sm text-gray-600 mb-2">Depression & anxiety specialists</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>✓ Insurance accepted</li>
+                  <li>✓ Data-driven care</li>
+                  <li>✓ Medication options</li>
+                </ul>
+                <a href="/reviews/platforms/brightside-review" class="text-brand-primary hover:underline text-xs mt-2 inline-block">Read full review →</a>
+              </div>
+            </div>
+
+            <a href="/tools/matchers/insurance-coverage-checker" class="block w-full bg-purple-600 text-white text-center py-2 rounded-md hover:bg-purple-700 transition text-sm font-medium">
+              Check Insurance Coverage
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Money-Saving Tips */}
+      <div class="bg-white rounded-lg border-2 border-gray-200 p-8 mb-12">
+        <div class="flex items-start mb-6">
+          <HelpCircle class="h-6 w-6 text-brand-primary mr-3 mt-1 flex-shrink-0" />
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Ways to Make Therapy More Affordable</h3>
+            <p class="text-gray-700">Quality mental health care should be accessible to everyone. Here are strategies to reduce costs:</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Financial Assistance Options
+            </h4>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li><strong>Sliding Scale Fees:</strong> Many platforms offer reduced rates based on income</li>
+              <li><strong>Financial Aid:</strong> Apply for financial assistance programs when available</li>
+              <li><strong>Employee Benefits:</strong> Check if your employer offers EAP (Employee Assistance Program)</li>
+              <li><strong>Student Discounts:</strong> Some platforms offer discounts for students</li>
+              <li><strong>Promotional Rates:</strong> Look for first-month discounts or trial periods</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Insurance & Reimbursement
+            </h4>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li><strong>Verify Coverage:</strong> Check if your insurance covers online therapy</li>
+              <li><strong>Out-of-Network Benefits:</strong> Request superbills for reimbursement</li>
+              <li><strong>FSA/HSA Accounts:</strong> Use pre-tax dollars for therapy expenses</li>
+              <li><strong>Medicare/Medicaid:</strong> Some platforms accept government insurance</li>
+              <li><strong>Coverage Documentation:</strong> Keep receipts and invoices for tax deductions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Compare & Explore</h4>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li><a href="/compare/platforms" class="text-brand-primary hover:underline">→ Compare All Platforms Side-by-Side</a></li>
+              <li><a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">→ Best Online Therapy Platforms 2025</a></li>
+              <li><a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">→ Platform Matching Tool</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Learn More</h4>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li><a href="/guides/selection/choosing-right-therapist" class="text-brand-primary hover:underline">→ How to Choose the Right Therapist</a></li>
+              <li><a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary hover:underline">→ Understanding Different Therapy Types</a></li>
+              <li><a href="/tools/assessments/mental-health-assessment" class="text-brand-primary hover:underline">→ Take a Mental Health Assessment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Important Note */}
+      <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-6">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">Important Reminder</h4>
+            <p class="text-gray-700 text-sm">
+              Never let cost prevent you from seeking mental health support. Most platforms offer financial assistance, flexible payment plans, or accept insurance. Many therapists also offer sliding scale fees based on your financial situation. Your mental health is worth the investment.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="mt-6 bg-red-50 border-l-4 border-red-500 rounded-lg p-6">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">Need Immediate Help?</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              If you're in crisis, free support is available 24/7:
+            </p>
+            <ul class="space-y-1 text-gray-700 text-sm">
+              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988 (free, 24/7)</li>
+              <li><strong>Crisis Text Line:</strong> Text HOME to 741741 (free)</li>
+              <li><strong>Emergency:</strong> Call 911 or go to your nearest emergency room</li>
+            </ul>
           </div>
         </div>
       </div>

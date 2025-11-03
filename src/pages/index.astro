@@ -1,12 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
+
+// Homepage-specific structured data
+const homepageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "RealMindSolutions - Mental Health Platform Comparison",
+  "description": "Compare, review, and discover the best online therapy platforms tailored to your unique needs.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Mental Health"
+  },
+  "audience": {
+    "@type": "PatienceAudience",
+    "audienceType": "People seeking mental health support"
+  }
+};
 ---
 
 <BaseLayout
   title="RealMindSolutions | Find Your Perfect Mental Health Solution"
   description="Compare, review, and discover the best online therapy platforms tailored to your unique needs."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(homepageStructuredData)} />
   {/* Hero Section */}
   <section class="relative bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
     {/* Background decoration */}
@@ -39,11 +56,11 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
 
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-4 mb-10">
-            <a href="/tools/assessments/mental-health-assessment" class="btn btn-primary btn-lg inline-flex items-center justify-center font-sans font-semibold shadow-lg hover:shadow-xl transition-all">
+            <a href="/tools/assessments/mental-health-assessment" class="btn btn-primary btn-lg inline-flex items-center justify-center font-sans font-semibold shadow-lg hover:shadow-xl transition-all whitespace-nowrap">
               Take 3-Min Assessment
               <ArrowRight class="ml-2 h-5 w-5" />
             </a>
-            <a href="/compare" class="btn btn-light btn-lg inline-flex items-center justify-center font-sans font-semibold border-2 border-neutral-300 hover:border-brand-primary-500 hover:text-brand-primary-600">
+            <a href="/compare" class="btn btn-light btn-lg inline-flex items-center justify-center font-sans font-semibold border-2 border-neutral-300 hover:border-brand-primary-500 whitespace-nowrap">
               Compare Platforms
             </a>
           </div>
@@ -72,8 +89,11 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
             <div class="bg-white rounded-2xl shadow-xl p-6 transform transition-transform hover:scale-[1.02]">
               <img
                 src="/images/blog/index.jpg"
-                alt="Mental Health Solutions"
+                alt="Person finding mental health support through online therapy platforms"
                 class="rounded-xl w-full h-80 object-cover mb-6"
+                loading="eager"
+                width="800"
+                height="320"
               />
 
               {/* Quick stats overlay */}
@@ -95,10 +115,10 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
   </section>
 
   {/* Features Section */}
-  <section class="bg-white py-20 md:py-24">
+  <section class="bg-white py-20 md:py-24" aria-labelledby="features-heading">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="text-center mb-16">
-        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">How We Help You Find the Right Solution</h2>
+        <h2 id="features-heading" class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">How We Help You Find the Right Solution</h2>
         <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto">
           We provide comprehensive resources to help you navigate the world of online therapy and mental health services.
         </p>
@@ -151,13 +171,13 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
   </section>
 
   {/* CTA Section */}
-  <section class="bg-gradient-to-b from-white to-brand-primary-50 py-20 md:py-24">
+  <section class="bg-gradient-to-b from-white to-brand-primary-50 py-20 md:py-24" aria-labelledby="cta-heading">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-4xl mx-auto text-center">
         <div class="bg-brand-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
           <Brain class="h-10 w-10 text-brand-primary-600" />
         </div>
-        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">Ready to Start Your Mental Health Journey?</h2>
+        <h2 id="cta-heading" class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">Ready to Start Your Mental Health Journey?</h2>
         <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto">
           Take our free assessment to get personalized recommendations for online therapy platforms that match your needs.
         </p>

@@ -44,14 +44,53 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+
+    {/* Additional SEO Meta Tags */}
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RealMindSolutions" />
+    <meta name="theme-color" content="#3ECF8E" />
+
+    {/* Structured Data - Organization */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RealMindSolutions",
+        "url": "https://realmindsolutions.com",
+        "logo": "https://realmindsolutions.com/images/RMS_logo_horizontal.svg",
+        "description": "Compare, review, and discover the best online therapy platforms tailored to your unique needs.",
+        "sameAs": [
+          "https://twitter.com/realmindsolutions",
+          "https://facebook.com/realmindsolutions"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "contact@realmindsolutions.com"
+        }
+      })}
+    </script>
+
+    {/* Structured Data - Website */}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "RealMindSolutions",
+      "url": "https://realmindsolutions.com",
+      "description": "Compare, review, and discover the best online therapy platforms tailored to your unique needs."
+    })} />
   </head>
   <body class="bg-white">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-brand-primary-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">
+      Skip to main content
+    </a>
     <div class="flex flex-col min-h-screen">
       <Header client:load />
-      <main class="flex-grow w-full bg-white">
+      <main id="main-content" class="flex-grow w-full bg-white" role="main">
         <slot />
       </main>
       <Footer />
     </div>
+
   </body>
 </html>
