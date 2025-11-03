@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { platforms, getPlatformBySlug } from '../../../siteData';
-import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, AlertCircle } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, AlertCircle, Award, Sparkles } from 'lucide-react';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -19,17 +19,47 @@ const anxietyPlatforms = [
 ].filter(p => p);
 ---
 
-<BaseLayout>
-  {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-12">
+<BaseLayout title="Best Online Therapy for Anxiety 2025 | Expert Reviews & Comparisons" description="Find specialized online therapy platforms offering evidence-based treatment for anxiety disorders, including generalized anxiety, panic disorder, social anxiety, and more.">
+
+  {/* Hero Section - Enhanced */}
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      {/* Breadcrumb */}
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/best" class="hover:text-brand-primary-600 transition">Best Platforms</a>
+        <span>/</span>
+        <a href="/best/conditions" class="hover:text-brand-primary-600 transition">Conditions</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">Anxiety</span>
+      </nav>
+
+      <div class="text-center animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-brand-primary-100 text-brand-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <Sparkles class="h-4 w-4" />
+          <span>Expert-Reviewed Anxiety Treatment Platforms</span>
+        </div>
         <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Anxiety 2025</h1>
-        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+        <p class="font-sans text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
           Find specialized online therapy platforms offering evidence-based treatment for anxiety disorders, including generalized anxiety, panic disorder, social anxiety, and more.
         </p>
-        <div class="flex justify-center">
-          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your anxiety therapy match</a>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-brand-primary-600 text-white px-8 py-4 rounded-lg hover:bg-brand-primary-700 transition-all hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+            <Search class="h-5 w-5" />
+            Find Your Perfect Match
+          </a>
+          <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 border-2 border-brand-primary-200 px-8 py-4 rounded-lg hover:border-brand-primary-400 transition-all hover:scale-105 shadow-sm hover:shadow-md font-medium">
+            <Heart class="h-5 w-5" />
+            Take Anxiety Assessment
+          </a>
         </div>
       </div>
     </div>
@@ -39,194 +69,209 @@ const anxietyPlatforms = [
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-        {/* Quick Summary */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks for Anxiety Therapy at a Glance</h2>
+        {/* Top Picks - Enhanced */}
+        <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-2xl border-2 border-brand-primary-100 p-8 md:p-12 mb-16 shadow-sm">
+          <div class="flex items-center gap-3 mb-8">
+            <Award class="h-8 w-8 text-brand-primary-600" />
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900">Top Picks for Anxiety Therapy</h2>
+          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Best Overall */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best Overall
+            <div class="bg-white rounded-xl border-2 border-brand-primary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-primary-600 to-brand-primary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                🏆 Best Overall
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.8)}
-                  </div>
-                  <span class="text-gray-600">4.8/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">BetterHelp</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.8).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.8/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Largest network of anxiety specialists with flexible communication options and proven track record treating anxiety disorders.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-primary-600" />
+                  <span class="font-medium">$60-$90/week</span>
+                </div>
+                <a href="/reviews/platforms/betterhelp" class="block w-full text-center bg-brand-primary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-primary-700 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Largest network of anxiety specialists with flexible communication options and proven track record treating anxiety disorders.
-              </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $60-$90/week
-              </div>
-              <a href="https://www.betterhelp.com" class="w-full min-w-0 justify-center">Visit BetterHelp</a>
             </div>
 
             {/* Best for CBT */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best for CBT
+            <div class="bg-white rounded-xl border-2 border-accent-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                ⭐ Best for CBT
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Online-Therapy.com</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.0)}
-                  </div>
-                  <span class="text-gray-600">4.0/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Online-Therapy.com</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.0).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.0/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Structured CBT program specifically designed for anxiety with worksheets, activities, and evidence-based exercises.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-accent-600" />
+                  <span class="font-medium">$40-$88/week</span>
+                </div>
+                <a href="/reviews/platforms/online-therapy" class="block w-full text-center bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Structured CBT program specifically designed for anxiety with worksheets, activities, and evidence-based exercises.
-              </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $40-$88/week
-              </div>
-              <a href="https://www.online-therapy.com" class="w-full min-w-0 justify-center">Visit Online-Therapy.com</a>
             </div>
 
             {/* Best with Medication */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best with Medication
+            <div class="bg-white rounded-xl border-2 border-brand-secondary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-secondary-600 to-brand-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                💊 Best with Medication
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Brightside</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.1)}
-                  </div>
-                  <span class="text-gray-600">4.1/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Brightside</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.1).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.1/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Combines therapy with psychiatry for comprehensive anxiety treatment including medication management when needed.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-secondary-600" />
+                  <span class="font-medium">$95-$299/month</span>
+                </div>
+                <a href="/reviews/platforms/brightside" class="block w-full text-center bg-brand-secondary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-secondary-700 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Combines therapy with psychiatry for comprehensive anxiety treatment including medication management when needed.
-              </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $95-$299/month
-              </div>
-              <a href="https://www.brightside.com" class="w-full min-w-0 justify-center">Visit Brightside</a>
             </div>
           </div>
         </div>
 
-        {/* Understanding Anxiety */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Anxiety and Online Treatment</h2>
+        {/* Understanding Anxiety - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Understanding Anxiety and Online Treatment</h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Types of Anxiety Disorders Treated Online</h3>
-              <p class="text-gray-600 mb-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-green-500 rounded-full"></div>
+                Types of Anxiety Disorders Treated Online
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
                 Online therapy is highly effective for various anxiety disorders, with research showing outcomes comparable to in-person treatment:
               </p>
-              <ul class="space-y-2 mb-6">
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Generalized Anxiety Disorder (GAD):</strong> Persistent worry about multiple areas of life</span>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Generalized Anxiety Disorder (GAD):</strong> Persistent worry about multiple areas of life</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Social Anxiety:</strong> Fear of social situations and judgment from others</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Social Anxiety:</strong> Fear of social situations and judgment from others</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Panic Disorder:</strong> Recurrent panic attacks and fear of future attacks</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Panic Disorder:</strong> Recurrent panic attacks and fear of future attacks</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Health Anxiety:</strong> Excessive worry about having serious illness</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Health Anxiety:</strong> Excessive worry about having serious illness</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Phobias:</strong> Intense fear of specific objects or situations</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Phobias:</strong> Intense fear of specific objects or situations</span>
                 </li>
               </ul>
             </div>
 
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Evidence-Based Treatment Approaches</h3>
-              <p class="text-gray-600 mb-4">
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-blue-500 rounded-full"></div>
+                Evidence-Based Treatment Approaches
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
                 Effective online therapy for anxiety typically uses these proven approaches:
               </p>
-              <ul class="space-y-2 mb-6">
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Cognitive Behavioral Therapy (CBT):</strong> Gold standard for anxiety treatment, challenging anxious thoughts</span>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Cognitive Behavioral Therapy (CBT):</strong> Gold standard for anxiety treatment, challenging anxious thoughts</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Exposure Therapy:</strong> Gradual exposure to feared situations in safe environment</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Exposure Therapy:</strong> Gradual exposure to feared situations in safe environment</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Acceptance and Commitment Therapy (ACT):</strong> Learning to accept anxiety while taking valued action</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Acceptance and Commitment Therapy (ACT):</strong> Learning to accept anxiety while taking valued action</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Mindfulness-Based Approaches:</strong> Developing present-moment awareness to reduce worry</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Mindfulness-Based Approaches:</strong> Developing present-moment awareness to reduce worry</span>
                 </li>
-                <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span><strong>Medication Management:</strong> Anti-anxiety medications when appropriate, combined with therapy</span>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Medication Management:</strong> Anti-anxiety medications when appropriate, combined with therapy</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">Why Online Therapy Works Well for Anxiety</h3>
-            <p class="text-gray-700 mb-4">
+          <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+              <Shield class="h-6 w-6 text-brand-primary-600" />
+              Why Online Therapy Works Well for Anxiety
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
               Online therapy offers unique advantages for anxiety treatment:
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="bg-white rounded-lg p-4 shadow-sm">
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 class="font-bold text-gray-800">Accessibility</h4>
-                    <p class="text-gray-600 text-sm">
+                    <h4 class="font-bold text-neutral-900 mb-1">Accessibility</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
                       Access therapy from home, reducing anxiety about commuting or sitting in waiting rooms
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-white rounded-lg p-4 shadow-sm">
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 class="font-bold text-gray-800">Consistent Support</h4>
-                    <p class="text-gray-600 text-sm">
+                    <h4 class="font-bold text-neutral-900 mb-1">Consistent Support</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
                       Message your therapist between sessions during anxious moments for real-time support
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-white rounded-lg p-4 shadow-sm">
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 class="font-bold text-gray-800">Flexible Scheduling</h4>
-                    <p class="text-gray-600 text-sm">
+                    <h4 class="font-bold text-neutral-900 mb-1">Flexible Scheduling</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
                       Book sessions when anxiety is highest, not just during business hours
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-white rounded-lg p-4 shadow-sm">
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 class="font-bold text-gray-800">Reduced Barriers</h4>
-                    <p class="text-gray-600 text-sm">
+                    <h4 class="font-bold text-neutral-900 mb-1">Reduced Barriers</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
                       Lower threshold to start therapy, particularly helpful for those with social anxiety
                     </p>
                   </div>
@@ -236,103 +281,142 @@ const anxietyPlatforms = [
           </div>
         </div>
 
-        {/* Detailed Reviews */}
+        {/* Detailed Reviews - Enhanced */}
         <div class="mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews of the Best Anxiety Therapy Platforms</h2>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Detailed Reviews of the Best Anxiety Therapy Platforms</h2>
 
           {anxietyPlatforms.map((platform, index) => (
-            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-              <div class="p-8">
-                <div class="flex flex-col md:flex-row">
-                  <div class="md:w-1/4 mb-6 md:mb-0">
-                    <div class="flex items-center mb-3">
-                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
-                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
-                    </div>
-                    <div class="flex items-center mb-4">
-                      <div class="mr-2">
-                        {renderStars(platform.rating)}
+            <div key={platform.slug} class="bg-white rounded-2xl border-2 border-neutral-100 overflow-hidden mb-8 hover:shadow-lg transition-all hover:border-brand-primary-200">
+              <div class="p-8 md:p-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                  {/* Left Column - Platform Info */}
+                  <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="bg-brand-primary-100 text-brand-primary-700 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                        {index + 1}
                       </div>
-                      <span class="text-gray-600">{platform.rating}/5</span>
+                      <h3 class="font-heading text-2xl font-bold text-neutral-900">{platform.name}</h3>
                     </div>
-                    <div class="space-y-3 mb-6">
-                      <div class="flex items-center">
-                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
-                        <span class="text-gray-600">{platform.price}</span>
+
+                    <div class="flex items-center gap-2 mb-6">
+                      {renderStars(platform.rating).map((filled, i) => (
+                        <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                      ))}
+                      <span class="text-neutral-600 font-medium ml-1">{platform.rating}/5</span>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                      <div class="flex items-center gap-3">
+                        <div class="bg-brand-primary-100 rounded-lg p-2">
+                          <DollarSign class="h-5 w-5 text-brand-primary-600" />
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">PRICING</div>
+                          <div class="text-neutral-700 font-semibold">{platform.price}</div>
+                        </div>
                       </div>
-                      <div class="flex items-center">
-                        <div class="flex space-x-1 mr-2">
-                          {platform.communication.includes('messaging') && (
-                            <MessageSquare class="h-4 w-4 text-indigo-600" />
-                          )}
-                          {platform.communication.includes('video') && (
-                            <Video class="h-4 w-4 text-indigo-600" />
-                          )}
-                          {platform.communication.includes('phone') && (
-                            <Phone class="h-4 w-4 text-indigo-600" />
+
+                      <div class="flex items-center gap-3">
+                        <div class="bg-brand-primary-100 rounded-lg p-2">
+                          <MessageSquare class="h-5 w-5 text-brand-primary-600" />
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">COMMUNICATION</div>
+                          <div class="flex gap-1 mt-1">
+                            {platform.communication.includes('messaging') && (
+                              <MessageSquare class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                            {platform.communication.includes('video') && (
+                              <Video class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                            {platform.communication.includes('phone') && (
+                              <Phone class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-3">
+                        <div class={`rounded-lg p-2 ${platform.insurance ? 'bg-green-100' : 'bg-red-100'}`}>
+                          {platform.insurance ? (
+                            <CheckCircle class="h-5 w-5 text-green-600" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-red-600" />
                           )}
                         </div>
-                        <span class="text-gray-600">Communication</span>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">INSURANCE</div>
+                          <div class="text-neutral-700 font-semibold">{platform.insurance ? 'Accepted' : 'Not Accepted'}</div>
+                        </div>
                       </div>
-                      <div class="flex items-center">
-                        {platform.insurance ? (
-                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
-                        ) : (
-                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
-                        )}
-                        <span class="text-gray-600">Insurance Coverage</span>
-                      </div>
-                      <div class="flex items-center">
-                        {platform.medication ? (
-                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
-                        ) : (
-                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
-                        )}
-                        <span class="text-gray-600">Medication Management</span>
+
+                      <div class="flex items-center gap-3">
+                        <div class={`rounded-lg p-2 ${platform.medication ? 'bg-green-100' : 'bg-neutral-100'}`}>
+                          {platform.medication ? (
+                            <CheckCircle class="h-5 w-5 text-green-600" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-neutral-400" />
+                          )}
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">MEDICATION</div>
+                          <div class="text-neutral-700 font-semibold">{platform.medication ? 'Available' : 'Not Available'}</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="space-y-2">
-                      <button class="w-full min-w-0 justify-center">Visit Website</button>
-                    </div>
+
+                    <a href={`/reviews/platforms/${platform.slug}`} class="block w-full text-center bg-brand-primary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-primary-700 transition font-medium shadow-md hover:shadow-lg">
+                      View Full Review
+                    </a>
                   </div>
 
-                  <div class="md:w-3/4 md:pl-8">
-                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It for Anxiety</h4>
-                    <p class="text-gray-600 mb-4">
+                  {/* Right Column - Details */}
+                  <div class="lg:col-span-3">
+                    <h4 class="font-bold text-neutral-900 mb-3 text-lg">Why We Recommend It for Anxiety</h4>
+                    <p class="text-neutral-600 mb-6 leading-relaxed">
                       {platform.description}
                     </p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                      <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                      <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+                        <h5 class="font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                          <CheckCircle class="h-5 w-5 text-green-500" />
+                          Pros
+                        </h5>
                         <ul class="space-y-2">
-                          {platform.pros.map((pro, i) => (
-                            <li key={i} class="flex items-start">
-                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{pro}</span>
+                          {platform.pros.slice(0, 4).map((pro, i) => (
+                            <li key={i} class="flex items-start gap-2">
+                              <CheckCircle class="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span class="text-neutral-600 text-sm leading-relaxed">{pro}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                      <div class="bg-gradient-to-br from-red-50 to-white rounded-xl border border-red-100 p-6">
+                        <h5 class="font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                          <XCircle class="h-5 w-5 text-red-500" />
+                          Cons
+                        </h5>
                         <ul class="space-y-2">
-                          {platform.cons.map((con, i) => (
-                            <li key={i} class="flex items-start">
-                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{con}</span>
+                          {platform.cons.slice(0, 4).map((con, i) => (
+                            <li key={i} class="flex items-start gap-2">
+                              <XCircle class="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                              <span class="text-neutral-600 text-sm leading-relaxed">{con}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
 
-                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
-                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                    <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6">
+                      <h5 class="font-bold text-neutral-900 mb-3 flex items-center gap-2">
+                        <Award class="h-5 w-5 text-brand-primary-600" />
+                        Best For
+                      </h5>
                       <div class="flex flex-wrap gap-2">
                         {platform.bestFor.map((item, i) => (
-                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                          <span key={i} class="bg-white border border-brand-primary-200 px-3 py-1.5 rounded-full text-sm text-neutral-700 font-medium hover:bg-brand-primary-50 transition">{item}</span>
                         ))}
                       </div>
                     </div>
@@ -343,122 +427,139 @@ const anxietyPlatforms = [
           ))}
         </div>
 
-        {/* How to Choose */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Anxiety Therapy Platform</h2>
+        {/* How to Choose - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">How to Choose the Right Anxiety Therapy Platform</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <AlertCircle class="h-6 w-6 text-indigo-600" />
+            <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6 hover:shadow-md transition">
+              <div class="bg-brand-primary-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <AlertCircle class="h-7 w-7 text-brand-primary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Severity Level</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Severity Level</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 For mild to moderate anxiety, therapy-only platforms work well. For severe anxiety or panic disorder, consider platforms offering medication management.
               </p>
             </div>
 
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Users class="h-6 w-6 text-indigo-600" />
+            <div class="bg-gradient-to-br from-accent-50 to-white rounded-xl border border-accent-100 p-6 hover:shadow-md transition">
+              <div class="bg-accent-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <Users class="h-7 w-7 text-accent-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Treatment Approach</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Treatment Approach</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 CBT is the gold standard for anxiety. Look for platforms specializing in CBT or offering structured anxiety programs with proven techniques.
               </p>
             </div>
 
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Heart class="h-6 w-6 text-indigo-600" />
+            <div class="bg-gradient-to-br from-brand-secondary-50 to-white rounded-xl border border-brand-secondary-100 p-6 hover:shadow-md transition">
+              <div class="bg-brand-secondary-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <Heart class="h-7 w-7 text-brand-secondary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Support Frequency</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Support Frequency</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 Anxiety can spike unexpectedly. Platforms offering unlimited messaging between sessions provide valuable support during anxious moments.
               </p>
             </div>
           </div>
 
-          <div class="bg-indigo-50 rounded-lg p-6">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
-            <p class="text-gray-700 mb-4">
+          <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+            <h3 class="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
+              <Sparkles class="h-6 w-6 text-green-600" />
+              Our Recommendations
+            </h3>
+            <p class="text-neutral-700 mb-4 leading-relaxed">
               For most individuals seeking anxiety treatment:
             </p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>BetterHelp</strong> for the largest network of anxiety specialists and flexible communication options</span>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">BetterHelp</strong> for the largest network of anxiety specialists and flexible communication options</span>
               </li>
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>Online-Therapy.com</strong> for structured CBT approach with worksheets and activities specifically for anxiety</span>
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">Online-Therapy.com</strong> for structured CBT approach with worksheets and activities specifically for anxiety</span>
               </li>
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>Brightside</strong> for comprehensive treatment combining therapy with medication for moderate to severe anxiety</span>
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">Brightside</strong> for comprehensive treatment combining therapy with medication for moderate to severe anxiety</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* FAQs */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+        {/* FAQs - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Frequently Asked Questions</h2>
 
           <div class="space-y-6">
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">How long does it take for online therapy to help with anxiety?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How long does it take for online therapy to help with anxiety?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 Many people notice improvement within 4-8 weeks of consistent therapy, especially with CBT approaches. However, treatment duration varies based on anxiety severity and individual factors. Most benefit from 12-20 sessions.
               </p>
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Can online therapy help with panic attacks?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Can online therapy help with panic attacks?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 Yes, online therapy is effective for panic disorder. CBT teaches techniques to manage panic symptoms, identify triggers, and reduce fear of future attacks. Messaging access between sessions can be particularly helpful during panic episodes.
               </p>
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Do I need medication for anxiety or is therapy enough?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Do I need medication for anxiety or is therapy enough?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 This depends on severity. Mild to moderate anxiety often responds well to therapy alone. Severe anxiety, panic disorder, or anxiety interfering with daily life may benefit from combined therapy and medication. Your therapist can help determine the best approach.
               </p>
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">What if my anxiety makes it hard to start therapy?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">What if my anxiety makes it hard to start therapy?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 This is common with social anxiety. Online therapy actually reduces this barrier since you can start from home. Begin with messaging if video feels too overwhelming, and transition to video sessions when comfortable.
               </p>
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Can online therapy help with specific phobias?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Can online therapy help with specific phobias?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 Yes, exposure therapy for phobias can be adapted for online settings. Therapists use virtual exposure techniques, gradual exposure planning, and between-session assignments. Some phobias may require in-person components, which your therapist will discuss.
               </p>
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">How do I know if my anxiety is severe enough for therapy?</h3>
-              <p class="text-gray-600">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How do I know if my anxiety is severe enough for therapy?</h3>
+              <p class="text-neutral-600 leading-relaxed">
                 If anxiety interferes with work, relationships, daily activities, or quality of life, therapy can help. You don't need to wait until anxiety is "severe enough" - early intervention often leads to faster improvement.
               </p>
             </div>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
-          <h2 class="text-2xl font-bold mb-4">Ready to Start Managing Your Anxiety?</h2>
-          <p class="text-lg mb-6 max-w-2xl mx-auto">
-            Take our personalized assessment to find the perfect anxiety therapy platform matched to your specific needs and symptoms.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Find Your Perfect Match</a>
-            <a href="/tools/assessments/anxiety-screening" class="border-white text-white hover:bg-white hover:bg-opacity-10 inline-flex items-center px-6 py-3 rounded-md border-2">Take Anxiety Assessment</a>
+        {/* CTA Section - Enhanced */}
+        <div class="relative bg-gradient-to-br from-brand-primary-600 via-brand-primary-500 to-brand-secondary-600 rounded-2xl p-8 md:p-12 text-white text-center overflow-hidden shadow-xl">
+          {/* Background decoration */}
+          <div class="absolute inset-0 overflow-hidden opacity-20">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+          </div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Ready to Start Managing Your Anxiety?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-95 leading-relaxed">
+              Take our personalized assessment to find the perfect anxiety therapy platform matched to your specific needs and symptoms.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 px-8 py-4 rounded-lg hover:bg-neutral-50 transition-all hover:scale-105 shadow-lg font-medium">
+                <Search class="h-5 w-5" />
+                Find Your Perfect Match
+              </a>
+              <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg transition-all hover:scale-105 font-medium">
+                <Heart class="h-5 w-5" />
+                Take Anxiety Assessment
+              </a>
+            </div>
           </div>
         </div>
     </div>

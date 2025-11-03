@@ -1,21 +1,382 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { ArrowLeft, Clock, User, CheckCircle, Award, Briefcase, Home, Globe, Video } from 'lucide-react';
 ---
 
-<BaseLayout title="Remote Worker Mental Health | RealMindSolutions" description="Remote Worker Mental Health Case Study">
+<BaseLayout>
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Remote Worker Mental Health Case Study</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Mental health challenges for remote workers.</p>
+      <a href="/case-studies/demographics" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 mb-6">
+        <ArrowLeft class="h-4 w-4 mr-2" />
+        Back to Demographic Case Studies
+      </a>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <div class="h-64 bg-gradient-to-r from-blue-600 to-indigo-600 relative">
+          <div class="absolute inset-0 bg-black opacity-20"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-4xl font-bold text-white text-center px-4">Remote Worker Mental Health Journey</h1>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="bg-indigo-50 rounded-full px-4 py-2 text-sm font-medium text-indigo-700 flex items-center">
+              <User class="h-4 w-4 mr-2" />
+              35-year-old software engineer
+            </div>
+            <div class="bg-indigo-50 rounded-full px-4 py-2 text-sm font-medium text-indigo-700 flex items-center">
+              <Briefcase class="h-4 w-4 mr-2" />
+              Fully remote since 2020
+            </div>
+            <div class="bg-indigo-50 rounded-full px-4 py-2 text-sm font-medium text-indigo-700 flex items-center">
+              <Home class="h-4 w-4 mr-2" />
+              Isolation & burnout
+            </div>
+            <div class="bg-indigo-50 rounded-full px-4 py-2 text-sm font-medium text-indigo-700 flex items-center">
+              <Clock class="h-4 w-4 mr-2" />
+              4-month treatment
+            </div>
+          </div>
+
+          <div class="prose max-w-none">
+            <h2>Client Background</h2>
+            <p>
+              Marcus, a 35-year-old senior software engineer at a San Francisco-based tech startup, had been working remotely from his apartment in Portland since March 2020. What started as a temporary pandemic measure became permanent—his company went fully remote and closed their physical offices. At first, Marcus loved it. No commute, work in sweatpants, take breaks to walk his dog. The dream, right?
+            </p>
+            <p>
+              Fast forward two years, and that dream had turned into something much darker. His one-bedroom apartment had become his entire world: bedroom, office, gym, social life, everything. He'd wake up, roll out of bed to his desk (literally three feet away), work 10-12 hour days without really noticing, then close his laptop and... just sit there. The boundaries between "work Marcus" and "off-work Marcus" had completely dissolved.
+            </p>
+            <p>
+              The breaking point came during a particularly brutal sprint. His team was pushing to meet a Q3 deadline, and Marcus found himself working until 2 AM multiple nights in a row. Not because anyone was forcing him—his manager kept saying "take breaks, we'll get there"—but because when your office is your bedroom, there's no physical act of "leaving work." He'd close Slack at midnight, then check it "just once" at 1 AM and see a message and think "I'll just fix this real quick." Three hours later, he'd still be coding.
+            </p>
+            <p>
+              His partner (they'd been together six years) finally said something after Marcus snapped at her for the third time in a week about something minor. She pointed out that he hadn't left the apartment in four days, was surviving on DoorDash and coffee, and seemed constantly on edge. When she suggested he might need to talk to someone, Marcus's first thought was "I don't have time for that"—which is when he realized how bad things had gotten.
+            </p>
+
+            <h2>Initial Assessment</h2>
+            <p>
+              Marcus signed up for Talkspace on a Sunday afternoon, mostly because his partner had literally handed him her phone with the app already downloaded. The intake assessment was eye-opening:
+            </p>
+            <ul>
+              <li>PHQ-9 Score: 14 (moderate depression—he was consistently checking "more than half the days" for fatigue, poor concentration, and feeling down)</li>
+              <li>GAD-7 Score: 11 (moderate anxiety—lots of worry about work performance and job security)</li>
+              <li>Burnout Assessment: 78/100 (severe burnout—high scores across exhaustion, cynicism, and reduced efficacy)</li>
+              <li>Work-Life Balance Scale: 2.1/10 (basically nonexistent boundaries)</li>
+            </ul>
+            <p>
+              His therapist, Dr. Chen (who specialized in workplace mental health and happened to also work remotely, which Marcus appreciated), identified several interconnected issues during their first session:
+            </p>
+            <ul>
+              <li>Complete lack of work-life boundaries—laptop in bedroom, checking email at all hours, no clear "end" to workday</li>
+              <li>Social isolation—hadn't seen friends in person in months, most communication was async Slack messages</li>
+              <li>Physical health declining—sitting 14+ hours a day, poor sleep (averaging 5 hours), barely exercising</li>
+              <li>Productivity guilt—feeling like he should always be "optimizing" his time, that taking breaks was "wasting" WFH flexibility</li>
+              <li>Imposter syndrome amplified by remote work—couldn't see colleagues struggling, assumed everyone else was crushing it</li>
+              <li>Loss of identity beyond work—used to have hobbies (played in a rec basketball league, went to concerts), now couldn't remember the last time he did something purely for fun</li>
+              <li>Relationship strain—partner feeling neglected, Marcus feeling guilty but unable to "turn off" work mode</li>
+            </ul>
+
+            <h2>Why Online Therapy Was Perfect for This Situation</h2>
+            <p>
+              Here's the irony: Marcus needed therapy partly because of remote work isolation, but online therapy was actually the ideal solution for his specific situation. Dr. Chen pointed this out during session two, and it was validating to hear.
+            </p>
+
+            <h3>No Additional Commute (Removing a Barrier)</h3>
+            <p>
+              The thought of driving across Portland to sit in a therapist's waiting room after working at a computer all day felt impossible. Marcus admitted he probably wouldn't have started therapy at all if it required leaving his apartment. With Talkspace, he could do sessions from his couch (they agreed: absolutely NOT from his desk/workspace). Removing that friction made consistency possible.
+            </p>
+
+            <h3>Asynchronous Messaging for Real-Time Support</h3>
+            <p>
+              Between weekly video sessions, Marcus could message Dr. Chen when he noticed unhealthy patterns happening. Like when he found himself about to work through lunch for the fifth day straight, he'd send a quick message: "Doing it again. Know I shouldn't but feeling behind on this feature." Dr. Chen would respond within a few hours with a reality check or a reminder of their agreed-upon boundaries. It was like having a voice of reason on standby.
+            </p>
+
+            <h3>Flexibility for His Unpredictable Schedule</h3>
+            <p>
+              Tech work meant Marcus's schedule could change suddenly—emergency deploys, critical bugs, time-sensitive meetings. With Talkspace, he could reschedule sessions with 24 hours notice without losing the spot. When he had to skip their Thursday morning session because of a production issue, they just moved it to Saturday afternoon. That flexibility meant therapy didn't become another stressor.
+            </p>
+
+            <h2>Treatment Approach</h2>
+            <p>
+              Dr. Chen used a combination of cognitive-behavioral therapy (CBT) and acceptance and commitment therapy (ACT), focusing on both practical boundary-setting and deeper work around Marcus's relationship with productivity and self-worth.
+            </p>
+
+            <h3>The Boundary Intervention (Week 1-2)</h3>
+            <p>
+              They started with immediate crisis management because Marcus was genuinely burning out. Dr. Chen had him implement what she called "Digital Sunsets":
+            </p>
+            <ul>
+              <li><strong>Physical workspace shutdown ritual:</strong> At 6 PM (flexible by an hour if needed), Marcus had to physically close his laptop, put it in a drawer, and leave the room for at least 15 minutes</li>
+              <li><strong>Slack/email off phone after 7 PM:</strong> He deleted work apps from his phone entirely (could re-add if absolute emergency, but only happened once in four months)</li>
+              <li><strong>No morning email check until after coffee/breakfast:</strong> This one was hard—Marcus had been checking emails before even getting out of bed</li>
+              <li><strong>Designated "leaving the house" days:</strong> Committed to leaving apartment at least 3 times per week for non-work reasons, even if just to a coffee shop for an hour</li>
+            </ul>
+            <p>
+              The first week of this felt physically painful for Marcus. He'd have phantom phone vibrations, would walk past his desk and want to "just check one thing." Dr. Chen normalized this as withdrawal symptoms from work addiction, which helped Marcus not beat himself up about it.
+            </p>
+
+            <h3>Cognitive Work Around Productivity (Week 3-6)</h3>
+            <p>
+              Once basic boundaries were in place, they dug into why Marcus felt so compelled to work constantly:
+            </p>
+            <ul>
+              <li><strong>Core belief identification:</strong> "My value as a person is determined by my productivity" (yikes, but true)</li>
+              <li><strong>Thought challenging:</strong> When Marcus caught himself thinking "I should be working right now" during off hours, he'd ask: "Would I tell my best friend they 'should' be working at 9 PM on Saturday?" (answer: absolutely not)</li>
+              <li><strong>Values clarification:</strong> Turns out Marcus valued relationships, creativity, and physical health—but was living in direct opposition to those values</li>
+              <li><strong>Redefining success:</strong> Success wasn't "most code commits" but "sustainable performance while maintaining health and relationships"</li>
+            </ul>
+
+            <h3>Social Reconnection (Week 4-8)</h3>
+            <p>
+              Dr. Chen had Marcus do "behavioral activation" but specifically for social connection:
+            </p>
+            <ul>
+              <li>Texted his old basketball group (hadn't seen them in 18 months) and committed to showing up to pickup games every other Sunday</li>
+              <li>Scheduled monthly in-person dinners with his distributed team who lived in Portland (they'd all been remote-only and never met IRL)</li>
+              <li>Started a "Friday afternoon walk" ritual with his partner instead of working through to dinner</li>
+              <li>Joined a local climbing gym (used to climb in college, had forgotten how much he loved it)</li>
+            </ul>
+            <p>
+              These felt forced and awkward at first—Marcus kept thinking "I have too much work to do this"—but Dr. Chen reminded him that was the depression/burnout talking, not reality.
+            </p>
+
+            <h3>Physical Space Redesign (Week 5)</h3>
+            <p>
+              This made a bigger difference than Marcus expected. Dr. Chen had him:
+            </p>
+            <ul>
+              <li>Move his desk OUT of his bedroom entirely (squeezed it into a corner of the living room—not ideal, but better than bed-to-desk proximity)</li>
+              <li>Create a literal physical barrier to close off "work zone" when done (used a folding screen from Target)</li>
+              <li>Designate his bedroom as a "no laptop zone" (phone okay for reading, but no work devices)</li>
+              <li>Set up a "third space" routine—worked from coffee shops two afternoons a week just to have human presence around</li>
+            </ul>
+
+            <h2>Progress Timeline</h2>
+            <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-6 my-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Month 1: Building Boundaries</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Implemented digital sunset routine (6 PM laptop shutdown)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Removed work apps from phone</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Sleep improved from 5 hours to 6.5 hours average</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-6 my-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Month 2: Challenging Thought Patterns</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Identified core "productivity = worth" belief</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Practiced thought challenging techniques</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>PHQ-9 dropped to 9 (mild depression range)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-6 my-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Month 3-4: Social Reconnection & Maintenance</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Rejoined basketball league, attending regularly</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Started climbing 2x/week at local gym</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Relationship quality significantly improved</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Final scores: PHQ-9: 5, GAD-7: 6, Burnout: 38/100</span>
+                </li>
+              </ul>
+            </div>
+
+            <h2>Key Outcomes</h2>
+            <p>
+              After four months of weekly therapy plus messaging support:
+            </p>
+            <ul>
+              <li><strong>Sustainable work hours:</strong> Averaged 42 hours/week (down from 60+), with clear start/end times</li>
+              <li><strong>Better actual productivity:</strong> Ironically, working less hours with better focus led to higher quality work—got promoted to staff engineer</li>
+              <li><strong>Physical health rebounded:</strong> Lost 15 pounds he'd gained during lockdown, sleeping 7+ hours consistently</li>
+              <li><strong>Relationship repair:</strong> Partner reported feeling "like I have my person back"</li>
+              <li><strong>Rediscovered hobbies:</strong> Basketball, climbing, reading for pleasure (not just tech blogs)</li>
+              <li><strong>Mental health stabilized:</strong> Depression and anxiety scores in minimal/mild range</li>
+            </ul>
+
+            <h2>What Worked Specifically for Remote Work Issues</h2>
+            <div class="bg-blue-50 rounded-lg p-6 my-8">
+              <h3 class="font-bold text-gray-900 mb-3">Physical Boundaries</h3>
+              <p class="text-gray-700 mb-2">Moving desk out of bedroom, using visual barriers, creating designated "non-work zones"</p>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6 my-8">
+              <h3 class="font-bold text-gray-900 mb-3">Temporal Boundaries</h3>
+              <p class="text-gray-700 mb-2">Digital sunsets, no morning email, scheduled offline time</p>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6 my-8">
+              <h3 class="font-bold text-gray-900 mb-3">Social Reintegration</h3>
+              <p class="text-gray-700 mb-2">Forced in-person activities to counter remote work isolation</p>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6 my-8">
+              <h3 class="font-bold text-gray-900 mb-3">Cognitive Restructuring</h3>
+              <p class="text-gray-700 mb-2">Challenging beliefs about productivity and self-worth</p>
+            </div>
+
+            <h2>Marcus's Advice for Other Remote Workers</h2>
+            <blockquote class="border-l-4 border-indigo-600 pl-4 italic text-gray-700 my-6">
+              "If you're reading this and thinking 'yeah but I don't have time for therapy'—that's literally what I said, and it's also the biggest red flag that you need it. The whole 'I'll take care of myself after this sprint/launch/quarter' thing is a lie we tell ourselves. There's always another sprint.
+
+              Online therapy was perfect because it removed every excuse I had. Couldn't say I didn't have time to commute. Couldn't say I was too busy during business hours (evening sessions available). Couldn't say I needed to be 'in crisis' to justify it (messaging feature meant I could get support before things got critical).
+
+              The physical boundaries thing—moving my desk, putting laptop away at night—felt silly and performative at first. But your brain needs rituals to shift between modes. When your commute is 10 steps, you have to create artificial transitions or you'll just… never stop working.
+
+              Also: your company won't save you. Mine offered unlimited PTO and kept saying 'take care of yourself,' but also had deadline pressures and always-on culture. You have to advocate for your own boundaries, because nobody else will."
+            </blockquote>
+
+            <h2>Platform Details</h2>
+            <p>
+              Marcus used <strong>Talkspace</strong> for this journey. Why it worked for him:
+            </p>
+            <ul>
+              <li><strong>Therapist specialization:</strong> Could filter for therapists experienced with workplace mental health and burnout</li>
+              <li><strong>Messaging feature:</strong> Between-session support was crucial for real-time boundary enforcement</li>
+              <li><strong>Video session flexibility:</strong> Could reschedule with reasonable notice, important for unpredictable tech schedule</li>
+              <li><strong>Insurance accepted:</strong> His company health plan covered 80% after deductible, made it affordable</li>
+              <li><strong>No waitlist:</strong> Matched with therapist within 48 hours, started immediately</li>
+            </ul>
+
+            <h2>Long-Term Maintenance</h2>
+            <p>
+              Marcus continued monthly check-in sessions for another six months after "graduating" from weekly therapy. Key to maintaining progress:
+            </p>
+            <ul>
+              <li>Kept all the boundary systems in place (the minute he slipped on digital sunsets, burnout crept back)</li>
+              <li>Advocated for company-wide "no-meeting Fridays" to reduce always-on pressure</li>
+              <li>Became mentor for other engineers struggling with remote work boundaries</li>
+              <li>Continued therapy during particularly stressful periods (product launches, team restructuring)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Takeaways */}
+      <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white mb-8">
+        <h2 class="text-2xl font-bold mb-4">Key Takeaways for Remote Workers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold mb-2 flex items-center">
+              <Award class="h-5 w-5 mr-2" />
+              Warning Signs
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>• Working way more hours than you realize</li>
+              <li>• Can't remember last time you left the house</li>
+              <li>• Checking work messages at all hours</li>
+              <li>• Physical health declining</li>
+              <li>• Relationships suffering</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2 flex items-center">
+              <CheckCircle class="h-5 w-5 mr-2" />
+              Solutions That Work
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>• Physical workspace boundaries</li>
+              <li>• Scheduled "end of workday" rituals</li>
+              <li>• Regular in-person social activities</li>
+              <li>• Online therapy (removes barriers)</li>
+              <li>• Company advocacy for sustainable practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-800 mb-3">Find Support</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/tools/matchers/therapy-platform-matcher" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  Find Your Therapist
+                </a>
+              </li>
+              <li>
+                <a href="/best/overall/best-online-therapy" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  Best Online Therapy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-3">Assessments</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/tools/assessments/depression-screening" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  Depression Screening
+                </a>
+              </li>
+              <li>
+                <a href="/tools/assessments/anxiety-screening" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  Anxiety Screening
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-3">More Stories</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/case-studies/demographics/college-student-stress-management" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  College Student Success
+                </a>
+              </li>
+              <li>
+                <a href="/case-studies/demographics" class="text-indigo-600 hover:underline flex items-center">
+                  <ArrowLeft class="h-4 w-4 mr-2 rotate-180" />
+                  All Case Studies
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>

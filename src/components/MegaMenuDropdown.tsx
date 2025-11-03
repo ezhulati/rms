@@ -42,12 +42,15 @@ const MegaMenuDropdown: React.FC<MegaMenuDropdownProps> = ({ category, isActive 
         <>
           {/* Backdrop blur overlay */}
           <div
-            className="fixed inset-0 bg-neutral-900/10 backdrop-blur-[2px] z-40"
+            className="fixed inset-0 bg-neutral-900/10 backdrop-blur-[2px] z-40 pointer-events-none"
             style={{ top: '64px' }}
           />
 
+          {/* Hover Bridge - invisible area to prevent gaps */}
+          <div className="absolute left-0 right-0 top-full h-2 z-50" />
+
           {/* Mega Menu Content */}
-          <div className="absolute left-0 top-full pt-3 z-50">
+          <div className="absolute left-0 top-full pt-2 z-50">
             <div
               className="bg-white rounded-2xl shadow-xl border border-neutral-200/80 p-2 min-w-[320px] animate-fade-in-down"
               style={{

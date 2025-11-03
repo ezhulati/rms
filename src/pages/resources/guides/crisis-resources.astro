@@ -1,22 +1,545 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Phone, MessageSquare, AlertCircle, Heart, Users, Globe, Shield, Clock, MapPin, BookOpen, ExternalLink } from 'lucide-react';
 ---
 
-<BaseLayout title="Crisis Resources | RealMindSolutions" description="Crisis Resources and Hotlines">
+<BaseLayout title="Mental Health Crisis Resources & Emergency Hotlines | RealMindSolutions" description="Comprehensive directory of mental health crisis resources, suicide prevention hotlines, and immediate support services available 24/7 across the United States.">
   {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+  <section class="bg-gradient-to-b from-red-50 via-white to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Crisis Resources and Hotlines</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Immediate crisis support resources.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <AlertCircle class="h-8 w-8 text-red-600" />
+        <span class="text-red-600 font-semibold uppercase tracking-wide">Crisis Resources</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Mental Health Crisis Resources & Emergency Hotlines
+      </h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        If you or someone you know is experiencing a mental health crisis, immediate help is available 24/7
+      </p>
+
+      {/* Emergency Numbers - Prominent Display */}
+      <div class="bg-red-100 border-2 border-red-600 rounded-lg p-6 mb-6">
+        <div class="flex items-start">
+          <Phone class="h-8 w-8 text-red-600 mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-red-900 mb-3">Immediate Crisis Support</h2>
+            <div class="space-y-3 text-lg">
+              <div>
+                <div class="font-bold text-red-900">988 Suicide & Crisis Lifeline</div>
+                <div class="text-red-800">Call or text 988 • Available 24/7 • Free & confidential</div>
+              </div>
+              <div>
+                <div class="font-bold text-red-900">Crisis Text Line</div>
+                <div class="text-red-800">Text HOME to 741741 • 24/7 support via text message</div>
+              </div>
+              <div>
+                <div class="font-bold text-red-900">Emergency Services</div>
+                <div class="text-red-800">Call 911 or go to your nearest emergency room</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg p-4">
+        <p class="text-yellow-900 font-medium">
+          <strong>If you're in immediate danger:</strong> Call 911 or go to your nearest emergency room. Do not wait.
+        </p>
+      </div>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* National Crisis Hotlines */}
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Phone class="h-8 w-8 text-brand-primary mr-3" />
+          National Crisis Hotlines
+        </h2>
+
+        <div class="grid grid-cols-1 gap-6">
+          {/* 988 Suicide & Crisis Lifeline */}
+          <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-lg p-8 border-l-4 border-red-500">
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">988 Suicide & Crisis Lifeline</h3>
+                <p class="text-gray-700 mb-4">
+                  The 988 Lifeline provides 24/7, free and confidential support for people in distress, prevention and crisis resources, and best practices for professionals in the United States.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="flex items-start">
+                    <Phone class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div class="font-bold text-gray-900">Call: 988</div>
+                      <div class="text-sm text-gray-600">Available in English and Spanish</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <MessageSquare class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div class="font-bold text-gray-900">Text: 988</div>
+                      <div class="text-sm text-gray-600">Text-based support available</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <Globe class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div class="font-bold text-gray-900">Chat: 988lifeline.org</div>
+                      <div class="text-sm text-gray-600">Online chat support</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <Clock class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div class="font-bold text-gray-900">24/7/365</div>
+                      <div class="text-sm text-gray-600">Always available</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded p-4 mb-3">
+                  <h4 class="font-bold text-gray-900 mb-2">What to Expect:</h4>
+                  <ul class="space-y-1 text-sm text-gray-700">
+                    <li>• You'll speak with a trained crisis counselor</li>
+                    <li>• Calls are confidential (with rare exceptions for imminent danger)</li>
+                    <li>• Counselors can help connect you to local resources</li>
+                    <li>• Available for yourself or if you're concerned about someone else</li>
+                  </ul>
+                </div>
+
+                <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-primary hover:underline font-medium">
+                  Visit 988lifeline.org <ExternalLink class="h-4 w-4 ml-1" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Crisis Text Line */}
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 border-l-4 border-blue-500">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Crisis Text Line</h3>
+            <p class="text-gray-700 mb-4">
+              Free, 24/7 crisis support via text message. Connect with a trained Crisis Counselor to receive support and information.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="flex items-start">
+                <MessageSquare class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div class="font-bold text-gray-900">Text HOME to 741741</div>
+                  <div class="text-sm text-gray-600">Available in the US</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <Clock class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div class="font-bold text-gray-900">24/7 Support</div>
+                  <div class="text-sm text-gray-600">Every day of the year</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How It Works:</h4>
+              <ol class="space-y-1 text-sm text-gray-700 list-decimal list-inside">
+                <li>Text HOME to 741741</li>
+                <li>A trained Crisis Counselor receives your text and responds</li>
+                <li>The counselor will help you move from a hot moment to a cool calm</li>
+                <li>Texting is free and confidential</li>
+              </ol>
+            </div>
+
+            <a href="https://www.crisistextline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-primary hover:underline font-medium">
+              Visit CrisisTextLine.org <ExternalLink class="h-4 w-4 ml-1" />
+            </a>
+          </div>
+
+          {/* Veterans Crisis Line */}
+          <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8 border-l-4 border-green-500">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Veterans Crisis Line</h3>
+            <p class="text-gray-700 mb-4">
+              Confidential crisis support for Veterans, service members, National Guard and Reserve, and their families and friends.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="flex items-start">
+                <Phone class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div class="font-bold text-gray-900">Call: 988, then press 1</div>
+                  <div class="text-sm text-gray-600">Or call 1-800-273-8255</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <MessageSquare class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div class="font-bold text-gray-900">Text: 838255</div>
+                  <div class="text-sm text-gray-600">Text-based support for Veterans</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://www.veteranscrisisline.net" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-primary hover:underline font-medium">
+              Visit VeteransCrisisLine.net <ExternalLink class="h-4 w-4 ml-1" />
+            </a>
+          </div>
+        </div>
       </div>
+
+      {/* Specialized Crisis Lines */}
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Users class="h-8 w-8 text-brand-primary mr-3" />
+          Specialized Crisis Support
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* LGBTQ+ */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">🏳️‍🌈 LGBTQ+ Support</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">The Trevor Project</div>
+                <div class="text-sm text-gray-600 mb-2">Crisis support for LGBTQ+ young people (ages 13-24)</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-866-488-7386</div>
+                  <div>• Text START to 678-678</div>
+                  <div>• Chat: thetrevorproject.org</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="font-bold text-gray-900">Trans Lifeline</div>
+                <div class="text-sm text-gray-600 mb-2">Peer support hotline staffed by transgender people</div>
+                <div class="text-sm space-y-1">
+                  <div>• US: 1-877-565-8860</div>
+                  <div>• Canada: 1-877-330-6366</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Youth & Teens */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">👨‍👩‍👧‍👦 Youth & Teen Support</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">Boys Town National Hotline</div>
+                <div class="text-sm text-gray-600 mb-2">For kids, teens, and young adults</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-448-3228</div>
+                  <div>• Text VOICE to 20121</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="font-bold text-gray-900">Teen Line</div>
+                <div class="text-sm text-gray-600 mb-2">Teens helping teens</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-852-8336 (6pm-10pm PT)</div>
+                  <div>• Text TEEN to 839863 (6pm-9pm PT)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Domestic Violence */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">🛡️ Domestic Violence Support</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">National Domestic Violence Hotline</div>
+                <div class="text-sm text-gray-600 mb-2">Confidential support for victims and survivors</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-799-7233</div>
+                  <div>• Text START to 88788</div>
+                  <div>• Chat: thehotline.org</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="font-bold text-gray-900">National Sexual Assault Hotline</div>
+                <div class="text-sm text-gray-600 mb-2">Operated by RAINN</div>
+                <div class="text-sm">
+                  • Call: 1-800-656-4673 (HOPE)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Substance Abuse */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">💊 Substance Abuse Support</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">SAMHSA National Helpline</div>
+                <div class="text-sm text-gray-600 mb-2">Treatment referral and information service</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-662-4357 (HELP)</div>
+                  <div>• Available 24/7 in English and Spanish</div>
+                  <div>• Free and confidential</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="font-bold text-gray-900">Alcoholics Anonymous</div>
+                <div class="text-sm">
+                  • Visit: aa.org to find local meetings
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Eating Disorders */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">🍽️ Eating Disorder Support</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">NEDA Hotline</div>
+                <div class="text-sm text-gray-600 mb-2">National Eating Disorders Association</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-931-2237</div>
+                  <div>• Text NEDA to 741741</div>
+                  <div>• Hours: Mon-Thurs 9am-9pm ET, Fri 9am-5pm ET</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Disaster Distress */}
+          <div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">🌪️ Disaster Distress Helpline</h3>
+
+            <div class="space-y-4 mb-4">
+              <div>
+                <div class="font-bold text-gray-900">SAMHSA Disaster Distress</div>
+                <div class="text-sm text-gray-600 mb-2">Crisis counseling related to natural or human-caused disasters</div>
+                <div class="text-sm space-y-1">
+                  <div>• Call: 1-800-985-5990</div>
+                  <div>• Text TalkWithUs to 66746</div>
+                  <div>• Available 24/7</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Crisis Support */}
+      <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-8 mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <AlertCircle class="h-8 w-8 text-orange-600 mr-3" />
+          When to Seek Crisis Support
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Crisis support is available for anyone experiencing emotional distress or a mental health emergency. You don't need to be in imminent danger to reach out. Consider calling if you're experiencing:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Immediate Crisis Signs</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• Thoughts of suicide or self-harm</li>
+              <li>• Plans or means to hurt yourself or others</li>
+              <li>• Feeling unable to control your actions</li>
+              <li>• Experiencing a psychotic episode</li>
+              <li>• Extreme panic or anxiety attacks</li>
+              <li>• Feeling like you can't go on</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Non-Emergency Support</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• Overwhelming sadness or depression</li>
+              <li>• Experiencing trauma or grief</li>
+              <li>• Relationship or family crisis</li>
+              <li>• Loss of a loved one</li>
+              <li>• Substance abuse concerns</li>
+              <li>• Need someone to talk to</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* What to Do If Someone Else is in Crisis */}
+      <div class="bg-white rounded-lg border-2 border-gray-200 p-8 mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Heart class="h-8 w-8 text-brand-primary mr-3" />
+          Helping Someone Else in Crisis
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          If you're concerned about someone else, here are steps you can take:
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">1</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Listen Without Judgment</h3>
+              <p class="text-gray-700 text-sm">
+                Give them your full attention. Let them express their feelings without interrupting or trying to "fix" the problem immediately. Sometimes people just need to be heard.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">2</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Ask Directly About Suicide</h3>
+              <p class="text-gray-700 text-sm mb-2">
+                If you're worried, ask directly: "Are you thinking about suicide?" This doesn't plant the idea—it shows you care and opens the door to help.
+              </p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>✓ Be direct, caring, and calm</li>
+                <li>✓ Don't debate whether suicide is right or wrong</li>
+                <li>✓ Avoid trying to guilt them out of it</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">3</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Keep Them Safe</h3>
+              <p class="text-gray-700 text-sm">
+                If they're in immediate danger, don't leave them alone. Remove any means of self-harm if possible. Call 911 or take them to the nearest emergency room.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">4</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Connect Them to Help</h3>
+              <p class="text-gray-700 text-sm mb-2">
+                Offer to call a crisis line together, or help them connect with a mental health professional. You can call 988 on their behalf to get guidance.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">5</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Follow Up</h3>
+              <p class="text-gray-700 text-sm">
+                Check in after the crisis has passed. Let them know you care and are there for ongoing support. A simple text or call can make a difference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* International Resources */}
+      <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-8 mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Globe class="h-8 w-8 text-purple-600 mr-3" />
+          International Crisis Resources
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          If you're outside the United States, these international resources provide crisis support:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded p-4">
+            <h3 class="font-bold text-gray-900 mb-2">🇨🇦 Canada</h3>
+            <div class="text-sm space-y-1">
+              <div><strong>Crisis Services Canada:</strong> 1-833-456-4566</div>
+              <div><strong>Text:</strong> 45645</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded p-4">
+            <h3 class="font-bold text-gray-900 mb-2">🇬🇧 United Kingdom</h3>
+            <div class="text-sm space-y-1">
+              <div><strong>Samaritans:</strong> 116 123</div>
+              <div><strong>SHOUT:</strong> Text 85258</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded p-4">
+            <h3 class="font-bold text-gray-900 mb-2">🇦🇺 Australia</h3>
+            <div class="text-sm space-y-1">
+              <div><strong>Lifeline:</strong> 13 11 14</div>
+              <div><strong>Kids Helpline:</strong> 1800 55 1800</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded p-4">
+            <h3 class="font-bold text-gray-900 mb-2">🌍 Worldwide</h3>
+            <div class="text-sm">
+              <div><strong>International Association for Suicide Prevention:</strong></div>
+              <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">
+                Find crisis centers worldwide
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-white rounded-lg border-2 border-gray-200 p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <BookOpen class="h-8 w-8 text-brand-primary mr-3" />
+          Additional Mental Health Resources
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Find Long-Term Support</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">
+                  → Find Online Therapy Platform
+                </a>
+              </li>
+              <li>
+                <a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">
+                  → Best Online Therapy Platforms 2025
+                </a>
+              </li>
+              <li>
+                <a href="/tools/assessments/mental-health-assessment" class="text-brand-primary hover:underline">
+                  → Take a Mental Health Assessment
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Educational Resources</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary hover:underline">
+                  → Understanding Different Types of Therapy
+                </a>
+              </li>
+              <li>
+                <a href="/guides/selection/choosing-right-therapist" class="text-brand-primary hover:underline">
+                  → How to Choose the Right Therapist
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/mood-tracking" class="text-brand-primary hover:underline">
+                  → Free Mental Health Worksheets
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>

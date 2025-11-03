@@ -1,0 +1,175 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - main [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e11]: Trusted by 50,000+ people finding care
+          - heading "Find the right therapy platform for your needs" [level=1] [ref=e12]:
+            - text: Find the right
+            - generic [ref=e13]: therapy platform
+            - text: for your needs
+          - paragraph [ref=e14]: Compare costs, features, and therapist credentials across all major online therapy platforms — in one place.
+          - generic [ref=e15]:
+            - link "Take 3-Min Assessment" [ref=e16] [cursor=pointer]:
+              - /url: /tools/assessments/mental-health-assessment
+              - text: Take 3-Min Assessment
+              - img [ref=e17]
+            - link "Compare Platforms" [ref=e19] [cursor=pointer]:
+              - /url: /compare
+          - generic [ref=e20]:
+            - generic [ref=e21]:
+              - img [ref=e22]
+              - generic [ref=e24]: 4.8/5 from 12,000+ reviews
+            - generic [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e28]: 100% HIPAA compliant
+        - generic [ref=e31]:
+          - img "Person finding mental health support through online therapy platforms" [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: 25+
+              - generic [ref=e36]: Platforms Reviewed
+            - generic [ref=e37]:
+              - generic [ref=e38]: 100%
+              - generic [ref=e39]: Unbiased Reviews
+      - region "How We Help You Find the Right Solution" [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "How We Help You Find the Right Solution" [level=2] [ref=e43]
+            - paragraph [ref=e44]: We provide comprehensive resources to help you navigate the world of online therapy and mental health services.
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - img [ref=e48]
+              - heading "Compare Platforms" [level=3] [ref=e51]
+              - paragraph [ref=e52]: Side-by-side comparisons of top online therapy platforms to help you make an informed decision.
+              - link "Explore Comparisons" [ref=e53] [cursor=pointer]:
+                - /url: /compare
+                - text: Explore Comparisons
+                - img [ref=e54]
+            - generic [ref=e56]:
+              - img [ref=e58]
+              - heading "Expert Reviews" [level=3] [ref=e63]
+              - paragraph [ref=e64]: In-depth, unbiased reviews of therapy platforms, features, and specialties.
+              - link "Read Reviews" [ref=e65] [cursor=pointer]:
+                - /url: /reviews
+                - text: Read Reviews
+                - img [ref=e66]
+            - generic [ref=e68]:
+              - img [ref=e70]
+              - heading "Personalized Tools" [level=3] [ref=e72]
+              - paragraph [ref=e73]: Assessments and matchers to help you find the perfect mental health solution for your needs.
+              - link "Try Our Tools" [ref=e74] [cursor=pointer]:
+                - /url: /tools
+                - text: Try Our Tools
+                - img [ref=e75]
+      - region "Ready to Start Your Mental Health Journey?" [ref=e77]:
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - heading "Ready to Start Your Mental Health Journey?" [level=2] [ref=e91]
+          - paragraph [ref=e92]: Take our free assessment to get personalized recommendations for online therapy platforms that match your needs.
+          - link "Take Free Assessment" [ref=e93] [cursor=pointer]:
+            - /url: /tools/assessments/mental-health-assessment
+            - text: Take Free Assessment
+            - img [ref=e94]
+    - contentinfo [ref=e96]:
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - img "RealMindSolutions Logo" [ref=e102]
+              - generic [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: Real
+                  - generic [ref=e106]: Mind
+                - generic [ref=e107]: Solutions
+            - paragraph [ref=e108]: Helping you find the right mental health solutions for your unique needs.
+            - generic [ref=e109]:
+              - link [ref=e110] [cursor=pointer]:
+                - /url: https://facebook.com
+                - img [ref=e111]
+              - link [ref=e113] [cursor=pointer]:
+                - /url: https://twitter.com
+                - img [ref=e114]
+              - link [ref=e116] [cursor=pointer]:
+                - /url: https://instagram.com
+                - img [ref=e117]
+              - link [ref=e120] [cursor=pointer]:
+                - /url: https://linkedin.com
+                - img [ref=e121]
+          - generic [ref=e125]:
+            - heading "Quick Links" [level=3] [ref=e126]
+            - list [ref=e127]:
+              - listitem [ref=e128]:
+                - link "Compare" [ref=e129] [cursor=pointer]:
+                  - /url: /compare
+              - listitem [ref=e130]:
+                - link "Reviews" [ref=e131] [cursor=pointer]:
+                  - /url: /reviews
+              - listitem [ref=e132]:
+                - link "Guides" [ref=e133] [cursor=pointer]:
+                  - /url: /guides
+              - listitem [ref=e134]:
+                - link "Best For You" [ref=e135] [cursor=pointer]:
+                  - /url: /best
+              - listitem [ref=e136]:
+                - link "Tools" [ref=e137] [cursor=pointer]:
+                  - /url: /tools
+              - listitem [ref=e138]:
+                - link "Learn" [ref=e139] [cursor=pointer]:
+                  - /url: /learn
+          - generic [ref=e140]:
+            - heading "Resources" [level=3] [ref=e141]
+            - list [ref=e142]:
+              - listitem [ref=e143]:
+                - link "Worksheets" [ref=e144] [cursor=pointer]:
+                  - /url: /resources/worksheets
+              - listitem [ref=e145]:
+                - link "Case Studies" [ref=e146] [cursor=pointer]:
+                  - /url: /case-studies
+              - listitem [ref=e147]:
+                - link "Blog" [ref=e148] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e149]:
+                - link "Statistics" [ref=e150] [cursor=pointer]:
+                  - /url: /learn/statistics
+              - listitem [ref=e151]:
+                - link "Fundamentals" [ref=e152] [cursor=pointer]:
+                  - /url: /learn/fundamentals
+          - generic [ref=e153]:
+            - heading "Contact Us" [level=3] [ref=e154]
+            - paragraph [ref=e155]: Have questions or feedback? We're here to help.
+            - link "Get in Touch" [ref=e156] [cursor=pointer]:
+              - /url: /contact
+              - text: Get in Touch
+              - img [ref=e157]
+        - generic [ref=e160]:
+          - paragraph [ref=e161]: "Disclaimer: RealMindSolutions provides information for educational purposes only. We are not a substitute for professional medical advice, diagnosis, or treatment."
+          - paragraph [ref=e162]: © 2025 RealMindSolutions. All rights reserved.
+          - generic [ref=e163]:
+            - link "Privacy Policy" [ref=e164] [cursor=pointer]:
+              - /url: /privacy-policy
+            - link "Terms of Service" [ref=e165] [cursor=pointer]:
+              - /url: /terms-of-service
+            - link "Accessibility" [ref=e166] [cursor=pointer]:
+              - /url: /accessibility
+  - generic [ref=e169]:
+    - button "Menu" [ref=e170]:
+      - img [ref=e172]
+      - generic: Menu
+    - button "Inspect" [ref=e176]:
+      - img [ref=e178]
+      - generic: Inspect
+    - button "Audit" [ref=e180]:
+      - generic [ref=e181]:
+        - img [ref=e182]
+        - img [ref=e185]
+      - generic: Audit
+    - button "Settings" [ref=e188]:
+      - img [ref=e190]
+      - generic: Settings
+```
