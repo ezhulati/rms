@@ -1,21 +1,668 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Users, Heart, MessageCircle, Video, MapPin, Globe, Calendar, Shield, CheckCircle, AlertTriangle, Phone, Lightbulb, ArrowRight, Clock, DollarSign } from 'lucide-react';
 ---
 
-<BaseLayout title="Depression Support Groups | RealMindSolutions" description="Depression Support Groups">
+<BaseLayout title="Depression Support Groups | RealMindSolutions" description="Comprehensive directory of depression support groups—online and in-person, free and facilitated. Find peer support, share experiences, and connect with others who understand.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Depression Support Groups</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Find depression support groups and communities.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Find community, connection, and hope through peer support groups for depression—online and in-person.</p>
+
+      <div class="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <p class="text-gray-700 leading-relaxed">
+          Support groups provide a safe space to share experiences, learn coping strategies, and connect with others who truly understand what you're going through. Whether you prefer online or in-person meetings, free peer-led or professionally facilitated groups, this directory will help you find the right support.
+        </p>
+      </div>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Why Join a Support Group */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+      <div class="flex items-center mb-8">
+        <Heart className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Why Join a Depression Support Group?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">You're Not Alone</h3>
+          <p class="text-sm text-gray-700">
+            Depression can feel incredibly isolating. Support groups remind you that others have walked this path and understand your struggles without judgment.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Learn Coping Strategies</h3>
+          <p class="text-sm text-gray-700">
+            Hear what's worked for others—practical tips, resources, and strategies you might not have discovered on your own or in individual therapy.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Feel Understood</h3>
+          <p class="text-sm text-gray-700">
+            Share your story with people who "get it" without having to explain. The validation and empathy can be incredibly healing.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Gain Perspective</h3>
+          <p class="text-sm text-gray-700">
+            Seeing others at different stages of recovery can provide hope and help you recognize your own progress over time.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Practice Social Connection</h3>
+          <p class="text-sm text-gray-700">
+            When depression makes you want to withdraw, support groups offer low-pressure social interaction and can help reduce isolation.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Complement Therapy</h3>
+          <p class="text-sm text-gray-700">
+            Support groups work alongside—not instead of—professional treatment. Many therapists encourage group participation as part of recovery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Types of Support Groups */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Users className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Types of Depression Support Groups</h2>
+      </div>
+
+      <div class="space-y-6">
+        {/* Peer-Led vs Facilitated */}
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Peer-Led vs. Professionally Facilitated</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h4 class="font-bold text-blue-900 mb-3">Peer-Led Groups</h4>
+              <p class="text-sm text-gray-700 mb-3">
+                Run by people with lived experience of depression, these groups offer mutual support and shared wisdom.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Usually free</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />More informal and conversational</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Emphasis on shared experience</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Widely available</li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-lg p-6">
+              <h4 class="font-bold text-green-900 mb-3">Professionally Facilitated Groups</h4>
+              <p class="text-sm text-gray-700 mb-3">
+                Led by therapists or counselors, often incorporating psychoeducation and structured exercises.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />May have a fee (sometimes covered by insurance)</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />More structured curriculum</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Professional guidance and expertise</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Skills-building focus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Online vs In-Person */}
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Online vs. In-Person</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h4 class="font-bold text-purple-900 mb-3">Online Support Groups</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Join from anywhere</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />More scheduling flexibility</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Lower barrier when leaving home is hard</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Option for anonymity</li>
+                <li><AlertTriangle className="h-4 w-4 text-yellow-600 inline mr-2" />Less personal connection than face-to-face</li>
+              </ul>
+            </div>
+
+            <div class="bg-orange-50 rounded-lg p-6">
+              <h4 class="font-bold text-orange-900 mb-3">In-Person Support Groups</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Stronger sense of connection</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Non-verbal communication and body language</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Gets you out of the house</li>
+                <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />May lead to friendships outside group</li>
+                <li><AlertTriangle className="h-4 w-4 text-yellow-600 inline mr-2" />Requires transportation and energy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* National Depression Support Groups Directory */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Globe className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">National Depression Support Groups Directory</h2>
+      </div>
+
+      <div class="space-y-6">
+        {/* Depression and Bipolar Support Alliance (DBSA) */}
+        <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-8">
+          <div class="flex items-start mb-4">
+            <Users className="h-10 w-10 text-blue-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Depression and Bipolar Support Alliance (DBSA)</h3>
+              <p class="text-sm text-blue-800 font-semibold">The largest peer-led mental health organization in the US</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 mb-4">
+            <p class="text-sm text-gray-700 mb-4">
+              DBSA offers free, peer-led support groups across the United States and online. With over 600 chapters nationwide, DBSA groups provide a welcoming space for people living with depression and bipolar disorder.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">What They Offer:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• In-person support groups nationwide</li>
+                  <li>• Online support groups via video and chat</li>
+                  <li>• Separate groups for depression and bipolar</li>
+                  <li>• Groups for family and friends</li>
+                  <li>• Wellness tools and resources</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">Key Details:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li><DollarSign className="h-4 w-4 text-green-600 inline mr-1" /><strong>Cost:</strong> Free</li>
+                  <li><Users className="h-4 w-4 text-blue-600 inline mr-1" /><strong>Format:</strong> Peer-led</li>
+                  <li><MapPin className="h-4 w-4 text-red-600 inline mr-1" /><strong>Location:</strong> In-person + Online</li>
+                  <li><Shield className="h-4 w-4 text-purple-600 inline mr-1" /><strong>Privacy:</strong> Confidential</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 rounded p-4">
+              <p class="text-sm text-gray-900 mb-2"><strong>How to Join:</strong></p>
+              <p class="text-sm text-gray-700 mb-2">
+                Visit <a href="https://www.dbsalliance.org/support/chapters-and-support-groups/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">www.dbsalliance.org</a> and use their "Find a Support Group" tool to search by zip code.
+              </p>
+              <p class="text-xs text-gray-600">Online groups meet regularly via Zoom with no registration required for most meetings.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* NAMI (National Alliance on Mental Illness) */}
+        <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8">
+          <div class="flex items-start mb-4">
+            <Heart className="h-10 w-10 text-green-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">NAMI (National Alliance on Mental Illness)</h3>
+              <p class="text-sm text-green-800 font-semibold">Peer support, education, and advocacy</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 mb-4">
+            <p class="text-sm text-gray-700 mb-4">
+              NAMI Connection is a free, peer-led recovery support group for adults living with mental health conditions, including depression. NAMI also offers groups for family members and loved ones.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">What They Offer:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• NAMI Connection support groups</li>
+                  <li>• Family Support Groups</li>
+                  <li>• Educational programs and classes</li>
+                  <li>• Helpline: 1-800-950-NAMI (6264)</li>
+                  <li>• Local and online meetings</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">Key Details:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li><DollarSign className="h-4 w-4 text-green-600 inline mr-1" /><strong>Cost:</strong> Free</li>
+                  <li><Users className="h-4 w-4 text-blue-600 inline mr-1" /><strong>Format:</strong> Peer-led</li>
+                  <li><MapPin className="h-4 w-4 text-red-600 inline mr-1" /><strong>Location:</strong> In-person + Online</li>
+                  <li><Clock className="h-4 w-4 text-orange-600 inline mr-1" /><strong>Duration:</strong> 90 minutes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-green-50 rounded p-4">
+              <p class="text-sm text-gray-900 mb-2"><strong>How to Join:</strong></p>
+              <p class="text-sm text-gray-700 mb-2">
+                Visit <a href="https://www.nami.org/Support-Education/Support-Groups/NAMI-Connection" class="text-green-600 hover:underline" target="_blank" rel="noopener">www.nami.org</a> and search for local groups by zip code, or join virtual NAMI Connection groups.
+              </p>
+              <p class="text-xs text-gray-600">Groups use a structured format with discussion topics rotating weekly.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mental Health America (MHA) */}
+        <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8">
+          <div class="flex items-start mb-4">
+            <MessageCircle className="h-10 w-10 text-purple-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Mental Health America (MHA) Affiliate Groups</h3>
+              <p class="text-sm text-purple-800 font-semibold">Community-based mental health support</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 mb-4">
+            <p class="text-sm text-gray-700 mb-4">
+              MHA has local affiliates across the country that host support groups, educational programs, and peer support services for depression and other mental health conditions.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">What They Offer:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Local affiliate support groups</li>
+                  <li>• Online screening tools</li>
+                  <li>• Educational resources</li>
+                  <li>• Peer support services (varies by location)</li>
+                  <li>• Advocacy and awareness programs</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">Key Details:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li><DollarSign className="h-4 w-4 text-green-600 inline mr-1" /><strong>Cost:</strong> Free or low-cost</li>
+                  <li><MapPin className="h-4 w-4 text-red-600 inline mr-1" /><strong>Location:</strong> Varies by affiliate</li>
+                  <li><Globe className="h-4 w-4 text-blue-600 inline mr-1" /><strong>Format:</strong> Varies</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 rounded p-4">
+              <p class="text-sm text-gray-900 mb-2"><strong>How to Join:</strong></p>
+              <p class="text-sm text-gray-700">
+                Visit <a href="https://mhanational.org/find-affiliate" class="text-purple-600 hover:underline" target="_blank" rel="noopener">mhanational.org</a> to find your local MHA affiliate and inquire about support groups in your area.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* The Tribe Wellness Community */}
+        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-8">
+          <div class="flex items-start mb-4">
+            <Video className="h-10 w-10 text-orange-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">The Tribe Wellness Community</h3>
+              <p class="text-sm text-orange-800 font-semibold">24/7 online peer support community</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 mb-4">
+            <p class="text-sm text-gray-700 mb-4">
+              The Tribe is a free online wellness community offering live video support groups, chat rooms, and forums for people experiencing depression, anxiety, and other mental health challenges.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">What They Offer:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• 24/7 live video support groups</li>
+                  <li>• Scheduled themed group sessions</li>
+                  <li>• Anonymous chat and forums</li>
+                  <li>• Peer moderation and support</li>
+                  <li>• Mobile app available</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">Key Details:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li><DollarSign className="h-4 w-4 text-green-600 inline mr-1" /><strong>Cost:</strong> Free</li>
+                  <li><Globe className="h-4 w-4 text-blue-600 inline mr-1" /><strong>Format:</strong> Online only</li>
+                  <li><Clock className="h-4 w-4 text-orange-600 inline mr-1" /><strong>Availability:</strong> 24/7</li>
+                  <li><Shield className="h-4 w-4 text-purple-600 inline mr-1" /><strong>Privacy:</strong> Anonymous option</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-orange-50 rounded p-4">
+              <p class="text-sm text-gray-900 mb-2"><strong>How to Join:</strong></p>
+              <p class="text-sm text-gray-700">
+                Visit <a href="https://www.tribewellness.community/" class="text-orange-600 hover:underline" target="_blank" rel="noopener">tribewellness.community</a> to create a free account and join live support groups instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 7 Cups */}
+        <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-8">
+          <div class="flex items-start mb-4">
+            <MessageCircle className="h-10 w-10 text-indigo-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">7 Cups</h3>
+              <p class="text-sm text-indigo-800 font-semibold">Free emotional support and online therapy</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 mb-4">
+            <p class="text-sm text-gray-700 mb-4">
+              7 Cups offers free, anonymous emotional support through trained volunteer listeners, plus online support groups and forums for depression and many other topics.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">What They Offer:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• 1-on-1 chat with trained listeners (free)</li>
+                  <li>• Scheduled depression support groups</li>
+                  <li>• Community forums and chat rooms</li>
+                  <li>• Self-help guides and exercises</li>
+                  <li>• Optional paid therapy services</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-sm">Key Details:</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li><DollarSign className="h-4 w-4 text-green-600 inline mr-1" /><strong>Cost:</strong> Free (therapy is paid)</li>
+                  <li><Globe className="h-4 w-4 text-blue-600 inline mr-1" /><strong>Format:</strong> Online text chat</li>
+                  <li><Clock className="h-4 w-4 text-orange-600 inline mr-1" /><strong>Availability:</strong> 24/7</li>
+                  <li><Shield className="h-4 w-4 text-purple-600 inline mr-1" /><strong>Privacy:</strong> Anonymous</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-indigo-50 rounded p-4">
+              <p class="text-sm text-gray-900 mb-2"><strong>How to Join:</strong></p>
+              <p class="text-sm text-gray-700">
+                Visit <a href="https://www.7cups.com/" class="text-indigo-600 hover:underline" target="_blank" rel="noopener">www.7cups.com</a> to create a free account and connect with a listener or join support groups.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Online Depression Communities */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Video className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Online Depression Communities</h2>
+      </div>
+
+      <p class="text-gray-700 mb-6">
+        In addition to structured support groups, these online communities offer forums, discussion boards, and peer support for depression:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">r/depression (Reddit)</h3>
+          <p class="text-sm text-gray-700 mb-3">
+            Large, active community (900k+ members) for discussing depression, sharing experiences, and offering peer support.
+          </p>
+          <ul class="space-y-1 text-xs text-gray-700 mb-3">
+            <li>• Anonymous posting</li>
+            <li>• Active moderation</li>
+            <li>• Daily discussion threads</li>
+          </ul>
+          <a href="https://www.reddit.com/r/depression/" class="text-blue-600 hover:underline text-sm" target="_blank" rel="noopener">reddit.com/r/depression</a>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Depression Sanctuary</h3>
+          <p class="text-sm text-gray-700 mb-3">
+            Peer support forum with a focus on mutual understanding and non-judgmental support for people living with depression.
+          </p>
+          <ul class="space-y-1 text-xs text-gray-700 mb-3">
+            <li>• Moderated forums</li>
+            <li>• Crisis resources</li>
+            <li>• Anonymous option</li>
+          </ul>
+          <a href="https://www.depression-sanctuary.com/" class="text-blue-600 hover:underline text-sm" target="_blank" rel="noopener">depression-sanctuary.com</a>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">HealthUnlocked Depression Support</h3>
+          <p class="text-sm text-gray-700 mb-3">
+            Online community where members share experiences, ask questions, and support each other through depression.
+          </p>
+          <ul class="space-y-1 text-xs text-gray-700 mb-3">
+            <li>• Free to join</li>
+            <li>• Partnered with health organizations</li>
+            <li>• Active daily engagement</li>
+          </ul>
+          <a href="https://healthunlocked.com/depression-support" class="text-blue-600 hover:underline text-sm" target="_blank" rel="noopener">healthunlocked.com</a>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">PsychCentral Support Groups</h3>
+          <p class="text-sm text-gray-700 mb-3">
+            Moderated online forums covering depression and many other mental health topics with expert oversight.
+          </p>
+          <ul class="space-y-1 text-xs text-gray-700 mb-3">
+            <li>• Expert-moderated</li>
+            <li>• Topic-specific forums</li>
+            <li>• Educational resources</li>
+          </ul>
+          <a href="https://forums.psychcentral.com/" class="text-blue-600 hover:underline text-sm" target="_blank" rel="noopener">forums.psychcentral.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Finding Local In-Person Groups */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <MapPin className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Finding Local In-Person Support Groups</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Search Directories</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              <strong>DBSA Chapter Locator:</strong> <a href="https://www.dbsalliance.org/support/chapters-and-support-groups/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">dbsalliance.org</a>
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              <strong>NAMI Affiliate Finder:</strong> <a href="https://www.nami.org/Find-Your-Local-NAMI" class="text-blue-600 hover:underline" target="_blank" rel="noopener">nami.org</a>
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              <strong>MHA Affiliate Locator:</strong> <a href="https://mhanational.org/find-affiliate" class="text-blue-600 hover:underline" target="_blank" rel="noopener">mhanational.org</a>
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              <strong>Psychology Today Groups:</strong> <a href="https://groups.psychologytoday.com/rms/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">groups.psychologytoday.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Ask Your Providers</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Ask your therapist or psychiatrist for local recommendations
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Contact local mental health clinics or community centers
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Check with your hospital's behavioral health department
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Ask your primary care doctor for referrals
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Check Community Resources</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Local libraries often host or know about support groups
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Faith communities may offer mental health support groups
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Community mental health centers
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              YMCAs and community centers
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Insurance Networks</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Call your insurance company's behavioral health line
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Some insurance plans cover group therapy
+            </li>
+            <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />
+              Ask about intensive outpatient programs (IOPs) that include group therapy
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Tips for Getting the Most Out of Support Groups */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Lightbulb className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Tips for Getting the Most Out of Support Groups</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Try Multiple Groups</h3>
+          <p class="text-sm text-gray-700">
+            Every group has a different vibe and format. Don't give up if the first one doesn't feel right—try a few before deciding support groups aren't for you.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Give It Time</h3>
+          <p class="text-sm text-gray-700">
+            Attending 3-4 meetings before making a judgment allows you to get comfortable, see different discussion topics, and build initial connections.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">You Don't Have to Share Right Away</h3>
+          <p class="text-sm text-gray-700">
+            It's okay to listen for the first few meetings. Participate when you're ready—there's no pressure to share personal details before you feel comfortable.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Respect Confidentiality</h3>
+          <p class="text-sm text-gray-700">
+            What's shared in the group stays in the group. Honor others' privacy and trust, and expect the same in return.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Be Open to Different Perspectives</h3>
+          <p class="text-sm text-gray-700">
+            People at different stages of recovery have different viewpoints. You don't have to agree with everyone, but staying open can lead to new insights.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Support Groups Complement Therapy</h3>
+          <p class="text-sm text-gray-700">
+            Groups are powerful, but they're not a replacement for professional treatment. Use them alongside therapy and/or medication for best results.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">When Support Groups Might Not Be Right:</h3>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><AlertTriangle className="h-4 w-4 text-yellow-600 inline mr-2" />
+            <strong>In acute crisis:</strong> If you're in immediate danger, call 988 or go to the ER. Support groups aren't for crisis intervention.
+          </li>
+          <li><AlertTriangle className="h-4 w-4 text-yellow-600 inline mr-2" />
+            <strong>If the group is triggering:</strong> Some groups may worsen symptoms if discussions are too intense or members are in crisis. It's okay to step back.
+          </li>
+          <li><AlertTriangle className="h-4 w-4 text-yellow-600 inline mr-2" />
+            <strong>If you need professional treatment first:</strong> Severe depression may require individual therapy or medication before group participation is helpful.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Crisis Resources */}
+  <section class="bg-gradient-to-b from-red-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-md border-2 border-red-200 p-8">
+        <div class="flex items-center mb-4">
+          <AlertTriangle className="h-8 w-8 text-red-600 mr-3" />
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">If You're in Crisis</h2>
+        </div>
+        <p class="text-gray-700 mb-6">
+          If you're experiencing a mental health emergency or having thoughts of suicide, please reach out for immediate support:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-red-50 rounded-lg p-4">
+            <div class="flex items-center mb-2">
+              <Phone className="h-5 w-5 text-red-600 mr-2" />
+              <h3 class="font-bold text-gray-900">National Suicide Prevention Lifeline</h3>
+            </div>
+            <p class="text-2xl font-bold text-red-600 mb-1">988</p>
+            <p class="text-sm text-gray-700">24/7 crisis support via call or text</p>
+          </div>
+          <div class="bg-red-50 rounded-lg p-4">
+            <div class="flex items-center mb-2">
+              <MessageCircle className="h-5 w-5 text-red-600 mr-2" />
+              <h3 class="font-bold text-gray-900">Crisis Text Line</h3>
+            </div>
+            <p class="text-2xl font-bold text-red-600 mb-1">Text HOME to 741741</p>
+            <p class="text-sm text-gray-700">24/7 crisis support via text</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mt-4">
+          If you're in immediate danger, call 911 or go to your nearest emergency room.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/resources/guides/crisis-resources" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Crisis Resources Guide</h3>
+          <p class="text-sm text-gray-700">Comprehensive hotline and emergency resource directory</p>
+        </a>
+        <a href="/best/conditions/best-for-depression" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Best Platforms for Depression</h3>
+          <p class="text-sm text-gray-700">Top-rated online therapy platforms for depression treatment</p>
+        </a>
+        <a href="/resources/guides/talking-to-loved-ones" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Talking to Loved Ones</h3>
+          <p class="text-sm text-gray-700">How to talk to family and friends about your depression</p>
+        </a>
       </div>
     </div>
   </section>

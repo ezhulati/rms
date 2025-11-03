@@ -10,9 +10,25 @@ const keyStats = [];
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mental Health Statistics & Research</h1>
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
+        <span>/</span>
+        <a href="/learn/statistics" class="hover:text-brand-primary-600 transition">Statistics</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">Mental Health Statistics & Research</span>
+      </nav>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Mental Health Statistics & Research</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Evidence-based data and research findings on mental health conditions, treatment effectiveness, and industry trends to inform your decisions.</p>
     </div>
   </section>
@@ -32,8 +48,8 @@ const keyStats = [];
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyStats.map((stat, index) => (
-              <div key={index} class="bg-indigo-50 rounded-lg p-6 text-center">
-                <div class="text-3xl font-bold text-indigo-600 mb-2">{stat.title}</div>
+              <div key={index} class="bg-brand-primary-50 rounded-lg p-6 text-center">
+                <div class="text-3xl font-bold text-brand-primary-600 mb-2">{stat.title}</div>
                 <p class="text-gray-700 mb-3">{stat.description}</p>
                 <p class="text-sm text-gray-500">Source: {stat.source}</p>
               </div>
@@ -42,7 +58,7 @@ const keyStats = [];
           
           <div class="mt-6 text-center">
             <a href="/learn/statistics/mental-health-statistics" 
-              class="text-indigo-600 font-medium flex items-center justify-center hover:text-indigo-800"
+              class="text-brand-primary-600 font-medium flex items-center justify-center hover:text-indigo-800"
             >
               View detailed statistics <ArrowRight class="h-4 w-4 ml-1" />
             </a>
@@ -64,15 +80,15 @@ const keyStats = [];
               </div>
               <div class="p-6">
                 <div class="flex items-center mb-3">
-                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                    <BarChart class="h-4 w-4 text-indigo-600" />
+                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                    <BarChart class="h-4 w-4 text-brand-primary-600" />
                   </div>
                   <h3 class="text-xl font-bold text-gray-800">{article.title}</h3>
                 </div>
                 <p class="text-gray-600 mb-4">{article.excerpt}</p>
                 <a
                   href={`/blog/${article.category}/${article.slug}`}
-                  class="text-indigo-600 font-medium flex items-center hover:text-indigo-800"
+                  class="text-brand-primary-600 font-medium flex items-center hover:text-indigo-800"
                 >
                   Read article <ArrowRight class="h-4 w-4 ml-1" />
                 </a>
@@ -88,31 +104,31 @@ const keyStats = [];
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Brain class="h-5 w-5 text-indigo-600 mr-2" />
+                <Brain class="h-5 w-5 text-brand-primary-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Conditions</h3>
               </div>
               <ul class="space-y-2">
                 <li>
-                  <a href="/learn/statistics/depression-statistics" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/depression-statistics" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Depression Statistics
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/anxiety-statistics" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/anxiety-statistics" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Anxiety Statistics
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/ptsd-statistics" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/ptsd-statistics" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     PTSD Statistics
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/conditions-overview" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/conditions-overview" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     All Conditions Data
                   </a>
                 </li>
@@ -121,31 +137,31 @@ const keyStats = [];
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Globe class="h-5 w-5 text-indigo-600 mr-2" />
+                <Globe class="h-5 w-5 text-brand-primary-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Treatment</h3>
               </div>
               <ul class="space-y-2">
                 <li>
-                  <a href="/learn/statistics/online-therapy-effectiveness" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/online-therapy-effectiveness" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Online Therapy Effectiveness
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/medication-statistics" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/medication-statistics" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Medication Statistics
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/therapy-approaches-data" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/therapy-approaches-data" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Therapy Approaches Data
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/treatment-outcomes" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/treatment-outcomes" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Treatment Outcomes
                   </a>
                 </li>
@@ -154,31 +170,31 @@ const keyStats = [];
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Users class="h-5 w-5 text-indigo-600 mr-2" />
+                <Users class="h-5 w-5 text-brand-primary-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Demographics</h3>
               </div>
               <ul class="space-y-2">
                 <li>
-                  <a href="/learn/statistics/age-group-statistics" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/age-group-statistics" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Age Group Statistics
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/gender-differences" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/gender-differences" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Gender Differences
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/cultural-factors" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/cultural-factors" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Cultural Factors
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/statistics/socioeconomic-impact" class="text-gray-600 hover:text-indigo-600 flex items-center">
-                    <ArrowRight class="h-4 w-4 text-indigo-600 mr-2" />
+                  <a href="/learn/statistics/socioeconomic-impact" class="text-gray-600 hover:text-brand-primary-600 flex items-center">
+                    <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2" />
                     Socioeconomic Impact
                   </a>
                 </li>
@@ -188,13 +204,13 @@ const keyStats = [];
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Find the Right Support?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Now that you understand the data, take the next step toward better mental health with personalized recommendations.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Mental Health Assessment</a>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Take Mental Health Assessment</a>
             <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Therapy Match</a>
           </div>
         </div>

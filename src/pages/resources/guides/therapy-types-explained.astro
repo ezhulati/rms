@@ -1,21 +1,796 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, Heart, Users, MessageCircle, Eye, Compass, Target, Lightbulb, Network, BookOpen, CheckCircle, Clock, AlertTriangle, Phone, ArrowRight } from 'lucide-react';
 ---
 
-<BaseLayout title="Therapy Types Explained | RealMindSolutions" description="Therapy Types Explained">
+<BaseLayout title="Therapy Types Explained | RealMindSolutions" description="Comprehensive guide to different therapy approaches and modalities—CBT, DBT, psychodynamic therapy, EMDR, and more. Find the right therapeutic approach for your needs.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Types Explained</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Complete guide to different therapy approaches.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">A comprehensive guide to understanding different therapy approaches and finding the right modality for your mental health journey.</p>
+
+      <div class="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <p class="text-gray-700 leading-relaxed">
+          There are dozens of different therapy approaches, each with its own theory, techniques, and strengths. This guide explains the most common and evidence-based therapy types to help you understand what to expect and which approach might be right for you.
+        </p>
+      </div>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Understanding Therapy Approaches */}
+  <section class="bg-gradient-to-b from-white to-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Lightbulb className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Understanding Therapy Approaches</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Same Goal, Different Paths</h3>
+          <p class="text-sm text-gray-700">
+            All therapy approaches aim to reduce suffering and improve well-being, but they take different routes to get there. Some focus on thoughts, others on emotions, behaviors, or relationships.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Evidence-Based Matters</h3>
+          <p class="text-sm text-gray-700">
+            "Evidence-based" means the approach has been rigorously tested in research studies and shown to be effective for specific conditions. The therapies in this guide all have strong research support.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Therapists Often Integrate</h3>
+          <p class="text-sm text-gray-700">
+            Many therapists use an "integrative" or "eclectic" approach, drawing techniques from multiple modalities based on what works best for each client's unique needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Cognitive Behavioral Therapy (CBT) */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+      <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-8 mb-8">
+        <div class="flex items-center mb-4">
+          <Brain className="h-10 w-10 text-blue-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Cognitive Behavioral Therapy (CBT)</h2>
+            <p class="text-sm text-blue-800 font-semibold">Most researched and widely practiced therapy approach</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            CBT is a structured, short-term, goal-oriented therapy that focuses on the connection between thoughts, feelings, and behaviors. The core idea: It's not events themselves that upset us, but the meaning we give them.
+          </p>
+
+          <div class="bg-blue-50 rounded p-4">
+            <h4 class="font-bold text-blue-900 mb-2 text-sm">The CBT Triangle:</h4>
+            <div class="flex items-center justify-center space-x-4">
+              <div class="bg-white rounded-lg p-3 text-center shadow-sm">
+                <div class="font-bold text-blue-900 text-sm">Thoughts</div>
+              </div>
+              <div class="text-gray-400">↔</div>
+              <div class="bg-white rounded-lg p-3 text-center shadow-sm">
+                <div class="font-bold text-pink-900 text-sm">Feelings</div>
+              </div>
+              <div class="text-gray-400">↔</div>
+              <div class="bg-white rounded-lg p-3 text-center shadow-sm">
+                <div class="font-bold text-green-900 text-sm">Behaviors</div>
+              </div>
+            </div>
+            <p class="text-xs text-blue-800 mt-3 text-center">Change one, and you can change them all</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">How It Works:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>• Identify automatic thoughts:</strong> Notice negative or unhelpful thinking patterns</li>
+              <li><strong>• Examine the evidence:</strong> Test whether thoughts are accurate or distorted</li>
+              <li><strong>• Challenge cognitive distortions:</strong> Replace unhelpful thoughts with balanced ones</li>
+              <li><strong>• Behavioral experiments:</strong> Test new behaviors to see if fears are accurate</li>
+              <li><strong>• Homework assignments:</strong> Practice skills between sessions</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Depression</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Anxiety disorders (GAD, panic, social anxiety)</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />OCD</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />PTSD</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Eating disorders</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Insomnia (CBT-I)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Structure:</strong> Agenda-driven sessions with specific goals</li>
+              <li>• <strong>Active participation:</strong> You'll do exercises in and out of sessions</li>
+              <li>• <strong>Skills-based:</strong> Learn concrete techniques you can use independently</li>
+              <li>• <strong>Present-focused:</strong> Emphasizes current problems, not childhood history</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-blue-600 inline mr-2" />
+              <strong>Typically 12-20 sessions</strong> (3-6 months)
+            </p>
+            <p class="text-xs text-gray-600">
+              Short-term and goal-oriented. Some conditions may require longer treatment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Dialectical Behavior Therapy (DBT) */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 mb-8">
+        <div class="flex items-center mb-4">
+          <Heart className="h-10 w-10 text-purple-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Dialectical Behavior Therapy (DBT)</h2>
+            <p class="text-sm text-purple-800 font-semibold">Balancing acceptance and change</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            DBT is a modified form of CBT developed by Marsha Linehan specifically for borderline personality disorder (BPD). It combines cognitive-behavioral techniques with mindfulness, acceptance, and distress tolerance skills. The word "dialectical" refers to balancing opposites—particularly acceptance ("I'm doing the best I can") and change ("I need to do better").
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">The Four Skill Modules:</h3>
+            <div class="space-y-3">
+              <div class="bg-purple-50 rounded p-3">
+                <h4 class="font-bold text-purple-900 text-sm mb-1">1. Mindfulness</h4>
+                <p class="text-xs text-purple-800">Being present in the moment without judgment</p>
+              </div>
+              <div class="bg-pink-50 rounded p-3">
+                <h4 class="font-bold text-pink-900 text-sm mb-1">2. Distress Tolerance</h4>
+                <p class="text-xs text-pink-800">Surviving crises without making things worse</p>
+              </div>
+              <div class="bg-blue-50 rounded p-3">
+                <h4 class="font-bold text-blue-900 text-sm mb-1">3. Emotion Regulation</h4>
+                <p class="text-xs text-blue-800">Understanding and managing intense emotions</p>
+              </div>
+              <div class="bg-green-50 rounded p-3">
+                <h4 class="font-bold text-green-900 text-sm mb-1">4. Interpersonal Effectiveness</h4>
+                <p class="text-xs text-green-800">Asking for what you need while maintaining relationships</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Borderline personality disorder (BPD)</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Emotion dysregulation</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Self-harm and suicidal ideation</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Complex PTSD</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Eating disorders (especially binge eating)</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Substance use disorders</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Individual therapy:</strong> Weekly one-on-one sessions</li>
+              <li>• <strong>Skills group:</strong> Weekly group class teaching the 4 modules</li>
+              <li>• <strong>Phone coaching:</strong> Brief calls to therapist for crisis support</li>
+              <li>• <strong>Diary cards:</strong> Daily tracking of emotions, urges, and skill use</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-purple-600 inline mr-2" />
+              <strong>Typically 6-12 months</strong> (or longer)
+            </p>
+            <p class="text-xs text-gray-600">
+              Full DBT program is intensive and time-limited, though some continue longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Psychodynamic Therapy */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-8">
+        <div class="flex items-center mb-4">
+          <Compass className="h-10 w-10 text-indigo-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Psychodynamic Therapy</h2>
+            <p class="text-sm text-indigo-800 font-semibold">Exploring unconscious patterns and past experiences</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Psychodynamic therapy is based on the idea that our current struggles are rooted in unconscious patterns formed in childhood. By bringing these patterns to awareness and understanding their origins, we can make different choices. It's less structured than CBT and emphasizes the therapeutic relationship itself as a tool for healing.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Key Concepts:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>• Unconscious mind:</strong> Much of our behavior is driven by thoughts/feelings outside awareness</li>
+              <li><strong>• Defense mechanisms:</strong> Ways we protect ourselves from painful emotions (denial, repression, projection)</li>
+              <li><strong>• Transference:</strong> Patterns from past relationships show up with therapist</li>
+              <li><strong>• Early experiences:</strong> Childhood relationships shape adult patterns</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Recurring relationship problems</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Chronic depression</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Personality concerns</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Self-exploration and personal growth</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Unresolved grief or trauma</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Open-ended:</strong> Less structured; you guide what to discuss</li>
+              <li>• <strong>Exploration:</strong> Therapist asks questions to deepen understanding</li>
+              <li>• <strong>Interpretation:</strong> Therapist may offer insights about patterns</li>
+              <li>• <strong>Past and present:</strong> Connect childhood experiences to current struggles</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-indigo-600 inline mr-2" />
+              <strong>Typically 6 months to several years</strong>
+            </p>
+            <p class="text-xs text-gray-600">
+              Often longer-term. Short-term psychodynamic therapy (STPP) is also available (12-20 sessions).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Humanistic/Person-Centered Therapy */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8">
+        <div class="flex items-center mb-4">
+          <Users className="h-10 w-10 text-green-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Humanistic / Person-Centered Therapy</h2>
+            <p class="text-sm text-green-800 font-semibold">Trusting your inner capacity for growth</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Developed by Carl Rogers, person-centered therapy is based on the belief that humans have an innate drive toward growth and self-actualization. The therapist's role is not to direct or interpret, but to provide a warm, genuine, non-judgmental space where you can explore your feelings and find your own answers.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Core Conditions (Rogers):</h3>
+            <div class="space-y-3">
+              <div class="bg-green-50 rounded p-3">
+                <h4 class="font-bold text-green-900 text-sm mb-1">Unconditional Positive Regard</h4>
+                <p class="text-xs text-green-800">Complete acceptance without judgment</p>
+              </div>
+              <div class="bg-teal-50 rounded p-3">
+                <h4 class="font-bold text-teal-900 text-sm mb-1">Empathic Understanding</h4>
+                <p class="text-xs text-teal-800">Deeply understanding your experience</p>
+              </div>
+              <div class="bg-blue-50 rounded p-3">
+                <h4 class="font-bold text-blue-900 text-sm mb-1">Congruence (Genuineness)</h4>
+                <p class="text-xs text-blue-800">Therapist is authentic and real, not distant expert</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Self-esteem issues</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Relationship difficulties</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Life transitions and identity exploration</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Grief and loss</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Personal growth and self-discovery</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Client-led:</strong> You choose what to talk about each session</li>
+              <li>• <strong>Reflective listening:</strong> Therapist mirrors back what you share</li>
+              <li>• <strong>Non-directive:</strong> No homework, techniques, or advice-giving</li>
+              <li>• <strong>Focus on feelings:</strong> Emphasis on emotional experience in the moment</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-green-600 inline mr-2" />
+              <strong>Varies widely</strong> (weeks to years)
+            </p>
+            <p class="text-xs text-gray-600">
+              Can be short-term or long-term depending on goals and needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Acceptance and Commitment Therapy (ACT) */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-8">
+        <div class="flex items-center mb-4">
+          <Target className="h-10 w-10 text-orange-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Acceptance and Commitment Therapy (ACT)</h2>
+            <p class="text-sm text-orange-800 font-semibold">Living a valued life despite difficult thoughts and feelings</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            ACT (said as one word, "act") is a mindfulness-based therapy that teaches psychological flexibility: the ability to stay present, accept painful thoughts/feelings without struggling against them, and take action guided by your values. Rather than trying to eliminate negative thoughts, ACT focuses on changing your relationship with them.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">The Six Core Processes:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>1. Acceptance:</strong> Making room for painful feelings rather than fighting them</li>
+              <li><strong>2. Cognitive defusion:</strong> Noticing thoughts without believing or obeying them</li>
+              <li><strong>3. Present moment:</strong> Being here now, not lost in past/future</li>
+              <li><strong>4. Self-as-context:</strong> "Observer self" separate from thoughts/feelings</li>
+              <li><strong>5. Values:</strong> Clarifying what matters most to you</li>
+              <li><strong>6. Committed action:</strong> Taking steps aligned with your values</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Chronic pain and illness</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Anxiety disorders</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Depression</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />OCD</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Substance use</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Work stress and burnout</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Experiential exercises:</strong> Mindfulness practices and metaphors</li>
+              <li>• <strong>Values work:</strong> Identifying what you want your life to stand for</li>
+              <li>• <strong>Behavioral goals:</strong> Concrete actions aligned with values</li>
+              <li>• <strong>Acceptance paradox:</strong> Welcoming discomfort to reduce its power</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-orange-600 inline mr-2" />
+              <strong>Typically 8-16 sessions</strong>
+            </p>
+            <p class="text-xs text-gray-600">
+              Short to moderate duration, though some continue longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* EMDR */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-lg p-8">
+        <div class="flex items-center mb-4">
+          <Eye className="h-10 w-10 text-red-600 mr-4" />
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Eye Movement Desensitization and Reprocessing (EMDR)</h2>
+            <p class="text-sm text-red-800 font-semibold">Trauma-focused therapy using bilateral stimulation</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-3">What It Is:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            EMDR is a specialized therapy for trauma and PTSD. Developed by Francine Shapiro, it helps the brain process traumatic memories that have become "stuck." While recalling distressing memories, you engage in bilateral stimulation (typically following the therapist's fingers with your eyes, or listening to alternating tones). This helps the brain reprocess memories so they become less disturbing.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">The Eight Phases:</h3>
+            <ol class="space-y-2 text-sm text-gray-700">
+              <li><strong>1. History taking:</strong> Identify target memories</li>
+              <li><strong>2. Preparation:</strong> Build coping skills for distress</li>
+              <li><strong>3. Assessment:</strong> Identify components of target memory</li>
+              <li><strong>4. Desensitization:</strong> Process memory with eye movements</li>
+              <li><strong>5. Installation:</strong> Strengthen positive belief</li>
+              <li><strong>6. Body scan:</strong> Release residual physical tension</li>
+              <li><strong>7. Closure:</strong> Return to calm state</li>
+              <li><strong>8. Reevaluation:</strong> Check progress</li>
+            </ol>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Best For:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />PTSD and complex PTSD</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Single-event trauma (assault, accident, disaster)</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Childhood trauma and abuse</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Phobias</li>
+              <li><CheckCircle className="h-4 w-4 text-green-600 inline mr-2" />Panic disorder</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Bilateral stimulation:</strong> Eye movements, tapping, or audio tones</li>
+              <li>• <strong>Memory recall:</strong> Briefly bring traumatic memory to mind</li>
+              <li>• <strong>Can be intense:</strong> May feel worse initially as memories surface</li>
+              <li>• <strong>No detailed storytelling required:</strong> Don't have to describe trauma in detail</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Duration:</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <Clock className="h-4 w-4 text-red-600 inline mr-2" />
+              <strong>Varies: 3-12+ sessions per trauma</strong>
+            </p>
+            <p class="text-xs text-gray-600">
+              Single traumas may resolve quickly; complex trauma takes longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Additional Therapy Types */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <BookOpen className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Other Evidence-Based Approaches</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Interpersonal Therapy */}
+        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Interpersonal Therapy (IPT)</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Short-term therapy focusing on improving relationships and social functioning. Addresses four problem areas: grief, role transitions, role disputes, and interpersonal deficits.
+          </p>
+          <div class="mb-3">
+            <h4 class="font-bold text-gray-900 text-sm mb-2">Best for:</h4>
+            <ul class="space-y-1 text-xs text-gray-700">
+              <li>• Depression</li>
+              <li>• Eating disorders (especially bulimia)</li>
+              <li>• Relationship problems</li>
+            </ul>
+          </div>
+          <p class="text-xs text-gray-600">
+            <Clock className="h-3 w-3 inline mr-1" /><strong>Duration:</strong> 12-16 sessions
+          </p>
+        </div>
+
+        {/* Solution-Focused Brief Therapy */}
+        <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Solution-Focused Brief Therapy (SFBT)</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Future-oriented therapy that focuses on solutions rather than problems. Uses questions like "What would be different if your problem was solved?" and "When have things been better?"
+          </p>
+          <div class="mb-3">
+            <h4 class="font-bold text-gray-900 text-sm mb-2">Best for:</h4>
+            <ul class="space-y-1 text-xs text-gray-700">
+              <li>• Specific, well-defined goals</li>
+              <li>• Relationship issues</li>
+              <li>• Work/school problems</li>
+            </ul>
+          </div>
+          <p class="text-xs text-gray-600">
+            <Clock className="h-3 w-3 inline mr-1" /><strong>Duration:</strong> 5-8 sessions (very brief)
+          </p>
+        </div>
+
+        {/* Family Systems Therapy */}
+        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Family Systems Therapy</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Views problems as arising from dysfunctional family patterns rather than individual pathology. Family members attend sessions together to identify and change unhealthy dynamics.
+          </p>
+          <div class="mb-3">
+            <h4 class="font-bold text-gray-900 text-sm mb-2">Best for:</h4>
+            <ul class="space-y-1 text-xs text-gray-700">
+              <li>• Family conflict</li>
+              <li>• Childhood behavioral problems</li>
+              <li>• Substance use (family involvement)</li>
+              <li>• Eating disorders in adolescents</li>
+            </ul>
+          </div>
+          <p class="text-xs text-gray-600">
+            <Clock className="h-3 w-3 inline mr-1" /><strong>Duration:</strong> 12-20 sessions
+          </p>
+        </div>
+
+        {/* Motivational Interviewing */}
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Motivational Interviewing (MI)</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Collaborative, client-centered approach designed to strengthen personal motivation for change. Particularly effective when ambivalence about change is the central issue.
+          </p>
+          <div class="mb-3">
+            <h4 class="font-bold text-gray-900 text-sm mb-2">Best for:</h4>
+            <ul class="space-y-1 text-xs text-gray-700">
+              <li>• Substance use disorders</li>
+              <li>• Health behavior change (diet, exercise)</li>
+              <li>• Medication adherence</li>
+              <li>• Any ambivalence about change</li>
+            </ul>
+          </div>
+          <p class="text-xs text-gray-600">
+            <Clock className="h-3 w-3 inline mr-1" /><strong>Duration:</strong> 1-4 sessions (brief intervention) or ongoing
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Choosing the Right Therapy */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <MessageCircle className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">How to Choose the Right Therapy Approach</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Consider Your Needs:</h3>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>Specific diagnosis?</strong> Some therapies are gold-standard for specific conditions (e.g., CBT for panic disorder, DBT for BPD, EMDR for PTSD).
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>Concrete skills vs. self-exploration?</strong> Want structured techniques (CBT, DBT) or deeper exploration (psychodynamic, person-centered)?
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>Past or present focused?</strong> Some emphasize current problems (CBT, ACT), others explore childhood roots (psychodynamic).
+              </div>
+            </li>
+            <li class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>Timeline?</strong> Need quick relief (SFBT, CBT) or willing to invest in longer-term work (psychodynamic)?
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">The Therapist Matters More:</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Research consistently shows that <strong>the therapeutic relationship</strong> is one of the strongest predictors of successful outcomes—often more important than the specific therapy approach.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start">
+              <ArrowRight className="h-4 w-4 text-brand-primary mr-2 flex-shrink-0 mt-1" />
+              <span>A good fit with your therapist matters tremendously</span>
+            </li>
+            <li class="flex items-start">
+              <ArrowRight className="h-4 w-4 text-brand-primary mr-2 flex-shrink-0 mt-1" />
+              <span>Many effective therapists use integrative approaches</span>
+            </li>
+            <li class="flex items-start">
+              <ArrowRight className="h-4 w-4 text-brand-primary mr-2 flex-shrink-0 mt-1" />
+              <span>It's okay to try a few therapists to find the right match</span>
+            </li>
+            <li class="flex items-start">
+              <ArrowRight className="h-4 w-4 text-brand-primary mr-2 flex-shrink-0 mt-1" />
+              <span>Trust your gut—therapy requires vulnerability and trust</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Questions to Ask Potential Therapists:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <ul class="space-y-2 text-gray-700">
+            <li>• "What therapy approach do you primarily use?"</li>
+            <li>• "Do you have experience treating [your specific concern]?"</li>
+            <li>• "What does a typical session with you look like?"</li>
+          </ul>
+          <ul class="space-y-2 text-gray-700">
+            <li>• "How do you measure progress?"</li>
+            <li>• "How long do you expect treatment to last?"</li>
+            <li>• "Are you trained in [specific modality] if applicable?"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Quick Reference Table */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Quick Reference: Therapy Types at a Glance</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-3 text-left font-bold text-gray-900">Therapy Type</th>
+              <th class="border border-gray-300 p-3 text-left font-bold text-gray-900">Primary Focus</th>
+              <th class="border border-gray-300 p-3 text-left font-bold text-gray-900">Best For</th>
+              <th class="border border-gray-300 p-3 text-left font-bold text-gray-900">Typical Duration</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">CBT</td>
+              <td class="border border-gray-300 p-3">Thoughts, behaviors, present problems</td>
+              <td class="border border-gray-300 p-3">Depression, anxiety, OCD, PTSD</td>
+              <td class="border border-gray-300 p-3">12-20 sessions</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3 font-semibold">DBT</td>
+              <td class="border border-gray-300 p-3">Emotion regulation, distress tolerance</td>
+              <td class="border border-gray-300 p-3">BPD, self-harm, emotion dysregulation</td>
+              <td class="border border-gray-300 p-3">6-12 months</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">Psychodynamic</td>
+              <td class="border border-gray-300 p-3">Unconscious patterns, past experiences</td>
+              <td class="border border-gray-300 p-3">Relationship issues, chronic depression</td>
+              <td class="border border-gray-300 p-3">6 months - years</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3 font-semibold">Person-Centered</td>
+              <td class="border border-gray-300 p-3">Self-acceptance, personal growth</td>
+              <td class="border border-gray-300 p-3">Self-esteem, identity, grief</td>
+              <td class="border border-gray-300 p-3">Varies widely</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">ACT</td>
+              <td class="border border-gray-300 p-3">Acceptance, values, committed action</td>
+              <td class="border border-gray-300 p-3">Chronic pain, anxiety, OCD</td>
+              <td class="border border-gray-300 p-3">8-16 sessions</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3 font-semibold">EMDR</td>
+              <td class="border border-gray-300 p-3">Trauma memory processing</td>
+              <td class="border border-gray-300 p-3">PTSD, trauma, phobias</td>
+              <td class="border border-gray-300 p-3">3-12+ sessions</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">IPT</td>
+              <td class="border border-gray-300 p-3">Relationships, social functioning</td>
+              <td class="border border-gray-300 p-3">Depression, eating disorders</td>
+              <td class="border border-gray-300 p-3">12-16 sessions</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3 font-semibold">SFBT</td>
+              <td class="border border-gray-300 p-3">Solutions, future goals</td>
+              <td class="border border-gray-300 p-3">Specific problems, goal-oriented work</td>
+              <td class="border border-gray-300 p-3">5-8 sessions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {/* Crisis Resources */}
+  <section class="bg-gradient-to-b from-red-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-md border-2 border-red-200 p-8">
+        <div class="flex items-center mb-4">
+          <AlertTriangle className="h-8 w-8 text-red-600 mr-3" />
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">If You're in Crisis</h2>
+        </div>
+        <p class="text-gray-700 mb-6">
+          If you're experiencing a mental health emergency, please reach out for immediate support:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-red-50 rounded-lg p-4">
+            <div class="flex items-center mb-2">
+              <Phone className="h-5 w-5 text-red-600 mr-2" />
+              <h3 class="font-bold text-gray-900">National Suicide Prevention Lifeline</h3>
+            </div>
+            <p class="text-2xl font-bold text-red-600 mb-1">988</p>
+            <p class="text-sm text-gray-700">24/7 crisis support via call or text</p>
+          </div>
+          <div class="bg-red-50 rounded-lg p-4">
+            <div class="flex items-center mb-2">
+              <MessageCircle className="h-5 w-5 text-red-600 mr-2" />
+              <h3 class="font-bold text-gray-900">Crisis Text Line</h3>
+            </div>
+            <p class="text-2xl font-bold text-red-600 mb-1">Text HOME to 741741</p>
+            <p class="text-sm text-gray-700">24/7 crisis support via text</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mt-4">
+          If you're in immediate danger, call 911 or go to your nearest emergency room.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/guides/selection/finding-the-right-therapist" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Finding the Right Therapist</h3>
+          <p class="text-sm text-gray-700">Tips for finding a therapist who's the right fit for you</p>
+        </a>
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Insurance Coverage Guide</h3>
+          <p class="text-sm text-gray-700">Navigate mental health insurance benefits and reimbursement</p>
+        </a>
+        <a href="/tools/matchers/therapy-type-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-brand-primary mb-2">Therapy Type Finder</h3>
+          <p class="text-sm text-gray-700">Interactive tool to find therapy approaches for your needs</p>
+        </a>
       </div>
     </div>
   </section>
