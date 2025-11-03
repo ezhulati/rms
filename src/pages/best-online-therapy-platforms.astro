@@ -2,11 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { platforms } from '../siteData';
 import RatingBreakdown from '../components/RatingBreakdown.astro';
-import { platforms } from '../siteData';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Shield, Users, Brain, DollarSign, Award, Search } from 'lucide-react';
-import { platforms } from '../siteData';
 
-// const platforms = []; // Now using real data from siteData
+// Now using real data from siteData
 
 const ratingCategories = [
   {
@@ -57,7 +55,7 @@ const renderStars = (rating: number) => {
         <div class="flex justify-center">
           <a href="/tools/matchers/therapy-platform-matcher" class="btn btn-primary btn-lg inline-flex items-center font-sans font-semibold shadow-lg hover:shadow-xl transition-all">
             Find your perfect therapy match
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight class="ml-2 h-5 w-5" />
           </a>
         </div>
       </div>

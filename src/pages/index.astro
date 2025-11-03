@@ -8,10 +8,17 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
   description="Compare, review, and discover the best online therapy platforms tailored to your unique needs."
 >
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-24 md:pt-24 md:pb-32">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-accent-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
+        <div class="animate-fade-in-up">
           {/* Badge */}
           <div class="inline-flex items-center gap-2 bg-brand-primary-100 text-brand-primary-700 px-4 py-2 rounded-full mb-6">
             <span class="w-2 h-2 bg-brand-primary-500 rounded-full animate-pulse"></span>
@@ -34,7 +41,7 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
           <div class="flex flex-col sm:flex-row gap-4 mb-10">
             <a href="/tools/assessments/mental-health-assessment" class="btn btn-primary btn-lg inline-flex items-center justify-center font-sans font-semibold shadow-lg hover:shadow-xl transition-all">
               Take 3-Min Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight class="ml-2 h-5 w-5" />
             </a>
             <a href="/compare" class="btn btn-light btn-lg inline-flex items-center justify-center font-sans font-semibold border-2 border-neutral-300 hover:border-brand-primary-500 hover:text-brand-primary-600">
               Compare Platforms
@@ -59,7 +66,7 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
         </div>
 
         {/* Right side - Image/Visual */}
-        <div class="hidden lg:block">
+        <div class="hidden lg:block animate-slide-in-right">
           <div class="relative">
             {/* Main image card */}
             <div class="bg-white rounded-2xl shadow-xl p-6 transform transition-transform hover:scale-[1.02]">
@@ -101,42 +108,42 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
         {/* Feature 1 */}
         <div class="bg-white border-2 border-neutral-100 rounded-2xl p-8 text-center hover:border-brand-primary-200 hover:shadow-lg transition-all">
           <div class="bg-brand-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-            <Search className="h-8 w-8 text-brand-primary-600" />
+            <Search class="h-8 w-8 text-brand-primary-600" />
           </div>
           <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Compare Platforms</h3>
           <p class="font-sans text-neutral-600 mb-6 leading-relaxed text-sm">
             Side-by-side comparisons of top online therapy platforms to help you make an informed decision.
           </p>
           <a href="/compare" class="text-brand-primary-600 hover:text-brand-primary-700 font-sans font-semibold inline-flex items-center text-sm">
-            Explore Comparisons <ArrowRight className="ml-2 h-4 w-4" />
+            Explore Comparisons <ArrowRight class="ml-2 h-4 w-4" />
           </a>
         </div>
 
         {/* Feature 2 */}
         <div class="bg-white border-2 border-neutral-100 rounded-2xl p-8 text-center hover:border-brand-secondary-200 hover:shadow-lg transition-all">
           <div class="bg-brand-secondary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-            <Users className="h-8 w-8 text-brand-secondary-600" />
+            <Users class="h-8 w-8 text-brand-secondary-600" />
           </div>
           <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Expert Reviews</h3>
           <p class="font-sans text-neutral-600 mb-6 leading-relaxed text-sm">
             In-depth, unbiased reviews of therapy platforms, features, and specialties.
           </p>
           <a href="/reviews" class="text-brand-primary-600 hover:text-brand-primary-700 font-sans font-semibold inline-flex items-center text-sm">
-            Read Reviews <ArrowRight className="ml-2 h-4 w-4" />
+            Read Reviews <ArrowRight class="ml-2 h-4 w-4" />
           </a>
         </div>
 
         {/* Feature 3 */}
         <div class="bg-white border-2 border-neutral-100 rounded-2xl p-8 text-center hover:border-brand-accent-200 hover:shadow-lg transition-all">
           <div class="bg-brand-accent-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-            <Heart className="h-8 w-8 text-brand-accent-600" />
+            <Heart class="h-8 w-8 text-brand-accent-600" />
           </div>
           <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Personalized Tools</h3>
           <p class="font-sans text-neutral-600 mb-6 leading-relaxed text-sm">
             Assessments and matchers to help you find the perfect mental health solution for your needs.
           </p>
           <a href="/tools" class="text-brand-primary-600 hover:text-brand-primary-700 font-sans font-semibold inline-flex items-center text-sm">
-            Try Our Tools <ArrowRight className="ml-2 h-4 w-4" />
+            Try Our Tools <ArrowRight class="ml-2 h-4 w-4" />
           </a>
         </div>
       </div>
@@ -148,14 +155,14 @@ import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-4xl mx-auto text-center">
         <div class="bg-brand-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-          <Brain className="h-10 w-10 text-brand-primary-600" />
+          <Brain class="h-10 w-10 text-brand-primary-600" />
         </div>
         <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">Ready to Start Your Mental Health Journey?</h2>
         <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto">
           Take our free assessment to get personalized recommendations for online therapy platforms that match your needs.
         </p>
         <a href="/tools/assessments/mental-health-assessment" class="btn btn-primary btn-lg inline-flex items-center font-sans font-semibold shadow-lg hover:shadow-xl transition-all">
-          Take Free Assessment <ArrowRight className="ml-2 h-5 w-5" />
+          Take Free Assessment <ArrowRight class="ml-2 h-5 w-5" />
         </a>
       </div>
     </div>
