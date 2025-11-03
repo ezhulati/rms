@@ -10,7 +10,9 @@
     "astro": "astro",
     "lint": "eslint .",
     "generate-images": "node scripts/generate-images.js",
-    "regenerate-image": "node scripts/regenerate-image.js"
+    "regenerate-image": "node scripts/regenerate-image.js",
+    "update-components": "node scripts/update-components.js",
+    "bulk-replace": "node scripts/bulk-replace-images.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

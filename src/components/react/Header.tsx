@@ -23,7 +23,7 @@ const Header = () => {
   const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
     <a
       href={to}
-      className={`text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200 ${
+      className={`flex items-center min-h-[44px] text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200 ${
         isActive(to) ? 'text-emerald-500' : ''
       }`}
     >
@@ -39,7 +39,7 @@ const Header = () => {
     items: { label: string; href: string }[]
   }) => (
     <div className="relative group">
-      <button className="flex items-center gap-1 text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200">
+      <button className="flex items-center gap-1 text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200 min-h-[44px]">
         {title}
         <ChevronDown className="h-4 w-4" />
       </button>
@@ -49,7 +49,7 @@ const Header = () => {
             <a
               key={index}
               href={item.href}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500 transition-colors duration-200"
+              className="flex items-center px-4 py-3 min-h-[44px] text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500 transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -133,7 +133,7 @@ const Header = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -147,7 +147,7 @@ const Header = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -161,7 +161,7 @@ const Header = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -175,7 +175,7 @@ const Header = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -186,21 +186,21 @@ const Header = () => {
             <div className="space-y-2">
               <a
                 href="/conditions-az"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Conditions A-Z
               </a>
               <a
                 href="/learn"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Learn
               </a>
               <a
                 href="/blog"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-3 min-h-[44px] flex items-center text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog

@@ -23,7 +23,7 @@ const guidesArticles = [
     author: 'Emma Rodriguez, Health Policy Analyst',
     tags: ['Insurance', 'Coverage', 'Finance'],
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: '/images/blog/index.jpg',
     url: '/blog/guides/insurance-coverage-guide'
   },
   {
@@ -34,7 +34,7 @@ const guidesArticles = [
     author: 'Dr. Michael Chen, Clinical Psychologist',
     tags: ['Therapist Selection', 'Therapy Basics'],
     readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: '/images/blog/index.jpg',
     url: '/blog/guides/choosing-right-therapist'
   },
   {
@@ -45,7 +45,7 @@ const guidesArticles = [
     author: 'Dr. Sarah Johnson, Ph.D.',
     tags: ['Therapy Types', 'CBT', 'Psychodynamic'],
     readTime: '15 min read',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: '/images/blog/index.jpg',
     url: '/blog/guides/therapy-modalities-explained'
   },
   {
@@ -56,7 +56,7 @@ const guidesArticles = [
     author: 'James Wilson, Financial Health Advisor',
     tags: ['Finance', 'Budgeting', 'Affordability'],
     readTime: '11 min read',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: '/images/blog/index.jpg',
     url: '/blog/guides/therapy-costs-explained'
   }
 ];
@@ -89,11 +89,10 @@ const otherGuides = guidesArticles.slice(1);
   <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
     <div class="md:flex">
       <div class="md:w-1/2">
-        <img
-          src={featuredGuide.image}
+        <img src={featuredGuide.image}
           alt={featuredGuide.title}
           class="w-full min-w-0 h-full object-cover"
-        />
+        / alt="Therapy & Mental Health Guides">
       </div>
       <div class="p-8 md:w-1/2">
         <div class="flex flex-wrap items-center text-sm text-gray-500 mb-3">
@@ -123,7 +122,7 @@ const otherGuides = guidesArticles.slice(1);
 
         <div class="flex flex-wrap gap-2 mb-6">
           {featuredGuide.tags.map((tag) => (
-            <span key={tag} class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">
+            <span key={tag} class="bg-indigo-100 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded">
               {tag}
             </span>
           ))}
@@ -143,11 +142,10 @@ const otherGuides = guidesArticles.slice(1);
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
     {otherGuides.map((guide) => (
       <div key={guide.id} class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img
-          src={guide.image}
+        <img src={guide.image}
           alt={guide.title}
           class="w-full min-w-0 h-48 object-cover"
-        />
+        / alt="Therapy & Mental Health Guides">
         <div class="p-6">
           <div class="flex flex-wrap items-center text-sm text-gray-500 mb-3">
             <div class="flex items-center mr-4 mb-2 sm:mb-0">
@@ -172,7 +170,7 @@ const otherGuides = guidesArticles.slice(1);
 
           <div class="flex flex-wrap gap-2 mb-4">
             {guide.tags.map((tag) => (
-              <span key={tag} class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">
+              <span key={tag} class="bg-indigo-100 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded">
                 {tag}
               </span>
             ))}
@@ -241,7 +239,7 @@ const otherGuides = guidesArticles.slice(1);
         Subscribe
       </button>
     </div>
-    <p class="text-xs text-gray-500 mt-4">
+    <p class="text-sm text-gray-500 mt-4">
       We respect your privacy. Unsubscribe at any time.
     </p>
   </div>

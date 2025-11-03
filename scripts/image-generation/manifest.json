@@ -1,5 +1,483 @@
 {
-  "generated_at": null,
-  "total_images": 0,
-  "images": []
+  "generated_at": "2025-11-03T00:01:21.428Z",
+  "total_images": 53,
+  "images": [
+    {
+      "page_path": "pages/BestAudiences.tsx",
+      "image_path": "public/images/concepts/bestaudiences.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:29:35.352Z",
+      "ideogram_seed": 1752830703,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BestConditions.tsx",
+      "image_path": "public/images/concepts/bestconditions.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:29:54.390Z",
+      "ideogram_seed": 1695479171,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BestForAnxiety.tsx",
+      "image_path": "public/images/concepts/bestforanxiety.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:30:13.886Z",
+      "ideogram_seed": 259948032,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BestOnlineTherapyPlatforms.tsx",
+      "image_path": "public/images/concepts/bestonlinetherapyplatforms.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:30:33.021Z",
+      "ideogram_seed": 1781544317,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BestPlatforms.tsx",
+      "image_path": "public/images/concepts/bestplatforms.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:30:51.974Z",
+      "ideogram_seed": 734524679,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BestTextTherapyServices.tsx",
+      "image_path": "public/images/concepts/besttexttherapyservices.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:31:10.891Z",
+      "ideogram_seed": 288233125,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BetterHelpReview.tsx",
+      "image_path": "public/images/concepts/betterhelpreview.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:31:30.068Z",
+      "ideogram_seed": 203064001,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/BlogPage.tsx",
+      "image_path": "public/images/concepts/blogpage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:31:48.980Z",
+      "ideogram_seed": 964765916,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/CaseStudiesPage.tsx",
+      "image_path": "public/images/concepts/casestudiespage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:32:07.946Z",
+      "ideogram_seed": 1597120904,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/CerebralReview.tsx",
+      "image_path": "public/images/concepts/cerebralreview.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:32:26.868Z",
+      "ideogram_seed": 1389312936,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/ConditionsAZPage.tsx",
+      "image_path": "public/images/concepts/conditionsazpage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:32:46.852Z",
+      "ideogram_seed": 1307946458,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/HomePage.tsx",
+      "image_path": "public/images/concepts/homepage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:33:05.959Z",
+      "ideogram_seed": 710001347,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/LearnPage.tsx",
+      "image_path": "public/images/concepts/learnpage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:33:25.082Z",
+      "ideogram_seed": 1987717246,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/OnlineTherapyReview.tsx",
+      "image_path": "public/images/concepts/onlinetherapyreview.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:33:44.138Z",
+      "ideogram_seed": 1738087840,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/ReviewsPage.tsx",
+      "image_path": "public/images/concepts/reviewspage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:34:03.311Z",
+      "ideogram_seed": 1179662133,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/ReviewsPlatforms.tsx",
+      "image_path": "public/images/concepts/reviewsplatforms.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:34:22.529Z",
+      "ideogram_seed": 326374736,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/ReviewsSpecialty.tsx",
+      "image_path": "public/images/concepts/reviewsspecialty.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:34:41.526Z",
+      "ideogram_seed": 2101034831,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/SpecializedPlatformsPage.tsx",
+      "image_path": "public/images/concepts/specializedplatformspage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:35:00.356Z",
+      "ideogram_seed": 256707090,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/TalkspaceReview.tsx",
+      "image_path": "public/images/concepts/talkspacereview.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:35:19.303Z",
+      "ideogram_seed": 35586135,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForCouples.tsx",
+      "image_path": "public/images/concepts/bestforcouples.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:35:38.248Z",
+      "ideogram_seed": 49972436,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForLGBTQ.tsx",
+      "image_path": "public/images/concepts/bestforlgbtq.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:35:58.604Z",
+      "ideogram_seed": 1468778685,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForParents.tsx",
+      "image_path": "public/images/concepts/bestforparents.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:36:17.563Z",
+      "ideogram_seed": 1293373575,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForSeniors.tsx",
+      "image_path": "public/images/concepts/bestforseniors.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:36:36.512Z",
+      "ideogram_seed": 852681703,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForTeens.tsx",
+      "image_path": "public/images/concepts/bestforteens.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:36:55.244Z",
+      "ideogram_seed": 1618788283,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/audiences/BestForVeterans.tsx",
+      "image_path": "public/images/concepts/bestforveterans.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:37:14.271Z",
+      "ideogram_seed": 278109657,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/conditions/BestForAddiction.tsx",
+      "image_path": "public/images/concepts/bestforaddiction.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:37:33.277Z",
+      "ideogram_seed": 365205455,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/conditions/BestForAnxiety.tsx",
+      "image_path": "public/images/concepts/bestforanxiety.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:37:52.914Z",
+      "ideogram_seed": 1851406321,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/conditions/BestForDepression.tsx",
+      "image_path": "public/images/concepts/bestfordepression.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:38:11.983Z",
+      "ideogram_seed": 769131668,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/conditions/BestForEatingDisorders.tsx",
+      "image_path": "public/images/concepts/bestforeatingdisorders.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:38:31.133Z",
+      "ideogram_seed": 220321981,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/conditions/BestForPTSD.tsx",
+      "image_path": "public/images/concepts/bestforptsd.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:38:50.613Z",
+      "ideogram_seed": 807442881,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/platforms/BestMedicationTherapyPlatforms.tsx",
+      "image_path": "public/images/concepts/bestmedicationtherapyplatforms.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:39:10.902Z",
+      "ideogram_seed": 2015300050,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/platforms/BestSpecializedPlatforms.tsx",
+      "image_path": "public/images/concepts/bestspecializedplatforms.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:39:30.692Z",
+      "ideogram_seed": 1158569766,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/best/specific-needs/BestSpecificNeeds.tsx",
+      "image_path": "public/images/concepts/bestspecificneeds.jpg",
+      "prompt": "Photorealistic DSLR photograph: Professional mental health therapy session, supportive environment, therapist and client connection, modern counseling space, warm natural lighting, authentic therapeutic alliance. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Online therapy and mental health support",
+      "generated_at": "2025-11-02T23:39:49.391Z",
+      "ideogram_seed": 1119216775,
+      "category": "concepts"
+    },
+    {
+      "page_path": "pages/blog/all.tsx",
+      "image_path": "public/images/blog/all.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "All Blog Articles",
+      "generated_at": "2025-11-02T23:40:08.880Z",
+      "ideogram_seed": 1959144015,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/choosing-right-therapist.tsx",
+      "image_path": "public/images/blog/choosing-right-therapist.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "How to Choose the Right Therapist for Your Needs",
+      "generated_at": "2025-11-02T23:40:27.685Z",
+      "ideogram_seed": 36108200,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/index.tsx",
+      "image_path": "public/images/blog/index.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Therapy & Mental Health Guides",
+      "generated_at": "2025-11-02T23:40:46.705Z",
+      "ideogram_seed": 1121144184,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/insurance-coverage-guide.tsx",
+      "image_path": "public/images/blog/insurance-coverage-guide.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Navigating Insurance Coverage for Online Therapy",
+      "generated_at": "2025-11-02T23:41:05.545Z",
+      "ideogram_seed": 85859539,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/therapy-costs-explained.tsx",
+      "image_path": "public/images/blog/therapy-costs-explained.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "The Real Cost of Therapy: Budgeting for Mental Health Care",
+      "generated_at": "2025-11-02T23:41:26.363Z",
+      "ideogram_seed": 2046693601,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/therapy-first-session.tsx",
+      "image_path": "public/images/blog/therapy-first-session.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "What to Expect in Your First Therapy Session: A Complete Guide",
+      "generated_at": "2025-11-02T23:41:45.306Z",
+      "ideogram_seed": 319503625,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/guides/therapy-modalities-explained.tsx",
+      "image_path": "public/images/blog/therapy-modalities-explained.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Therapy Modalities Explained: Finding Your Best Fit",
+      "generated_at": "2025-11-02T23:42:04.193Z",
+      "ideogram_seed": 1430251637,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/ai-therapy-tools.tsx",
+      "image_path": "public/images/blog/ai-therapy-tools.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "AI-Powered Tools Enhancing Online Therapy Experiences",
+      "generated_at": "2025-11-02T23:42:24.241Z",
+      "ideogram_seed": 1271696912,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/index.tsx",
+      "image_path": "public/images/blog/index.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Mental Health News",
+      "generated_at": "2025-11-02T23:42:43.580Z",
+      "ideogram_seed": 250944965,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/latest-therapy-research.tsx",
+      "image_path": "public/images/blog/latest-therapy-research.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Latest Research on Online Therapy Effectiveness",
+      "generated_at": "2025-11-02T23:43:03.217Z",
+      "ideogram_seed": 646212432,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/mental-health-policy-updates.tsx",
+      "image_path": "public/images/blog/mental-health-policy-updates.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "2025 Mental Health Policy Updates: What You Need to Know",
+      "generated_at": "2025-11-02T23:43:22.799Z",
+      "ideogram_seed": 1672166704,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/platform-merger.tsx",
+      "image_path": "public/images/blog/platform-merger.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Major Online Therapy Platforms Announce Merger: What It Means for Clients",
+      "generated_at": "2025-11-02T23:43:41.598Z",
+      "ideogram_seed": 1582383123,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/news/who-global-report.tsx",
+      "image_path": "public/images/blog/who-global-report.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "WHO Releases Landmark Global Mental Health Report: Key Findings and Implications",
+      "generated_at": "2025-11-02T23:44:00.585Z",
+      "ideogram_seed": 1027798973,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/anxiety-management-stories.tsx",
+      "image_path": "public/images/blog/anxiety-management-stories.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Living with Anxiety: Personal Strategies That Help Me Cope",
+      "generated_at": "2025-11-02T23:44:19.645Z",
+      "ideogram_seed": 1455118008,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/index.tsx",
+      "image_path": "public/images/blog/index.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Mental Health Stories & Experiences",
+      "generated_at": "2025-11-02T23:44:38.845Z",
+      "ideogram_seed": 1189229481,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/self-care-practices.tsx",
+      "image_path": "public/images/blog/self-care-practices.jpg",
+      "prompt": "Photorealistic DSLR photograph: Individual practicing self-care and mindfulness, peaceful moment, comfortable home environment, serene expression, soft natural light. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "5 Effective Self-Care Practices for Mental Wellness",
+      "generated_at": "2025-11-02T23:44:57.736Z",
+      "ideogram_seed": 440282751,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/therapist-interviews.tsx",
+      "image_path": "public/images/blog/therapist-interviews.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "A Day in the Life of an Online Therapist",
+      "generated_at": "2025-11-02T23:45:17.241Z",
+      "ideogram_seed": 640550547,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/therapy-during-crisis.tsx",
+      "image_path": "public/images/blog/therapy-during-crisis.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person engaged in mental health journey, thoughtful moment, journaling or reflecting, comfortable space, natural lighting, authentic introspection. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "How Therapy Helped Me Through My Darkest Times",
+      "generated_at": "2025-11-02T23:45:37.200Z",
+      "ideogram_seed": 575780124,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/blog/stories/therapy-success-stories.tsx",
+      "image_path": "public/images/blog/therapy-success-stories.jpg",
+      "prompt": "Photorealistic DSLR photograph: Person celebrating mental health progress, genuine smile, moment of breakthrough, hopeful expression, bright natural lighting, authentic positive emotion. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Therapy Success Stories: When the Right Match Makes All the Difference",
+      "generated_at": "2025-11-02T23:45:55.986Z",
+      "ideogram_seed": 504324761,
+      "category": "blog"
+    },
+    {
+      "page_path": "pages/case-studies/ConditionsPage.tsx",
+      "image_path": "public/images/case-studies/conditionspage.jpg",
+      "prompt": "Photorealistic DSLR photograph: Real person sharing mental health success story, authentic emotion, documentary style, natural environment, genuine transformation moment, hopeful atmosphere. Professional photography, authentic candid moment, genuine human emotion, natural composition. Absolutely no text, no words, no typography, no letters, no writing, no signs, no captions.",
+      "alt_text": "Mental health success story: Mental Health Condition Case Studies",
+      "generated_at": "2025-11-02T23:46:14.670Z",
+      "ideogram_seed": 547596368,
+      "category": "case-studies"
+    }
+  ]
 }
