@@ -6,23 +6,9 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/guides" class="hover:text-brand-primary-600 transition">Guides</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">How to Choose the Right Online Therapist</span>
-      </nav>
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">How to Choose the Right Online Therapist</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">How to Choose the Right Online Therapist</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">A comprehensive guide to finding the perfect therapist for your unique needs and preferences.</p>
     </div>
   </section>
@@ -55,9 +41,9 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 With online therapy platforms offering thousands of therapists to choose from, the selection process can feel overwhelming. This guide will walk you through a step-by-step process to find a therapist who meets your specific needs, matches your communication style, and helps you achieve your mental health goals.
               </p>
-              <div class="bg-brand-primary-50 rounded-lg p-4">
+              <div class="bg-indigo-50 rounded-lg p-4">
                 <div class="flex items-center mb-2">
-                  <Star class="h-5 w-5 text-brand-primary-600 mr-2" />
+                  <Star class="h-5 w-5 text-indigo-600 mr-2" />
                   <h3 class="font-bold text-gray-800">Key Takeaway</h3>
                 </div>
                 <p class="text-gray-700">
@@ -71,8 +57,8 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
         {/* Step 1: Identify Your Needs */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <div class="flex items-center mb-6">
-            <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <span class="text-xl font-bold text-brand-primary-600">1</span>
+            <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold text-indigo-600">1</span>
             </div>
             <h2 class="text-2xl font-bold text-gray-800">Identify Your Needs and Goals</h2>
           </div>
@@ -135,7 +121,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Pro Tip</h3>
             <p class="text-gray-700">
               Write down your therapy goals and priorities before starting your search. Having a clear list will help you evaluate potential therapists more effectively and stay focused on what matters most to you.
@@ -146,8 +132,8 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
         {/* Step 2: Understand Different Approaches */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <div class="flex items-center mb-6">
-            <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <span class="text-xl font-bold text-brand-primary-600">2</span>
+            <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold text-indigo-600">2</span>
             </div>
             <h2 class="text-2xl font-bold text-gray-800">Understand Different Therapeutic Approaches</h2>
           </div>
@@ -159,7 +145,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Brain class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Brain class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Cognitive Behavioral Therapy (CBT)</h3>
               </div>
               <p class="text-gray-600 mb-3">
@@ -172,7 +158,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Brain class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Brain class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Psychodynamic Therapy</h3>
               </div>
               <p class="text-gray-600 mb-3">
@@ -185,7 +171,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Brain class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Brain class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Humanistic Therapy</h3>
               </div>
               <p class="text-gray-600 mb-3">
@@ -198,7 +184,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
           </div>
           
           <div class="flex justify-center mt-6">
-            <a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+            <a href="/learn/fundamentals/therapy-types-explained" class="text-indigo-600 hover:text-indigo-800 flex items-center">
               Learn more about therapy approaches <ArrowRight class="h-4 w-4 ml-1" />
             </a>
           </div>
@@ -207,8 +193,8 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
         {/* Step 3: Research Therapists */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <div class="flex items-center mb-6">
-            <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <span class="text-xl font-bold text-brand-primary-600">3</span>
+            <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold text-indigo-600">3</span>
             </div>
             <h2 class="text-2xl font-bold text-gray-800">Research Potential Therapists</h2>
           </div>
@@ -296,15 +282,15 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Platform Matching Services</h3>
             <p class="text-gray-700 mb-3">
               Many online therapy platforms offer matching services that use algorithms to connect you with compatible therapists based on your needs and preferences. While these can be helpful starting points, it's still important to review the suggested therapists' profiles carefully.
             </p>
             <div class="flex flex-wrap gap-3">
-              <a href="/reviews/platforms/betterhelp" class="text-brand-primary-600 hover:text-indigo-800 text-sm">BetterHelp Matching</a>
-              <a href="/reviews/platforms/talkspace" class="text-brand-primary-600 hover:text-indigo-800 text-sm">Talkspace Matching</a>
-              <a href="/reviews/platforms/cerebral" class="text-brand-primary-600 hover:text-indigo-800 text-sm">Cerebral Matching</a>
+              <a href="/reviews/platforms/betterhelp" class="text-indigo-600 hover:text-indigo-800 text-sm">BetterHelp Matching</a>
+              <a href="/reviews/platforms/talkspace" class="text-indigo-600 hover:text-indigo-800 text-sm">Talkspace Matching</a>
+              <a href="/reviews/platforms/cerebral" class="text-indigo-600 hover:text-indigo-800 text-sm">Cerebral Matching</a>
             </div>
           </div>
         </div>
@@ -312,8 +298,8 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
         {/* Step 4: Initial Consultation */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <div class="flex items-center mb-6">
-            <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <span class="text-xl font-bold text-brand-primary-600">4</span>
+            <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold text-indigo-600">4</span>
             </div>
             <h2 class="text-2xl font-bold text-gray-800">Evaluate the Initial Consultation</h2>
           </div>
@@ -376,7 +362,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Trust Your Instincts</h3>
             <p class="text-gray-700">
               Pay attention to how you feel during and after your first session. It's normal to feel a bit uncomfortable discussing difficult topics, but you should generally feel respected, understood, and safe with your therapist. If something feels off, it's okay to try someone else.
@@ -387,8 +373,8 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
         {/* Step 5: Ongoing Evaluation */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <div class="flex items-center mb-6">
-            <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <span class="text-xl font-bold text-brand-primary-600">5</span>
+            <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold text-indigo-600">5</span>
             </div>
             <h2 class="text-2xl font-bold text-gray-800">Evaluate the Therapeutic Relationship Over Time</h2>
           </div>
@@ -451,7 +437,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Discussing Concerns with Your Therapist</h3>
             <p class="text-gray-700">
               If you have concerns about your therapy, consider discussing them directly with your therapist first. Good therapists welcome feedback and may be able to adjust their approach to better meet your needs. If the issues persist or you're uncomfortable having this conversation, it's okay to seek a different therapist.
@@ -473,7 +459,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 Largest online therapy platform with thousands of therapists and a comprehensive matching system.
               </p>
-              <a href="/reviews/platforms/betterhelp" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/reviews/platforms/betterhelp" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read full review <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -483,7 +469,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 Insurance-friendly platform with specialized programs for various mental health concerns.
               </p>
-              <a href="/reviews/platforms/talkspace" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/reviews/platforms/talkspace" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read full review <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -493,14 +479,14 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 Affordable platform with flexible plans and a focus on personalized matching.
               </p>
-              <a href="/reviews/platforms/calmerry" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/reviews/platforms/calmerry" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read full review <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
           </div>
           
           <div class="mt-6 text-center">
-            <a href="/compare/platforms/top-therapy-platforms-compared" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Compare Top Therapy Platforms</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Compare Top Therapy Platforms</a>
           </div>
         </div>
 
@@ -516,7 +502,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
             Online therapy platforms have made it easier than ever to connect with a wide range of therapists and to switch if needed. Take advantage of these options to find the therapeutic relationship that works best for you.
           </p>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Remember</h3>
             <p class="text-gray-700">
               The right therapist for you is someone who has the expertise to help with your specific concerns, uses an approach that resonates with you, and with whom you feel comfortable and understood. Trust your instincts and be patient with the process.
@@ -534,7 +520,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 Tips and guidance to help you prepare for and get the most out of your first online therapy session.
               </p>
-              <a href="/guides/selection/first-therapy-session" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/first-therapy-session" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -544,7 +530,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 A comprehensive overview of different therapy approaches and which conditions they're best suited for.
               </p>
-              <a href="/guides/selection/therapy-types-explained" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/therapy-types-explained" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -554,7 +540,7 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Brain, Shield, Star } from 'l
               <p class="text-gray-600 mb-4">
                 Learn to identify warning signs that might indicate a therapist isn't the right fit for you.
               </p>
-              <a href="/guides/selection/red-flags-in-therapy" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/red-flags-in-therapy" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>

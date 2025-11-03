@@ -6,23 +6,9 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/guides" class="hover:text-brand-primary-600 transition">Guides</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Preparing for Your First Therapy Session</span>
-      </nav>
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Preparing for Your First Therapy Session</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Preparing for Your First Therapy Session</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Tips and guidance to help you prepare for and get the most out of your first online therapy session.</p>
     </div>
   </section>
@@ -55,9 +41,9 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <p class="text-gray-600 mb-4">
                 Whether you're meeting with a therapist online or in person, knowing what to expect and how to prepare can help you feel more comfortable and get the most out of this first encounter. This guide will walk you through what typically happens in a first session and how you can prepare to make it as productive as possible.
               </p>
-              <div class="bg-brand-primary-50 rounded-lg p-4">
+              <div class="bg-indigo-50 rounded-lg p-4">
                 <div class="flex items-center mb-2">
-                  <Star class="h-5 w-5 text-brand-primary-600 mr-2" />
+                  <Star class="h-5 w-5 text-indigo-600 mr-2" />
                   <h3 class="font-bold text-gray-800">Key Takeaway</h3>
                 </div>
                 <p class="text-gray-700">
@@ -81,8 +67,8 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <h3 class="text-lg font-bold text-gray-800 mb-3">Session Structure</h3>
               <ul class="space-y-4">
                 <li class="flex items-start">
-                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <span class="font-bold text-brand-primary-600">1</span>
+                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                    <span class="font-bold text-indigo-600">1</span>
                   </div>
                   <div>
                     <span class="font-medium">Introductions & Paperwork</span>
@@ -90,8 +76,8 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <span class="font-bold text-brand-primary-600">2</span>
+                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                    <span class="font-bold text-indigo-600">2</span>
                   </div>
                   <div>
                     <span class="font-medium">Background & Assessment</span>
@@ -99,8 +85,8 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <span class="font-bold text-brand-primary-600">3</span>
+                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                    <span class="font-bold text-indigo-600">3</span>
                   </div>
                   <div>
                     <span class="font-medium">Goal Setting</span>
@@ -108,8 +94,8 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <span class="font-bold text-brand-primary-600">4</span>
+                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                    <span class="font-bold text-indigo-600">4</span>
                   </div>
                   <div>
                     <span class="font-medium">Treatment Planning</span>
@@ -117,8 +103,8 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <div class="bg-brand-primary-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <span class="font-bold text-brand-primary-600">5</span>
+                  <div class="bg-indigo-100 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                    <span class="font-bold text-indigo-600">5</span>
                   </div>
                   <div>
                     <span class="font-medium">Questions & Next Steps</span>
@@ -133,7 +119,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <div class="space-y-4">
                 <div>
                   <div class="flex items-center mb-2">
-                    <Video class="h-5 w-5 text-brand-primary-600 mr-2" />
+                    <Video class="h-5 w-5 text-indigo-600 mr-2" />
                     <h4 class="font-medium text-gray-800">Video Sessions</h4>
                   </div>
                   <p class="text-sm text-gray-600">
@@ -143,7 +129,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                 
                 <div>
                   <div class="flex items-center mb-2">
-                    <Phone class="h-5 w-5 text-brand-primary-600 mr-2" />
+                    <Phone class="h-5 w-5 text-indigo-600 mr-2" />
                     <h4 class="font-medium text-gray-800">Phone Sessions</h4>
                   </div>
                   <p class="text-sm text-gray-600">
@@ -153,7 +139,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                 
                 <div>
                   <div class="flex items-center mb-2">
-                    <MessageSquare class="h-5 w-5 text-brand-primary-600 mr-2" />
+                    <MessageSquare class="h-5 w-5 text-indigo-600 mr-2" />
                     <h4 class="font-medium text-gray-800">Messaging/Chat</h4>
                   </div>
                   <p class="text-sm text-gray-600">
@@ -161,7 +147,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   </p>
                 </div>
                 
-                <div class="bg-brand-primary-50 rounded-lg p-4 mt-4">
+                <div class="bg-indigo-50 rounded-lg p-4 mt-4">
                   <h4 class="font-medium text-gray-800 mb-2">Technical Preparation</h4>
                   <ul class="space-y-2">
                     <li class="flex items-start">
@@ -186,10 +172,10 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Session Length</h3>
             <div class="flex items-start">
-              <Clock class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+              <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
               <p class="text-gray-700">
                 First sessions typically last between 45-60 minutes. Some therapists may schedule a longer initial session (up to 90 minutes) to have more time for assessment. Check your appointment details to confirm the exact duration.
               </p>
@@ -211,7 +197,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
                   <p class="text-gray-600 mb-3">
                     Take some time to think about what you hope to achieve through therapy. Having clear goals will help your therapist understand how to best support you.
                   </p>
-                  <div class="pl-4 border-l-2 border-brand-primary-200">
+                  <div class="pl-4 border-l-2 border-indigo-200">
                     <p class="text-sm text-gray-600 italic">
                       "I want to manage my anxiety better so it doesn't interfere with my work."
                     </p>
@@ -359,7 +345,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Pro Tip: Be Honest</h3>
             <p class="text-gray-700">
               The most important thing you can do in your first session is to be honest with your therapist. They're there to help, not to judge. The more open you are about your experiences, thoughts, and feelings, the better they can understand and support you.
@@ -413,7 +399,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Brain class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Brain class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Reflect</h3>
               </div>
               <p class="text-gray-600 mb-4">
@@ -426,7 +412,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Calendar class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Calendar class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Schedule</h3>
               </div>
               <p class="text-gray-600 mb-4">
@@ -439,7 +425,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             
             <div class="bg-gray-50 rounded-lg p-6">
               <div class="flex items-center mb-3">
-                <Shield class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Shield class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-lg font-bold text-gray-800">Practice Self-Care</h3>
               </div>
               <p class="text-gray-600 mb-4">
@@ -451,7 +437,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             </div>
           </div>
           
-          <div class="mt-6 bg-brand-primary-50 rounded-lg p-4">
+          <div class="mt-6 bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Evaluating Your Experience</h3>
             <p class="text-gray-700 mb-4">
               After your first session, ask yourself these questions to evaluate your experience:
@@ -489,7 +475,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
             It's normal for the therapeutic relationship to deepen over time. As you continue with sessions, you'll likely feel more comfortable opening up and exploring deeper issues. Trust the process and give yourself permission to take things at your own pace.
           </p>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Remember</h3>
             <p class="text-gray-700">
               There's no "perfect" way to do therapy. Every person's journey is unique. Be patient with yourself, communicate openly with your therapist, and celebrate the courage it takes to begin this important work.
@@ -507,7 +493,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <p class="text-gray-600 mb-4">
                 A comprehensive guide to finding the perfect therapist for your unique needs and preferences.
               </p>
-              <a href="/guides/selection/choosing-online-therapist" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/choosing-online-therapist" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -517,7 +503,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <p class="text-gray-600 mb-4">
                 A comprehensive overview of different therapy approaches and which conditions they're best suited for.
               </p>
-              <a href="/guides/selection/therapy-types-explained" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/therapy-types-explained" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -527,7 +513,7 @@ import { ArrowRight, CheckCircle, XCircle, Clock, MessageSquare, Video, Phone, C
               <p class="text-gray-600 mb-4">
                 Learn to identify warning signs that might indicate a therapist isn't the right fit for you.
               </p>
-              <a href="/guides/selection/red-flags-in-therapy" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/red-flags-in-therapy" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>

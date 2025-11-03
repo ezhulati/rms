@@ -6,23 +6,9 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/guides" class="hover:text-brand-primary-600 transition">Guides</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Red Flags in Therapy: What to Watch For</span>
-      </nav>
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Red Flags in Therapy: What to Watch For</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Red Flags in Therapy: What to Watch For</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Learn to identify warning signs that might indicate a therapist isn't the right fit for you.</p>
     </div>
   </section>
@@ -55,9 +41,9 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
               <p class="text-gray-600 mb-4">
                 Being able to identify these red flags empowers you to make informed decisions about your mental health care. This guide will help you recognize potential warning signs in therapy and understand when it might be time to consider finding a new therapist.
               </p>
-              <div class="bg-brand-primary-50 rounded-lg p-4">
+              <div class="bg-indigo-50 rounded-lg p-4">
                 <div class="flex items-center mb-2">
-                  <Star class="h-5 w-5 text-brand-primary-600 mr-2" />
+                  <Star class="h-5 w-5 text-indigo-600 mr-2" />
                   <h3 class="font-bold text-gray-800">Key Takeaway</h3>
                 </div>
                 <p class="text-gray-700">
@@ -364,7 +350,7 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
                     <span>Pay attention to how they respond to feedback</span>
                   </div>
                 </div>
-                <div class="mt-4 pl-4 border-l-2 border-brand-primary-200">
+                <div class="mt-4 pl-4 border-l-2 border-indigo-200">
                   <p class="text-sm text-gray-600 italic">
                     "I've noticed that I feel uncomfortable when you [specific behavior]. Could we discuss a different approach?"
                   </p>
@@ -554,7 +540,7 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
             Remember that you have the right to quality, ethical care. If your current therapeutic relationship isn't working, it's okay to seek a different therapist who better meets your needs. Your mental health journey is important, and finding the right therapeutic support is a crucial part of that journey.
           </p>
           
-          <div class="bg-brand-primary-50 rounded-lg p-4">
+          <div class="bg-indigo-50 rounded-lg p-4">
             <h3 class="font-bold text-gray-800 mb-2">Remember</h3>
             <p class="text-gray-700">
               Trust your instincts. While therapy can be challenging at times, it should ultimately feel supportive, respectful, and helpful. You deserve a therapeutic relationship that helps you grow and heal.
@@ -572,7 +558,7 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
               <p class="text-gray-600 mb-4">
                 A comprehensive guide to finding the perfect therapist for your unique needs and preferences.
               </p>
-              <a href="/guides/selection/choosing-online-therapist" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/choosing-online-therapist" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -582,7 +568,7 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
               <p class="text-gray-600 mb-4">
                 Tips and guidance to help you prepare for and get the most out of your first online therapy session.
               </p>
-              <a href="/guides/selection/first-therapy-session" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/first-therapy-session" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
@@ -592,7 +578,7 @@ import { ArrowRight, AlertTriangle, CheckCircle, XCircle, Shield, Brain, Star } 
               <p class="text-gray-600 mb-4">
                 A comprehensive overview of different therapy approaches and which conditions they're best suited for.
               </p>
-              <a href="/guides/selection/therapy-types-explained" class="text-brand-primary-600 hover:text-indigo-800 flex items-center">
+              <a href="/guides/selection/therapy-types-explained" class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 Read guide <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>
