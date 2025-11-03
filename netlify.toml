@@ -9,7 +9,7 @@
 
 # Build environment settings
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 # Redirect rules for clean URLs (Astro handles this)
 [[redirects]]
@@ -50,7 +50,3 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Plugin for Astro
-[[plugins]]
-  package = "@astrojs/netlify"
