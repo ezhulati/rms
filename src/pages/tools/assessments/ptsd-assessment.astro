@@ -1,12 +1,107 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, AlertCircle, CheckCircle, Info } from 'lucide-react';
 ---
 
-<BaseLayout title="PTSD Assessment | RealMindSolutions" description="PTSD Assessment Tool">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">PTSD Assessment Tool</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>PTSD screening assessment.</p>
+<BaseLayout>
+  <div class="min-h-screen bg-gray-50">
+    <div class="sb-container py-12 max-w-4xl">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-indigo-600 p-6 text-white">
+          <h1 class="text-2xl font-bold mb-2">PTSD Assessment</h1>
+          <p class="text-indigo-100">
+            Evaluate PTSD symptoms and understand their impact on your daily life
+          </p>
+        </div>
+
+        <div class="p-6">
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start">
+              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <h2 class="font-bold text-gray-800">About This Assessment</h2>
+                <p class="text-gray-600">
+                  This PTSD screening tool is based on standard clinical assessment methods and helps evaluate symptoms related to traumatic experiences. It examines re-experiencing, avoidance, negative thoughts, and hyperarousal symptoms that may indicate post-traumatic stress disorder.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <h2 class="font-bold text-gray-800">What It Measures</h2>
+                <p class="text-gray-600">
+                  The assessment evaluates key PTSD symptom clusters:
+                </p>
+                <ul class="mt-2 space-y-1">
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Intrusive memories, flashbacks, and nightmares</span>
+                  </li>
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Avoidance of trauma-related thoughts and situations</span>
+                  </li>
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Negative changes in thoughts and mood</span>
+                  </li>
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Hypervigilance and heightened startle response</span>
+                  </li>
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Sleep disturbances and concentration difficulties</span>
+                  </li>
+                  <li class="flex items-center">
+                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Impact on relationships and daily functioning</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <h2 class="font-bold text-gray-800">Important Note</h2>
+                <p class="text-gray-600">
+                  This assessment is not a diagnostic tool. Only a qualified mental health professional can diagnose PTSD. This screening is designed to help you understand your symptoms and decide if professional evaluation for trauma-related concerns might be beneficial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-gray-800 mb-2">Interactive Assessment Coming Soon</h3>
+            <p class="text-gray-700 mb-4">
+              We're currently updating this assessment tool. In the meantime, you can explore our comprehensive resources for PTSD treatment and find qualified trauma specialists who use evidence-based approaches.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start bg-yellow-50 rounded-lg p-4">
+              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
+              <p class="text-sm text-yellow-700">
+                If you're experiencing PTSD symptoms or have been through a traumatic event, we strongly recommend seeking professional help from a trauma-specialized therapist. Effective treatments like EMDR and trauma-focused CBT can help.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
+                Find a Trauma Specialist
+              </a>
+              <a href="/best/conditions/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
+                View Best PTSD Treatment Options
+              </a>
+              <a href="/conditions/ptsd-page" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-50 transition">
+                Learn More About PTSD
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </BaseLayout>

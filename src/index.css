@@ -44,8 +44,8 @@
   --space-2xl: calc(var(--space-unit) * 6);
 
   /* Container widths */
-  --container-max-width: min(92%, 1440px);
-  --container-narrow-max-width: min(92%, 1024px);
+  --container-max-width: min(92%, 1000px);
+  --container-narrow-max-width: min(92%, 900px);
 }
 
 @layer base {

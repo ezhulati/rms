@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Brain, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [currentPath, setCurrentPath] = useState('');
@@ -94,7 +94,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <Brain className="h-8 w-8 text-emerald-500" />
+            <img src="/images/RMS.svg" alt="RealMindSolutions Logo" className="h-12 w-12" />
             <span className="text-xl font-bold text-gray-800">RealMindSolutions</span>
           </a>
 

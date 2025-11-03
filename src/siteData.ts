@@ -527,6 +527,66 @@ export const assessments = [
     image: '/images/assessments/stress.jpg',
     path: '/tools/assessments/stress-level-test',
     icon: 'Activity'
+  },
+  {
+    id: 'ocd-assessment',
+    title: 'OCD Screening Tool',
+    description: 'Screen for obsessive-compulsive disorder symptoms and behaviors',
+    duration: '8-12 minutes',
+    questions: 20,
+    image: '/images/assessments/ocd.jpg',
+    path: '/tools/assessments/ocd-assessment',
+    icon: 'RefreshCw'
+  },
+  {
+    id: 'ptsd-assessment',
+    title: 'PTSD Screening Assessment',
+    description: 'Evaluate symptoms of post-traumatic stress disorder',
+    duration: '10-15 minutes',
+    questions: 24,
+    image: '/images/assessments/ptsd.jpg',
+    path: '/tools/assessments/ptsd-assessment',
+    icon: 'Shield'
+  },
+  {
+    id: 'depression-assessment',
+    title: 'Depression Self-Assessment',
+    description: 'Comprehensive evaluation of depressive symptoms and mood patterns',
+    duration: '8-10 minutes',
+    questions: 16,
+    image: '/images/assessments/depression-full.jpg',
+    path: '/tools/assessments/depression-assessment',
+    icon: 'CloudRain'
+  },
+  {
+    id: 'relationship-assessment',
+    title: 'Relationship Health Assessment',
+    description: 'Evaluate the health and satisfaction of your romantic relationship',
+    duration: '10-15 minutes',
+    questions: 28,
+    image: '/images/assessments/relationship.jpg',
+    path: '/tools/assessments/relationship-assessment',
+    icon: 'Heart'
+  },
+  {
+    id: 'therapy-readiness',
+    title: 'Therapy Readiness Assessment',
+    description: 'Determine if you\'re ready to begin therapy and what to expect',
+    duration: '5 minutes',
+    questions: 12,
+    image: '/images/assessments/therapy-readiness.jpg',
+    path: '/tools/assessments/therapy-readiness',
+    icon: 'CheckCircle'
+  },
+  {
+    id: 'burnout-assessment',
+    title: 'Burnout Screening Tool',
+    description: 'Assess signs of burnout and emotional exhaustion',
+    duration: '8 minutes',
+    questions: 16,
+    image: '/images/assessments/burnout.jpg',
+    path: '/tools/assessments/burnout-assessment',
+    icon: 'Flame'
   }
 ];
 
@@ -559,6 +619,66 @@ export const matchers = [
       'CBT, DBT, psychodynamic, and more',
       'Condition-specific recommendations',
       'Evidence-based suggestions'
+    ]
+  },
+  {
+    id: 'budget-friendly-finder',
+    title: 'Budget-Friendly Therapy Finder',
+    description: 'Find affordable online therapy options that fit your budget',
+    duration: '3 minutes',
+    image: '/images/matchers/budget-finder.jpg',
+    path: '/tools/matchers/budget-friendly-finder',
+    icon: 'DollarSign',
+    features: [
+      'Filter by weekly budget',
+      'Compare pricing across platforms',
+      'Financial aid availability',
+      'Sliding scale options'
+    ]
+  },
+  {
+    id: 'insurance-coverage-checker',
+    title: 'Insurance Coverage Checker',
+    description: 'Check which online therapy platforms accept your insurance',
+    duration: '2 minutes',
+    image: '/images/matchers/insurance-checker.jpg',
+    path: '/tools/matchers/insurance-coverage-checker',
+    icon: 'Shield',
+    features: [
+      'Insurance provider matching',
+      'In-network vs out-of-network',
+      'Copay estimation',
+      'Reimbursement process guidance'
+    ]
+  },
+  {
+    id: 'therapist-specialty-finder',
+    title: 'Therapist Specialty Finder',
+    description: 'Find therapists specializing in your specific condition or situation',
+    duration: '4 minutes',
+    image: '/images/matchers/specialty-finder.jpg',
+    path: '/tools/matchers/therapist-specialty-finder',
+    icon: 'Users',
+    features: [
+      'Condition-specific specialists',
+      'Cultural competency matching',
+      'LGBTQ+ affirming therapists',
+      'Language preferences'
+    ]
+  },
+  {
+    id: 'communication-preference-matcher',
+    title: 'Communication Preference Matcher',
+    description: 'Find platforms offering your preferred communication method',
+    duration: '2 minutes',
+    image: '/images/matchers/communication-matcher.jpg',
+    path: '/tools/matchers/communication-preference-matcher',
+    icon: 'MessageSquare',
+    features: [
+      'Text/messaging therapy',
+      'Video session platforms',
+      'Phone call options',
+      'Live chat availability'
     ]
   }
 ];
@@ -605,6 +725,138 @@ export const worksheetCategories = [
         pages: 2,
         tags: ['Depression', 'Behavioral Activation', 'Planning'],
         filePath: '/worksheets/depression/activity-scheduling.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Stress Management',
+    description: 'Techniques and tools for reducing stress and building resilience',
+    worksheets: [
+      {
+        title: 'Stress Symptom Tracker',
+        description: 'Identify physical and emotional signs of stress',
+        format: 'PDF',
+        pages: 2,
+        tags: ['Stress', 'Self-Awareness', 'Tracking'],
+        filePath: '/worksheets/stress/stress-symptom-tracker.pdf'
+      },
+      {
+        title: 'Relaxation Techniques Guide',
+        description: 'Step-by-step instructions for progressive muscle relaxation and breathing exercises',
+        format: 'PDF',
+        pages: 3,
+        tags: ['Stress', 'Relaxation', 'Mindfulness'],
+        filePath: '/worksheets/stress/relaxation-techniques.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Cognitive Restructuring',
+    description: 'Challenge negative thoughts and develop healthier thinking patterns',
+    worksheets: [
+      {
+        title: 'Cognitive Distortion Worksheet',
+        description: 'Identify and challenge common thinking errors',
+        format: 'PDF',
+        pages: 3,
+        tags: ['CBT', 'Thought Work', 'Cognitive'],
+        filePath: '/worksheets/cognitive/cognitive-distortions.pdf'
+      },
+      {
+        title: 'Thought Record Worksheet',
+        description: 'Comprehensive thought analysis and restructuring tool',
+        format: 'PDF',
+        pages: 2,
+        tags: ['CBT', 'Thought Work', 'Cognitive'],
+        filePath: '/worksheets/cognitive/thought-record.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Relationship & Communication',
+    description: 'Build stronger relationships and improve communication skills',
+    worksheets: [
+      {
+        title: 'Communication Styles Assessment',
+        description: 'Identify your communication patterns and areas for growth',
+        format: 'PDF',
+        pages: 2,
+        tags: ['Relationships', 'Communication', 'Self-Awareness'],
+        filePath: '/worksheets/relationships/communication-styles.pdf'
+      },
+      {
+        title: 'Conflict Resolution Worksheet',
+        description: 'Navigate disagreements constructively and find win-win solutions',
+        format: 'PDF',
+        pages: 3,
+        tags: ['Relationships', 'Communication', 'Problem-Solving'],
+        filePath: '/worksheets/relationships/conflict-resolution.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Mindfulness & Self-Care',
+    description: 'Practice mindfulness and develop sustainable self-care routines',
+    worksheets: [
+      {
+        title: 'Mindfulness Practice Log',
+        description: 'Track daily mindfulness exercises and their effects',
+        format: 'PDF',
+        pages: 1,
+        tags: ['Mindfulness', 'Tracking', 'Self-Care'],
+        filePath: '/worksheets/mindfulness/practice-log.pdf'
+      },
+      {
+        title: 'Self-Care Action Plan',
+        description: 'Create a personalized self-care routine for physical, emotional, and mental wellbeing',
+        format: 'PDF',
+        pages: 2,
+        tags: ['Self-Care', 'Planning', 'Wellness'],
+        filePath: '/worksheets/mindfulness/self-care-plan.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Trauma & PTSD',
+    description: 'Resources for processing trauma and managing PTSD symptoms',
+    worksheets: [
+      {
+        title: 'Grounding Techniques Card',
+        description: 'Quick reference for grounding exercises during flashbacks or dissociation',
+        format: 'PDF',
+        pages: 1,
+        tags: ['PTSD', 'Trauma', 'Grounding', 'Crisis'],
+        filePath: '/worksheets/trauma/grounding-techniques.pdf'
+      },
+      {
+        title: 'Trigger Identification Worksheet',
+        description: 'Map out trauma triggers and develop coping strategies',
+        format: 'PDF',
+        pages: 3,
+        tags: ['PTSD', 'Trauma', 'Self-Awareness', 'Coping'],
+        filePath: '/worksheets/trauma/trigger-identification.pdf'
+      }
+    ]
+  },
+  {
+    name: 'Goal Setting & Motivation',
+    description: 'Set meaningful goals and maintain motivation for personal growth',
+    worksheets: [
+      {
+        title: 'SMART Goals Worksheet',
+        description: 'Define specific, measurable, achievable, relevant, and time-bound goals',
+        format: 'PDF',
+        pages: 2,
+        tags: ['Goals', 'Planning', 'Motivation'],
+        filePath: '/worksheets/goals/smart-goals.pdf'
+      },
+      {
+        title: 'Values Clarification Exercise',
+        description: 'Identify your core values and align goals with what matters most',
+        format: 'PDF',
+        pages: 3,
+        tags: ['Goals', 'Values', 'Self-Awareness'],
+        filePath: '/worksheets/goals/values-clarification.pdf'
       }
     ]
   }
