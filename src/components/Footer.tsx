@@ -83,10 +83,10 @@ const Footer = () => {
             We are not a substitute for professional medical advice, diagnosis, or treatment.
           </p>
           <p className="text-neutral-300">© {new Date().getFullYear()} RealMindSolutions. All rights reserved.</p>
-          <div className="mt-2 space-x-4">
-            <Link to="/privacy-policy" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Terms of Service</Link>
-            <Link to="/accessibility" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Accessibility</Link>
+          <div className="mt-2 flex flex-wrap justify-center gap-x-2 sm:gap-x-4 text-xs sm:text-sm">
+            <Link to="/privacy-policy" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors whitespace-nowrap">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors whitespace-nowrap">Terms of Service</Link>
+            <Link to="/accessibility" className="text-brand-primary-400 hover:text-brand-primary-300 transition-colors whitespace-nowrap">Accessibility</Link>
           </div>
         </div>
         </div>
