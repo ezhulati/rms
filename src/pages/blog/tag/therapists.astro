@@ -1,21 +1,207 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Users, Search, CheckCircle, MessageCircle, BookOpen, Heart, ArrowRight, Shield } from 'lucide-react';
 ---
 
-<BaseLayout title="Therapists | RealMindSolutions" description="Therapist Resources">
+<BaseLayout title="Therapist Resources & Guides | RealMindSolutions" description="Comprehensive therapist resources—finding the right therapist, what to expect, building therapeutic relationships, and working effectively with your mental health provider.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapist Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Articles about therapists</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Everything you need to know about finding, choosing, and working with therapists.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Your therapist is one of the most important factors in successful treatment. Research shows that the therapeutic relationship—the connection between you and your therapist—is often more important than the specific therapy technique used.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together our comprehensive guides to working with therapists: how to find one, what credentials to look for, how to know if they're a good fit, and how to build a strong therapeutic relationship.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Therapist Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/guides/selection/finding-the-right-therapist" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Search className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Finding the Right Therapist</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Comprehensive guide to finding, vetting, and choosing a therapist who's the right fit for your needs, preferences, and goals.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Find Therapists Online</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Top online therapy platforms with extensive therapist networks, making it easy to find and match with qualified providers.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Browse Platforms
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/therapy-session-preparation" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <MessageCircle className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Session Preparation</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Worksheet to help you prepare for therapy sessions and reflect on insights afterward—get the most from your time with your therapist.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Download Worksheet
+          </div>
+        </a>
+
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapist Specializations</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn about different therapy types and specializations so you can find a therapist trained in the approaches that work best for you.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Specializations
+          </div>
+        </a>
+
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Insurance & Payment</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Navigate insurance coverage, verify therapist networks, and understand out-of-network reimbursement for maximum savings.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Insurance Guide
+          </div>
+        </a>
+
+        <a href="/tools/matchers/platform-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Platform Finder Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Interactive tool to find therapy platforms that match your preferences for therapist credentials, communication styles, and specializations.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Find Your Match
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* What Makes a Good Therapist */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Makes a Good Therapist?</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          While every person's needs are different, research has identified key qualities that contribute to effective therapy:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 not-prose">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-blue-900 mb-3 flex items-center">
+              <Heart className="h-5 w-5 mr-2" />
+              Essential Qualities
+            </h3>
+            <ul class="space-y-2 text-sm text-blue-800">
+              <li>• <strong>Empathy and warmth:</strong> Makes you feel heard and understood</li>
+              <li>• <strong>Non-judgmental:</strong> Creates a safe space without criticism</li>
+              <li>• <strong>Active listening:</strong> Fully present and attentive during sessions</li>
+              <li>• <strong>Cultural competency:</strong> Respects your background and identity</li>
+              <li>• <strong>Appropriate boundaries:</strong> Professional yet caring relationship</li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-purple-900 mb-3 flex items-center">
+              <CheckCircle className="h-5 w-5 mr-2" />
+              Professional Credentials
+            </h3>
+            <ul class="space-y-2 text-sm text-purple-800">
+              <li>• <strong>Licensed:</strong> LCSW, LMFT, LPC, psychologist (PhD/PsyD), or psychiatrist (MD)</li>
+              <li>• <strong>Specialized training:</strong> Credentials in relevant therapy modalities</li>
+              <li>• <strong>Experience:</strong> Track record treating your specific concerns</li>
+              <li>• <strong>Continuing education:</strong> Stays current with research and best practices</li>
+              <li>• <strong>Ethical practice:</strong> Follows professional ethics codes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Red flags:</strong> A therapist who breaks confidentiality (except for safety), minimizes your concerns, pushes their beliefs on you, or makes you feel uncomfortable should be reconsidered. Trust your instincts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Therapist Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of therapist-related articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• Questions to ask a potential therapist before committing</li>
+          <li>• How to know if your therapist is a good fit</li>
+          <li>• When and how to "break up" with your therapist</li>
+          <li>• Bringing up difficult topics with your therapist</li>
+          <li>• Understanding therapist credentials: LCSW vs LPC vs PhD</li>
+          <li>• What to do if you feel like your therapist doesn't understand you</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing therapist resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/insurance" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Insurance</a>
       </div>
     </div>
   </section>

@@ -1,21 +1,237 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { BookOpen, Brain, Heart, Target, Zap, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Therapy Types | RealMindSolutions" description="Types of Therapy">
+<BaseLayout title="Therapy Types & Modalities | RealMindSolutions" description="Comprehensive guide to therapy types—CBT, DBT, psychodynamic, EMDR, ACT, and more. Understand different therapeutic approaches and find the right modality for your needs.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Types of Therapy</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Different therapeutic modalities</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Types & Modalities</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Understanding different therapeutic approaches to find what works best for you.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          There are dozens of therapy types, each with unique techniques, philosophies, and evidence bases. Some focus on changing thoughts (CBT), others on processing emotions (psychodynamic), managing intense feelings (DBT), or reprocessing trauma (EMDR).
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together our comprehensive guides to therapy modalities—what they are, how they work, what conditions they treat best, and how to find therapists trained in each approach.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Therapy Type Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Types Explained</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Comprehensive guide to CBT, DBT, psychodynamic, EMDR, ACT, IPT, and more—with comparison tables and condition recommendations.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Full Guide
+          </div>
+        </a>
+
+        <a href="/tools/matchers/therapy-type-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Type Finder</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Interactive tool to find the right therapy approach based on your symptoms, goals, and preferences.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Find Your Match
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Platforms by Therapy Type</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Find online therapy platforms offering specific modalities like CBT, DBT, EMDR, and psychodynamic therapy.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Compare Platforms
+          </div>
+        </a>
+
+        <a href="/compare/modalities" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Zap className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Type Comparisons</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Side-by-side comparisons of therapy modalities—CBT vs DBT, psychodynamic vs CBT, and more.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Comparisons
+          </div>
+        </a>
+
+        <a href="/guides/selection/finding-the-right-therapist" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Finding a Specialist</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to find therapists trained in specific modalities and verify their credentials and expertise.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Selection Guide
+          </div>
+        </a>
+
+        <a href="/tools/assessments" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mental Health Assessments</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Take assessments to identify your symptoms and understand which therapy types may be most effective.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Take Assessments
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Quick Reference: Common Therapy Types */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Common Therapy Types at a Glance</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Brain className="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Cognitive Behavioral Therapy (CBT)</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Focus:</strong> Changing negative thought patterns and behaviors
+            </p>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Best for:</strong> Anxiety, depression, OCD, PTSD, eating disorders
+            </p>
+            <p class="text-sm text-blue-800">
+              <strong>Approach:</strong> Short-term, structured, homework-based, evidence-based
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Heart className="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">Dialectical Behavior Therapy (DBT)</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Focus:</strong> Managing intense emotions and improving relationships
+            </p>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Best for:</strong> Borderline personality disorder, self-harm, emotion dysregulation
+            </p>
+            <p class="text-sm text-purple-800">
+              <strong>Approach:</strong> Skills training in mindfulness, distress tolerance, emotion regulation
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Target className="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">EMDR (Eye Movement Desensitization)</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Focus:</strong> Processing traumatic memories and reducing their emotional impact
+            </p>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Best for:</strong> PTSD, trauma, phobias, panic attacks
+            </p>
+            <p class="text-sm text-green-800">
+              <strong>Approach:</strong> Bilateral stimulation while processing traumatic memories
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <BookOpen className="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Psychodynamic Therapy</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Focus:</strong> Exploring unconscious patterns and past experiences
+            </p>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Best for:</strong> Depression, relationship issues, personality patterns, self-exploration
+            </p>
+            <p class="text-sm text-orange-800">
+              <strong>Approach:</strong> Open-ended, insight-focused, explores childhood and relationships
+            </p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-600 italic">
+          Visit our comprehensive <a href="/resources/guides/therapy-types-explained" class="text-brand-primary hover:underline">Therapy Types Explained</a> guide for detailed information on ACT, IPT, humanistic therapy, and more modalities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Therapy Types Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of therapy modality articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• How to know which therapy type is right for you</li>
+          <li>• CBT techniques you can practice at home</li>
+          <li>• What to expect in your first EMDR session</li>
+          <li>• DBT skills for managing emotional overwhelm</li>
+          <li>• The difference between psychodynamic and psychoanalytic therapy</li>
+          <li>• ACT exercises for building psychological flexibility</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing therapy type resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/therapists" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapists</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/depression" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Depression</a>
       </div>
     </div>
   </section>
