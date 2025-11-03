@@ -1,21 +1,299 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Heart, Users, MessageCircle, Shield, Target, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
 ---
 
-<BaseLayout title="Relationships | RealMindSolutions" description="Relationship Resources">
+<BaseLayout title="Relationship & Couples Therapy Resources | RealMindSolutions" description="Comprehensive relationship resources—couples therapy, communication skills, relationship patterns, boundaries, and building healthy connections.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Relationship Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Relationship content</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Relationship & Couples Therapy</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Resources for building healthier relationships, improving communication, and finding couples therapy.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Healthy relationships are fundamental to mental health and well-being. Whether you're navigating romantic partnership challenges, family dynamics, friendships, or working on yourself to become a better partner, relationship skills can be learned and improved.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together couples therapy options, communication strategies, boundary-setting guidance, and tools for building and maintaining healthier relationships.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Relationship Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/best/audiences/best-for-couples" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Best Couples Therapy Platforms</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Top online platforms for couples therapy, including video sessions and asynchronous messaging options.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Couples Platforms
+          </div>
+        </a>
+
+        <a href="/resources/guides/talking-to-loved-ones" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <MessageCircle className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Communication Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to talk to loved ones about difficult topics, mental health struggles, and relationship concerns.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Individual Therapy for Relationship Issues</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Find individual therapy to work on relationship patterns, attachment styles, and communication skills.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Browse Platforms
+          </div>
+        </a>
+
+        <a href="/tools/assessments/relationship-health" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Sparkles className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Relationship Health Assessment</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free assessment to evaluate your relationship patterns and identify areas for growth.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Take Assessment
+          </div>
+        </a>
+
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Relationship Therapy Types</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn about EFT, Gottman Method, Imago therapy, and other couples therapy approaches.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Therapy Types
+          </div>
+        </a>
+
+        <a href="/resources/guides/self-care-strategies" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Boundaries & Self-Care</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Setting healthy boundaries in relationships—essential for protecting your mental health and well-being.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Common Relationship Challenges */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Common Relationship Challenges</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <MessageCircle className="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Communication Breakdown</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Signs:</strong> Frequent misunderstandings, defensive reactions, stonewalling, criticism
+            </p>
+            <p class="text-sm text-blue-800">
+              <strong>Help:</strong> Couples therapy focusing on communication skills, active listening, and conflict resolution
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Heart className="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">Intimacy & Connection Issues</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Signs:</strong> Emotional distance, lack of physical intimacy, feeling like roommates
+            </p>
+            <p class="text-sm text-purple-800">
+              <strong>Help:</strong> Emotionally Focused Therapy (EFT), attachment-based couples therapy
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Shield className="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">Trust & Betrayal</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Signs:</strong> Infidelity aftermath, broken promises, secrecy, constant suspicion
+            </p>
+            <p class="text-sm text-green-800">
+              <strong>Help:</strong> Trauma-informed couples therapy, individual therapy for both partners
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Users className="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Life Transitions & Stress</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Signs:</strong> Conflict around parenting, finances, career changes, relocation
+            </p>
+            <p class="text-sm text-orange-800">
+              <strong>Help:</strong> Solution-focused couples therapy, stress management strategies
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Healthy Relationship Skills */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Building Healthy Relationships</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          Research identifies key skills and qualities that characterize healthy, satisfying relationships:
+        </p>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Essential Relationship Skills:</h3>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">Effective communication:</strong> Expressing needs clearly, active listening, validating partner's feelings, using "I" statements instead of blame
+            </li>
+            <li>
+              <strong class="text-gray-900">Healthy conflict resolution:</strong> Addressing issues directly, staying calm, compromising, repairing after arguments
+            </li>
+            <li>
+              <strong class="text-gray-900">Emotional intimacy:</strong> Vulnerability, sharing feelings, mutual support, maintaining friendship and affection
+            </li>
+            <li>
+              <strong class="text-gray-900">Trust and honesty:</strong> Reliability, transparency, keeping commitments, addressing broken trust
+            </li>
+            <li>
+              <strong class="text-gray-900">Respect and equality:</strong> Valuing each other's opinions, shared decision-making, appreciating differences
+            </li>
+            <li>
+              <strong class="text-gray-900">Boundaries:</strong> Individual identity within partnership, respecting each other's needs for space and autonomy
+            </li>
+            <li>
+              <strong class="text-gray-900">Shared values and goals:</strong> Alignment on major life decisions, supporting each other's growth
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Remember:</strong> Perfect relationships don't exist. Healthy relationships involve two imperfect people committed to growth, repair, and showing up for each other.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* When to Seek Couples Therapy */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">When to Seek Couples Therapy</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <p class="text-gray-700 mb-6">
+          Consider couples therapy if you notice:
+        </p>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 not-prose">
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+            <li>• Same arguments repeating without resolution</li>
+            <li>• Growing emotional distance or disconnection</li>
+            <li>• One or both partners considering separation</li>
+            <li>• Communication has broken down</li>
+            <li>• Recovering from infidelity or betrayal</li>
+            <li>• Navigating major life transitions</li>
+            <li>• Sexual or intimacy issues</li>
+            <li>• Constant criticism or defensiveness</li>
+            <li>• Mental health issues affecting the relationship</li>
+            <li>• Parenting disagreements</li>
+          </ul>
+        </div>
+
+        <p class="text-sm text-gray-600 italic mt-6">
+          Don't wait until things are dire. Couples therapy is most effective when sought early, as a tool for growth rather than last resort.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Relationship Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of relationship articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• How to know if couples therapy is working</li>
+          <li>• Communication mistakes that damage relationships</li>
+          <li>• Setting boundaries without guilt</li>
+          <li>• Attachment styles and relationship patterns</li>
+          <li>• Rebuilding trust after infidelity</li>
+          <li>• When to stay and when to leave a relationship</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing relationship resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/self-care" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Self-Care</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/depression" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Depression</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
       </div>
     </div>
   </section>

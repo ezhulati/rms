@@ -1,21 +1,267 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, Heart, Zap, Target, BookOpen, CheckCircle, ArrowRight, Activity } from 'lucide-react';
 ---
 
-<BaseLayout title="Mindfulness | RealMindSolutions" description="Mindfulness Resources">
+<BaseLayout title="Mindfulness & Meditation Resources | RealMindSolutions" description="Comprehensive mindfulness resources—meditation practices, mindfulness-based therapy, stress reduction techniques, and integrating mindfulness into mental health treatment.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mindfulness Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Mindfulness practices</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mindfulness & Meditation</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Evidence-based mindfulness practices for mental health, stress reduction, and emotional well-being.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Mindfulness is the practice of paying attention to the present moment with openness, curiosity, and acceptance. Research shows mindfulness practices reduce stress, anxiety, and depression while improving focus, emotional regulation, and overall well-being.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together mindfulness-based therapies, meditation techniques, stress reduction practices, and how to integrate mindfulness into your mental health treatment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Mindfulness Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/resources/worksheets/stress-management-techniques" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Brain className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mindfulness Techniques</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free mindfulness exercises including breathing techniques, body scans, and grounding practices.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Techniques
+          </div>
+        </a>
+
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mindfulness-Based Therapies</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn about MBSR, MBCT, ACT, and DBT—therapy approaches that integrate mindfulness practices.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Therapies
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Platforms with Mindfulness</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Find therapy platforms offering mindfulness-based approaches like ACT, DBT, and MBCT.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Compare Platforms
+          </div>
+        </a>
+
+        <a href="/tools/assessments/anxiety-screening" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Anxiety & Stress Assessments</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free assessments to measure anxiety and stress levels—mindfulness helps manage both conditions.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Take Assessment
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/thought-record-worksheet" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mindful Thought Observation</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            CBT thought record worksheet to practice mindfully observing thoughts without judgment.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Download Worksheet
+          </div>
+        </a>
+
+        <a href="/resources/guides/self-care-strategies" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Activity className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mindful Self-Care</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Integrate mindfulness into daily self-care practices for emotional, physical, and mental well-being.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Types of Mindfulness Practices */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Types of Mindfulness Practices</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Brain className="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Mindful Breathing</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Practice:</strong> Focus attention on breath—noticing inhales, exhales, pauses
+            </p>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Benefits:</strong> Reduces anxiety, calms nervous system, improves focus
+            </p>
+            <p class="text-sm text-blue-800">
+              <strong>Time:</strong> 1-20 minutes; effective even in short bursts
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Activity className="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">Body Scan Meditation</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Practice:</strong> Systematically notice sensations throughout the body
+            </p>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Benefits:</strong> Releases physical tension, increases body awareness, aids sleep
+            </p>
+            <p class="text-sm text-purple-800">
+              <strong>Time:</strong> 10-45 minutes; often used before bed
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Zap className="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">Mindful Movement</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Practice:</strong> Gentle movement (yoga, walking) with full awareness of sensations
+            </p>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Benefits:</strong> Combines physical and mental benefits, grounds in present
+            </p>
+            <p class="text-sm text-green-800">
+              <strong>Time:</strong> 10-60 minutes; great for those who find sitting difficult
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Heart className="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Loving-Kindness Meditation</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Practice:</strong> Cultivating compassion toward self and others through phrases
+            </p>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Benefits:</strong> Increases self-compassion, reduces self-criticism, improves relationships
+            </p>
+            <p class="text-sm text-orange-800">
+              <strong>Time:</strong> 10-30 minutes; especially helpful for depression
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Mindfulness in Mental Health Treatment */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Mindfulness-Based Therapies</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          Several evidence-based therapies integrate mindfulness as a core component:
+        </p>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <ul class="space-y-4 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">MBSR (Mindfulness-Based Stress Reduction):</strong> 8-week program teaching mindfulness meditation, body awareness, and yoga for stress management. Effective for chronic pain, anxiety, and stress.
+            </li>
+            <li>
+              <strong class="text-gray-900">MBCT (Mindfulness-Based Cognitive Therapy):</strong> Combines mindfulness meditation with CBT for preventing depression relapse. Helps recognize and disengage from negative thought patterns.
+            </li>
+            <li>
+              <strong class="text-gray-900">ACT (Acceptance and Commitment Therapy):</strong> Uses mindfulness and acceptance to help people engage in valued activities despite difficult thoughts and feelings.
+            </li>
+            <li>
+              <strong class="text-gray-900">DBT (Dialectical Behavior Therapy):</strong> Incorporates mindfulness as one of four core skill modules for managing intense emotions and improving relationships.
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-sm text-gray-600 italic">
+          Visit our <a href="/resources/guides/therapy-types-explained" class="text-brand-primary hover:underline">Therapy Types Explained</a> guide for detailed information on mindfulness-based therapies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Mindfulness Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of mindfulness articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• How to start a mindfulness practice (beginner's guide)</li>
+          <li>• 5-minute mindfulness exercises for busy schedules</li>
+          <li>• Mindfulness for anxiety: techniques that work</li>
+          <li>• Common mindfulness myths and misconceptions</li>
+          <li>• Mindfulness apps: which one is right for you?</li>
+          <li>• Integrating mindfulness into daily routines</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing mindfulness resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/self-care" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Self-Care</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/depression" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Depression</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
       </div>
     </div>
   </section>

@@ -1,21 +1,278 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Monitor, Video, Phone, Target, Shield, CheckCircle, ArrowRight, Heart, Users } from 'lucide-react';
 ---
 
-<BaseLayout title="Telehealth | RealMindSolutions" description="Telehealth Resources">
+<BaseLayout title="Telehealth & Virtual Mental Health Care | RealMindSolutions" description="Comprehensive telehealth resources—virtual mental health care, telepsychiatry, online therapy platforms, insurance coverage, and choosing the right telehealth provider.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Telehealth Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Telehealth information</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Telehealth & Virtual Mental Health</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Comprehensive resources for accessing mental health care through telehealth and virtual platforms.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Telehealth mental health care includes online therapy, telepsychiatry, virtual counseling, and remote medication management. The COVID-19 pandemic accelerated telehealth adoption, and research consistently shows virtual care is as effective as in-person treatment for most mental health conditions.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together everything you need to know about telehealth mental health services: how it works, platform options, insurance coverage, privacy and security, and finding quality virtual providers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Telehealth Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Monitor className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Best Telehealth Platforms</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Compare top telehealth mental health platforms offering therapy, psychiatry, and medication management.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Compare Platforms
+          </div>
+        </a>
+
+        <a href="/tools/matchers/platform-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Platform Finder Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Interactive tool to find the right telehealth platform based on your needs, insurance, and preferences.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Find Your Platform
+          </div>
+        </a>
+
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Telehealth Insurance Coverage</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How insurance covers telehealth mental health services and which platforms accept your insurance.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Insurance Guide
+          </div>
+        </a>
+
+        <a href="/best/platforms/best-for-psychiatry" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Telepsychiatry Services</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Online psychiatry platforms for medication management, diagnosis, and psychiatric care via telehealth.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Psychiatry Platforms
+          </div>
+        </a>
+
+        <a href="/best/platforms/best-for-video-therapy" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Video className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Video Therapy Platforms</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Top platforms for live video telehealth sessions with licensed therapists and counselors.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Video Platforms
+          </div>
+        </a>
+
+        <a href="/guides/selection/finding-the-right-therapist" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Finding Telehealth Providers</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to find, vet, and choose qualified telehealth providers including credential verification.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Selection Guide
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Types of Telehealth Mental Health Services */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Types of Telehealth Mental Health Services</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Video className="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Online Therapy/Counseling</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>What it is:</strong> Talk therapy delivered via video, phone, or messaging
+            </p>
+            <p class="text-sm text-blue-800 mb-2">
+              <strong>Providers:</strong> Licensed therapists (LCSW, LMFT, LPC), psychologists
+            </p>
+            <p class="text-sm text-blue-800">
+              <strong>Best for:</strong> Depression, anxiety, relationship issues, life transitions, trauma therapy
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Heart className="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">Telepsychiatry</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>What it is:</strong> Psychiatric evaluation, diagnosis, and medication management via video
+            </p>
+            <p class="text-sm text-purple-800 mb-2">
+              <strong>Providers:</strong> Psychiatrists (MD/DO), psychiatric nurse practitioners
+            </p>
+            <p class="text-sm text-purple-800">
+              <strong>Best for:</strong> Medication for depression, anxiety, ADHD, bipolar disorder, schizophrenia
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Phone className="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">Crisis Support Lines</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>What it is:</strong> 24/7 immediate support via phone or text for mental health crises
+            </p>
+            <p class="text-sm text-green-800 mb-2">
+              <strong>Providers:</strong> Trained crisis counselors, peer supporters
+            </p>
+            <p class="text-sm text-green-800">
+              <strong>Best for:</strong> Suicidal thoughts, panic attacks, emotional crises, immediate support needs
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Users className="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Virtual Support Groups</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>What it is:</strong> Peer support groups meeting online via video or chat
+            </p>
+            <p class="text-sm text-orange-800 mb-2">
+              <strong>Providers:</strong> Peer-led or professionally facilitated
+            </p>
+            <p class="text-sm text-orange-800">
+              <strong>Best for:</strong> Depression, addiction recovery, grief, chronic illness, shared experiences
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Telehealth vs In-Person Care */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">When to Choose Telehealth</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 not-prose">
+          <div class="bg-green-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-green-900 mb-3 flex items-center">
+              <CheckCircle className="h-5 w-5 mr-2" />
+              Telehealth is Great For:
+            </h3>
+            <ul class="space-y-2 text-sm text-green-800">
+              <li>• <strong>Convenience:</strong> Busy schedules, no time for commute</li>
+              <li>• <strong>Accessibility:</strong> Rural areas, mobility limitations</li>
+              <li>• <strong>Continuity:</strong> Travel frequently, need consistent care</li>
+              <li>• <strong>Privacy:</strong> Prefer therapy from home</li>
+              <li>• <strong>Access to specialists:</strong> Need providers not available locally</li>
+              <li>• <strong>Mild to moderate conditions:</strong> Anxiety, depression, adjustment issues</li>
+            </ul>
+          </div>
+
+          <div class="bg-yellow-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-yellow-900 mb-3 flex items-center">
+              <Shield className="h-5 w-5 mr-2" />
+              Consider In-Person For:
+            </h3>
+            <ul class="space-y-2 text-sm text-yellow-800">
+              <li>• <strong>Severe mental illness:</strong> Active psychosis, mania requiring close monitoring</li>
+              <li>• <strong>Crisis situations:</strong> Immediate safety concerns, hospitalization risk</li>
+              <li>• <strong>Eating disorders:</strong> May need physical health monitoring</li>
+              <li>• <strong>Preference for in-person:</strong> Value face-to-face interaction</li>
+              <li>• <strong>Technology barriers:</strong> Lack reliable internet or private space</li>
+              <li>• <strong>Certain therapies:</strong> Some body-based therapies work better in person</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-600 italic">
+          Note: Many people find a hybrid approach works best—primarily telehealth with occasional in-person visits as needed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Telehealth Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of telehealth articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• How effective is telehealth mental health care?</li>
+          <li>• State-by-state telehealth regulations and licensure</li>
+          <li>• Telepsychiatry: getting medication management online</li>
+          <li>• Privacy and security in telehealth platforms</li>
+          <li>• Insurance coverage for telehealth: what you need to know</li>
+          <li>• Setting up your home for successful telehealth sessions</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing telehealth resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/insurance" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Insurance</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/finance" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Finance</a>
       </div>
     </div>
   </section>

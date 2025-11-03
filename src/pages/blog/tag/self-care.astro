@@ -1,21 +1,294 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Heart, Sun, Brain, Users, Sparkles, Activity, ArrowRight, BookOpen } from 'lucide-react';
 ---
 
-<BaseLayout title="Self Care | RealMindSolutions" description="Self Care Articles">
+<BaseLayout title="Self-Care & Wellness Resources | RealMindSolutions" description="Comprehensive self-care resources—strategies for physical, emotional, mental, social, and spiritual well-being. Build sustainable self-care practices that support mental health.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Self Care Articles</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Self care resources</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Self-Care & Wellness</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Evidence-based self-care strategies to support your mental health and overall well-being.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Self-care isn't selfish—it's essential for mental health. True self-care goes beyond bubble baths and face masks (though those can help!). It's about intentionally caring for your physical, emotional, mental, social, and spiritual well-being in ways that are sustainable and meaningful to you.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together comprehensive self-care strategies across five dimensions of wellness, helping you build a personalized self-care practice that actually works for your life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Self-Care Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/resources/guides/self-care-strategies" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Complete Self-Care Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Comprehensive guide to self-care across five dimensions: physical, emotional, mental, social, and spiritual.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Full Guide
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/stress-management-techniques" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Brain className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Stress Management Techniques</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Breathing exercises, progressive muscle relaxation, grounding techniques, and mindfulness practices.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Techniques
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/mood-tracking" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Activity className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mood Tracking Worksheet</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Track your mood and identify patterns to understand what activities and practices support your well-being.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Download Tracker
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Professional Support</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Self-care works best alongside professional support. Find therapy platforms that can help.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Compare Platforms
+          </div>
+        </a>
+
+        <a href="/resources/guides/talking-to-loved-ones" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Setting Boundaries</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn to set healthy boundaries—an essential self-care skill for protecting your mental health.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/blog/tag/mindfulness" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Sparkles className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mindfulness Resources</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Mindfulness practices are powerful self-care tools for reducing stress and increasing present-moment awareness.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Mindfulness
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Five Dimensions of Self-Care */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The Five Dimensions of Self-Care</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Activity className="h-7 w-7 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Physical Self-Care</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-3">
+              Caring for your body's basic needs
+            </p>
+            <ul class="space-y-1 text-sm text-blue-800">
+              <li>• Adequate sleep (7-9 hours)</li>
+              <li>• Regular movement/exercise</li>
+              <li>• Balanced, nourishing meals</li>
+              <li>• Staying hydrated</li>
+              <li>• Medical care when needed</li>
+              <li>• Limiting alcohol/substances</li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Heart className="h-7 w-7 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">Emotional Self-Care</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-3">
+              Processing and expressing feelings
+            </p>
+            <ul class="space-y-1 text-sm text-purple-800">
+              <li>• Journaling or creative expression</li>
+              <li>• Allowing yourself to cry/feel</li>
+              <li>• Therapy or counseling</li>
+              <li>• Healthy emotional outlets</li>
+              <li>• Self-compassion practices</li>
+              <li>• Setting boundaries</li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Brain className="h-7 w-7 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">Mental Self-Care</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-3">
+              Engaging and resting your mind
+            </p>
+            <ul class="space-y-1 text-sm text-green-800">
+              <li>• Learning new things</li>
+              <li>• Reading, puzzles, hobbies</li>
+              <li>• Limiting news/social media</li>
+              <li>• Mental breaks during work</li>
+              <li>• Challenging negative thoughts</li>
+              <li>• Intellectual stimulation</li>
+            </ul>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Users className="h-7 w-7 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Social Self-Care</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-3">
+              Nurturing meaningful connections
+            </p>
+            <ul class="space-y-1 text-sm text-orange-800">
+              <li>• Quality time with loved ones</li>
+              <li>• Saying no to draining relationships</li>
+              <li>• Building community/belonging</li>
+              <li>• Asking for support when needed</li>
+              <li>• Meaningful conversations</li>
+              <li>• Balance alone time and togetherness</li>
+            </ul>
+          </div>
+
+          <div class="bg-pink-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Sparkles className="h-7 w-7 text-pink-600 mr-2" />
+              <h3 class="text-xl font-bold text-pink-900 mb-0">Spiritual Self-Care</h3>
+            </div>
+            <p class="text-sm text-pink-800 mb-3">
+              Connecting with meaning and purpose
+            </p>
+            <ul class="space-y-1 text-sm text-pink-800">
+              <li>• Time in nature</li>
+              <li>• Meditation or prayer</li>
+              <li>• Values reflection</li>
+              <li>• Creative expression</li>
+              <li>• Gratitude practices</li>
+              <li>• Contributing to causes you care about</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Note:</strong> Effective self-care is individualized. What works for others may not work for you. Experiment to find practices that genuinely help you feel restored and resilient.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Common Self-Care Mistakes */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Common Self-Care Mistakes to Avoid</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">Only practicing self-care when in crisis:</strong> Self-care works best as prevention, not just damage control. Build regular practices before you're overwhelmed.
+            </li>
+            <li>
+              <strong class="text-gray-900">Treating self-care as optional or indulgent:</strong> Self-care is necessary maintenance for your mental health, not a luxury. It's as important as charging your phone.
+            </li>
+            <li>
+              <strong class="text-gray-900">One-size-fits-all approaches:</strong> What restores one person may drain another. Customize your self-care to what actually helps YOU, not what looks good on Instagram.
+            </li>
+            <li>
+              <strong class="text-gray-900">Using "self-care" to avoid problems:</strong> Retail therapy or excessive screen time might feel good temporarily but don't address underlying issues. True self-care supports coping, not just escape.
+            </li>
+            <li>
+              <strong class="text-gray-900">Neglecting one dimension:</strong> Balanced self-care addresses physical, emotional, mental, social, AND spiritual needs. Don't focus on one to the exclusion of others.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Self-Care Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of self-care articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• Creating a sustainable self-care routine</li>
+          <li>• Self-care on a budget: free and low-cost practices</li>
+          <li>• Self-care for busy people: realistic strategies</li>
+          <li>• The difference between self-care and self-indulgence</li>
+          <li>• Self-care when you have no time or energy</li>
+          <li>• How to know if your self-care is actually working</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing self-care resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/mindfulness" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mindfulness</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/depression" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Depression</a>
+        <a href="/blog/tag/relationships" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Relationships</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
       </div>
     </div>
   </section>
