@@ -1,22 +1,450 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Shield, CheckCircle, AlertTriangle, DollarSign, Phone, FileText, Users, HelpCircle, ExternalLink } from 'lucide-react';
 ---
 
-<BaseLayout title="Insurance Coverage Guide | RealMindSolutions" description="Mental Health Insurance Coverage Guide">
+<BaseLayout title="Insurance Coverage Guide | RealMindSolutions" description="Comprehensive guide to understanding mental health insurance coverage including verification, benefits, copays, out-of-network reimbursement, and navigating insurance for online therapy.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mental Health Insurance Coverage Guide</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Understanding insurance coverage for therapy.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Navigate insurance benefits, verify coverage, and maximize your mental health care.</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-blue-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Shield className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Understanding Your Mental Health Benefits</h2>
+            <p class="text-gray-700 mb-4">
+              Most health insurance plans cover mental health services—but navigating coverage can be confusing. This guide helps you understand your benefits, verify coverage, and make informed decisions about therapy costs.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">Mental Health Parity Law</h3>
+              <p class="text-sm text-gray-700">
+                The <strong>Mental Health Parity and Addiction Equity Act (MHPAEA)</strong> requires most insurance plans to cover mental health and substance use disorder services <em>equally</em> to medical/surgical benefits. This means similar copays, deductibles, and treatment limitations.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* What Insurance Typically Covers */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle className="h-8 w-8 text-green-600 mr-3" />
+          What Mental Health Insurance Typically Covers
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-green-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">✓ Usually Covered</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Outpatient therapy</strong> — Individual, couples, family, or group therapy sessions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Psychiatric evaluations</strong> — Diagnostic assessments and medication management</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Psychological testing</strong> — When medically necessary</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Inpatient/residential treatment</strong> — For severe mental health crises</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Partial hospitalization</strong> — Intensive outpatient programs (IOPs)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span><strong>Medication</strong> — Psychiatric medications (often through pharmacy benefit)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-red-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">✗ Usually NOT Covered</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Life coaching</strong> — Not considered medical treatment</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Non-medical therapy</strong> — Wellness counseling, personal growth without diagnosis</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Court-ordered evaluations</strong> — Custody evaluations, forensic assessments</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Educational testing</strong> — Learning disability evaluations (may be school district responsibility)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Alternative therapies</strong> — Massage, acupuncture (unless specifically included)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span><strong>Services by unlicensed providers</strong> — Peer counselors, coaches (unless supervised)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* How to Verify Coverage */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Phone className="h-8 w-8 text-blue-600 mr-3" />
+          How to Verify Your Mental Health Coverage
+        </h2>
+
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8">
+          <p class="text-gray-700 mb-6">
+            <strong>Before starting therapy, call your insurance company to verify coverage.</strong> Have your insurance card ready and ask these specific questions:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">1</div>
+                Coverage Questions
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-700 ml-11">
+                <li>• "Does my plan cover <strong>outpatient mental health services</strong>?"</li>
+                <li>• "Are therapy sessions covered for [anxiety/depression/specific diagnosis]?"</li>
+                <li>• "Do I need a <strong>referral</strong> from my primary care doctor?"</li>
+                <li>• "Is <strong>pre-authorization</strong> required before starting therapy?"</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">2</div>
+                Cost Questions
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-700 ml-11">
+                <li>• "What is my <strong>copay</strong> for outpatient mental health visits?"</li>
+                <li>• "What is my <strong>deductible</strong>, and have I met it for this year?"</li>
+                <li>• "After I meet my deductible, what percentage does insurance cover (<strong>coinsurance</strong>)?"</li>
+                <li>• "What is my <strong>out-of-pocket maximum</strong> for the year?"</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">3</div>
+                Provider Network Questions
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-700 ml-11">
+                <li>• "Is [therapist name] <strong>in-network</strong> with my plan?"</li>
+                <li>• "If I see an <strong>out-of-network</strong> provider, what percentage is covered?"</li>
+                <li>• "Do out-of-network visits count toward my deductible?"</li>
+                <li>• "Can you provide a list of in-network therapists in my area?"</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">4</div>
+                Session Limits
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-700 ml-11">
+                <li>• "Are there <strong>limits</strong> on the number of therapy sessions per year?"</li>
+                <li>• "Do I need continued authorization after a certain number of sessions?"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-yellow-100 rounded-lg p-4">
+            <p class="text-yellow-900 text-sm">
+              <strong>Important:</strong> Write down the date, time, and name of the representative you spoke with. Ask for a <strong>reference number</strong> for the call. Keep these notes in case of billing disputes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Understanding Insurance Terms */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <FileText className="h-8 w-8 text-purple-600 mr-3" />
+          Understanding Insurance Terms
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Copay (Co-payment)</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              A <strong>fixed amount</strong> you pay for each therapy session (e.g., $30 per visit).
+            </p>
+            <p class="text-xs text-gray-600 italic">Example: Your copay is $40 for each therapy session, regardless of the full cost.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Deductible</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              The amount <strong>you must pay out-of-pocket</strong> before insurance starts covering services.
+            </p>
+            <p class="text-xs text-gray-600 italic">Example: $1,500 deductible means you pay the full session cost until you've spent $1,500, then insurance kicks in.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Coinsurance</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              The <strong>percentage you pay</strong> after meeting your deductible (e.g., you pay 20%, insurance pays 80%).
+            </p>
+            <p class="text-xs text-gray-600 italic">Example: After your deductible, you pay 20% of a $150 session ($30), insurance pays $120.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Out-of-Pocket Maximum</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              The <strong>maximum</strong> you'll pay per year. Once reached, insurance covers 100% of covered services.
+            </p>
+            <p class="text-xs text-gray-600 italic">Example: $5,000 out-of-pocket max means once you've paid $5,000, insurance covers everything else that year.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">In-Network vs Out-of-Network</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              <strong>In-network:</strong> Providers with negotiated rates with your insurance (lower cost to you).<br/>
+              <strong>Out-of-network:</strong> Providers without contracts (higher cost, may require reimbursement process).
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Pre-authorization (Prior Authorization)</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              <strong>Approval</strong> required from your insurance before receiving certain services (e.g., intensive treatment, extended therapy).
+            </p>
+            <p class="text-xs text-gray-600 italic">Usually required for: inpatient treatment, intensive outpatient programs, sometimes ongoing therapy.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Out-of-Network Reimbursement */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <DollarSign className="h-8 w-8 text-green-600 mr-3" />
+          Getting Reimbursed for Out-of-Network Therapy
+        </h2>
+
+        <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8">
+          <p class="text-gray-700 mb-6">
+            Many insurance plans offer <strong>out-of-network benefits</strong>, which allow you to see any licensed therapist and get reimbursed for a portion of the cost. Here's how:
+          </p>
+
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3">Step 1: Verify Out-of-Network Benefits</h3>
+              <p class="text-sm text-gray-700 mb-2">Call your insurance and ask:</p>
+              <ul class="space-y-1 text-sm text-gray-700 ml-4">
+                <li>• "Do I have out-of-network mental health benefits?"</li>
+                <li>• "What percentage do you reimburse for outpatient therapy (CPT code 90834 or 90837)?"</li>
+                <li>• "Is there an out-of-network deductible?"</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3">Step 2: Pay Your Therapist</h3>
+              <p class="text-sm text-gray-700">Pay the full session fee to your therapist at the time of service.</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3">Step 3: Get a Superbill</h3>
+              <p class="text-sm text-gray-700 mb-2">
+                Ask your therapist for a <strong>superbill</strong>—a detailed receipt with:
+              </p>
+              <ul class="space-y-1 text-xs text-gray-600 ml-4">
+                <li>• Therapist's name, credentials, NPI number, Tax ID</li>
+                <li>• Your name and date of birth</li>
+                <li>• Date of service</li>
+                <li>• CPT code (procedure code, usually 90834 or 90837)</li>
+                <li>• Diagnosis code (ICD-10)</li>
+                <li>• Amount paid</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3">Step 4: Submit for Reimbursement</h3>
+              <p class="text-sm text-gray-700 mb-2">
+                Submit the superbill to your insurance via:
+              </p>
+              <ul class="space-y-1 text-sm text-gray-700 ml-4">
+                <li>• <strong>Online portal:</strong> Upload through your insurance website/app</li>
+                <li>• <strong>Mail:</strong> Send superbill to claims address on your insurance card</li>
+                <li>• <strong>Fax:</strong> If provided by insurer</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-3">Step 5: Receive Reimbursement</h3>
+              <p class="text-sm text-gray-700">
+                Insurance will send you a check (or direct deposit) for the covered portion, usually within 2-6 weeks.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-blue-100 rounded-lg p-4">
+            <p class="text-blue-900 text-sm">
+              <strong>Pro Tip:</strong> Some therapists can submit claims on your behalf. Ask if your provider offers this service.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Online Therapy & Insurance */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Users className="h-8 w-8 text-purple-600 mr-3" />
+          Online Therapy Platforms & Insurance
+        </h2>
+
+        <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+          <h3 class="font-bold text-gray-900 mb-4">Do Online Therapy Platforms Accept Insurance?</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <h4 class="font-bold text-green-900 mb-2">✓ Platforms That Accept Insurance:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• <strong>Talkspace:</strong> Accepts some insurance plans</li>
+                <li>• <strong>MDLive:</strong> Widely accepted by insurance</li>
+                <li>• <strong>Amwell:</strong> Insurance accepted</li>
+                <li>• <strong>Teladoc:</strong> Often covered through employer benefits</li>
+                <li>• <strong>Many individual therapists</strong> on platforms like Psychology Today offer in-network or out-of-network billing</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-red-900 mb-2">✗ Platforms That Don't Accept Insurance:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• <strong>BetterHelp:</strong> Self-pay only (but may provide receipts for FSA/HSA or out-of-network reimbursement)</li>
+                <li>• <strong>Cerebral:</strong> Self-pay with some FSA/HSA options</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded p-4">
+            <p class="text-blue-900 text-sm">
+              <strong>Note:</strong> Even if a platform doesn't directly bill insurance, you may be able to submit superbills for out-of-network reimbursement. Check with the platform and your insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* If You Don't Have Insurance */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <HelpCircle className="h-8 w-8 text-orange-500 mr-3" />
+          What If You Don't Have Insurance?
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Sliding Scale Therapy</h3>
+            <p class="text-sm text-gray-700">
+              Many therapists offer <strong>sliding scale fees</strong> based on your income. Ask therapists if they offer reduced rates.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Community Mental Health Centers</h3>
+            <p class="text-sm text-gray-700">
+              Federally funded centers provide low-cost or free therapy based on income. Find one at <a href="https://findahealthcenter.hrsa.gov/" class="text-brand-primary hover:underline" target="_blank" rel="noopener noreferrer">HRSA Health Center Finder</a>.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">University Training Clinics</h3>
+            <p class="text-sm text-gray-700">
+              Graduate students in clinical programs offer therapy at reduced rates under licensed supervision.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Employee Assistance Programs (EAP)</h3>
+            <p class="text-sm text-gray-700">
+              Many employers offer <strong>free</strong> short-term counseling (usually 3-8 sessions) through EAPs. Check with your HR department.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Online Therapy Platforms (Lower Cost)</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Platforms like BetterHelp (~$240-360/month) are often cheaper than traditional therapy without insurance ($150-250/session).
+            </p>
+            <a href="/compare" class="text-brand-primary font-bold hover:underline text-sm">Compare affordable online therapy platforms →</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis, free support is available 24/7:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7 • Free</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7 • Free</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/tools/matchers/insurance-checker" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Insurance Checker Tool</h3>
+            <p class="text-sm text-gray-600">Find platforms that accept your insurance</p>
+          </a>
+          <a href="/compare" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Compare Therapy Platforms</h3>
+            <p class="text-sm text-gray-600">Compare costs, insurance acceptance, and features</p>
+          </a>
+          <a href="/tools/matchers/budget-finder" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Budget Finder</h3>
+            <p class="text-sm text-gray-600">Find affordable therapy options for your budget</p>
+          </a>
+          <a href="/best/platforms/affordable-therapy" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Most Affordable Platforms</h3>
+            <p class="text-sm text-gray-600">Best low-cost therapy options without insurance</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+  }
+</style>
