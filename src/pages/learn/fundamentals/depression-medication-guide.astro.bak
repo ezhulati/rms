@@ -6,27 +6,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
-        <span>/</span>
-        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Complete Guide to Depression Medications</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Complete Guide to Depression Medications</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Complete Guide to Depression Medications</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Antidepressants can be a crucial part of depression treatment. Learn about different types of medications, how they work, what to expect, and how to work with your doctor to find the right option for you.</p>
     </div>
   </section>
@@ -46,8 +28,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <TrendingUp class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <TrendingUp class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -59,8 +41,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Clock class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Clock class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -72,8 +54,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Brain class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -85,8 +67,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Shield class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -440,26 +422,26 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
             </div>
           </div>
 
-          <div class="mt-6 bg-brand-primary-50 rounded-lg p-6">
+          <div class="mt-6 bg-indigo-50 rounded-lg p-6">
             <h3 class="text-xl font-bold text-gray-800 mb-3">Important: It Takes Time</h3>
             <p class="text-gray-700 mb-3">
               Antidepressants don't work immediately because they need time to create lasting changes in brain chemistry and neural connections. Here's what typically happens:
             </p>
             <ul class="space-y-2">
               <li class="flex items-start">
-                <Clock class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                 <span><strong>Days 1-7:</strong> Neurotransmitter levels begin to change, but you likely won't notice improvements yet. Side effects may appear.</span>
               </li>
               <li class="flex items-start">
-                <Clock class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                 <span><strong>Weeks 2-4:</strong> You might start noticing subtle improvements - better sleep, slightly more energy, or less severe low moods.</span>
               </li>
               <li class="flex items-start">
-                <Clock class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                 <span><strong>Weeks 4-8:</strong> More noticeable improvements in mood, energy, concentration, and overall functioning.</span>
               </li>
               <li class="flex items-start">
-                <Clock class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                 <span><strong>Weeks 8-12:</strong> Full therapeutic effect. If you haven't seen improvement by week 6-8, talk to your doctor about adjusting dose or trying a different medication.</span>
               </li>
             </ul>
@@ -542,23 +524,23 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">What Medication Does</h3>
               <ul class="space-y-3">
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span>Corrects chemical imbalances in the brain</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span>Reduces severe symptoms like suicidal thoughts</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span>Improves sleep, appetite, and energy</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span>Creates the foundation for you to engage in therapy</span>
                 </li>
               </ul>
@@ -737,26 +719,26 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">Finding Psychiatric Care</h3>
-              <div class="bg-brand-primary-50 rounded-lg p-6">
+              <div class="bg-indigo-50 rounded-lg p-6">
                 <p class="text-gray-700 mb-4">
                   Several types of providers can prescribe antidepressants:
                 </p>
                 <ul class="space-y-3">
                   <li class="flex items-start">
-                    <Users class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span><strong>Psychiatrists:</strong> Medical doctors specializing in mental health medications</span>
                   </li>
                   <li class="flex items-start">
-                    <Users class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span><strong>Primary care doctors:</strong> Can prescribe for uncomplicated depression</span>
                   </li>
                   <li class="flex items-start">
-                    <Users class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span><strong>Psychiatric NPs/PAs:</strong> Nurse practitioners or physician assistants specializing in mental health</span>
                   </li>
                 </ul>
                 <div class="mt-6">
-                  <a href="/best/specialties/best-for-psychiatry" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Psychiatric Care</a>
+                  <a href="/best/specialties/best-for-psychiatry" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Psychiatric Care</a>
                 </div>
               </div>
             </div>
@@ -772,19 +754,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/tools/assessments/depression-screening" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/depression-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Depression Screening Assessment</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/medication-tracker" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/medication-tracker" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Medication Tracking Worksheet</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/side-effects-log" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/side-effects-log" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Side Effects Log</span>
                   </a>
@@ -796,19 +778,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/learn/fundamentals/depression" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Understanding Depression</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/best/conditions/best-for-depression" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/best/conditions/best-for-depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Best Platforms for Depression Treatment</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/best/specialties/best-for-psychiatry" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/best/specialties/best-for-psychiatry" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Best Online Psychiatry Services</span>
                   </a>
@@ -819,13 +801,13 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Explore Medication Options?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Connect with a psychiatrist or psychiatric provider who can evaluate your symptoms and discuss whether medication might be right for you.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/assessments/depression-screening" class="inline-flex items-center bg-white text-brand-primary-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Depression Assessment</a>
+            <a href="/tools/assessments/depression-screening" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Depression Assessment</a>
             <a href="/best/specialties/best-for-psychiatry" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Psychiatric Care</a>
           </div>
         </div>

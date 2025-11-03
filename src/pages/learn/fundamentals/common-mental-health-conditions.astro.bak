@@ -8,27 +8,9 @@ const conditions = [];
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
-        <span>/</span>
-        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Common Mental Health Conditions</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Common Mental Health Conditions</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Common Mental Health Conditions</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">An overview of frequently diagnosed mental health conditions, their symptoms, and treatment options to help you better understand these complex disorders.</p>
     </div>
   </section>
@@ -58,19 +40,19 @@ const conditions = [];
               </p>
             </div>
             <div class="md:w-1/3 mt-6 md:mt-0">
-              <div class="bg-brand-primary-50 rounded-lg p-6">
+              <div class="bg-indigo-50 rounded-lg p-6">
                 <h3 class="font-bold text-gray-800 mb-3">Important Notes</h3>
                 <ul class="space-y-3">
                   <li class="flex items-start">
-                    <Info class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span class="text-gray-700">This guide provides general information and is not a substitute for professional diagnosis or treatment.</span>
                   </li>
                   <li class="flex items-start">
-                    <Info class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span class="text-gray-700">Mental health conditions exist on a spectrum of severity and presentation.</span>
                   </li>
                   <li class="flex items-start">
-                    <Info class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span class="text-gray-700">If you're experiencing symptoms, consult with a qualified mental health professional.</span>
                   </li>
                 </ul>
@@ -96,7 +78,7 @@ const conditions = [];
                 <ul class="space-y-2">
                   {condition.symptoms.map((symptom, i) => (
                     <li key={i} class="flex items-start">
-                      <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1 flex-shrink-0" />
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1 flex-shrink-0" />
                       <span class="text-gray-600">{symptom}</span>
                     </li>
                   ))}
@@ -111,7 +93,7 @@ const conditions = [];
                 <ul class="space-y-2">
                   {condition.treatmentOptions.map((treatment, i) => (
                     <li key={i} class="flex items-start">
-                      <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1 flex-shrink-0" />
+                      <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1 flex-shrink-0" />
                       <span class="text-gray-600">{treatment}</span>
                     </li>
                   ))}
@@ -119,7 +101,7 @@ const conditions = [];
               </div>
             </div>
             
-            <a href={condition.learnMoreLink} class="text-brand-primary-600 font-medium flex items-center hover:text-indigo-800">
+            <a href={condition.learnMoreLink} class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
               Learn more about {condition.name.toLowerCase()} <ArrowRight class="h-4 w-4 ml-1" />
             </a>
           </div>
@@ -187,7 +169,7 @@ const conditions = [];
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-6">
+          <div class="bg-indigo-50 rounded-lg p-6">
             <h3 class="text-lg font-bold text-gray-800 mb-3">Remember</h3>
             <p class="text-gray-700">
               Seeking help for mental health concerns is a sign of strength, not weakness. Early intervention often leads to better outcomes. Mental health conditions are treatable, and many people experience significant improvement with appropriate care.
@@ -204,25 +186,25 @@ const conditions = [];
               <h3 class="text-xl font-bold text-gray-800 mb-4">Self-Assessment Tools</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/tools/assessments/mental-health-assessment" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/mental-health-assessment" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Comprehensive Mental Health Assessment</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/tools/assessments/depression-screening" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/depression-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Depression Screening</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Anxiety Screening</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/tools/assessments/stress-level-test" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/stress-level-test" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Stress Level Test</span>
                   </a>
@@ -234,25 +216,25 @@ const conditions = [];
               <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/learn/fundamentals/therapy-types-explained" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/therapy-types-explained" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Therapy Types Explained</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/fundamentals/medication-vs-therapy" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/medication-vs-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Medication vs. Therapy: Understanding Your Options</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/fundamentals/self-care" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/self-care" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Self-Care Strategies for Mental Health</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/fundamentals/supporting-loved-ones" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/supporting-loved-ones" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Supporting Loved Ones with Mental Health Conditions</span>
                   </a>
@@ -263,13 +245,13 @@ const conditions = [];
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Find the Right Support for Your Mental Health</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Take the first step toward better mental health by connecting with a qualified therapist who specializes in your specific concerns.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Your Therapy Match</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
             <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Explore Top Platforms</a>
           </div>
         </div>

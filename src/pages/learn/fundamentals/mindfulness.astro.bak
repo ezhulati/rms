@@ -6,27 +6,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
-        <span>/</span>
-        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Mindfulness for Mental Health: A Beginner's Guide</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Mindfulness for Mental Health: A Beginner's Guide</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mindfulness for Mental Health: A Beginner's Guide</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Mindfulness is the practice of being fully present in the moment without judgment. Discover how this evidence-based technique can reduce anxiety, improve emotional regulation, and enhance your overall mental wellbeing.</p>
     </div>
   </section>
@@ -46,8 +28,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <TrendingUp class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <TrendingUp class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -59,8 +41,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Brain class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -72,8 +54,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Activity class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Activity class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -85,8 +67,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Lightbulb class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Lightbulb class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -112,21 +94,21 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">Present-Moment Awareness</h3>
               <p class="text-gray-700">
                 Mindfulness means paying attention to what's happening right now - your thoughts, feelings, bodily sensations, and surrounding environment - rather than being lost in thoughts about the past or future.
               </p>
             </div>
 
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">Non-Judgmental Observation</h3>
               <p class="text-gray-700">
                 Rather than labeling experiences as "good" or "bad," mindfulness involves observing thoughts and feelings with curiosity and acceptance, without trying to change or fix them.
               </p>
             </div>
 
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">Intentional Practice</h3>
               <p class="text-gray-700">
                 Mindfulness is a skill that requires deliberate practice. Through regular exercises, you can train your mind to be more present and less reactive to stressful thoughts and emotions.
@@ -247,9 +229,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Practical Mindfulness Exercises</h2>
 
           <div class="space-y-6">
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <div class="flex items-center mb-4">
-                <Timer class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Timer class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-xl font-bold text-gray-800">5-Minute Breathing Meditation</h3>
               </div>
               <p class="text-gray-700 mb-4">
@@ -276,9 +258,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               </div>
             </div>
 
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <div class="flex items-center mb-4">
-                <Activity class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Activity class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-xl font-bold text-gray-800">Body Scan Meditation</h3>
               </div>
               <p class="text-gray-700 mb-4">
@@ -308,9 +290,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               </div>
             </div>
 
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <div class="flex items-center mb-4">
-                <Heart class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Heart class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-xl font-bold text-gray-800">Mindful Eating Exercise</h3>
               </div>
               <p class="text-gray-700 mb-4">
@@ -340,9 +322,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               </div>
             </div>
 
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <div class="flex items-center mb-4">
-                <Activity class="h-6 w-6 text-brand-primary-600 mr-2" />
+                <Activity class="h-6 w-6 text-indigo-600 mr-2" />
                 <h3 class="text-xl font-bold text-gray-800">Walking Meditation</h3>
               </div>
               <p class="text-gray-700 mb-4">
@@ -472,23 +454,23 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-4">Mindfulness</h3>
               <ul class="space-y-3">
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span><strong>A quality of awareness:</strong> Being present and non-judgmental in any moment</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span><strong>Can be practiced anywhere:</strong> While eating, walking, talking, or doing daily tasks</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span><strong>Informal practice:</strong> Bringing mindful awareness to everyday activities</span>
                 </li>
                 <li class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                   <span><strong>A way of being:</strong> An approach to life, not just a technique</span>
                 </li>
               </ul>
@@ -557,7 +539,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">Consider Professional Support</h3>
-              <div class="bg-brand-primary-50 rounded-lg p-6">
+              <div class="bg-indigo-50 rounded-lg p-6">
                 <p class="text-gray-700 mb-4">
                   A therapist trained in mindfulness-based interventions can help you:
                 </p>
@@ -580,7 +562,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
                   </li>
                 </ul>
                 <div class="mt-6">
-                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find a Therapist</a>
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find a Therapist</a>
                 </div>
               </div>
             </div>
@@ -596,19 +578,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/resources/worksheets/mindfulness-practice-log" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/mindfulness-practice-log" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Mindfulness Practice Log Worksheet</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Anxiety Assessment</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/stress-tracker" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/stress-tracker" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Stress Tracking Worksheet</span>
                   </a>
@@ -620,19 +602,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/learn/fundamentals/stress-management" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/stress-management" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Stress Management Techniques That Work</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/fundamentals/anxiety" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Understanding Anxiety Disorders</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/learn/fundamentals/self-care" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/learn/fundamentals/self-care" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Self-Care for Mental Health</span>
                   </a>
@@ -643,13 +625,13 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Start Your Mindfulness Journey?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Download our mindfulness practice log to track your progress, or connect with a therapist who specializes in mindfulness-based approaches.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/resources/worksheets/mindfulness-practice-log" class="inline-flex items-center bg-white text-brand-primary-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Get Practice Log</a>
+            <a href="/resources/worksheets/mindfulness-practice-log" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Get Practice Log</a>
             <a href="/best/specialties/best-for-mindfulness-therapy" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Mindfulness Therapy</a>
           </div>
         </div>

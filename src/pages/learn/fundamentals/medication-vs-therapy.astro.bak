@@ -9,27 +9,9 @@ const approaches = [];
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
-        <span>/</span>
-        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Medication vs. Therapy: Understanding Your Options</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Medication vs. Therapy: Understanding Your Options</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Medication vs. Therapy: Understanding Your Options</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">A comprehensive guide to help you understand the differences, benefits, and considerations when choosing between medication, therapy, or a combined approach.</p>
     </div>
   </section>
@@ -55,7 +37,7 @@ const approaches = [];
           <p class="text-gray-600 mb-4">
             This guide will help you understand the differences between these approaches, their respective strengths and limitations, and factors to consider when making treatment decisions. Remember that treatment is highly individualized, and what works best for one person may not be ideal for another.
           </p>
-          <div class="bg-brand-primary-50 rounded-lg p-6 mt-6">
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
             <h3 class="font-bold text-gray-800 mb-3">Important Note</h3>
             <p class="text-gray-700">
               This guide provides general information and is not a substitute for professional medical advice. Treatment decisions should always be made in consultation with qualified healthcare providers who can assess your specific situation.
@@ -69,8 +51,8 @@ const approaches = [];
         {approaches.map((approach) => (
           <div key={approach.name} class="bg-white rounded-lg shadow-md p-6 mb-6">
             <div class="flex items-start mb-4">
-              <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                <approach.icon class="h-6 w-6 text-brand-primary-600" />
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <approach.icon class="h-6 w-6 text-indigo-600" />
               </div>
               <div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">{approach.name}</h3>
@@ -84,7 +66,7 @@ const approaches = [];
                 <ul class="space-y-2">
                   {approach.bestFor.map((item, i) => (
                     <li key={i} class="flex items-start">
-                      <CheckCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
                       <span class="text-gray-600">{item}</span>
                     </li>
                   ))}
@@ -148,7 +130,7 @@ const approaches = [];
             </table>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-6 mt-6">
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
             <h3 class="font-bold text-gray-800 mb-3">Remember</h3>
             <p class="text-gray-700">
               These are general guidelines. Treatment should always be personalized based on individual factors including symptom severity, personal preferences, treatment history, and other health considerations.
@@ -163,7 +145,7 @@ const approaches = [];
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Brain class="h-5 w-5 text-brand-primary-600 mr-2" />
+                <Brain class="h-5 w-5 text-indigo-600 mr-2" />
                 Symptom Severity
               </h3>
               <p class="text-gray-600 mb-3">
@@ -171,15 +153,15 @@ const approaches = [];
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Mild symptoms:</strong> May respond well to therapy alone</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Moderate symptoms:</strong> Often benefit from either approach or a combination</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Severe symptoms:</strong> Typically require medication, often in combination with therapy</span>
                 </li>
               </ul>
@@ -187,7 +169,7 @@ const approaches = [];
             
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Clock class="h-5 w-5 text-brand-primary-600 mr-2" />
+                <Clock class="h-5 w-5 text-indigo-600 mr-2" />
                 Timeline Considerations
               </h3>
               <p class="text-gray-600 mb-3">
@@ -195,15 +177,15 @@ const approaches = [];
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Medication:</strong> Some relief may begin within 2-4 weeks, though full effects can take 6-8 weeks</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Therapy:</strong> Some benefit may be felt after initial sessions, but meaningful change typically takes several months</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Combined:</strong> May provide both relatively quick symptom relief and long-term coping strategies</span>
                 </li>
               </ul>
@@ -211,7 +193,7 @@ const approaches = [];
             
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Zap class="h-5 w-5 text-brand-primary-600 mr-2" />
+                <Zap class="h-5 w-5 text-indigo-600 mr-2" />
                 Side Effects & Risks
               </h3>
               <p class="text-gray-600 mb-3">
@@ -219,15 +201,15 @@ const approaches = [];
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Medication:</strong> May include physical side effects, withdrawal symptoms if discontinued improperly</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Therapy:</strong> Minimal physical risks, though emotional discomfort may occur when addressing difficult topics</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Combined:</strong> Requires managing potential medication side effects while engaging in therapy</span>
                 </li>
               </ul>
@@ -235,7 +217,7 @@ const approaches = [];
             
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Heart class="h-5 w-5 text-brand-primary-600 mr-2" />
+                <Heart class="h-5 w-5 text-indigo-600 mr-2" />
                 Personal Preferences
               </h3>
               <p class="text-gray-600 mb-3">
@@ -243,15 +225,15 @@ const approaches = [];
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Comfort level:</strong> Some people prefer not taking medication, while others may find therapy challenging</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Treatment goals:</strong> Consider whether symptom management or addressing underlying issues is your priority</span>
                 </li>
                 <li class="flex items-start">
-                  <ArrowRight class="h-4 w-4 text-brand-primary-600 mr-2 mt-1" />
+                  <ArrowRight class="h-4 w-4 text-indigo-600 mr-2 mt-1" />
                   <span class="text-gray-600"><strong>Previous experiences:</strong> Past success or challenges with either approach may inform current decisions</span>
                 </li>
               </ul>
@@ -328,23 +310,23 @@ const approaches = [];
             </div>
           </div>
           
-          <div class="bg-brand-primary-50 rounded-lg p-6 mt-6">
+          <div class="bg-indigo-50 rounded-lg p-6 mt-6">
             <h3 class="font-bold text-gray-800 mb-3">Finding the Right Provider</h3>
             <p class="text-gray-700 mb-4">
               The relationship with your healthcare provider is a crucial factor in treatment success. It's important to find providers you trust and feel comfortable with. Don't hesitate to try different providers if the initial match doesn't feel right.
             </p>
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find a Provider</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find a Provider</a>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Explore Your Treatment Options?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Take our assessment to get personalized recommendations based on your symptoms, preferences, and treatment goals.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Take Mental Health Assessment</a>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Mental Health Assessment</a>
             <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Explore Treatment Options</a>
           </div>
         </div>

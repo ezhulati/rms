@@ -6,9 +6,27 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">When to Consider Relationship Counseling</h1>
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      {/* Breadcrumb Navigation */}
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
+        <span>/</span>
+        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">When to Consider Relationship Counseling</span>
+      </nav>
+
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">When to Consider Relationship Counseling</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Relationship counseling (also called couples therapy) helps partners improve communication, resolve conflicts, and strengthen their bond. Learn when to seek help, what to expect, and how to find the right therapist for your relationship.</p>
     </div>
   </section>
@@ -28,8 +46,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <TrendingUp class="h-6 w-6 text-indigo-600" />
+                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <TrendingUp class="h-6 w-6 text-brand-primary-600" />
                 </div>
               </div>
               <div>
@@ -41,8 +59,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Clock class="h-6 w-6 text-indigo-600" />
+                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Clock class="h-6 w-6 text-brand-primary-600" />
                 </div>
               </div>
               <div>
@@ -54,8 +72,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <MessageCircle class="h-6 w-6 text-indigo-600" />
+                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageCircle class="h-6 w-6 text-brand-primary-600" />
                 </div>
               </div>
               <div>
@@ -67,8 +85,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Heart class="h-6 w-6 text-indigo-600" />
+                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-brand-primary-600" />
                 </div>
               </div>
               <div>
@@ -230,7 +248,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Couples Therapy</h2>
 
           <div class="space-y-6">
-            <div class="bg-indigo-50 rounded-lg p-6">
+            <div class="bg-brand-primary-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">The Gottman Method</h3>
               <p class="text-gray-700 mb-4">
                 Based on 40+ years of research by Drs. John and Julie Gottman, this approach focuses on building friendship, managing conflict, and creating shared meaning.
@@ -257,15 +275,15 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
                   <h4 class="font-bold text-gray-800 mb-2">Key Techniques:</h4>
                   <ul class="space-y-2">
                     <li class="flex items-start">
-                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <Target class="h-5 w-5 text-brand-primary-500 mr-2 mt-0.5" />
                       <span>Identifying the "Four Horsemen" (criticism, contempt, defensiveness, stonewalling)</span>
                     </li>
                     <li class="flex items-start">
-                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <Target class="h-5 w-5 text-brand-primary-500 mr-2 mt-0.5" />
                       <span>Building Love Maps (knowing your partner deeply)</span>
                     </li>
                     <li class="flex items-start">
-                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <Target class="h-5 w-5 text-brand-primary-500 mr-2 mt-0.5" />
                       <span>Softened startup in conversations</span>
                     </li>
                   </ul>
@@ -543,30 +561,30 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Questions to Ask</h3>
               <ul class="space-y-3">
                 <li class="flex items-start">
-                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <MessageCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
                   <span>What percentage of your practice is couples therapy?</span>
                 </li>
                 <li class="flex items-start">
-                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <MessageCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
                   <span>What approach do you use, and why is it effective for our issues?</span>
                 </li>
                 <li class="flex items-start">
-                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <MessageCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
                   <span>How do you handle situations where one partner wants different outcomes?</span>
                 </li>
                 <li class="flex items-start">
-                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <MessageCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
                   <span>What's your typical treatment length and how will we measure progress?</span>
                 </li>
                 <li class="flex items-start">
-                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <MessageCircle class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
                   <span>Have you worked with couples facing our specific situation?</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+          <div class="mt-8 bg-brand-primary-50 rounded-lg p-6">
             <h3 class="text-xl font-bold text-gray-800 mb-4">Online vs. In-Person Therapy</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -739,11 +757,11 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">Finding Help Now</h3>
-              <div class="bg-indigo-50 rounded-lg p-6">
+              <div class="bg-brand-primary-50 rounded-lg p-6">
                 <p class="text-gray-700 mb-4">
                   Don't wait for the perfect moment. Research shows couples wait an average of 6 years too long before seeking therapy, allowing problems to become entrenched.
                 </p>
-                <a href="/best/specialties/best-for-couples-therapy" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Couples Therapy Now</a>
+                <a href="/best/specialties/best-for-couples-therapy" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Couples Therapy Now</a>
               </div>
             </div>
           </div>
@@ -758,19 +776,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/tools/assessments/relationship-health-check" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/relationship-health-check" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Relationship Health Assessment</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/communication-skills" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/communication-skills" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Communication Skills Worksheet</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/tools/matchers/therapy-platform-matcher" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/tools/matchers/therapy-platform-matcher" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Find Your Ideal Therapy Platform</span>
                   </a>
@@ -782,19 +800,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Reviews</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/reviews/regain" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/reviews/regain" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>ReGain Review - Online Couples Therapy</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/reviews/lasting" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/reviews/lasting" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Lasting App Review - Couples Counseling Alternative</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/best/specialties/best-for-couples-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                  <a href="/best/specialties/best-for-couples-therapy" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Best Platforms for Couples Therapy</span>
                   </a>
@@ -805,13 +823,13 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Strengthen Your Relationship?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Take our relationship assessment to understand your strengths and challenges, or find a qualified couples therapist today.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/assessments/relationship-health-check" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Relationship Assessment</a>
+            <a href="/tools/assessments/relationship-health-check" class="inline-flex items-center bg-white text-brand-primary-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Relationship Assessment</a>
             <a href="/best/specialties/best-for-couples-therapy" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Couples Therapist</a>
           </div>
         </div>

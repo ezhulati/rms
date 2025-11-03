@@ -6,27 +6,9 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/learn" class="hover:text-brand-primary-600 transition">Learn</a>
-        <span>/</span>
-        <a href="/learn/fundamentals" class="hover:text-brand-primary-600 transition">Fundamentals</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Understanding Anxiety Disorders</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Understanding Anxiety Disorders</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Understanding Anxiety Disorders</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">Anxiety disorders are the most common mental health conditions, affecting millions worldwide. Learn about different types of anxiety, how to recognize symptoms, and evidence-based treatments that can help you regain control.</p>
     </div>
   </section>
@@ -46,8 +28,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Users class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -59,8 +41,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Brain class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -72,8 +54,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Heart class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -85,8 +67,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div class="flex">
               <div class="mr-4">
-                <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
-                  <Shield class="h-6 w-6 text-brand-primary-600" />
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
                 </div>
               </div>
               <div>
@@ -284,7 +266,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Anxiety vs. Stress: Understanding the Difference</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-brand-primary-50 rounded-lg p-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
               <h3 class="text-xl font-bold text-gray-800 mb-3">Normal Stress</h3>
               <ul class="space-y-2">
                 <li class="flex items-start">
@@ -340,31 +322,31 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <div class="bg-gray-50 rounded-lg p-6">
                 <ul class="space-y-3">
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Rapid heartbeat or palpitations</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Shortness of breath or hyperventilation</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Sweating, trembling, or shaking</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Muscle tension, headaches, or pain</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Digestive issues (nausea, diarrhea)</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Dizziness or lightheadedness</span>
                   </li>
                   <li class="flex items-start">
-                    <Activity class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5" />
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
                     <span>Fatigue or insomnia</span>
                   </li>
                 </ul>
@@ -519,7 +501,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
 
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">When to Seek Help</h3>
-              <div class="bg-brand-primary-50 rounded-lg p-6">
+              <div class="bg-indigo-50 rounded-lg p-6">
                 <p class="text-gray-700 mb-4">
                   Consider seeking professional help if you experience:
                 </p>
@@ -542,7 +524,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
                   </li>
                 </ul>
                 <div class="mt-4">
-                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Anxiety Treatment</a>
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Anxiety Treatment</a>
                 </div>
               </div>
             </div>
@@ -631,19 +613,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Anxiety Screening Tool (GAD-7)</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/worry-record" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/worry-record" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Worry Record Worksheet</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/resources/worksheets/breathing-exercises" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/resources/worksheets/breathing-exercises" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Breathing Exercise Guide</span>
                   </a>
@@ -655,19 +637,19 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
               <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Reviews</h3>
               <ul class="space-y-3">
                 <li>
-                  <a href="/reviews/betterhelp" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/reviews/betterhelp" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>BetterHelp - Anxiety Specialists</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/reviews/talkspace" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/reviews/talkspace" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Talkspace - CBT for Anxiety</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/best/conditions/best-for-anxiety" class="flex items-center text-brand-primary-600 hover:text-indigo-800">
+                  <a href="/best/conditions/best-for-anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
                     <ArrowRight class="h-4 w-4 mr-2" />
                     <span>Best Platforms for Anxiety Treatment</span>
                   </a>
@@ -678,13 +660,13 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Take Control of Your Anxiety?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Take our anxiety screening to understand your symptoms and connect with therapists who specialize in anxiety treatment.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center bg-white text-brand-primary-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Anxiety Screening</a>
+            <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Anxiety Screening</a>
             <a href="/best/conditions/best-for-anxiety" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Anxiety Therapist</a>
           </div>
         </div>
