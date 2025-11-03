@@ -1,21 +1,312 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Compass, Heart, Users, BookOpen, Target, CheckCircle, ArrowRight, HelpCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Beginners Guide | RealMindSolutions" description="Beginner Resources">
+<BaseLayout title="Beginner's Guide to Therapy | RealMindSolutions" description="Essential therapy beginner resources—getting started with therapy, what to expect, how to find a therapist, first session preparation, and answers to common questions.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Beginner Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Resources for therapy beginners</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Beginner's Guide to Therapy</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Everything you need to know to get started with therapy confidently.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Starting therapy can feel overwhelming—especially if you've never been before. You might wonder how to find a therapist, what happens in sessions, how much it costs, or whether therapy will actually help. These feelings are completely normal, and this resource hub is designed to answer your questions and guide you through the process.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Whether you're considering therapy for the first time, preparing for your first session, or just want to understand what therapy is all about, you'll find comprehensive beginner-friendly resources here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Beginner Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/resources/guides/getting-started" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Compass class="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Getting Started with Therapy</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Step-by-step guide to beginning your therapy journey—from deciding to seek help to booking your first session.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/resources/guides/first-therapy-session" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle class="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">First Session Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            What to expect in your first therapy session, how to prepare, and questions your therapist might ask.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Prepare for Session
+          </div>
+        </a>
+
+        <a href="/blog/tag/therapist-selection" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users class="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Finding the Right Therapist</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to find, evaluate, and choose a therapist who's the right fit for your needs and goals.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Find Your Therapist
+          </div>
+        </a>
+
+        <a href="/blog/tag/therapy-types" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen class="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Types of Therapy Explained</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Beginner-friendly explanations of common therapy types—CBT, DBT, psychodynamic, and more.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Learn About Therapies
+          </div>
+        </a>
+
+        <a href="/blog/tag/finance" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target class="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Costs & Affordability</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Understanding therapy costs, insurance coverage, and finding affordable mental health care options.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Explore Payment Options
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart class="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Online Therapy Platforms</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Compare beginner-friendly online therapy platforms—convenient, affordable, and easy to get started.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Browse Platforms
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Common Beginner Questions */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Common Questions for Therapy Beginners</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-lg font-bold text-blue-900 mb-0">How do I know if I need therapy?</h3>
+            </div>
+            <p class="text-sm text-blue-800">
+              Consider therapy if you're experiencing persistent sadness, anxiety, relationship problems, trauma effects, difficulty coping with life changes, or simply want support for personal growth. You don't need to be in crisis to benefit from therapy.
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-lg font-bold text-purple-900 mb-0">What happens in the first session?</h3>
+            </div>
+            <p class="text-sm text-purple-800">
+              Your first session is typically an intake/assessment where your therapist asks about your history, current concerns, and goals. They'll explain their approach and answer your questions. It's a chance to see if you feel comfortable with them.
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-lg font-bold text-green-900 mb-0">How long does therapy take?</h3>
+            </div>
+            <p class="text-sm text-green-800">
+              It varies widely. Some people see improvement in 8-12 sessions of focused therapy for specific issues. Others benefit from longer-term therapy (6+ months). Your therapist will discuss treatment goals and expected timelines with you.
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-lg font-bold text-orange-900 mb-0">How much does therapy cost?</h3>
+            </div>
+            <p class="text-sm text-orange-800">
+              Traditional in-person therapy costs $100-$200+ per session without insurance. With insurance, you might pay a $10-$50 copay. Online therapy platforms typically cost $60-$100 per session or $240-$400/month for subscription models.
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-indigo-600 mr-2" />
+              <h3 class="text-lg font-bold text-indigo-900 mb-0">What if I don't like my therapist?</h3>
+            </div>
+            <p class="text-sm text-indigo-800">
+              It's completely okay to switch therapists. The therapeutic relationship is crucial to success. If you don't feel heard, comfortable, or like you're making progress after a few sessions, it's wise to find a better fit.
+            </p>
+          </div>
+
+          <div class="bg-pink-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <HelpCircle class="h-6 w-6 text-pink-600 mr-2" />
+              <h3 class="text-lg font-bold text-pink-900 mb-0">Is online therapy as good as in-person?</h3>
+            </div>
+            <p class="text-sm text-pink-800">
+              Research shows online therapy is just as effective as in-person for most conditions, including anxiety, depression, and PTSD. It offers convenience, affordability, and accessibility—especially for those with transportation or scheduling barriers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* What to Expect from Therapy */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What to Expect from Therapy</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          Understanding what therapy involves can help ease anxiety about starting:
+        </p>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Therapy Typically Involves:</h3>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">Regular sessions:</strong> Weekly or bi-weekly 45-60 minute sessions (frequency depends on your needs)
+            </li>
+            <li>
+              <strong class="text-gray-900">Open conversation:</strong> Talking about your thoughts, feelings, experiences, and challenges in a confidential space
+            </li>
+            <li>
+              <strong class="text-gray-900">Goal setting:</strong> Working with your therapist to identify what you want to achieve and tracking progress
+            </li>
+            <li>
+              <strong class="text-gray-900">Skill building:</strong> Learning coping strategies, emotional regulation techniques, and healthier thought patterns
+            </li>
+            <li>
+              <strong class="text-gray-900">Homework/practice:</strong> Many therapists assign between-session exercises to reinforce what you're learning
+            </li>
+            <li>
+              <strong class="text-gray-900">Ups and downs:</strong> Progress isn't linear—some sessions feel productive, others feel slow. That's normal.
+            </li>
+            <li>
+              <strong class="text-gray-900">Your pace:</strong> You control what you share and when. Therapists won't force you to discuss topics you're not ready for.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Remember:</strong> It's normal to feel nervous about starting therapy. Most people feel anxious before their first session, but that anxiety typically decreases once you begin and build rapport with your therapist.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Preparing for Your First Session */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How to Prepare for Your First Session</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 not-prose">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">Reflect on your goals:</strong> Think about what you want to get out of therapy (e.g., manage anxiety, improve relationships, process trauma)
+            </li>
+            <li>
+              <strong class="text-gray-900">Prepare your history:</strong> Be ready to discuss your mental health history, current symptoms, medications, and major life events
+            </li>
+            <li>
+              <strong class="text-gray-900">Write down questions:</strong> Bring a list of questions about the therapist's approach, experience, and what to expect
+            </li>
+            <li>
+              <strong class="text-gray-900">Verify insurance/payment:</strong> Confirm costs, copays, and payment methods before your appointment
+            </li>
+            <li>
+              <strong class="text-gray-900">Arrive early:</strong> Give yourself time to fill out paperwork and settle in before your session starts
+            </li>
+            <li>
+              <strong class="text-gray-900">Be honest:</strong> The more honest you are with your therapist, the more they can help you
+            </li>
+            <li>
+              <strong class="text-gray-900">Give it time:</strong> Don't judge therapy based on one session. It takes 3-4 sessions to get a real sense of the therapeutic relationship
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Beginner Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of beginner-focused articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• "I think I need therapy but I'm scared" – Overcoming therapy anxiety</li>
+          <li>• What to say in your first therapy session</li>
+          <li>• How to know if your therapist is a good fit</li>
+          <li>• Therapy mistakes beginners make (and how to avoid them)</li>
+          <li>• Understanding therapist credentials: LCSW, LMFT, LPC, PsyD explained</li>
+          <li>• Online therapy vs in-person: Which is right for beginners?</li>
+          <li>• How to afford therapy when money is tight</li>
+          <li>• What does "do the work" in therapy actually mean?</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing beginner resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
+        <a href="/blog/tag/finance" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Finance</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>

@@ -1,21 +1,245 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Users, MessageCircle, Brain, BookOpen, Target, Lightbulb, ArrowRight, CheckCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Interviews | RealMindSolutions" description="Therapist Interviews">
+<BaseLayout title="Expert Therapist Interviews & Q&A | RealMindSolutions" description="Mental health expert interviews—therapist Q&As, professional insights, industry perspectives, and advice from licensed mental health professionals.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapist Interviews</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Interview articles</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Expert Therapist Interviews</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Insights, advice, and perspectives from licensed mental health professionals.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Learning directly from mental health professionals provides invaluable insight into therapy, treatment approaches, and what makes therapy effective. Through interviews with licensed therapists, psychiatrists, and counselors, you can better understand what to look for in a provider and what to expect from treatment.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together expert perspectives on therapy, therapist selection, and mental health care—helping you make informed decisions and feel confident in your therapeutic journey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/blog/tag/therapists" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users class="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Working with Therapists</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Resources on finding, evaluating, and working effectively with mental health professionals.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            View Resources
+          </div>
+        </a>
+
+        <a href="/blog/tag/therapist-selection" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target class="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapist Selection Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to find and choose a therapist who's the right fit for your needs and goals.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/blog/tag/therapy-types" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Brain class="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Types & Approaches</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn about different therapy modalities from experts who practice them—CBT, DBT, EMDR, and more.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Explore Therapies
+          </div>
+        </a>
+
+        <a href="/resources/guides/first-therapy-session" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <MessageCircle class="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">First Therapy Session Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            What to expect in your first session and how therapists approach initial consultations.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Read Guide
+          </div>
+        </a>
+
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen class="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Approaches Explained</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Detailed explanations of evidence-based therapy approaches and when they're most effective.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            Learn More
+          </div>
+        </a>
+
+        <a href="/blog/tag/beginners" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Lightbulb class="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Beginner Resources</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Essential information for anyone new to therapy—expert advice on getting started.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight class="h-4 w-4 mr-1" />
+            View Beginner Guides
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* What You'll Learn from Expert Interviews */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What You'll Learn from Expert Interviews</h2>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Brain class="h-6 w-6 text-blue-600 mr-2" />
+              <h3 class="text-xl font-bold text-blue-900 mb-0">Therapy Approaches & Techniques</h3>
+            </div>
+            <p class="text-sm text-blue-800 mb-2">
+              Hear directly from therapists about how they use different therapeutic approaches, when they recommend specific techniques, and how they tailor treatment to individual clients.
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <Target class="h-6 w-6 text-purple-600 mr-2" />
+              <h3 class="text-xl font-bold text-purple-900 mb-0">What Makes Therapy Effective</h3>
+            </div>
+            <p class="text-sm text-purple-800 mb-2">
+              Learn about the therapeutic relationship, what therapists look for in successful treatment, and how to be an active participant in your own healing.
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <MessageCircle class="h-6 w-6 text-green-600 mr-2" />
+              <h3 class="text-xl font-bold text-green-900 mb-0">Communication & Boundaries</h3>
+            </div>
+            <p class="text-sm text-green-800 mb-2">
+              Expert advice on how to communicate with your therapist, set boundaries, voice concerns, and navigate challenging moments in therapy.
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <CheckCircle class="h-6 w-6 text-orange-600 mr-2" />
+              <h3 class="text-xl font-bold text-orange-900 mb-0">Finding the Right Fit</h3>
+            </div>
+            <p class="text-sm text-orange-800 mb-2">
+              Understand what therapists recommend when searching for a provider, what questions to ask, and how to know if a therapist is the right match for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Questions to Ask Mental Health Professionals */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Important Questions Answered by Experts</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          Expert interviews address the most common and important questions about therapy:
+        </p>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>• <strong>How do I know if I need therapy?</strong> When to seek professional help vs. self-help</li>
+            <li>• <strong>What should I look for in a therapist?</strong> Credentials, specializations, and personal fit</li>
+            <li>• <strong>How long does therapy take?</strong> Typical treatment timelines for different concerns</li>
+            <li>• <strong>What happens in the first session?</strong> What therapists assess and how they approach intake</li>
+            <li>• <strong>How do I know if therapy is working?</strong> Signs of progress and when to reevaluate</li>
+            <li>• <strong>What if I don't like my therapist?</strong> How to address concerns or find a better fit</li>
+            <li>• <strong>Is online therapy as effective as in-person?</strong> Expert perspectives on teletherapy</li>
+            <li>• <strong>How do I talk to my therapist about difficult topics?</strong> Building trust and vulnerability</li>
+            <li>• <strong>What's the difference between therapy types?</strong> When to choose CBT vs. DBT vs. psychodynamic</li>
+            <li>• <strong>Should I take medication alongside therapy?</strong> Integrated treatment considerations</li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Remember:</strong> Every therapist has their own style, approach, and perspective. These interviews provide diverse viewpoints to help you understand the range of therapeutic practices and philosophies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Expert Interview Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of therapist interviews and Q&As. Future interviews will cover:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• CBT therapist on treating anxiety disorders</li>
+          <li>• Trauma specialist on EMDR and healing from PTSD</li>
+          <li>• Couples therapist on relationship repair and communication</li>
+          <li>• DBT clinician on emotion regulation and borderline personality disorder</li>
+          <li>• Child psychologist on parenting and family therapy</li>
+          <li>• Psychiatrist on medication management and integrated treatment</li>
+          <li>• Online therapy platform therapist on teletherapy best practices</li>
+          <li>• LGBTQ+ affirming therapist on finding inclusive care</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing expert resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapists" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapists</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/beginners" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Beginners</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>
