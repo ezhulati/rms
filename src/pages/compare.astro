@@ -2,9 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { platforms } from '../siteData';
 import { ArrowRight, ExternalLink, Star, CheckCircle, XCircle, Info, DollarSign, Calendar, MessageSquare, Video, Phone, Search, Filter, ChevronDown, ChevronUp, Users } from 'lucide-react';
-import { platforms } from '../siteData';
 
 const isRootPath = Astro.url.pathname === '/compare' || Astro.url.pathname === '/compare/';
+const isPlatformsPath = Astro.url.pathname.startsWith('/compare/platforms');
 
 // const platforms = []; // Now using real data from siteData
 
@@ -649,7 +649,7 @@ const renderStars = (rating: number) => {
             This is a placeholder for the specific comparison content based on the current URL path.
           </p>
           <p class="text-gray-600">
-            Current path: {location.pathname}
+            Current path: {Astro.url.pathname}
           </p>
         </div>
       </div>

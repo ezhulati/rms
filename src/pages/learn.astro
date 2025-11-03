@@ -6,30 +6,30 @@ const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/l
 ---
 
 <BaseLayout>
-  {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        {isRootPath ? (
-          <>
-            <div class="text-center mb-12">
-              <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Learn About Mental Health</h1>
-              <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto">
-                Educational resources to help you understand mental health concepts, treatments, and best practices.
-              </p>
-            </div>
-    </div>
-  </section>
+  {isRootPath ? (
+    <>
+      {/* Hero Section */}
+      <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-12">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Learn About Mental Health</h1>
+            <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto">
+              Educational resources to help you understand mental health concepts, treatments, and best practices.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  {/* Main Content */}
-  <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Main Content */}
+      <section class="bg-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
             {/* Featured Learning Resources */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {/* Learning Resource 1 */}
               <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="/images/concepts/learnpage.jpg" 
+                  src="/images/concepts/learnpage.webp" 
                   alt="Therapy Types" 
                   class="w-full min-w-0 h-48 object-cover"
                 />
@@ -50,7 +50,7 @@ const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/l
               {/* Learning Resource 2 */}
               <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="/images/concepts/learnpage.jpg" 
+                  src="/images/concepts/learnpage.webp" 
                   alt="Mental Health Statistics" 
                   class="w-full min-w-0 h-48 object-cover"
                 />
@@ -71,7 +71,7 @@ const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/l
               {/* Learning Resource 3 */}
               <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="/images/concepts/learnpage.jpg" 
+                  src="/images/concepts/learnpage.webp" 
                   alt="Online Therapy Guide" 
                   class="w-full min-w-0 h-48 object-cover"
                 />
@@ -184,7 +184,7 @@ const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/l
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div class="col-span-1 md:col-span-1">
                     <img 
-                      src="/images/concepts/learnpage.jpg" 
+                      src="/images/concepts/learnpage.webp" 
                       alt="Therapy Types" 
                       class="w-full min-w-0 rounded-lg"
                     />
@@ -320,18 +320,25 @@ const isRootPath = Astro.url.pathname === '/learn' || Astro.url.pathname === '/l
                 </a>
               </div>
             </div>
-          </>
-        ) : (
-          <div class="text-center py-20">
+        </div>
+      </section>
+    </>
+  ) : (
+    <>
+      {/* Hero Section */}
+      <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">Learning Content</h1>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               This is a placeholder for the specific learning content based on the current URL path.
             </p>
             <p class="text-gray-600">
-              Current path: {location.pathname}
+              Current path: {Astro.url.pathname}
             </p>
           </div>
-        )}
-    </div>
-  </section>
+        </div>
+      </section>
+    </>
+  )}
 </BaseLayout>
