@@ -1,10 +1,286 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { BookOpen, Shield, Heart, MessageCircle, Users, Phone, DollarSign, Compass, CheckCircle, ArrowRight, FileText } from 'lucide-react';
 ---
 
-<BaseLayout title="Mental Health Guides | RealMindSolutions" description="Free Guides">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Free Guides</h1>
-    <div class="prose prose-lg max-w-4xl"><p>Comprehensive mental health guides</p></div>
-  </div>
+<BaseLayout title="Free Mental Health Guides | RealMindSolutions" description="Comprehensive, evidence-based mental health guides—insurance coverage, crisis resources, self-care strategies, therapy types, and more. Free resources to support your mental health journey.">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Free Mental Health Guides</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">Comprehensive, evidence-based guides to help you navigate mental health treatment, insurance, crisis support, and self-care.</p>
+
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <p class="text-gray-700 leading-relaxed">
+          Whether you're seeking information about therapy types, navigating insurance coverage, or looking for crisis resources, these detailed guides provide the knowledge and tools you need for your mental health journey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Guides */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Shield className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Essential Guides</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Crisis Resources Guide */}
+        <a href="/resources/guides/crisis-resources" class="bg-gradient-to-br from-red-50 to-pink-50 rounded-lg p-8 hover:shadow-lg transition-shadow border border-red-100">
+          <div class="flex items-start mb-4">
+            <Phone className="h-10 w-10 text-red-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Crisis Resources Guide</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                Comprehensive directory of mental health hotlines, crisis text lines, emergency resources, and support services. Available 24/7 when you need immediate help.
+              </p>
+              <div class="bg-red-100 rounded-lg p-3 mb-3">
+                <p class="text-xs text-red-900 font-semibold">Includes:</p>
+                <ul class="text-xs text-red-800 space-y-1 mt-2">
+                  <li>• 988 Suicide & Crisis Lifeline</li>
+                  <li>• Crisis Text Line</li>
+                  <li>• Specialized hotlines (veterans, LGBTQ+, teens, etc.)</li>
+                  <li>• International crisis resources</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-red-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            View Crisis Resources Guide
+          </div>
+        </a>
+
+        {/* Insurance Coverage Guide */}
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-8 hover:shadow-lg transition-shadow border border-blue-100">
+          <div class="flex items-start mb-4">
+            <DollarSign className="h-10 w-10 text-blue-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Insurance Coverage Guide</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                Navigate mental health insurance benefits, understand your coverage, verify therapist networks, and maximize reimbursement for out-of-network care.
+              </p>
+              <div class="bg-blue-100 rounded-lg p-3 mb-3">
+                <p class="text-xs text-blue-900 font-semibold">Includes:</p>
+                <ul class="text-xs text-blue-800 space-y-1 mt-2">
+                  <li>• Mental health parity laws</li>
+                  <li>• Coverage verification process</li>
+                  <li>• Out-of-network reimbursement</li>
+                  <li>• Deductibles, copays, and coinsurance explained</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-blue-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            View Insurance Guide
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center mb-8">
+        <Compass className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Understanding Therapy</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Therapy Types Explained */}
+        <a href="/resources/guides/therapy-types-explained" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 hover:shadow-lg transition-shadow border border-purple-100">
+          <div class="flex items-start mb-4">
+            <BookOpen className="h-10 w-10 text-purple-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Therapy Types Explained</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                Comprehensive guide to different therapy approaches—CBT, DBT, psychodynamic, EMDR, ACT, and more. Understand what to expect and find the right modality for your needs.
+              </p>
+              <div class="bg-purple-100 rounded-lg p-3 mb-3">
+                <p class="text-xs text-purple-900 font-semibold">Covers:</p>
+                <ul class="text-xs text-purple-800 space-y-1 mt-2">
+                  <li>• Cognitive Behavioral Therapy (CBT)</li>
+                  <li>• Dialectical Behavior Therapy (DBT)</li>
+                  <li>• EMDR for trauma</li>
+                  <li>• Psychodynamic, ACT, IPT, and more</li>
+                  <li>• Quick reference comparison table</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-purple-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            Explore Therapy Types
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center mb-8">
+        <Heart className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Self-Care & Wellness</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Self-Care Strategies */}
+        <a href="/resources/guides/self-care-strategies" class="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-8 hover:shadow-lg transition-shadow border border-green-100">
+          <div class="flex items-start mb-4">
+            <Heart className="h-10 w-10 text-green-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Self-Care Strategies Guide</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                Practical self-care strategies across five dimensions: physical, emotional, mental, social, and spiritual well-being. Build sustainable habits that support your mental health.
+              </p>
+              <div class="bg-green-100 rounded-lg p-3 mb-3">
+                <p class="text-xs text-green-900 font-semibold">Five Dimensions:</p>
+                <ul class="text-xs text-green-800 space-y-1 mt-2">
+                  <li>• Physical: Sleep, movement, nutrition</li>
+                  <li>• Emotional: Processing feelings, boundaries</li>
+                  <li>• Mental: Learning, mental breaks</li>
+                  <li>• Social: Connection, relationships</li>
+                  <li>• Spiritual: Meaning, purpose, creativity</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-green-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            Read Self-Care Guide
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center mb-8">
+        <MessageCircle className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Communication & Support</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Talking to Loved Ones */}
+        <a href="/resources/guides/talking-to-loved-ones" class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-8 hover:shadow-lg transition-shadow border border-yellow-100">
+          <div class="flex items-start mb-4">
+            <MessageCircle className="h-10 w-10 text-orange-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Talking to Loved Ones About Mental Health</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                How to talk to family and friends about your mental health struggles. Conversation starters, handling different reactions, and setting healthy boundaries.
+              </p>
+              <div class="bg-yellow-100 rounded-lg p-3 mb-3">
+                <p class="text-xs text-yellow-900 font-semibold">Includes:</p>
+                <ul class="text-xs text-yellow-800 space-y-1 mt-2">
+                  <li>• When and how to start the conversation</li>
+                  <li>• Conversation starters and scripts</li>
+                  <li>• Handling supportive, dismissive, or defensive reactions</li>
+                  <li>• Setting boundaries around your mental health</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-orange-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            Read Communication Guide
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Support Groups & Community */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <Users className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Support Groups & Community</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Depression Support Groups */}
+        <a href="/resources/support-groups/depression" class="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow border border-gray-200">
+          <div class="flex items-start mb-4">
+            <Users className="h-10 w-10 text-indigo-600 mr-4 flex-shrink-0" />
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Depression Support Groups</h3>
+              <p class="text-sm text-gray-700 mb-4">
+                Comprehensive directory of depression support groups—online and in-person, peer-led and professionally facilitated. Find community and connection.
+              </p>
+              <div class="bg-indigo-50 rounded-lg p-3 mb-3">
+                <p class="text-xs text-indigo-900 font-semibold">Featured Organizations:</p>
+                <ul class="text-xs text-indigo-800 space-y-1 mt-2">
+                  <li>• DBSA (Depression and Bipolar Support Alliance)</li>
+                  <li>• NAMI Connection groups</li>
+                  <li>• Online communities (The Tribe, 7 Cups, Reddit)</li>
+                  <li>• Local group finder resources</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-indigo-700 font-semibold">
+            <ArrowRight className="h-4 w-4 mr-2" />
+            Find Support Groups
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* How to Use These Guides */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center mb-8">
+        <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">How to Use These Guides</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Educational Resource</h3>
+          <p class="text-sm text-gray-700">
+            These guides provide evidence-based information to help you make informed decisions about your mental health care and understand your options.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Print or Save</h3>
+          <p class="text-sm text-gray-700">
+            Print guides to reference later, bookmark pages for quick access, or share helpful resources with friends, family, or your healthcare providers.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Complement Professional Care</h3>
+          <p class="text-sm text-gray-700">
+            Guides are meant to support—not replace—professional mental health care. Always consult with a qualified provider for personalized advice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/resources/worksheets" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+            <FileText className="h-5 w-5 text-brand-primary mr-2" />
+            Mental Health Worksheets
+          </h3>
+          <p class="text-sm text-gray-700">Free downloadable worksheets for CBT, mindfulness, mood tracking, and more</p>
+        </a>
+        <a href="/tools/assessments" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+            <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+            Mental Health Assessments
+          </h3>
+          <p class="text-sm text-gray-700">Interactive screening tools for depression, anxiety, OCD, and PTSD</p>
+        </a>
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+            <Compass className="h-5 w-5 text-blue-600 mr-2" />
+            Best Therapy Platforms
+          </h3>
+          <p class="text-sm text-gray-700">Compare and find the best online therapy platform for your needs</p>
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
