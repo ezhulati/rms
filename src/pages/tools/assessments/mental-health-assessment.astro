@@ -1,15 +1,176 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Assessment from '../../../components/Assessment';
 import { CheckCircle, Info, AlertCircle, Brain } from 'lucide-react';
+
+// General Mental Health Screening - Multi-dimensional assessment
+const mentalHealthQuestions = [
+  {
+    id: 'q1',
+    text: 'Overall, how would you rate your mental and emotional health?',
+    options: [
+      { text: 'Excellent', value: 0 },
+      { text: 'Good', value: 1 },
+      { text: 'Fair', value: 2 },
+      { text: 'Poor', value: 3 },
+      { text: 'Very poor', value: 4 }
+    ]
+  },
+  {
+    id: 'q2',
+    text: 'How often do you feel stressed or overwhelmed?',
+    options: [
+      { text: 'Rarely or never', value: 0 },
+      { text: 'Occasionally', value: 1 },
+      { text: 'Sometimes', value: 2 },
+      { text: 'Often', value: 3 },
+      { text: 'Almost always', value: 4 }
+    ]
+  },
+  {
+    id: 'q3',
+    text: 'How well are you sleeping?',
+    options: [
+      { text: 'Very well', value: 0 },
+      { text: 'Fairly well', value: 1 },
+      { text: 'Somewhat poorly', value: 2 },
+      { text: 'Very poorly', value: 3 },
+      { text: 'Extremely poorly', value: 4 }
+    ]
+  },
+  {
+    id: 'q4',
+    text: 'How satisfied are you with your relationships and social connections?',
+    options: [
+      { text: 'Very satisfied', value: 0 },
+      { text: 'Satisfied', value: 1 },
+      { text: 'Neutral', value: 2 },
+      { text: 'Dissatisfied', value: 3 },
+      { text: 'Very dissatisfied', value: 4 }
+    ]
+  },
+  {
+    id: 'q5',
+    text: 'How often do you feel sad, down, or hopeless?',
+    options: [
+      { text: 'Rarely or never', value: 0 },
+      { text: 'Occasionally', value: 1 },
+      { text: 'Sometimes', value: 2 },
+      { text: 'Often', value: 3 },
+      { text: 'Almost always', value: 4 }
+    ]
+  },
+  {
+    id: 'q6',
+    text: 'How often do you feel anxious, nervous, or worried?',
+    options: [
+      { text: 'Rarely or never', value: 0 },
+      { text: 'Occasionally', value: 1 },
+      { text: 'Sometimes', value: 2 },
+      { text: 'Often', value: 3 },
+      { text: 'Almost always', value: 4 }
+    ]
+  },
+  {
+    id: 'q7',
+    text: 'How would you rate your energy levels?',
+    options: [
+      { text: 'High energy', value: 0 },
+      { text: 'Good energy', value: 1 },
+      { text: 'Moderate energy', value: 2 },
+      { text: 'Low energy', value: 3 },
+      { text: 'Very low energy', value: 4 }
+    ]
+  },
+  {
+    id: 'q8',
+    text: 'How well are you able to concentrate and focus?',
+    options: [
+      { text: 'Very well', value: 0 },
+      { text: 'Fairly well', value: 1 },
+      { text: 'Somewhat poorly', value: 2 },
+      { text: 'Very poorly', value: 3 },
+      { text: 'Extremely poorly', value: 4 }
+    ]
+  },
+  {
+    id: 'q9',
+    text: 'How well are you managing work/school and daily responsibilities?',
+    options: [
+      { text: 'Very well', value: 0 },
+      { text: 'Fairly well', value: 1 },
+      { text: 'With some difficulty', value: 2 },
+      { text: 'With significant difficulty', value: 3 },
+      { text: 'Unable to manage', value: 4 }
+    ]
+  },
+  {
+    id: 'q10',
+    text: 'How often do you engage in activities you enjoy?',
+    options: [
+      { text: 'Very frequently', value: 0 },
+      { text: 'Frequently', value: 1 },
+      { text: 'Occasionally', value: 2 },
+      { text: 'Rarely', value: 3 },
+      { text: 'Never', value: 4 }
+    ]
+  }
+];
+
+const scoringGuide = [
+  {
+    min: 0,
+    max: 10,
+    severity: 'Excellent Mental Health',
+    color: 'green',
+    description: 'Your responses suggest excellent overall mental health. You appear to be managing well across multiple areas of wellbeing.'
+  },
+  {
+    min: 11,
+    max: 20,
+    severity: 'Good Mental Health',
+    color: 'green',
+    description: 'Your responses suggest good mental health overall. While there may be some areas of concern, you\'re generally doing well.'
+  },
+  {
+    min: 21,
+    max: 30,
+    severity: 'Fair Mental Health',
+    color: 'yellow',
+    description: 'Your responses suggest fair mental health with some areas that may benefit from attention. Consider exploring self-care strategies and support options.'
+  },
+  {
+    min: 31,
+    max: 35,
+    severity: 'Concerning Mental Health',
+    color: 'orange',
+    description: 'Your responses suggest concerning levels of mental health challenges. We recommend speaking with a mental health professional who can provide proper assessment and support.'
+  },
+  {
+    min: 36,
+    max: 40,
+    severity: 'Poor Mental Health',
+    color: 'red',
+    description: 'Your responses suggest significant mental health challenges that are likely impacting multiple areas of your life. Please consider seeking professional help.'
+  }
+];
+
+const recommendations = {
+  'excellent mental health': 'Continue your positive mental health practices. Consider what\'s working well and maintain those habits.',
+  'good mental health': 'You\'re doing well overall. Consider strengthening areas where you rated lower through self-care practices, exercise, sleep hygiene, and social connection.',
+  'fair mental health': 'Several areas may benefit from attention. Consider speaking with a therapist, improving sleep and exercise habits, and building stronger social connections.',
+  'concerning mental health': 'We recommend scheduling an appointment with a mental health professional who can provide a comprehensive evaluation and personalized treatment plan.',
+  'poor mental health': 'Please seek professional help as soon as possible. A mental health professional can provide proper assessment and evidence-based treatment to help improve your wellbeing.'
+};
 ---
 
 <BaseLayout>
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mental Health Assessment</h1>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">General Mental Health Assessment</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">
-        Comprehensive evaluation of your mental health and wellbeing
+        Comprehensive screening to evaluate your overall mental health and wellbeing
       </p>
     </div>
   </section>
@@ -17,82 +178,78 @@ import { CheckCircle, Info, AlertCircle, Brain } from 'lucide-react';
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
 
-        <div class="p-6">
-          <div class="space-y-4 mb-6">
-            <div class="flex items-start">
-              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">About This Tool</h2>
-                <p class="text-gray-600">
-                  This comprehensive assessment evaluates multiple aspects of your mental health to help you understand your overall wellbeing and identify areas that may benefit from professional support.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">What It Evaluates</h2>
-                <ul class="mt-2 space-y-1">
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Mood and emotional patterns</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Anxiety and stress levels</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Daily functioning and quality of life</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Sleep and energy patterns</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">Important Note</h2>
-                <p class="text-gray-600">
-                  This tool is not a diagnostic instrument. It's designed to help you understand your needs and determine if professional help might be beneficial.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg p-6 mb-6">
-            <h3 class="font-bold text-gray-800 mb-2">Interactive Tool Coming Soon</h3>
-            <p class="text-gray-700 mb-4">
-              We're currently updating this tool. In the meantime, you can explore our comprehensive resources and find the help you need through the links below.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <div class="flex items-start bg-yellow-50 rounded-lg p-4">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <p class="text-sm text-yellow-700">
-                If you're experiencing mental health concerns, we recommend consulting with a qualified mental health professional for personalized assessment and care.
+      {/* Information Cards */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+          <div class="flex items-start">
+            <Info class="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Holistic Screening</h3>
+              <p class="text-gray-700 text-sm">
+                This assessment evaluates multiple dimensions of mental health including mood, anxiety, sleep, energy, and functioning.
               </p>
             </div>
+          </div>
+        </div>
 
-            <div class="flex flex-wrap gap-4">
-              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                Find a Mental Health Professional
-              </a>
-              <a href="/compare/platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">
-                Compare Treatment Options
-              </a>
-              <a href="/conditions-az" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md hover:bg-indigo-50 transition">
-                Learn About Mental Health Conditions
-              </a>
+        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+          <div class="flex items-start">
+            <Brain class="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Takes 3 Minutes</h3>
+              <p class="text-gray-700 text-sm">
+                Answer 10 questions about various aspects of your mental health and daily functioning.
+              </p>
             </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
+          <div class="flex items-start">
+            <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Starting Point</h3>
+              <p class="text-gray-700 text-sm">
+                Use this as a starting point to understand your mental health. For specific concerns, take our specialized assessments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Assessment Component */}
+      <Assessment
+        client:load
+        title="How have you been feeling recently?"
+        description="Please select the response that best describes your current experience."
+        questions={mentalHealthQuestions}
+        scoringGuide={scoringGuide}
+        recommendations={recommendations}
+      />
+
+      {/* Additional Resources */}
+      <div class="mt-12 bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">More Specific Assessments</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">If you're concerned about specific symptoms:</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li><a href="/tools/assessments/anxiety-screening" class="text-brand-primary hover:underline">→ Take the Anxiety Screening (GAD-7)</a></li>
+              <li><a href="/tools/assessments/depression-screening" class="text-brand-primary hover:underline">→ Take the Depression Screening (PHQ-9)</a></li>
+              <li><a href="/tools/assessments/ptsd-assessment" class="text-brand-primary hover:underline">→ Take the PTSD Assessment (PCL-5)</a></li>
+              <li><a href="/tools/assessments/ocd-assessment" class="text-brand-primary hover:underline">→ Take the OCD Assessment (Y-BOCS)</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Find the right support:</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li><a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">→ Find Your Ideal Therapist</a></li>
+              <li><a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">→ Best Online Therapy Platforms</a></li>
+              <li><a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary hover:underline">→ Learn About Therapy Types</a></li>
+            </ul>
           </div>
         </div>
       </div>

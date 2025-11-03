@@ -104,10 +104,14 @@ export default {
         },
       },
       fontFamily: {
-        'heading': ['Yantramanav', 'system-ui', 'sans-serif'],
-        'serif': ['PT Serif', 'Georgia', 'serif'],
-        'sans': ['Kantit', 'system-ui', 'sans-serif'],
+        // Premium enterprise navigation fonts
+        'nav': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'heading': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'accent': ['Fraunces', 'Georgia', 'serif'],
+        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         'mono': ['Consolas', 'Monaco', 'monospace'],
+        // Legacy support
+        'serif': ['Fraunces', 'Georgia', 'serif'],
       },
       boxShadow: {
         'sb': '0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 24px rgba(0, 0, 0, 0.04)',

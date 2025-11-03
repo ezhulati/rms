@@ -1,0 +1,1690 @@
+{
+  "timestamp": "2025-11-03T05:00:10.786Z",
+  "summary": {
+    "total": 285,
+    "complete": 195,
+    "incomplete": 90
+  },
+  "incompletePages": [
+    {
+      "url": "/best/audiences",
+      "complete": false,
+      "issues": [
+        "Very short content (24 words)"
+      ],
+      "wordCount": 24,
+      "hasMainContent": true
+    },
+    {
+      "url": "/best/conditions",
+      "complete": false,
+      "issues": [
+        "Very short content (25 words)"
+      ],
+      "wordCount": 25,
+      "hasMainContent": true
+    },
+    {
+      "url": "/best/platforms",
+      "complete": false,
+      "issues": [
+        "Very short content (20 words)"
+      ],
+      "wordCount": 20,
+      "hasMainContent": true
+    },
+    {
+      "url": "/best/specific-needs",
+      "complete": false,
+      "issues": [
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/blog/author/emma-rodriguez",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/author/maya-patel",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/author/michael-chen",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/author/sarah-johnson",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/blog-layout",
+      "complete": false,
+      "issues": [
+        "Very short content (0 words)"
+      ],
+      "wordCount": 0,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/guides/finding-right-therapist",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (16 words)"
+      ],
+      "wordCount": 16,
+      "hasMainContent": true
+    },
+    {
+      "url": "/blog/news/platform-merger",
+      "complete": false,
+      "issues": [
+        "Contains: \"TBD\""
+      ],
+      "wordCount": 1335,
+      "hasMainContent": true
+    },
+    {
+      "url": "/blog/news/telehealth-innovations",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (13 words)"
+      ],
+      "wordCount": 13,
+      "hasMainContent": true
+    },
+    {
+      "url": "/blog/stories/client-success-story",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/anxiety",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/beginners",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/depression",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/finance",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/insurance",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/interviews",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/mental-health",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/mindfulness",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/online-therapy",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/policy",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/relationships",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/research",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/self-care",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/telehealth",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (7 words)"
+      ],
+      "wordCount": 7,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/therapist-selection",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/therapists",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (8 words)"
+      ],
+      "wordCount": 8,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/therapy",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (8 words)"
+      ],
+      "wordCount": 8,
+      "hasMainContent": false
+    },
+    {
+      "url": "/blog/tag/therapy-types",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/case-studies/conditions",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/case-studies/demographics",
+      "complete": false,
+      "issues": [
+        "Very short content (8 words)"
+      ],
+      "wordCount": 8,
+      "hasMainContent": false
+    },
+    {
+      "url": "/case-studies/demographics/remote-worker-mental-health",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (15 words)"
+      ],
+      "wordCount": 15,
+      "hasMainContent": true
+    },
+    {
+      "url": "/case-studies/demographics/therapy-for-night-owls",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (14 words)"
+      ],
+      "wordCount": 14,
+      "hasMainContent": true
+    },
+    {
+      "url": "/compare",
+      "complete": false,
+      "issues": [
+        "Contains: \"placeholder\"",
+        "Contains: \"This is a placeholder\"",
+        "Placeholder routing page detected"
+      ],
+      "wordCount": 283,
+      "hasMainContent": true
+    },
+    {
+      "url": "/compare/alternatives",
+      "complete": false,
+      "issues": [
+        "Very short content (27 words)"
+      ],
+      "wordCount": 27,
+      "hasMainContent": true
+    },
+    {
+      "url": "/compare/modalities",
+      "complete": false,
+      "issues": [
+        "Very short content (28 words)"
+      ],
+      "wordCount": 28,
+      "hasMainContent": true
+    },
+    {
+      "url": "/compare/platforms",
+      "complete": false,
+      "issues": [
+        "Very short content (30 words)"
+      ],
+      "wordCount": 30,
+      "hasMainContent": true
+    },
+    {
+      "url": "/compare/roundups",
+      "complete": false,
+      "issues": [
+        "Very short content (23 words)"
+      ],
+      "wordCount": 23,
+      "hasMainContent": true
+    },
+    {
+      "url": "/comparisons/platforms",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/conditions/anxiety-disorder",
+      "complete": false,
+      "issues": [
+        "Very short content (0 words)"
+      ],
+      "wordCount": 0,
+      "hasMainContent": false
+    },
+    {
+      "url": "/conditions/bipolar-disorder",
+      "complete": false,
+      "issues": [
+        "Very short content (0 words)"
+      ],
+      "wordCount": 0,
+      "hasMainContent": false
+    },
+    {
+      "url": "/conditions/depression",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/guides",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 394,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/guides",
+      "complete": false,
+      "issues": [
+        "Very short content (6 words)"
+      ],
+      "wordCount": 6,
+      "hasMainContent": false
+    },
+    {
+      "url": "/resources/guides/crisis-resources",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/guides/insurance-coverage-guide",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (13 words)"
+      ],
+      "wordCount": 13,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/guides/self-care-strategies",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/resources/guides/talking-to-loved-ones",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (17 words)"
+      ],
+      "wordCount": 17,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/guides/therapy-types-explained",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/support-groups/depression",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets",
+      "complete": false,
+      "issues": [
+        "Very short content (6 words)"
+      ],
+      "wordCount": 6,
+      "hasMainContent": false
+    },
+    {
+      "url": "/resources/worksheets/activity-planning",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/cognitive-distortion-worksheet",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/depression-thought-record",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/mindfulness-practice-worksheet",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/resources/worksheets/mood-tracking",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/stress-management-techniques",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/therapy-session-preparation",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/thought-record",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (13 words)"
+      ],
+      "wordCount": 13,
+      "hasMainContent": true
+    },
+    {
+      "url": "/resources/worksheets/thought-record-worksheet",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"Content coming soon\"",
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/features",
+      "complete": false,
+      "issues": [
+        "Very short content (26 words)"
+      ],
+      "wordCount": 26,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/features/betterhelp-therapist-quality",
+      "complete": false,
+      "issues": [
+        "Very short content (11 words)"
+      ],
+      "wordCount": 11,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/features/messaging-systems",
+      "complete": false,
+      "issues": [
+        "Very short content (10 words)"
+      ],
+      "wordCount": 10,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/features/talkspace-messaging-system",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/features/user-interface",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/platforms",
+      "complete": false,
+      "issues": [
+        "Very short content (23 words)"
+      ],
+      "wordCount": 23,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/platforms/online-therapy",
+      "complete": false,
+      "issues": [
+        "Very short content (6 words)"
+      ],
+      "wordCount": 6,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/platforms/online-therapy-com-review",
+      "complete": false,
+      "issues": [
+        "Very short content (59 words)"
+      ],
+      "wordCount": 59,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/pricing",
+      "complete": false,
+      "issues": [
+        "Very short content (18 words)"
+      ],
+      "wordCount": 18,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/pricing/affordable-therapy-options",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/pricing/betterhelp-cost-analysis",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/specialty",
+      "complete": false,
+      "issues": [
+        "Very short content (22 words)"
+      ],
+      "wordCount": 22,
+      "hasMainContent": true
+    },
+    {
+      "url": "/reviews/specialty/betterhelp-for-anxiety",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/reviews/specialty/couples-therapy-platforms",
+      "complete": false,
+      "issues": [
+        "Very short content (9 words)"
+      ],
+      "wordCount": 9,
+      "hasMainContent": false
+    },
+    {
+      "url": "/tools/assessments",
+      "complete": false,
+      "issues": [
+        "Very short content (24 words)"
+      ],
+      "wordCount": 24,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/anxiety-screening",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 135,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/depression-screening",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 137,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/mental-health-assessment",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 147,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/ocd-assessment",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 139,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/ptsd-assessment",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 207,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/relationship-assessment",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 201,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/assessments/therapy-style-assessment",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 139,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers",
+      "complete": false,
+      "issues": [
+        "Very short content (26 words)"
+      ],
+      "wordCount": 26,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers/budget-friendly-finder",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 145,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers/insurance-coverage-checker",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 208,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers/platform-finder",
+      "complete": false,
+      "issues": [
+        "Contains: \"coming soon\"",
+        "Contains: \"content coming soon\"",
+        "Very short content (12 words)"
+      ],
+      "wordCount": 12,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers/therapy-platform-matcher",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 145,
+      "hasMainContent": true
+    },
+    {
+      "url": "/tools/matchers/therapy-type-finder",
+      "complete": false,
+      "issues": [
+        "Contains: \"Coming Soon\""
+      ],
+      "wordCount": 145,
+      "hasMainContent": true
+    }
+  ],
+  "completePages": [
+    {
+      "url": "/",
+      "wordCount": 150
+    },
+    {
+      "url": "/accessibility",
+      "wordCount": 167
+    },
+    {
+      "url": "/best",
+      "wordCount": 599
+    },
+    {
+      "url": "/best-audiences",
+      "wordCount": 966
+    },
+    {
+      "url": "/best-conditions",
+      "wordCount": 948
+    },
+    {
+      "url": "/best-online-therapy-platforms",
+      "wordCount": 2802
+    },
+    {
+      "url": "/best-platforms",
+      "wordCount": 610
+    },
+    {
+      "url": "/best-text-therapy-services",
+      "wordCount": 1787
+    },
+    {
+      "url": "/best/audiences/best-for-couples",
+      "wordCount": 451
+    },
+    {
+      "url": "/best/audiences/best-for-lgbtq",
+      "wordCount": 2100
+    },
+    {
+      "url": "/best/audiences/best-for-parents",
+      "wordCount": 2050
+    },
+    {
+      "url": "/best/audiences/best-for-seniors",
+      "wordCount": 2070
+    },
+    {
+      "url": "/best/audiences/best-for-teens",
+      "wordCount": 2077
+    },
+    {
+      "url": "/best/audiences/best-for-veterans",
+      "wordCount": 2041
+    },
+    {
+      "url": "/best/conditions/best-for-addiction",
+      "wordCount": 2088
+    },
+    {
+      "url": "/best/conditions/best-for-anxiety",
+      "wordCount": 1320
+    },
+    {
+      "url": "/best/conditions/best-for-depression",
+      "wordCount": 1764
+    },
+    {
+      "url": "/best/conditions/best-for-eating-disorders",
+      "wordCount": 2603
+    },
+    {
+      "url": "/best/conditions/best-for-ocd",
+      "wordCount": 548
+    },
+    {
+      "url": "/best/conditions/best-for-ptsd",
+      "wordCount": 1321
+    },
+    {
+      "url": "/best/overall/best-online-therapy",
+      "wordCount": 1532
+    },
+    {
+      "url": "/best/platforms/best-medication-therapy-platforms",
+      "wordCount": 2228
+    },
+    {
+      "url": "/best/platforms/best-online-therapy-platforms",
+      "wordCount": 1204
+    },
+    {
+      "url": "/best/platforms/best-specialized-platforms",
+      "wordCount": 1619
+    },
+    {
+      "url": "/best/platforms/best-text-therapy-services",
+      "wordCount": 1024
+    },
+    {
+      "url": "/best/platforms/best-video-therapy-platforms",
+      "wordCount": 979
+    },
+    {
+      "url": "/best/specific-needs/best-affordable-therapy",
+      "wordCount": 820
+    },
+    {
+      "url": "/best/specific-needs/best-insurance-coverage",
+      "wordCount": 1416
+    },
+    {
+      "url": "/best/specific-needs/best-medication-management",
+      "wordCount": 1552
+    },
+    {
+      "url": "/best/specific-needs/best-specific-needs",
+      "wordCount": 1604
+    },
+    {
+      "url": "/better-help-review",
+      "wordCount": 1627
+    },
+    {
+      "url": "/better-help-vs-talkspace",
+      "wordCount": 1347
+    },
+    {
+      "url": "/blog",
+      "wordCount": 453
+    },
+    {
+      "url": "/blog/all",
+      "wordCount": 334
+    },
+    {
+      "url": "/blog/guides",
+      "wordCount": 344
+    },
+    {
+      "url": "/blog/guides/choosing-right-therapist",
+      "wordCount": 1104
+    },
+    {
+      "url": "/blog/guides/insurance-coverage-guide",
+      "wordCount": 635
+    },
+    {
+      "url": "/blog/guides/therapy-costs-explained",
+      "wordCount": 684
+    },
+    {
+      "url": "/blog/guides/therapy-first-session",
+      "wordCount": 1508
+    },
+    {
+      "url": "/blog/guides/therapy-modalities-explained",
+      "wordCount": 423
+    },
+    {
+      "url": "/blog/news",
+      "wordCount": 313
+    },
+    {
+      "url": "/blog/news/ai-therapy-tools",
+      "wordCount": 1475
+    },
+    {
+      "url": "/blog/news/latest-therapy-research",
+      "wordCount": 1939
+    },
+    {
+      "url": "/blog/news/mental-health-policy-updates",
+      "wordCount": 2476
+    },
+    {
+      "url": "/blog/news/who-global-report",
+      "wordCount": 1593
+    },
+    {
+      "url": "/blog/stories",
+      "wordCount": 497
+    },
+    {
+      "url": "/blog/stories/anxiety-management-stories",
+      "wordCount": 2564
+    },
+    {
+      "url": "/blog/stories/self-care-practices",
+      "wordCount": 1794
+    },
+    {
+      "url": "/blog/stories/therapist-interviews",
+      "wordCount": 1500
+    },
+    {
+      "url": "/blog/stories/therapy-during-crisis",
+      "wordCount": 2818
+    },
+    {
+      "url": "/blog/stories/therapy-success-stories",
+      "wordCount": 2576
+    },
+    {
+      "url": "/case-studies",
+      "wordCount": 149
+    },
+    {
+      "url": "/case-studies/conditions-page",
+      "wordCount": 249
+    },
+    {
+      "url": "/case-studies/conditions/anxiety-treatment-success",
+      "wordCount": 1750
+    },
+    {
+      "url": "/case-studies/conditions/depression-recovery-journey",
+      "wordCount": 2640
+    },
+    {
+      "url": "/case-studies/conditions/ocd-management-success",
+      "wordCount": 2716
+    },
+    {
+      "url": "/case-studies/conditions/ptsd-treatment-online",
+      "wordCount": 2392
+    },
+    {
+      "url": "/case-studies/demographics-page",
+      "wordCount": 282
+    },
+    {
+      "url": "/case-studies/demographics/college-student-stress-management",
+      "wordCount": 2725
+    },
+    {
+      "url": "/case-studies/demographics/rural-access-to-therapy",
+      "wordCount": 2063
+    },
+    {
+      "url": "/cerebral-review",
+      "wordCount": 1207
+    },
+    {
+      "url": "/compare/alternatives/affordable-betterhelp-alternatives",
+      "wordCount": 2018
+    },
+    {
+      "url": "/compare/alternatives/free-therapy-options",
+      "wordCount": 610
+    },
+    {
+      "url": "/compare/alternatives/talkspace-alternatives",
+      "wordCount": 2119
+    },
+    {
+      "url": "/compare/modalities/cbt-vs-psychodynamic",
+      "wordCount": 605
+    },
+    {
+      "url": "/compare/modalities/individual-vs-group-therapy",
+      "wordCount": 353
+    },
+    {
+      "url": "/compare/modalities/online-vs-traditional-therapy",
+      "wordCount": 588
+    },
+    {
+      "url": "/compare/modalities/text-vs-video-therapy",
+      "wordCount": 599
+    },
+    {
+      "url": "/compare/modalities/therapy-approaches",
+      "wordCount": 326
+    },
+    {
+      "url": "/compare/platforms/betterhelp-vs-calmerry",
+      "wordCount": 270
+    },
+    {
+      "url": "/compare/platforms/betterhelp-vs-cerebral",
+      "wordCount": 281
+    },
+    {
+      "url": "/compare/platforms/betterhelp-vs-talkspace",
+      "wordCount": 1347
+    },
+    {
+      "url": "/compare/platforms/cerebral-vs-brightside",
+      "wordCount": 304
+    },
+    {
+      "url": "/compare/platforms/talkspace-vs-betterhelp",
+      "wordCount": 1347
+    },
+    {
+      "url": "/compare/platforms/talkspace-vs-cerebral",
+      "wordCount": 258
+    },
+    {
+      "url": "/compare/platforms/talkspace-vs-online-therapy",
+      "wordCount": 344
+    },
+    {
+      "url": "/compare/platforms/top-therapy-platforms-compared",
+      "wordCount": 2043
+    },
+    {
+      "url": "/compare/roundups/best-therapy-apps-compared",
+      "wordCount": 617
+    },
+    {
+      "url": "/compare/roundups/insurance-friendly-platforms",
+      "wordCount": 1851
+    },
+    {
+      "url": "/compare/roundups/top-therapy-platforms-compared",
+      "wordCount": 2043
+    },
+    {
+      "url": "/comparisons/affordable-better-help-alternatives",
+      "wordCount": 2018
+    },
+    {
+      "url": "/comparisons/best-therapy-apps-compared",
+      "wordCount": 617
+    },
+    {
+      "url": "/comparisons/better-help-vs-calmerry",
+      "wordCount": 270
+    },
+    {
+      "url": "/comparisons/better-help-vs-cerebral",
+      "wordCount": 281
+    },
+    {
+      "url": "/comparisons/better-help-vs-online-therapy",
+      "wordCount": 411
+    },
+    {
+      "url": "/comparisons/cbt-vs-psychodynamic",
+      "wordCount": 605
+    },
+    {
+      "url": "/comparisons/cerebral-vs-brightside",
+      "wordCount": 304
+    },
+    {
+      "url": "/comparisons/cerebral-vs-talkspace",
+      "wordCount": 423
+    },
+    {
+      "url": "/comparisons/free-therapy-options",
+      "wordCount": 610
+    },
+    {
+      "url": "/comparisons/individual-vs-group-therapy",
+      "wordCount": 353
+    },
+    {
+      "url": "/comparisons/insurance-friendly-platforms",
+      "wordCount": 1851
+    },
+    {
+      "url": "/comparisons/online-vs-traditional-therapy",
+      "wordCount": 588
+    },
+    {
+      "url": "/comparisons/roundups-page",
+      "wordCount": 218
+    },
+    {
+      "url": "/comparisons/talkspace-alternatives",
+      "wordCount": 2119
+    },
+    {
+      "url": "/comparisons/talkspace-vs-cerebral",
+      "wordCount": 258
+    },
+    {
+      "url": "/comparisons/talkspace-vs-online-therapy",
+      "wordCount": 344
+    },
+    {
+      "url": "/comparisons/text-vs-video-therapy",
+      "wordCount": 599
+    },
+    {
+      "url": "/comparisons/therapy-alternatives",
+      "wordCount": 132
+    },
+    {
+      "url": "/comparisons/therapy-approaches",
+      "wordCount": 326
+    },
+    {
+      "url": "/comparisons/top-therapy-platforms-compared",
+      "wordCount": 2043
+    },
+    {
+      "url": "/conditions-az",
+      "wordCount": 147
+    },
+    {
+      "url": "/conditions/addiction-page",
+      "wordCount": 793
+    },
+    {
+      "url": "/conditions/adhd-page",
+      "wordCount": 554
+    },
+    {
+      "url": "/conditions/anxiety-disorder-page",
+      "wordCount": 456
+    },
+    {
+      "url": "/conditions/bipolar-disorder-page",
+      "wordCount": 367
+    },
+    {
+      "url": "/conditions/bpd-page",
+      "wordCount": 1000
+    },
+    {
+      "url": "/conditions/depression-page",
+      "wordCount": 393
+    },
+    {
+      "url": "/conditions/eating-disorders-page",
+      "wordCount": 349
+    },
+    {
+      "url": "/conditions/ocd-page",
+      "wordCount": 316
+    },
+    {
+      "url": "/conditions/ptsd-page",
+      "wordCount": 366
+    },
+    {
+      "url": "/conditions/schizophrenia-page",
+      "wordCount": 650
+    },
+    {
+      "url": "/conditions/social-anxiety-page",
+      "wordCount": 888
+    },
+    {
+      "url": "/contact",
+      "wordCount": 211
+    },
+    {
+      "url": "/guides/financial/affordable-therapy-options",
+      "wordCount": 116
+    },
+    {
+      "url": "/guides/financial/insurance-mental-health-coverage",
+      "wordCount": 119
+    },
+    {
+      "url": "/guides/lifestyle/stress-management-techniques",
+      "wordCount": 116
+    },
+    {
+      "url": "/guides/selection/choosing-online-therapist",
+      "wordCount": 1202
+    },
+    {
+      "url": "/guides/selection/first-therapy-session",
+      "wordCount": 1289
+    },
+    {
+      "url": "/guides/selection/red-flags-in-therapy",
+      "wordCount": 1365
+    },
+    {
+      "url": "/guides/selection/therapy-types-explained",
+      "wordCount": 1223
+    },
+    {
+      "url": "/home-page",
+      "wordCount": 584
+    },
+    {
+      "url": "/learn",
+      "wordCount": 384
+    },
+    {
+      "url": "/learn/approaches",
+      "wordCount": 115
+    },
+    {
+      "url": "/learn/fundamentals",
+      "wordCount": 286
+    },
+    {
+      "url": "/learn/fundamentals/anxiety-disorders",
+      "wordCount": 842
+    },
+    {
+      "url": "/learn/fundamentals/common-mental-health-conditions",
+      "wordCount": 359
+    },
+    {
+      "url": "/learn/fundamentals/depression",
+      "wordCount": 464
+    },
+    {
+      "url": "/learn/fundamentals/depression-coping-strategies",
+      "wordCount": 610
+    },
+    {
+      "url": "/learn/fundamentals/depression-medication-guide",
+      "wordCount": 1351
+    },
+    {
+      "url": "/learn/fundamentals/medication-basics",
+      "wordCount": 775
+    },
+    {
+      "url": "/learn/fundamentals/medication-vs-therapy",
+      "wordCount": 642
+    },
+    {
+      "url": "/learn/fundamentals/mindfulness",
+      "wordCount": 1444
+    },
+    {
+      "url": "/learn/fundamentals/online-therapy-guide",
+      "wordCount": 251
+    },
+    {
+      "url": "/learn/fundamentals/relationship-counseling",
+      "wordCount": 1356
+    },
+    {
+      "url": "/learn/fundamentals/self-care",
+      "wordCount": 1381
+    },
+    {
+      "url": "/learn/fundamentals/stress-management",
+      "wordCount": 1479
+    },
+    {
+      "url": "/learn/fundamentals/supporting-loved-ones",
+      "wordCount": 498
+    },
+    {
+      "url": "/learn/fundamentals/therapy-types-explained",
+      "wordCount": 634
+    },
+    {
+      "url": "/learn/fundamentals/trauma-ptsd",
+      "wordCount": 900
+    },
+    {
+      "url": "/learn/statistics",
+      "wordCount": 198
+    },
+    {
+      "url": "/learn/statistics/mental-health-demographics",
+      "wordCount": 120
+    },
+    {
+      "url": "/learn/statistics/mental-health-statistics",
+      "wordCount": 681
+    },
+    {
+      "url": "/learn/statistics/online-therapy-effectiveness",
+      "wordCount": 118
+    },
+    {
+      "url": "/learn/statistics/therapy-outcomes-data",
+      "wordCount": 120
+    },
+    {
+      "url": "/modalities",
+      "wordCount": 500
+    },
+    {
+      "url": "/online-therapy-review",
+      "wordCount": 1175
+    },
+    {
+      "url": "/platform-finder",
+      "wordCount": 528
+    },
+    {
+      "url": "/privacy-policy",
+      "wordCount": 162
+    },
+    {
+      "url": "/resources",
+      "wordCount": 367
+    },
+    {
+      "url": "/resources/worksheets-page",
+      "wordCount": 702
+    },
+    {
+      "url": "/reviews",
+      "wordCount": 297
+    },
+    {
+      "url": "/reviews-features",
+      "wordCount": 555
+    },
+    {
+      "url": "/reviews-platforms",
+      "wordCount": 1112
+    },
+    {
+      "url": "/reviews-specialty",
+      "wordCount": 100
+    },
+    {
+      "url": "/reviews/categories/general-therapy",
+      "wordCount": 1730
+    },
+    {
+      "url": "/reviews/categories/medication-therapy",
+      "wordCount": 1611
+    },
+    {
+      "url": "/reviews/categories/specialized-therapy",
+      "wordCount": 1576
+    },
+    {
+      "url": "/reviews/features/better-help-therapist-quality",
+      "wordCount": 229
+    },
+    {
+      "url": "/reviews/features/cerebral-medication-management",
+      "wordCount": 2000
+    },
+    {
+      "url": "/reviews/features/communication",
+      "wordCount": 1791
+    },
+    {
+      "url": "/reviews/features/mobile-apps",
+      "wordCount": 2911
+    },
+    {
+      "url": "/reviews/features/therapist-matching-systems",
+      "wordCount": 1118
+    },
+    {
+      "url": "/reviews/features/video-session-quality",
+      "wordCount": 418
+    },
+    {
+      "url": "/reviews/platforms/amwell",
+      "wordCount": 190
+    },
+    {
+      "url": "/reviews/platforms/amwell-review",
+      "wordCount": 1682
+    },
+    {
+      "url": "/reviews/platforms/betterhelp",
+      "wordCount": 249
+    },
+    {
+      "url": "/reviews/platforms/brightside",
+      "wordCount": 199
+    },
+    {
+      "url": "/reviews/platforms/brightside-review",
+      "wordCount": 1181
+    },
+    {
+      "url": "/reviews/platforms/calmerry",
+      "wordCount": 184
+    },
+    {
+      "url": "/reviews/platforms/calmerry-review",
+      "wordCount": 880
+    },
+    {
+      "url": "/reviews/platforms/cerebral",
+      "wordCount": 210
+    },
+    {
+      "url": "/reviews/platforms/doctor-on-demand",
+      "wordCount": 201
+    },
+    {
+      "url": "/reviews/platforms/lasting",
+      "wordCount": 199
+    },
+    {
+      "url": "/reviews/platforms/mdlive",
+      "wordCount": 219
+    },
+    {
+      "url": "/reviews/platforms/online-therapy-com",
+      "wordCount": 214
+    },
+    {
+      "url": "/reviews/platforms/online-therapy-review",
+      "wordCount": 1000
+    },
+    {
+      "url": "/reviews/platforms/pride-counseling",
+      "wordCount": 193
+    },
+    {
+      "url": "/reviews/platforms/re-gain-review",
+      "wordCount": 738
+    },
+    {
+      "url": "/reviews/platforms/regain",
+      "wordCount": 202
+    },
+    {
+      "url": "/reviews/platforms/talkspace",
+      "wordCount": 225
+    },
+    {
+      "url": "/reviews/pricing/insurance-coverage-guide",
+      "wordCount": 460
+    },
+    {
+      "url": "/reviews/pricing/online-therapy-pricing-comparison",
+      "wordCount": 648
+    },
+    {
+      "url": "/reviews/reviews-pricing",
+      "wordCount": 409
+    },
+    {
+      "url": "/reviews/specialty/anxiety-treatment",
+      "wordCount": 460
+    },
+    {
+      "url": "/reviews/specialty/couples-therapy",
+      "wordCount": 501
+    },
+    {
+      "url": "/reviews/specialty/online-therapy-for-ptsd",
+      "wordCount": 265
+    },
+    {
+      "url": "/reviews/specialty/talkspace-for-depression",
+      "wordCount": 634
+    },
+    {
+      "url": "/specialized-platforms",
+      "wordCount": 1618
+    },
+    {
+      "url": "/talkspace-review",
+      "wordCount": 1390
+    },
+    {
+      "url": "/terms-of-service",
+      "wordCount": 174
+    },
+    {
+      "url": "/tools",
+      "wordCount": 353
+    },
+    {
+      "url": "/tools/assessments-page",
+      "wordCount": 192
+    },
+    {
+      "url": "/tools/assessments/depression-assessment",
+      "wordCount": 471
+    },
+    {
+      "url": "/tools/assessments/stress-level-test",
+      "wordCount": 309
+    },
+    {
+      "url": "/tools/matchers-page",
+      "wordCount": 177
+    }
+  ]
+}
