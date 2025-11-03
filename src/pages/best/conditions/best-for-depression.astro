@@ -1,26 +1,65 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { platforms } from '../../../siteData';
-import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Brain, Shield, Users, DollarSign } from 'lucide-react';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, AlertCircle, Award, Sparkles, Brain } from 'lucide-react';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
   const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
   return starsArray;
 };
+
+// Select platforms best for depression
+const depressionPlatforms = [
+  getPlatformBySlug('talkspace'),
+  getPlatformBySlug('betterhelp'),
+  getPlatformBySlug('brightside'),
+  getPlatformBySlug('cerebral'),
+  getPlatformBySlug('online-therapy-com')
+].filter(p => p);
 ---
 
-<BaseLayout>
-  {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-12">
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Depression</h1>
-        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+<BaseLayout title="Best Online Therapy for Depression 2025 | Expert Reviews & Comparisons" description="Find specialized online therapy platforms offering evidence-based treatment for depression, from mild symptoms to major depressive disorder.">
+
+  {/* Hero Section - Enhanced */}
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      {/* Breadcrumb */}
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/best" class="hover:text-brand-primary-600 transition">Best Platforms</a>
+        <span>/</span>
+        <a href="/best/conditions" class="hover:text-brand-primary-600 transition">Conditions</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">Depression</span>
+      </nav>
+
+      <div class="text-center animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-brand-primary-100 text-brand-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <Sparkles class="h-4 w-4" />
+          <span>Expert-Reviewed Depression Treatment Platforms</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Depression 2025</h1>
+        <p class="font-sans text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
           Compare the most effective online therapy platforms for treating depression, from mild symptoms to major depressive disorder.
         </p>
-        <div class="flex justify-center">
-          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy match</a>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-brand-primary-600 text-white px-8 py-4 rounded-lg hover:bg-brand-primary-700 transition-all hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+            <Search class="h-5 w-5" />
+            Find Your Perfect Match
+          </a>
+          <a href="/tools/assessments/depression-screening" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 border-2 border-brand-primary-200 px-8 py-4 rounded-lg hover:border-brand-primary-400 transition-all hover:scale-105 shadow-sm hover:shadow-md font-medium">
+            <Heart class="h-5 w-5" />
+            Take Depression Assessment
+          </a>
         </div>
       </div>
     </div>
@@ -30,224 +69,348 @@ const renderStars = (rating: number) => {
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-        {/* Quick Summary */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks at a Glance</h2>
-          
+        {/* Top Picks - Enhanced */}
+        <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-2xl border-2 border-brand-primary-100 p-8 md:p-12 mb-16 shadow-sm">
+          <div class="flex items-center gap-3 mb-8">
+            <Award class="h-8 w-8 text-brand-primary-600" />
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900">Top Picks for Depression Therapy</h2>
+          </div>
+
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Best Overall */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best Overall
+            <div class="bg-white rounded-xl border-2 border-brand-primary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-primary-600 to-brand-primary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                🏆 Best Overall
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.8)}
-                  </div>
-                  <span class="text-gray-600">4.8/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Talkspace</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.5).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.5/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Comprehensive depression treatment with therapy and medication options, insurance coverage, and proven track record.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-primary-600" />
+                  <span class="font-medium">$65-$99/week</span>
+                </div>
+                <a href="/reviews/platforms/talkspace" class="block w-full text-center bg-brand-primary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-primary-700 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Comprehensive depression treatment with therapy and medication options.
-              </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $65-$99/week
-              </div>
-              <a href="/reviews/platforms/talkspace" class="w-full min-w-0 justify-center mb-2">Read full review</a>
-              <a href="https://www.talkspace.com" class="w-full min-w-0 justify-center">Visit Talkspace</a>
             </div>
-            
+
             {/* Best Value */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best Value
+            <div class="bg-white rounded-xl border-2 border-accent-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                ⭐ Best Value
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.6)}
-                  </div>
-                  <span class="text-gray-600">4.6/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">BetterHelp</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.8).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.8/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Affordable therapy with financial aid options and flexible scheduling for those managing depression.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-accent-600" />
+                  <span class="font-medium">$60-$90/week</span>
+                </div>
+                <a href="/reviews/platforms/betterhelp" class="block w-full text-center bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Affordable therapy with financial aid options and flexible scheduling.
-              </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $60-$90/week
-              </div>
-              <a href="/reviews/platforms/betterhelp" class="w-full min-w-0 justify-center mb-2">Read full review</a>
-              <a href="https://www.betterhelp.com" class="w-full min-w-0 justify-center">Visit BetterHelp</a>
             </div>
-            
+
             {/* Best Specialized Care */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                Best Specialized Care
+            <div class="bg-white rounded-xl border-2 border-brand-secondary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-secondary-600 to-brand-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                💊 Best Specialized
               </div>
-              <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Brightside</h3>
-                <div class="flex items-center">
-                  <div class="mr-1">
-                    {renderStars(4.5)}
-                  </div>
-                  <span class="text-gray-600">4.5/5</span>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Brightside</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.1).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.1/5</span>
                 </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Data-driven depression treatment with precision medication management and dedicated psychiatry support.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-secondary-600" />
+                  <span class="font-medium">$95-$299/month</span>
+                </div>
+                <a href="/reviews/platforms/brightside" class="block w-full text-center bg-brand-secondary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-secondary-700 transition font-medium">View Full Review</a>
               </div>
-              <p class="text-gray-600 mb-4">
-                Data-driven depression treatment with precision medication management.
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Depression - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Understanding Depression and Online Treatment</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-green-500 rounded-full"></div>
+                Types of Depression Treated Online
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
+                Online therapy effectively treats various forms of depression:
               </p>
-              <div class="text-sm text-gray-600 mb-4">
-                <strong>Price:</strong> $95-$349/month
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Major Depressive Disorder:</strong> Persistent low mood, loss of interest, and energy changes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Persistent Depressive Disorder:</strong> Chronic depression lasting two years or more</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Seasonal Affective Disorder:</strong> Depression related to seasonal changes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Postpartum Depression:</strong> Depression following childbirth</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-blue-500 rounded-full"></div>
+                Evidence-Based Treatment Approaches
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
+                Effective online therapy for depression uses these proven approaches:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Cognitive Behavioral Therapy (CBT):</strong> Addressing negative thought patterns and behaviors</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Interpersonal Therapy:</strong> Improving relationships and communication patterns</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Behavioral Activation:</strong> Increasing engagement in meaningful activities</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Medication Management:</strong> Antidepressants when appropriate, combined with therapy</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+              <Shield class="h-6 w-6 text-brand-primary-600" />
+              Why Online Therapy Works Well for Depression
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              Online therapy offers unique advantages for depression treatment:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Lower Barrier to Entry</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Depression can make leaving home difficult; online therapy removes this obstacle
+                    </p>
+                  </div>
+                </div>
               </div>
-              <a href="/reviews/platforms/brightside" class="w-full min-w-0 justify-center mb-2">Read full review</a>
-              <a href="https://www.brightside.com" class="w-full min-w-0 justify-center">Visit Brightside</a>
+
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Consistent Access</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Message your therapist during difficult moments for ongoing support
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Flexible Scheduling</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Book sessions that work with your energy levels and schedule
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Comprehensive Care</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Many platforms offer both therapy and medication management in one place
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Understanding Depression Treatment */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Depression Treatment</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Treatment Approaches</h3>
-              <div class="space-y-4">
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Therapy Options</h4>
-                    <p class="text-gray-600">Different therapeutic approaches including CBT, interpersonal therapy, and psychodynamic therapy.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Medication Management</h4>
-                    <p class="text-gray-600">Antidepressant prescriptions and monitoring when appropriate.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Combined Care</h4>
-                    <p class="text-gray-600">Integration of therapy and medication for comprehensive treatment.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Important Considerations</h3>
-              <div class="space-y-4">
-                <div class="flex items-start">
-                  <Shield class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Severity Level</h4>
-                    <p class="text-gray-600">Online therapy is most appropriate for mild to moderate depression.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <DollarSign class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Treatment Costs</h4>
-                    <p class="text-gray-600">Consider therapy fees, medication costs, and insurance coverage.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
-                  <div>
-                    <h4 class="font-bold text-gray-800">Support System</h4>
-                    <p class="text-gray-600">Additional support resources and crisis management options.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Detailed Platform Reviews */}
+        {/* Detailed Reviews - Enhanced */}
         <div class="mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Platform Reviews</h2>
-          
-          {platforms.map((platform, index) => (
-            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-              <div class="p-8">
-                <div class="flex flex-col md:flex-row">
-                  <div class="md:w-1/4 mb-6 md:mb-0">
-                    <div class="flex items-center mb-3">
-                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
-                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
-                    </div>
-                    <div class="flex items-center mb-4">
-                      <div class="mr-2">
-                        {renderStars(platform.rating)}
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Detailed Reviews of the Best Depression Therapy Platforms</h2>
+
+          {depressionPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-2xl border-2 border-neutral-100 overflow-hidden mb-8 hover:shadow-lg transition-all hover:border-brand-primary-200">
+              <div class="p-8 md:p-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                  {/* Left Column - Platform Info */}
+                  <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="bg-brand-primary-100 text-brand-primary-700 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                        {index + 1}
                       </div>
-                      <span class="text-gray-600">{platform.rating}/5</span>
+                      <h3 class="font-heading text-2xl font-bold text-neutral-900">{platform.name}</h3>
                     </div>
-                    <div class="space-y-3 mb-6">
-                      <div class="flex items-center">
-                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
-                        <span class="text-gray-600">{platform.price}</span>
+
+                    <div class="flex items-center gap-2 mb-6">
+                      {renderStars(platform.rating).map((filled, i) => (
+                        <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                      ))}
+                      <span class="text-neutral-600 font-medium ml-1">{platform.rating}/5</span>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                      <div class="flex items-center gap-3">
+                        <div class="bg-brand-primary-100 rounded-lg p-2">
+                          <DollarSign class="h-5 w-5 text-brand-primary-600" />
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">PRICING</div>
+                          <div class="text-neutral-700 font-semibold">{platform.price}</div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-3">
+                        <div class="bg-brand-primary-100 rounded-lg p-2">
+                          <MessageSquare class="h-5 w-5 text-brand-primary-600" />
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">COMMUNICATION</div>
+                          <div class="flex gap-1 mt-1">
+                            {platform.communication.includes('messaging') && (
+                              <MessageSquare class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                            {platform.communication.includes('video') && (
+                              <Video class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                            {platform.communication.includes('phone') && (
+                              <Phone class="h-4 w-4 text-brand-primary-600" />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-3">
+                        <div class={`rounded-lg p-2 ${platform.insurance ? 'bg-green-100' : 'bg-red-100'}`}>
+                          {platform.insurance ? (
+                            <CheckCircle class="h-5 w-5 text-green-600" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-red-600" />
+                          )}
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">INSURANCE</div>
+                          <div class="text-neutral-700 font-semibold">{platform.insurance ? 'Accepted' : 'Not Accepted'}</div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-3">
+                        <div class={`rounded-lg p-2 ${platform.medication ? 'bg-green-100' : 'bg-neutral-100'}`}>
+                          {platform.medication ? (
+                            <CheckCircle class="h-5 w-5 text-green-600" />
+                          ) : (
+                            <XCircle class="h-5 w-5 text-neutral-400" />
+                          )}
+                        </div>
+                        <div>
+                          <div class="text-xs text-neutral-500 font-medium">MEDICATION</div>
+                          <div class="text-neutral-700 font-semibold">{platform.medication ? 'Available' : 'Not Available'}</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="space-y-2">
-                      <button class="w-full min-w-0 justify-center">Read full review</button>
-                      <button class="w-full min-w-0 justify-center">Visit Website</button>
-                    </div>
+
+                    <a href={`/reviews/platforms/${platform.slug}`} class="block w-full text-center bg-brand-primary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-primary-700 transition font-medium shadow-md hover:shadow-lg">
+                      View Full Review
+                    </a>
                   </div>
-                  
-                  <div class="md:w-3/4 md:pl-8">
-                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It</h4>
-                    <p class="text-gray-600 mb-6">
+
+                  {/* Right Column - Details */}
+                  <div class="lg:col-span-3">
+                    <h4 class="font-bold text-neutral-900 mb-3 text-lg">Why We Recommend It for Depression</h4>
+                    <p class="text-neutral-600 mb-6 leading-relaxed">
                       {platform.description}
                     </p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                      <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                      <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+                        <h5 class="font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                          <CheckCircle class="h-5 w-5 text-green-500" />
+                          Pros
+                        </h5>
                         <ul class="space-y-2">
-                          {platform.pros.map((pro, i) => (
-                            <li key={i} class="flex items-start">
-                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{pro}</span>
+                          {platform.pros.slice(0, 4).map((pro, i) => (
+                            <li key={i} class="flex items-start gap-2">
+                              <CheckCircle class="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span class="text-neutral-600 text-sm leading-relaxed">{pro}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
-                      <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+
+                      <div class="bg-gradient-to-br from-red-50 to-white rounded-xl border border-red-100 p-6">
+                        <h5 class="font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                          <XCircle class="h-5 w-5 text-red-500" />
+                          Cons
+                        </h5>
                         <ul class="space-y-2">
-                          {platform.cons.map((con, i) => (
-                            <li key={i} class="flex items-start">
-                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{con}</span>
+                          {platform.cons.slice(0, 4).map((con, i) => (
+                            <li key={i} class="flex items-start gap-2">
+                              <XCircle class="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                              <span class="text-neutral-600 text-sm leading-relaxed">{con}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
-                    
-                    <div>
-                      <h5 class="font-bold text-gray-800 mb-3">Key Features</h5>
-                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        {platform.features.map((feature, i) => (
-                          <div key={i} class="bg-gray-50 rounded-lg p-3 flex items-center">
-                            <CheckCircle class="h-4 w-4 text-indigo-600 mr-2 flex-shrink-0" />
-                            <span class="text-gray-700 text-sm">{feature}</span>
-                          </div>
+
+                    <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6">
+                      <h5 class="font-bold text-neutral-900 mb-3 flex items-center gap-2">
+                        <Award class="h-5 w-5 text-brand-primary-600" />
+                        Best For
+                      </h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.map((item, i) => (
+                          <span key={i} class="bg-white border border-brand-primary-200 px-3 py-1.5 rounded-full text-sm text-neutral-700 font-medium hover:bg-brand-primary-50 transition">{item}</span>
                         ))}
                       </div>
-                    </div>
-                    
-                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
-                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
-                      <p class="text-gray-700">{platform.bestFor}</p>
                     </div>
                   </div>
                 </div>
@@ -256,73 +419,132 @@ const renderStars = (rating: number) => {
           ))}
         </div>
 
-        {/* Choosing the Right Platform */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Platform</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Brain class="h-6 w-6 text-indigo-600" />
+        {/* How to Choose - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">How to Choose the Right Depression Therapy Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6 hover:shadow-md transition">
+              <div class="bg-brand-primary-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <Brain class="h-7 w-7 text-brand-primary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Depression Type</h3>
-              <p class="text-gray-600">
-                Consider the severity and type of your depression symptoms when choosing a platform.
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Severity Level</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Consider the severity of your depression symptoms. Mild to moderate depression often responds well to therapy alone, while severe depression may benefit from combined therapy and medication.
               </p>
             </div>
-            
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <DollarSign class="h-6 w-6 text-indigo-600" />
+
+            <div class="bg-gradient-to-br from-accent-50 to-white rounded-xl border border-accent-100 p-6 hover:shadow-md transition">
+              <div class="bg-accent-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <DollarSign class="h-7 w-7 text-accent-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Treatment Approach</h3>
-              <p class="text-gray-600">
-                Decide whether you need therapy alone or combined with medication management.
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Treatment Approach</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Decide whether you need therapy alone or combined with medication management. Platforms offering psychiatry services provide more comprehensive care for moderate to severe depression.
               </p>
             </div>
-            
-            <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Shield class="h-6 w-6 text-indigo-600" />
+
+            <div class="bg-gradient-to-br from-brand-secondary-50 to-white rounded-xl border border-brand-secondary-100 p-6 hover:shadow-md transition">
+              <div class="bg-brand-secondary-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <Shield class="h-7 w-7 text-brand-secondary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Support Level</h3>
-              <p class="text-gray-600">
-                Evaluate the level of support and resources offered by each platform.
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Support Level</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Look for platforms offering the level of support you need, including messaging between sessions, crisis resources, and flexible communication options.
               </p>
             </div>
           </div>
-          
-          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
-            <p class="text-gray-700 mb-4">
-              For most people seeking depression treatment, we recommend:
+
+          <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+            <h3 class="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
+              <Sparkles class="h-6 w-6 text-green-600" />
+              Our Recommendations
+            </h3>
+            <p class="text-neutral-700 mb-4 leading-relaxed">
+              For most individuals seeking depression treatment:
             </p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>Talkspace</strong> for those wanting comprehensive care with insurance coverage</span>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">Talkspace</strong> for comprehensive care with insurance coverage and medication options</span>
               </li>
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>BetterHelp</strong> for those seeking affordable therapy with financial aid options</span>
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">BetterHelp</strong> for affordable therapy with financial aid options and flexible scheduling</span>
               </li>
-              <li class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span><strong>Brightside</strong> for those needing specialized depression treatment with medication</span>
+              <li class="flex items-start gap-3">
+                <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <span class="text-neutral-700 leading-relaxed"><strong class="text-neutral-900">Brightside</strong> for specialized depression treatment with medication and data-driven approach</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
-          <h2 class="text-2xl font-bold mb-4">Ready to Start Your Journey to Better Mental Health?</h2>
-          <p class="text-lg mb-6 max-w-2xl mx-auto">
-            Take our personalized assessment to get matched with the perfect online therapy platform for treating your depression.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
-            <a href="/tools/assessments/depression-screening" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Depression Assessment</a>
+        {/* FAQs - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How effective is online therapy for depression?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Research shows online therapy is as effective as in-person treatment for depression. Multiple studies have found similar outcomes for CBT and other evidence-based therapies delivered online versus face-to-face.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Do I need medication for depression or is therapy enough?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                This depends on severity. Mild to moderate depression often responds well to therapy alone. Moderate to severe depression, or depression not responding to therapy, may benefit from combined treatment with medication. Your therapist can help determine the best approach.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How long does it take to see results from depression therapy?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Many people notice some improvement within 4-6 weeks of consistent therapy. However, significant improvement often takes 8-12 weeks or longer. Treatment duration varies based on depression severity and individual factors.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">What if I'm too depressed to start therapy?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Online therapy can actually help when depression makes it hard to leave home. Start with messaging if video feels overwhelming. Many platforms offer asynchronous communication, allowing you to engage at your own pace.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Can online therapy help with suicidal thoughts?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                While online therapy can help with depression, active suicidal thoughts require immediate professional intervention. If you're experiencing suicidal thoughts, call 988 (Suicide & Crisis Lifeline) or go to your nearest emergency room. Online platforms are not designed for crisis situations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section - Enhanced */}
+        <div class="relative bg-gradient-to-br from-brand-primary-600 via-brand-primary-500 to-brand-secondary-600 rounded-2xl p-8 md:p-12 text-white text-center overflow-hidden shadow-xl">
+          {/* Background decoration */}
+          <div class="absolute inset-0 overflow-hidden opacity-20">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+          </div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey to Better Mental Health?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-95 leading-relaxed">
+              Take our personalized assessment to get matched with the perfect online therapy platform for treating your depression.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 px-8 py-4 rounded-lg hover:bg-neutral-50 transition-all hover:scale-105 shadow-lg font-medium">
+                <Search class="h-5 w-5" />
+                Find Your Perfect Match
+              </a>
+              <a href="/tools/assessments/depression-screening" class="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg transition-all hover:scale-105 font-medium">
+                <Heart class="h-5 w-5" />
+                Take Depression Assessment
+              </a>
+            </div>
           </div>
         </div>
     </div>
