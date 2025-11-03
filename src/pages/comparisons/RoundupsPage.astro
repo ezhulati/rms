@@ -4,12 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12">
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <MetaTags 
         title="Therapy Platform Roundups & Comparisons | RealMindSolutions"
         description="Comprehensive roundups and comparisons of online therapy platforms, apps, and services to help you find the best option for your mental health needs."
       />
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Therapy Platform Roundups</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <img 
                     src={roundup.image} 
                     alt={roundup.title} 
-                    class="w-full h-full object-cover"
+                    class="w-full min-w-0 h-full object-cover"
                   />
                 </div>
                 <div class="p-6">

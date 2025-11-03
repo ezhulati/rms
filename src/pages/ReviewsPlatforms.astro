@@ -4,8 +4,8 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12">
-      <div class="container mx-auto px-4">
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Platform Reviews</h1>
@@ -37,7 +37,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
               <label htmlFor="condition" class="block text-sm font-medium text-gray-700 mb-1">Condition</label>
               <select 
                 id="condition" 
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                class="w-full min-w-0 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="">All Conditions</option>
                 <option value="anxiety">Anxiety</option>
@@ -52,7 +52,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
               <label htmlFor="price" class="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
               <select 
                 id="price" 
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                class="w-full min-w-0 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="">All Prices</option>
                 <option value="budget">Budget ($40-$60/week)</option>
@@ -65,7 +65,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
               <label htmlFor="insurance" class="block text-sm font-medium text-gray-700 mb-1">Insurance</label>
               <select 
                 id="insurance" 
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                class="w-full min-w-0 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="">All Options</option>
                 <option value="yes">Accepts Insurance</option>
@@ -77,7 +77,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
               <label htmlFor="medication" class="block text-sm font-medium text-gray-700 mb-1">Medication</label>
               <select 
                 id="medication" 
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                class="w-full min-w-0 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="">All Options</option>
                 <option value="yes">Offers Medication</option>
@@ -105,7 +105,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                   <img 
                     src="/images/concepts/reviewsplatforms.jpg" 
                     alt="Online therapy and mental health support" 
-                    class="w-full h-full object-cover"
+                    class="w-full min-w-0 h-full object-cover"
                   />
                 </div>
                 <div class="p-6 md:w-3/5">
@@ -179,7 +179,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                   <img 
                     src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
                     alt="Talkspace Review" 
-                    class="w-full h-full object-cover"
+                    class="w-full min-w-0 h-full object-cover"
                   />
                 </div>
                 <div class="p-6 md:w-3/5">
@@ -258,7 +258,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                 <img 
                   src={platform.image} 
                   alt={`${platform.name} Review`} 
-                  class="w-full h-48 object-cover"
+                  class="w-full min-w-0 h-48 object-cover"
                 />
                 <div class="p-6">
                   <div class="flex items-center justify-between mb-3">
@@ -436,7 +436,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Platform Comparison</h2>
           
           <div class="overflow-x-auto">
-            <table class="min-w-full bg-white">
+            <table class="min-w-full min-w-0 bg-white">
               <thead>
                 <tr class="bg-gray-100 border-b">
                   <th class="py-3 px-4 text-left text-gray-700 font-semibold">Platform</th>

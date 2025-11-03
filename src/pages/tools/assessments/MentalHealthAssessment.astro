@@ -4,7 +4,7 @@ import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, AlertCircle, Star } fr
 ---
 
 <BaseLayout>
-<div class="min-h-screen bg-gray-50 py-12">
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto px-4 max-w-4xl">
           <div class="bg-white rounded-lg shadow-md overflow-hidden">
             <div class="bg-indigo-600 p-6 text-white">
@@ -194,7 +194,7 @@ import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, AlertCircle, Star } fr
   const currentQuestion = currentQuestionId === 0 ? null : questions[currentQuestionId - 1];
 
   return (
-    <div class="min-h-screen bg-gray-50 py-12">
+    <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="container mx-auto px-4 max-w-4xl">
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           {/* Header */}
@@ -209,7 +209,7 @@ import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, AlertCircle, Star } fr
               }
             </p>
             {currentQuestionId > 0 && (
-              <div class="w-full bg-indigo-300 rounded-full h-2 mt-4">
+              <div class="w-full min-w-0 bg-indigo-300 rounded-full h-2 mt-4">
                 <div 
                   class="bg-white rounded-full h-2 transition-all duration-300"
                   style={{ width: `${(currentQuestionId / questions.length) * 100}%` }}
@@ -262,7 +262,7 @@ import { ArrowRight, ArrowLeft, Brain, CheckCircle, Info, AlertCircle, Star } fr
                   onClick={() => setCurrentQuestionId(1)} 
                   variant="primary"
                   size="lg"
-                  class="w-full justify-center"
+                  class="w-full min-w-0 justify-center"
                 >
                   Begin Assessment
                 </Button>

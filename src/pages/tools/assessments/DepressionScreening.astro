@@ -4,7 +4,7 @@ import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star } fr
 ---
 
 <BaseLayout>
-<div class="min-h-screen bg-gray-50 py-12">
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto px-4 max-w-4xl">
           <div class="bg-white rounded-lg shadow-md overflow-hidden">
             <div class="bg-indigo-600 p-6 text-white">
@@ -144,7 +144,7 @@ import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star } fr
   }
 
   return (
-    <div class="min-h-screen bg-gray-50 py-12">
+    <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="container mx-auto px-4 max-w-4xl">
         {currentQuestion === 0 ? (
           <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
@@ -206,7 +206,7 @@ import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star } fr
                 onClick={() => setCurrentQuestion(1)} 
                 variant="primary"
                 size="lg"
-                class="w-full justify-center"
+                class="w-full min-w-0 justify-center"
               >
                 Begin Assessment
               </Button>
@@ -221,7 +221,7 @@ import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star } fr
                   {Math.round((currentQuestion / questions.length) * 100)}% Complete
                 </span>
               </div>
-              <div class="w-full bg-indigo-300 rounded-full h-2">
+              <div class="w-full min-w-0 bg-indigo-300 rounded-full h-2">
                 <div 
                   class="bg-white rounded-full h-2 transition-all duration-300"
                   style={{ width: `${(currentQuestion / questions.length) * 100}%` }}
@@ -245,7 +245,7 @@ import { Brain, ArrowRight, ArrowLeft, CheckCircle, Info, AlertCircle, Star } fr
                   max="3"
                   step="1"
                   onChange={(e) => handleAnswer(parseInt(e.target.value))}
-                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                  class="w-full min-w-0 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                 />
                 <div class="flex justify-between px-2">
                   {[0, 1, 2, 3].map((value) => (

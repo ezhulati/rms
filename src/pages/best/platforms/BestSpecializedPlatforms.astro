@@ -4,12 +4,12 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12">
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <MetaTags 
         title="Best Specialized Online Therapy Platforms | RealMindSolutions"
         description="Compare the top specialized online therapy platforms for specific conditions, demographics, and therapeutic approaches."
       />
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Specialized Online Therapy Platforms</h1>
@@ -135,7 +135,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
                         to={`/reviews/platforms/${platform.slug}`}
                         variant="outline"
                         size="sm"
-                        class="w-full justify-center"
+                        class="w-full min-w-0 justify-center"
                       >
                         Read full review
                       </Button>
@@ -146,7 +146,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
                         rel="noopener noreferrer"
                         variant="primary"
                         size="sm"
-                        class="w-full justify-center"
+                        class="w-full min-w-0 justify-center"
                       >
                         Visit Website
                       </Button>

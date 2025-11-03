@@ -4,8 +4,8 @@ import { ArrowRight, Star, CheckCircle, XCircle, Users, Search, ExternalLink, He
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12">
-      <div class="container mx-auto px-4">
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Therapy Platforms by Audience</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -31,7 +31,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, Users, Search, ExternalLink, He
               <img 
                 src={audience.image} 
                 alt={`Best for ${audience.name}`} 
-                class="w-full h-48 object-cover"
+                class="w-full min-w-0 h-48 object-cover"
               />
               <div class="p-6">
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Best for {audience.name}</h3>
@@ -74,7 +74,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, Users, Search, ExternalLink, He
                 <img 
                   src={featuredAudience.image} 
                   alt={`Best for ${featuredAudience.name}`} 
-                  class="w-full rounded-lg mb-4"
+                  class="w-full min-w-0 rounded-lg mb-4"
                 />
                 <div class="bg-indigo-50 rounded-lg p-4">
                   <h3 class="font-bold text-gray-800 mb-2">Why Specialized Couples Therapy Matters</h3>
