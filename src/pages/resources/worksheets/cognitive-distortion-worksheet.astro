@@ -1,22 +1,453 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, CheckCircle, AlertCircle, Download, Printer, BookOpen, Lightbulb, Info } from 'lucide-react';
 ---
 
-<BaseLayout title="Cognitive Distortion Worksheet | RealMindSolutions" description="Cognitive Distortion Worksheet">
+<BaseLayout title="Cognitive Distortion Worksheet - Free CBT Tool | RealMindSolutions" description="Free downloadable cognitive distortion worksheet to identify and challenge unhelpful thinking patterns. Learn to recognize 10 common cognitive distortions and reframe negative thoughts.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Cognitive Distortion Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Identify and challenge cognitive distortions.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <Brain class="h-8 w-8 text-brand-primary" />
+        <span class="text-brand-primary font-semibold">Free CBT Worksheet</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Cognitive Distortion Worksheet
+      </h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Identify and challenge unhelpful thinking patterns with this evidence-based CBT tool
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button onclick="window.print()" class="inline-flex items-center bg-brand-primary text-white px-6 py-3 rounded-md hover:bg-brand-primary/90 transition font-medium">
+          <Printer class="h-5 w-5 mr-2" />
+          Print Worksheet
+        </button>
+        <a href="/resources/worksheets" class="inline-flex items-center border-2 border-brand-primary text-brand-primary px-6 py-3 rounded-md hover:bg-brand-primary-50 transition font-medium">
+          <BookOpen class="h-5 w-5 mr-2" />
+          More Worksheets
+        </a>
+      </div>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+
+      {/* What Are Cognitive Distortions */}
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start mb-4">
+          <Info class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">What Are Cognitive Distortions?</h2>
+            <p class="text-gray-700 mb-4">
+              Cognitive distortions are patterns of biased thinking that can negatively impact our emotions and behaviors. They're like mental shortcuts that our brains take, but these shortcuts often lead us to inaccurate conclusions about ourselves, others, and situations.
+            </p>
+            <p class="text-gray-700">
+              Recognizing and challenging these distortions is a core component of Cognitive Behavioral Therapy (CBT), one of the most effective evidence-based treatments for anxiety, depression, and other mental health concerns.
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* 10 Common Cognitive Distortions */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Brain class="h-8 w-8 text-brand-primary mr-3" />
+          10 Common Cognitive Distortions
+        </h2>
+
+        <div class="space-y-6">
+          {/* All-or-Nothing Thinking */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">1. All-or-Nothing Thinking (Black-and-White Thinking)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Viewing situations in only two categories instead of on a continuum. If something isn't perfect, it's a total failure.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I made one mistake on my presentation, so the whole thing was a disaster."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"I made one mistake, but overall the presentation went well. Most of my points were clear and well-received."</p>
+            </div>
+          </div>
+
+          {/* Overgeneralization */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">2. Overgeneralization</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Making broad interpretations from a single event or limited evidence. Using words like "always," "never," "everyone," "no one."
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I didn't get the job. I'll never find employment. Nobody wants to hire me."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"I didn't get this particular job, but that doesn't mean I won't get hired elsewhere. The job market is competitive, and this was just one opportunity."</p>
+            </div>
+          </div>
+
+          {/* Mental Filter */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">3. Mental Filter (Selective Attention)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Focusing exclusively on negative aspects of a situation while filtering out positive ones.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"My performance review mentioned one area for improvement. They must think I'm terrible at my job." (Ignoring 10 positive points mentioned)</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"My review was overwhelmingly positive with one constructive suggestion. That's valuable feedback for growth, not an indictment of my abilities."</p>
+            </div>
+          </div>
+
+          {/* Jumping to Conclusions */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">4. Jumping to Conclusions</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Interpreting situations negatively without evidence. Two subtypes:
+            </p>
+            <ul class="text-sm text-gray-700 mb-3 ml-4 space-y-1">
+              <li><strong>Mind Reading:</strong> Assuming you know what others are thinking</li>
+              <li><strong>Fortune Telling:</strong> Predicting negative outcomes without evidence</li>
+            </ul>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"My friend didn't text me back. They must be angry with me." (Mind Reading)<br/>"I'm going to fail this exam for sure." (Fortune Telling)</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"There are many reasons my friend might not have texted back—they could be busy, forgot, or lost their phone. I'll check in later."<br/>"I've studied hard. While I might not get a perfect score, I've prepared adequately and will do my best."</p>
+            </div>
+          </div>
+
+          {/* Catastrophizing */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">5. Catastrophizing (Magnification)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Expecting the worst-case scenario or exaggerating the importance of negative events.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I made a typo in that email to my boss. I'm going to get fired, lose my apartment, and end up homeless!"</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"A typo is a minor mistake that everyone makes occasionally. I can send a quick correction email, and it's unlikely to have serious consequences."</p>
+            </div>
+          </div>
+
+          {/* Emotional Reasoning */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">6. Emotional Reasoning</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Believing that your negative feelings reflect reality: "I feel it, therefore it must be true."
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I feel like a failure, so I must be a failure."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"Feelings aren't always facts. I'm feeling discouraged right now, but that doesn't define my worth or capabilities. What evidence do I have of my actual achievements?"</p>
+            </div>
+          </div>
+
+          {/* Should Statements */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">7. Should Statements (Musts, Oughts)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Having rigid rules about how you or others "should" behave, leading to guilt, frustration, or resentment.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I should be able to handle everything on my own without asking for help."<br/>"My partner should know what I need without me having to tell them."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"It's okay to ask for help when I need it. That's being human, not weak."<br/>"Clear communication is healthy. I can express my needs directly rather than expecting mind-reading."</p>
+            </div>
+          </div>
+
+          {/* Labeling */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">8. Labeling (Mislabeling)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Attaching a global label to yourself or others based on one event or characteristic.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"I forgot my friend's birthday. I'm such a terrible person."<br/>"He cut me off in traffic. He's a complete jerk."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"I forgot my friend's birthday, which was an oversight. I can apologize and make it up to them. This doesn't define my entire character."<br/>"He made a mistake in traffic. I don't know what's going on in his life right now."</p>
+            </div>
+          </div>
+
+          {/* Personalization */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">9. Personalization (Blame)</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Taking responsibility for events outside your control or blaming yourself for things that aren't your fault.
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"My team lost the game. It's all my fault." (When many factors contributed)<br/>"My child is struggling in school. I must be a bad parent."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"The game's outcome depended on many factors and players, not just me. I did my best."<br/>"My child's school challenges could have many causes. I'm doing what I can to support them, and we can seek additional help if needed."</p>
+            </div>
+          </div>
+
+          {/* Disqualifying the Positive */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">10. Disqualifying the Positive</h3>
+            <p class="text-gray-700 mb-3">
+              <strong>Definition:</strong> Dismissing positive experiences or achievements by insisting they "don't count."
+            </p>
+            <div class="bg-red-50 rounded p-4 mb-3">
+              <div class="font-semibold text-red-900 mb-1">Example:</div>
+              <p class="text-red-800 text-sm">"Sure, I got promoted, but they probably just needed someone to fill the role."<br/>"Anyone could have done what I did. It's no big deal."</p>
+            </div>
+            <div class="bg-green-50 rounded p-4">
+              <div class="font-semibold text-green-900 mb-1">Balanced Thought:</div>
+              <p class="text-green-800 text-sm">"I earned this promotion through hard work and skill. They chose me because I'm qualified and capable."<br/>"What I accomplished required effort and ability. I can acknowledge my success."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Interactive Worksheet */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8 mb-12" id="worksheet">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb class="h-8 w-8 text-brand-primary mr-3" />
+          Your Cognitive Distortion Worksheet
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Use this worksheet to identify and challenge your own cognitive distortions. For best results, complete this when you notice yourself feeling strong negative emotions.
+        </p>
+
+        <div class="bg-white rounded-lg p-6 space-y-8">
+          {/* Step 1 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">1</div>
+              <h3 class="text-xl font-bold text-gray-900">Identify the Situation</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Briefly describe the situation that triggered negative thoughts or emotions.</p>
+            <div class="bg-gray-50 rounded p-4 min-h-[100px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-sm italic">Example: "My manager gave me feedback on my report during our meeting."</p>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">2</div>
+              <h3 class="text-xl font-bold text-gray-900">Record Your Automatic Thoughts</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">What thoughts went through your mind? Write them exactly as they occurred, without censoring.</p>
+            <div class="bg-gray-50 rounded p-4 min-h-[100px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-sm italic">Example: "She thinks I'm incompetent. I'm going to get fired. I'll never be successful."</p>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">3</div>
+              <h3 class="text-xl font-bold text-gray-900">Identify the Cognitive Distortion(s)</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Which distortion(s) does this thought represent? You may identify multiple. Refer to the list above.</p>
+            <div class="bg-gray-50 rounded p-4 min-h-[100px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-sm italic">Example: "Mind Reading (assuming she thinks I'm incompetent), Catastrophizing (jumping to getting fired), Overgeneralization (never be successful)"</p>
+            </div>
+          </div>
+
+          {/* Step 4 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">4</div>
+              <h3 class="text-xl font-bold text-gray-900">Examine the Evidence</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-700 mb-2">Evidence FOR the thought:</p>
+                <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                  <p class="text-gray-400 text-xs italic">What facts support this thought?</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-gray-700 mb-2">Evidence AGAINST the thought:</p>
+                <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                  <p class="text-gray-400 text-xs italic">What facts contradict this thought?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 5 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">5</div>
+              <h3 class="text-xl font-bold text-gray-900">Generate a Balanced Thought</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Create a more balanced, realistic thought based on the evidence. This isn't about positive thinking—it's about accurate thinking.</p>
+            <div class="bg-gray-50 rounded p-4 min-h-[100px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-sm italic">Example: "My manager provided constructive feedback, which is normal and helpful. She also mentioned several things I did well. This doesn't mean I'm getting fired—it means I have an opportunity to improve in one area."</p>
+            </div>
+          </div>
+
+          {/* Step 6 */}
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-4">6</div>
+              <h3 class="text-xl font-bold text-gray-900">Re-rate Your Emotion</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">How intense is the negative emotion now, after generating the balanced thought? (0-100)</p>
+            <div class="bg-gray-50 rounded p-4 border-2 border-dashed border-gray-300">
+              <p class="text-sm text-gray-700">Original emotion intensity: _____ /100</p>
+              <p class="text-sm text-gray-700 mt-2">New emotion intensity: _____ /100</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-r p-4">
+          <div class="flex items-start">
+            <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" />
+            <p class="text-sm text-yellow-900">
+              <strong>Note:</strong> It takes practice to identify and challenge cognitive distortions effectively. If your emotion intensity doesn't decrease much at first, that's normal. Keep practicing, and consider working with a therapist for additional support.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle class="h-6 w-6 text-brand-primary mr-2" />
+          Tips for Using This Worksheet
+        </h2>
+
+        <div class="space-y-4 text-gray-700">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Use it in the moment</h3>
+              <p class="text-sm">Complete the worksheet when you notice strong negative emotions or unhelpful thoughts, rather than trying to remember situations later.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Write it down</h3>
+              <p class="text-sm">Don't just think through the steps—physically writing helps you see patterns and track progress more clearly.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Practice regularly</h3>
+              <p class="text-sm">Challenging cognitive distortions is a skill that improves with practice. Try to complete the worksheet daily for at least 2 weeks.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Look for patterns</h3>
+              <p class="text-sm">After using the worksheet multiple times, review to identify which distortions you use most frequently. This awareness is powerful.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">5</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Be patient with yourself</h3>
+              <p class="text-sm">Thought patterns developed over years won't change overnight. Celebrate small improvements and keep practicing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">More Worksheets</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/resources/worksheets/thought-record-worksheet" class="text-brand-primary hover:underline">
+                  → Thought Record Worksheet
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/mood-tracking" class="text-brand-primary hover:underline">
+                  → Mood Tracking Worksheet
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/therapy-session-preparation" class="text-brand-primary hover:underline">
+                  → Therapy Session Preparation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Find Professional Support</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">
+                  → Find a CBT Therapist Online
+                </a>
+              </li>
+              <li>
+                <a href="/learn/fundamentals/therapy-types-explained" class="text-brand-primary hover:underline">
+                  → Learn About Cognitive Behavioral Therapy
+                </a>
+              </li>
+              <li>
+                <a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">
+                  → Best Online Therapy Platforms 2025
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none !important;
+      }
+
+      .bg-gradient-to-b,
+      .bg-gradient-to-r {
+        background: white !important;
+      }
+
+      .border-dashed {
+        border-style: solid !important;
+        min-height: 120px !important;
+      }
+    }
+  </style>
 </BaseLayout>

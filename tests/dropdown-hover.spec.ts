@@ -6,10 +6,11 @@ test.describe('Navigation Dropdown Hover Behavior', () => {
     await page.setViewportSize({ width: 1920, height: 1080 });
 
     // Navigate to homepage
-    await page.goto('http://localhost:4326/');
+    await page.goto('http://localhost:4326/', { waitUntil: 'networkidle' });
 
-    // Wait for navigation to be visible
+    // Wait for navigation to be visible and hydrated
     await page.waitForSelector('header nav');
+    await page.waitForTimeout(1000); // Wait for React hydration
 
     // Find the Compare dropdown button
     const compareButton = page.locator('button:has-text("Compare")').first();
@@ -19,7 +20,10 @@ test.describe('Navigation Dropdown Hover Behavior', () => {
     await compareButton.hover();
 
     // Wait for dropdown animation
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(500);
+
+    // Take screenshot for debugging
+    await page.screenshot({ path: 'test-results/dropdown-after-hover.png', fullPage: false });
 
     // Check that dropdown menu is visible
     const dropdownMenu = page.locator('text=Platform Comparisons').first();
@@ -62,10 +66,11 @@ test.describe('Navigation Dropdown Hover Behavior', () => {
     await page.setViewportSize({ width: 1920, height: 1080 });
 
     // Navigate to homepage
-    await page.goto('http://localhost:4326/');
+    await page.goto('http://localhost:4326/', { waitUntil: 'networkidle' });
 
-    // Wait for navigation to be visible
+    // Wait for navigation to be visible and hydrated
     await page.waitForSelector('header nav');
+    await page.waitForTimeout(1000); // Wait for React hydration
 
     // Find and hover over Compare button
     const compareButton = page.locator('button:has-text("Compare")').first();

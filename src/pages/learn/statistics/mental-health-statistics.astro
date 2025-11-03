@@ -206,29 +206,29 @@ const onlineTherapyStats = [
           <h3 class="text-lg font-heading font-bold text-neutral-900 mb-4">Treatment Barriers</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="bg-neutral-50 rounded-lg p-5 border border-neutral-200">
-              <div class="flex items-center mb-3">
-                <DollarSign class="h-5 w-5 text-brand-coral-500 mr-3 flex-shrink-0" />
+              <div class="flex items-center gap-3 mb-3">
+                <DollarSign class="h-6 w-6 text-brand-coral-500 flex-shrink-0" />
                 <div class="font-heading font-bold text-neutral-900">Cost & Insurance</div>
               </div>
               <p class="text-neutral-600">60% of adults with mental illness cite cost as the primary barrier to seeking treatment</p>
             </div>
             <div class="bg-neutral-50 rounded-lg p-5 border border-neutral-200">
-              <div class="flex items-center mb-3">
-                <Users class="h-5 w-5 text-brand-coral-500 mr-3 flex-shrink-0" />
+              <div class="flex items-center gap-3 mb-3">
+                <Users class="h-6 w-6 text-brand-coral-500 flex-shrink-0" />
                 <div class="font-heading font-bold text-neutral-900">Provider Availability</div>
               </div>
               <p class="text-neutral-600">77 million Americans live in areas with insufficient mental health providers</p>
             </div>
             <div class="bg-neutral-50 rounded-lg p-5 border border-neutral-200">
-              <div class="flex items-center mb-3">
-                <AlertCircle class="h-5 w-5 text-brand-coral-500 mr-3 flex-shrink-0" />
+              <div class="flex items-center gap-3 mb-3">
+                <AlertCircle class="h-6 w-6 text-brand-coral-500 flex-shrink-0" />
                 <div class="font-heading font-bold text-neutral-900">Stigma</div>
               </div>
               <p class="text-neutral-600">31% of adults with mental illness report not seeking treatment due to concerns about others' perceptions</p>
             </div>
             <div class="bg-neutral-50 rounded-lg p-5 border border-neutral-200">
-              <div class="flex items-center mb-3">
-                <Brain class="h-5 w-5 text-brand-coral-500 mr-3 flex-shrink-0" />
+              <div class="flex items-center gap-3 mb-3">
+                <Brain class="h-6 w-6 text-brand-coral-500 flex-shrink-0" />
                 <div class="font-heading font-bold text-neutral-900">Awareness</div>
               </div>
               <p class="text-neutral-600">42% of people with symptoms of mental illness are unaware that effective treatments exist</p>
@@ -254,8 +254,8 @@ const onlineTherapyStats = [
             <div class="bg-neutral-50 rounded-lg p-6 border border-neutral-200">
               <ul class="space-y-3">
                 {demographic.stats.map((stat, i) => (
-                  <li key={i} class="flex items-start">
-                    <ArrowRight class="h-5 w-5 text-brand-secondary-500 mr-4 mt-0.5 flex-shrink-0" />
+                  <li key={i} class="flex items-start gap-3">
+                    <ArrowRight class="h-5 w-5 text-brand-secondary-500 mt-0.5 flex-shrink-0" />
                     <span class="text-neutral-600">{stat}</span>
                   </li>
                 ))}

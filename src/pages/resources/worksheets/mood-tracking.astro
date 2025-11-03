@@ -1,22 +1,453 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { TrendingUp, Calendar, Heart, Sun, Cloud, CloudRain, Zap, Smile, Frown, Meh, CheckCircle, Printer, Download, Info, AlertCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Mood Tracking Worksheet | RealMindSolutions" description="Mood Tracking Worksheet">
+<BaseLayout title="Mood Tracking Worksheet - Free Mental Health Tool | RealMindSolutions" description="Free downloadable mood tracking worksheet to monitor emotions, identify patterns, and improve mental health. Track daily moods, triggers, and coping strategies.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mood Tracking Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Free downloadable mood tracking worksheet.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <Heart class="h-8 w-8 text-brand-primary" />
+        <span class="text-brand-primary font-semibold">Free Mental Health Tracker</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Daily Mood Tracking Worksheet
+      </h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Monitor your emotional wellbeing, identify patterns, and track progress over time
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button onclick="window.print()" class="inline-flex items-center bg-brand-primary text-white px-6 py-3 rounded-md hover:bg-brand-primary/90 transition font-medium">
+          <Printer class="h-5 w-5 mr-2" />
+          Print Tracker
+        </button>
+        <a href="/resources/worksheets" class="inline-flex items-center border-2 border-brand-primary text-brand-primary px-6 py-3 rounded-md hover:bg-brand-primary-50 transition font-medium">
+          More Worksheets
+        </a>
+      </div>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+
+      {/* Why Track Your Mood */}
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Info class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Why Track Your Mood?</h2>
+            <p class="text-gray-700 mb-4">
+              Mood tracking is a simple yet powerful tool for understanding your mental health. By consistently monitoring your emotions, you can:
+            </p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Identify patterns:</strong> Notice connections between moods and events, people, or activities</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Recognize triggers:</strong> Understand what situations tend to worsen or improve your mood</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Track progress:</strong> See how therapy, medication, or lifestyle changes affect your wellbeing</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Communicate better:</strong> Share concrete data with your therapist or doctor</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Build self-awareness:</strong> Develop a deeper understanding of your emotional patterns</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      {/* Mood Scale Reference */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <TrendingUp class="h-8 w-8 text-brand-primary mr-3" />
+          Mood Rating Scale
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+          {/* 1 - Very Poor */}
+          <div class="bg-red-100 border-2 border-red-500 rounded-lg p-6 text-center">
+            <div class="flex justify-center mb-3">
+              <CloudRain class="h-12 w-12 text-red-600" />
+            </div>
+            <div class="text-3xl font-bold text-red-900 mb-2">1</div>
+            <div class="font-bold text-red-900 mb-2">Very Poor</div>
+            <p class="text-xs text-red-800">Severe distress, overwhelming emotions, difficulty functioning</p>
+          </div>
+
+          {/* 2 - Poor */}
+          <div class="bg-orange-100 border-2 border-orange-400 rounded-lg p-6 text-center">
+            <div class="flex justify-center mb-3">
+              <Frown class="h-12 w-12 text-orange-600" />
+            </div>
+            <div class="text-3xl font-bold text-orange-900 mb-2">2</div>
+            <div class="font-bold text-orange-900 mb-2">Poor</div>
+            <p class="text-xs text-orange-800">Significant distress, low mood, struggling with daily tasks</p>
+          </div>
+
+          {/* 3 - Okay */}
+          <div class="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-6 text-center">
+            <div class="flex justify-center mb-3">
+              <Meh class="h-12 w-12 text-yellow-600" />
+            </div>
+            <div class="text-3xl font-bold text-yellow-900 mb-2">3</div>
+            <div class="font-bold text-yellow-900 mb-2">Okay</div>
+            <p class="text-xs text-yellow-800">Neutral, managing but not thriving, some ups and downs</p>
+          </div>
+
+          {/* 4 - Good */}
+          <div class="bg-green-100 border-2 border-green-400 rounded-lg p-6 text-center">
+            <div class="flex justify-center mb-3">
+              <Smile class="h-12 w-12 text-green-600" />
+            </div>
+            <div class="text-3xl font-bold text-green-900 mb-2">4</div>
+            <div class="font-bold text-green-900 mb-2">Good</div>
+            <p class="text-xs text-green-800">Positive mood, feeling capable, enjoying activities</p>
+          </div>
+
+          {/* 5 - Excellent */}
+          <div class="bg-blue-100 border-2 border-blue-400 rounded-lg p-6 text-center">
+            <div class="flex justify-center mb-3">
+              <Sun class="h-12 w-12 text-blue-600" />
+            </div>
+            <div class="text-3xl font-bold text-blue-900 mb-2">5</div>
+            <div class="font-bold text-blue-900 mb-2">Excellent</div>
+            <p class="text-xs text-blue-800">Great mood, energized, confident, life feels manageable</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="font-bold text-gray-900 mb-3">Rating Tips:</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>• <strong>Be honest:</strong> There are no "right" answers. Rate how you truly feel.</li>
+            <li>• <strong>Consider the whole day:</strong> Think about your overall mood, not just this moment.</li>
+            <li>• <strong>Use decimals if helpful:</strong> Feel between 3 and 4? Try 3.5.</li>
+            <li>• <strong>Track consistently:</strong> Rate at the same time each day (evening works well for daily summaries).</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Weekly Mood Tracker */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8 mb-12" id="tracker">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Calendar class="h-8 w-8 text-brand-primary mr-3" />
+          Your Weekly Mood Tracker
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Complete this tracker daily for at least one week. The more data you collect, the clearer patterns will emerge.
+        </p>
+
+        <div class="bg-white rounded-lg p-6 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b-2 border-gray-300">
+                <th class="text-left p-3 font-bold text-gray-900">Date</th>
+                <th class="text-center p-3 font-bold text-gray-900">Overall Mood (1-5)</th>
+                <th class="text-left p-3 font-bold text-gray-900">What Happened Today?</th>
+                <th class="text-left p-3 font-bold text-gray-900">Mood Triggers (+ or -)</th>
+                <th class="text-left p-3 font-bold text-gray-900">Coping Strategies Used</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...Array(7)].map((_, i) => (
+                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                  <td class="p-3">
+                    <div class="font-semibold text-gray-700">{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][i]}</div>
+                    <div class="text-xs text-gray-500">__ / __ / __</div>
+                  </td>
+                  <td class="p-3 text-center">
+                    <div class="inline-block w-16 h-16 border-2 border-dashed border-gray-300 rounded flex items-center justify-center">
+                      <span class="text-2xl text-gray-400 font-bold">__</span>
+                    </div>
+                  </td>
+                  <td class="p-3">
+                    <div class="min-h-[60px] border-2 border-dashed border-gray-200 rounded p-2 text-xs text-gray-400">
+                      Key events, interactions, accomplishments...
+                    </div>
+                  </td>
+                  <td class="p-3">
+                    <div class="min-h-[60px] border-2 border-dashed border-gray-200 rounded p-2 text-xs text-gray-400">
+                      + Good: exercise, friend visit<br/>- Bad: work stress, poor sleep
+                    </div>
+                  </td>
+                  <td class="p-3">
+                    <div class="min-h-[60px] border-2 border-dashed border-gray-200 rounded p-2 text-xs text-gray-400">
+                      Meditation, therapy, walk, journaling...
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-r p-4">
+          <div class="flex items-start">
+            <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" />
+            <p class="text-sm text-yellow-900">
+              <strong>Privacy Note:</strong> Keep this tracker in a private, secure location. You can share it with your therapist or doctor, but you're never obligated to show it to anyone.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Reflection Questions */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Weekly Reflection Questions</h2>
+        <p class="text-gray-700 mb-6">
+          At the end of each week, review your mood tracker and answer these questions:
+        </p>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">1. What patterns do you notice in your moods this week?</h3>
+            <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-xs italic">Example: "My mood was lowest on Monday mornings and highest after exercising."</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">2. What were your most common positive triggers?</h3>
+            <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-xs italic">Example: "Spending time outdoors, talking to friends, getting enough sleep."</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">3. What were your most common negative triggers?</h3>
+            <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-xs italic">Example: "Work deadlines, skipping meals, social media scrolling late at night."</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">4. Which coping strategies were most helpful this week?</h3>
+            <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-xs italic">Example: "Deep breathing helped with anxiety. Going for walks improved my mood quickly."</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">5. What's one small change you can make next week to support your mental health?</h3>
+            <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+              <p class="text-gray-400 text-xs italic">Example: "I'll try to exercise 3 times next week since it consistently improves my mood."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Common Mood Patterns */}
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Mood Patterns to Watch For</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+              <CloudRain class="h-5 w-5 text-blue-600 mr-2" />
+              Seasonal Patterns
+            </h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Mood consistently lower during certain seasons? You might experience Seasonal Affective Disorder (SAD), especially common in fall/winter.
+            </p>
+            <p class="text-xs text-gray-600">
+              <strong>Action:</strong> Consider light therapy, vitamin D, and discuss with a doctor.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+              <Calendar class="h-5 w-5 text-purple-600 mr-2" />
+              Weekly Patterns
+            </h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Mood drops on Sundays ("Sunday Scaries") or Mondays? This often indicates work-related stress or lack of structure on weekends.
+            </p>
+            <p class="text-xs text-gray-600">
+              <strong>Action:</strong> Build weekend routines, address work stressors, plan something enjoyable for Sundays.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+              <Zap class="h-5 w-5 text-yellow-600 mr-2" />
+              Rapid Cycling
+            </h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Mood swings dramatically within days or even hours? This could indicate various conditions including bipolar disorder, borderline personality disorder, or hormonal fluctuations.
+            </p>
+            <p class="text-xs text-gray-600">
+              <strong>Action:</strong> Share this pattern with a mental health professional for proper evaluation.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+              <Cloud class="h-5 w-5 text-gray-600 mr-2" />
+              Persistent Low Mood
+            </h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Consistently rating 1-2 for more than two weeks? This is a key symptom of clinical depression and requires professional attention.
+            </p>
+            <p class="text-xs text-gray-600">
+              <strong>Action:</strong> Contact a therapist or doctor. Depression is treatable with therapy and/or medication.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-red-50 border-l-4 border-red-500 rounded-r p-4">
+          <div class="flex items-start">
+            <AlertCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+            <div>
+              <p class="text-sm text-red-900 font-bold mb-1">When to Seek Immediate Help:</p>
+              <p class="text-sm text-red-800">
+                If you're experiencing thoughts of suicide or self-harm, contact the 988 Suicide & Crisis Lifeline (call or text 988) or go to your nearest emergency room. Help is available 24/7.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle class="h-6 w-6 text-brand-primary mr-2" />
+          Tips for Consistent Mood Tracking
+        </h2>
+
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Track at the same time daily</h3>
+              <p class="text-sm text-gray-700">Set a reminder for the same time each day (evening works well). Consistency helps build the habit and improves data quality.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Keep it brief</h3>
+              <p class="text-sm text-gray-700">Don't overwhelm yourself with lengthy entries. A few words or phrases for each column is sufficient. The goal is sustainability.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Don't judge yourself</h3>
+              <p class="text-sm text-gray-700">There are no "bad" moods to report. Low mood days provide just as valuable information as good days. This is data, not a performance review.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Review weekly</h3>
+              <p class="text-sm text-gray-700">Set aside 10 minutes each week to review your tracker and answer the reflection questions. This is where the insights happen.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">5</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Share with your therapist</h3>
+              <p class="text-sm text-gray-700">Bring your tracker to therapy sessions. It helps your therapist understand patterns and measure progress more effectively than relying on memory alone.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 bg-brand-primary/10 text-brand-primary rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">6</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Commit to at least 4 weeks</h3>
+              <p class="text-sm text-gray-700">Patterns take time to emerge. While even one week provides insights, 4+ weeks of data reveals more meaningful trends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">More Worksheets</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/resources/worksheets/cognitive-distortion-worksheet" class="text-brand-primary hover:underline">
+                  → Cognitive Distortion Worksheet
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/therapy-session-preparation" class="text-brand-primary hover:underline">
+                  → Therapy Session Preparation
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/stress-management-techniques" class="text-brand-primary hover:underline">
+                  → Stress Management Techniques
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Find Professional Support</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">
+                  → Find an Online Therapist
+                </a>
+              </li>
+              <li>
+                <a href="/tools/assessments/mental-health-assessment" class="text-brand-primary hover:underline">
+                  → Take a Mental Health Assessment
+                </a>
+              </li>
+              <li>
+                <a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">
+                  → Best Online Therapy Platforms 2025
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none !important;
+      }
+
+      .bg-gradient-to-b,
+      .bg-gradient-to-r {
+        background: white !important;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+
+      tr {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
 </BaseLayout>
