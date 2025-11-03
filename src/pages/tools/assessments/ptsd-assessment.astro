@@ -1,15 +1,286 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Assessment from '../../../components/Assessment';
 import { Brain, AlertCircle, CheckCircle, Info } from 'lucide-react';
+
+// PCL-5 Short Form (PTSD Checklist for DSM-5) - Validated Instrument
+const pcl5Questions = [
+  {
+    id: 'q1',
+    text: 'Repeated, disturbing, and unwanted memories of the stressful experience?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q2',
+    text: 'Repeated, disturbing dreams of the stressful experience?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q3',
+    text: 'Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q4',
+    text: 'Feeling very upset when something reminded you of the stressful experience?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q5',
+    text: 'Having strong physical reactions when something reminded you of the stressful experience (heart pounding, trouble breathing, sweating)?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q6',
+    text: 'Avoiding memories, thoughts, or feelings related to the stressful experience?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q7',
+    text: 'Avoiding external reminders of the stressful experience (people, places, conversations, activities, objects, or situations)?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q8',
+    text: 'Trouble remembering important parts of the stressful experience?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q9',
+    text: 'Having strong negative beliefs about yourself, other people, or the world?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q10',
+    text: 'Blaming yourself or someone else for the stressful experience or what happened after it?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q11',
+    text: 'Having strong negative feelings such as fear, horror, anger, guilt, or shame?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q12',
+    text: 'Loss of interest in activities that you used to enjoy?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q13',
+    text: 'Feeling distant or cut off from other people?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q14',
+    text: 'Trouble experiencing positive feelings (unable to feel happiness or have loving feelings for people close to you)?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q15',
+    text: 'Irritable behavior, angry outbursts, or acting aggressively?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q16',
+    text: 'Taking too many risks or doing things that could cause you harm?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q17',
+    text: 'Being "super alert" or watchful or on guard?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q18',
+    text: 'Feeling jumpy or easily startled?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q19',
+    text: 'Having difficulty concentrating?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  },
+  {
+    id: 'q20',
+    text: 'Trouble falling or staying asleep?',
+    options: [
+      { text: 'Not at all', value: 0 },
+      { text: 'A little bit', value: 1 },
+      { text: 'Moderately', value: 2 },
+      { text: 'Quite a bit', value: 3 },
+      { text: 'Extremely', value: 4 }
+    ]
+  }
+];
+
+const scoringGuide = [
+  {
+    min: 0,
+    max: 10,
+    severity: 'Minimal PTSD',
+    color: 'green',
+    description: 'Your responses suggest minimal PTSD symptoms. While you may have experienced a traumatic event, your current symptom levels appear minimal.'
+  },
+  {
+    min: 11,
+    max: 30,
+    severity: 'Mild PTSD',
+    color: 'yellow',
+    description: 'Your responses suggest mild PTSD symptoms. These symptoms may benefit from professional support and evidence-based trauma therapy.'
+  },
+  {
+    min: 31,
+    max: 50,
+    severity: 'Moderate PTSD',
+    color: 'orange',
+    description: 'Your responses suggest moderate PTSD symptoms that are likely impacting your daily life. Professional treatment with a trauma specialist is strongly recommended.'
+  },
+  {
+    min: 51,
+    max: 70,
+    severity: 'Severe PTSD',
+    color: 'red',
+    description: 'Your responses suggest severe PTSD symptoms. We strongly recommend seeking professional help from a trauma-specialized therapist. Effective treatments are available.'
+  },
+  {
+    min: 71,
+    max: 80,
+    severity: 'Extreme PTSD',
+    color: 'red',
+    description: 'Your responses suggest extreme PTSD symptoms that are severely impacting your functioning. Please seek immediate professional help from a trauma specialist or treatment program.'
+  }
+];
+
+const recommendations = {
+  'minimal ptsd': 'While your symptoms are minimal, if you\'ve experienced trauma, consider talking with a therapist to process the experience and develop healthy coping strategies.',
+  'mild ptsd': 'Consider consulting with a trauma-specialized therapist. Evidence-based treatments like Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), or EMDR can be very effective.',
+  'moderate ptsd': 'We strongly recommend seeking treatment from a trauma specialist. Therapies like EMDR, CPT, and PE have strong evidence for treating PTSD. Medication may also be helpful.',
+  'severe ptsd': 'Please schedule an appointment with a trauma specialist as soon as possible. Intensive treatment options are available and can significantly reduce symptoms. Both therapy and medication can be very effective.',
+  'extreme ptsd': 'Immediate professional help is strongly recommended. Contact a trauma specialist, crisis line (988), or treatment center. Intensive outpatient or residential trauma treatment programs may be appropriate.'
+};
 ---
 
 <BaseLayout>
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">PTSD Assessment</h1>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">PCL-5 PTSD Assessment</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">
-        Evaluate PTSD symptoms and understand their impact on your daily life
+        PTSD Checklist for DSM-5 - A validated clinical screening tool
       </p>
     </div>
   </section>
@@ -17,93 +288,83 @@ import { Brain, AlertCircle, CheckCircle, Info } from 'lucide-react';
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
 
-        <div class="p-6">
-          <div class="space-y-4 mb-6">
-            <div class="flex items-start">
-              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">About This Assessment</h2>
-                <p class="text-gray-600">
-                  This PTSD screening tool is based on standard clinical assessment methods and helps evaluate symptoms related to traumatic experiences. It examines re-experiencing, avoidance, negative thoughts, and hyperarousal symptoms that may indicate post-traumatic stress disorder.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">What It Measures</h2>
-                <p class="text-gray-600">
-                  The assessment evaluates key PTSD symptom clusters:
-                </p>
-                <ul class="mt-2 space-y-1">
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Intrusive memories, flashbacks, and nightmares</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Avoidance of trauma-related thoughts and situations</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Negative changes in thoughts and mood</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Hypervigilance and heightened startle response</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Sleep disturbances and concentration difficulties</span>
-                  </li>
-                  <li class="flex items-center">
-                    <CheckCircle class="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Impact on relationships and daily functioning</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <div>
-                <h2 class="font-bold text-gray-800">Important Note</h2>
-                <p class="text-gray-600">
-                  This assessment is not a diagnostic tool. Only a qualified mental health professional can diagnose PTSD. This screening is designed to help you understand your symptoms and decide if professional evaluation for trauma-related concerns might be beneficial.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg p-6 mb-6">
-            <h3 class="font-bold text-gray-800 mb-2">Interactive Assessment Coming Soon</h3>
-            <p class="text-gray-700 mb-4">
-              We're currently updating this assessment tool. In the meantime, you can explore our comprehensive resources for PTSD treatment and find qualified trauma specialists who use evidence-based approaches.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <div class="flex items-start bg-yellow-50 rounded-lg p-4">
-              <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-              <p class="text-sm text-yellow-700">
-                If you're experiencing PTSD symptoms or have been through a traumatic event, we strongly recommend seeking professional help from a trauma-specialized therapist. Effective treatments like EMDR and trauma-focused CBT can help.
+      {/* Information Cards */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+          <div class="flex items-start">
+            <Info class="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">About PCL-5</h3>
+              <p class="text-gray-700 text-sm">
+                The PCL-5 is a widely used, evidence-based tool for screening and monitoring PTSD symptoms.
               </p>
             </div>
+          </div>
+        </div>
 
-            <div class="flex flex-wrap gap-4">
-              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
-                Find a Trauma Specialist
-              </a>
-              <a href="/best/conditions/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
-                View Best PTSD Treatment Options
-              </a>
-              <a href="/conditions/ptsd-page" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-50 transition">
-                Learn More About PTSD
-              </a>
+        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+          <div class="flex items-start">
+            <Brain class="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Takes 5-7 Minutes</h3>
+              <p class="text-gray-700 text-sm">
+                Answer 20 questions about symptoms you've experienced in the past month.
+              </p>
             </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
+          <div class="flex items-start">
+            <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Not a Diagnosis</h3>
+              <p class="text-gray-700 text-sm">
+                This is a screening tool. Only a qualified professional can diagnose PTSD.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Assessment Component */}
+      <Assessment
+        client:load
+        title="In the past month, how much were you bothered by:"
+        description="Please select the response that best describes how much you've been bothered by each problem."
+        questions={pcl5Questions}
+        scoringGuide={scoringGuide}
+        recommendations={recommendations}
+      />
+
+      {/* Additional Resources */}
+      <div class="mt-12 bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Next Steps & Resources</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Find Trauma Treatment
+            </h4>
+            <ul class="space-y-2 text-gray-700">
+              <li><a href="/best/conditions/best-for-ptsd" class="text-brand-primary hover:underline">Best Online Therapy for PTSD</a></li>
+              <li><a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">Find a Trauma Specialist</a></li>
+              <li><a href="/reviews/specialty/online-therapy-for-ptsd" class="text-brand-primary hover:underline">PTSD Treatment Reviews</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+              <CheckCircle class="h-5 w-5 text-brand-primary mr-2" />
+              Learn About PTSD
+            </h4>
+            <ul class="space-y-2 text-gray-700">
+              <li><a href="/learn/fundamentals/trauma-ptsd" class="text-brand-primary hover:underline">Understanding Trauma & PTSD</a></li>
+              <li><a href="/learn/fundamentals/mindfulness" class="text-brand-primary hover:underline">Mindfulness for Trauma</a></li>
+              <li><a href="/learn/fundamentals/self-care" class="text-brand-primary hover:underline">Self-Care Strategies</a></li>
+            </ul>
           </div>
         </div>
       </div>
