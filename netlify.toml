@@ -7,13 +7,9 @@
   # Directory with the deployed site
   publish = "dist"
 
-  # Node version
-  environment = { NODE_VERSION = "18" }
-
-# Astro-specific build settings
+# Build environment settings
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
 
 # Redirect rules for clean URLs (Astro handles this)
 [[redirects]]
