@@ -8,5 +8,9 @@
       "@/*": ["./src/*"]
     },
     "types": ["vite/client"]
-  }
+  },
+  "exclude": [
+    "src/App.tsx",
+    "src/main.tsx"
+  ]
 }
