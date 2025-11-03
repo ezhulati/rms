@@ -1,12 +1,768 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield, Sun, Moon, Utensils, Activity } from 'lucide-react';
 ---
 
-<BaseLayout title="Self Care | RealMindSolutions" description="Self Care Fundamentals">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Self Care Fundamentals</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Essential self-care practices for mental health.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Self-Care for Mental Health: Beyond Bubble Baths</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Real self-care isn't just about pampering - it's about evidence-based habits that genuinely support your mental and physical wellbeing. Learn sustainable strategies that actually make a difference.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Self-Care at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Activity class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Exercise Impact</h3>
+                <p class="text-gray-600">26% reduction in depression risk</p>
+                <p class="text-sm text-gray-500 mt-1">With regular physical activity</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Moon class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Sleep Quality</h3>
+                <p class="text-gray-600">Poor sleep doubles depression risk</p>
+                <p class="text-sm text-gray-500 mt-1">7-9 hours optimal for adults</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Social Connection</h3>
+                <p class="text-gray-600">Reduces mortality risk by 50%</p>
+                <p class="text-sm text-gray-500 mt-1">Strong social ties crucial</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Utensils class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Diet Quality</h3>
+                <p class="text-gray-600">Mediterranean diet lowers depression</p>
+                <p class="text-sm text-gray-500 mt-1">By 33% in studies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Evidence-Based Self-Care Pillars */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Evidence-Based Self-Care Pillars</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              These four fundamental areas have the strongest research supporting their impact on mental health:
+            </p>
+          </div>
+
+          {/* Sleep Hygiene */}
+          <div class="space-y-6">
+            <div class="bg-blue-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Moon class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Sleep Hygiene</h3>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                Sleep and mental health are bidirectionally linked - poor sleep worsens mental health, and mental health conditions disrupt sleep. Prioritizing sleep is one of the most impactful self-care strategies.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Why It Matters:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Sleep deprivation increases emotional reactivity by 60%</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Poor sleep impairs prefrontal cortex (judgment, impulse control)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Chronic insomnia predicts development of depression and anxiety</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Quality sleep supports emotional processing and memory consolidation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Practical Sleep Strategies:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Consistent schedule:</strong> Same bedtime/wake time daily (even weekends)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Dark, cool, quiet:</strong> 65-68°F, blackout curtains, white noise if needed</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Screen curfew:</strong> No phones/tablets 1 hour before bed (blue light disrupts melatonin)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Wind-down routine:</strong> 30-60 min relaxing activities (reading, stretching, bath)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Limit caffeine:</strong> None after 2pm; limit alcohol (disrupts sleep quality)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>If can't sleep:</strong> Get up after 20 min, do calming activity, return when sleepy</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Regular Exercise */}
+            <div class="bg-green-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Activity class="h-6 w-6 text-green-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Regular Exercise</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                Exercise is as effective as antidepressants for mild to moderate depression and provides additional physical health benefits. It's a powerful, evidence-based mental health intervention.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Mental Health Benefits:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Releases endorphins (natural mood boosters)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Reduces stress hormones (cortisol, adrenaline)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Improves self-esteem and sense of accomplishment</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Promotes neuroplasticity (brain adaptability)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Provides distraction from negative thoughts</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Improves sleep quality</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Getting Started:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Goal:</strong> 150 min moderate exercise/week (30 min, 5 days)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Start small:</strong> Even 10 min walks provide benefit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Choose what you enjoy:</strong> Walking, dancing, swimming, yoga, sports</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Outdoor exercise:</strong> Extra benefits from nature exposure and sunlight</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Social exercise:</strong> Group classes or workout buddies increase adherence</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Be consistent:</strong> Regular moderate exercise beats occasional intense workouts</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-4 bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Exercise Types and Mental Health:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                  <div>
+                    <strong>Aerobic (cardio):</strong> Best for anxiety and depression. Includes running, cycling, swimming.
+                  </div>
+                  <div>
+                    <strong>Strength training:</strong> Improves self-efficacy and body image. Boosts mood via endorphins.
+                  </div>
+                  <div>
+                    <strong>Mind-body (yoga, tai chi):</strong> Combines movement with mindfulness for stress reduction.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Balanced Nutrition */}
+            <div class="bg-purple-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Utensils class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Balanced Nutrition</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                The gut-brain connection is powerful. What you eat directly affects your mood, energy, and mental clarity. Diet is an often-overlooked but crucial aspect of mental health care.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Mood-Food Connection:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>95% of serotonin is produced in the gut</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Blood sugar swings cause mood instability</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Nutrient deficiencies (B vitamins, omega-3s, vitamin D) linked to depression</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Gut inflammation affects brain function</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Highly processed foods increase depression risk</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Mental Health-Supporting Foods:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Omega-3 fatty acids:</strong> Fatty fish (salmon, sardines), walnuts, flaxseed</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Complex carbs:</strong> Whole grains, oats, quinoa (stable blood sugar)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Lean proteins:</strong> Chicken, turkey, eggs, legumes (amino acids for neurotransmitters)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Leafy greens:</strong> Spinach, kale (folate for brain health)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Fermented foods:</strong> Yogurt, kefir, kimchi (gut health)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Berries & nuts:</strong> Antioxidants protect brain cells</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-4 bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Mediterranean Diet for Mental Health:</h4>
+                <p class="text-gray-700 text-sm mb-2">
+                  Multiple studies show Mediterranean diet reduces depression risk by 25-33%. It emphasizes:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                  <div>• Vegetables & fruits</div>
+                  <div>• Whole grains</div>
+                  <div>• Olive oil</div>
+                  <div>• Fish & seafood</div>
+                  <div>• Nuts & legumes</div>
+                  <div>• Moderate dairy</div>
+                  <div>• Limited red meat</div>
+                  <div>• Minimal processed foods</div>
+                </div>
+              </div>
+
+              <div class="mt-4 bg-red-50 rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Limit These for Better Mental Health:</h4>
+                <ul class="space-y-2 text-sm">
+                  <li class="flex items-start">
+                    <AlertCircle class="h-4 w-4 text-red-500 mr-2 mt-0.5" />
+                    <span><strong>Alcohol:</strong> Depressant that disrupts sleep and worsens anxiety/depression over time</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle class="h-4 w-4 text-red-500 mr-2 mt-0.5" />
+                    <span><strong>Excess caffeine:</strong> Can increase anxiety and disrupt sleep (limit to 400mg/day, none after 2pm)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle class="h-4 w-4 text-red-500 mr-2 mt-0.5" />
+                    <span><strong>Refined sugars:</strong> Cause energy crashes and mood swings</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle class="h-4 w-4 text-red-500 mr-2 mt-0.5" />
+                    <span><strong>Ultra-processed foods:</strong> Linked to higher depression rates</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Social Connection */}
+            <div class="bg-orange-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Users class="h-6 w-6 text-orange-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Social Connection</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                Humans are inherently social beings. Strong relationships are as important to health as not smoking or exercising. Loneliness and isolation significantly worsen mental health.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Why It Matters:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Loneliness increases depression risk by 200%</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Social isolation as harmful as smoking 15 cigarettes/day</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Strong relationships buffer against stress</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Social support improves treatment outcomes</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Belonging and purpose reduce suicide risk</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Building Connection:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Quality over quantity:</strong> A few close relationships matter more than many superficial ones</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Reach out regularly:</strong> Text, call, or see friends/family weekly</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Join groups/activities:</strong> Shared interests create natural connections</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Volunteer:</strong> Helping others boosts mood and creates community</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Be vulnerable:</strong> Share struggles with trusted people (deepens bonds)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Star class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span><strong>Limit social media:</strong> In-person or voice connection is more beneficial</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-4 bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">When You're Depressed and Don't Feel Like Socializing:</h4>
+                <p class="text-gray-700 text-sm mb-2">
+                  Depression makes you want to isolate, but isolation worsens depression. Start very small:
+                </p>
+                <ul class="space-y-1 text-sm">
+                  <li>• Respond to one text message</li>
+                  <li>• Have a 10-minute phone call</li>
+                  <li>• Meet someone for coffee for 30 minutes</li>
+                  <li>• Attend one group activity per week</li>
+                  <li>• Tell someone you're struggling (they want to help)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Creating Sustainable Routines */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Creating Sustainable Self-Care Routines</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Start Small</h3>
+              <p class="text-gray-700 mb-4">
+                Don't try to overhaul your entire life at once. Pick ONE habit to focus on for 2-4 weeks before adding another.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• Walk 10 minutes daily</li>
+                <li>• Consistent bedtime for one week</li>
+                <li>• One healthy meal per day</li>
+                <li>• Text one friend per week</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Habit Stacking</h3>
+              <p class="text-gray-700 mb-4">
+                Link new habits to existing ones. Your brain already has established routines - piggyback on them.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• After brushing teeth → 5 min meditation</li>
+                <li>• After morning coffee → 10 min walk</li>
+                <li>• During lunch → call a friend</li>
+                <li>• Before dinner → 15 min exercise</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Build in Flexibility</h3>
+              <p class="text-gray-700 mb-4">
+                Rigid perfectionism leads to giving up. Have "good enough" options for hard days.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• Can't do 30 min walk? Do 5 min.</li>
+                <li>• Too tired to cook? Healthy frozen meal okay.</li>
+                <li>• Can't sleep by 10pm? By 11pm is fine.</li>
+                <li>• Missed today? Start again tomorrow.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Self-Care vs Escapism */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Self-Care vs. Escapism: Know the Difference</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              True self-care restores and energizes you. Escapism provides temporary relief but doesn't address underlying issues and often leaves you feeling worse.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Healthy Self-Care</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Leaves you feeling better:</strong> Refreshed, recharged, more capable</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Addresses needs:</strong> Rest when tired, movement when restless, connection when lonely</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Builds resilience:</strong> Strengthens ability to handle stress</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Sustainable:</strong> Part of regular routine, not occasional indulgence</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Examples:</strong> Exercise, sleep, healthy eating, therapy, social time, hobbies</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Unhealthy Escapism</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Temporary relief only:</strong> Feel worse after (guilt, shame, physical effects)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Avoids problems:</strong> Numbs feelings instead of processing them</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Creates new problems:</strong> Neglects responsibilities, damages health/relationships</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Feels compulsive:</strong> Hard to stop, need more for same effect</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Examples:</strong> Excessive drinking, binge eating, shopping sprees, hours of mindless scrolling</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">The Gray Area</h3>
+            <p class="text-gray-700 mb-3">
+              Some activities can be either self-care or escapism depending on how you use them:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <strong>TV/streaming:</strong> Watching one show to relax vs. binging all day to avoid life
+              </div>
+              <div>
+                <strong>Social media:</strong> Connecting meaningfully vs. mindlessly scrolling for hours
+              </div>
+              <div>
+                <strong>Shopping:</strong> Buying something needed vs. compulsive spending to feel better
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* When Self-Care Isn't Enough */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">When Self-Care Isn't Enough</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              Self-care is important but not a substitute for professional treatment. Seek help if:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Warning Signs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Self-care efforts aren't improving symptoms</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You're too depressed/anxious to practice self-care</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Symptoms interfere with work, school, or relationships</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You have thoughts of self-harm or suicide</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Substance use is becoming a problem</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You're experiencing panic attacks or severe anxiety</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Professional Help Options</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  Self-care works best alongside professional treatment:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span><strong>Therapy:</strong> Teaches skills and addresses root causes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span><strong>Medication:</strong> Can make self-care possible by reducing severe symptoms</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span><strong>Support groups:</strong> Provide accountability and shared experience</span>
+                  </li>
+                </ul>
+                <div class="mt-6">
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Professional Help</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Self-Care on a Budget */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Self-Care on a Budget</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              Effective self-care doesn't require expensive products or services. Many of the most impactful strategies are free or low-cost:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Free Self-Care</h3>
+              <ul class="space-y-2 text-sm">
+                <li>• Walking outdoors</li>
+                <li>• YouTube exercise/yoga videos</li>
+                <li>• Library books (physical or digital)</li>
+                <li>• Free meditation apps (Insight Timer)</li>
+                <li>• Calling friends/family</li>
+                <li>• Journaling with pen and paper</li>
+                <li>• Home stretching routine</li>
+                <li>• Early bedtime</li>
+                <li>• Cooking at home</li>
+                <li>• Free community events</li>
+              </ul>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Low-Cost Options</h3>
+              <ul class="space-y-2 text-sm">
+                <li>• Community center classes ($5-15)</li>
+                <li>• Sliding scale therapy clinics</li>
+                <li>• Used fitness equipment/weights</li>
+                <li>• Affordable gym membership ($10-30/mo)</li>
+                <li>• Vitamins/supplements (B complex, D3)</li>
+                <li>• Bulk whole foods (beans, rice, oats)</li>
+                <li>• Library card for free resources</li>
+                <li>• App subscriptions ($10-15/mo)</li>
+                <li>• Thrift store workout clothes</li>
+              </ul>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Worthwhile Investments</h3>
+              <ul class="space-y-2 text-sm">
+                <li>• Good walking/running shoes</li>
+                <li>• Quality mattress/pillows</li>
+                <li>• Therapy (many platforms $60-100/session)</li>
+                <li>• Blackout curtains for sleep</li>
+                <li>• Water filter if tap water poor</li>
+                <li>• Basic kitchen tools for cooking</li>
+                <li>• Headphones for exercise/meditation</li>
+                <li>• Journal or planner</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/resources/worksheets/self-care-plan" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Self-Care Plan Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/sleep-hygiene-checklist" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Sleep Hygiene Checklist</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/mood-tracking" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Mood Tracking Worksheet</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/learn/fundamentals/stress-management" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Stress Management Techniques</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/mindfulness" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Mindfulness for Mental Health</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Depression</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Prioritize Your Mental Health?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Create a personalized self-care plan or connect with a therapist who can help you develop sustainable wellness habits.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/resources/worksheets/self-care-plan" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Create Self-Care Plan</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find a Therapist</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

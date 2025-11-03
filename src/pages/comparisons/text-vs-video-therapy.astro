@@ -8,10 +8,10 @@ const idealFor = { text: [], video: [] };
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {/* Hero Section */}
-        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
             <div class="md:w-1/3">
               <img 
@@ -21,20 +21,24 @@ const idealFor = { text: [], video: [] };
               />
             </div>
             <div class="p-8 md:w-2/3">
-              <h1 class="text-3xl font-bold text-gray-800 mb-4">Text vs. Video Therapy: Which Format Is Right for You?</h1>
-              <p class="text-xl text-gray-600 mb-6">
-                Compare the benefits, limitations, and ideal use cases for text-based and video-based online therapy to find the format that best suits your needs and preferences.
-              </p>
-              <div class="flex flex-wrap gap-4">
-                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
-                <a href="/best/platforms/best-online-therapy-platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Explore Top Platforms</a>
-              </div>
-            </div>
+              <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Text vs. Video Therapy: Which Format Is Right for You?</h1>
+              <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-6">
+            Compare the benefits, limitations, and ideal use cases for text-based and video-based online therapy to find the format that best suits your needs and preferences.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
+            <a href="/best/platforms/best-online-therapy-platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Explore Top Platforms</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        {/* Introduction */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Introduction */}
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Therapy Formats</h2>
           <p class="text-gray-600 mb-4">
             Online therapy has revolutionized mental health care by making support more accessible than ever before. Two of the most popular formats are text-based therapy and video therapy, each offering distinct advantages and potential limitations.
@@ -342,8 +346,8 @@ const idealFor = { text: [], video: [] };
           <div class="flex flex-wrap justify-center gap-4">
             <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
             <a href="/best/text-therapy-services" class="border-white text-white hover:bg-white hover:bg-opacity-10">Best Text Therapy Services</a>
-          </div>
         </div>
       </div>
     </div>
+  </section>
 </BaseLayout>

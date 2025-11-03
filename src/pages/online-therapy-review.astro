@@ -40,8 +40,9 @@ const renderStars = (rating: number) => {
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
+  {/* Main Content */}
+  <section class="bg-neutral-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -54,7 +55,7 @@ const renderStars = (rating: number) => {
             </div>
             <div class="p-8 md:w-2/3">
               <div class="flex flex-wrap items-center justify-between mb-4">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2 md:mb-0">Online-Therapy.com Review</h1>
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-2 md:mb-0">Online-Therapy.com Review</h1>
                 <div class="flex items-center">
                   <div class="mr-2">
                     {renderStars(4.0)}
@@ -62,8 +63,8 @@ const renderStars = (rating: number) => {
                   <span class="text-lg font-bold text-gray-700">4.0/5</span>
                 </div>
               </div>
-              
-              <p class="text-gray-600 text-lg mb-6">
+
+              <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-6">
                 Online-Therapy.com specializes in cognitive behavioral therapy (CBT) with a structured program that includes daily therapist feedback, worksheets, and additional wellness resources.
               </p>
               
@@ -625,7 +626,6 @@ const renderStars = (rating: number) => {
             </a>
           </div>
         </div>
-      </div>
     </div>
-  )
+  </section>
 </BaseLayout>

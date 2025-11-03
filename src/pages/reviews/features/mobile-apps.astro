@@ -1,12 +1,1230 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getPlatformBySlug } from '../../../siteData';
+import { Smartphone, Star, CheckCircle, XCircle, MessageSquare, Video, Calendar, Bell, Download, Lock, TrendingUp, Users, Zap, Layout } from 'lucide-react';
+
+const betterhelp = getPlatformBySlug('betterhelp');
+const talkspace = getPlatformBySlug('talkspace');
+const cerebral = getPlatformBySlug('cerebral');
+const brightside = getPlatformBySlug('brightside');
+
+const publicationDate = 'January 28, 2025';
+const lastUpdated = 'January 28, 2025';
 ---
 
-<BaseLayout title="Mobile Apps Review | RealMindSolutions" description="Therapy Platform Mobile Apps">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Therapy Platform Mobile Apps</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Review of mobile app experiences.</p>
+<BaseLayout
+  title="Online Therapy Mobile Apps Compared: Best Features & Usability 2025 | RealMindSolutions"
+  description="Comprehensive comparison of online therapy mobile apps including BetterHelp, Talkspace, Cerebral, and more. Compare features, usability, ratings, and find the best therapy app for your needs."
+>
+  <div class="bg-gray-50 min-h-screen">
+    <div class="sb-container py-12">
+
+      {/* Hero Section */}
+      <div class="max-w-4xl mx-auto mb-12">
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Online Therapy Mobile Apps Compared: Best Features & Usability 2025
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            An in-depth comparison of the top online therapy mobile apps, evaluating features, user experience, performance, and which platform offers the best mobile therapy experience for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+            <span class="flex items-center">
+              <Calendar className="h-4 w-4 mr-1" />
+              Published: {publicationDate}
+            </span>
+            <span class="flex items-center">
+              <Smartphone className="h-4 w-4 mr-1" />
+              Last Updated: {lastUpdated}
+            </span>
+            <span class="flex items-center">
+              <Star className="h-4 w-4 mr-1" />
+              15 min read
+            </span>
+          </div>
+        </div>
+
+        {/* Quick Rating Card */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+              <Smartphone className="h-8 w-8 text-indigo-600 mr-3" />
+              Top Rated Mobile Apps
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div>
+              <div class="text-sm text-gray-600 mb-1">Overall Best</div>
+              <div class="text-xl font-bold text-gray-800">BetterHelp</div>
+              <div class="text-sm text-indigo-600">4.5/5 rating</div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-600 mb-1">Best Messaging</div>
+              <div class="text-xl font-bold text-gray-800">Talkspace</div>
+              <div class="text-sm text-indigo-600">4.4/5 rating</div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-600 mb-1">Best UI/UX</div>
+              <div class="text-xl font-bold text-gray-800">Cerebral</div>
+              <div class="text-sm text-indigo-600">4.3/5 rating</div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-600 mb-1">Best Features</div>
+              <div class="text-xl font-bold text-gray-800">BetterHelp</div>
+              <div class="text-sm text-indigo-600">4.5/5 rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Table of Contents */}
+      <div class="max-w-4xl mx-auto mb-12">
+        <div class="bg-indigo-50 rounded-lg p-6">
+          <h3 class="text-lg font-bold text-gray-800 mb-4">Quick Navigation</h3>
+          <div class="grid md:grid-cols-2 gap-2">
+            <a href="#overview" class="text-indigo-600 hover:text-indigo-700">Why Mobile Apps Matter</a>
+            <a href="#comparison-table" class="text-indigo-600 hover:text-indigo-700">Features Comparison Table</a>
+            <a href="#betterhelp-app" class="text-indigo-600 hover:text-indigo-700">BetterHelp App Review</a>
+            <a href="#talkspace-app" class="text-indigo-600 hover:text-indigo-700">Talkspace App Review</a>
+            <a href="#cerebral-app" class="text-indigo-600 hover:text-indigo-700">Cerebral App Review</a>
+            <a href="#brightside-app" class="text-indigo-600 hover:text-indigo-700">Brightside App Review</a>
+            <a href="#other-platforms" class="text-indigo-600 hover:text-indigo-700">Other Platform Apps</a>
+            <a href="#rankings" class="text-indigo-600 hover:text-indigo-700">Best Mobile App Rankings</a>
+            <a href="#ios-vs-android" class="text-indigo-600 hover:text-indigo-700">iOS vs Android Differences</a>
+            <a href="#security" class="text-indigo-600 hover:text-indigo-700">Security & Privacy</a>
+            <a href="#pros-cons" class="text-indigo-600 hover:text-indigo-700">Pros & Cons</a>
+            <a href="#bottom-line" class="text-indigo-600 hover:text-indigo-700">Bottom Line</a>
+            <a href="#faq" class="text-indigo-600 hover:text-indigo-700">FAQ</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div class="max-w-4xl mx-auto">
+
+        {/* Overview */}
+        <section id="overview" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Mobile Apps Matter for Online Therapy</h2>
+          <p class="text-gray-600 mb-4">
+            In today's fast-paced world, accessing mental health care on-the-go has become essential. Mobile therapy apps provide the flexibility to connect with your therapist anytime, anywhere—whether you're commuting, traveling, or simply prefer the convenience of your smartphone. The quality of a therapy platform's mobile app can significantly impact your overall experience and engagement with treatment.
+          </p>
+          <p class="text-gray-600 mb-4">
+            A well-designed therapy app should offer seamless communication, reliable video sessions, intuitive navigation, and helpful features that enhance your therapeutic journey. Poor app performance, confusing interfaces, or missing features can create barriers to care and reduce the effectiveness of online therapy.
+          </p>
+          <div class="bg-indigo-50 rounded-lg p-6 mb-4">
+            <h3 class="font-bold text-gray-800 mb-3">What Makes a Great Therapy App?</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Intuitive interface that's easy to navigate</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Reliable video and messaging functionality</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Push notifications for messages and appointments</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Offline access to previous messages and resources</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Strong security and privacy protections</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Fast performance without crashes or bugs</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700">Additional tools like journaling and worksheets</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section id="comparison-table" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Key Features Comparison Table</h2>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Platform</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">iOS Rating</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Android Rating</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Video</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Messaging</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Offline Mode</th>
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Worksheets</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">BetterHelp</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.8/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.4/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text/Audio/Video</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Talkspace</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.7/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.3/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text/Audio/Video</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cerebral</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.6/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.2/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text with Care Team</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-yellow-600">Partial</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Brightside</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.5/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.1/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-yellow-600">Partial</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Online-Therapy.com</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.3/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.0/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-red-600">No</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Extensive</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Calmerry</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.4/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.1/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-yellow-600">Partial</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pride Counseling</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.6/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.3/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text/Audio/Video</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ReGain</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.5/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">4.2/5</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Text/Audio/Video</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                  <td class="px-4 py-4 whitespace-nowrap text-sm text-green-600">Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* BetterHelp App Review */}
+        <section id="betterhelp-app" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+            <Smartphone className="h-8 w-8 text-indigo-600 mr-3" />
+            BetterHelp Mobile App Review
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-indigo-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">iOS App Store</span>
+                <span class="text-2xl font-bold text-indigo-600">4.8/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 500K+ ratings</p>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">Google Play Store</span>
+                <span class="text-2xl font-bold text-green-600">4.4/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 200K+ ratings</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Interface and Usability</h3>
+          <p class="text-gray-600 mb-4">
+            BetterHelp's mobile app is widely considered the gold standard for online therapy platforms. The interface is clean, intuitive, and professionally designed with a focus on ease of use. The home screen provides quick access to your messaging thread, upcoming sessions, and worksheets. Navigation is straightforward with a bottom tab bar that includes Home, Messages, Sessions, and Resources.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The messaging interface is particularly well-executed, with support for text, audio messages (up to 5 minutes), and video messages. Messages load quickly, and the app provides read receipts so you know when your therapist has seen your message. The typing indicator shows when your therapist is actively composing a response.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-6">Unique Features</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Standout Features</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Live chat option (text-based instant messaging during sessions)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Groupinars (group therapy webinars on various topics)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Extensive worksheet library with 200+ resources</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Journaling tool with prompts and mood tracking</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Calendar integration for scheduling</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">In-app payment management</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Performance & Stability</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Fast load times and smooth navigation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Reliable video sessions with good connection quality</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Minimal crashes or bugs reported</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Offline access to messages and worksheets</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Push notifications work consistently</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Regular updates with bug fixes and improvements</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-sm text-gray-700"><strong>Bottom Line:</strong> BetterHelp offers the most polished and feature-rich mobile app experience in the online therapy space. Both iOS and Android versions are excellent, though the iOS app has a slight edge in ratings and polish.</p>
+          </div>
+        </section>
+
+        {/* Talkspace App Review */}
+        <section id="talkspace-app" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+            <MessageSquare className="h-8 w-8 text-green-600 mr-3" />
+            Talkspace Mobile App Review
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-green-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">iOS App Store</span>
+                <span class="text-2xl font-bold text-green-600">4.7/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 350K+ ratings</p>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">Google Play Store</span>
+                <span class="text-2xl font-bold text-blue-600">4.3/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 180K+ ratings</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Interface and Usability</h3>
+          <p class="text-gray-600 mb-4">
+            Talkspace's mobile app is messaging-first by design, reflecting the platform's emphasis on asynchronous text communication. The interface is clean and modern, with a messaging thread that looks and feels like popular messaging apps, making it immediately familiar to users. The app opens directly to your conversation with your therapist, putting communication front and center.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The messaging experience is Talkspace's strongest feature. In addition to text, you can send audio messages (up to 10 minutes) and video messages (up to 10 minutes), which is longer than most competitors. The app displays a preview of audio and video messages before sending, and therapists can respond in kind with their own audio or video messages.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-6">Unique Features</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Standout Features</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Longer audio/video messages (10 min vs 5 min for most)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Unlimited messaging with no character limits</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Message scheduling for later delivery</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Crisis support resources integrated into app</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Psychiatry add-on available in-app</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Message favorites/bookmarks feature</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Performance & Stability</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Excellent messaging performance</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Good video session quality</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Offline mode for reading past messages</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Some users report notification delays</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Occasional audio/video upload issues</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Generally stable with regular updates</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-sm text-gray-700"><strong>Bottom Line:</strong> Talkspace excels in messaging functionality with the best asynchronous communication experience. The app is ideal for users who prefer text-based therapy but occasionally want the richness of audio or video messages.</p>
+          </div>
+        </section>
+
+        {/* Cerebral App Review */}
+        <section id="cerebral-app" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+            <Layout className="h-8 w-8 text-purple-600 mr-3" />
+            Cerebral Mobile App Review
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-purple-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">iOS App Store</span>
+                <span class="text-2xl font-bold text-purple-600">4.6/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 120K+ ratings</p>
+            </div>
+            <div class="bg-indigo-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">Google Play Store</span>
+                <span class="text-2xl font-bold text-indigo-600">4.2/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 85K+ ratings</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Interface and Usability</h3>
+          <p class="text-gray-600 mb-4">
+            Cerebral's app has a clean, medical-grade interface that reflects its focus on medication management and clinical care. The design is more polished and professional than many competitors, with a modern dashboard that displays your care plan, upcoming appointments, medication refill status, and progress tracking all on one screen.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Navigation is intuitive with clearly labeled sections for Care, Messages, Progress, and Account. The medication management features are particularly well-designed, with a dedicated section showing your current medications, dosage schedules, refill reminders, and the ability to request refills with one tap.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-6">Unique Features</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Standout Features</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Medication tracking and refill management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Symptom tracking with visual graphs</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Care team messaging (therapist + prescriber + care counselor)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Integrated care plan view</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Mood check-ins and assessments</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Insurance card scanner</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Performance & Stability</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Fast and responsive interface</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Reliable video sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Limited offline functionality</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Good push notification system</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Some users report scheduling glitches</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Regular feature updates</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-sm text-gray-700"><strong>Bottom Line:</strong> Cerebral's app offers the best user interface and is particularly strong for medication management. The clinical dashboard and progress tracking features are unmatched, making it ideal for users who need both therapy and medication support.</p>
+          </div>
+        </section>
+
+        {/* Brightside App Review */}
+        <section id="brightside-app" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+            <TrendingUp className="h-8 w-8 text-yellow-600 mr-3" />
+            Brightside Mobile App Review
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-yellow-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">iOS App Store</span>
+                <span class="text-2xl font-bold text-yellow-600">4.5/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 45K+ ratings</p>
+            </div>
+            <div class="bg-orange-50 rounded-lg p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-gray-800">Google Play Store</span>
+                <span class="text-2xl font-bold text-orange-600">4.1/5</span>
+              </div>
+              <p class="text-sm text-gray-600">Based on 28K+ ratings</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Interface and Usability</h3>
+          <p class="text-gray-600 mb-4">
+            Brightside's app takes a data-driven approach to mental health with a dashboard that emphasizes progress tracking, symptom monitoring, and outcome measurement. The interface is clean and modern, with colorful graphs and charts that visualize your mental health journey over time.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The app's standout feature is its comprehensive progress tracking system. You'll regularly check in about your symptoms, mood, and side effects, and the app generates easy-to-understand visualizations that show your improvement. This data is shared with your care team to inform treatment decisions.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-6">Unique Features</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Standout Features</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Visual progress tracking with PHQ-9 and GAD-7 scores</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Side effect monitoring tools</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Regular symptom check-ins (2-3x per week)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Medication adherence tracking</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Personalized care plan recommendations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Educational content library</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Performance & Stability</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Smooth and responsive interface</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Good video session quality</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Limited offline mode</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Reliable push notifications for check-ins</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Few crashes reported</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Smaller user base means fewer reviews/ratings</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-sm text-gray-700"><strong>Bottom Line:</strong> Brightside's app is best for users who value data and want to closely monitor their mental health progress. The visualization tools are excellent, though the app is more focused on measurement than communication.</p>
+          </div>
+        </section>
+
+        {/* Other Platforms */}
+        <section id="other-platforms" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Other Platform Mobile Apps</h2>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-indigo-500 pl-4">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Online-Therapy.com</h3>
+              <div class="mb-2">
+                <span class="text-sm text-gray-600">iOS: 4.3/5 | Android: 4.0/5</span>
+              </div>
+              <p class="text-gray-600 mb-3">
+                Online-Therapy.com offers a structured, program-based app with extensive worksheets and CBT exercises. The app is more educational than communication-focused, with a comprehensive library of therapeutic content. However, it lacks offline mode and has a more dated interface compared to competitors.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Extensive worksheets</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">CBT focus</span>
+                <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">No offline mode</span>
+              </div>
+            </div>
+
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Calmerry</h3>
+              <div class="mb-2">
+                <span class="text-sm text-gray-600">iOS: 4.4/5 | Android: 4.1/5</span>
+              </div>
+              <p class="text-gray-600 mb-3">
+                Calmerry's app features a minimalist design that prioritizes simplicity. The interface is clean and uncluttered, making it easy to focus on your therapy. Messaging is straightforward with text-only communication and a simple scheduling system. The app is lighter on features but more affordable.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Minimalist design</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Affordable</span>
+                <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Limited features</span>
+              </div>
+            </div>
+
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Pride Counseling</h3>
+              <div class="mb-2">
+                <span class="text-sm text-gray-600">iOS: 4.6/5 | Android: 4.3/5</span>
+              </div>
+              <p class="text-gray-600 mb-3">
+                Pride Counseling uses the same platform as BetterHelp (it's part of the same company) but with LGBTQ+-focused branding and resources. The app offers all the same features as BetterHelp including text, audio, and video messaging, plus specialized content for LGBTQ+ mental health concerns.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Same platform as BetterHelp</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">LGBTQ+ specialized</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Excellent ratings</span>
+              </div>
+            </div>
+
+            <div class="border-l-4 border-pink-500 pl-4">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">ReGain</h3>
+              <div class="mb-2">
+                <span class="text-sm text-gray-600">iOS: 4.5/5 | Android: 4.2/5</span>
+              </div>
+              <p class="text-gray-600 mb-3">
+                ReGain's app is designed for couples therapy and uses the same platform as BetterHelp. The app supports multiple users (both partners) accessing the same therapy room, with shared messaging, video sessions, and worksheets. Both partners receive notifications and can participate equally.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Couples-focused</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Multi-user support</span>
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Strong features</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Rankings */}
+        <section id="rankings" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Best Mobile App Rankings</h2>
+
+          <div class="space-y-6">
+            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Star className="h-8 w-8 text-yellow-600 mr-3" />
+                <h3 class="text-2xl font-bold text-gray-800">Overall Best Mobile App</h3>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xl font-bold text-gray-800">1. BetterHelp</span>
+                  <span class="text-2xl font-bold text-indigo-600">4.5/5</span>
+                </div>
+                <p class="text-gray-600">Most polished interface, best feature set, excellent performance on both iOS and Android.</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xl font-bold text-gray-800">2. Talkspace</span>
+                  <span class="text-2xl font-bold text-green-600">4.4/5</span>
+                </div>
+                <p class="text-gray-600">Outstanding messaging experience with longer audio/video messages.</p>
+              </div>
+              <div class="bg-white rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xl font-bold text-gray-800">3. Cerebral</span>
+                  <span class="text-2xl font-bold text-purple-600">4.3/5</span>
+                </div>
+                <p class="text-gray-600">Best UI design and medication management features.</p>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="border-2 border-indigo-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <MessageSquare className="h-6 w-6 text-indigo-600 mr-2" />
+                  Best for Messaging
+                </h3>
+                <ol class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="font-bold text-indigo-600 mr-2">1.</span>
+                    <span class="text-gray-700">Talkspace - 10-minute audio/video messages</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-indigo-600 mr-2">2.</span>
+                    <span class="text-gray-700">BetterHelp - Text, audio, video, live chat</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-indigo-600 mr-2">3.</span>
+                    <span class="text-gray-700">Pride Counseling - Same as BetterHelp</span>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="border-2 border-green-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Video className="h-6 w-6 text-green-600 mr-2" />
+                  Best for Video Sessions
+                </h3>
+                <ol class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="font-bold text-green-600 mr-2">1.</span>
+                    <span class="text-gray-700">BetterHelp - Stable, high-quality video</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-green-600 mr-2">2.</span>
+                    <span class="text-gray-700">Cerebral - Medical-grade video quality</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-green-600 mr-2">3.</span>
+                    <span class="text-gray-700">Talkspace - Good quality with rare issues</span>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="border-2 border-purple-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Layout className="h-6 w-6 text-purple-600 mr-2" />
+                  Best UI/UX Design
+                </h3>
+                <ol class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="font-bold text-purple-600 mr-2">1.</span>
+                    <span class="text-gray-700">Cerebral - Clean, medical-grade interface</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-purple-600 mr-2">2.</span>
+                    <span class="text-gray-700">BetterHelp - Polished and professional</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-purple-600 mr-2">3.</span>
+                    <span class="text-gray-700">Brightside - Data-driven, visual approach</span>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="border-2 border-yellow-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Zap className="h-6 w-6 text-yellow-600 mr-2" />
+                  Best Additional Features
+                </h3>
+                <ol class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="font-bold text-yellow-600 mr-2">1.</span>
+                    <span class="text-gray-700">BetterHelp - Groupinars, journaling, 200+ worksheets</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-yellow-600 mr-2">2.</span>
+                    <span class="text-gray-700">Cerebral - Medication tracking, symptom monitoring</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-bold text-yellow-600 mr-2">3.</span>
+                    <span class="text-gray-700">Online-Therapy.com - Extensive CBT program</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* iOS vs Android */}
+        <section id="ios-vs-android" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">iOS vs Android: Key Differences</h2>
+
+          <p class="text-gray-600 mb-6">
+            While most platforms strive for feature parity between iOS and Android, there are some notable differences in ratings, performance, and user experience between the two operating systems.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="border-2 border-gray-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Smartphone className="h-6 w-6 text-gray-600 mr-2" />
+                iOS Apps (Apple App Store)
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Generally higher ratings across all platforms (0.2-0.4 points higher)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Slightly better performance and fewer crashes</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">More polished UI with better animations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Push notifications tend to be more reliable</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Slightly slower to receive some feature updates</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border-2 border-gray-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <Smartphone className="h-6 w-6 text-green-600 mr-2" />
+                Android Apps (Google Play Store)
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Slightly lower ratings (still good, just not as high as iOS)</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">More reports of bugs due to device fragmentation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Better notification customization options</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Often receives feature updates first</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Video quality can vary more by device</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="font-bold text-gray-800 mb-3">The Verdict</h3>
+            <p class="text-gray-700">
+              iOS apps generally offer a slightly better experience with higher polish and reliability, but Android apps are still excellent and fully functional. The differences are minor enough that your choice of phone shouldn't significantly impact your therapy experience. Choose the platform that works for your device—both operating systems are well-supported.
+            </p>
+          </div>
+        </section>
+
+        {/* Security */}
+        <section id="security" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+            <Lock className="h-8 w-8 text-indigo-600 mr-3" />
+            Security & Privacy Features
+          </h2>
+
+          <p class="text-gray-600 mb-6">
+            When discussing sensitive mental health information through a mobile app, security and privacy are paramount. All major online therapy platforms employ robust security measures to protect your data and comply with HIPAA regulations.
+          </p>
+
+          <div class="space-y-6 mb-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Standard Security Features</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">256-bit AES encryption for messages</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">TLS/SSL encryption for data in transit</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">HIPAA-compliant data storage</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">Secure video streaming protocols</span>
+                  </li>
+                </ul>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">Two-factor authentication (2FA)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">Biometric login (Face ID, fingerprint)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">Regular security audits</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">Automatic session timeouts</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Platform-Specific Privacy Features</h3>
+              <div class="space-y-3">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="font-bold text-gray-800 mb-2">BetterHelp & Related Platforms</div>
+                  <p class="text-sm text-gray-600">Optional nickname/alias instead of real name, app lock with PIN/biometrics, ability to delete account and all data.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="font-bold text-gray-800 mb-2">Talkspace</div>
+                  <p class="text-sm text-gray-600">End-to-end encrypted messaging option (premium), anonymous signup option, detailed privacy controls.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="font-bold text-gray-800 mb-2">Cerebral</div>
+                  <p class="text-sm text-gray-600">Medical-grade security compliance, secure medication information handling, detailed activity logs.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="font-bold text-gray-800 mb-2">Brightside</div>
+                  <p class="text-sm text-gray-600">Clinical-grade data protection, separate data storage for medication info, transparent privacy policy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div class="flex items-start">
+              <Bell className="h-5 w-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <p class="text-sm text-gray-700 mb-2"><strong>Important Privacy Note:</strong> While therapy apps are secure, they do collect some data for app functionality and analytics. Review each platform's privacy policy to understand what data is collected, how it's used, and whether it's shared with third parties (for example, for marketing purposes).</p>
+                <p class="text-sm text-gray-700">Consider disabling push notification previews if you share your phone with others, as message previews could reveal you're in therapy.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pros & Cons */}
+        <section id="pros-cons" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Pros & Cons of Therapy Mobile Apps</h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
+                Advantages
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Access therapy anywhere, anytime from your phone</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Message your therapist during moments of need</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">More convenient than traveling to appointments</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Push notifications keep you engaged with therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Access to worksheets and resources on-the-go</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Ability to compose thoughtful messages over time</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Easy scheduling and appointment management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Progress tracking and journaling tools</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <XCircle className="h-6 w-6 text-red-500 mr-2" />
+                Disadvantages
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Requires reliable internet connection for full functionality</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Video sessions on small screens can be less personal</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Privacy concerns if phone is shared or accessed by others</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Notification previews could reveal you're in therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Battery drain during video sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Limited screen real estate for worksheets and documents</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Can be harder to find private space for mobile sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <XCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600">Typing longer messages can be cumbersome</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* User Reviews Summary */}
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">What Users Say About Therapy Apps</h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Positive Feedback</h3>
+              <div class="space-y-4">
+                <div class="bg-green-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"The app makes therapy so convenient. I can message my therapist while waiting in line at the store or during my lunch break. It's become a natural part of my day."</p>
+                  <p class="text-xs text-gray-600">- BetterHelp user, iOS</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"I love being able to send audio messages when I'm too emotional to type. My therapist responds with audio too, which feels more personal than text alone."</p>
+                  <p class="text-xs text-gray-600">- Talkspace user, Android</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"The medication tracking features are excellent. I never miss a dose and can easily request refills. The progress graphs help me see my improvement over time."</p>
+                  <p class="text-xs text-gray-600">- Cerebral user, iOS</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Common Complaints</h3>
+              <div class="space-y-4">
+                <div class="bg-red-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"The app sometimes doesn't send push notifications when my therapist messages me. I have to manually check the app to see if there are new messages."</p>
+                  <p class="text-xs text-gray-600">- Talkspace user, Android</p>
+                </div>
+                <div class="bg-red-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"Video sessions work fine on my laptop but frequently freeze or have audio issues on my phone. The mobile experience needs improvement."</p>
+                  <p class="text-xs text-gray-600">- Online-Therapy.com user, Android</p>
+                </div>
+                <div class="bg-red-50 rounded-lg p-4">
+                  <p class="text-sm text-gray-700 italic mb-2">"I wish there was a better way to hide the app or secure it. Anyone picking up my phone can see I'm using a therapy app from the notifications."</p>
+                  <p class="text-xs text-gray-600">- BetterHelp user, iOS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom Line */}
+        <section id="bottom-line" class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 mb-8 text-white">
+          <h2 class="text-3xl font-bold mb-6">The Bottom Line</h2>
+          <p class="text-lg mb-4">
+            Mobile apps have become essential to the online therapy experience, transforming mental health care into something accessible from anywhere at any time. The best therapy apps combine intuitive design, reliable performance, comprehensive features, and strong security to create a seamless therapeutic experience.
+          </p>
+          <p class="text-lg mb-4">
+            <strong>BetterHelp</strong> stands out as the overall best mobile app with its polished interface, extensive features including live chat and groupinars, and excellent performance on both iOS and Android. It's the most complete package for users who want the best possible mobile therapy experience.
+          </p>
+          <p class="text-lg mb-4">
+            <strong>Talkspace</strong> is the best choice for users focused on messaging therapy, with longer audio and video messages (10 minutes) and an interface optimized for asynchronous communication. <strong>Cerebral</strong> offers the most visually appealing interface and is unmatched for medication management features.
+          </p>
+          <p class="text-lg mb-4">
+            When choosing a therapy platform, don't overlook the mobile app experience. If you'll primarily access therapy on your phone, download a few apps and explore their interfaces before committing. Read recent app store reviews to identify any current issues, and consider whether the app's strengths align with how you plan to engage with therapy.
+          </p>
+          <div class="bg-white bg-opacity-20 rounded-lg p-6 mt-6">
+            <p class="text-xl font-bold mb-3">Final Recommendation</p>
+            <p class="text-lg">
+              For most users, BetterHelp offers the best overall mobile app experience. However, choose Talkspace if messaging is your priority, Cerebral if you need medication management, or Pride Counseling/ReGain if you need specialized LGBTQ+ or couples therapy with excellent app functionality.
+            </p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Do I need to use the mobile app or can I use a web browser?</h3>
+              <p class="text-gray-600">
+                Most platforms offer both mobile apps and web browser access, giving you flexibility in how you connect with your therapist. However, mobile apps typically offer a better experience with features like push notifications, offline access to messages, and optimized video sessions. You can switch between mobile and web seamlessly—your messages and sessions sync across all devices.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Which therapy app works best on older phones?</h3>
+              <p class="text-gray-600">
+                BetterHelp and Talkspace are optimized to work well on older devices with lower specs. Both apps have relatively small file sizes and don't require the latest operating system versions. Cerebral and Brightside have more modern interfaces that may perform better on newer devices. If you have an older phone (3+ years old), check the minimum OS requirements in the app store before signing up.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Can I do video therapy sessions on my phone or do I need a computer?</h3>
+              <p class="text-gray-600">
+                All major therapy platforms support video sessions on mobile devices. However, many therapists and users prefer larger screens (tablets or computers) for video sessions as they provide a more immersive, personal experience. Mobile video works well in a pinch or for shorter check-ins, but consider using a larger device for your primary therapy sessions if possible.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">How much data do therapy apps use?</h3>
+              <p class="text-gray-600">
+                Text messaging uses minimal data (negligible). Audio messages use about 1-5 MB per minute. Video messages and short video clips use about 10-20 MB per minute. Live video sessions use approximately 100-300 MB per hour depending on quality settings. If you're on a limited data plan, use Wi-Fi for video sessions and consider downloading worksheets and resources while on Wi-Fi for offline access.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Are therapy apps really secure on mobile devices?</h3>
+              <p class="text-gray-600">
+                Yes, reputable therapy apps use bank-level encryption and are HIPAA-compliant, making them secure for discussing sensitive health information. However, you should take additional precautions: use a strong password or biometric login, enable app lock features if available, disable notification previews if you share your phone, and avoid using public Wi-Fi for video sessions without a VPN. The apps themselves are secure, but you need to use them securely.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Reviews */}
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Related Reviews</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <a href="/reviews/platforms/betterhelp-review" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+              <h4 class="font-bold text-gray-800 mb-2">BetterHelp Full Review</h4>
+              <p class="text-sm text-gray-600">Complete analysis of BetterHelp's platform, pricing, and effectiveness</p>
+            </a>
+            <a href="/reviews/platforms/talkspace-review" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+              <h4 class="font-bold text-gray-800 mb-2">Talkspace Full Review</h4>
+              <p class="text-sm text-gray-600">In-depth review of Talkspace's messaging-focused therapy</p>
+            </a>
+            <a href="/reviews/features/user-interface" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+              <h4 class="font-bold text-gray-800 mb-2">User Interface Comparison</h4>
+              <p class="text-sm text-gray-600">Platform-by-platform UI/UX analysis and rankings</p>
+            </a>
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mt-12">
+          <h2 class="text-3xl font-bold mb-4">Ready to Try Online Therapy?</h2>
+          <p class="text-xl mb-6 max-w-2xl mx-auto">
+            Download one of these highly-rated therapy apps and start your mental health journey today. Most platforms offer free consultations to help you get started.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={betterhelp?.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-md hover:bg-gray-100 transition font-bold">
+              Try BetterHelp
+            </a>
+            <a href={talkspace?.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white text-green-600 px-8 py-3 rounded-md hover:bg-gray-100 transition font-bold">
+              Try Talkspace
+            </a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white hover:bg-opacity-10 transition font-bold">
+              Compare All Platforms
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </BaseLayout>

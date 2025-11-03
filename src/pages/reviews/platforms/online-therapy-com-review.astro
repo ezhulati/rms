@@ -11,8 +11,9 @@ const renderStars = (rating: number) => {
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -24,7 +25,7 @@ const renderStars = (rating: number) => {
               />
             </div>
             <div class="p-8 md:w-1/2">
-              <h1 class="text-3xl font-bold text-gray-800 mb-4">Online-Therapy.com Review</h1>
+              <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Online-Therapy.com Review</h1>
               <div class="flex items-center mb-4">
                 <div class="mr-2">
                   {renderStars(4)}
@@ -59,7 +60,12 @@ const renderStars = (rating: number) => {
             </div>
           </div>
         </div>
+    </div>
+  </section>
 
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
         {/* How We Reviewed */}
         
 
@@ -74,6 +80,6 @@ const renderStars = (rating: number) => {
             <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Perfect Match</a>
           </div>
         </div>
-      </div>
     </div>
+  </section>
 </BaseLayout>

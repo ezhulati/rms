@@ -18,17 +18,24 @@ const features = [];
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Online Therapy for Veterans</h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Find specialized online therapy platforms that understand and support the unique mental health needs of military veterans.
-          </p>
-          <div class="flex justify-center">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect veteran therapy match</a>
-          </div>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Veterans</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Find specialized online therapy platforms that understand and support the unique mental health needs of military veterans.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect veteran therapy match</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Quick Summary */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-10">
@@ -428,6 +435,6 @@ const features = [];
             <a href="/learn/fundamentals/therapy-types-explained" class="border-white text-white hover:bg-white hover:bg-opacity-10">Learn About Therapy Types</a>
           </div>
         </div>
-      </div>
     </div>
+  </section>
 </BaseLayout>

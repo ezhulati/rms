@@ -4,24 +4,25 @@ import { cn } from '../lib/utils';
 import { ArrowRight } from 'lucide-react';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 shadow-sm hover:shadow-md',
   {
     variants: {
       variant: {
-        primary: 'bg-emerald-500 hover:bg-emerald-600 text-white focus-visible:ring-emerald-500',
-        secondary: 'bg-cyan-500 hover:bg-cyan-600 text-white focus-visible:ring-cyan-500',
-        indigo: 'bg-indigo-600 hover:bg-indigo-700 text-white focus-visible:ring-indigo-600',
-        purple: 'bg-purple-600 hover:bg-purple-700 text-white focus-visible:ring-purple-600',
-        outline: 'border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-50 focus-visible:ring-emerald-500',
-        outlineWhite: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600 focus-visible:ring-white',
-        dark: 'bg-gray-800 hover:bg-gray-900 text-white focus-visible:ring-gray-800',
-        light: 'bg-white hover:bg-gray-100 text-gray-800 border border-gray-200 focus-visible:ring-gray-400',
-        ghost: 'hover:bg-gray-100 text-gray-700',
-        link: 'text-indigo-600 hover:text-indigo-800 underline-offset-4 hover:underline',
+        primary: 'bg-brand-primary-500 hover:bg-brand-primary-600 active:bg-brand-primary-700 text-white focus-visible:ring-brand-primary-500',
+        secondary: 'bg-brand-secondary-500 hover:bg-brand-secondary-600 active:bg-brand-secondary-700 text-white focus-visible:ring-brand-secondary-500',
+        accent: 'bg-brand-accent-400 hover:bg-brand-accent-500 active:bg-brand-accent-600 text-white focus-visible:ring-brand-accent-400',
+        coral: 'bg-brand-coral-500 hover:bg-brand-coral-600 active:bg-brand-coral-700 text-white focus-visible:ring-brand-coral-500',
+        outline: 'border-2 border-brand-primary-500 text-brand-primary-600 hover:bg-brand-primary-50 active:bg-brand-primary-100 focus-visible:ring-brand-primary-500 shadow-none',
+        outlineSecondary: 'border-2 border-brand-secondary-500 text-brand-secondary-600 hover:bg-brand-secondary-50 active:bg-brand-secondary-100 focus-visible:ring-brand-secondary-500 shadow-none',
+        outlineWhite: 'border-2 border-white text-white hover:bg-white hover:text-brand-primary-600 focus-visible:ring-white shadow-none',
+        dark: 'bg-neutral-800 hover:bg-neutral-900 text-white focus-visible:ring-neutral-800',
+        light: 'bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200 focus-visible:ring-neutral-400',
+        ghost: 'hover:bg-neutral-100 active:bg-neutral-200 text-neutral-700 shadow-none',
+        link: 'text-brand-primary-600 hover:text-brand-primary-700 underline-offset-4 hover:underline shadow-none',
       },
       size: {
         sm: 'px-4 py-2 text-sm',
-        md: 'px-6 py-2.5 text-base',
+        md: 'px-6 py-3 text-base',
         lg: 'px-8 py-3 text-lg',
         xl: 'px-8 py-4 text-lg',
       },

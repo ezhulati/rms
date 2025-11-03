@@ -1,12 +1,816 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield, Pill, Clock, TrendingUp, Info } from 'lucide-react';
 ---
 
-<BaseLayout title="Depression Medication Guide | RealMindSolutions" description="Depression Medication Guide">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Depression Medication Guide</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Comprehensive guide to depression medications.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Complete Guide to Depression Medications</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Antidepressants can be a crucial part of depression treatment. Learn about different types of medications, how they work, what to expect, and how to work with your doctor to find the right option for you.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Antidepressants at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <TrendingUp class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Effectiveness</h3>
+                <p class="text-gray-600">60-80% of people respond to treatment</p>
+                <p class="text-sm text-gray-500 mt-1">Often with first or second medication tried</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Clock class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Timeline</h3>
+                <p class="text-gray-600">2-6 weeks to notice improvement</p>
+                <p class="text-sm text-gray-500 mt-1">4-8 weeks for full benefit</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Combination Treatment</h3>
+                <p class="text-gray-600">Most effective with therapy</p>
+                <p class="text-sm text-gray-500 mt-1">Better outcomes than medication alone</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Safety</h3>
+                <p class="text-gray-600">Generally well-tolerated</p>
+                <p class="text-sm text-gray-500 mt-1">Side effects often manageable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Antidepressants - SSRIs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Antidepressants</h2>
+
+          <div class="space-y-6">
+            <div class="bg-blue-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Pill class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">SSRIs (Selective Serotonin Reuptake Inhibitors)</h3>
+              </div>
+              <p class="text-gray-700 mb-4">
+                The most commonly prescribed antidepressants. SSRIs work by increasing serotonin levels in the brain, which helps regulate mood. They're usually the first-line treatment due to their effectiveness and tolerability.
+              </p>
+              
+              <div class="mb-4">
+                <h4 class="font-bold text-gray-800 mb-2">How They Work:</h4>
+                <p class="text-gray-700">
+                  SSRIs block the reabsorption (reuptake) of serotonin in the brain, making more serotonin available to improve mood and reduce anxiety.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Common SSRIs:</h5>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Fluoxetine (Prozac):</strong> Long-acting, good for depression and OCD
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Sertraline (Zoloft):</strong> Effective for depression, anxiety, and PTSD
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Escitalopram (Lexapro):</strong> Well-tolerated, good for anxiety
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Citalopram (Celexa):</strong> Similar to Lexapro, lower cost
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Paroxetine (Paxil):</strong> Helpful for anxiety disorders
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Common Side Effects:</h5>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Nausea (usually temporary)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Sleep changes (insomnia or drowsiness)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Sexual side effects (30-40% of users)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Weight changes (varies by medication)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Headache or dizziness initially</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* SNRIs */}
+            <div class="bg-purple-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Pill class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors)</h3>
+              </div>
+              <p class="text-gray-700 mb-4">
+                SNRIs increase both serotonin and norepinephrine levels. They're often prescribed when SSRIs don't work or for depression with chronic pain or fatigue.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-bold text-gray-800 mb-2">How They Work:</h4>
+                <p class="text-gray-700">
+                  Like SSRIs but also affect norepinephrine, which can help with energy, focus, and pain management alongside mood improvement.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Common SNRIs:</h5>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Venlafaxine (Effexor XR):</strong> Depression with anxiety or pain
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Duloxetine (Cymbalta):</strong> Depression plus chronic pain or fibromyalgia
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <div>
+                        <strong>Desvenlafaxine (Pristiq):</strong> Similar to Effexor, fewer drug interactions
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Common Side Effects:</h5>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Similar to SSRIs (nausea, sleep changes)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Increased blood pressure (monitor regularly)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Sweating</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Info class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Discontinuation symptoms if stopped abruptly</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Atypical Antidepressants */}
+            <div class="bg-green-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Pill class="h-6 w-6 text-green-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Atypical Antidepressants</h3>
+              </div>
+              <p class="text-gray-700 mb-4">
+                Medications that work through different mechanisms than SSRIs or SNRIs. Often used when other antidepressants cause problematic side effects or don't work.
+              </p>
+
+              <div class="space-y-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Bupropion (Wellbutrin, Zyban)</h5>
+                  <p class="text-gray-700 mb-2">
+                    <strong>How it works:</strong> Increases dopamine and norepinephrine without affecting serotonin.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Benefits:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• No sexual side effects</li>
+                        <li>• Can help with energy and focus</li>
+                        <li>• May aid smoking cessation</li>
+                        <li>• Less likely to cause weight gain</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Side Effects:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• Insomnia or restlessness</li>
+                        <li>• Increased anxiety initially</li>
+                        <li>• Slightly increased seizure risk</li>
+                        <li>• Dry mouth</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Mirtazapine (Remeron)</h5>
+                  <p class="text-gray-700 mb-2">
+                    <strong>How it works:</strong> Increases norepinephrine and serotonin through different pathways.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Benefits:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• Helps with sleep and appetite</li>
+                        <li>• Good for depression with insomnia</li>
+                        <li>• Works relatively quickly</li>
+                        <li>• Fewer sexual side effects</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Side Effects:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• Sedation (especially at lower doses)</li>
+                        <li>• Increased appetite/weight gain</li>
+                        <li>• Dry mouth</li>
+                        <li>• Dizziness</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Vilazodone (Viibryd) and Vortioxetine (Trintellix)</h5>
+                  <p class="text-gray-700 mb-2">
+                    <strong>How they work:</strong> Newer medications that affect serotonin through multiple mechanisms.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Benefits:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• May help with cognitive symptoms</li>
+                        <li>• Lower risk of sexual side effects</li>
+                        <li>• Good for anxiety with depression</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-800 mb-1">Side Effects:</p>
+                      <ul class="space-y-1 text-sm">
+                        <li>• Nausea (especially Viibryd)</li>
+                        <li>• Diarrhea</li>
+                        <li>• Often more expensive (newer)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* TCAs and MAOIs */}
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Pill class="h-6 w-6 text-yellow-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">TCAs and MAOIs (Older Antidepressants)</h3>
+              </div>
+              <p class="text-gray-700 mb-4">
+                These older medications are effective but have more side effects and safety concerns. They're usually reserved for treatment-resistant depression when newer options haven't worked.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">Tricyclic Antidepressants (TCAs)</h5>
+                  <p class="text-gray-700 mb-2 text-sm">
+                    Examples: Amitriptyline, Nortriptyline, Imipramine
+                  </p>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Very effective for severe depression</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Can help with chronic pain</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span>More side effects (dry mouth, constipation, drowsiness)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span>Can affect heart rhythm (require monitoring)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h5 class="font-bold text-gray-800 mb-2">MAO Inhibitors (MAOIs)</h5>
+                  <p class="text-gray-700 mb-2 text-sm">
+                    Examples: Phenelzine (Nardil), Tranylcypromine (Parnate)
+                  </p>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Effective for atypical depression</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span>Can work when other antidepressants fail</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span>Strict dietary restrictions (no tyramine foods)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle class="h-4 w-4 text-yellow-500 mr-2 mt-0.5" />
+                      <span>Dangerous drug interactions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How Antidepressants Work */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How Antidepressants Work</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg mb-4">
+              Antidepressants work by changing the balance of neurotransmitters in your brain - chemical messengers that affect mood, sleep, appetite, and other functions.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Serotonin</h3>
+              <p class="text-gray-700">
+                Regulates mood, anxiety, sleep, and appetite. Most antidepressants increase serotonin availability in the brain, which helps stabilize mood and reduce anxiety.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Norepinephrine</h3>
+              <p class="text-gray-700">
+                Affects energy, alertness, and focus. SNRIs and some atypical antidepressants increase norepinephrine, which can help with fatigue and concentration problems.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Dopamine</h3>
+              <p class="text-gray-700">
+                Involved in pleasure, motivation, and reward. Bupropion increases dopamine, which can help with low motivation and anhedonia (inability to feel pleasure).
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Important: It Takes Time</h3>
+            <p class="text-gray-700 mb-3">
+              Antidepressants don't work immediately because they need time to create lasting changes in brain chemistry and neural connections. Here's what typically happens:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span><strong>Days 1-7:</strong> Neurotransmitter levels begin to change, but you likely won't notice improvements yet. Side effects may appear.</span>
+              </li>
+              <li class="flex items-start">
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span><strong>Weeks 2-4:</strong> You might start noticing subtle improvements - better sleep, slightly more energy, or less severe low moods.</span>
+              </li>
+              <li class="flex items-start">
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span><strong>Weeks 4-8:</strong> More noticeable improvements in mood, energy, concentration, and overall functioning.</span>
+              </li>
+              <li class="flex items-start">
+                <Clock class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                <span><strong>Weeks 8-12:</strong> Full therapeutic effect. If you haven't seen improvement by week 6-8, talk to your doctor about adjusting dose or trying a different medication.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Side Effects */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Managing Side Effects</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              Most side effects are temporary and improve within 2-4 weeks as your body adjusts. Here's how to manage common ones:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Common Side Effects</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Nausea</h4>
+                  <p class="text-gray-700 text-sm">Take with food, start with lower dose, try ginger tea. Usually resolves in 1-2 weeks.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Sleep Changes</h4>
+                  <p class="text-gray-700 text-sm">If drowsy: take at bedtime. If insomnia: take in morning. May need sleep hygiene improvements.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Sexual Side Effects</h4>
+                  <p class="text-gray-700 text-sm">Affect 30-40% of SSRI/SNRI users. Talk to doctor about dose adjustments, drug holidays, or switching medications.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Weight Changes</h4>
+                  <p class="text-gray-700 text-sm">Varies by medication. Monitor appetite/activity. Some antidepressants are weight-neutral (Wellbutrin, Trintellix).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">When to Call Your Doctor</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Severe or worsening depression or suicidal thoughts (call immediately)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Unusual agitation, restlessness, or impulsivity</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Manic symptoms (racing thoughts, decreased sleep need, risky behavior)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Severe nausea, vomiting, or diarrhea</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Rash, hives, or difficulty breathing (allergic reaction)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Side effects that don't improve after 2-3 weeks</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Medication + Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Why Medication + Therapy Works Best</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg mb-4">
+              Research consistently shows that combining antidepressants with psychotherapy produces better outcomes than either treatment alone. Here's why:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">What Medication Does</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Corrects chemical imbalances in the brain</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Reduces severe symptoms like suicidal thoughts</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Improves sleep, appetite, and energy</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Creates the foundation for you to engage in therapy</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">What Therapy Does</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                  <span>Teaches coping skills and problem-solving strategies</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                  <span>Changes negative thought patterns</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                  <span>Addresses life circumstances and relationships</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                  <span>Provides relapse prevention strategies</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-green-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">The Research</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <Star class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                <span>Combination therapy has a 75-85% response rate compared to 50-60% for medication alone</span>
+              </li>
+              <li class="flex items-start">
+                <Star class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                <span>Lower relapse rates when therapy is included (therapy teaches long-term coping skills)</span>
+              </li>
+              <li class="flex items-start">
+                <Star class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                <span>People who do combination treatment often can eventually discontinue medication successfully</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Stopping Safely */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Stopping Antidepressants Safely</h2>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Never Stop Abruptly</h3>
+            <p class="text-gray-700">
+              Suddenly stopping antidepressants can cause uncomfortable and potentially dangerous withdrawal symptoms (called "discontinuation syndrome"). Always taper off under medical supervision.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Discontinuation Symptoms</h3>
+              <p class="text-gray-700 mb-3">
+                These symptoms typically start within 2-4 days of stopping and can last 1-3 weeks:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Flu-like symptoms (fatigue, muscle aches)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Dizziness or vertigo</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>"Brain zaps" or electric shock sensations</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Nausea, vomiting, diarrhea</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Irritability, anxiety, or mood swings</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Sleep disturbances or vivid dreams</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Safe Tapering Schedule</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Typical Taper</h4>
+                  <p class="text-gray-700 mb-2">
+                    Your doctor will gradually reduce your dose over several weeks to months, depending on:
+                  </p>
+                  <ul class="space-y-1 text-sm">
+                    <li>• How long you've been taking the medication</li>
+                    <li>• Your current dose</li>
+                    <li>• The specific medication (some are harder to stop)</li>
+                    <li>• Your history of withdrawal symptoms</li>
+                  </ul>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">When to Consider Stopping</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>You've been symptom-free for 6-12 months</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>You've learned coping skills in therapy</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Your life circumstances are stable</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>You have good support systems</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Long-Term Use is Okay</h3>
+            <p class="text-gray-700">
+              Many people take antidepressants long-term (years or even indefinitely), especially if they have recurrent depression. This is safe and often necessary. It's like taking blood pressure medication - if it keeps you healthy and functioning, there's no arbitrary timeline to stop.
+            </p>
+          </div>
+        </div>
+
+        {/* When to Seek Help */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">When to Consider Medication</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">You Might Benefit from Medication If:</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You have moderate to severe depression that interferes with daily life</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Therapy alone hasn't been enough to improve symptoms</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You're too depressed to fully engage in therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You have recurrent depression (3+ episodes)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You have thoughts of self-harm or suicide</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Depression runs in your family (genetic component)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Finding Psychiatric Care</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  Several types of providers can prescribe antidepressants:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span><strong>Psychiatrists:</strong> Medical doctors specializing in mental health medications</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span><strong>Primary care doctors:</strong> Can prescribe for uncomplicated depression</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Users class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span><strong>Psychiatric NPs/PAs:</strong> Nurse practitioners or physician assistants specializing in mental health</span>
+                  </li>
+                </ul>
+                <div class="mt-6">
+                  <a href="/best/specialties/best-for-psychiatry" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Psychiatric Care</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/depression-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Depression Screening Assessment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/medication-tracker" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Medication Tracking Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/side-effects-log" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Side Effects Log</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/learn/fundamentals/depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Depression</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/best/conditions/best-for-depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Best Platforms for Depression Treatment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/best/specialties/best-for-psychiatry" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Best Online Psychiatry Services</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Explore Medication Options?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Connect with a psychiatrist or psychiatric provider who can evaluate your symptoms and discuss whether medication might be right for you.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/depression-screening" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Depression Assessment</a>
+            <a href="/best/specialties/best-for-psychiatry" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Psychiatric Care</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

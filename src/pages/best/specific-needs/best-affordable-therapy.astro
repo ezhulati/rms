@@ -1,12 +1,356 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { CheckCircle, XCircle, DollarSign, TrendingDown, Gift, CreditCard } from 'lucide-react';
+
+// Get affordable platforms
+const calmerry = getPlatformBySlug('calmerry');
+const onlineTherapy = getPlatformBySlug('online-therapy-com');
+const betterhelp = getPlatformBySlug('betterhelp');
+const talkspace = getPlatformBySlug('talkspace');
+
+const topPlatforms = [calmerry, onlineTherapy, betterhelp, talkspace].filter(Boolean);
 ---
 
-<BaseLayout title="Best Affordable Therapy | RealMindSolutions" description="Best Affordable Therapy Options">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Affordable Therapy Options</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Most affordable online therapy platforms.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Affordable Online Therapy 2025</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Quality mental health care doesn't have to break the bank. Compare the most affordable online therapy platforms with financial aid options and budget-friendly pricing.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Affordable Therapy</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Most Affordable Options</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {calmerry && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Lowest Price
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{calmerry.name}</h3>
+                  <span class="text-gray-600">{calmerry.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Most affordable option with licensed therapists. Video sessions and messaging starting at just $42/week.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {calmerry.price}
+                </div>
+                <a href={`/reviews/platforms/${calmerry.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+
+            {onlineTherapy && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Best Value
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{onlineTherapy.name}</h3>
+                  <span class="text-gray-600">{onlineTherapy.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  CBT-focused therapy with comprehensive worksheets and resources. Great value for structured programs.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {onlineTherapy.price}
+                </div>
+                <a href={`/reviews/platforms/${onlineTherapy.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+
+            {betterhelp && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Financial Aid Available
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{betterhelp.name}</h3>
+                  <span class="text-gray-600">{betterhelp.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Largest network with financial assistance for qualifying individuals. Quality therapy at reduced rates.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {betterhelp.price}
+                </div>
+                <a href={`/reviews/platforms/${betterhelp.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Making Therapy Affordable */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Make Therapy More Affordable</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Cost-Saving Options</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <Gift class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Financial Aid:</strong> Many platforms offer sliding scale fees based on income</span>
+                </li>
+                <li class="flex items-start">
+                  <TrendingDown class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Lower-Cost Platforms:</strong> Choose platforms designed with affordability in mind ($40-90/week)</span>
+                </li>
+                <li class="flex items-start">
+                  <CreditCard class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Flexible Subscriptions:</strong> Monthly billing with no long-term contracts or cancellation fees</span>
+                </li>
+                <li class="flex items-start">
+                  <DollarSign class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Messaging-First:</strong> Platforms emphasizing text therapy often cost less than video-only services</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">What You Get</h3>
+              <p class="text-gray-600 mb-4">
+                Affordable therapy still provides quality care:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Licensed, vetted therapists with proper credentials</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Unlimited messaging between live sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Weekly video or phone sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>HIPAA-compliant, secure platforms</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Ability to switch therapists at no extra cost</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews</h2>
+
+          {topPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.pricing.financialAid !== 'Not Available' ? (
+                          <Gift class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Financial Aid</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <a href={`/reviews/platforms/${platform.slug}-review`} class="w-full min-w-0 justify-center">Read Full Review</a>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Overview</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.slice(0, 4).map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.slice(0, 4).map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.slice(0, 4).map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Table */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Price Comparison</h2>
+
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b-2 border-gray-200">
+                  <th class="text-left py-3 px-4">Platform</th>
+                  <th class="text-left py-3 px-4">Price Range</th>
+                  <th class="text-left py-3 px-4">Rating</th>
+                  <th class="text-left py-3 px-4">Financial Aid</th>
+                  <th class="text-left py-3 px-4">Billing</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topPlatforms.map((platform) => (
+                  <tr key={platform.slug} class="border-b border-gray-200 hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium">{platform.name}</td>
+                    <td class="py-3 px-4">{platform.price}</td>
+                    <td class="py-3 px-4">{platform.rating}/5</td>
+                    <td class="py-3 px-4">
+                      {platform.pricing.financialAid !== 'Not Available' ? (
+                        <CheckCircle class="h-5 w-5 text-green-500" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500" />
+                      )}
+                    </td>
+                    <td class="py-3 px-4">{platform.pricing.billingCycle}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is affordable online therapy effective?</h3>
+              <p class="text-gray-600">
+                Yes! Lower-cost platforms still employ licensed, qualified therapists. The reduced price often comes from operational efficiencies and subscription models, not reduced quality of care.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How can I get financial assistance for therapy?</h3>
+              <p class="text-gray-600">
+                Many platforms like BetterHelp, Calmerry, and Online-Therapy.com offer financial aid or sliding scale fees. You'll typically fill out a brief form about your financial situation during sign-up to see if you qualify for reduced rates.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What's the cheapest online therapy option?</h3>
+              <p class="text-gray-600">
+                Calmerry offers the lowest starting price at $42/week. Online-Therapy.com starts at $40/week for their basic plan. Both provide quality care with licensed therapists at budget-friendly prices.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can I cancel if I can't afford to continue?</h3>
+              <p class="text-gray-600">
+                Most affordable platforms offer monthly subscriptions with no long-term contracts. You can cancel anytime without penalties. Always check the specific cancellation policy before signing up.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Are there free online therapy options?</h3>
+              <p class="text-gray-600">
+                While truly free professional therapy is rare, some platforms offer significant financial aid that can reduce costs substantially. Community mental health centers and crisis hotlines also provide free support, though they differ from ongoing therapy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Choosing Affordable Therapy</h2>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              For affordable online therapy:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Calmerry</strong> offers the lowest prices without compromising on therapist quality or platform features</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Online-Therapy.com</strong> provides excellent value with CBT programs and comprehensive resources</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>BetterHelp</strong> with financial aid can match or beat lower-cost platforms while offering the largest therapist network</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Start Affordable Therapy Today</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Quality mental health care at prices that work for your budget.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition font-medium">Find Affordable Options</a>
+            <a href="/learn/fundamentals/therapy-types-explained" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Learn More</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

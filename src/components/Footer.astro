@@ -1,17 +1,24 @@
 ---
-import { Brain, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-sb-dark-900 text-white">
-  <div class="sb-container py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+  <div class="w-full py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       {/* Company Info */}
       <div>
-        <div class="flex items-center space-x-2 mb-4">
-          <Brain className="h-8 w-8 text-emerald-400" />
-          <span class="text-xl font-bold">RealMindSolutions</span>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/images/RMS_icon.svg" alt="RealMindSolutions Logo" class="h-8 w-8" />
+          <div class="flex flex-col leading-none">
+            <div class="flex items-baseline gap-1">
+              <span class="text-lg font-heading font-black text-white tracking-tight">Real</span>
+              <span class="text-[17px] font-serif italic font-bold text-brand-accent-400">Mind</span>
+            </div>
+            <span class="text-[9px] font-sans font-light text-sb-gray-700 tracking-[0.2em] uppercase">Solutions</span>
+          </div>
         </div>
         <p class="text-sb-gray-700 mb-4">
           Helping you find the right mental health solutions for your unique needs.
@@ -34,7 +41,7 @@ const currentYear = new Date().getFullYear();
 
       {/* Quick Links */}
       <div>
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
         <ul class="space-y-2">
           <li><a href="/compare" class="text-sb-gray-700 hover:text-emerald-400 transition-colors">Compare</a></li>
           <li><a href="/reviews" class="text-sb-gray-700 hover:text-emerald-400 transition-colors">Reviews</a></li>
@@ -47,7 +54,7 @@ const currentYear = new Date().getFullYear();
 
       {/* Resources */}
       <div>
-        <h3 class="text-lg font-semibold mb-4">Resources</h3>
+        <h3 class="text-lg font-semibold mb-4 text-white">Resources</h3>
         <ul class="space-y-2">
           <li><a href="/resources/worksheets" class="text-sb-gray-700 hover:text-emerald-400 transition-colors">Worksheets</a></li>
           <li><a href="/case-studies" class="text-sb-gray-700 hover:text-emerald-400 transition-colors">Case Studies</a></li>
@@ -59,37 +66,29 @@ const currentYear = new Date().getFullYear();
 
       {/* Contact */}
       <div>
-        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-        <ul class="space-y-3">
-          <li class="flex items-start space-x-3">
-            <MapPin className="h-5 w-5 text-emerald-400 mt-0.5" />
-            <span class="text-sb-gray-700">
-              123 Mental Health St.<br />Wellness City, WC 12345
-            </span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <Phone className="h-5 w-5 text-emerald-400" />
-            <span class="text-sb-gray-700">(555) 123-4567</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <Mail className="h-5 w-5 text-emerald-400" />
-            <span class="text-sb-gray-700">info@realmindsolutions.com</span>
-          </li>
-        </ul>
+        <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+        <p class="text-neutral-400 mb-4">
+          Have questions or feedback? We're here to help.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-2 text-brand-primary-400 hover:text-brand-primary-300 transition-colors font-semibold">
+          Get in Touch
+          <Mail className="h-4 w-4" />
+        </a>
       </div>
     </div>
 
-    <div class="border-t border-sb-dark-800 mt-12 pt-8 text-center text-sb-gray-700 text-sm">
-      <p>© {currentYear} RealMindSolutions. All rights reserved.</p>
-      <div class="mt-2 space-x-4">
-        <a href="/privacy-policy" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
-        <a href="/accessibility" class="hover:text-emerald-400 transition-colors">Accessibility</a>
-      </div>
-      <p class="mt-4">
+    <div class="border-t border-sb-dark-800 mt-12 pt-8 text-center text-neutral-400 text-sm">
+      <p class="mb-4 text-neutral-400">
         Disclaimer: RealMindSolutions provides information for educational purposes only.
         We are not a substitute for professional medical advice, diagnosis, or treatment.
       </p>
+      <p class="text-neutral-300">© {currentYear} RealMindSolutions. All rights reserved.</p>
+      <div class="mt-2 space-x-4">
+        <a href="/privacy-policy" class="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service" class="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Terms of Service</a>
+        <a href="/accessibility" class="text-brand-primary-400 hover:text-brand-primary-300 transition-colors">Accessibility</a>
+      </div>
+    </div>
     </div>
   </div>
 </footer>

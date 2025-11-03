@@ -20,21 +20,24 @@ const renderStars = (rating: number) => {
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {/* Hero Section */}
-        <div class="text-center mb-12">
-          <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Insurance-Friendly Online Therapy Platforms</h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Compare online therapy platforms that accept insurance to maximize your mental health benefits and minimize out-of-pocket costs.
-          </p>
-          <div class="flex justify-center">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find insurance-covered therapy</a>
-          </div>
-        </div>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Insurance-Friendly Online Therapy Platforms</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Compare online therapy platforms that accept insurance to maximize your mental health benefits and minimize out-of-pocket costs.
+      </p>
+      <div class="flex justify-center">
+        <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find insurance-covered therapy</a>
+      </div>
+    </div>
+  </section>
 
-        {/* Insurance Coverage Overview */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Insurance Coverage Overview */}
+      <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Insurance Coverage at a Glance</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -240,8 +243,8 @@ const renderStars = (rating: number) => {
           <div class="flex flex-wrap justify-center gap-4">
             <a href="/tools/matchers/insurance-coverage-checker" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Check Your Coverage</a>
             <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Insurance-Friendly Platforms</a>
-          </div>
         </div>
       </div>
     </div>
+  </section>
 </BaseLayout>

@@ -1,12 +1,466 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, AlertTriangle } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+// Select platforms best for PTSD and trauma
+const ptsdPlatforms = [
+  getPlatformBySlug('talkspace'),
+  getPlatformBySlug('betterhelp'),
+  getPlatformBySlug('online-therapy-com'),
+  getPlatformBySlug('brightside'),
+  getPlatformBySlug('cerebral')
+].filter(p => p);
 ---
 
-<BaseLayout title="Best Therapy for PTSD | RealMindSolutions" description="Best Online Therapy for PTSD">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Online Therapy for PTSD</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Top platforms for PTSD treatment.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for PTSD & Trauma 2025</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Find specialized trauma-informed online therapy platforms offering evidence-based treatment for PTSD, complex trauma, and trauma-related disorders.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your trauma therapy match</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks for PTSD & Trauma Therapy at a Glance</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Best Overall */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Overall
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.5)}
+                  </div>
+                  <span class="text-gray-600">4.5/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Comprehensive platform with trauma-specialized therapists, insurance coverage, and medication management for complex PTSD treatment.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $65-$99/week
+              </div>
+              <a href="https://www.talkspace.com" class="w-full min-w-0 justify-center">Visit Talkspace</a>
+            </div>
+
+            {/* Best Network */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Network
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.8)}
+                  </div>
+                  <span class="text-gray-600">4.8/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Largest network of trauma-informed therapists with flexible communication options and easy therapist matching for PTSD treatment.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $60-$90/week
+              </div>
+              <a href="https://www.betterhelp.com" class="w-full min-w-0 justify-center">Visit BetterHelp</a>
+            </div>
+
+            {/* Best CBT Approach */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best CBT Approach
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Online-Therapy.com</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.0)}
+                  </div>
+                  <span class="text-gray-600">4.0/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Structured CBT program with trauma-focused worksheets and activities designed for processing traumatic experiences.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $40-$88/week
+              </div>
+              <a href="https://www.online-therapy.com" class="w-full min-w-0 justify-center">Visit Online-Therapy.com</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding PTSD */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding PTSD and Trauma-Informed Online Therapy</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">What is Trauma-Informed Care?</h3>
+              <p class="text-gray-600 mb-4">
+                Trauma-informed therapy recognizes the widespread impact of trauma and understands potential paths for recovery. Key principles include:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Safety:</strong> Creating a physically and emotionally safe therapeutic environment</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Trustworthiness:</strong> Building trust through transparency and clear boundaries</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Peer Support:</strong> Recognizing healing happens in relationships and community</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Collaboration:</strong> Sharing power and decision-making with clients</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Empowerment:</strong> Focusing on strengths and resilience rather than pathology</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Types of Trauma Treated Online</h3>
+              <p class="text-gray-600 mb-4">
+                Online therapy effectively treats various trauma-related conditions:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>PTSD:</strong> From combat, accidents, assault, or other traumatic events</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Complex PTSD:</strong> From prolonged or repeated trauma, often in childhood</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Acute Stress Disorder:</strong> Symptoms within one month of traumatic event</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Developmental Trauma:</strong> Childhood abuse, neglect, or attachment disruption</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Medical Trauma:</strong> From serious illness, surgery, or medical procedures</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Evidence-Based Trauma Therapies Available Online</h3>
+            <p class="text-gray-700 mb-4">
+              Effective online platforms offer specialized trauma treatment approaches:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Trauma-Focused CBT</h4>
+                    <p class="text-gray-600 text-sm">
+                      Gold standard treatment helping process traumatic memories and reduce PTSD symptoms
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Prolonged Exposure (PE)</h4>
+                    <p class="text-gray-600 text-sm">
+                      Gradual, safe exposure to trauma memories to reduce avoidance and distress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">EMDR Adaptations</h4>
+                    <p class="text-gray-600 text-sm">
+                      Eye Movement Desensitization adapted for virtual settings to process traumatic memories
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Cognitive Processing Therapy</h4>
+                    <p class="text-gray-600 text-sm">
+                      Challenging and modifying unhelpful beliefs related to the trauma
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews of the Best PTSD & Trauma Therapy Platforms</h2>
+
+          {ptsdPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <div class="mr-2">
+                        {renderStars(platform.rating)}
+                      </div>
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="flex space-x-1 mr-2">
+                          {platform.communication.includes('messaging') && (
+                            <MessageSquare class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('video') && (
+                            <Video class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('phone') && (
+                            <Phone class="h-4 w-4 text-indigo-600" />
+                          )}
+                        </div>
+                        <span class="text-gray-600">Communication</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.insurance ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Insurance Coverage</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.medication ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Medication Management</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button class="w-full min-w-0 justify-center">Visit Website</button>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It for PTSD & Trauma</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right PTSD & Trauma Therapy Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Trauma Specialization</h3>
+              <p class="text-gray-600">
+                Look for platforms that specifically mention trauma-informed care and have therapists trained in evidence-based trauma treatments like TF-CBT or EMDR.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Heart class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Safety and Pacing</h3>
+              <p class="text-gray-600">
+                Trauma therapy requires going at your own pace. Choose platforms offering both messaging and video options, allowing you to choose the comfort level that feels safest.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Comprehensive Care</h3>
+              <p class="text-gray-600">
+                Complex PTSD may benefit from both therapy and medication. Consider platforms offering psychiatry services if you have severe symptoms or co-occurring conditions.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              For most individuals seeking PTSD and trauma treatment:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Talkspace</strong> for comprehensive trauma treatment with insurance coverage and medication options for complex PTSD</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>BetterHelp</strong> for the largest network of trauma-specialized therapists with flexible communication methods</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Online-Therapy.com</strong> for structured CBT approach with trauma-focused worksheets and affordable pricing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is online therapy as effective as in-person therapy for PTSD?</h3>
+              <p class="text-gray-600">
+                Research shows online trauma therapy is as effective as in-person treatment for PTSD. Many trauma survivors actually prefer the safety and control of online sessions, which can facilitate more open discussion of difficult topics.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Do I have to talk about the traumatic event in detail?</h3>
+              <p class="text-gray-600">
+                Not initially, and never before you're ready. Trauma-informed therapists focus first on building safety, coping skills, and trust. Processing traumatic memories happens gradually and at your pace, with your consent.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How long does trauma therapy usually take?</h3>
+              <p class="text-gray-600">
+                This varies widely. Some evidence-based treatments like PE or CPT are designed for 8-15 sessions, while complex trauma may require longer-term therapy. Your therapist will work with you to establish realistic goals and timelines.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can EMDR be done effectively online?</h3>
+              <p class="text-gray-600">
+                Yes, many therapists have adapted EMDR for online settings using various bilateral stimulation methods. While some components differ from in-person EMDR, research shows online adaptations can be effective for trauma processing.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What if I'm not sure if my experience counts as trauma?</h3>
+              <p class="text-gray-600">
+                Trauma isn't about comparing experiences - it's about your response to them. If you're experiencing symptoms like intrusive memories, avoidance, hypervigilance, or emotional numbness, trauma-informed therapy can help regardless of the specific event.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Will therapy make my PTSD symptoms worse before they get better?</h3>
+              <p class="text-gray-600">
+                Good trauma therapy shouldn't overwhelm you. Therapists use gradual exposure and teach coping skills first. Some temporary increase in symptoms can occur during trauma processing, but your therapist will help you manage this safely.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Begin Healing from Trauma?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to find trauma-informed therapy that feels safe and supports your healing journey.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/ptsd-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10 inline-flex items-center px-6 py-3 rounded-md border-2">Take PTSD Assessment</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

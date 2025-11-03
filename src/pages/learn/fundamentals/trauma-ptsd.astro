@@ -1,12 +1,681 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield } from 'lucide-react';
 ---
 
-<BaseLayout title="Trauma and PTSD | RealMindSolutions" description="Understanding Trauma and PTSD">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Understanding Trauma and PTSD</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Comprehensive guide to trauma and PTSD.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Understanding Trauma and PTSD</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Trauma and Post-Traumatic Stress Disorder (PTSD) can profoundly impact mental health and daily functioning. Learn about different types of trauma, PTSD symptoms, and evidence-based treatments that can help you heal.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">PTSD at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Prevalence</h3>
+                <p class="text-gray-600">6% of U.S. adults yearly</p>
+                <p class="text-sm text-gray-500 mt-1">About 15 million people</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Trauma Exposure</h3>
+                <p class="text-gray-600">60% of men, 50% of women</p>
+                <p class="text-sm text-gray-500 mt-1">Experience trauma in lifetime</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Recovery Rate</h3>
+                <p class="text-gray-600">80% improve with treatment</p>
+                <p class="text-sm text-gray-500 mt-1">Trauma-focused therapy</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Treatment</h3>
+                <p class="text-gray-600">Evidence-based therapies</p>
+                <p class="text-sm text-gray-500 mt-1">EMDR, CPT, PE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Trauma */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Trauma</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Acute Trauma</h3>
+              <p class="text-gray-600 mb-4">
+                Results from a single distressing event that overwhelms an individual's ability to cope and causes lasting psychological effects.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Car accidents or natural disasters</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical or sexual assault</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sudden loss of a loved one</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Life-threatening medical emergency</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Chronic Trauma</h3>
+              <p class="text-gray-600 mb-4">
+                Repeated and prolonged exposure to highly stressful events over an extended period, often in childhood.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Long-term domestic violence</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Ongoing childhood abuse or neglect</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Extended exposure to war zones</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Chronic illness or medical trauma</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Complex Trauma</h3>
+              <p class="text-gray-600 mb-4">
+                Multiple traumatic events, often invasive and interpersonal in nature, typically occurring during critical developmental periods.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Childhood emotional abuse</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Multiple caregiver disruptions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Witnessing family violence</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Early attachment disruptions</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Secondary Trauma</h3>
+              <p class="text-gray-600 mb-4">
+                Indirect exposure to trauma through a firsthand account or narrative of a traumatic event experienced by another person.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Healthcare workers and first responders</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Therapists treating trauma survivors</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Family members of trauma survivors</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Journalists covering traumatic events</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* PTSD Symptoms */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">PTSD Symptom Clusters</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Intrusion Symptoms</h3>
+              <p class="text-gray-600 mb-4">
+                Recurrent, involuntary, and intrusive distressing memories or re-experiencing of the traumatic event.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Flashbacks that feel like reliving the trauma</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Nightmares or disturbing dreams</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Intrusive thoughts about the event</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Intense psychological distress at reminders</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical reactions to trauma cues</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Avoidance Symptoms</h3>
+              <p class="text-gray-600 mb-4">
+                Persistent efforts to avoid trauma-related thoughts, feelings, people, places, conversations, or activities.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoiding memories or thoughts of trauma</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoiding places that trigger memories</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoiding people associated with trauma</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoiding conversations about the event</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Emotional numbing or detachment</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Negative Mood & Cognition Changes</h3>
+              <p class="text-gray-600 mb-4">
+                Persistent negative thoughts, feelings, or beliefs about oneself, others, or the world that began or worsened after trauma.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Inability to remember key aspects of trauma</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persistent negative beliefs about self</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Distorted blame of self or others</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Loss of interest in activities</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Feeling detached from others</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Hyperarousal Symptoms</h3>
+              <p class="text-gray-600 mb-4">
+                Trauma-related changes in arousal and reactivity, including irritability, hypervigilance, and exaggerated startle response.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Irritability or angry outbursts</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Reckless or self-destructive behavior</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Being constantly on guard (hypervigilance)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Exaggerated startle response</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sleep disturbances and concentration problems</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Complex PTSD */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Complex PTSD (C-PTSD)</h2>
+
+          <div class="bg-indigo-50 rounded-lg p-6 mb-6">
+            <p class="text-gray-700 mb-4">
+              Complex PTSD develops from prolonged, repeated trauma, often in situations where escape is difficult or impossible. It includes all PTSD symptoms plus additional difficulties with emotion regulation, self-concept, and relationships.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Emotion Dysregulation</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty managing intense emotions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Explosive anger or extreme sadness</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Emotional numbing or dissociation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Self-harm or suicidal thoughts</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Negative Self-Concept</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persistent feelings of shame or guilt</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Feeling permanently damaged or defective</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Profound sense of worthlessness</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Loss of core beliefs about self</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Relationship Difficulties</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty trusting others</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoiding relationships or isolation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty maintaining stable relationships</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Seeking out or staying in harmful relationships</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Options */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Evidence-Based Trauma Treatments</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Trauma-Focused Therapies</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Eye Movement Desensitization and Reprocessing (EMDR)</h4>
+                  <p class="text-gray-600">
+                    Uses bilateral stimulation (eye movements, tapping) while recalling traumatic memories to help the brain reprocess them. Highly effective for single-incident trauma and requires minimal verbal disclosure.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Cognitive Processing Therapy (CPT)</h4>
+                  <p class="text-gray-600">
+                    Helps identify and challenge unhelpful beliefs related to trauma. Focuses on how trauma has affected thoughts about safety, trust, control, esteem, and intimacy.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Prolonged Exposure (PE) Therapy</h4>
+                  <p class="text-gray-600">
+                    Gradually and safely exposes you to trauma-related memories, feelings, and situations you've been avoiding. Helps reduce avoidance and process traumatic experiences.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Trauma-Focused CBT</h4>
+                  <p class="text-gray-600">
+                    Addresses distorted thoughts and beliefs related to trauma. Includes relaxation techniques, emotional regulation skills, and gradual trauma processing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Somatic & Additional Approaches</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Somatic Experiencing</h4>
+                  <p class="text-gray-600">
+                    Focuses on bodily sensations and physical responses to trauma. Helps release stored trauma energy and restore the nervous system's natural ability to self-regulate.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Internal Family Systems (IFS)</h4>
+                  <p class="text-gray-600">
+                    Addresses different parts of the self that developed in response to trauma. Particularly helpful for complex trauma and dissociative symptoms.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Medications</h4>
+                  <p class="text-gray-600">
+                    SSRIs (Sertraline, Paroxetine) are FDA-approved for PTSD. Can help manage symptoms like depression, anxiety, and sleep problems. Most effective when combined with therapy.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Group Therapy</h4>
+                  <p class="text-gray-600">
+                    Provides peer support and reduces isolation. Helps normalize trauma responses and learn from others' recovery experiences in a safe environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Warning Signs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Warning Signs & When to Seek Help</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Common Warning Signs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Intrusive memories or flashbacks occurring regularly</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Avoiding people, places, or activities due to trauma</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Significant changes in mood or personality</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Difficulty sleeping or frequent nightmares</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Being constantly on edge or easily startled</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Using alcohol or drugs to cope</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Difficulty maintaining relationships or employment</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">When to Seek Help</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  Consider seeking professional help if you experience:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Symptoms persisting more than one month after trauma</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Symptoms interfering with daily functioning</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Severe distress that won't subside</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Thoughts of self-harm or suicide</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Substance abuse to manage symptoms</span>
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Trauma Therapist</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Self-Help Strategies */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Trauma Recovery Strategies</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Grounding Techniques</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>5-4-3-2-1 sensory technique</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Deep breathing exercises</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical grounding (touching objects)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Mental grounding exercises</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Self-Care Practices</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Establish consistent daily routines</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Prioritize sleep hygiene</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Gentle exercise and movement</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Limit alcohol and caffeine</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Building Support</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Connect with trusted friends or family</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Join trauma survivor support groups</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Practice self-compassion</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Engage in creative expression</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/ptsd-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>PTSD Screening Assessment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/grounding-techniques" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Grounding Techniques Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/safety-plan" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Safety Planning Worksheet</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Reviews</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/reviews/betterhelp" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>BetterHelp - EMDR & Trauma Specialists</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/reviews/talkspace" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Talkspace - Trauma-Focused Therapy</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/best/conditions/best-for-trauma" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Best Platforms for Trauma Treatment</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Begin Your Healing Journey?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Recovery from trauma is possible with the right support. Take our PTSD assessment and connect with trauma-informed therapists who can help.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/ptsd-screening" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take PTSD Assessment</a>
+            <a href="/best/conditions/best-for-trauma" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Trauma Therapist</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

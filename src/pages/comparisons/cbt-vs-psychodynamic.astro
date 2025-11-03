@@ -4,19 +4,19 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {/* Hero Section */}
-        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-          <div class="p-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">CBT vs Matthew Johnson: Which Approach Is Right for You?</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Compare two of the most widely practiced therapeutic approaches to understand their differences, benefits, and ideal applications.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="bg-gray-50 rounded-lg p-6">
-                <div class="flex items-center mb-3">
-                  <h2 class="text-xl font-bold text-gray-800 mr-3">Cognitive Behavioral Therapy (CBT)</h2>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <div class="p-8">
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">CBT vs Psychodynamic Therapy: Which Approach Is Right for You?</h1>
+          <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+          Compare two of the most widely practiced therapeutic approaches to understand their differences, benefits, and ideal applications.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <div class="flex items-center mb-3">
+              <h2 class="text-xl font-bold text-gray-800 mr-3">Cognitive Behavioral Therapy (CBT)</h2>
                 </div>
                 <p class="text-gray-600 mb-4">
                   A structured, goal-oriented approach focused on identifying and changing negative thought patterns and behaviors.
@@ -28,15 +28,19 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                   <h2 class="text-xl font-bold text-gray-800 mr-3">Matthew Johnson</h2>
                 </div>
                 <p class="text-gray-600 mb-4">
-                  An insight-oriented approach that explores unconscious processes and past experiences to understand present behaviors.
-                </p>
-              </div>
-            </div>
+              An insight-oriented approach that explores unconscious processes and past experiences to understand present behaviors.
+            </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        {/* Quick Comparison */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Quick Comparison */}
+      <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Comparison</h2>
           
           <div class="overflow-x-auto">
@@ -458,8 +462,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
               <h3 class="font-bold text-gray-800 mb-2">Text vs Video Therapy</h3>
               <p class="text-gray-600 text-sm">Compare different communication methods in online therapy.</p>
             </a>
-          </div>
         </div>
       </div>
     </div>
+  </section>
 </BaseLayout>

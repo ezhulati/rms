@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140">
+  <defs>
+    <!-- Primary to Secondary gradient -->
+    <linearGradient id="gradientPrimary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5F4B8B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent gradient for "Mind" -->
+    <linearGradient id="gradientAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- "Real" - Yantramanav Black, largest -->
+  <text x="10" y="70"
+        font-family="'Yantramanav', sans-serif"
+        font-weight="900"
+        font-size="64"
+        letter-spacing="-2"
+        fill="url(#gradientPrimary)">Real</text>
+
+  <!-- "Mind" - PT Serif Italic, medium, accent color -->
+  <text x="185" y="70"
+        font-family="'PT Serif', serif"
+        font-style="italic"
+        font-weight="700"
+        font-size="58"
+        letter-spacing="0"
+        fill="url(#gradientAccent)">Mind</text>
+
+  <!-- "Solutions" - Kantit Light, smaller -->
+  <text x="10" y="120"
+        font-family="'Kantit', sans-serif"
+        font-weight="300"
+        font-size="36"
+        letter-spacing="4"
+        fill="#525252">SOLUTIONS</text>
+</svg>

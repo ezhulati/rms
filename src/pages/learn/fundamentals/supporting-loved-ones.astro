@@ -1,12 +1,495 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Heart, Users, MessageCircle, Shield } from 'lucide-react';
 ---
 
-<BaseLayout title="Supporting Loved Ones | RealMindSolutions" description="Supporting Loved Ones with Mental Health Issues">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Supporting Loved Ones with Mental Health Issues</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>How to help someone with mental health challenges.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">How to Support a Loved One with Mental Health Issues</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Learn effective ways to support someone struggling with mental health challenges while maintaining your own wellbeing. Discover communication strategies, boundary-setting techniques, and when to seek professional help.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Supporting Loved Ones at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Impact</h3>
+                <p class="text-gray-600">Support improves recovery rates</p>
+                <p class="text-sm text-gray-500 mt-1">By up to 50%</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Caregivers</h3>
+                <p class="text-gray-600">43 million unpaid caregivers</p>
+                <p class="text-sm text-gray-500 mt-1">In the US alone</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageCircle class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Communication</h3>
+                <p class="text-gray-600">Key to effective support</p>
+                <p class="text-sm text-gray-500 mt-1">Active listening matters</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Self-Care</h3>
+                <p class="text-gray-600">Essential for caregivers</p>
+                <p class="text-sm text-gray-500 mt-1">Can't pour from empty cup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Communication Strategies */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Effective Communication Strategies</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">What TO Say</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>"I'm here for you, no matter what"</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>"You're not alone in this"</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>"It's okay to not be okay"</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>"How can I best support you right now?"</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>"This is an illness, not a weakness"</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">What NOT to Say</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>"Just snap out of it" or "Think positive"</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>"Others have it worse than you"</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>"It's all in your head"</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>"Have you tried exercise/yoga?"</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>"You don't look depressed/anxious"</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Practical Ways to Help */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Practical Ways to Help</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Daily Support</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Check in regularly without being intrusive</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Offer specific help, not vague "let me know"</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Help with practical tasks (groceries, meals)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Be patient with cancellations</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Active Listening</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Listen without judging or fixing</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Validate their feelings</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Don't minimize their experience</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Ask open-ended questions</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Treatment Support</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Help research treatment options</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Offer to attend appointments</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Help track medication/symptoms</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Encourage professional help</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Setting Boundaries */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Setting Healthy Boundaries</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Why Boundaries Matter</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Prevent Burnout</h4>
+                  <p class="text-gray-600">
+                    Caregiving without boundaries leads to exhaustion and resentment. You need to protect your own mental health to effectively support others.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Maintain Relationships</h4>
+                  <p class="text-gray-600">
+                    Clear boundaries help preserve the relationship long-term. They prevent codependency and maintain mutual respect.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Encourage Independence</h4>
+                  <p class="text-gray-600">
+                    Healthy boundaries allow your loved one to take responsibility for their recovery and build their own coping skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">How to Set Boundaries</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Communicate limits clearly and kindly</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Say no to requests that drain you</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Schedule specific times for support</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Don't feel guilty for self-care</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Recognize you can't fix everything</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Maintain your own activities and friendships</span>
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <a href="/resources/worksheets/boundary-setting" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Boundary Setting Worksheet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recognizing Crisis */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Recognizing and Responding to Crisis</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Crisis Warning Signs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Talking about wanting to die or self-harm</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Looking for ways to end their life</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Feeling hopeless or having no reason to live</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Giving away possessions</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Sudden calmness after deep depression</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Withdrawing from everyone</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">How to Respond</h3>
+              <div class="bg-red-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4 font-bold">
+                  If you notice these signs, take action immediately:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5" />
+                    <span>Don't leave them alone</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5" />
+                    <span>Remove access to lethal means</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5" />
+                    <span>Call 988 (Suicide & Crisis Lifeline)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5" />
+                    <span>Text "HELLO" to 741741 (Crisis Text Line)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5" />
+                    <span>Go to emergency room if necessary</span>
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <a href="/resources/crisis-support" class="inline-flex items-center bg-red-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-red-700 transition">Crisis Resources</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Caregiver Self-Care */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Caregiver Self-Care Essentials</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Physical Self-Care</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Maintain sleep schedule</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Eat regular, nutritious meals</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Exercise regularly</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Attend your own medical appointments</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Emotional Self-Care</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Join a caregiver support group</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Consider therapy for yourself</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Express your feelings to trusted friends</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Practice self-compassion</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Practical Self-Care</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Ask others for help</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Take regular breaks</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Maintain hobbies and interests</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Set realistic expectations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/resources/worksheets/boundary-setting" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Boundary Setting Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/crisis-support" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Crisis Support Resources</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/caregiver-support" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Caregiver Support Groups</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/learn/fundamentals/depression" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Depression</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/anxiety-disorders" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Anxiety Disorders</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/self-care" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Self-Care for Mental Health</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Need Help Supporting Someone?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Connect with professional resources and support networks to help your loved one and yourself.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Find Therapy Resources</a>
+            <a href="/resources/crisis-support" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:text-indigo-600 transition">Crisis Resources</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

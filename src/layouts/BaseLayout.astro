@@ -23,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/images/RMS.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/RMS_icon.svg" />
     <meta name="generator" content={Astro.generator} />
 
     {/* SEO Meta Tags */}
@@ -45,10 +45,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
   </head>
-  <body>
+  <body class="bg-white">
     <div class="flex flex-col min-h-screen">
       <Header client:load />
-      <main class="flex-grow">
+      <main class="flex-grow w-full bg-white">
         <slot />
       </main>
       <Footer />

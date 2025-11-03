@@ -1,10 +1,557 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, Award, TrendingUp } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+// Top platforms across all categories
+const topPlatforms = [
+  getPlatformBySlug('betterhelp'),
+  getPlatformBySlug('talkspace'),
+  getPlatformBySlug('cerebral'),
+  getPlatformBySlug('online-therapy-com'),
+  getPlatformBySlug('brightside'),
+  getPlatformBySlug('mdlive'),
+  getPlatformBySlug('amwell')
+].filter(p => p);
 ---
 
-<BaseLayout title="Best Online Therapy | RealMindSolutions" description="Best Online Therapy Overall">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Online Therapy Overall</h1>
-    <div class="prose prose-lg max-w-4xl"><p>Top-rated online therapy platforms</p></div>
-  </div>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy Services 2025 - Complete Guide</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Comprehensive reviews and rankings of the top online therapy platforms, helping you find the perfect mental health care solution for your specific needs and budget.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy match</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks Across All Categories</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Best Overall */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Overall
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.8)}
+                  </div>
+                  <span class="text-gray-600">4.8/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                World's largest online therapy platform with 30,000+ licensed therapists, flexible communication options, and proven track record.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $60-$90/week
+              </div>
+              <a href="https://www.betterhelp.com" class="w-full min-w-0 justify-center">Visit BetterHelp</a>
+            </div>
+
+            {/* Best with Insurance */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best with Insurance
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.5)}
+                  </div>
+                  <span class="text-gray-600">4.5/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Leading platform accepting most major insurance plans with comprehensive therapy and psychiatry services at low copays.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Copay:</strong> $0-$30 per session
+              </div>
+              <a href="https://www.talkspace.com" class="w-full min-w-0 justify-center">Visit Talkspace</a>
+            </div>
+
+            {/* Best for Medication */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best for Medication
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Cerebral</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.0)}
+                  </div>
+                  <span class="text-gray-600">4.0/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Comprehensive mental health care combining therapy and medication management, specializing in ADHD, anxiety, and depression.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $85-$325/month
+              </div>
+              <a href="https://www.cerebral.com" class="w-full min-w-0 justify-center">Visit Cerebral</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Online Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Therapy in 2025</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Why Choose Online Therapy?</h3>
+              <p class="text-gray-600 mb-4">
+                Online therapy has become a mainstream mental health solution, offering unique advantages over traditional in-person treatment:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Accessibility:</strong> Access therapy from anywhere, eliminating transportation barriers</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Affordability:</strong> Generally 20-50% less expensive than in-person therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Flexibility:</strong> Schedule sessions outside traditional business hours</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Continuous Support:</strong> Message therapists between sessions for ongoing support</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Wider Selection:</strong> Access specialists nationwide, not limited to local area</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Privacy:</strong> Receive care from home without concern about being seen at a therapist's office</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">What Online Therapy Can Treat</h3>
+              <p class="text-gray-600 mb-4">
+                Online therapy effectively treats a wide range of mental health conditions:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Anxiety Disorders:</strong> GAD, social anxiety, panic disorder, phobias</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Depression:</strong> Major depression, persistent depressive disorder</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Trauma & PTSD:</strong> Trauma processing, complex PTSD</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Relationship Issues:</strong> Couples therapy, family dynamics, communication</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Life Transitions:</strong> Grief, career changes, major life adjustments</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Stress & Burnout:</strong> Work stress, caregiver burnout, overwhelm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Is Online Therapy as Effective as In-Person?</h3>
+            <p class="text-gray-700 mb-4">
+              Research consistently shows that online therapy is as effective as in-person therapy for most conditions:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">75%</div>
+                  <p class="text-gray-600 text-sm">
+                    of clients report significant improvement with online therapy
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">Equal</div>
+                  <p class="text-gray-600 text-sm">
+                    effectiveness to in-person therapy for anxiety and depression
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">80%</div>
+                  <p class="text-gray-600 text-sm">
+                    of users prefer online therapy due to convenience and flexibility
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Comprehensive Platform Reviews</h2>
+
+          {topPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <div class="mr-2">
+                        {renderStars(platform.rating)}
+                      </div>
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="flex space-x-1 mr-2">
+                          {platform.communication.includes('messaging') && (
+                            <MessageSquare class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('video') && (
+                            <Video class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('phone') && (
+                            <Phone class="h-4 w-4 text-indigo-600" />
+                          )}
+                        </div>
+                        <span class="text-gray-600">Communication</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.insurance ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Insurance Coverage</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.medication ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Medication Management</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button class="w-full min-w-0 justify-center">Visit Website</button>
+                      <a href={`/reviews/platforms/${platform.slug}-review`} class="w-full min-w-0 justify-center border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-md text-center block">Read Full Review</a>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Overview</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.slice(0, 4).map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.slice(0, 4).map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.slice(0, 5).map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Table */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Comparison Table</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b-2 border-gray-200">
+                  <th class="text-left py-4 px-4">Platform</th>
+                  <th class="text-left py-4 px-4">Price Range</th>
+                  <th class="text-left py-4 px-4">Insurance</th>
+                  <th class="text-left py-4 px-4">Medication</th>
+                  <th class="text-left py-4 px-4">Rating</th>
+                  <th class="text-left py-4 px-4">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topPlatforms.map((platform) => (
+                  <tr key={platform.slug} class="border-b border-gray-100">
+                    <td class="py-4 px-4 font-medium text-gray-800">{platform.name}</td>
+                    <td class="py-4 px-4 text-gray-600">{platform.price}</td>
+                    <td class="py-4 px-4">
+                      {platform.insurance ? (
+                        <CheckCircle class="h-5 w-5 text-green-500" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500" />
+                      )}
+                    </td>
+                    <td class="py-4 px-4">
+                      {platform.medication ? (
+                        <CheckCircle class="h-5 w-5 text-green-500" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500" />
+                      )}
+                    </td>
+                    <td class="py-4 px-4 text-gray-600">{platform.rating}/5</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">{platform.bestFor[0]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Category Guides */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Explore by Category</h2>
+          <p class="text-gray-600 mb-6">
+            Find the perfect platform for your specific needs with our specialized category guides:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/best/conditions/best-for-anxiety" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best for Anxiety</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Specialized platforms for generalized anxiety, panic disorder, and social anxiety treatment
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+
+            <a href="/best/conditions/best-for-ptsd" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best for PTSD</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Trauma-informed therapy platforms with specialized PTSD and trauma treatment approaches
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+
+            <a href="/best/specific-needs/best-medication-management" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best with Medication</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Comprehensive platforms combining therapy with psychiatry and prescription management
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+
+            <a href="/best/specific-needs/best-insurance-coverage" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best with Insurance</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Platforms accepting major insurance providers with low copays and excellent billing support
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+
+            <a href="/best/audiences/best-for-lgbtq" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best for LGBTQ+</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Affirming therapy platforms with LGBTQ+ specialized therapists and cultural competence
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+
+            <a href="/best/audiences/best-for-teens" class="bg-indigo-50 rounded-lg p-6 hover:bg-indigo-100 transition">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Best for Teens</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Teen-focused platforms with age-appropriate therapy and parental involvement options
+              </p>
+              <span class="text-indigo-600 font-medium text-sm">View Guide →</span>
+            </a>
+          </div>
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Online Therapy Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Heart class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Your Specific Needs</h3>
+              <p class="text-gray-600">
+                Consider your diagnosis, treatment goals, and whether you need specialized care like trauma therapy, couples counseling, or medication management.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Budget & Insurance</h3>
+              <p class="text-gray-600">
+                Determine your budget and check if your insurance is accepted. Insurance coverage can reduce costs by 70-90%, making therapy much more affordable.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <MessageSquare class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Communication Style</h3>
+              <p class="text-gray-600">
+                Choose between video, phone, messaging, or live chat based on your comfort level and schedule. Many platforms offer multiple options.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Overall Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              Based on comprehensive research and user feedback:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>BetterHelp</strong> for most people seeking affordable, flexible therapy with the largest therapist network</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Talkspace</strong> for those with insurance coverage needing both therapy and potential medication management</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Cerebral</strong> for individuals needing comprehensive mental health care with integrated therapy and psychiatry</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is online therapy really as effective as in-person therapy?</h3>
+              <p class="text-gray-600">
+                Yes. Multiple research studies confirm online therapy is as effective as in-person therapy for most conditions, including anxiety, depression, PTSD, and relationship issues. The key is finding a licensed therapist you connect with.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How much does online therapy cost?</h3>
+              <p class="text-gray-600">
+                Costs range from $40-$120 per week for therapy-only services, or $85-$325 per month for platforms including medication management. With insurance, copays are typically $0-$50 per session, making it significantly more affordable.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Are online therapy platforms secure and confidential?</h3>
+              <p class="text-gray-600">
+                Reputable platforms use HIPAA-compliant, encrypted technology to protect your privacy. Your therapy sessions and communications are confidential, with the same legal protections as in-person therapy.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can I switch therapists if it's not a good fit?</h3>
+              <p class="text-gray-600">
+                Absolutely. All major platforms allow you to switch therapists easily and at no additional cost. Finding the right therapeutic relationship is crucial, and platforms make this process simple.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Do I need a diagnosis to start online therapy?</h3>
+              <p class="text-gray-600">
+                No diagnosis is required to begin therapy. Many people seek therapy for general life stress, personal growth, or relationship issues without a specific mental health diagnosis.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How quickly can I start therapy?</h3>
+              <p class="text-gray-600">
+                Most platforms match you with a therapist within 24-48 hours. Your first session can often be scheduled within a few days, much faster than traditional in-person therapy waitlists.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Start Your Mental Health Journey?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to find the perfect online therapy platform matched to your unique needs, budget, and preferences.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Find Your Perfect Match</a>
+            <a href="/reviews/platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10 inline-flex items-center px-6 py-3 rounded-md border-2">Compare All Platforms</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

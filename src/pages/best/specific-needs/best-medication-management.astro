@@ -1,12 +1,519 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, Pill } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+// Filter platforms that offer medication management
+const medicationPlatforms = platforms.filter(p => p.medication);
 ---
 
-<BaseLayout title="Best Medication Management | RealMindSolutions" description="Best Medication Management Services">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Medication Management Services</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Platforms offering medication management.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy with Medication Management 2025</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Find comprehensive online mental health care platforms that combine therapy with psychiatry services and prescription management for a holistic treatment approach.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy & medication match</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks for Therapy with Medication Management at a Glance</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Best Overall */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Overall
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Cerebral</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.0)}
+                  </div>
+                  <span class="text-gray-600">4.0/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Comprehensive mental health care combining therapy and medication management with specialized ADHD, anxiety, and depression treatment.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $85-$325/month
+              </div>
+              <a href="https://www.cerebral.com" class="w-full min-w-0 justify-center">Visit Cerebral</a>
+            </div>
+
+            {/* Best for Depression */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best for Depression
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Brightside</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.1)}
+                  </div>
+                  <span class="text-gray-600">4.1/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Data-driven personalized treatment combining therapy and psychiatry, specializing in depression and anxiety with medication delivery.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $95-$299/month
+              </div>
+              <a href="https://www.brightside.com" class="w-full min-w-0 justify-center">Visit Brightside</a>
+            </div>
+
+            {/* Best with Insurance */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best with Insurance
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.5)}
+                  </div>
+                  <span class="text-gray-600">4.5/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Leading platform offering both therapy and psychiatry services with extensive insurance coverage and medication management options.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Price:</strong> $65-$99/week
+              </div>
+              <a href="https://www.talkspace.com" class="w-full min-w-0 justify-center">Visit Talkspace</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Medication Management */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Medication Management</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">What is Medication Management in Online Therapy?</h3>
+              <p class="text-gray-600 mb-4">
+                Medication management combines psychiatric evaluation, prescription services, and ongoing monitoring with traditional therapy. This integrated approach provides comprehensive mental health care through a single platform.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Initial psychiatric evaluation and diagnosis</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Prescription of appropriate psychiatric medications</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Regular monitoring and medication adjustments</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Coordination between therapist and prescriber</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Prescription delivery and refill management</span>
+                </li>
+              </ul>
+              <p class="text-gray-600">
+                This comprehensive approach is particularly effective for moderate to severe mental health conditions that benefit from combined medication and therapy treatment.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Who Benefits from Medication Management?</h3>
+              <p class="text-gray-600 mb-4">
+                Medication management is especially helpful for individuals experiencing:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Moderate to severe depression or anxiety</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>ADHD requiring stimulant or non-stimulant medication</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Bipolar disorder or mood instability</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>OCD, PTSD, or panic disorder</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Insomnia or sleep disorders</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Previous success with psychiatric medications</span>
+                </li>
+              </ul>
+              <p class="text-gray-600">
+                Research shows that combined medication and therapy treatment is often more effective than either approach alone for many mental health conditions.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">The Benefits of Integrated Care</h3>
+            <p class="text-gray-700 mb-4">
+              Online platforms offering both therapy and medication management provide several key advantages:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Coordinated Care</h4>
+                    <p class="text-gray-600 text-sm">
+                      Your therapist and prescriber communicate, ensuring aligned treatment goals and comprehensive care
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Convenience</h4>
+                    <p class="text-gray-600 text-sm">
+                      Manage therapy appointments, psychiatry consultations, and prescriptions all in one platform
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Regular Monitoring</h4>
+                    <p class="text-gray-600 text-sm">
+                      Frequent check-ins and messaging access allow for timely medication adjustments
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <div>
+                    <h4 class="font-bold text-gray-800">Cost Efficiency</h4>
+                    <p class="text-gray-600 text-sm">
+                      Bundled services often cost less than managing therapy and psychiatry separately
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews of the Best Medication Management Platforms</h2>
+
+          {medicationPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <div class="mr-2">
+                        {renderStars(platform.rating)}
+                      </div>
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="flex space-x-1 mr-2">
+                          {platform.communication.includes('messaging') && (
+                            <MessageSquare class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('video') && (
+                            <Video class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('phone') && (
+                            <Phone class="h-4 w-4 text-indigo-600" />
+                          )}
+                        </div>
+                        <span class="text-gray-600">Communication</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.insurance ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Insurance Coverage</span>
+                      </div>
+                      <div class="flex items-center">
+                        <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        <span class="text-gray-600">Medication Management</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button class="w-full min-w-0 justify-center">Visit Website</button>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It for Medication Management</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 class="font-bold text-gray-800 mb-3">Key Features</h5>
+                      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {platform.features.map((feature, i) => (
+                          <div key={i} class="bg-gray-50 rounded-lg p-3 flex items-center">
+                            <CheckCircle class="h-4 w-4 text-indigo-600 mr-2 flex-shrink-0" />
+                            <span class="text-gray-700 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Table */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Medication Management Platform Comparison</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b-2 border-gray-200">
+                  <th class="text-left py-4 px-4">Platform</th>
+                  <th class="text-left py-4 px-4">Price Range</th>
+                  <th class="text-left py-4 px-4">Insurance</th>
+                  <th class="text-left py-4 px-4">Psychiatry</th>
+                  <th class="text-left py-4 px-4">Therapy</th>
+                  <th class="text-left py-4 px-4">Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                {medicationPlatforms.map((platform) => (
+                  <tr key={platform.slug} class="border-b border-gray-100">
+                    <td class="py-4 px-4 font-medium text-gray-800">{platform.name}</td>
+                    <td class="py-4 px-4 text-gray-600">{platform.price}</td>
+                    <td class="py-4 px-4">
+                      {platform.insurance ? (
+                        <CheckCircle class="h-5 w-5 text-green-500" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500" />
+                      )}
+                    </td>
+                    <td class="py-4 px-4">
+                      <CheckCircle class="h-5 w-5 text-green-500" />
+                    </td>
+                    <td class="py-4 px-4">
+                      <CheckCircle class="h-5 w-5 text-green-500" />
+                    </td>
+                    <td class="py-4 px-4 text-gray-600">{platform.rating}/5</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Medication Management Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Pill class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Treatment Needs</h3>
+              <p class="text-gray-600">
+                Consider your specific diagnosis and treatment goals. Some platforms specialize in certain conditions like ADHD or depression, while others offer broader psychiatric care.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Insurance Coverage</h3>
+              <p class="text-gray-600">
+                If you have insurance, verify which platforms are in-network. Medication management can be expensive without coverage, so insurance acceptance may significantly impact your choice.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Integrated Approach</h3>
+              <p class="text-gray-600">
+                Look for platforms where therapists and prescribers coordinate care. This integrated approach often leads to better outcomes than managing medication and therapy separately.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              For most individuals seeking medication management with therapy:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Cerebral</strong> for comprehensive medication management with specialization in ADHD, anxiety, and depression</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Brightside</strong> for data-driven, personalized treatment focused on depression and anxiety</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Talkspace</strong> for those with insurance coverage who want both therapy and psychiatry services</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can online psychiatrists prescribe controlled substances?</h3>
+              <p class="text-gray-600">
+                Yes, but regulations vary by state. Most online platforms can prescribe Schedule II medications like ADHD stimulants, but some states have restrictions. During your initial evaluation, the psychiatrist will inform you about what they can prescribe in your state.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How often will I meet with my prescriber?</h3>
+              <p class="text-gray-600">
+                Initially, you'll have more frequent check-ins (often monthly) as your medication is adjusted. Once stabilized, follow-ups typically occur every 1-3 months. Most platforms also offer messaging access for questions between appointments.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Do I need to do both therapy and medication management?</h3>
+              <p class="text-gray-600">
+                Not necessarily. While research shows combined treatment is often most effective, platform requirements vary. Some platforms bundle services, while others allow you to choose therapy-only or medication-only plans. Discuss with your provider what's best for your situation.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How do prescriptions get filled with online platforms?</h3>
+              <p class="text-gray-600">
+                Most platforms send prescriptions electronically to your preferred pharmacy, or some offer medication delivery services. You'll receive your medication just as you would with an in-person doctor, and refills are typically managed through the platform.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What if I'm already taking psychiatric medication?</h3>
+              <p class="text-gray-600">
+                You can transfer care to an online platform. During your initial evaluation, inform the psychiatrist about your current medications. They can continue your existing prescriptions or recommend adjustments as appropriate.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Are online medication management services as effective as in-person?</h3>
+              <p class="text-gray-600">
+                Research shows telehealth psychiatry is equally effective as in-person care for most conditions. The convenience of online access often leads to better medication adherence and more consistent follow-up, which can improve outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Start Comprehensive Treatment?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our personalized assessment to find the perfect platform offering both therapy and medication management for your needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Find Your Perfect Match</a>
+            <a href="/learn/fundamentals/therapy-types-explained" class="border-white text-white hover:bg-white hover:bg-opacity-10 inline-flex items-center px-6 py-3 rounded-md border-2">Learn About Therapy Types</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

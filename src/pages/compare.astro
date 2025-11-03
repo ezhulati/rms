@@ -17,16 +17,25 @@ const renderStars = (rating: number) => {
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {isRootPath ? (
-          <>
-            <div class="text-center mb-12">
-              <h1 class="text-4xl font-bold text-gray-800 mb-4">Compare Online Therapy Platforms</h1>
-              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Make an informed decision with our detailed side-by-side comparisons of the leading online therapy platforms.
-              </p>
-            </div>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {isRootPath ? (
+        <>
+          <div class="text-center mb-12">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Compare Online Therapy Platforms</h1>
+            <p class="font-serif italic text-lg md:text-xl text-neutral-600">
+              Make an informed decision with our detailed side-by-side comparisons of the leading online therapy platforms.
+            </p>
+          </div>
+        </>
+      ) : null}
+    </div>
+  </section>
+
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {isRootPath ? (
+        <>
 
             {/* Categories */}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -268,8 +277,14 @@ const renderStars = (rating: number) => {
                 </div>
               </div>
             </div>
-          </>
-        ) : isPlatformsPath ? (
+        </>
+      ) : null}
+    </div>
+  </section>
+
+  {isPlatformsPath ? (
+    <section class="bg-white py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
           <>
             <div class="text-center mb-12">
               <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Platform Comparisons</h1>
@@ -622,18 +637,22 @@ const renderStars = (rating: number) => {
             <div class="mt-16">
               
             </div>
-          </>
-        ) : (
-          <div class="text-center py-20">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Comparison Content</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              This is a placeholder for the specific comparison content based on the current URL path.
-            </p>
-            <p class="text-gray-600">
-              Current path: {location.pathname}
-            </p>
-          </div>
-        )}
+        </>
       </div>
-    </div>
+    </section>
+  ) : (
+    <section class="bg-white py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center py-20">
+          <h1 class="text-3xl font-bold text-gray-800 mb-4">Comparison Content</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            This is a placeholder for the specific comparison content based on the current URL path.
+          </p>
+          <p class="text-gray-600">
+            Current path: {location.pathname}
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>

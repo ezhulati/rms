@@ -1,12 +1,699 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield, Wind, Activity, Clock, Zap } from 'lucide-react';
 ---
 
-<BaseLayout title="Stress Management | RealMindSolutions" description="Stress Management Fundamentals">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Stress Management Fundamentals</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Essential stress management techniques.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Stress Management Techniques That Work</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Stress is inevitable, but chronic stress damages both mental and physical health. Learn evidence-based techniques to manage stress effectively and build resilience for life's challenges.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Stress at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Prevalence</h3>
+                <p class="text-gray-600">77% experience physical symptoms</p>
+                <p class="text-sm text-gray-500 mt-1">From stress regularly</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Health Impact</h3>
+                <p class="text-gray-600">Stress affects immune system</p>
+                <p class="text-sm text-gray-500 mt-1">Increases illness susceptibility</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Mental Health</h3>
+                <p class="text-gray-600">Chronic stress triples depression risk</p>
+                <p class="text-sm text-gray-500 mt-1">And doubles anxiety disorders</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Manageability</h3>
+                <p class="text-gray-600">Highly responsive to intervention</p>
+                <p class="text-sm text-gray-500 mt-1">Techniques show rapid results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Stress */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Stress</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg mb-4">
+              Stress is your body's response to any demand or challenge. Not all stress is bad - acute stress can motivate and energize you. But chronic, unmanaged stress causes serious health problems.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Acute Stress (Short-Term)</h3>
+              <p class="text-gray-700 mb-4">
+                Your immediate response to a challenge or threat. This is the "fight or flight" response.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Can be helpful:</strong> Motivates action, sharpens focus, boosts performance</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Short-lived:</strong> Ends when situation resolves</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Examples:</strong> Job interview, giving presentation, deadline pressure, near-miss car accident</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Chronic Stress (Long-Term)</h3>
+              <p class="text-gray-700 mb-4">
+                Ongoing stress that persists over weeks, months, or years. This is what damages your health.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Always harmful:</strong> Wears down body and mind</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Persists:</strong> Stress response stays activated</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span><strong>Examples:</strong> Toxic job, financial problems, chronic illness, caregiving, ongoing conflict</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">The Stress Response: Fight, Flight, Freeze, Fawn</h3>
+            <p class="text-gray-700 mb-4">
+              When you encounter stress, your nervous system activates one of these survival responses:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Fight</h4>
+                <p class="text-sm text-gray-700">Confront the threat. May show as anger, irritability, or confrontational behavior.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Flight</h4>
+                <p class="text-sm text-gray-700">Escape the threat. May show as avoidance, restlessness, or panic.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Freeze</h4>
+                <p class="text-sm text-gray-700">Become immobilized. May show as feeling stuck, numb, or dissociated.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Fawn</h4>
+                <p class="text-sm text-gray-700">Please the threat. May show as people-pleasing or loss of boundaries.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-yellow-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">How Chronic Stress Affects Your Body and Mind</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">Physical Effects:</h4>
+                <ul class="space-y-1 text-sm">
+                  <li>• Headaches and muscle tension</li>
+                  <li>• Digestive problems</li>
+                  <li>• High blood pressure</li>
+                  <li>• Weakened immune system</li>
+                  <li>• Fatigue and sleep problems</li>
+                  <li>• Weight gain or loss</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">Mental/Emotional Effects:</h4>
+                <ul class="space-y-1 text-sm">
+                  <li>• Anxiety and worry</li>
+                  <li>• Depression and irritability</li>
+                  <li>• Difficulty concentrating</li>
+                  <li>• Memory problems</li>
+                  <li>• Feeling overwhelmed</li>
+                  <li>• Social withdrawal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Evidence-Based Stress Management Techniques */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Evidence-Based Stress Management Techniques</h2>
+
+          <div class="space-y-6">
+            {/* Progressive Muscle Relaxation */}
+            <div class="bg-blue-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Activity class="h-6 w-6 text-blue-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Progressive Muscle Relaxation (PMR)</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                PMR systematically tenses and relaxes different muscle groups to release physical tension. It's highly effective for stress-related muscle tension, insomnia, and anxiety. Takes 10-20 minutes.
+              </p>
+
+              <div class="bg-white rounded-lg p-4 mb-4">
+                <h4 class="font-bold text-gray-800 mb-3">Step-by-Step Guide:</h4>
+                <ol class="space-y-3 list-decimal list-inside text-sm">
+                  <li class="text-gray-700">
+                    <strong>Get comfortable:</strong> Sit or lie down in quiet space. Loosen tight clothing.
+                  </li>
+                  <li class="text-gray-700">
+                    <strong>Breathe deeply:</strong> Take a few slow, deep breaths to center yourself.
+                  </li>
+                  <li class="text-gray-700">
+                    <strong>Start with hands:</strong> Make tight fists. Hold tension for 5 seconds while noticing the sensation. Then release completely for 10 seconds, noticing the difference.
+                  </li>
+                  <li class="text-gray-700">
+                    <strong>Move through body:</strong> Continue pattern through each muscle group:
+                    <ul class="ml-6 mt-1 space-y-1">
+                      <li>• Forearms (bend wrists)</li>
+                      <li>• Biceps (tense arms)</li>
+                      <li>• Shoulders (raise toward ears)</li>
+                      <li>• Face (scrunch entire face)</li>
+                      <li>• Jaw (clench teeth gently)</li>
+                      <li>• Neck (press head back)</li>
+                      <li>• Chest (take deep breath, hold)</li>
+                      <li>• Back (arch back slightly)</li>
+                      <li>• Stomach (tighten abs)</li>
+                      <li>• Buttocks (squeeze)</li>
+                      <li>• Thighs (tense legs)</li>
+                      <li>• Calves (point toes up)</li>
+                      <li>• Feet (curl toes)</li>
+                    </ul>
+                  </li>
+                  <li class="text-gray-700">
+                    <strong>Full body scan:</strong> Notice the relaxation throughout your entire body. Breathe slowly for 1-2 minutes.
+                  </li>
+                </ol>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">Tips for Success:</h4>
+                <ul class="space-y-2 text-sm">
+                  <li>• Practice daily for best results (even when not stressed)</li>
+                  <li>• Don't tense so hard you cause pain</li>
+                  <li>• Focus on the contrast between tension and relaxation</li>
+                  <li>• Once learned, you can do "mini" versions in stressful moments</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Deep Breathing */}
+            <div class="bg-purple-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Wind class="h-6 w-6 text-purple-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Deep Breathing Techniques</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                Controlled breathing activates your parasympathetic nervous system (the "rest and digest" system), counteracting the stress response. These techniques work immediately and can be done anywhere.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-3">4-7-8 Breathing</h4>
+                  <p class="text-sm text-gray-700 mb-2">
+                    Developed by Dr. Andrew Weil. Excellent for calming anxiety and aiding sleep.
+                  </p>
+                  <ol class="space-y-2 text-sm list-decimal list-inside">
+                    <li>Exhale completely through mouth</li>
+                    <li>Close mouth, inhale through nose for 4 counts</li>
+                    <li>Hold breath for 7 counts</li>
+                    <li>Exhale through mouth for 8 counts</li>
+                    <li>Repeat 4 cycles</li>
+                  </ol>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-3">Box Breathing</h4>
+                  <p class="text-sm text-gray-700 mb-2">
+                    Used by Navy SEALs. Great for focus and stress in high-pressure situations.
+                  </p>
+                  <ol class="space-y-2 text-sm list-decimal list-inside">
+                    <li>Inhale for 4 counts</li>
+                    <li>Hold for 4 counts</li>
+                    <li>Exhale for 4 counts</li>
+                    <li>Hold for 4 counts</li>
+                    <li>Repeat for 5-10 minutes</li>
+                  </ol>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-3">Diaphragmatic Breathing</h4>
+                  <p class="text-sm text-gray-700 mb-2">
+                    Deep belly breathing. The most natural, efficient breathing pattern.
+                  </p>
+                  <ol class="space-y-2 text-sm list-decimal list-inside">
+                    <li>Place hand on belly</li>
+                    <li>Inhale slowly through nose, expanding belly (not chest)</li>
+                    <li>Exhale slowly through mouth</li>
+                    <li>Belly should rise and fall with each breath</li>
+                    <li>Practice 5-10 minutes</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="mt-4 bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-2">When to Use:</h4>
+                <p class="text-sm text-gray-700">
+                  • Before stressful events (meetings, difficult conversations) • During panic or anxiety attacks • When having trouble falling asleep • As a daily practice (morning or evening) • Any time you notice stress building
+                </p>
+              </div>
+            </div>
+
+            {/* Time Management */}
+            <div class="bg-green-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Clock class="h-6 w-6 text-green-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Time Management and Prioritization</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                Feeling overwhelmed by too much to do is a major stressor. Better time management reduces stress and increases productivity.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-3">The Eisenhower Matrix</h4>
+                  <p class="text-sm text-gray-700 mb-3">
+                    Categorize tasks by urgency and importance:
+                  </p>
+                  <div class="space-y-2 text-sm">
+                    <div class="bg-red-50 p-2 rounded">
+                      <strong>Urgent + Important:</strong> Do immediately (crises, deadlines)
+                    </div>
+                    <div class="bg-yellow-50 p-2 rounded">
+                      <strong>Not Urgent + Important:</strong> Schedule time (planning, relationships, health)
+                    </div>
+                    <div class="bg-blue-50 p-2 rounded">
+                      <strong>Urgent + Not Important:</strong> Delegate if possible (interruptions, some emails)
+                    </div>
+                    <div class="bg-gray-50 p-2 rounded">
+                      <strong>Not Urgent + Not Important:</strong> Eliminate (time-wasters, busy work)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-3">Practical Strategies:</h4>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>The power of "No":</strong> Declining requests protects your time and energy</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>Break large tasks into steps:</strong> Reduces overwhelm, increases momentum</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>Time blocking:</strong> Schedule specific times for specific tasks</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>Realistic scheduling:</strong> Don't overbook. Build in buffer time</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>One thing at a time:</strong> Multitasking increases stress and errors</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                      <span><strong>Set boundaries:</strong> Protect personal time (no work emails after 7pm, etc.)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Cognitive Restructuring */}
+            <div class="bg-orange-50 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <Brain class="h-6 w-6 text-orange-600 mr-2" />
+                <h3 class="text-xl font-bold text-gray-800">Cognitive Restructuring: Challenging Stress Thoughts</h3>
+              </div>
+
+              <p class="text-gray-700 mb-4">
+                How you think about stressors affects how stressed you feel. Cognitive restructuring (from CBT) helps you identify and challenge unhelpful thinking patterns.
+              </p>
+
+              <div class="bg-white rounded-lg p-4 mb-4">
+                <h4 class="font-bold text-gray-800 mb-3">Common Stress-Inducing Thought Patterns:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <strong>Catastrophizing:</strong> "This will be a disaster" → Imagining worst-case scenarios
+                  </div>
+                  <div>
+                    <strong>All-or-Nothing:</strong> "I have to be perfect" → Black-and-white thinking
+                  </div>
+                  <div>
+                    <strong>Overgeneralizing:</strong> "I always mess up" → One event = permanent pattern
+                  </div>
+                  <div>
+                    <strong>Should Statements:</strong> "I should handle this better" → Unrealistic expectations
+                  </div>
+                  <div>
+                    <strong>Mind Reading:</strong> "They think I'm incompetent" → Assuming others' thoughts
+                  </div>
+                  <div>
+                    <strong>Fortune Telling:</strong> "This won't work out" → Predicting negative outcomes
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-800 mb-3">The Thought Challenge Process:</h4>
+                <ol class="space-y-3 list-decimal list-inside text-sm">
+                  <li><strong>Identify the thought:</strong> "I'm going to fail this presentation and everyone will think I'm incompetent."</li>
+                  <li><strong>Find the evidence FOR it:</strong> "I'm nervous. I haven't presented much before."</li>
+                  <li><strong>Find the evidence AGAINST it:</strong> "I prepared thoroughly. I know the material. I've succeeded in other new situations. Others have said I'm knowledgeable."</li>
+                  <li><strong>Consider alternatives:</strong> "Even if I'm nervous, that doesn't mean I'll fail. Most people are supportive. It's normal to be nervous trying something new."</li>
+                  <li><strong>Create a balanced thought:</strong> "I'm nervous about this presentation, which is normal. I've prepared well and know my material. Even if it's not perfect, I'll learn and improve."</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Lifestyle Changes */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Lifestyle Changes for Stress Reduction</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Exercise Regularly</h3>
+              <p class="text-gray-700 mb-3">
+                Physical activity is one of the most effective stress relievers. It burns off stress hormones, releases endorphins, and provides healthy distraction.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• Aim for 30 minutes most days</li>
+                <li>• Any movement counts (walking, dancing, gardening)</li>
+                <li>• Outdoor exercise provides extra benefit</li>
+                <li>• Consistent routine better than occasional intense workouts</li>
+              </ul>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Prioritize Sleep</h3>
+              <p class="text-gray-700 mb-3">
+                Poor sleep makes stress worse, and stress disrupts sleep. Breaking this cycle is crucial.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• 7-9 hours nightly</li>
+                <li>• Consistent sleep schedule</li>
+                <li>• No screens 1 hour before bed</li>
+                <li>• Dark, cool, quiet bedroom</li>
+                <li>• Wind-down routine</li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Set Boundaries</h3>
+              <p class="text-gray-700 mb-3">
+                Protect your time, energy, and mental health by setting and maintaining boundaries.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• Say no to non-essential commitments</li>
+                <li>• Limit work hours (no email after 7pm)</li>
+                <li>• Take real lunch breaks away from desk</li>
+                <li>• Limit news and social media consumption</li>
+                <li>• Protect personal time on weekends</li>
+              </ul>
+            </div>
+
+            <div class="bg-orange-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Make Time for Hobbies and Joy</h3>
+              <p class="text-gray-700 mb-3">
+                Engaging in activities you enjoy isn't selfish - it's essential for stress management and overall wellbeing.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li>• Schedule "fun time" like any other appointment</li>
+                <li>• Creative activities are especially stress-relieving</li>
+                <li>• Don't feel guilty for enjoyment</li>
+                <li>• Hobbies provide sense of accomplishment</li>
+                <li>• Social hobbies provide connection too</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Stress vs Anxiety */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Stress vs. Anxiety: Key Differences</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              While related, stress and anxiety are different. Understanding the distinction helps you know when to seek additional help.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Stress</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-600 mr-2 mt-0.5" />
+                  <span><strong>Response to external trigger:</strong> Identifiable stressor (work, finances, relationship)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-600 mr-2 mt-0.5" />
+                  <span><strong>Usually resolves:</strong> When stressor is removed or situation changes</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-600 mr-2 mt-0.5" />
+                  <span><strong>More physical symptoms:</strong> Headaches, muscle tension, fatigue</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-blue-600 mr-2 mt-0.5" />
+                  <span><strong>Present-focused:</strong> Concerned with current demands</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Anxiety</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span><strong>Internal experience:</strong> Can occur without identifiable trigger</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span><strong>Persists longer:</strong> Continues even after stressor is gone</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span><strong>More psychological:</strong> Excessive worry, racing thoughts, dread</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span><strong>Future-focused:</strong> Worried about what might happen</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-gray-100 rounded-lg p-6">
+            <p class="text-gray-700">
+              <strong>The Connection:</strong> Chronic stress often leads to anxiety disorders. If you're experiencing persistent anxiety that interferes with daily life, even when stressors are managed, you may have an anxiety disorder that needs professional treatment.
+            </p>
+          </div>
+        </div>
+
+        {/* When to Seek Help */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">When to Seek Professional Help</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Warning Signs of Chronic Stress</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Stress management techniques aren't helping</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms (headaches, chest pain, digestive issues)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Developing anxiety or depression</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Using alcohol/drugs to cope</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Work or relationship problems from stress</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Panic attacks or severe anxiety episodes</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Feeling hopeless or having thoughts of self-harm</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">How Therapy Can Help</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  A therapist can help you:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Identify sources of stress and patterns</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Learn personalized coping strategies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Address underlying anxiety or depression</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Develop communication and boundary-setting skills</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Process trauma that may fuel stress reactions</span>
+                  </li>
+                </ul>
+                <div class="mt-6">
+                  <a href="/best/conditions/best-for-stress-management" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Stress Management Therapy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/stress-level-check" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Stress Level Assessment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/stress-tracker" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Stress Tracking Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/thought-record" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Thought Record (for cognitive restructuring)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/learn/fundamentals/anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Understanding Anxiety Disorders</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/mindfulness" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Mindfulness for Mental Health</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/learn/fundamentals/self-care" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Self-Care Beyond Bubble Baths</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Take Control of Your Stress?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Assess your stress levels and find professional support to develop personalized stress management strategies that work for you.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/stress-level-check" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Assess Your Stress</a>
+            <a href="/best/conditions/best-for-stress-management" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Stress Management Help</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

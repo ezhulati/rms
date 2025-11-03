@@ -11,35 +11,35 @@ const Header = () => {
   };
 
   const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
-    <Link 
+    <Link
       to={to}
-      className={`text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200 ${
-        isActive(to) ? 'text-emerald-500' : ''
+      className={`text-neutral-700 hover:text-brand-primary-500 font-medium transition-colors duration-200 ${
+        isActive(to) ? 'text-brand-primary-600' : ''
       }`}
     >
       {children}
     </Link>
   );
 
-  const DropdownMenu = ({ 
-    title, 
-    items 
-  }: { 
-    title: string; 
-    items: { label: string; href: string }[] 
+  const DropdownMenu = ({
+    title,
+    items
+  }: {
+    title: string;
+    items: { label: string; href: string }[]
   }) => (
     <div className="relative group">
-      <button className="flex items-center gap-1 text-gray-700 hover:text-emerald-500 font-medium transition-colors duration-200">
+      <button className="flex items-center gap-1 text-neutral-700 hover:text-brand-primary-500 font-semibold transition-colors duration-200">
         {title}
         <ChevronDown className="h-4 w-4" />
       </button>
       <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[240px] z-50">
-        <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+        <div className="bg-white rounded-xl shadow-lg border border-neutral-200 py-2">
           {items.map((item, index) => (
             <Link
               key={index}
               to={item.href}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500 transition-colors duration-200"
+              className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 transition-colors duration-200"
             >
               {item.label}
             </Link>
@@ -79,13 +79,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-16">
+    <header className="bg-white border-b border-neutral-200 shadow-sm">
+      <div className="w-full">
+        <nav className="flex items-center justify-between h-16 max-w-7xl mx-auto px-6 lg:px-12">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/images/RMS.svg" alt="RealMindSolutions Logo" className="h-8 w-8" />
-            <span className="text-xl font-bold text-gray-800">RealMindSolutions</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/images/RMS_icon.svg" alt="RealMindSolutions Logo" className="h-10 w-10" />
+            <div className="flex flex-col leading-none">
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl font-heading font-black text-brand-primary-600 tracking-tight">Real</span>
+                <span className="text-[22px] font-serif italic font-bold text-brand-accent-600">Mind</span>
+              </div>
+              <span className="text-[10px] font-sans font-light text-neutral-500 tracking-[0.2em] uppercase">Solutions</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -101,7 +107,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-emerald-500 hover:bg-gray-100"
+            className="lg:hidden p-2 rounded-md text-neutral-700 hover:text-brand-primary-500 hover:bg-neutral-100 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,56 +122,56 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-4">
+          <div className="lg:hidden py-4 space-y-4 max-w-7xl mx-auto px-6">
             <div className="space-y-2">
-              <div className="font-medium px-4">Compare</div>
+              <div className="font-semibold px-4 text-brand-primary-700">Compare</div>
               {compareItems.map((item, index) => (
                 <Link
                   key={index}
                   to={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
-            
+
             <div className="space-y-2">
-              <div className="font-medium px-4">Reviews</div>
+              <div className="font-semibold px-4 text-brand-primary-700">Reviews</div>
               {reviewItems.map((item, index) => (
                 <Link
                   key={index}
                   to={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
-            
+
             <div className="space-y-2">
-              <div className="font-medium px-4">Best For You</div>
+              <div className="font-semibold px-4 text-brand-primary-700">Best For You</div>
               {bestItems.map((item, index) => (
                 <Link
                   key={index}
                   to={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
-            
+
             <div className="space-y-2">
-              <div className="font-medium px-4">Tools</div>
+              <div className="font-semibold px-4 text-brand-primary-700">Tools</div>
               {toolItems.map((item, index) => (
                 <Link
                   key={index}
                   to={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -176,21 +182,21 @@ const Header = () => {
             <div className="space-y-2">
               <Link
                 to="/conditions-az"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Conditions A-Z
               </Link>
               <Link
                 to="/learn"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Learn
               </Link>
               <Link
                 to="/blog"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-emerald-500"
+                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-brand-primary-50 hover:text-brand-primary-600 rounded-md transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog

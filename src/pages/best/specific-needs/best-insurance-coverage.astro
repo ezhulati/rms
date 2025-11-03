@@ -1,12 +1,455 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, FileText } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+// Filter platforms that accept insurance
+const insurancePlatforms = platforms.filter(p => p.insurance);
 ---
 
-<BaseLayout title="Best Insurance Coverage | RealMindSolutions" description="Best Therapy Platforms That Accept Insurance">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Therapy Platforms That Accept Insurance</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Insurance-friendly therapy platforms.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy That Takes Insurance 2025</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Find affordable online therapy platforms that accept insurance, offering significantly reduced costs through in-network coverage and manageable copays.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/insurance-coverage-checker" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Check your insurance coverage</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks for Insurance-Covered Therapy at a Glance</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Best Overall */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Overall
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.5)}
+                  </div>
+                  <span class="text-gray-600">4.5/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Comprehensive therapy and psychiatry platform accepting most major insurance providers with low copays and excellent billing support.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Copay:</strong> $0-$30 per session
+              </div>
+              <a href="https://www.talkspace.com" class="w-full min-w-0 justify-center">Visit Talkspace</a>
+            </div>
+
+            {/* Best for 24/7 Access */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best for 24/7
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">MDLive</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.2)}
+                  </div>
+                  <span class="text-gray-600">4.2/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                24/7 healthcare platform with therapy and psychiatry services accepting extensive insurance network with same-day appointments.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Copay:</strong> $0-$50 per session
+              </div>
+              <a href="https://www.mdlive.com" class="w-full min-w-0 justify-center">Visit MDLive</a>
+            </div>
+
+            {/* Best for Primary Care Integration */}
+            <div class="bg-indigo-50 rounded-lg p-6 relative">
+              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                Best Integration
+              </div>
+              <div class="flex items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-800 mr-3">Amwell</h3>
+                <div class="flex items-center">
+                  <div class="mr-1">
+                    {renderStars(4.1)}
+                  </div>
+                  <span class="text-gray-600">4.1/5</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Comprehensive telehealth platform with mental health services integrated with primary care, accepting major insurance providers.
+              </p>
+              <div class="text-sm text-gray-600 mb-4">
+                <strong>Copay:</strong> $0-$45 per session
+              </div>
+              <a href="https://www.amwell.com" class="w-full min-w-0 justify-center">Visit Amwell</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Insurance Coverage */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Insurance Coverage for Online Therapy</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">How Does Insurance Work with Online Therapy?</h3>
+              <p class="text-gray-600 mb-4">
+                Insurance coverage for online therapy works similarly to in-person therapy, with platforms either being in-network or out-of-network providers. Understanding these options can save hundreds of dollars monthly.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>In-Network:</strong> Platform has contract with your insurer, resulting in lower copays ($0-$50 per session)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Out-of-Network:</strong> You pay upfront and submit claims for partial reimbursement</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Deductibles:</strong> May need to meet annual deductible before coverage begins</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Session Limits:</strong> Some plans cover a limited number of sessions annually</span>
+                </li>
+              </ul>
+              <p class="text-gray-600">
+                Platforms that accept insurance handle billing directly, making the process much simpler than out-of-network reimbursement.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Major Insurance Providers Accepted</h3>
+              <p class="text-gray-600 mb-4">
+                Most online therapy platforms that accept insurance work with major providers, though specific coverage varies:
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Aetna:</strong> Widely accepted across platforms, typically low copays</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Cigna:</strong> Good coverage for telehealth services</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Blue Cross Blue Shield:</strong> Coverage varies by state plan</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>United Healthcare/Optum:</strong> Extensive telehealth network</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Anthem:</strong> Increasingly covering online therapy platforms</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Medicare:</strong> Limited but growing coverage for telehealth</span>
+                </li>
+              </ul>
+              <p class="text-gray-600">
+                Always verify your specific plan's coverage before starting treatment, as benefits vary significantly.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Cost Comparison: Insurance vs. Self-Pay</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg p-6 shadow-sm">
+                <h4 class="font-bold text-gray-800 mb-3">With Insurance (In-Network)</h4>
+                <ul class="space-y-2">
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Typical Copay:</span>
+                    <span class="font-bold text-green-600">$0-$50/session</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Monthly Cost (4 sessions):</span>
+                    <span class="font-bold text-green-600">$0-$200</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Annual Savings:</span>
+                    <span class="font-bold text-green-600">$2,400-$4,000</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg p-6 shadow-sm">
+                <h4 class="font-bold text-gray-800 mb-3">Self-Pay (No Insurance)</h4>
+                <ul class="space-y-2">
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Per Session Cost:</span>
+                    <span class="font-bold text-gray-800">$65-$120/session</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Monthly Cost (4 sessions):</span>
+                    <span class="font-bold text-gray-800">$260-$480</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Annual Cost:</span>
+                    <span class="font-bold text-gray-800">$3,120-$5,760</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews of the Best Insurance-Accepting Platforms</h2>
+
+          {insurancePlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <div class="mr-2">
+                        {renderStars(platform.rating)}
+                      </div>
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.copayRange}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="flex space-x-1 mr-2">
+                          {platform.communication.includes('messaging') && (
+                            <MessageSquare class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('video') && (
+                            <Video class="h-4 w-4 text-indigo-600" />
+                          )}
+                          {platform.communication.includes('phone') && (
+                            <Phone class="h-4 w-4 text-indigo-600" />
+                          )}
+                        </div>
+                        <span class="text-gray-600">Communication</span>
+                      </div>
+                      <div class="flex items-center">
+                        <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        <span class="text-gray-600">Insurance Accepted</span>
+                      </div>
+                      <div class="flex items-center">
+                        {platform.medication ? (
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2" />
+                        ) : (
+                          <XCircle class="h-5 w-5 text-red-500 mr-2" />
+                        )}
+                        <span class="text-gray-600">Medication Management</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <button class="w-full min-w-0 justify-center">Visit Website</button>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It for Insurance Coverage</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="mb-6">
+                      <h5 class="font-bold text-gray-800 mb-3">Insurance Providers Accepted</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.insuranceProviders.map((provider, i) => (
+                          <span key={i} class="bg-indigo-50 px-3 py-1 rounded-full text-sm text-indigo-700">{provider}</span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Insurance-Covered Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Verify Coverage</h3>
+              <p class="text-gray-600">
+                Call your insurance company or check your benefits online to confirm which platforms are in-network and what your copay will be.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <FileText class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Understand Your Benefits</h3>
+              <p class="text-gray-600">
+                Know your deductible, copay amount, session limits, and whether pre-authorization is required before starting therapy.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Platform Features</h3>
+              <p class="text-gray-600">
+                Beyond insurance, consider communication methods, therapist availability, and whether you need medication management services.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              For most individuals with insurance coverage:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Talkspace</strong> for the most comprehensive service with extensive insurance network and both therapy and psychiatry</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>MDLive</strong> for 24/7 access and urgent mental health consultations with most major insurers</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Amwell</strong> for integrated healthcare approach connecting mental health with primary care</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How do I know if a platform accepts my insurance?</h3>
+              <p class="text-gray-600">
+                Most platforms have an insurance verification tool on their website. You can also call your insurance company's behavioral health line to confirm coverage. Always verify before your first session to avoid unexpected costs.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What's the difference between copay and coinsurance?</h3>
+              <p class="text-gray-600">
+                A copay is a fixed amount you pay per session (e.g., $30), while coinsurance is a percentage of the session cost you pay (e.g., 20% of $120 = $24). Most therapy plans use copays for simplicity.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can I use HSA or FSA funds for online therapy?</h3>
+              <p class="text-gray-600">
+                Yes! Online therapy is typically HSA/FSA eligible when prescribed by a licensed provider. You can use these funds for copays, deductibles, or full session costs if paying out-of-pocket.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Do I need a referral for online therapy with insurance?</h3>
+              <p class="text-gray-600">
+                This depends on your specific insurance plan. PPO plans typically don't require referrals, while HMO plans often do. Check your benefits or contact your insurance provider to confirm.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What if my insurance denies coverage?</h3>
+              <p class="text-gray-600">
+                You can appeal the decision with your insurance company. Many platforms also offer self-pay options at competitive rates, and some provide financial aid programs if you don't have coverage.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Will my therapist handle insurance billing?</h3>
+              <p class="text-gray-600">
+                Yes, platforms that accept insurance handle all billing directly. You'll typically just pay your copay at the time of service, and the platform submits claims to your insurer on your behalf.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Use Your Insurance Benefits?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Check which platforms accept your insurance and start affordable therapy today with low copays.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/insurance-coverage-checker" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Check Insurance Coverage</a>
+            <a href="/learn/fundamentals/therapy-types-explained" class="border-white text-white hover:bg-white hover:bg-opacity-10 inline-flex items-center px-6 py-3 rounded-md border-2">Learn About Therapy Types</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

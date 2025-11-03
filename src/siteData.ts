@@ -6,7 +6,7 @@ export const platforms = [
     name: 'BetterHelp',
     slug: 'betterhelp',
     logo: '/images/platforms/betterhelp-logo.png',
-    image: '/images/platforms/betterhelpreviews.jpg',
+    image: '/images/concepts/betterhelpreview.jpg',
     tagline: 'World\'s Largest Online Therapy Platform',
     description: 'BetterHelp is the world\'s largest online therapy platform, offering affordable and convenient access to licensed therapists through messaging, phone, and video sessions.',
     rating: 4.8,
@@ -81,8 +81,8 @@ export const platforms = [
     id: 'talkspace',
     name: 'Talkspace',
     slug: 'talkspace',
-    logo: '/images/platforms/talkspace-logo.png',
-    image: '/images/platforms/talkspacereview.jpg',
+    logo: '/images/platforms/talkspace-logo.svg',
+    image: '/images/concepts/talkspacereview.jpg',
     tagline: 'Therapy & Psychiatry - All Online',
     description: 'Talkspace offers online therapy and psychiatry services with insurance coverage options, providing access to licensed therapists and psychiatrists through text, audio, and video.',
     rating: 4.5,
@@ -152,8 +152,8 @@ export const platforms = [
     id: 'cerebral',
     name: 'Cerebral',
     slug: 'cerebral',
-    logo: '/images/platforms/cerebral-logo.png',
-    image: '/images/platforms/cerebralreview.jpg',
+    logo: '/images/platforms/cerebral-logo.svg',
+    image: '/images/concepts/cerebralreview.jpg',
     tagline: 'Mental Health Care, Simplified',
     description: 'Cerebral provides comprehensive online mental health care combining therapy and medication management, specializing in anxiety, depression, ADHD, and insomnia treatment.',
     rating: 4.0,
@@ -366,6 +366,518 @@ export const platforms = [
     liveSessionsRating: 4.3,
     responseTimeRating: 4.2,
     overallRating: 4.3
+  },
+  {
+    id: 'mdlive',
+    name: 'MDLive',
+    slug: 'mdlive',
+    logo: '/images/platforms/mdlive-logo.png',
+    image: '/images/concepts/bestonlinetherapyplatforms.jpg',
+    tagline: 'Virtual Healthcare, Anytime, Anywhere',
+    description: 'MDLive offers comprehensive virtual healthcare including therapy, psychiatry, and primary care services with insurance coverage and 24/7 availability.',
+    rating: 4.2,
+    ratings: {
+      overall: 4.2,
+      therapistQuality: 4.3,
+      userExperience: 4.1,
+      pricing: 4.0,
+      customerService: 4.2,
+      features: 4.4
+    },
+    pricing: {
+      range: '$108-$284/session',
+      billingCycle: 'Per Session',
+      financialAid: 'Not Available',
+      insurance: 'Accepted'
+    },
+    pros: [
+      'Accepts most major insurance plans',
+      '24/7 access to healthcare providers',
+      'Offers therapy and psychiatry services',
+      'Same-day appointments available',
+      'Integrated with many health systems',
+      'Comprehensive healthcare platform (not just mental health)'
+    ],
+    cons: [
+      'More expensive without insurance',
+      'Focuses on medical model vs. ongoing therapy',
+      'Less personalized than dedicated therapy platforms',
+      'Session-based pricing (not subscription)',
+      'Interface feels more clinical than user-friendly'
+    ],
+    features: [
+      'Video therapy sessions',
+      'Psychiatry and medication management',
+      'Primary care consultations',
+      'Dermatology and urgent care',
+      'Prescription services',
+      'Insurance billing support',
+      '24/7 availability'
+    ],
+    bestFor: [
+      'Those with insurance coverage',
+      'Need for medication management',
+      'Medical and mental health integration',
+      'Urgent mental health consultations',
+      'Corporate health benefits users'
+    ],
+    notIdealFor: [
+      'Long-term ongoing therapy relationships',
+      'Budget-conscious without insurance',
+      'Those preferring messaging therapy',
+      'Holistic therapy approaches'
+    ],
+    specialties: ['Anxiety', 'Depression', 'ADHD', 'Stress', 'Medication Management'],
+    communication: ['video', 'phone'],
+    insurance: true,
+    medication: true,
+    priceRange: [108, 284],
+    price: '$108-$284/session',
+    insuranceProviders: ['Aetna', 'Cigna', 'United Healthcare', 'Anthem', 'Blue Cross Blue Shield', 'Humana'],
+    copayRange: '$0-$50 per session (varies by plan)',
+    messagingRating: 3.5,
+    liveSessionsRating: 4.3,
+    responseTimeRating: 4.4,
+    overallRating: 4.2
+  },
+  {
+    id: 'brightside',
+    name: 'Brightside',
+    slug: 'brightside',
+    logo: '/images/platforms/brightside-logo.svg',
+    image: '/images/platforms/brightsidereview.jpg',
+    tagline: 'Personalized Mental Health Treatment',
+    description: 'Brightside combines therapy and psychiatry with a data-driven approach, specializing in depression and anxiety treatment with medication management.',
+    rating: 4.1,
+    ratings: {
+      overall: 4.1,
+      therapistQuality: 4.2,
+      userExperience: 4.0,
+      pricing: 3.9,
+      customerService: 4.0,
+      features: 4.3
+    },
+    pricing: {
+      range: '$95-$299/month',
+      billingCycle: 'Monthly',
+      financialAid: 'Limited',
+      insurance: 'Accepted (select plans)'
+    },
+    pros: [
+      'Combines therapy and medication management',
+      'Data-driven personalized treatment plans',
+      'Accepts some insurance plans',
+      'Specializes in depression and anxiety',
+      'Regular provider check-ins',
+      'Medication delivery included'
+    ],
+    cons: [
+      'More expensive than therapy-only services',
+      'Limited therapy session frequency',
+      'Not available in all states',
+      'Primarily medication-focused approach',
+      'Newer platform with less reviews'
+    ],
+    features: [
+      'Psychiatry consultations',
+      'Medication management',
+      'Therapy sessions',
+      'Unlimited messaging with care team',
+      'Medication delivery',
+      'Progress tracking',
+      'Mobile app'
+    ],
+    bestFor: [
+      'Depression and anxiety with medication',
+      'Those needing psychiatry services',
+      'Data-driven treatment approach',
+      'Insurance coverage seekers',
+      'Comprehensive mental health care'
+    ],
+    notIdealFor: [
+      'Therapy-only preference',
+      'Budget-conscious seekers',
+      'Those in unavailable states',
+      'Complex mental health conditions'
+    ],
+    specialties: ['Depression', 'Anxiety', 'Medication Management'],
+    communication: ['messaging', 'video'],
+    insurance: true,
+    medication: true,
+    priceRange: [95, 299],
+    price: '$95-$299/month',
+    insuranceProviders: ['Aetna', 'Anthem', 'Blue Cross Blue Shield'],
+    copayRange: '$10-$40 per session (varies by plan)',
+    messagingRating: 4.1,
+    liveSessionsRating: 4.0,
+    responseTimeRating: 4.2,
+    overallRating: 4.1
+  },
+  {
+    id: 'calmerry',
+    name: 'Calmerry',
+    slug: 'calmerry',
+    logo: '/images/platforms/calmerry-logo.png',
+    image: '/images/platforms/calmerryreview.jpg',
+    tagline: 'Affordable Online Therapy',
+    description: 'Calmerry offers affordable online therapy with licensed therapists through video sessions and messaging, focusing on accessibility and convenience.',
+    rating: 4.0,
+    ratings: {
+      overall: 4.0,
+      therapistQuality: 4.1,
+      userExperience: 3.9,
+      pricing: 4.4,
+      customerService: 3.9,
+      features: 3.8
+    },
+    pricing: {
+      range: '$42-$84/week',
+      billingCycle: 'Weekly',
+      financialAid: 'Available',
+      insurance: 'Not Accepted'
+    },
+    pros: [
+      'Very affordable pricing',
+      'Licensed therapists in all 50 states',
+      'Video and messaging therapy',
+      'Easy to switch therapists',
+      'No long-term commitment',
+      'Financial assistance available'
+    ],
+    cons: [
+      'Does not accept insurance',
+      'Fewer features than larger platforms',
+      'Less therapist availability',
+      'No phone therapy option',
+      'Newer platform with smaller network'
+    ],
+    features: [
+      'Video therapy sessions',
+      'Unlimited messaging',
+      'Licensed therapists',
+      'Mobile-friendly platform',
+      'Therapy worksheets',
+      'Progress tracking'
+    ],
+    bestFor: [
+      'Budget-conscious therapy seekers',
+      'Anxiety and depression',
+      'First-time therapy users',
+      'Video therapy preference',
+      'Simple, straightforward therapy'
+    ],
+    notIdealFor: [
+      'Those needing insurance coverage',
+      'Medication management needs',
+      'Complex mental health conditions',
+      'Group therapy interest'
+    ],
+    specialties: ['Anxiety', 'Depression', 'Stress', 'Relationship Issues', 'Self-Esteem'],
+    communication: ['messaging', 'video'],
+    insurance: false,
+    medication: false,
+    priceRange: [42, 84],
+    price: '$42-$84/week',
+    insuranceProviders: [],
+    copayRange: 'N/A - Does not accept insurance',
+    messagingRating: 4.0,
+    liveSessionsRating: 4.1,
+    responseTimeRating: 3.9,
+    overallRating: 4.0
+  },
+  {
+    id: 'amwell',
+    name: 'Amwell',
+    slug: 'amwell',
+    logo: '/images/platforms/amwell-logo.svg',
+    image: '/images/concepts/bestonlinetherapyplatforms.jpg',
+    tagline: 'Telehealth for Mind and Body',
+    description: 'Amwell provides comprehensive telehealth services including mental health therapy, psychiatry, and primary care with insurance coverage and 24/7 availability.',
+    rating: 4.1,
+    ratings: {
+      overall: 4.1,
+      therapistQuality: 4.2,
+      userExperience: 4.0,
+      pricing: 3.9,
+      customerService: 4.1,
+      features: 4.3
+    },
+    pricing: {
+      range: '$99-$279/session',
+      billingCycle: 'Per Session',
+      financialAid: 'Not Available',
+      insurance: 'Accepted'
+    },
+    pros: [
+      'Accepts most major insurance',
+      'Comprehensive healthcare platform',
+      '24/7 provider availability',
+      'Therapy and psychiatry services',
+      'Integrated with health systems',
+      'Same-day appointments'
+    ],
+    cons: [
+      'Expensive without insurance',
+      'Less focused on ongoing therapy relationships',
+      'Per-session pricing adds up',
+      'More clinical than user-friendly',
+      'Not therapy-specialized'
+    ],
+    features: [
+      'Video therapy sessions',
+      'Psychiatry consultations',
+      'Medication management',
+      'Primary care integration',
+      'Insurance billing',
+      '24/7 availability',
+      'Mobile app'
+    ],
+    bestFor: [
+      'Insurance coverage holders',
+      'Medication management needs',
+      'Integrated healthcare approach',
+      'Corporate health benefit users',
+      'Urgent consultations'
+    ],
+    notIdealFor: [
+      'Long-term therapy relationships',
+      'Budget-conscious without insurance',
+      'Messaging therapy preference',
+      'Therapy-only seekers'
+    ],
+    specialties: ['Anxiety', 'Depression', 'ADHD', 'Stress', 'Medication Management', 'Crisis Support'],
+    communication: ['video', 'phone'],
+    insurance: true,
+    medication: true,
+    priceRange: [99, 279],
+    price: '$99-$279/session',
+    insuranceProviders: ['Aetna', 'Cigna', 'United Healthcare', 'Blue Cross Blue Shield', 'Anthem', 'Medicare'],
+    copayRange: '$0-$45 per session (varies by plan)',
+    messagingRating: 3.4,
+    liveSessionsRating: 4.2,
+    responseTimeRating: 4.3,
+    overallRating: 4.1
+  },
+  {
+    id: 'lasting',
+    name: 'Lasting',
+    slug: 'lasting',
+    logo: '/images/platforms/lasting-logo.png',
+    image: '/images/concepts/bestforcouples.jpg',
+    tagline: 'Marriage & Relationship Health',
+    description: 'Lasting is a couples therapy and relationship wellness app that combines therapy sessions with interactive exercises, communication tools, and relationship assessments.',
+    rating: 4.4,
+    ratings: {
+      overall: 4.4,
+      therapistQuality: 4.5,
+      userExperience: 4.3,
+      pricing: 4.2,
+      customerService: 4.3,
+      features: 4.6
+    },
+    pricing: {
+      range: '$11.99-$299/month',
+      billingCycle: 'Monthly',
+      financialAid: 'Not Available',
+      insurance: 'Not Accepted'
+    },
+    pros: [
+      'Specialized in couples and relationships',
+      'Affordable app-based therapy option',
+      'Interactive exercises and assessments',
+      'Science-based relationship tools',
+      'Both partners can use together',
+      'Licensed couples therapists available'
+    ],
+    cons: [
+      'Does not accept insurance',
+      'App-based may feel less personal',
+      'Limited to relationship issues',
+      'Therapy add-on increases cost',
+      'No medication management'
+    ],
+    features: [
+      'Video couples therapy sessions',
+      'Relationship assessments',
+      'Daily interactive exercises',
+      'Communication tools',
+      'Progress tracking',
+      'Library of relationship content',
+      'Both partners included'
+    ],
+    bestFor: [
+      'Couples therapy and pre-marital counseling',
+      'Relationship communication issues',
+      'Marriage enrichment',
+      'Budget-conscious couples',
+      'Tech-savvy couples',
+      'Self-guided relationship work'
+    ],
+    notIdealFor: [
+      'Individual therapy needs',
+      'Severe relationship crises',
+      'Those preferring traditional therapy',
+      'Insurance-dependent couples'
+    ],
+    specialties: ['Couples Therapy', 'Marriage Counseling', 'Communication', 'Intimacy', 'Conflict Resolution', 'Pre-Marital'],
+    communication: ['video', 'messaging', 'in-app'],
+    insurance: false,
+    medication: false,
+    priceRange: [11.99, 299],
+    price: '$11.99-$299/month',
+    insuranceProviders: [],
+    copayRange: 'N/A - Does not accept insurance',
+    messagingRating: 4.2,
+    liveSessionsRating: 4.5,
+    responseTimeRating: 4.3,
+    overallRating: 4.4
+  },
+  {
+    id: 'doctor-on-demand',
+    name: 'Doctor On Demand',
+    slug: 'doctor-on-demand',
+    logo: '/images/platforms/doctor-on-demand-logo.svg',
+    image: '/images/concepts/bestonlinetherapyplatforms.jpg',
+    tagline: 'Quality Healthcare On Your Schedule',
+    description: 'Doctor On Demand offers virtual healthcare including therapy, psychiatry, and primary care with board-certified providers available 24/7 and insurance coverage.',
+    rating: 4.0,
+    ratings: {
+      overall: 4.0,
+      therapistQuality: 4.1,
+      userExperience: 3.9,
+      pricing: 3.8,
+      customerService: 4.0,
+      features: 4.2
+    },
+    pricing: {
+      range: '$99-$269/session',
+      billingCycle: 'Per Session',
+      financialAid: 'Not Available',
+      insurance: 'Accepted'
+    },
+    pros: [
+      'Accepts major insurance plans',
+      'Board-certified providers',
+      '24/7 availability',
+      'Therapy and psychiatry services',
+      'Same-day appointments',
+      'Integrated with many employers'
+    ],
+    cons: [
+      'Expensive without insurance',
+      'Session-based (not subscription)',
+      'Less personalized than dedicated therapy apps',
+      'More medical than therapeutic approach',
+      'No messaging therapy'
+    ],
+    features: [
+      'Video therapy sessions',
+      'Psychiatry consultations',
+      'Medication management',
+      'Primary care services',
+      'Chronic condition management',
+      'Insurance billing',
+      'Mobile app'
+    ],
+    bestFor: [
+      'Insurance coverage holders',
+      'Medication management needs',
+      'Urgent mental health consultations',
+      'Corporate benefit users',
+      'Integrated healthcare needs'
+    ],
+    notIdealFor: [
+      'Long-term therapy relationships',
+      'Budget-conscious without insurance',
+      'Messaging therapy preference',
+      'Holistic therapy approaches'
+    ],
+    specialties: ['Anxiety', 'Depression', 'ADHD', 'Stress Management', 'Medication Management'],
+    communication: ['video'],
+    insurance: true,
+    medication: true,
+    priceRange: [99, 269],
+    price: '$99-$269/session',
+    insuranceProviders: ['Aetna', 'Cigna', 'United Healthcare', 'Blue Cross Blue Shield', 'Anthem'],
+    copayRange: '$0-$50 per session (varies by plan)',
+    messagingRating: 3.0,
+    liveSessionsRating: 4.1,
+    responseTimeRating: 4.2,
+    overallRating: 4.0
+  },
+  {
+    id: 'pride-counseling',
+    name: 'Pride Counseling',
+    slug: 'pride-counseling',
+    logo: '/images/platforms/pride-counseling-logo.png',
+    image: '/images/concepts/bestforlgbtq.jpg',
+    tagline: 'Online Therapy for the LGBTQ+ Community',
+    description: 'Pride Counseling offers online therapy specifically designed for the LGBTQ+ community, with licensed therapists experienced in LGBTQ+ issues and affirming care.',
+    rating: 4.5,
+    ratings: {
+      overall: 4.5,
+      therapistQuality: 4.7,
+      userExperience: 4.4,
+      pricing: 4.2,
+      customerService: 4.5,
+      features: 4.4
+    },
+    pricing: {
+      range: '$60-$90/week',
+      billingCycle: 'Weekly',
+      financialAid: 'Available',
+      insurance: 'Not Accepted'
+    },
+    pros: [
+      'LGBTQ+-specialized therapists',
+      'Affirming and inclusive environment',
+      'Multiple communication methods',
+      'Flexible scheduling',
+      'Financial aid available',
+      'Easy therapist switching'
+    ],
+    cons: [
+      'Does not accept insurance',
+      'Same price as BetterHelp',
+      'No medication management',
+      'Smaller therapist network',
+      'Limited to LGBTQ+ community'
+    ],
+    features: [
+      'Unlimited messaging',
+      'Video therapy sessions',
+      'Phone sessions',
+      'Live chat',
+      'LGBTQ+-specialized therapists',
+      'Therapy worksheets',
+      'Secure platform'
+    ],
+    bestFor: [
+      'LGBTQ+ individuals',
+      'Coming out support',
+      'Gender identity exploration',
+      'LGBTQ+ relationship issues',
+      'Discrimination and minority stress',
+      'Finding affirming care'
+    ],
+    notIdealFor: [
+      'Those needing insurance coverage',
+      'Medication management needs',
+      'Severe mental health crises',
+      'In-person therapy preference'
+    ],
+    specialties: ['LGBTQ+ Issues', 'Coming Out', 'Gender Identity', 'Anxiety', 'Depression', 'Relationship Issues', 'Trauma'],
+    communication: ['messaging', 'video', 'phone', 'live-chat'],
+    insurance: false,
+    medication: false,
+    priceRange: [60, 90],
+    price: '$60-$90/week',
+    insuranceProviders: [],
+    copayRange: 'N/A - Does not accept insurance',
+    messagingRating: 4.6,
+    liveSessionsRating: 4.5,
+    responseTimeRating: 4.7,
+    overallRating: 4.5
   }
 ];
 

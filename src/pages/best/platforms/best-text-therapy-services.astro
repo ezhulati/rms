@@ -1,12 +1,389 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { CheckCircle, XCircle, MessageSquare, Video, Phone, DollarSign, Clock, Smartphone } from 'lucide-react';
+
+// Get messaging-focused platforms
+const betterhelp = getPlatformBySlug('betterhelp');
+const talkspace = getPlatformBySlug('talkspace');
+const onlineTherapy = getPlatformBySlug('online-therapy-com');
+const calmerry = getPlatformBySlug('calmerry');
+const prideCounseling = getPlatformBySlug('pride-counseling');
+
+const topPlatforms = [betterhelp, talkspace, onlineTherapy, calmerry, prideCounseling].filter(Boolean);
 ---
 
-<BaseLayout title="Best Text Therapy Services | RealMindSolutions" description="Best Text-Based Therapy Services">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best Text-Based Therapy Services</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Leading text therapy platforms reviewed.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Text Therapy Services 2025</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+          Discover the best messaging-based therapy platforms offering unlimited texting with licensed therapists. Perfect for those who prefer writing over talking or need flexible, asynchronous communication.
+        </p>
+        <div class="flex justify-center">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Text Therapy Match</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Quick Summary */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Text Therapy Picks</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {betterhelp && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Best Overall
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{betterhelp.name}</h3>
+                  <span class="text-gray-600">{betterhelp.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Unlimited messaging with your therapist plus live chat sessions. Largest network of licensed professionals.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {betterhelp.price}
+                </div>
+                <a href={`/reviews/platforms/${betterhelp.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+
+            {talkspace && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Best with Insurance
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{talkspace.name}</h3>
+                  <span class="text-gray-600">{talkspace.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Text, audio, and video messaging with insurance coverage. Multiple daily responses from your therapist.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {talkspace.price}
+                </div>
+                <a href={`/reviews/platforms/${talkspace.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+
+            {onlineTherapy && (
+              <div class="bg-indigo-50 rounded-lg p-6 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  Best for CBT
+                </div>
+                <div class="flex items-center mb-3">
+                  <h3 class="text-xl font-bold text-gray-800 mr-3">{onlineTherapy.name}</h3>
+                  <span class="text-gray-600">{onlineTherapy.rating}/5</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Structured CBT program with messaging therapy and comprehensive worksheets. Most affordable option.
+                </p>
+                <div class="text-sm text-gray-600 mb-4">
+                  <strong>Price:</strong> {onlineTherapy.price}
+                </div>
+                <a href={`/reviews/platforms/${onlineTherapy.slug}-review`} class="w-full min-w-0 justify-center">Learn More</a>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Why Choose Text Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Why Choose Text-Based Therapy?</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Benefits of Messaging Therapy</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Anytime Access:</strong> Message your therapist whenever you need support, not just during scheduled sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Time to Process:</strong> Write and revise your thoughts before sending, leading to deeper self-reflection</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>No Scheduling Stress:</strong> No need to find time for live appointments in your busy schedule</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Written Record:</strong> Review past conversations to track your progress and insights</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Comfort & Privacy:</strong> Communicate from anywhere without worrying about being overheard</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Best For</h3>
+              <p class="text-gray-600 mb-4">
+                Text therapy is particularly effective for:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <MessageSquare class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>People who express themselves better in writing</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageSquare class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Busy professionals with unpredictable schedules</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageSquare class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Individuals with social anxiety or phone anxiety</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageSquare class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Those who want ongoing support between sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageSquare class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>People in different time zones or with irregular hours</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Reviews */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Reviews</h2>
+
+          {topPlatforms.map((platform, index) => (
+            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+              <div class="p-8">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-3">
+                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <span class="text-gray-600">{platform.rating}/5</span>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex items-center">
+                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">{platform.price}</span>
+                      </div>
+                      <div class="flex items-center">
+                        <MessageSquare class="h-5 w-5 text-indigo-600 mr-2" />
+                        <span class="text-gray-600">Messaging Rating: {platform.messagingRating}/5</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <a href={`/reviews/platforms/${platform.slug}-review`} class="w-full min-w-0 justify-center">Read Full Review</a>
+                    </div>
+                  </div>
+
+                  <div class="md:w-3/4 md:pl-8">
+                    <h4 class="font-bold text-gray-800 mb-3">Overview</h4>
+                    <p class="text-gray-600 mb-4">
+                      {platform.description}
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <ul class="space-y-2">
+                          {platform.pros.slice(0, 4).map((pro, i) => (
+                            <li key={i} class="flex items-start">
+                              <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <ul class="space-y-2">
+                          {platform.cons.slice(0, 4).map((con, i) => (
+                            <li key={i} class="flex items-start">
+                              <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <span class="text-gray-600">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <div class="flex flex-wrap gap-2">
+                        {platform.bestFor.slice(0, 4).map((item, i) => (
+                          <span key={i} class="bg-white px-3 py-1 rounded-full text-sm text-gray-700">{item}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Table */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Text Therapy Comparison</h2>
+
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b-2 border-gray-200">
+                  <th class="text-left py-3 px-4">Platform</th>
+                  <th class="text-left py-3 px-4">Price</th>
+                  <th class="text-left py-3 px-4">Messaging Rating</th>
+                  <th class="text-left py-3 px-4">Response Time</th>
+                  <th class="text-left py-3 px-4">Insurance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topPlatforms.map((platform) => (
+                  <tr key={platform.slug} class="border-b border-gray-200 hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium">{platform.name}</td>
+                    <td class="py-3 px-4">{platform.price}</td>
+                    <td class="py-3 px-4">{platform.messagingRating}/5</td>
+                    <td class="py-3 px-4">{platform.responseTimeRating}/5</td>
+                    <td class="py-3 px-4">
+                      {platform.insurance ? (
+                        <CheckCircle class="h-5 w-5 text-green-500" />
+                      ) : (
+                        <XCircle class="h-5 w-5 text-red-500" />
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* FAQs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is text therapy as effective as traditional therapy?</h3>
+              <p class="text-gray-600">
+                Yes, research shows that text-based therapy is highly effective for many mental health conditions, including anxiety and depression. The asynchronous nature allows for thoughtful reflection, and many people find it easier to open up through writing.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How quickly do therapists respond to messages?</h3>
+              <p class="text-gray-600">
+                Response times vary by platform, but most therapists respond within 24 hours on weekdays. Some platforms guarantee multiple daily responses. You can message anytime, and your therapist will respond during their working hours.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Can I switch from text to video sessions?</h3>
+              <p class="text-gray-600">
+                Most platforms offer both messaging and live sessions (video, phone, or live chat). You can typically use unlimited messaging between live sessions, giving you the best of both worlds.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is text therapy confidential?</h3>
+              <p class="text-gray-600">
+                Yes, all messages are HIPAA-compliant and encrypted. Text therapy platforms use the same security standards as traditional telehealth services to protect your privacy.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">What if I have an emergency?</h3>
+              <p class="text-gray-600">
+                Text therapy is not appropriate for emergencies. All platforms clearly state that if you're in crisis, you should call 911, go to an emergency room, or contact a crisis hotline. Text therapy is designed for ongoing support, not immediate crisis intervention.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* How to Choose */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Choosing the Right Text Therapy Platform</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Clock class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Response Time</h3>
+              <p class="text-gray-600">
+                Consider how quickly you need responses. Some platforms guarantee multiple daily responses, while others promise replies within 24 hours.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Smartphone class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Platform Features</h3>
+              <p class="text-gray-600">
+                Look for user-friendly mobile apps, message history access, and additional features like worksheets or journal prompts that enhance the text therapy experience.
+              </p>
+            </div>
+
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Budget & Insurance</h3>
+              <p class="text-gray-600">
+                Compare subscription costs and check if your insurance covers messaging therapy. Some platforms offer financial aid for those who qualify.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
+            <p class="text-gray-700 mb-4">
+              For text-based therapy:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>BetterHelp</strong> offers the best overall text therapy experience with unlimited messaging and optional live sessions</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Talkspace</strong> is ideal if you have insurance or want audio/video messaging in addition to text</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                <span><strong>Online-Therapy.com</strong> provides excellent value with CBT-focused messaging therapy and comprehensive worksheets</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Start Text Therapy?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Find the perfect text therapy platform that matches your communication style and mental health needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition font-medium">Find Your Match</a>
+            <a href="/learn/fundamentals/therapy-types-explained" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Learn More</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

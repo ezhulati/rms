@@ -1,12 +1,675 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield, Activity, Zap } from 'lucide-react';
 ---
 
-<BaseLayout title="Anxiety Disorders | RealMindSolutions" description="Understanding Anxiety Disorders">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Understanding Anxiety Disorders</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Complete guide to anxiety disorders and treatment.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Understanding Anxiety Disorders</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Anxiety disorders are the most common mental health conditions, affecting millions worldwide. Learn about different types of anxiety, how to recognize symptoms, and evidence-based treatments that can help you regain control.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Anxiety Disorders at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Users class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Prevalence</h3>
+                <p class="text-gray-600">31% of U.S. adults</p>
+                <p class="text-sm text-gray-500 mt-1">Experience anxiety disorder in lifetime</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Brain class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Most Common</h3>
+                <p class="text-gray-600">#1 mental health condition</p>
+                <p class="text-sm text-gray-500 mt-1">Worldwide prevalence</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Treatability</h3>
+                <p class="text-gray-600">Highly treatable</p>
+                <p class="text-sm text-gray-500 mt-1">70-90% respond to treatment</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Shield class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Treatment</h3>
+                <p class="text-gray-600">Multiple effective options</p>
+                <p class="text-sm text-gray-500 mt-1">CBT, exposure, medication</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Anxiety Disorders */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Anxiety Disorders</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Generalized Anxiety Disorder (GAD)</h3>
+              <p class="text-gray-600 mb-4">
+                Persistent and excessive worry about various aspects of daily life, lasting at least six months. Worry is difficult to control and causes significant distress.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Excessive worry about everyday matters</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Restlessness or feeling on edge</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Muscle tension and fatigue</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty concentrating</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sleep disturbances</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Panic Disorder</h3>
+              <p class="text-gray-600 mb-4">
+                Recurrent unexpected panic attacks followed by persistent worry about having additional attacks or changing behavior to avoid them.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Sudden intense fear or discomfort</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Racing heart, sweating, trembling</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Shortness of breath or choking sensation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of losing control or dying</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persistent concern about future attacks</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Social Anxiety Disorder</h3>
+              <p class="text-gray-600 mb-4">
+                Intense fear of social situations where you might be scrutinized, embarrassed, or judged negatively by others.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of social or performance situations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Worry about being judged or embarrassed</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Avoidance of social interactions</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms (blushing, sweating)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Difficulty making eye contact</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Specific Phobias</h3>
+              <p class="text-gray-600 mb-4">
+                Intense, irrational fear of a specific object or situation that poses little or no actual danger but provokes anxiety.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Marked fear of specific objects or situations</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Immediate anxiety response</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Active avoidance of feared object</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Common: heights, flying, animals, blood</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear disproportionate to actual danger</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Agoraphobia</h3>
+              <p class="text-gray-600 mb-4">
+                Fear of places or situations where escape might be difficult or help unavailable during a panic attack or embarrassing symptoms.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of public transportation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of open or enclosed spaces</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of crowds or standing in line</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Fear of being outside home alone</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Significant lifestyle limitations</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Separation Anxiety Disorder</h3>
+              <p class="text-gray-600 mb-4">
+                Excessive anxiety about separation from home or attachment figures, not limited to childhood but can affect adults too.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Excessive distress when separated</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Worry about harm to loved ones</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Reluctance to be alone</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Nightmares about separation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms when separation occurs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Anxiety vs Stress */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Anxiety vs. Stress: Understanding the Difference</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Normal Stress</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Response to external pressure or demand</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Usually short-term and situation-specific</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Resolves when stressor is removed</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Can motivate and improve performance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Anxiety Disorder</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persistent worry without clear external cause</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Long-lasting (6+ months for GAD)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Persists even without stressor</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Interferes with daily functioning</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Physical vs Psychological Symptoms */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Recognizing Anxiety Symptoms</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Physical Symptoms</h3>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Rapid heartbeat or palpitations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Shortness of breath or hyperventilation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Sweating, trembling, or shaking</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Muscle tension, headaches, or pain</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Digestive issues (nausea, diarrhea)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Dizziness or lightheadedness</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Activity class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                    <span>Fatigue or insomnia</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Psychological Symptoms</h3>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Excessive, uncontrollable worry</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Racing thoughts or mind going blank</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Difficulty concentrating</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Restlessness or feeling on edge</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Irritability or mood swings</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Fear of losing control</span>
+                  </li>
+                  <li class="flex items-start">
+                    <Brain class="h-5 w-5 text-purple-600 mr-2 mt-0.5" />
+                    <span>Avoidance of anxiety-provoking situations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment Options */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Evidence-Based Treatment Options</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Therapy Approaches</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Cognitive Behavioral Therapy (CBT)</h4>
+                  <p class="text-gray-600">
+                    Gold standard treatment for anxiety. Identifies and challenges anxious thoughts, teaches coping skills, and gradually exposes you to feared situations. Typically 12-20 sessions.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Exposure Therapy</h4>
+                  <p class="text-gray-600">
+                    Systematic, gradual exposure to feared objects or situations in a safe environment. Particularly effective for phobias, panic disorder, and social anxiety.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Acceptance and Commitment Therapy (ACT)</h4>
+                  <p class="text-gray-600">
+                    Focuses on accepting anxious thoughts rather than fighting them. Emphasizes living according to your values despite anxiety.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Mindfulness-Based Therapies</h4>
+                  <p class="text-gray-600">
+                    Mindfulness-Based Stress Reduction (MBSR) and Mindfulness-Based Cognitive Therapy (MBCT) teach present-moment awareness to reduce anxiety.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Medication & Other Treatments</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">SSRIs & SNRIs</h4>
+                  <p class="text-gray-600">
+                    First-line medications for anxiety disorders. Common SSRIs include Lexapro, Zoloft, Prozac. SNRIs like Effexor and Cymbalta. Take 4-6 weeks for full effect.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Benzodiazepines</h4>
+                  <p class="text-gray-600">
+                    Fast-acting for acute anxiety but not recommended long-term due to dependence risk. Used for short-term relief or panic attacks (Xanax, Klonopin, Ativan).
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Buspirone</h4>
+                  <p class="text-gray-600">
+                    Non-addictive anti-anxiety medication specifically for GAD. Takes several weeks to work but has fewer side effects than other medications.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Lifestyle Modifications</h4>
+                  <p class="text-gray-600">
+                    Regular exercise, limiting caffeine and alcohol, adequate sleep, and stress management techniques significantly reduce anxiety symptoms.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Warning Signs */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Warning Signs & When to Seek Help</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Common Warning Signs</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Worry that interferes with daily activities</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Avoiding situations due to anxiety</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Physical symptoms without medical cause</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Panic attacks or intense fear episodes</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Sleep problems related to worry</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Using substances to manage anxiety</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">When to Seek Help</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  Consider seeking professional help if you experience:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Anxiety lasting more than 6 months</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Difficulty performing work or daily tasks</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Strained relationships due to anxiety</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Co-occurring depression or substance use</span>
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Anxiety Treatment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Self-Help Strategies */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Self-Help Strategies for Managing Anxiety</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Breathing Techniques</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>4-7-8 breathing (inhale 4, hold 7, exhale 8)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Box breathing (4 counts each step)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Diaphragmatic breathing</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Practice 5-10 minutes daily</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Lifestyle Changes</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Regular aerobic exercise (30 min/day)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Limit caffeine and alcohol</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Prioritize 7-9 hours of sleep</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Maintain balanced diet</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Cognitive Techniques</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Challenge anxious thoughts</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Practice mindfulness meditation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Keep an anxiety journal</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Use grounding techniques (5-4-3-2-1)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/anxiety-screening" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Anxiety Screening Tool (GAD-7)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/worry-record" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Worry Record Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/breathing-exercises" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Breathing Exercise Guide</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Reviews</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/reviews/betterhelp" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>BetterHelp - Anxiety Specialists</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/reviews/talkspace" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Talkspace - CBT for Anxiety</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/best/conditions/best-for-anxiety" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Best Platforms for Anxiety Treatment</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Take Control of Your Anxiety?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our anxiety screening to understand your symptoms and connect with therapists who specialize in anxiety treatment.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Anxiety Screening</a>
+            <a href="/best/conditions/best-for-anxiety" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Anxiety Therapist</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>

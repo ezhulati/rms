@@ -4,21 +4,24 @@ import { ArrowRight, Star, CheckCircle, XCircle, Brain, Shield, Users, Search } 
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {/* Hero Section */}
-        <div class="text-center mb-12">
-          <h1 class="text-4xl font-bold text-gray-800 mb-4">Comparing Different Therapy Approaches</h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Understand the different therapeutic approaches to find the one that best suits your needs and goals.
-          </p>
-          <div class="flex justify-center">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your ideal therapy match</a>
-          </div>
-        </div>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Comparing Different Therapy Approaches</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Understand the different therapeutic approaches to find the one that best suits your needs and goals.
+      </p>
+      <div class="flex justify-center">
+        <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your ideal therapy match</a>
+      </div>
+    </div>
+  </section>
 
-        {/* Quick Overview */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Quick Overview */}
+      <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Therapy Approaches at a Glance</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -366,9 +369,9 @@ import { ArrowRight, Star, CheckCircle, XCircle, Brain, Shield, Users, Search } 
           </p>
           <div class="flex flex-wrap justify-center gap-4">
             <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
-            <a href="/tools/assessments/therapy-style-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Therapy Style Assessment</a>
-          </div>
+          <a href="/tools/assessments/therapy-style-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Therapy Style Assessment</a>
         </div>
       </div>
     </div>
+  </section>
 </BaseLayout>

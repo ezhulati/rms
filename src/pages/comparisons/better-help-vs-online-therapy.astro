@@ -11,19 +11,17 @@ const renderStars = (rating: number) => {
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {/* Hero Section */}
-        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-          <div class="p-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">BetterHelp vs Online-Therapy.com: Which Is Right for You in 2025?</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Compare BetterHelp's comprehensive platform with Online-Therapy.com's specialized CBT approach to find your ideal therapy match.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="bg-gray-50 rounded-lg p-6">
-                <div class="flex items-center mb-3">
-                  <h2 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h2>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">BetterHelp vs Online-Therapy.com: Which Is Right for You in 2025?</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Compare BetterHelp's comprehensive platform with Online-Therapy.com's specialized CBT approach to find your ideal therapy match.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <h2 class="text-xl font-bold text-gray-800 mr-3">BetterHelp</h2>
                   <div class="flex items-center">
                     <div class="mr-1">
                       {renderStars(4.6)}
@@ -50,14 +48,17 @@ const renderStars = (rating: number) => {
                 <p class="text-gray-600 mb-4">
                   Specialized platform focused on cognitive behavioral therapy (CBT) with comprehensive self-help resources.
                 </p>
-                <a href="https://www.online-therapy.com" class="w-full min-w-0 justify-center">Visit Online-Therapy.com</a>
-              </div>
-            </div>
-          </div>
+          <a href="https://www.online-therapy.com" class="w-full min-w-0 justify-center">Visit Online-Therapy.com</a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        {/* Quick Comparison */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Quick Comparison */}
+      <div class="bg-white rounded-lg shadow-md p-8 mb-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Comparison</h2>
           
           <div class="overflow-x-auto">
@@ -473,9 +474,9 @@ const renderStars = (rating: number) => {
             <a href="/compare/platforms/betterhelp-vs-calmerry" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
               <h3 class="font-bold text-gray-800 mb-2">BetterHelp vs Calmerry</h3>
               <p class="text-gray-600 text-sm">Compare BetterHelp with a more affordable alternative.</p>
-            </a>
-          </div>
+          </a>
         </div>
       </div>
     </div>
+  </section>
 </BaseLayout>

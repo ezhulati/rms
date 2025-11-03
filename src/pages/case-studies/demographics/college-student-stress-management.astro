@@ -4,15 +4,21 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-
-      <div class="sb-container py-12">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <a href="/case-studies/demographics" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 mb-6">
           <ArrowLeft class="h-4 w-4 mr-2" />
           Back to Demographic Case Studies
         </a>
 
-        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+            </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="h-64 bg-gradient-to-r from-orange-500 to-yellow-500 relative">
             <div class="absolute inset-0 bg-black opacity-20"></div>
             <div class="absolute inset-0 flex items-center justify-center">
@@ -277,6 +283,6 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
             <a href="/case-studies/demographics" class="justify-center">View All Demographics</a>
           </div>
         </div>
-      </div>
-    </div>
+          </div>
+  </section>
 </BaseLayout>

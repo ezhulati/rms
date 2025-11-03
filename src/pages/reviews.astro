@@ -6,16 +6,21 @@ const isRootPath = Astro.url.pathname === '/reviews' || Astro.url.pathname === '
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen">
-      <div class="sb-container py-12">
-        {isRootPath ? (
-          <>
-            <div class="text-center mb-12">
-              <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Platform Reviews</h1>
-              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                In-depth, unbiased reviews of the leading online therapy platforms to help you make an informed decision.
-              </p>
-            </div>
+  {isRootPath ? (
+    <>
+      {/* Hero Section */}
+      <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Online Therapy Platform Reviews</h1>
+          <p class="font-serif italic text-lg md:text-xl text-neutral-600">
+            In-depth, unbiased reviews of the leading online therapy platforms to help you make an informed decision.
+          </p>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section class="bg-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
             {/* Featured Reviews */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -363,22 +368,20 @@ const isRootPath = Astro.url.pathname === '/reviews' || Astro.url.pathname === '
               </div>
             </div>
             
-            {/* How We Review Section */}
-            <div class="mt-16">
-              
-            </div>
-          </>
-        ) : (
-          <div class="text-center py-20">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Review Content</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              This is a placeholder for the specific review content based on the current URL path.
-            </p>
-            <p class="text-gray-600">
-              Current path: {location.pathname}
-            </p>
-          </div>
-        )}
+        </div>
+      </section>
+    </>
+  ) : (
+    <section class="bg-white py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Review Content</h1>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+          This is a placeholder for the specific review content based on the current URL path.
+        </p>
+        <p class="text-neutral-600">
+          Current path: {location.pathname}
+        </p>
       </div>
-    </div>
+    </section>
+  )}
 </BaseLayout>

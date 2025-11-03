@@ -1,12 +1,820 @@
 ---
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Users, Heart, Shield, MessageCircle, TrendingUp, Clock, Target } from 'lucide-react';
 ---
 
-<BaseLayout title="Relationship Counseling | RealMindSolutions" description="Relationship Counseling Basics">
-  <div class="sb-container py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">Relationship Counseling Basics</h1>
-    <div class="prose prose-lg max-w-4xl">
-      <p>Introduction to relationship therapy.</p>
+<BaseLayout>
+  {/* Hero Section */}
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">When to Consider Relationship Counseling</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Relationship counseling (also called couples therapy) helps partners improve communication, resolve conflicts, and strengthen their bond. Learn when to seek help, what to expect, and how to find the right therapist for your relationship.</p>
     </div>
-  </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+
+        {/* Hero Section */}
+        
+        </div>
+
+        {/* Quick Facts */}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Couples Therapy at a Glance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <TrendingUp class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Effectiveness</h3>
+                <p class="text-gray-600">75% of couples report improvement</p>
+                <p class="text-sm text-gray-500 mt-1">Journal of Marital Therapy</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Clock class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Wait Too Long</h3>
+                <p class="text-gray-600">Couples wait 6 years on average</p>
+                <p class="text-sm text-gray-500 mt-1">Before seeking therapy</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <MessageCircle class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Communication</h3>
+                <p class="text-gray-600">69% improvement in conflict resolution</p>
+                <p class="text-sm text-gray-500 mt-1">After 12 sessions</p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-4">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+                  <Heart class="h-6 w-6 text-indigo-600" />
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Satisfaction</h3>
+                <p class="text-gray-600">Significant increase in relationship satisfaction</p>
+                <p class="text-sm text-gray-500 mt-1">Within 8-20 sessions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Signs You Need Couples Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Signs You Need Relationship Counseling</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg mb-4">
+              You don't need to wait until your relationship is in crisis. Many couples benefit from therapy during relatively good times to prevent problems from escalating. Consider couples therapy if you're experiencing any of these signs:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Communication Breakdown</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You're unable to talk without arguing or shutting down</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>One or both partners feel unheard or dismissed</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You avoid difficult conversations entirely</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Criticism, contempt, or stonewalling dominate interactions</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Constant Conflict</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You fight about the same issues repeatedly without resolution</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Small disagreements escalate into major fights</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>You're walking on eggshells to avoid triggering your partner</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Resentment is building on one or both sides</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-orange-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Trust Issues or Infidelity</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
+                  <span>One or both partners has been unfaithful (emotional or physical)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
+                  <span>Trust has been broken and you're struggling to rebuild it</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
+                  <span>Jealousy or suspicion is affecting the relationship</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
+                  <span>Secrecy or dishonesty has become a pattern</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Life Transitions and Stress</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span>Major life changes (new baby, job loss, relocation) causing strain</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span>Disagreements about parenting styles or family planning</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span>Financial stress impacting your relationship</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                  <span>Illness, caregiving, or loss affecting your connection</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Emotional Disconnection</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span>You feel like roommates rather than romantic partners</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span>Loss of intimacy (emotional or physical)</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span>You feel lonely even when you're together</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <span>You're considering separation or questioning the relationship</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Preventive and Growth-Focused</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You're engaged or newly married and want to build a strong foundation</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You want to improve an already good relationship</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You're facing a major decision together and want support</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You want to learn better communication skills proactively</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Couples Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Types of Couples Therapy</h2>
+
+          <div class="space-y-6">
+            <div class="bg-indigo-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">The Gottman Method</h3>
+              <p class="text-gray-700 mb-4">
+                Based on 40+ years of research by Drs. John and Julie Gottman, this approach focuses on building friendship, managing conflict, and creating shared meaning.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples struggling with frequent conflicts</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Those who feel emotionally disconnected</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples wanting research-based interventions</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Key Techniques:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <span>Identifying the "Four Horsemen" (criticism, contempt, defensiveness, stonewalling)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <span>Building Love Maps (knowing your partner deeply)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
+                      <span>Softened startup in conversations</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Emotionally Focused Therapy (EFT)</h3>
+              <p class="text-gray-700 mb-4">
+                Developed by Dr. Sue Johnson, EFT views relationship problems as attachment issues. It helps couples create more secure emotional bonds and responsive interactions.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples feeling emotionally distant</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Those with attachment or abandonment fears</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Rebuilding after betrayal or infidelity</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Key Techniques:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Identifying negative interaction cycles</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Accessing deeper emotions beneath surface reactions</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                      <span>Creating new bonding experiences</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Cognitive Behavioral Couples Therapy (CBCT)</h3>
+              <p class="text-gray-700 mb-4">
+                Applies cognitive behavioral principles to relationships, focusing on how thoughts and behaviors influence relationship satisfaction.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples with specific behavioral issues</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Those wanting structured, goal-oriented therapy</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Partners with depression or anxiety impacting relationship</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Key Techniques:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Identifying negative thought patterns</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Behavioral experiments and homework</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                      <span>Communication skills training</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Imago Relationship Therapy</h3>
+              <p class="text-gray-700 mb-4">
+                Created by Harville Hendrix and Helen LaKelly Hunt, Imago therapy explores how childhood experiences influence adult relationships and helps partners become healers for each other.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples with recurring patterns from past relationships</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Those interested in understanding relationship dynamics</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples wanting deep personal growth</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Key Techniques:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-green-600 mr-2 mt-0.5" />
+                      <span>Intentional dialogue (mirroring, validation, empathy)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-green-600 mr-2 mt-0.5" />
+                      <span>Understanding childhood wounds</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-green-600 mr-2 mt-0.5" />
+                      <span>Creating conscious relationships</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Discernment Counseling</h3>
+              <p class="text-gray-700 mb-4">
+                A specialized short-term approach (1-5 sessions) for couples where one person is leaning toward divorce while the other wants to work on the relationship.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Best For:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Couples on the brink of separation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>When partners have different goals for therapy</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Deciding whether to commit to couples therapy</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-2">Goals:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                      <span>Gain clarity and confidence about the relationship's direction</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                      <span>Understand each person's contributions to problems</span>
+                    </li>
+                    <li class="flex items-start">
+                      <Target class="h-5 w-5 text-yellow-600 mr-2 mt-0.5" />
+                      <span>Decide: stay as-is, separate, or commit to therapy</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* What to Expect */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">What to Expect in Couples Therapy</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">The First Session</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Assessment and History</h4>
+                  <p class="text-gray-700">
+                    Your therapist will ask about your relationship history, current concerns, individual backgrounds, and goals for therapy. They'll also explain their approach and answer questions about the process.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Setting Expectations</h4>
+                  <p class="text-gray-700">
+                    You'll discuss session frequency (usually weekly initially), confidentiality guidelines, and what's expected of you between sessions. Most therapists will have you sign agreements about ground rules.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Individual Sessions</h4>
+                  <p class="text-gray-700">
+                    Many couples therapists conduct one or two individual sessions early on to understand each partner's perspective and any sensitive issues (like abuse or affairs) that need addressing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Ongoing Therapy Process</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Session Structure</h4>
+                  <p class="text-gray-700">
+                    Sessions typically last 50-90 minutes. You'll discuss current issues, practice communication skills, and work through conflicts with the therapist's guidance. Sessions are safe spaces for honest, facilitated conversation.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Homework and Practice</h4>
+                  <p class="text-gray-700">
+                    Expect assignments between sessions: communication exercises, date nights, reading, or practicing new skills. The real work happens at home - therapy teaches you tools to use in daily life.
+                  </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <h4 class="font-bold text-gray-800 mb-2">Timeline</h4>
+                  <p class="text-gray-700">
+                    Most couples attend 8-20 sessions, though this varies widely. Some see improvement in weeks, while deeper issues may take months. Discuss progress and goals regularly with your therapist.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Finding the Right Therapist */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Finding the Right Couples Therapist</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg">
+              The therapist-couple fit is crucial for success. Look for these qualities and credentials:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Credentials and Specialization</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Licensed therapist:</strong> Look for LMFT (Licensed Marriage and Family Therapist), LCSW, LPC, or psychologist</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Couples therapy training:</strong> Specialized training in approaches like Gottman Method, EFT, or CBCT</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Experience:</strong> At least 2-3 years of post-licensure experience working with couples</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span><strong>Relevant specialties:</strong> Expertise in your specific issues (infidelity, LGBTQ+ relationships, cultural considerations)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Questions to Ask</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>What percentage of your practice is couples therapy?</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>What approach do you use, and why is it effective for our issues?</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>How do you handle situations where one partner wants different outcomes?</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>What's your typical treatment length and how will we measure progress?</span>
+                </li>
+                <li class="flex items-start">
+                  <MessageCircle class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" />
+                  <span>Have you worked with couples facing our specific situation?</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Online vs. In-Person Therapy</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">Online Couples Therapy</h4>
+                <p class="text-gray-700 mb-3">Platforms like ReGain, Talkspace Couples, and BetterHelp Couples offer convenient video sessions.</p>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>More flexible scheduling</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Access from home (more comfortable for some)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Often more affordable</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Wider selection of therapists</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-2">In-Person Therapy</h4>
+                <p class="text-gray-700 mb-3">Traditional office-based sessions with a local therapist.</p>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Fuller engagement without technology barriers</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Better for reading body language</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Physical separation from home distractions</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>May feel more "official" and committed</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Can Therapy Save Every Relationship */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Can Couples Therapy Save Every Relationship?</h2>
+
+          <div class="mb-6">
+            <p class="text-gray-700 text-lg mb-4">
+              While couples therapy has high success rates, it's not a magic fix, and not every relationship should or will survive therapy. Being realistic about outcomes is important:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">When Therapy Works Best</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Both partners are willing to attend and engage</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>There's still emotional investment in the relationship</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>Both are open to change and self-reflection</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>You seek help early rather than waiting years</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span>There's no active abuse or untreated addiction</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">When Therapy May Not Save the Relationship</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>One partner has completely checked out emotionally</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>There's ongoing infidelity without willingness to end it</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Abuse (physical, emotional, or financial) is present</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Untreated addiction preventing honest participation</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                  <span>Fundamental values or life goals are incompatible</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Sometimes the Success is a Healthy Separation</h3>
+            <p class="text-gray-700">
+              Not every relationship should continue, and that's okay. Couples therapy can help partners separate respectfully, minimize damage (especially to children), and gain closure and understanding. A "successful" outcome might be recognizing that parting ways is healthiest for both people.
+            </p>
+          </div>
+        </div>
+
+        {/* Warning Signs Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">When to Seek Help Immediately</h2>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Safety Concerns</h3>
+            <p class="text-gray-700 mb-4">
+              If there is physical violence, threats, or safety concerns in your relationship, prioritize your safety first. Couples therapy is not appropriate when abuse is present.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <span><strong>National Domestic Violence Hotline:</strong> 1-800-799-7233</span>
+              </li>
+              <li class="flex items-start">
+                <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <span>Seek individual therapy first to address abuse dynamics</span>
+              </li>
+              <li class="flex items-start">
+                <AlertCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <span>Create a safety plan before considering relationship work</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Urgent Situations</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Recent discovery of infidelity causing crisis</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>One partner has asked for divorce or separation</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Severe conflict impacting children's wellbeing</span>
+                </li>
+                <li class="flex items-start">
+                  <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5" />
+                  <span>Complete communication breakdown</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Finding Help Now</h3>
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <p class="text-gray-700 mb-4">
+                  Don't wait for the perfect moment. Research shows couples wait an average of 6 years too long before seeking therapy, allowing problems to become entrenched.
+                </p>
+                <a href="/best/specialties/best-for-couples-therapy" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Couples Therapy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Resources</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Helpful Tools</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/tools/assessments/relationship-health-check" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Relationship Health Assessment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources/worksheets/communication-skills" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Communication Skills Worksheet</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/tools/matchers/therapy-platform-matcher" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Find Your Ideal Therapy Platform</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Reviews</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/reviews/regain" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>ReGain Review - Online Couples Therapy</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/reviews/lasting" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Lasting App Review - Couples Counseling Alternative</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/best/specialties/best-for-couples-therapy" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                    <ArrowRight class="h-4 w-4 mr-2" />
+                    <span>Best Platforms for Couples Therapy</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Strengthen Your Relationship?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our relationship assessment to understand your strengths and challenges, or find a qualified couples therapist today.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/relationship-health-check" class="inline-flex items-center bg-white text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-gray-100 transition">Take Relationship Assessment</a>
+            <a href="/best/specialties/best-for-couples-therapy" class="inline-flex items-center border-2 border-white text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-white hover:bg-opacity-10 transition">Find Couples Therapist</a>
+          </div>
+        </div>
+    </div>
+  </section>
 </BaseLayout>
