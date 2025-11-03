@@ -28,21 +28,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, He
                 <span class="text-gray-600">4.0/5 - PTSD Treatment Rating</span>
               </div>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link}
-                  to="/best-for-ptsd"
-                  variant="primary"
-                  icon={ArrowRight}
-                >
-                  View Best Platforms for PTSD
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/tools/matchers/therapy-platform-matcher"
-                  variant="outline"
-                >
-                  Find Your Best Match
-                </Button>
+                <a href="/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Best Platforms for PTSD</a>
+                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Best Match</a>
               </div>
             </div>
           </div>
@@ -183,7 +170,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, He
 
         {/* How We Reviewed Section */}
         <div class="mt-8">
-          <HowWeReviewed />
+          
         </div>
 
         {/* CTA Section */}
@@ -193,23 +180,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, He
             Connect with a specialized trauma therapist through one of our recommended online therapy platforms.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/best-for-ptsd" 
-              variant="light"
-              size="lg"
-            >
-              View Top PTSD Platforms
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Find Your Best Match
-            </Button>
+            <a href="/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Top PTSD Platforms</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Best Match</a>
           </div>
         </div>
       </div>

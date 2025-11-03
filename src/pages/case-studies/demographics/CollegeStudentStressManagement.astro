@@ -5,10 +5,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="College Student Stress Management | Online Therapy Case Study"
-        description="Case study examining how online therapy helped a college student manage academic stress, anxiety, and work-life balance through accessible and affordable mental health support."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <a href="/case-studies/demographics" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 mb-6">
           <ArrowLeft class="h-4 w-4 mr-2" />
@@ -245,15 +242,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
               <p class="text-gray-600 mb-4">
                 Discover techniques for managing test anxiety and academic pressure.
               </p>
-              <Button 
-                as={Link}
-                to="/blog/guides"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Browse Guides
-              </Button>
+              <a href="/blog/guides" class="w-full min-w-0 justify-center">Browse Guides</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -261,15 +250,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
               <p class="text-gray-600 mb-4">
                 Find affordable therapy platforms with student discounts and flexible scheduling.
               </p>
-              <Button 
-                as={Link}
-                to="/comparisons/platforms"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Compare Platforms
-              </Button>
+              <a href="/comparisons/platforms" class="w-full min-w-0 justify-center">Compare Platforms</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -277,15 +258,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
               <p class="text-gray-600 mb-4">
                 Access worksheets and exercises designed for college student mental health.
               </p>
-              <Button 
-                as={Link}
-                to="/resources/worksheets"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                View Resources
-              </Button>
+              <a href="/resources/worksheets" class="w-full min-w-0 justify-center">View Resources</a>
             </div>
           </div>
         </div>
@@ -293,38 +266,10 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, GraduationCap, Br
         <div class="text-center">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Explore Other Demographic Case Studies</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/remote-worker-mental-health"
-              variant="outline"
-              class="justify-center"
-            >
-              Remote Workers
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/rural-access-to-therapy"
-              variant="outline"
-              class="justify-center"
-            >
-              Rural Access
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/therapy-for-night-owls"
-              variant="outline"
-              class="justify-center"
-            >
-              Night Owls
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics"
-              variant="outline"
-              class="justify-center"
-            >
-              View All Demographics
-            </Button>
+            <a href="/case-studies/demographics/remote-worker-mental-health" class="justify-center">Remote Workers</a>
+            <a href="/case-studies/demographics/rural-access-to-therapy" class="justify-center">Rural Access</a>
+            <a href="/case-studies/demographics/therapy-for-night-owls" class="justify-center">Night Owls</a>
+            <a href="/case-studies/demographics" class="justify-center">View All Demographics</a>
           </div>
         </div>
       </div>

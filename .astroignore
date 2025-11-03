@@ -1,0 +1,5 @@
+# Ignore backup TSX files
+src/_backup_tsx/
+
+# Ignore scripts
+scripts/

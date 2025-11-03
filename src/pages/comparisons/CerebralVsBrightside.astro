@@ -13,15 +13,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
             Compare two leading platforms that specialize in combined therapy and medication management for depression and anxiety.
           </p>
           <div class="flex justify-center">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="primary" 
-              size="lg" 
-              icon={Search}
-            >
-              Find your perfect therapy match
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy match</a>
           </div>
         </div>
 
@@ -62,18 +54,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
                   <span>Limited availability</span>
                 </li>
               </ul>
-              <Button 
-                as="a"
-                href="https://www.cerebral.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                variant="primary"
-                size="sm"
-                icon={ExternalLink}
-                class="w-full min-w-0 justify-center"
-              >
-                Visit Cerebral
-              </Button>
+              <a href="https://www.cerebral.com" class="w-full min-w-0 justify-center">Visit Cerebral</a>
             </div>
 
             {/* Comparison */}
@@ -131,18 +112,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
                   <span>Limited conditions</span>
                 </li>
               </ul>
-              <Button 
-                as="a"
-                href="https://www.brightside.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                variant="primary"
-                size="sm"
-                icon={ExternalLink}
-                class="w-full min-w-0 justify-center"
-              >
-                Visit Brightside
-              </Button>
+              <a href="https://www.brightside.com" class="w-full min-w-0 justify-center">Visit Brightside</a>
             </div>
           </div>
         </div>
@@ -350,7 +320,7 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
         </div>
 
         {/* How We Review Section */}
-        <HowWeReviewed />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
@@ -359,23 +329,8 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
             Take our personalized assessment to get matched with the perfect online therapy platform based on your unique needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Mental Health Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/mental-health-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Mental Health Assessment</a>
           </div>
         </div>
       </div>

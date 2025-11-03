@@ -12,15 +12,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Cl
             Free, clinically-informed screening tools to help you understand your mental health and find appropriate support.
           </p>
           <div class="flex justify-center">
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="primary" 
-              size="lg" 
-              icon={Brain}
-            >
-              Take the comprehensive assessment
-            </Button>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the comprehensive assessment</a>
           </div>
         </div>
 
@@ -86,14 +78,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Cl
                   </ul>
                 </div>
               </div>
-              <Button 
-                as={Link}
-                to="/tools/assessments/mental-health-assessment"
-                variant="primary"
-                icon={ArrowRight}
-              >
-                Start Assessment
-              </Button>
+              <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Start Assessment</a>
             </div>
           </div>
         </div>
@@ -128,15 +113,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Cl
                         ))}
                       </div>
                     </div>
-                    <Button 
-                      as={Link}
-                      to={`/tools/assessments/${assessment.slug}`}
-                      variant="primary"
-                      size="sm"
-                      class="w-full min-w-0 justify-center"
-                    >
-                      Take Assessment
-                    </Button>
+                    <button class="w-full min-w-0 justify-center">Take Assessment</button>
                   </div>
                 </div>
               ))}
@@ -176,14 +153,7 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Cl
                           ))}
                         </div>
                       </div>
-                      <Button 
-                        as={Link}
-                        to={`/tools/assessments/${assessment.slug}`}
-                        variant="primary"
-                        size="sm"
-                      >
-                        Take Assessment
-                      </Button>
+                      <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Assessment</button>
                     </div>
                   </div>
                 </div>
@@ -247,23 +217,8 @@ import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Cl
             Start with our comprehensive mental health assessment to understand your needs and get personalized recommendations.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="light"
-              size="lg"
-            >
-              Take the Assessment
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Find a Therapist
-            </Button>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find a Therapist</a>
           </div>
         </div>
       </div>

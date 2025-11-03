@@ -22,22 +22,8 @@ import { ArrowRight, BookOpen, Brain, MessageCircle, Pill, Lightbulb, Heart, Use
                 Essential information about mental health concepts, conditions, and treatment approaches to help you build a solid understanding of mental wellbeing.
               </p>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link} 
-                  to="/tools/assessments/mental-health-assessment" 
-                  variant="primary"
-                  icon={Brain}
-                >
-                  Take Mental Health Assessment
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/learn" 
-                  variant="outline"
-                  icon={ArrowRight}
-                >
-                  Explore All Learning Resources
-                </Button>
+                <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Mental Health Assessment</a>
+                <a href="/learn" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Explore All Learning Resources</a>
               </div>
             </div>
           </div>
@@ -119,25 +105,8 @@ import { ArrowRight, BookOpen, Brain, MessageCircle, Pill, Lightbulb, Heart, Use
             Learning about mental health is an important first step. When you're ready, we can help you find the right support for your needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-              icon={Users}
-            >
-              Find Your Therapy Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/best/platforms/best-online-therapy-platforms" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-              icon={Heart}
-            >
-              Explore Top Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
+            <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Explore Top Platforms</a>
           </div>
         </div>
       </div>

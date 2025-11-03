@@ -5,10 +5,7 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Amwell Online Therapy Review | RealMindSolutions"
-        description="Comprehensive review of Amwell's online therapy services, including therapist quality, pricing, user experience, and how it compares to other platforms."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
@@ -21,24 +18,8 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
             <span class="ml-2 text-2xl font-bold text-gray-800">{ratings.overall}/5</span>
           </div>
           <div class="flex justify-center space-x-4 mb-8">
-            <Button
-              as="a"
-              href="https://www.amwell.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              size="lg"
-            >
-              Visit Amwell
-            </Button>
-            <Button
-              as={Link}
-              to="/compare/platforms/top-therapy-platforms-compared"
-              variant="outline"
-              size="lg"
-            >
-              Compare Platforms
-            </Button>
+            <a href="https://www.amwell.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Amwell</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Compare Platforms</a>
           </div>
         </div>
 
@@ -464,17 +445,7 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
         </div>
 
         {/* How We Reviewed */}
-        <HowWeReviewed 
-          methodologies={[
-            'Analyzed platform features and user interface',
-            'Reviewed provider credentials and vetting process',
-            'Evaluated pricing structure and insurance coverage',
-            'Examined user reviews and satisfaction ratings',
-            'Compared with other telehealth and therapy platforms',
-            'Assessed privacy and security measures'
-          ]}
-          lastUpdated="March 2025"
-        />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
@@ -483,23 +454,8 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
             Not sure if Amwell is right for you? Take our personalized assessment to find the best online therapy platform for your specific needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button
-              as={Link}
-              to="/tools/matchers/therapy-platform-matcher"
-              variant="light"
-              size="lg"
-            >
-              Take the Assessment
-            </Button>
-            <Button
-              as={Link}
-              to="/compare/platforms/top-therapy-platforms-compared"
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Compare All Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="border-white text-white hover:bg-white hover:bg-opacity-10">Compare All Platforms</a>
           </div>
         </div>
       </div>

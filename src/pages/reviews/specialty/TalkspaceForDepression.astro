@@ -28,23 +28,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
                 <span class="text-gray-600">4.2/5 - Depression Treatment Rating</span>
               </div>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link}
-                  to="/reviews/platforms/talkspace"
-                  variant="primary"
-                  icon={ArrowRight}
-                >
-                  Read Full Talkspace Review
-                </Button>
-                <Button 
-                  as="a"
-                  href="https://www.talkspace.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="outline"
-                >
-                  Visit Talkspace
-                </Button>
+                <a href="/reviews/platforms/talkspace" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Read Full Talkspace Review</a>
+                <a href="https://www.talkspace.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Talkspace</a>
               </div>
             </div>
           </div>
@@ -410,7 +395,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
 
         {/* How We Reviewed Section */}
         <div class="mt-8">
-          <HowWeReviewed />
+          
         </div>
 
         {/* CTA Section */}
@@ -420,25 +405,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
             Talkspace offers specialized depression treatment with flexible communication options and qualified therapists.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as="a" 
-              href="https://www.talkspace.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="light"
-              size="lg"
-            >
-              Visit Talkspace
-            </Button>
-            <Button 
-              as={Link} 
-              to="/best/conditions/best-for-depression" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Compare Depression Treatment Options
-            </Button>
+            <a href="https://www.talkspace.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Talkspace</a>
+            <a href="/best/conditions/best-for-depression" class="border-white text-white hover:bg-white hover:bg-opacity-10">Compare Depression Treatment Options</a>
           </div>
         </div>
       </div>

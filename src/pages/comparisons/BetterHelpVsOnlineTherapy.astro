@@ -27,17 +27,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 <p class="text-gray-600 mb-4">
                   World's largest online therapy platform with multiple therapy approaches and communication methods.
                 </p>
-                <Button 
-                  as="a"
-                  href="https://www.betterhelp.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  variant="primary"
-                  icon={ExternalLink}
-                  class="w-full min-w-0 justify-center"
-                >
-                  Visit BetterHelp
-                </Button>
+                <a href="https://www.betterhelp.com" class="w-full min-w-0 justify-center">Visit BetterHelp</a>
               </div>
               
               <div class="bg-gray-50 rounded-lg p-6">
@@ -53,17 +43,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 <p class="text-gray-600 mb-4">
                   Specialized platform focused on cognitive behavioral therapy (CBT) with comprehensive self-help resources.
                 </p>
-                <Button 
-                  as="a"
-                  href="https://www.online-therapy.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  variant="primary"
-                  icon={ExternalLink}
-                  class="w-full min-w-0 justify-center"
-                >
-                  Visit Online-Therapy.com
-                </Button>
+                <a href="https://www.online-therapy.com" class="w-full min-w-0 justify-center">Visit Online-Therapy.com</a>
               </div>
             </div>
           </div>
@@ -457,7 +437,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         </div>
 
         {/* How We Review Section */}
-        <HowWeReviewed />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
@@ -466,23 +446,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             Take our personalized assessment to discover which platform is the best fit for your needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/therapy-style-assessment" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Therapy Style Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/therapy-style-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Therapy Style Assessment</a>
           </div>
         </div>
 

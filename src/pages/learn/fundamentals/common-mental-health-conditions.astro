@@ -22,22 +22,8 @@ import { ArrowRight, Brain, AlertCircle, CheckCircle, Info } from 'lucide-react'
                 An overview of frequently diagnosed mental health conditions, their symptoms, and treatment options to help you better understand these complex disorders.
               </p>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link} 
-                  to="/tools/assessments/mental-health-assessment" 
-                  variant="primary"
-                  icon={Brain}
-                >
-                  Take Mental Health Assessment
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/conditions-az" 
-                  variant="outline"
-                  icon={ArrowRight}
-                >
-                  View All Conditions
-                </Button>
+                <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Mental Health Assessment</a>
+                <a href="/conditions-az" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View All Conditions</a>
               </div>
             </div>
           </div>
@@ -270,23 +256,8 @@ import { ArrowRight, Brain, AlertCircle, CheckCircle, Info } from 'lucide-react'
             Take the first step toward better mental health by connecting with a qualified therapist who specializes in your specific concerns.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Therapy Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/best/platforms/best-online-therapy-platforms" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Explore Top Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Therapy Match</a>
+            <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Explore Top Platforms</a>
           </div>
         </div>
       </div>

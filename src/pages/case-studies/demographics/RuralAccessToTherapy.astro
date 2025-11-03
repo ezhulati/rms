@@ -5,10 +5,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Map, Wifi } from 
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Rural Access to Therapy | Online Therapy Case Study"
-        description="Case study documenting how online therapy provided essential mental health support for a client living in a rural area with limited local resources."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <a href="/case-studies/demographics" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 mb-6">
           <ArrowLeft class="h-4 w-4 mr-2" />
@@ -261,15 +258,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Map, Wifi } from 
               <p class="text-gray-600 mb-4">
                 Learn about strategies for accessing mental healthcare in rural and remote areas.
               </p>
-              <Button 
-                as={Link}
-                to="/blog/guides"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Browse Guides
-              </Button>
+              <a href="/blog/guides" class="w-full min-w-0 justify-center">Browse Guides</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -277,15 +266,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Map, Wifi } from 
               <p class="text-gray-600 mb-4">
                 Discover therapy platforms with features designed for areas with limited internet access.
               </p>
-              <Button 
-                as={Link}
-                to="/comparisons/platforms"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Compare Platforms
-              </Button>
+              <a href="/comparisons/platforms" class="w-full min-w-0 justify-center">Compare Platforms</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -293,15 +274,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Map, Wifi } from 
               <p class="text-gray-600 mb-4">
                 Access downloadable worksheets and tools that can be used offline.
               </p>
-              <Button 
-                as={Link}
-                to="/resources/worksheets"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                View Resources
-              </Button>
+              <a href="/resources/worksheets" class="w-full min-w-0 justify-center">View Resources</a>
             </div>
           </div>
         </div>
@@ -309,38 +282,10 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Map, Wifi } from 
         <div class="text-center">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Explore Other Demographic Case Studies</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/remote-worker-mental-health"
-              variant="outline"
-              class="justify-center"
-            >
-              Remote Workers
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/therapy-for-night-owls"
-              variant="outline"
-              class="justify-center"
-            >
-              Night Owls
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics/college-student-stress-management"
-              variant="outline"
-              class="justify-center"
-            >
-              College Students
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/demographics"
-              variant="outline"
-              class="justify-center"
-            >
-              View All Demographics
-            </Button>
+            <a href="/case-studies/demographics/remote-worker-mental-health" class="justify-center">Remote Workers</a>
+            <a href="/case-studies/demographics/therapy-for-night-owls" class="justify-center">Night Owls</a>
+            <a href="/case-studies/demographics/college-student-stress-management" class="justify-center">College Students</a>
+            <a href="/case-studies/demographics" class="justify-center">View All Demographics</a>
           </div>
         </div>
       </div>

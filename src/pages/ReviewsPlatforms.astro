@@ -13,15 +13,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
             In-depth, unbiased reviews of the leading online therapy platforms to help you make an informed decision about your mental health care.
           </p>
           <div class="flex justify-center">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="primary" 
-              size="lg" 
-              icon={Search}
-            >
-              Find your perfect therapy match
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy match</a>
           </div>
         </div>
 
@@ -87,9 +79,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
           </div>
           
           <div class="mt-4 flex justify-center">
-            <Button variant="primary">
-              Apply Filters
-            </Button>
+            <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Apply Filters</button>
           </div>
         </div>
 
@@ -334,15 +324,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                   </a>
                 </li>
               </ul>
-              <Button 
-                as={Link} 
-                to="/reviews/categories/general-therapy" 
-                variant="outline" 
-                size="sm" 
-                icon={ArrowRight}
-              >
-                View all general platforms
-              </Button>
+              <a href="/reviews/categories/general-therapy" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View all general platforms</a>
             </div>
             
             {/* Medication + Therapy */}
@@ -376,15 +358,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                   </a>
                 </li>
               </ul>
-              <Button 
-                as={Link} 
-                to="/reviews/categories/medication-therapy" 
-                variant="outline" 
-                size="sm" 
-                icon={ArrowRight}
-              >
-                View all medication platforms
-              </Button>
+              <a href="/reviews/categories/medication-therapy" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View all medication platforms</a>
             </div>
             
             {/* Specialized Platforms */}
@@ -418,15 +392,7 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
                   </a>
                 </li>
               </ul>
-              <Button 
-                as={Link} 
-                to="/reviews/categories/specialized" 
-                variant="outline" 
-                size="sm" 
-                icon={ArrowRight}
-              >
-                View all specialized platforms
-              </Button>
+              <a href="/reviews/categories/specialized" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View all specialized platforms</a>
             </div>
           </div>
         </div>
@@ -627,19 +593,12 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
           </div>
           
           <div class="mt-6 text-center">
-            <Button 
-              as={Link} 
-              to="/compare/platforms" 
-              variant="primary" 
-              icon={ArrowRight}
-            >
-              See detailed platform comparisons
-            </Button>
+            <a href="/compare/platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">See detailed platform comparisons</a>
           </div>
         </div>
 
         {/* How We Review Section */}
-        <HowWeReviewed />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
@@ -648,23 +607,8 @@ import { ArrowRight, Star, ExternalLink, Search, Filter, CheckCircle, XCircle, M
             Take our personalized assessment to get matched with the perfect online therapy platform based on your unique needs, preferences, and budget.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Mental Health Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/mental-health-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Mental Health Assessment</a>
           </div>
         </div>
 

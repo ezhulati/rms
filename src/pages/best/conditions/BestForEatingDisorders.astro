@@ -1,14 +1,21 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+
+const platforms = [];
+
 ---
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Best Online Therapy for Eating Disorders | RealMindSolutions"
-        description="Compare the top online therapy platforms specializing in eating disorder treatment, including anorexia, bulimia, binge eating disorder, and more."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
@@ -184,17 +191,7 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
                       <p class="text-gray-600">{platform.price}</p>
                     </div>
                     <div class="space-y-2">
-                      <Button
-                        as="a"
-                        href={`https://www.${platform.slug}.com`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="primary"
-                        size="sm"
-                        class="w-full min-w-0 justify-center"
-                      >
-                        Visit Website
-                      </Button>
+                      <button class="w-full min-w-0 justify-center">Visit Website</button>
                     </div>
                   </div>
 
@@ -422,23 +419,8 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
             Take our assessment to get matched with the most appropriate eating disorder treatment option for your specific needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button
-              as={Link}
-              to="/tools/matchers/therapy-platform-matcher"
-              variant="light"
-              size="lg"
-            >
-              Take the Assessment
-            </Button>
-            <Button
-              as={Link}
-              to="/conditions-az/eating-disorders"
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Learn More About Eating Disorders
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/conditions-az/eating-disorders" class="border-white text-white hover:bg-white hover:bg-opacity-10">Learn More About Eating Disorders</a>
           </div>
         </div>
       </div>

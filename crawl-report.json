@@ -1,0 +1,713 @@
+{
+  "timestamp": "2025-11-03T00:33:28.796Z",
+  "duration": "1.82s",
+  "stats": {
+    "totalChecked": 164,
+    "working": 37,
+    "broken": 117
+  },
+  "brokenLinks": [
+    {
+      "path": "/compare/platforms",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/compare/modalities",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/compare/modalities/therapy-approaches",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/compare/roundups/insurance-friendly-platforms",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/compare/alternatives",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/reviews/platforms",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/reviews/features",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/reviews/specialty",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/reviews/pricing",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/best/platforms",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/best/conditions",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/best/specific-needs",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/best/audiences",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/tools/assessments",
+      "referrers": [
+        "/"
+      ]
+    },
+    {
+      "path": "/blog/tag/research",
+      "referrers": [
+        "/blog/news/latest-therapy-research"
+      ]
+    },
+    {
+      "path": "/blog/tag/online-therapy",
+      "referrers": [
+        "/blog/news/latest-therapy-research"
+      ]
+    },
+    {
+      "path": "/blog/author/sarah-johnson",
+      "referrers": [
+        "/blog/news/latest-therapy-research"
+      ]
+    },
+    {
+      "path": "/blog/tag/interviews",
+      "referrers": [
+        "/blog/stories/therapist-interviews"
+      ]
+    },
+    {
+      "path": "/blog/tag/therapists",
+      "referrers": [
+        "/blog/stories/therapist-interviews"
+      ]
+    },
+    {
+      "path": "/blog/author/emma-rodriguez",
+      "referrers": [
+        "/blog/stories/therapist-interviews"
+      ]
+    },
+    {
+      "path": "/blog/tag/self-care",
+      "referrers": [
+        "/blog/stories/self-care-practices"
+      ]
+    },
+    {
+      "path": "/blog/tag/mental-health",
+      "referrers": [
+        "/blog/stories/self-care-practices"
+      ]
+    },
+    {
+      "path": "/blog/author/maya-patel",
+      "referrers": [
+        "/blog/stories/self-care-practices"
+      ]
+    },
+    {
+      "path": "/compare/platforms/betterhelp-vs-talkspace",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/platforms/betterhelp-vs-cerebral",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/platforms/talkspace-vs-cerebral",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/platforms/betterhelp-vs-calmerry",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/modalities/online-vs-traditional-therapy",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/modalities/text-vs-video-therapy",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/modalities/cbt-vs-psychodynamic",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/modalities/individual-vs-group-therapy",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/alternatives/affordable-betterhelp-alternatives",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/alternatives/talkspace-alternatives",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/alternatives/free-therapy-options",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/roundups/top-therapy-platforms-compared",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/roundups/best-therapy-apps-compared",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/compare/roundups",
+      "referrers": [
+        "/compare"
+      ]
+    },
+    {
+      "path": "/reviews/platforms/betterhelp",
+      "referrers": [
+        "/guides/selection/choosing-online-therapist"
+      ]
+    },
+    {
+      "path": "/reviews/platforms/talkspace",
+      "referrers": [
+        "/guides/selection/choosing-online-therapist"
+      ]
+    },
+    {
+      "path": "/reviews/platforms/cerebral",
+      "referrers": [
+        "/guides/selection/choosing-online-therapist"
+      ]
+    },
+    {
+      "path": "/reviews/platforms/calmerry",
+      "referrers": [
+        "/guides/selection/choosing-online-therapist"
+      ]
+    },
+    {
+      "path": "/compare/platforms/top-therapy-platforms-compared",
+      "referrers": [
+        "/guides/selection/choosing-online-therapist"
+      ]
+    },
+    {
+      "path": "/best/platforms/best-online-therapy-platforms",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/platforms/best-text-therapy-services",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/platforms/best-video-therapy-platforms",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/conditions/best-for-anxiety",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/reviews/platforms/brightside",
+      "referrers": [
+        "/best/conditions/best-for-depression"
+      ]
+    },
+    {
+      "path": "/conditions/depression",
+      "referrers": [
+        "/tools/assessments/depression-screening"
+      ]
+    },
+    {
+      "path": "/resources/worksheets",
+      "referrers": [
+        "/tools/assessments/mental-health-assessment"
+      ]
+    },
+    {
+      "path": "/case-studies/conditions/anxiety-treatment-success",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/demographics/remote-worker-mental-health",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/demographics/therapy-for-night-owls",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/conditions/depression-recovery-journey",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/conditions/ptsd-treatment-online",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/conditions/ocd-management-success",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/conditions",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/demographics/rural-access-to-therapy",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/demographics/college-student-stress-management",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/case-studies/demographics",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/privacy-policy",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/terms-of-service",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/accessibility",
+      "referrers": [
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/guides/lifestyle/stress-management-techniques",
+      "referrers": [
+        "/tools/assessments/stress-level-test"
+      ]
+    },
+    {
+      "path": "/guides/financial/affordable-therapy-options",
+      "referrers": [
+        "/tools/matchers/budget-friendly-finder"
+      ]
+    },
+    {
+      "path": "/tools/matchers",
+      "referrers": [
+        "/tools"
+      ]
+    },
+    {
+      "path": "/best/conditions/best-for-ptsd",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/audiences/best-for-teens",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/audiences/best-for-couples",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/audiences/best-for-lgbtq",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/specific-needs/best-affordable-therapy",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/specific-needs/best-insurance-coverage",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/best/specific-needs/best-medication-management",
+      "referrers": [
+        "/best"
+      ]
+    },
+    {
+      "path": "/blog/tag/therapy",
+      "referrers": [
+        "/blog/guides/therapy-first-session"
+      ]
+    },
+    {
+      "path": "/blog/tag/beginners",
+      "referrers": [
+        "/blog/guides/therapy-first-session"
+      ]
+    },
+    {
+      "path": "/blog/tag/therapist-selection",
+      "referrers": [
+        "/blog/guides/choosing-right-therapist"
+      ]
+    },
+    {
+      "path": "/blog/author/michael-chen",
+      "referrers": [
+        "/blog/guides/choosing-right-therapist"
+      ]
+    },
+    {
+      "path": "/blog/tag/therapy-types",
+      "referrers": [
+        "/blog/guides/therapy-modalities-explained"
+      ]
+    },
+    {
+      "path": "/blog/tag/finance",
+      "referrers": [
+        "/blog/guides/therapy-costs-explained"
+      ]
+    },
+    {
+      "path": "/blog/tag/insurance",
+      "referrers": [
+        "/blog/guides/insurance-coverage-guide"
+      ]
+    },
+    {
+      "path": "/blog/tag/policy",
+      "referrers": [
+        "/blog/news/mental-health-policy-updates"
+      ]
+    },
+    {
+      "path": "/blog/tag/telehealth",
+      "referrers": [
+        "/blog/news/mental-health-policy-updates"
+      ]
+    },
+    {
+      "path": "/blog/news/telehealth-innovations",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/stories/client-success-story",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/guides/finding-right-therapist",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/tag/anxiety",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/tag/depression",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/tag/mindfulness",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/blog/tag/relationships",
+      "referrers": [
+        "/blog"
+      ]
+    },
+    {
+      "path": "/learn/statistics/online-therapy-effectiveness",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/statistics/therapy-outcomes-data",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/statistics/mental-health-demographics",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/anxiety-disorders",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/mood-tracking",
+      "referrers": [
+        "/learn/fundamentals/depression"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/thought-record",
+      "referrers": [
+        "/learn/fundamentals/depression"
+      ]
+    },
+    {
+      "path": "/blog/understanding-depression-treatment",
+      "referrers": [
+        "/learn/fundamentals/depression"
+      ]
+    },
+    {
+      "path": "/blog/depression-coping-strategies",
+      "referrers": [
+        "/learn/fundamentals/depression"
+      ]
+    },
+    {
+      "path": "/blog/supporting-loved-ones",
+      "referrers": [
+        "/learn/fundamentals/depression"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/stress-management",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/mindfulness",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/trauma-ptsd",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/relationship-counseling",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/self-care",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/learn/fundamentals/medication-basics",
+      "referrers": [
+        "/learn"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/cognitive-distortion-worksheet",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/therapy-session-preparation",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/mindfulness-practice-worksheet",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/thought-record-worksheet",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/worksheets/stress-management-techniques",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides/therapy-types-explained",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides/insurance-coverage-guide",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides/talking-to-loved-ones",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides/self-care-strategies",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides/crisis-resources",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/resources/guides",
+      "referrers": [
+        "/resources"
+      ]
+    },
+    {
+      "path": "/learn/approaches",
+      "referrers": [
+        "/tools/matchers/therapy-type-finder"
+      ]
+    },
+    {
+      "path": "/best/overall/best-online-therapy",
+      "referrers": [
+        "/tools/matchers/therapy-type-finder"
+      ]
+    },
+    {
+      "path": "/guides/financial/insurance-mental-health-coverage",
+      "referrers": [
+        "/tools/matchers/insurance-coverage-checker"
+      ]
+    }
+  ]
+}

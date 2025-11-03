@@ -5,10 +5,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Zap } from 'lucid
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="PTSD Treatment Online | Hybrid Therapy Case Study"
-        description="Case study examining how a hybrid approach combining online therapy resources with periodic in-person EMDR sessions helped a veteran with PTSD recovery."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <a href="/case-studies/conditions" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 mb-6">
           <ArrowLeft class="h-4 w-4 mr-2" />
@@ -236,15 +233,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Zap } from 'lucid
               <p class="text-gray-600 mb-4">
                 Find the top-rated online therapy platforms specifically for PTSD treatment.
               </p>
-              <Button 
-                as={Link}
-                to="/best/conditions/best-for-ptsd"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                View Recommendations
-              </Button>
+              <a href="/best/conditions/best-for-ptsd" class="w-full min-w-0 justify-center">View Recommendations</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -252,15 +241,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Zap } from 'lucid
               <p class="text-gray-600 mb-4">
                 Access worksheets and exercises to help manage PTSD symptoms.
               </p>
-              <Button 
-                as={Link}
-                to="/resources/worksheets"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Browse Worksheets
-              </Button>
+              <a href="/resources/worksheets" class="w-full min-w-0 justify-center">Browse Worksheets</a>
             </div>
             
             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -268,15 +249,7 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Zap } from 'lucid
               <p class="text-gray-600 mb-4">
                 Learn more about how online therapy can effectively treat PTSD.
               </p>
-              <Button 
-                as={Link}
-                to="/reviews/specialty/online-therapy-for-ptsd"
-                variant="outline"
-                size="sm"
-                class="w-full min-w-0 justify-center"
-              >
-                Read Guide
-              </Button>
+              <a href="/reviews/specialty/online-therapy-for-ptsd" class="w-full min-w-0 justify-center">Read Guide</a>
             </div>
           </div>
         </div>
@@ -284,38 +257,10 @@ import { ArrowLeft, Clock, User, CheckCircle, Award, BookOpen, Zap } from 'lucid
         <div class="text-center">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Explore Other Condition Case Studies</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <Button 
-              as={Link}
-              to="/case-studies/conditions/anxiety-treatment-success"
-              variant="outline"
-              class="justify-center"
-            >
-              Anxiety Treatment
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/conditions/depression-recovery-journey"
-              variant="outline"
-              class="justify-center"
-            >
-              Depression Recovery
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/conditions/ocd-management-success"
-              variant="outline"
-              class="justify-center"
-            >
-              OCD Management
-            </Button>
-            <Button 
-              as={Link}
-              to="/case-studies/conditions"
-              variant="outline"
-              class="justify-center"
-            >
-              View All Conditions
-            </Button>
+            <a href="/case-studies/conditions/anxiety-treatment-success" class="justify-center">Anxiety Treatment</a>
+            <a href="/case-studies/conditions/depression-recovery-journey" class="justify-center">Depression Recovery</a>
+            <a href="/case-studies/conditions/ocd-management-success" class="justify-center">OCD Management</a>
+            <a href="/case-studies/conditions" class="justify-center">View All Conditions</a>
           </div>
         </div>
       </div>

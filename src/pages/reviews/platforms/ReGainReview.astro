@@ -5,10 +5,7 @@ import { Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Heart, Users, 
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="ReGain Review | Online Couples Therapy Platform | RealMindSolutions"
-        description="Comprehensive review of ReGain, an online therapy platform specializing in couples counseling and relationship therapy. Learn about pricing, features, pros and cons."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
@@ -33,24 +30,8 @@ import { Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Heart, Users, 
                   <span class="text-gray-600">Our Rating</span>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                  <Button
-                    as="a"
-                    href={platform.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="primary"
-                    size="md"
-                  >
-                    Visit Website
-                  </Button>
-                  <Button
-                    as={Link}
-                    to="/tools/matchers/therapy-platform-matcher"
-                    variant="outline"
-                    size="md"
-                  >
-                    Find Your Match
-                  </Button>
+                  <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Website</button>
+                  <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Match</a>
                 </div>
               </div>
             </div>
@@ -253,17 +234,7 @@ import { Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Heart, Users, 
                 ReGain charges a flat weekly fee that is billed monthly. The exact price depends on your location, 
                 therapist availability, and preferences. Financial aid is available based on income verification.
               </p>
-              <Button
-                as="a"
-                href={platform.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                size="md"
-                class="w-full min-w-0 justify-center"
-              >
-                Check Current Pricing
-              </Button>
+              <button class="w-full min-w-0 justify-center">Check Current Pricing</button>
             </div>
 
             {/* Ratings Card */}
@@ -391,24 +362,8 @@ import { Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Heart, Users, 
             specialized therapy option.
           </p>
           <div class="flex flex-wrap gap-4">
-            <Button
-              as="a"
-              href={platform.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              size="lg"
-            >
-              Visit ReGain
-            </Button>
-            <Button
-              as={Link}
-              to="/tools/matchers/therapy-platform-matcher"
-              variant="outline"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
+            <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit ReGain</button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
           </div>
         </div>
 

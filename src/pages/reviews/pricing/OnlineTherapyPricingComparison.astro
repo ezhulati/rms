@@ -22,21 +22,8 @@ import { ArrowRight, CheckCircle, XCircle, DollarSign, CreditCard, Calendar, Shi
                 A comprehensive analysis of costs, payment options, and value across major online therapy platforms.
               </p>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link}
-                  to="/tools/matchers/budget-friendly-finder"
-                  variant="primary"
-                  icon={ArrowRight}
-                >
-                  Find Affordable Options
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/reviews/pricing/insurance-coverage-guide"
-                  variant="outline"
-                >
-                  Insurance Coverage Guide
-                </Button>
+                <a href="/tools/matchers/budget-friendly-finder" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Affordable Options</a>
+                <a href="/reviews/pricing/insurance-coverage-guide" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Insurance Coverage Guide</a>
               </div>
             </div>
           </div>
@@ -413,7 +400,7 @@ import { ArrowRight, CheckCircle, XCircle, DollarSign, CreditCard, Calendar, Shi
 
         {/* How We Reviewed Section */}
         <div class="mt-8">
-          <HowWeReviewed />
+          
         </div>
 
         {/* CTA Section */}
@@ -423,23 +410,8 @@ import { ArrowRight, CheckCircle, XCircle, DollarSign, CreditCard, Calendar, Shi
             Use our matching tools to find the perfect balance of affordability and quality for your specific needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/budget-friendly-finder" 
-              variant="light"
-              size="lg"
-            >
-              Find Affordable Options
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/matchers/insurance-coverage-checker" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Check Insurance Coverage
-            </Button>
+            <a href="/tools/matchers/budget-friendly-finder" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Affordable Options</a>
+            <a href="/tools/matchers/insurance-coverage-checker" class="border-white text-white hover:bg-white hover:bg-opacity-10">Check Insurance Coverage</a>
           </div>
         </div>
       </div>

@@ -12,15 +12,7 @@ import { ArrowRight, Search, Brain, DollarSign, Users, CheckCircle, AlertCircle 
             Find the perfect therapy solution with our matching tools that analyze your needs, preferences, and practical requirements.
           </p>
           <div class="flex justify-center">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="primary" 
-              size="lg" 
-              icon={Search}
-            >
-              Find your perfect therapy match
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect therapy match</a>
           </div>
         </div>
 
@@ -86,14 +78,7 @@ import { ArrowRight, Search, Brain, DollarSign, Users, CheckCircle, AlertCircle 
                   </ul>
                 </div>
               </div>
-              <Button 
-                as={Link}
-                to="/tools/matchers/therapy-platform-matcher"
-                variant="primary"
-                icon={ArrowRight}
-              >
-                Start Matching
-              </Button>
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Start Matching</a>
             </div>
           </div>
         </div>
@@ -124,15 +109,7 @@ import { ArrowRight, Search, Brain, DollarSign, Users, CheckCircle, AlertCircle 
                     ))}
                   </div>
                 </div>
-                <Button 
-                  as={Link}
-                  to={`/tools/matchers/${matcher.slug}`}
-                  variant="primary"
-                  size="sm"
-                  class="w-full min-w-0 justify-center"
-                >
-                  Start Matching
-                </Button>
+                <button class="w-full min-w-0 justify-center">Start Matching</button>
               </div>
             </div>
           ))}
@@ -182,23 +159,8 @@ import { ArrowRight, Search, Brain, DollarSign, Users, CheckCircle, AlertCircle 
             Start with our comprehensive platform matcher to find the best online therapy option for your needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Mental Health Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Match</a>
+            <a href="/tools/assessments/mental-health-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Mental Health Assessment</a>
           </div>
         </div>
       </div>

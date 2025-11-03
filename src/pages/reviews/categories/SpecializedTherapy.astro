@@ -98,14 +98,7 @@ import { ArrowRight, Star, CheckCircle, Heart, Users, Brain, Sparkles, Leaf } fr
                 </ul>
               </div>
               
-              <Button 
-                as={Link}
-                to={type.reviewLink}
-                variant="outline"
-                size="sm"
-              >
-                Read Full Review
-              </Button>
+              <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Read Full Review</button>
             </div>
           ))}
         </div>
@@ -173,13 +166,7 @@ import { ArrowRight, Star, CheckCircle, Heart, Users, Brain, Sparkles, Leaf } fr
                   </div>
                 </div>
                 
-                <Button 
-                  as={Link}
-                  to={platform.reviewLink}
-                  variant="primary"
-                >
-                  Read Full Review
-                </Button>
+                <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Read Full Review</button>
               </div>
             </div>
           </div>
@@ -340,23 +327,8 @@ import { ArrowRight, Star, CheckCircle, Heart, Users, Brain, Sparkles, Leaf } fr
             Take our assessment to get matched with the right specialized therapy platform for your specific concerns and preferences.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Specialized Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/best/platforms/specialized-therapy-platforms" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              View Top Specialized Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Specialized Match</a>
+            <a href="/best/platforms/specialized-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">View Top Specialized Platforms</a>
           </div>
         </div>
       </div>

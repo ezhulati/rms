@@ -13,15 +13,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             A comprehensive comparison of the top mental health and therapy apps to help you find the right digital support for your wellbeing.
           </p>
           <div class="flex justify-center">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="primary" 
-              size="lg" 
-              icon={Search}
-            >
-              Find your perfect mental health app
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect mental health app</a>
           </div>
         </div>
 
@@ -127,18 +119,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                       </div>
                     </div>
                     <div class="space-y-2">
-                      <Button 
-                        as="a"
-                        href={`https://www.${app.name.toLowerCase()}.com`} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        variant="primary"
-                        size="sm"
-                        icon={Download}
-                        class="w-full min-w-0 justify-center"
-                      >
-                        Download App
-                      </Button>
+                      <button class="w-full min-w-0 justify-center">Download App</button>
                     </div>
                   </div>
                   
@@ -389,29 +370,14 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             Take our personalized assessment to get matched with the mental health app that best fits your unique needs, preferences, and goals.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Mental Health Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/mental-health-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Mental Health Assessment</a>
           </div>
         </div>
         
         {/* How We Review Section */}
         <div class="mt-16">
-          <HowWeReviewed />
+          
         </div>
       </div>
     </div>

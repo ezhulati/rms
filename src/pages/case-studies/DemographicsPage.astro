@@ -5,10 +5,7 @@ import { FileText, Users, Clock, ArrowRight, BookOpen, Brain, Activity, Target }
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Demographic-Specific Therapy Case Studies | RealMindSolutions"
-        description="Real-world case studies of online therapy for specific demographics including teens, LGBTQ+ individuals, rural populations, military families, seniors, and immigrants."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Demographic-Specific Therapy Case Studies</h1>
@@ -98,19 +95,7 @@ import { FileText, Users, Clock, ArrowRight, BookOpen, Brain, Activity, Target }
                   </ul>
                 </div>
                 
-              <Button 
-                as={Link}
-                to={`/case-studies/demographics/${study.id === 'remote-worker' ? 'remote-worker-mental-health' : 
-                                               study.id === 'rural' ? 'rural-access-to-therapy' : 
-                                               study.id === 'night-owl' ? 'therapy-for-night-owls' : 
-                                               study.id === 'college' ? 'college-student-stress-management' : '#'}`}
-                variant="outline"
-                size="sm"
-                icon={FileText}
-                class="w-full min-w-0 justify-center"
-              >
-                Read Full Case Study
-                </Button>
+              <button class="w-full min-w-0 justify-center">Read Full Case Study</button>
               </div>
             </div>
           ))}

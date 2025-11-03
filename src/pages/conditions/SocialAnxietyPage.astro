@@ -36,22 +36,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 </ul>
               </div>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link} 
-                  to="/tools/assessments/anxiety-screening" 
-                  variant="primary" 
-                  size="lg" 
-                >
-                  Take Anxiety Assessment
-                </Button>
-                <Button 
-                  as={Link} 
-                  to="/tools/matchers/therapy-platform-matcher" 
-                  variant="outline" 
-                  size="lg" 
-                >
-                  Find Treatment Options
-                </Button>
+                <a href="/tools/assessments/anxiety-screening" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Anxiety Assessment</a>
+                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Treatment Options</a>
               </div>
             </div>
             <div class="md:w-1/2">
@@ -491,23 +477,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             Take our personalized assessment to get matched with the right online therapy platform for treating social anxiety.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/assessments/anxiety-screening" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Take Anxiety Assessment
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/assessments/anxiety-screening" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Anxiety Assessment</a>
           </div>
         </div>
       </div>

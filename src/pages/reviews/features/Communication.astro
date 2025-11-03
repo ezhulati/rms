@@ -5,10 +5,7 @@ import { Star, CheckCircle, XCircle, MessageCircle, Video, Phone, Clock } from '
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Online Therapy Communication Features Compared | RealMindSolutions"
-        description="Compare messaging, video sessions, and response times across top online therapy platforms. Find the best communication style for your therapy needs."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
@@ -185,15 +182,7 @@ import { Star, CheckCircle, XCircle, MessageCircle, Video, Phone, Clock } from '
                       </div>
                     </div>
                     <div class="space-y-2">
-                      <Button
-                        as={Link}
-                        to={`/reviews/platforms/${platform.slug}`}
-                        variant="primary"
-                        size="sm"
-                        class="w-full min-w-0 justify-center"
-                      >
-                        Full Review
-                      </Button>
+                      <button class="w-full min-w-0 justify-center">Full Review</button>
                     </div>
                   </div>
 
@@ -400,23 +389,8 @@ import { Star, CheckCircle, XCircle, MessageCircle, Video, Phone, Clock } from '
             Take our assessment to get matched with the online therapy platform that best fits your communication preferences and needs.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button
-              as={Link}
-              to="/tools/matchers/therapy-platform-matcher"
-              variant="light"
-              size="lg"
-            >
-              Take the Assessment
-            </Button>
-            <Button
-              as={Link}
-              to="/compare/platforms/top-therapy-platforms-compared"
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Compare All Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="border-white text-white hover:bg-white hover:bg-opacity-10">Compare All Platforms</a>
           </div>
         </div>
       </div>

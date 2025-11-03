@@ -22,22 +22,8 @@ import { ArrowRight, BarChart, PieChart, TrendingUp, Brain, Users, Globe, LineCh
                 Evidence-based data and research findings on mental health conditions, treatment effectiveness, and industry trends to inform your decisions.
               </p>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link} 
-                  to="/learn/statistics/mental-health-statistics" 
-                  variant="primary"
-                  icon={BarChart}
-                >
-                  Explore Key Statistics
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/learn" 
-                  variant="outline"
-                  icon={ArrowRight}
-                >
-                  View All Learning Resources
-                </Button>
+                <a href="/learn/statistics/mental-health-statistics" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Explore Key Statistics</a>
+                <a href="/learn" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View All Learning Resources</a>
               </div>
             </div>
           </div>
@@ -211,25 +197,8 @@ import { ArrowRight, BarChart, PieChart, TrendingUp, Brain, Users, Globe, LineCh
             Now that you understand the data, take the next step toward better mental health with personalized recommendations.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/assessments/mental-health-assessment" 
-              variant="light"
-              size="lg"
-              icon={Brain}
-            >
-              Take Mental Health Assessment
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-              icon={Users}
-            >
-              Find Your Therapy Match
-            </Button>
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Mental Health Assessment</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Therapy Match</a>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  class="pl-10 pr-4 py-3 px-4 sm:px-6 lg:px-8 border border-gray-300 rounded-md w-full min-w-0 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 text-base"
+                  class="whitespace-nowrap pl-10 pr-4 py-3 px-4 sm:px-6 lg:px-8 border border-gray-300 rounded-md w-full min-w-0 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 text-base"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -35,7 +35,7 @@ import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
                 <Filter class="h-5 w-5 text-gray-500 mr-2" />
                 <span class="text-gray-700 mr-2">Filter by:</span>
                 <select
-                  class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 cursor-pointer appearance-none pr-8 text-base font-medium"
+                  class="whitespace-nowrap border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 cursor-pointer appearance-none pr-8 text-base font-medium"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em", paddingRight: "2.5rem" }}
@@ -89,7 +89,7 @@ import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
                     {post.tags.map(tag => (
                       <span 
                         key={tag} 
-                        class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded-full hover:bg-gray-200 cursor-pointer"
+                        class="whitespace-nowrap text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded-full hover:bg-gray-200 cursor-pointer"
                         onClick={() => setSearchTerm(tag)}
                       >
                         #{tag}
@@ -100,7 +100,7 @@ import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
                 <div class="px-6 pb-6">
                   <Link 
                     to={post.url} 
-                    class="text-indigo-600 font-medium flex items-center hover:text-indigo-800 bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 inline-flex w-auto"
+                    class="text-indigo-600 font-medium flex items-center hover:text-indigo-800 bg-indigo-50 px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-100 transition-all duration-200 inline-flex w-auto"
                   >
                     Read full article <ArrowRight class="h-4 w-4 ml-1" />
                   </a>
@@ -117,7 +117,7 @@ import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
                 Try adjusting your search terms or filters to find what you're looking for.
               </p>
               <button 
-                class="text-indigo-600 font-medium bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 shadow-sm border border-indigo-100"
+                class="whitespace-nowrap text-indigo-600 font-medium bg-indigo-50 px-4 py-2 rounded-md hover:bg-indigo-100 transition-all duration-200 shadow-sm border border-indigo-100"
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');

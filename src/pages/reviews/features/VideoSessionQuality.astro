@@ -22,22 +22,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Video, Wifi, Monitor, Headphone
                 A comprehensive analysis of video therapy quality across major online therapy platforms, examining technical performance, user experience, and therapeutic effectiveness.
               </p>
               <div class="flex flex-wrap gap-4">
-                <Button 
-                  as={Link}
-                  to="/tools/matchers/therapy-platform-matcher"
-                  variant="primary"
-                  icon={ArrowRight}
-                >
-                  Find Your Best Match
-                </Button>
-                <Button 
-                  as={Link}
-                  to="/compare/platforms"
-                  variant="outline"
-                  icon={ArrowRight}
-                >
-                  Compare All Platforms
-                </Button>
+                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Best Match</a>
+                <a href="/compare/platforms" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Compare All Platforms</a>
               </div>
             </div>
           </div>
@@ -405,7 +391,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Video, Wifi, Monitor, Headphone
         </div>
 
         {/* How We Review Section */}
-        <HowWeReviewed />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
@@ -414,23 +400,8 @@ import { Star, CheckCircle, XCircle, ArrowRight, Video, Wifi, Monitor, Headphone
             Find the platform with the best video therapy experience for your needs and technical setup.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="light"
-              size="lg"
-            >
-              Find Your Perfect Match
-            </Button>
-            <Button 
-              as={Link} 
-              to="/compare/platforms" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Compare All Platforms
-            </Button>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/compare/platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Compare All Platforms</a>
           </div>
         </div>
 

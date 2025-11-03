@@ -46,29 +46,15 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
                 </div>
               </div>
               <div class="flex flex-wrap gap-3">
-                <Button 
-                  as="a" 
-                  href="https://www.online-therapy.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  variant="primary"
-                >
-                  Visit Online-Therapy.com
-                </Button>
-                <Button 
-                  as={Link} 
-                  to="/tools/matchers/therapy-platform-matcher" 
-                  variant="outline"
-                >
-                  Find Your Perfect Match
-                </Button>
+                <a href="https://www.online-therapy.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Online-Therapy.com</a>
+                <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
               </div>
             </div>
           </div>
         </div>
 
         {/* How We Reviewed */}
-        <HowWeReviewed />
+        
 
         {/* CTA Section */}
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center mb-8">
@@ -77,25 +63,8 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
             Start your journey to better mental health with a structured CBT approach and comprehensive self-help tools.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <Button 
-              as="a"
-              href="https://www.online-therapy.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              variant="light"
-              size="lg"
-            >
-              Visit Online-Therapy.com
-            </Button>
-            <Button 
-              as={Link} 
-              to="/tools/matchers/therapy-platform-matcher" 
-              variant="outline"
-              size="lg"
-              class="border-white text-white hover:bg-white hover:bg-opacity-10"
-            >
-              Find Your Perfect Match
-            </Button>
+            <a href="https://www.online-therapy.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Online-Therapy.com</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Perfect Match</a>
           </div>
         </div>
       </div>

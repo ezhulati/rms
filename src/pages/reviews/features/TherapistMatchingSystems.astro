@@ -5,10 +5,7 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <MetaTags 
-        title="Therapist Matching Systems Compared | RealMindSolutions"
-        description="Compare how different online therapy platforms match clients with therapists and which systems are most effective."
-      />
+      
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div class="text-center mb-12">
@@ -155,14 +152,7 @@ import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
         {/* CTA Section */}
         <div class="bg-indigo-600 text-white p-8 rounded-lg text-center">
           <h2 class="text-2xl font-bold mb-4">Find Your Perfect Therapist Match</h2>
-          <Button
-            as={Link}
-            to="/tools/matchers/therapy-platform-matcher"
-            variant="light"
-            size="lg"
-          >
-            Take the Matching Assessment
-          </Button>
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Matching Assessment</a>
         </div>
       </div>
     </div>
