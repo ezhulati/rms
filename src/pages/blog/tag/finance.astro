@@ -1,21 +1,247 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { DollarSign, TrendingDown, CreditCard, Target, Shield, BookOpen, ArrowRight, CheckCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Finance | RealMindSolutions" description="Therapy Costs">
+<BaseLayout title="Therapy Costs & Affordable Mental Health Care | RealMindSolutions" description="Comprehensive therapy cost resources—pricing information, payment options, sliding scale therapy, financial assistance, HSA/FSA, and finding affordable mental health care.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Costs</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Financial aspects of therapy</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Costs & Affordable Care</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Understanding therapy costs and finding affordable mental health care options.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Cost shouldn't be a barrier to mental health care. While therapy can be expensive, there are many options for affordable treatment—from insurance coverage and sliding scale fees to low-cost online platforms and community mental health centers.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together everything you need to understand therapy costs, explore payment options, and find affordable mental health care that fits your budget.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Finance Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/tools/matchers/budget-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Budget Finder Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Interactive tool to find therapy platforms within your budget, including free and low-cost options.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Find Affordable Options
+          </div>
+        </a>
+
+        <a href="/blog/tag/insurance" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Insurance Coverage Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Understand insurance coverage for therapy and maximize your mental health benefits for lower costs.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Insurance Resources
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <TrendingDown className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Affordable Therapy Platforms</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Compare therapy platforms by price, including subscription models and per-session pricing.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Compare Platforms
+          </div>
+        </a>
+
+        <a href="/compare/platforms/betterhelp-vs-talkspace" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <DollarSign className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Price Comparisons</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Side-by-side cost comparisons of therapy platforms to find the best value for your needs.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Comparisons
+          </div>
+        </a>
+
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CreditCard className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">HSA/FSA for Therapy</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How to use Health Savings Accounts and Flexible Spending Accounts for tax-free therapy payments.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Learn About HSA/FSA
+          </div>
+        </a>
+
+        <a href="/learn/fundamentals" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Free Mental Health Resources</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free self-help resources, worksheets, and educational content to support your mental health.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Free Resources
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Understanding Therapy Costs */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Does Therapy Cost?</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 not-prose">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">Traditional In-Person Therapy</h3>
+            <ul class="space-y-2 text-sm text-blue-800">
+              <li>• <strong>Average cost:</strong> $100-$200 per session</li>
+              <li>• <strong>With insurance:</strong> $10-$50 copay</li>
+              <li>• <strong>Sliding scale:</strong> $50-$150 based on income</li>
+              <li>• <strong>Frequency:</strong> Weekly or bi-weekly sessions</li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-purple-900 mb-3">Online Therapy Platforms</h3>
+            <ul class="space-y-2 text-sm text-purple-800">
+              <li>• <strong>Subscription model:</strong> $240-$400/month (unlimited messaging + live sessions)</li>
+              <li>• <strong>Per-session:</strong> $60-$120 per session</li>
+              <li>• <strong>Text-only:</strong> $150-$300/month</li>
+              <li>• <strong>Psychiatry:</strong> $199-$299/month</li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-green-900 mb-3">Low-Cost Options</h3>
+            <ul class="space-y-2 text-sm text-green-800">
+              <li>• <strong>Community mental health centers:</strong> $0-$30 per session (sliding scale)</li>
+              <li>• <strong>Training clinics:</strong> $20-$80 (supervised graduate students)</li>
+              <li>• <strong>Group therapy:</strong> $30-$60 per session</li>
+              <li>• <strong>Crisis hotlines:</strong> Free 24/7 support</li>
+            </ul>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-orange-900 mb-3">Free Resources</h3>
+            <ul class="space-y-2 text-sm text-orange-800">
+              <li>• <strong>Support groups:</strong> Free peer-led groups (DBSA, NAMI)</li>
+              <li>• <strong>Mental health apps:</strong> Free or $5-$15/month</li>
+              <li>• <strong>Self-help resources:</strong> Worksheets, articles, videos</li>
+              <li>• <strong>Crisis support:</strong> 988 Suicide & Crisis Lifeline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Making Therapy More Affordable */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How to Make Therapy More Affordable</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li>
+              <strong class="text-gray-900">Use insurance:</strong> Most insurance plans cover mental health services. Verify your benefits and find in-network providers for lower copays.
+            </li>
+            <li>
+              <strong class="text-gray-900">Ask about sliding scale fees:</strong> Many therapists offer reduced rates based on income. Don't hesitate to ask—most want to make therapy accessible.
+            </li>
+            <li>
+              <strong class="text-gray-900">Consider online therapy:</strong> Platforms like BetterHelp and Talkspace are often 30-50% less expensive than traditional in-person therapy.
+            </li>
+            <li>
+              <strong class="text-gray-900">Try group therapy:</strong> Group sessions cost significantly less than individual therapy and provide peer support.
+            </li>
+            <li>
+              <strong class="text-gray-900">Use HSA/FSA funds:</strong> Use pre-tax dollars from Health Savings or Flexible Spending Accounts to pay for therapy.
+            </li>
+            <li>
+              <strong class="text-gray-900">Reduce session frequency:</strong> Meet bi-weekly or monthly instead of weekly once you've made progress.
+            </li>
+            <li>
+              <strong class="text-gray-900">Seek training clinics:</strong> University counseling programs offer low-cost therapy from supervised graduate students.
+            </li>
+            <li>
+              <strong class="text-gray-900">Explore community resources:</strong> Community mental health centers, crisis centers, and nonprofits often provide free or low-cost services.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Therapy Finance Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of therapy cost articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• The real cost of therapy: what to expect</li>
+          <li>• How to afford therapy without insurance</li>
+          <li>• Is expensive therapy better than affordable therapy?</li>
+          <li>• Financial assistance programs for mental health care</li>
+          <li>• Negotiating therapy fees with your therapist</li>
+          <li>• Online therapy cost comparison 2025</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing finance resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/insurance" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Insurance</a>
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/beginners" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Beginners</a>
       </div>
     </div>
   </section>

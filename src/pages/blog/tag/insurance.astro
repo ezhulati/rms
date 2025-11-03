@@ -1,21 +1,244 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Shield, DollarSign, FileText, CheckCircle, Phone, Target, ArrowRight, BookOpen } from 'lucide-react';
 ---
 
-<BaseLayout title="Insurance | RealMindSolutions" description="Insurance Coverage">
+<BaseLayout title="Mental Health Insurance Coverage | RealMindSolutions" description="Comprehensive insurance resources—understanding mental health coverage, navigating benefits, in-network vs out-of-network providers, maximizing reimbursement, and insurance parity laws.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Insurance Coverage</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Insurance information</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mental Health Insurance Coverage</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Navigate mental health insurance benefits and maximize your coverage.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Navigating mental health insurance can feel overwhelming, but understanding your coverage is essential for accessing affordable care. Thanks to mental health parity laws, insurance companies are required to cover mental health services similarly to medical/surgical services—though navigating the specifics can still be complex.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together everything you need to understand your mental health insurance benefits, verify coverage, maximize reimbursement, and find platforms that accept insurance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Essential Insurance Resources */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Essential Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/resources/guides/insurance-coverage-guide" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Complete Insurance Guide</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Comprehensive guide to mental health insurance coverage, verifying benefits, and maximizing reimbursement.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Read Full Guide
+          </div>
+        </a>
+
+        <a href="/tools/matchers/insurance-checker" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Insurance Checker Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Interactive tool to find therapy platforms that accept your insurance plan.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Check Coverage
+          </div>
+        </a>
+
+        <a href="/best/platforms" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Platforms Accepting Insurance</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Compare therapy platforms that work with insurance companies for affordable care.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Browse Platforms
+          </div>
+        </a>
+
+        <a href="/tools/matchers/budget-finder" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <DollarSign className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Budget Finder Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Find affordable therapy options within your budget, including insurance-based and self-pay platforms.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Find Affordable Options
+          </div>
+        </a>
+
+        <a href="/blog/tag/finance" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <FileText className="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Costs & Pricing</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Understand therapy costs, payment options, and financial assistance programs for mental health care.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Finance Resources
+          </div>
+        </a>
+
+        <a href="/blog/tag/telehealth" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Phone className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Telehealth Insurance Coverage</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            How insurance coverage works for online therapy and virtual mental health services.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Telehealth Info
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Understanding Your Mental Health Benefits */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Understanding Your Mental Health Benefits</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-6">
+          Key insurance terms you need to know when navigating mental health coverage:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 not-prose">
+          <div class="bg-blue-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-blue-900 mb-2">Deductible</h3>
+            <p class="text-sm text-blue-800">
+              Amount you pay out-of-pocket before insurance starts covering services. Many plans have separate medical and mental health deductibles.
+            </p>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-purple-900 mb-2">Copay</h3>
+            <p class="text-sm text-purple-800">
+              Fixed amount you pay per session (e.g., $30 copay per therapy session). Copays don't count toward your deductible.
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-green-900 mb-2">Coinsurance</h3>
+            <p class="text-sm text-green-800">
+              Percentage of the session cost you pay after meeting your deductible (e.g., 20% coinsurance means you pay 20%, insurance pays 80%).
+            </p>
+          </div>
+
+          <div class="bg-orange-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-orange-900 mb-2">Out-of-Pocket Maximum</h3>
+            <p class="text-sm text-orange-800">
+              Most you'll pay per year for covered services. After hitting this limit, insurance covers 100% of covered services.
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-indigo-900 mb-2">In-Network</h3>
+            <p class="text-sm text-indigo-800">
+              Providers with contracts with your insurance company. Lower out-of-pocket costs, typically just a copay.
+            </p>
+          </div>
+
+          <div class="bg-pink-50 rounded-lg p-5">
+            <h3 class="text-lg font-bold text-pink-900 mb-2">Out-of-Network</h3>
+            <p class="text-sm text-pink-800">
+              Providers without contracts with your insurer. Higher costs initially, but you may be reimbursed for a portion of the fee.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* How to Verify Coverage */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How to Verify Your Coverage</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 not-prose">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Questions to Ask Your Insurance Company:</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>• "Does my plan cover outpatient mental health services?"</li>
+            <li>• "What is my copay/coinsurance for therapy sessions?"</li>
+            <li>• "Do I need to meet my deductible before coverage begins?"</li>
+            <li>• "How many therapy sessions are covered per year?"</li>
+            <li>• "Do I need a referral or prior authorization?"</li>
+            <li>• "Is teletherapy/online therapy covered the same as in-person?"</li>
+            <li>• "Does my plan cover out-of-network providers, and what's the reimbursement rate?"</li>
+            <li>• "Are there specific diagnosis codes required for coverage?"</li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 not-prose">
+          <p class="text-sm text-yellow-900">
+            <strong>Pro tip:</strong> Call the member services number on the back of your insurance card. Request written confirmation of your mental health benefits via email for your records.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Insurance Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of insurance-related articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• How to fight an insurance denial for mental health services</li>
+          <li>• Out-of-network reimbursement: step-by-step guide</li>
+          <li>• Mental health parity laws: what you need to know</li>
+          <li>• Using your HSA/FSA for therapy</li>
+          <li>• Insurance coverage for couples and family therapy</li>
+          <li>• What to do when your therapist doesn't take insurance</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing insurance resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/finance" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Finance</a>
+        <a href="/blog/tag/telehealth" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Telehealth</a>
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>

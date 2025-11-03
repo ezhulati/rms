@@ -1,21 +1,236 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { User, Heart, Users, Brain, MessageCircle, Shield, Lightbulb } from 'lucide-react';
 ---
 
-<BaseLayout title="Emma Rodriguez | RealMindSolutions" description="Articles by Emma Rodriguez">
+<BaseLayout title="Emma Rodriguez - Therapist & Mental Health Advocate | RealMindSolutions" description="Emma Rodriguez, LCSW, is a licensed therapist and mental health advocate providing clinical insights and practical guidance for therapy seekers.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Articles by Emma Rodriguez</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Therapist and mental health advocate</p>
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        {/* Author Avatar */}
+        <div class="flex-shrink-0">
+          <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-green-100 to-teal-100 rounded-full flex items-center justify-center">
+            <User class="w-20 h-20 md:w-24 md:h-24 text-green-600" />
+          </div>
+        </div>
+
+        {/* Author Info */}
+        <div class="flex-1">
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-neutral-900 mb-3">Emma Rodriguez, LCSW</h1>
+          <p class="font-serif italic text-xl md:text-2xl text-neutral-600 mb-6">Therapist & Mental Health Advocate</p>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Emma Rodriguez is a licensed clinical social worker (LCSW) with over 12 years of experience in clinical practice and mental health advocacy. As both a practicing therapist and writer, Emma bridges the gap between clinical expertise and accessible education—helping people understand therapy from the inside out.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Her writing draws on real clinical experience working with clients navigating anxiety, depression, trauma, and relationship challenges. Emma is passionate about demystifying therapy, reducing stigma, and empowering people to take charge of their mental health journey.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Expertise & Writing Topics */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Areas of Expertise</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-green-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Brain class="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-green-900">Clinical Insights</h3>
+          </div>
+          <p class="text-sm text-green-800">
+            First-hand perspectives on what happens in therapy, how therapists think, and what makes treatment effective.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <MessageCircle class="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-blue-900">Therapy Process</h3>
+          </div>
+          <p class="text-sm text-blue-800">
+            Explaining the therapeutic relationship, session structure, boundaries, and how to be an active participant.
+          </p>
+        </div>
+
+        <div class="bg-purple-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Heart class="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-purple-900">Trauma & Healing</h3>
+          </div>
+          <p class="text-sm text-purple-800">
+            Trauma-informed perspectives on recovery, PTSD treatment, and building resilience after adversity.
+          </p>
+        </div>
+
+        <div class="bg-orange-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Users class="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-orange-900">Relationships & Boundaries</h3>
+          </div>
+          <p class="text-sm text-orange-800">
+            Guidance on communication, setting boundaries, attachment patterns, and navigating relationship challenges.
+          </p>
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Shield class="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-indigo-900">Mental Health Stigma</h3>
+          </div>
+          <p class="text-sm text-indigo-800">
+            Advocacy work challenging stigma, improving access to care, and creating more inclusive mental health systems.
+          </p>
+        </div>
+
+        <div class="bg-pink-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Lightbulb class="h-6 w-6 text-pink-600 mr-2" />
+            <h3 class="text-xl font-bold text-pink-900">Self-Advocacy</h3>
+          </div>
+          <p class="text-sm text-pink-800">
+            Empowering clients to speak up, ask questions, change therapists, and get the care they deserve.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Background & Credentials */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Background & Experience</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Clinical Experience</h3>
+          <ul class="space-y-3 text-sm text-gray-700 mb-0">
+            <li>
+              <strong class="text-gray-900">12+ years</strong> in clinical practice providing individual, couples, and group therapy
+            </li>
+            <li>
+              <strong class="text-gray-900">Specializations:</strong> Trauma (PTSD, C-PTSD), anxiety disorders, depression, relationship issues, and life transitions
+            </li>
+            <li>
+              <strong class="text-gray-900">Therapeutic approaches:</strong> Trauma-focused CBT, EMDR, psychodynamic therapy, attachment-based therapy
+            </li>
+            <li>
+              <strong class="text-gray-900">Clinical settings:</strong> Private practice, community mental health, crisis intervention, and university counseling
+            </li>
+            <li>
+              <strong class="text-gray-900">Supervision & training:</strong> Clinical supervisor for graduate-level therapists and social work interns
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Education & Credentials</h3>
+          <ul class="space-y-3 text-sm text-gray-700 mb-0">
+            <li>
+              <strong class="text-gray-900">LCSW</strong> - Licensed Clinical Social Worker (California)
+            </li>
+            <li>
+              <strong class="text-gray-900">M.S.W.</strong> - Master of Social Work, University of Southern California
+            </li>
+            <li>
+              <strong class="text-gray-900">B.A. in Sociology</strong> - Stanford University
+            </li>
+            <li>
+              <strong class="text-gray-900">Certifications:</strong> EMDR therapy, trauma-focused CBT, clinical supervision
+            </li>
+            <li>
+              <strong class="text-gray-900">Training:</strong> Attachment theory, complex trauma, couples therapy (Gottman Method Level 1)
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Advocacy & Community Work</h3>
+          <ul class="space-y-3 text-sm text-gray-700 mb-0">
+            <li>
+              <strong class="text-gray-900">Board member</strong> - Local mental health advocacy organization
+            </li>
+            <li>
+              <strong class="text-gray-900">Community education</strong> - Free mental health workshops and support groups
+            </li>
+            <li>
+              <strong class="text-gray-900">Pro bono services</strong> - Sliding scale and free therapy for underserved populations
+            </li>
+            <li>
+              <strong class="text-gray-900">Public speaking</strong> - Mental health awareness events, suicide prevention campaigns
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Writing Philosophy */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Writing Philosophy</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <blockquote class="border-l-4 border-brand-primary bg-gray-50 p-6 italic text-lg text-gray-800">
+          "As a therapist, I see firsthand how lack of information creates barriers to care. People avoid therapy because they don't know what to expect, can't afford it, or fear being judged. My writing aims to remove those barriers—by explaining what really happens behind closed doors and empowering people to advocate for themselves."
+        </blockquote>
+
+        <div class="mt-8 bg-green-50 rounded-lg p-6 not-prose">
+          <h3 class="text-lg font-bold text-green-900 mb-3">What Guides My Writing:</h3>
+          <ul class="space-y-2 text-sm text-green-800">
+            <li>• <strong>Clinical authenticity:</strong> Drawing on real therapeutic experiences (while protecting client confidentiality)</li>
+            <li>• <strong>Practical wisdom:</strong> Advice that actually works in real life, not just textbook theory</li>
+            <li>• <strong>Compassionate honesty:</strong> Telling the truth about therapy—including its limitations and challenges</li>
+            <li>• <strong>Empowerment focus:</strong> Helping people feel confident asking questions, changing therapists, or advocating for better care</li>
+            <li>• <strong>Stigma reduction:</strong> Normalizing mental health struggles and making help-seeking feel less intimidating</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Articles by Emma Rodriguez</h2>
+        <p class="text-gray-700 mb-4">
+          Emma's articles are currently in development. Upcoming pieces will cover:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• What therapists really think during sessions</li>
+          <li>• Red flags your therapist might not be the right fit</li>
+          <li>• How to talk to your therapist when you feel stuck</li>
+          <li>• Understanding the therapeutic relationship: Why it's the most important factor</li>
+          <li>• EMDR for trauma: What to expect and does it really work?</li>
+          <li>• Setting boundaries without guilt: A therapist's guide</li>
+          <li>• What to do when therapy brings up painful emotions</li>
+          <li>• The myth of the "perfect therapist": Finding good enough</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore related topics below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Topics */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Topics Emma Covers</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/therapists" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapists</a>
+        <a href="/blog/tag/relationships" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Relationships</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/self-care" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Self-Care</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>

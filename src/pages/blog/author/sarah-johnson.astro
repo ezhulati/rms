@@ -1,21 +1,215 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { User, BookOpen, Brain, Target, Lightbulb, FileText, TrendingUp } from 'lucide-react';
 ---
 
-<BaseLayout title="Sarah Johnson | RealMindSolutions" description="Articles by Sarah Johnson">
+<BaseLayout title="Sarah Johnson - Mental Health Writer & Researcher | RealMindSolutions" description="Sarah Johnson translates mental health research into practical, evidence-based guidance for people seeking therapy and treatment.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Articles by Sarah Johnson</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Mental health writer and researcher</p>
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        {/* Author Avatar */}
+        <div class="flex-shrink-0">
+          <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
+            <User class="w-20 h-20 md:w-24 md:h-24 text-purple-600" />
+          </div>
+        </div>
+
+        {/* Author Info */}
+        <div class="flex-1">
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-neutral-900 mb-3">Sarah Johnson</h1>
+          <p class="font-serif italic text-xl md:text-2xl text-neutral-600 mb-6">Mental Health Writer & Researcher</p>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Sarah Johnson is a mental health writer and researcher dedicated to making evidence-based mental health information accessible to everyone. With a background in psychology research and health communication, Sarah specializes in translating complex clinical concepts into practical, actionable guidance.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Her work focuses on therapy effectiveness, treatment selection, and helping people navigate the often-overwhelming landscape of mental health care options. Sarah believes that understanding the "why" behind treatment recommendations empowers people to advocate for themselves and get the care they need.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Expertise & Writing Topics */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Areas of Expertise</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-purple-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Brain class="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-purple-900">Evidence-Based Treatment</h3>
+          </div>
+          <p class="text-sm text-purple-800">
+            Research-backed guidance on therapy types, treatment effectiveness, and what works for different mental health conditions.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Target class="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-blue-900">Therapy Selection</h3>
+          </div>
+          <p class="text-sm text-blue-800">
+            Practical frameworks for choosing between therapy types, finding the right therapist, and knowing what to expect.
+          </p>
+        </div>
+
+        <div class="bg-green-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <TrendingUp class="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-green-900">Treatment Outcomes</h3>
+          </div>
+          <p class="text-sm text-green-800">
+            Breaking down research on what predicts therapy success, how to measure progress, and when to try something different.
+          </p>
+        </div>
+
+        <div class="bg-orange-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <Lightbulb class="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-orange-900">Anxiety & Depression</h3>
+          </div>
+          <p class="text-sm text-orange-800">
+            In-depth content on understanding, treating, and living with anxiety disorders and depression.
+          </p>
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <FileText class="h-6 w-6 text-indigo-600 mr-2" />
+            <h3 class="text-xl font-bold text-indigo-900">Therapy Approaches</h3>
+          </div>
+          <p class="text-sm text-indigo-800">
+            Clear explanations of CBT, DBT, EMDR, psychodynamic therapy, and other treatment modalities.
+          </p>
+        </div>
+
+        <div class="bg-pink-50 rounded-lg p-6">
+          <div class="flex items-center mb-3">
+            <BookOpen class="h-6 w-6 text-pink-600 mr-2" />
+            <h3 class="text-xl font-bold text-pink-900">Mental Health Literacy</h3>
+          </div>
+          <p class="text-sm text-pink-800">
+            Educational content helping people understand mental health conditions, treatments, and the science behind care.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Background & Credentials */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Background & Experience</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Professional Experience</h3>
+          <ul class="space-y-3 text-sm text-gray-700 mb-0">
+            <li>
+              <strong class="text-gray-900">8+ years</strong> writing about mental health treatment, therapy, and evidence-based care
+            </li>
+            <li>
+              <strong class="text-gray-900">Research background</strong> in clinical psychology, treatment outcomes, and health behavior change
+            </li>
+            <li>
+              <strong class="text-gray-900">Collaborated with</strong> psychologists, psychiatrists, and therapists to ensure clinical accuracy
+            </li>
+            <li>
+              <strong class="text-gray-900">Published in</strong> mental health publications, therapy platforms, and healthcare websites
+            </li>
+            <li>
+              <strong class="text-gray-900">Specialized training</strong> in health communication, science writing, and patient education
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Education & Credentials</h3>
+          <ul class="space-y-3 text-sm text-gray-700 mb-0">
+            <li>
+              <strong class="text-gray-900">M.S. in Psychology</strong> - Focus on clinical research and treatment effectiveness
+            </li>
+            <li>
+              <strong class="text-gray-900">B.A. in Psychology</strong> - Minor in Health Communication
+            </li>
+            <li>
+              <strong class="text-gray-900">Postgraduate training</strong> - Evidence-based practice, research methods, and health literacy
+            </li>
+            <li>
+              <strong class="text-gray-900">Continuing education</strong> - Mental health first aid, trauma-informed care principles
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Writing Philosophy */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Writing Philosophy</h2>
+
+      <div class="prose prose-lg max-w-4xl">
+        <blockquote class="border-l-4 border-brand-primary bg-gray-50 p-6 italic text-lg text-gray-800">
+          "Good mental health information shouldn't require a psychology degree to understand. My goal is to bridge the gap between research and real life—helping people understand not just what works, but why it works and how to access it."
+        </blockquote>
+
+        <div class="mt-8 bg-purple-50 rounded-lg p-6 not-prose">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Core Principles:</h3>
+          <ul class="space-y-2 text-sm text-purple-800">
+            <li>• <strong>Research-grounded:</strong> Every claim backed by peer-reviewed evidence and expert consultation</li>
+            <li>• <strong>Practical focus:</strong> Moving beyond "what" to explain "how" and "why" for actionable understanding</li>
+            <li>• <strong>Reader-centered:</strong> Writing from the perspective of someone navigating treatment for the first time</li>
+            <li>• <strong>Nuanced:</strong> Acknowledging complexity, uncertainty, and individual differences in treatment response</li>
+            <li>• <strong>Empowering:</strong> Helping readers become informed advocates for their own mental health</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Articles by Sarah Johnson</h2>
+        <p class="text-gray-700 mb-4">
+          Sarah's articles are currently in development. Upcoming pieces will cover:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• CBT vs. DBT: Which therapy is right for you?</li>
+          <li>• What the research says about therapy effectiveness</li>
+          <li>• How to know if your therapy is working</li>
+          <li>• The science behind EMDR for trauma treatment</li>
+          <li>• Understanding medication + therapy: When combination treatment works best</li>
+          <li>• Treatment-resistant depression: What to try next</li>
+          <li>• How long does therapy actually take? Research-backed timelines</li>
+          <li>• The therapeutic relationship: Why it matters more than technique</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore related topics below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Topics */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Topics Sarah Covers</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/research" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Research</a>
+        <a href="/blog/tag/anxiety" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Anxiety</a>
+        <a href="/blog/tag/depression" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Depression</a>
+        <a href="/blog/tag/therapist-selection" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapist Selection</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>

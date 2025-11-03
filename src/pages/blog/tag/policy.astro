@@ -1,21 +1,104 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Scale, Shield, TrendingUp, FileText, ArrowRight } from 'lucide-react';
 ---
 
-<BaseLayout title="Policy | RealMindSolutions" description="Mental Health Policy">
+<BaseLayout title="Mental Health Policy & Advocacy | RealMindSolutions" description="Mental health policy resources—parity laws, healthcare legislation, advocacy efforts, and policy changes affecting mental health care access and coverage.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mental Health Policy</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Policy updates and news</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Policy updates, advocacy efforts, and legislation affecting mental health care access.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+      <div class="prose prose-lg max-w-4xl mx-auto mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Mental health policy shapes access to care, insurance coverage, and the quality of services available. This hub tracks policy changes, legislation, and advocacy efforts that impact mental health care delivery and affordability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/blog/tag/insurance" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Shield className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Mental Health Parity Laws</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Understanding mental health parity legislation and how it protects insurance coverage for mental health services.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Learn About Parity
+          </div>
+        </a>
+
+        <a href="/blog/tag/telehealth" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <TrendingUp className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Telehealth Policy</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Policy changes affecting telehealth access, licensure, and reimbursement for virtual mental health services.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Telehealth Policy
+          </div>
+        </a>
+
+        <a href="/blog/tag/research" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <FileText className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Policy Research</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Evidence and research informing mental health policy decisions and legislative changes.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Research
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Policy Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a library of mental health policy articles covering:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• Mental health parity law updates and enforcement</li>
+          <li>• Healthcare legislation affecting mental health coverage</li>
+          <li>• Telehealth policy changes post-COVID</li>
+          <li>• Mental health funding and budget allocations</li>
+          <li>• Crisis intervention and 988 implementation</li>
+          <li>• Advocacy efforts and grassroots campaigns</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          Explore our existing policy-related resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/insurance" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Insurance</a>
+        <a href="/blog/tag/telehealth" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Telehealth</a>
+        <a href="/blog/tag/research" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Research</a>
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
       </div>
     </div>
   </section>
