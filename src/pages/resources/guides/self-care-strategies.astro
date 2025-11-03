@@ -1,22 +1,551 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Heart, Brain, Users, Smile, Moon, Dumbbell, Apple, Book, Sparkles, AlertTriangle, CheckCircle } from 'lucide-react';
 ---
 
-<BaseLayout title="Self Care Strategies | RealMindSolutions" description="Self Care Strategies Guide">
+<BaseLayout title="Self-Care Strategies Guide | RealMindSolutions" description="Comprehensive guide to self-care across physical, emotional, social, mental, and spiritual dimensions with practical strategies for building sustainable self-care habits.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Self Care Strategies Guide</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Comprehensive self-care strategies.</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Self-Care Strategies Guide</h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Practical strategies for nurturing your physical, emotional, mental, social, and spiritual well-being.</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Heart className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">What is Self-Care?</h2>
+            <p class="text-gray-700 mb-4">
+              Self-care isn't selfish—it's essential. It's the practice of <strong>actively protecting and nurturing your physical, mental, and emotional health</strong>. Think of it as maintaining your well-being the same way you maintain your car or home.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Self-care isn't just bubble baths and face masks (though those count!). It's also setting boundaries, getting enough sleep, managing stress, seeking therapy, and saying no when you need to.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">The Oxygen Mask Principle</h3>
+              <p class="text-sm text-gray-700 italic">
+                "Put on your own oxygen mask before helping others." You can't pour from an empty cup. Taking care of yourself allows you to show up better for others.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* The Five Dimensions of Self-Care */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">The Five Dimensions of Self-Care</h2>
+
+        <p class="text-gray-700 mb-6">
+          Holistic self-care addresses multiple aspects of your well-being. Research shows that balanced self-care across these five dimensions leads to better mental health outcomes.
+        </p>
+
+        {/* Physical Self-Care */}
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Dumbbell className="h-8 w-8 text-green-600 mr-3" />
+              <h3 class="text-2xl font-bold text-gray-900">1. Physical Self-Care</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Taking care of your body through movement, nutrition, sleep, and health maintenance.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Sleep & Rest</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Aim for 7-9 hours of sleep per night</li>
+                  <li>• Maintain consistent sleep/wake times</li>
+                  <li>• Create a relaxing bedtime routine</li>
+                  <li>• Limit screens 1 hour before bed</li>
+                  <li>• Take short naps (20-30 min) if needed</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Movement & Exercise</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• 30 minutes of movement most days</li>
+                  <li>• Walking, dancing, yoga, sports—whatever you enjoy</li>
+                  <li>• Stretch regularly, especially if you sit a lot</li>
+                  <li>• Take movement breaks every hour</li>
+                  <li>• Start small: even 5-10 min helps</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Nutrition & Hydration</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Eat regular, balanced meals</li>
+                  <li>• Drink water throughout the day</li>
+                  <li>• Limit caffeine and alcohol</li>
+                  <li>• Notice how foods affect your mood</li>
+                  <li>• Don't skip meals when stressed</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Health Maintenance</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Attend regular medical/dental checkups</li>
+                  <li>• Take prescribed medications consistently</li>
+                  <li>• Address health concerns promptly</li>
+                  <li>• Practice good hygiene routines</li>
+                  <li>• Get outside for fresh air and sunlight</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Emotional Self-Care */}
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-pink-50 to-red-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Heart className="h-8 w-8 text-pink-600 mr-3" />
+              <h3 class="text-2xl font-bold text-gray-900">2. Emotional Self-Care</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Acknowledging, processing, and caring for your emotions in healthy ways.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Healthy Emotional Processing</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Journal about your feelings</li>
+                  <li>• Talk to trusted friends or a therapist</li>
+                  <li>• Allow yourself to cry when needed</li>
+                  <li>• Practice self-compassion when struggling</li>
+                  <li>• Identify and name your emotions</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Stress Management</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Practice deep breathing or meditation</li>
+                  <li>• Engage in hobbies that bring joy</li>
+                  <li>• Laugh—watch comedies, spend time with funny people</li>
+                  <li>• Create a "calm down" toolkit for tough moments</li>
+                  <li>• Say no to commitments that drain you</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Boundaries & Limits</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Set limits with people who drain your energy</li>
+                  <li>• Say "no" without guilt or over-explaining</li>
+                  <li>• Protect your time and energy</li>
+                  <li>• Limit exposure to negative news/social media</li>
+                  <li>• Leave situations that feel unsafe or toxic</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Seeking Support</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Start therapy or continue regular sessions</li>
+                  <li>• Reach out when you're struggling</li>
+                  <li>• Join support groups for your challenges</li>
+                  <li>• Ask for help when you need it</li>
+                  <li>• Don't isolate when feeling low</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mental/Intellectual Self-Care */}
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Brain className="h-8 w-8 text-blue-600 mr-3" />
+              <h3 class="text-2xl font-bold text-gray-900">3. Mental/Intellectual Self-Care</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Engaging and stimulating your mind in ways that foster growth and prevent mental stagnation.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Learning & Growth</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Read books, articles, or listen to podcasts</li>
+                  <li>• Take a class or learn a new skill</li>
+                  <li>• Engage in puzzles, games, or creative projects</li>
+                  <li>• Explore topics that interest you</li>
+                  <li>• Challenge yourself intellectually</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Mental Breaks</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Take breaks from work/screens</li>
+                  <li>• Practice mindfulness or meditation</li>
+                  <li>• Do something creative without judgment</li>
+                  <li>• Allow your mind to wander and daydream</li>
+                  <li>• Disconnect from news/social media periodically</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Cognitive Self-Compassion</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Challenge negative self-talk</li>
+                  <li>• Practice thought records (CBT)</li>
+                  <li>• Notice cognitive distortions</li>
+                  <li>• Reframe unhelpful thoughts</li>
+                  <li>• Be patient with yourself when learning</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Organization & Clarity</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Declutter your physical space</li>
+                  <li>• Keep a planner or to-do list</li>
+                  <li>• Break big tasks into smaller steps</li>
+                  <li>• Prioritize what truly matters</li>
+                  <li>• Say no to mental clutter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Self-Care */}
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Users className="h-8 w-8 text-orange-600 mr-3" />
+              <h3 class="text-2xl font-bold text-gray-900">4. Social Self-Care</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Nurturing relationships and balancing connection with healthy solitude.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Connection</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Spend time with people who energize you</li>
+                  <li>• Reach out to friends regularly</li>
+                  <li>• Join groups or communities aligned with your interests</li>
+                  <li>• Have meaningful conversations</li>
+                  <li>• Ask for support when you need it</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Boundaries</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Limit time with people who drain you</li>
+                  <li>• It's okay to decline invitations</li>
+                  <li>• End or reduce toxic relationships</li>
+                  <li>• Communicate your needs clearly</li>
+                  <li>• Don't people-please at your own expense</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Quality Over Quantity</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Prioritize deep connections over many shallow ones</li>
+                  <li>• Be present when spending time with others</li>
+                  <li>• Share vulnerably with trusted people</li>
+                  <li>• Celebrate others' successes</li>
+                  <li>• Give and receive support mutually</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Healthy Solitude</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Schedule alone time to recharge (especially for introverts)</li>
+                  <li>• Enjoy your own company</li>
+                  <li>• Do activities alone without feeling lonely</li>
+                  <li>• Balance social time with rest</li>
+                  <li>• Don't isolate—solitude is different from loneliness</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Spiritual Self-Care */}
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Sparkles className="h-8 w-8 text-purple-600 mr-3" />
+              <h3 class="text-2xl font-bold text-gray-900">5. Spiritual Self-Care</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Connecting to something larger than yourself and finding meaning and purpose. (Note: Spiritual doesn't necessarily mean religious—it's about what gives your life meaning.)
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Meaning & Purpose</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Reflect on your values and what matters to you</li>
+                  <li>• Engage in activities aligned with your purpose</li>
+                  <li>• Contribute to causes you care about</li>
+                  <li>• Practice gratitude daily</li>
+                  <li>• Consider what legacy you want to leave</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Connection to Something Larger</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Spend time in nature</li>
+                  <li>• Practice meditation or prayer</li>
+                  <li>• Attend religious/spiritual services if meaningful</li>
+                  <li>• Read philosophy, poetry, or spiritual texts</li>
+                  <li>• Contemplate life's big questions</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Presence & Mindfulness</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Practice being fully present in moments</li>
+                  <li>• Engage in mindfulness meditation</li>
+                  <li>• Savor positive experiences</li>
+                  <li>• Let go of the need to control everything</li>
+                  <li>• Accept what you cannot change</li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-gray-900 mb-2">Creative Expression</h4>
+                <ul class="space-y-1 text-sm text-gray-700">
+                  <li>• Create art, music, writing, or crafts</li>
+                  <li>• Express yourself authentically</li>
+                  <li>• Don't judge your creations—just create</li>
+                  <li>• Explore what brings you awe or wonder</li>
+                  <li>• Connect with beauty in the world</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Building a Sustainable Self-Care Practice */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+          Building a Sustainable Self-Care Practice
+        </h2>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">1. Start Small & Be Realistic</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Don't try to overhaul your entire life at once. Pick 1-2 self-care practices to start with.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs text-blue-900">
+              <strong>Example:</strong> "I'll drink more water" and "I'll go to bed 30 minutes earlier" are better starting points than "I'll completely transform my life."
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">2. Schedule Self-Care Like Appointments</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Put self-care activities on your calendar. Treat them as non-negotiable commitments.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs text-blue-900">
+              <strong>Example:</strong> "Tuesday 7pm: Yoga class" or "Sunday 10am: Reading time"
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">3. Notice What Actually Helps</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Self-care looks different for everyone. Pay attention to what genuinely makes <em>you</em> feel better.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs text-blue-900">
+              For some people, socializing is restorative. For others, alone time recharges. Neither is wrong—know yourself.
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">4. Make It Easy</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Remove barriers to self-care. Keep your gym bag packed, lay out your journal before bed, prep healthy snacks.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">5. Practice Self-Compassion When You Struggle</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              You'll skip self-care sometimes. That's okay. Don't use it as an excuse to give up entirely. Just start again.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Self-Care is NOT */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <AlertTriangle className="h-8 w-8 text-yellow-500 mr-3" />
+          What Self-Care is NOT
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+            <h3 class="font-bold text-red-900 mb-3">Self-care is not...</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✗</span>
+                <span><strong>Selfish</strong> — Taking care of yourself allows you to show up for others</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✗</span>
+                <span><strong>A luxury</strong> — It's a necessity for mental and physical health</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✗</span>
+                <span><strong>One-size-fits-all</strong> — What works for others might not work for you</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✗</span>
+                <span><strong>Something you only do when in crisis</strong> — It's preventative maintenance</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✗</span>
+                <span><strong>Expensive</strong> — Many self-care practices cost nothing</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-6">
+            <h3 class="font-bold text-yellow-900 mb-3">Be cautious of...</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">⚠</span>
+                <span><strong>Using self-care to avoid responsibilities</strong> — Balance is key</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">⚠</span>
+                <span><strong>Masking serious problems</strong> — Self-care complements (doesn't replace) professional help</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">⚠</span>
+                <span><strong>Unhealthy coping disguised as self-care</strong> — Excessive drinking, overspending, binge eating aren't self-care</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">⚠</span>
+                <span><strong>Perfectionism about self-care</strong> — It doesn't have to be perfect to be helpful</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Professional Help */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When Self-Care Isn't Enough
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Self-care is important, but it's not a substitute for professional treatment. Seek therapy or medical help if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're experiencing persistent anxiety, depression, or other mental health symptoms</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms interfere with work, relationships, or daily life</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Self-care alone isn't improving how you feel</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're having thoughts of self-harm or suicide</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're using substances to cope</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            Self-care and therapy work best <em>together</em>. <a href="/compare" class="text-brand-primary font-bold hover:underline">Find an online therapist</a> to support your journey.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis, free support is available 24/7:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/worksheets/stress-management-techniques" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Stress Management Techniques</h3>
+            <p class="text-sm text-gray-600">Breathing exercises, mindfulness, and cognitive strategies</p>
+          </a>
+          <a href="/resources/worksheets/mood-tracking" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mood Tracking Worksheet</h3>
+            <p class="text-sm text-gray-600">Track your daily moods and identify patterns</p>
+          </a>
+          <a href="/resources/worksheets/mindfulness-practice-worksheet" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mindfulness Practice Tracker</h3>
+            <p class="text-sm text-gray-600">Build a sustainable mindfulness habit</p>
+          </a>
+          <a href="/compare" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Compare Therapy Platforms</h3>
+            <p class="text-sm text-gray-600">Find professional support to complement self-care</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+  }
+</style>

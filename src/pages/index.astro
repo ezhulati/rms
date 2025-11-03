@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { ArrowRight, Brain, Search, Users, Heart } from 'lucide-react';
+import { ArrowRight, Brain, Search, Users, Heart, GitCompare, Star, Award, Wrench, BookOpen, GraduationCap } from 'lucide-react';
 
 // Homepage-specific structured data
 const homepageStructuredData = {
@@ -166,6 +166,130 @@ const homepageStructuredData = {
             Try Our Tools <ArrowRight class="ml-2 h-4 w-4" />
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Explore Resources Section */}
+  <section class="bg-neutral-50 py-20 md:py-28" aria-labelledby="resources-heading">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <h2 id="resources-heading" class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+          Explore Our Resources
+        </h2>
+        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto">
+          Everything you need to make informed decisions about your mental health care
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {/* Compare */}
+        <a href="/compare" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-primary-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-primary-100 rounded-lg p-3 group-hover:bg-brand-primary-500 transition-colors">
+              <GitCompare class="h-6 w-6 text-brand-primary-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Compare</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                Side-by-side comparisons of platforms, features, and pricing
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Explore comparisons <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
+
+        {/* Reviews */}
+        <a href="/reviews" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-secondary-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-secondary-100 rounded-lg p-3 group-hover:bg-brand-secondary-500 transition-colors">
+              <Star class="h-6 w-6 text-brand-secondary-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Reviews</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                In-depth reviews of therapy platforms and their features
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Read reviews <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
+
+        {/* Best For You */}
+        <a href="/best" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-accent-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-accent-100 rounded-lg p-3 group-hover:bg-brand-accent-500 transition-colors">
+              <Award class="h-6 w-6 text-brand-accent-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Best For You</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                Curated recommendations based on your needs and conditions
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Find your match <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
+
+        {/* Tools */}
+        <a href="/tools" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-primary-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-primary-100 rounded-lg p-3 group-hover:bg-brand-primary-500 transition-colors">
+              <Wrench class="h-6 w-6 text-brand-primary-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Tools</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                Interactive assessments and matchers to guide your decisions
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Try our tools <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
+
+        {/* Conditions A-Z */}
+        <a href="/conditions-az" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-secondary-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-secondary-100 rounded-lg p-3 group-hover:bg-brand-secondary-500 transition-colors">
+              <BookOpen class="h-6 w-6 text-brand-secondary-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Conditions A-Z</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                Comprehensive guides to mental health conditions and treatments
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Browse conditions <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
+
+        {/* Learn */}
+        <a href="/learn" class="group bg-white rounded-xl border-2 border-neutral-200 p-6 hover:border-brand-accent-400 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="bg-brand-accent-100 rounded-lg p-3 group-hover:bg-brand-accent-500 transition-colors">
+              <GraduationCap class="h-6 w-6 text-brand-accent-600 group-hover:text-white transition-colors" />
+            </div>
+            <div class="flex-1">
+              <h3 class="font-heading text-xl font-bold text-neutral-900 mb-2">Learn</h3>
+              <p class="font-sans text-sm text-neutral-600 leading-relaxed">
+                Educational resources and mental health fundamentals
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center text-brand-primary-600 font-sans font-medium text-sm group-hover:text-brand-primary-700">
+            Start learning <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </a>
       </div>
     </div>
   </section>
