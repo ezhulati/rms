@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { platforms } from '../../../siteData';
-import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
-import { platforms } from '../../../siteData';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Heart, DollarSign, AlertCircle, Award, Sparkles, Brain } from 'lucide-react';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -10,20 +9,57 @@ const renderStars = (rating: number) => {
   return starsArray;
 };
 
-
-// const platforms = []; // Now using real data from siteData
-
+// Select platforms best for OCD
+const ocdPlatforms = [
+  getPlatformBySlug('online-therapy-com'),
+  getPlatformBySlug('betterhelp'),
+  getPlatformBySlug('talkspace'),
+  getPlatformBySlug('brightside')
+].filter(p => p);
 ---
 
-<BaseLayout>
-  {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-12">
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for OCD</h1>
-        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
-          Specialized online platforms offering evidence-based treatment for OCD.
+<BaseLayout title="Best Online Therapy for OCD 2025 | Expert Reviews & Comparisons" description="Find specialized online therapy platforms offering evidence-based ERP and CBT treatment for obsessive-compulsive disorder and related conditions.">
+
+  {/* Hero Section - Enhanced */}
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      {/* Breadcrumb */}
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/best" class="hover:text-brand-primary-600 transition">Best Platforms</a>
+        <span>/</span>
+        <a href="/best/conditions" class="hover:text-brand-primary-600 transition">Conditions</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">OCD</span>
+      </nav>
+
+      <div class="text-center animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-brand-primary-100 text-brand-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <Sparkles class="h-4 w-4" />
+          <span>Expert-Reviewed OCD Treatment Platforms</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for OCD 2025</h1>
+        <p class="font-sans text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+          Find specialized online therapy platforms offering evidence-based ERP and CBT treatment for obsessive-compulsive disorder and related conditions.
         </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-brand-primary-600 text-white px-8 py-4 rounded-xl hover:bg-brand-primary-700 transition-all hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+            <Search class="h-5 w-5" />
+            Find Your Perfect Match
+          </a>
+          <a href="/tools/assessments/ocd-screening" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 border-2 border-brand-primary-200 px-8 py-4 rounded-xl hover:border-brand-primary-400 transition-all hover:scale-105 shadow-sm hover:shadow-md font-medium">
+            <Brain class="h-5 w-5" />
+            Take OCD Assessment
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -32,39 +68,291 @@ const renderStars = (rating: number) => {
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-        {/* Introduction Section */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Finding Specialized Care for OCD</h2>
-          <p class="text-gray-600 mb-4">
-            Obsessive-Compulsive Disorder (OCD) requires specialized treatment approaches. Research shows that Exposure and Response Prevention (ERP) is most effective for OCD.
-          </p>
-        </div>
+        {/* Top Picks - Enhanced */}
+        <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-2xl border-2 border-brand-primary-100 p-8 md:p-12 mb-16 shadow-sm">
+          <div class="flex items-center gap-3 mb-8">
+            <Award class="h-8 w-8 text-brand-primary-600" />
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900">Top Picks for OCD Therapy</h2>
+          </div>
 
-        {/* Platform Comparison */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Online Platforms for OCD Treatment</h2>
-          
-          {platforms.map((platform, index) => (
-            <div key={platform.slug} class="mb-8 p-6 border rounded-lg">
-              <h3 class="text-xl font-bold">{platform.name}</h3>
-              <div class="flex items-center mb-2">
-                {renderStars(platform.rating)}
-                <span class="ml-2">{platform.rating}/5</span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Best for ERP */}
+            <div class="bg-white rounded-xl border-2 border-brand-primary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-primary-600 to-brand-primary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                🏆 Best for ERP
               </div>
-              <p class="mb-2">{platform.description}</p>
-              <p class="font-bold">Price: {platform.price}</p>
               <div class="mt-4">
-                <h4 class="font-bold">Best For:</h4>
-                <p>{platform.bestFor}</p>
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Online-Therapy.com</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.0).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.0/5</span>
+                </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Structured CBT program with specialized OCD worksheets and ERP exercises designed for systematic exposure work.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-primary-600" />
+                  <span class="font-medium">$40-$88/week</span>
+                </div>
+                <a href="/reviews/platforms/online-therapy" class="block w-full text-center bg-brand-primary-600 text-white px-6 py-3 rounded-xl hover:bg-brand-primary-700 transition font-medium">View Full Review</a>
               </div>
             </div>
-          ))}
+
+            {/* Best Network */}
+            <div class="bg-white rounded-xl border-2 border-accent-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                ⭐ Best Network
+              </div>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">BetterHelp</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.8).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.8/5</span>
+                </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Largest network with many OCD specialists. Match with therapists trained in ERP and exposure-based treatments.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-accent-600" />
+                  <span class="font-medium">$60-$90/week</span>
+                </div>
+                <a href="/reviews/platforms/betterhelp" class="block w-full text-center bg-accent-500 text-white px-6 py-3 rounded-xl hover:bg-accent-600 transition font-medium">View Full Review</a>
+              </div>
+            </div>
+
+            {/* Best with Medication */}
+            <div class="bg-white rounded-xl border-2 border-brand-secondary-200 p-6 relative hover:shadow-lg transition-all hover:scale-105">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-secondary-600 to-brand-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                💊 Best with Medication
+              </div>
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Brightside</h3>
+                <div class="flex items-center gap-2 mb-4">
+                  {renderStars(4.1).map((filled, i) => (
+                    <Star key={i} class={`h-5 w-5 ${filled ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                  <span class="text-neutral-600 font-medium ml-1">4.1/5</span>
+                </div>
+                <p class="text-neutral-600 mb-6 leading-relaxed">
+                  Combines therapy with psychiatry for comprehensive OCD treatment including SSRI medication management when needed.
+                </p>
+                <div class="flex items-center gap-2 text-neutral-700 mb-6">
+                  <DollarSign class="h-5 w-5 text-brand-secondary-600" />
+                  <span class="font-medium">$95-$299/month</span>
+                </div>
+                <a href="/reviews/platforms/brightside" class="block w-full text-center bg-brand-secondary-600 text-white px-6 py-3 rounded-xl hover:bg-brand-secondary-700 transition font-medium">View Full Review</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* CTA Section */}
-        <div class="bg-indigo-600 text-white p-8 rounded-lg text-center">
-          <h2 class="text-2xl font-bold mb-4">Find Your Perfect OCD Treatment</h2>
-          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+        {/* Understanding OCD - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Understanding OCD and Online Treatment</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-green-500 rounded-full"></div>
+                Common OCD Subtypes Treated Online
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
+                Online therapy effectively treats all major OCD subtypes:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Contamination OCD:</strong> Fears of germs, illness, or environmental contaminants</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Harm OCD:</strong> Intrusive thoughts about causing harm to oneself or others</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Checking OCD:</strong> Excessive checking of locks, appliances, or safety concerns</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Symmetry/Ordering:</strong> Need for things to be perfect, even, or "just right"</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Pure-O:</strong> Primarily mental compulsions with intrusive thoughts</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <div class="w-1 h-6 bg-blue-500 rounded-full"></div>
+                Evidence-Based Treatment for OCD
+              </h3>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
+                The gold standard treatment for OCD is Exposure and Response Prevention (ERP):
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Exposure:</strong> Gradually facing feared situations or triggers in a controlled way</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Response Prevention:</strong> Resisting the urge to perform compulsive behaviors</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">CBT for OCD:</strong> Cognitive strategies to challenge OCD thoughts</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">ACT for OCD:</strong> Accepting intrusive thoughts without engaging with them</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span class="text-neutral-700"><strong class="text-neutral-900">Medication:</strong> SSRIs often used alongside therapy for moderate to severe OCD</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl border border-brand-primary-100 p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+              <Shield class="h-6 w-6 text-brand-primary-600" />
+              Why Online ERP Works for OCD
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              Online platforms offer unique advantages for OCD treatment:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Real-World Exposures</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Conduct exposure exercises in your natural environment with therapist guidance
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Between-Session Support</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Message therapist during difficult moments or when completing exposure homework
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Accessibility</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Access specialized OCD therapists regardless of geographic location
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl border border-neutral-200 p-4 hover:shadow-md transition">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="h-5 w-5 text-brand-primary-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 class="font-bold text-neutral-900 mb-1">Lower Barrier</h4>
+                    <p class="text-neutral-600 text-sm leading-relaxed">
+                      Easier to start treatment when OCD makes leaving home challenging
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQs - Enhanced */}
+        <div class="bg-white rounded-2xl border-2 border-neutral-100 p-8 md:p-12 mb-16 shadow-sm">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Can online therapy effectively treat OCD?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Yes! Research shows that online ERP therapy is as effective as in-person treatment for OCD. Many people find online therapy particularly helpful because they can practice exposures in their natural environment with therapist support.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How long does OCD treatment take?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                ERP typically involves 12-20 sessions, though this varies based on OCD severity and individual progress. Many people see improvement within the first few weeks of consistent ERP practice. Long-term maintenance may be needed to prevent relapse.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Will exposure therapy make my OCD worse?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                No. While exposure can be uncomfortable initially, it doesn't make OCD worse. A skilled therapist guides you through gradual exposures at a pace you can handle, starting with easier challenges and building up. The discomfort decreases as you practice.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">Do I need medication for OCD?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Not necessarily. ERP therapy alone is highly effective for many people with OCD. However, moderate to severe OCD often benefits from combining therapy with SSRI medication. Your therapist or psychiatrist can help determine the best approach for you.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">What if I can't stop my compulsions?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                This is normal and part of the OCD cycle. ERP helps you gradually build the ability to resist compulsions. You'll start with easier challenges and work your way up. Your therapist will teach you strategies to manage the urge to perform compulsions.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-neutral-50 to-white rounded-xl border border-neutral-200 p-6 hover:shadow-md transition">
+              <h3 class="text-lg font-bold text-neutral-900 mb-3">How do I find an OCD specialist online?</h3>
+              <p class="text-neutral-600 leading-relaxed">
+                Look for platforms that allow you to filter for OCD specialization or ERP training. When matched with a therapist, ask about their experience treating OCD and training in exposure-based treatments. Most quality platforms will help you switch therapists if needed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section - Enhanced */}
+        <div class="relative bg-gradient-to-br from-brand-primary-600 via-brand-primary-500 to-brand-secondary-600 rounded-2xl p-8 md:p-12 text-white text-center overflow-hidden shadow-xl">
+          {/* Background decoration */}
+          <div class="absolute inset-0 overflow-hidden opacity-20">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+          </div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Ready to Start OCD Treatment?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-95 leading-relaxed">
+              Take our personalized assessment to find the best OCD therapy platform matched to your specific symptoms and needs.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 px-8 py-4 rounded-xl hover:bg-neutral-50 transition-all hover:scale-105 shadow-xl font-medium">
+                <Search class="h-5 w-5" />
+                Find Your Perfect Match
+              </a>
+              <a href="/tools/assessments/ocd-screening" class="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-xl transition-all hover:scale-105 font-medium">
+                <Brain class="h-5 w-5" />
+                Take OCD Assessment
+              </a>
+            </div>
+          </div>
         </div>
     </div>
   </section>
