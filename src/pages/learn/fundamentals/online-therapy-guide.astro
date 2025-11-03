@@ -38,51 +38,46 @@ const platformFeatures = [];
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
-
-        {/* Hero Section */}
-        
-        </div>
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
 
         {/* What is Online Therapy */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">What is Online Therapy?</h2>
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-900 mb-4">What is Online Therapy?</h2>
           <div class="md:flex gap-8">
             <div class="md:w-2/3">
-              <p class="text-gray-600 mb-4">
+              <p class="text-neutral-600 mb-4">
                 Online therapy (also known as teletherapy, virtual therapy, or e-therapy) is the delivery of mental health counseling and support through digital platforms. It connects clients with licensed therapists through secure video calls, phone sessions, or text-based communication.
               </p>
-              <p class="text-gray-600 mb-4">
+              <p class="text-neutral-600 mb-4">
                 This approach to therapy has grown significantly in recent years, offering a convenient and accessible alternative to traditional in-person therapy. Online therapy platforms typically provide subscription-based services that include regular sessions with a licensed therapist, along with additional features like messaging, resources, and tools.
               </p>
-              <p class="text-gray-600">
+              <p class="text-neutral-600">
                 Research has shown that online therapy can be as effective as in-person therapy for many common mental health concerns, including anxiety, depression, and stress management. The key is finding the right platform and therapist that matches your specific needs and preferences.
               </p>
             </div>
             <div class="md:w-1/3 mt-6 md:mt-0">
               <div class="bg-brand-primary-50 rounded-lg p-6">
-                <h3 class="font-bold text-gray-800 mb-3">Key Benefits</h3>
-                <ul class="space-y-2">
-                  <li class="flex items-start">
-                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Convenient access from anywhere</span>
+                <h3 class="font-semibold text-lg text-neutral-900 mb-4">Key Benefits</h3>
+                <ul class="space-y-2.5">
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-neutral-700">Convenient access from anywhere</span>
                   </li>
-                  <li class="flex items-start">
-                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Eliminates travel time and costs</span>
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-neutral-700">Eliminates travel time and costs</span>
                   </li>
-                  <li class="flex items-start">
-                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Often more affordable than in-person</span>
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-neutral-700">Often more affordable than in-person</span>
                   </li>
-                  <li class="flex items-start">
-                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Flexible communication options</span>
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-neutral-700">Flexible communication options</span>
                   </li>
-                  <li class="flex items-start">
-                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Greater privacy and comfort</span>
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-neutral-700">Greater privacy and comfort</span>
                   </li>
                 </ul>
               </div>
@@ -91,7 +86,7 @@ const platformFeatures = [];
         </div>
 
         {/* Communication Methods */}
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Communication Methods</h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-neutral-900 mb-6">Communication Methods</h2>
         
         {communicationMethods.map((method) => (
           <div key={method.name} class="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -100,31 +95,31 @@ const platformFeatures = [];
                 <method.icon class="h-6 w-6 text-brand-primary-600" />
               </div>
               <div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">{method.name}</h3>
-                <p class="text-gray-600">{method.description}</p>
+                <h3 class="text-lg font-semibold text-neutral-900 mb-2">{method.name}</h3>
+                <p class="text-neutral-600">{method.description}</p>
               </div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 class="font-bold text-gray-800 mb-2">Benefits:</h4>
+                <h4 class="font-medium text-neutral-900 mb-2">Benefits:</h4>
                 <ul class="space-y-1">
                   {method.benefits.map((benefit, i) => (
                     <li key={i} class="flex items-start">
                       <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span class="text-gray-600">{benefit}</span>
+                      <span class="text-neutral-600">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              
+
               <div>
-                <h4 class="font-bold text-gray-800 mb-2">Considerations:</h4>
+                <h4 class="font-medium text-neutral-900 mb-2">Considerations:</h4>
                 <ul class="space-y-1">
                   {method.considerations.map((consideration, i) => (
                     <li key={i} class="flex items-start">
                       <AlertCircle class="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span class="text-gray-600">{consideration}</span>
+                      <span class="text-neutral-600">{consideration}</span>
                     </li>
                   ))}
                 </ul>
@@ -134,9 +129,9 @@ const platformFeatures = [];
         ))}
 
         {/* Choosing the Right Platform */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8 mt-12">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Choosing the Right Platform</h2>
-          <p class="text-gray-600 mb-6">
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 mt-12">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-900 mb-4">Choosing the Right Platform</h2>
+          <p class="text-neutral-600 mb-6">
             With numerous online therapy platforms available, it's important to find one that best meets your specific needs and preferences. Here are key features to consider when evaluating different platforms:
           </p>
           
@@ -145,8 +140,8 @@ const platformFeatures = [];
               <div key={feature.name} class="flex items-start">
                 <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 class="font-bold text-gray-800 mb-1">{feature.name}</h3>
-                  <p class="text-gray-600">{feature.description}</p>
+                  <h3 class="font-medium text-neutral-900 mb-1">{feature.name}</h3>
+                  <p class="text-neutral-600 text-sm">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -158,14 +153,19 @@ const platformFeatures = [];
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-brand-primary-600 to-purple-600 rounded-lg p-8 text-white text-center">
-          <h2 class="text-2xl font-bold mb-4">Ready to Find the Right Online Therapist?</h2>
-          <p class="text-lg mb-6 max-w-2xl mx-auto">
+        <div class="bg-gradient-to-br from-brand-primary-50 to-brand-secondary-50 border-2 border-brand-primary-200 rounded-xl p-8 md:p-10 text-center">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-900 mb-3">Ready to Find the Right Online Therapist?</h2>
+          <p class="text-base text-neutral-600 mb-6 max-w-2xl mx-auto">
             Now that you understand how online therapy works, take the next step in your mental health journey.
           </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Your Therapy Match</a>
-            <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">Explore Top Platforms</a>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-brand-primary-600 text-white px-6 py-3 rounded-lg hover:bg-brand-primary-700 transition-all shadow-md hover:shadow-lg font-medium">
+              <ArrowRight class="h-4 w-4" />
+              Find Your Therapy Match
+            </a>
+            <a href="/best/platforms/best-online-therapy-platforms" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 border-2 border-brand-primary-300 px-6 py-3 rounded-lg hover:border-brand-primary-500 transition-all font-medium">
+              Explore Top Platforms
+            </a>
           </div>
         </div>
     </div>

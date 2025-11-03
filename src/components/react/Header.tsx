@@ -63,7 +63,7 @@ const Header = () => {
         } ${hidden ? '-translate-y-full' : 'translate-y-0'}`}
       >
         <div className="w-full">
-          <nav className={`flex items-center justify-between max-w-7xl mx-auto px-6 lg:px-12 transition-all duration-300 ${
+          <nav className={`flex items-center justify-between w-full mx-auto px-6 transition-all duration-300 ${
             scrolled ? 'h-[60px]' : 'h-16'
           }`}>
             {/* Logo */}
