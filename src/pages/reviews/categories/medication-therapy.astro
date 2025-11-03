@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms } from '../../../siteData';
 import { ArrowRight, Star, CheckCircle, Pill, Brain, MessageSquare, Video } from 'lucide-react';
+import { platforms } from '../../../siteData';
 
 const conditions = [];
-const platforms = [];
+// const platforms = []; // Now using real data from siteData
 ---
 
 <BaseLayout>
@@ -144,7 +146,7 @@ const platforms = [];
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 mb-2">{condition.name}</h3>
                   <p class="text-gray-600 mb-2">{condition.description}</p>
-                  <Link to={condition.link} class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                  <a href={condition.link} class="text-indigo-600 hover:text-indigo-800 flex items-center">
                     Learn more about {condition.name.toLowerCase()} <ArrowRight class="h-4 w-4 ml-1" />
                   </a>
                 </div>

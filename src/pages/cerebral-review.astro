@@ -1,6 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RatingBreakdown from '../components/RatingBreakdown.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const ratingCategories = [
+  {
+    category: "Therapist Quality",
+    rating: 4.0,
+    description: "Cerebral employs licensed therapists, counselors, and board-certified prescribing providers. All team members meet strict credential requirements and undergo regular quality monitoring. The team-based approach coordinates care between different specialists."
+  },
+  {
+    category: "User Experience",
+    rating: 3.9,
+    description: "Clean, professional platform for managing integrated care. The mobile app provides easy access to appointments, messaging, and medication tracking. Some users report occasional technical issues with video sessions and would appreciate more scheduling flexibility."
+  },
+  {
+    category: "Value for Money",
+    rating: 4.1,
+    description: "Pricing varies significantly by plan ($85-$325/month). Excellent value for those needing both therapy and medication management, especially with insurance. The medication delivery adds convenience. Higher cost for comprehensive care without insurance coverage."
+  },
+  {
+    category: "Communication Options",
+    rating: 3.8,
+    description: "Offers video sessions and messaging support with monthly provider visits. Communication features are functional but basic compared to some competitors. The focus is on clinical appointments and treatment rather than extensive between-session messaging."
+  },
+  {
+    category: "Integrated Care",
+    rating: 4.4,
+    description: "Cerebral excels in providing coordinated care between therapists, prescribing providers, and care counselors. The ability to manage both therapy and medication in one platform with consistent medication delivery is a significant advantage for comprehensive treatment."
+  }
+];
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -101,15 +130,17 @@ const renderStars = (rating: number) => {
         </div>
 
         {/* Rating Breakdown */}
-        {/* TODO: Add RatingBreakdown component with proper data */}
-        <div class="mb-8">
-          {/*
-          <RatingBreakdown
-            overallRating={4.0}
-            categories={ratingCategories}
-            showDescription={true}
-          />
-          */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Rating Breakdown</h2>
+          <div class="space-y-6">
+            {ratingCategories.map((item) => (
+              <RatingBreakdown
+                category={item.category}
+                rating={item.rating}
+                description={item.description}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Quick Facts */}

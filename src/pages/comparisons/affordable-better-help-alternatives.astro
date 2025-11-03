@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { platforms } from '../../siteData';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain, Search } from 'lucide-react';
+import { platforms } from '../../siteData';
 
-const platforms = [];
+// const platforms = []; // Now using real data from siteData
 const features = [];
 
 const renderStars = (rating: number) => {

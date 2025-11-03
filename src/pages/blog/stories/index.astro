@@ -3,16 +3,83 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lucide-react';
 
 const featuredStory = {
-  image: '',
-  title: '',
-  date: '',
-  author: '',
-  readTime: '',
-  excerpt: '',
-  url: '#',
-  tags: []
+  image: '/images/blog/therapy-success.jpg',
+  title: 'How Online Therapy Helped Me Overcome Social Anxiety',
+  date: 'Jan 25, 2025',
+  author: 'Sarah M.',
+  readTime: '9 min read',
+  excerpt: 'After years of avoiding social situations, I finally found the courage to try therapy. What I didn\'t expect was how online therapy would become the perfect first step for someone with social anxiety like me.',
+  url: '/blog/stories/therapy-success-stories',
+  tags: ['Success Stories', 'Anxiety', 'Personal Journey', 'Online Therapy']
 };
-const otherStories = [];
+const otherStories = [
+  {
+    id: 'therapist-interview-cbt',
+    image: '/images/blog/therapist-interview.jpg',
+    title: 'A Therapist\'s Perspective: Why I Switched to Online Practice',
+    date: 'Jan 18, 2025',
+    author: 'Dr. Jennifer Martinez',
+    readTime: '11 min read',
+    excerpt: 'After 15 years in traditional practice, I made the move to online therapy. Here\'s what surprised me about virtual sessions and why I believe digital therapy is the future of mental health care.',
+    url: '/blog/stories/therapist-interviews',
+    tags: ['Therapist Perspective', 'Online Therapy', 'Interview', 'Professional Insights']
+  },
+  {
+    id: 'depression-recovery',
+    image: '/images/blog/recovery-journey.jpg',
+    title: 'My Journey Through Depression: Finding Hope with BetterHelp',
+    date: 'Jan 12, 2025',
+    author: 'Michael T.',
+    readTime: '8 min read',
+    excerpt: 'Living with depression felt like being stuck in quicksand. This is my story of how online therapy helped me find solid ground again and build the life I thought I\'d lost forever.',
+    url: '/blog/stories/therapy-success-stories',
+    tags: ['Depression', 'Recovery', 'Success Stories', 'BetterHelp']
+  },
+  {
+    id: 'self-care-practices',
+    image: '/images/blog/self-care.jpg',
+    title: 'Building a Self-Care Routine That Actually Works',
+    date: 'Jan 5, 2025',
+    author: 'Emma L.',
+    readTime: '7 min read',
+    excerpt: 'Self-care isn\'t just bubble baths and face masks. My therapist helped me develop practical self-care strategies that fit into my busy life and actually make a difference.',
+    url: '/blog/stories/self-care-practices',
+    tags: ['Self-Care', 'Wellness', 'Practical Tips', 'Mental Health']
+  },
+  {
+    id: 'anxiety-management',
+    image: '/images/blog/anxiety-management.jpg',
+    title: 'Managing Panic Attacks: Tools That Helped Me Take Control',
+    date: 'Dec 28, 2024',
+    author: 'David R.',
+    readTime: '10 min read',
+    excerpt: 'Panic attacks ruled my life for years until I learned these evidence-based techniques through online therapy. Now I have the tools to manage my anxiety instead of it managing me.',
+    url: '/blog/stories/anxiety-management-stories',
+    tags: ['Anxiety', 'Panic Attacks', 'Coping Skills', 'CBT']
+  },
+  {
+    id: 'couples-therapy-journey',
+    image: '/images/blog/couples-therapy.jpg',
+    title: 'How ReGain Saved Our Marriage: A Couple\'s Story',
+    date: 'Dec 21, 2024',
+    author: 'Alex & Jordan K.',
+    readTime: '12 min read',
+    excerpt: 'We were on the brink of divorce when we decided to try online couples therapy as a last resort. Here\'s how virtual sessions with ReGain helped us rebuild our relationship.',
+    url: '/blog/stories/therapy-success-stories',
+    tags: ['Couples Therapy', 'Relationships', 'Marriage', 'Success Stories']
+  },
+  {
+    id: 'therapy-during-pandemic',
+    image: '/images/blog/pandemic-therapy.jpg',
+    title: 'Finding Support During Crisis: My Pandemic Therapy Experience',
+    date: 'Dec 14, 2024',
+    author: 'Lisa W.',
+    readTime: '9 min read',
+    excerpt: 'When the pandemic isolated me from my support system, online therapy became my lifeline. This is how virtual mental health care helped me through the darkest time of my life.',
+    url: '/blog/stories/therapy-during-crisis',
+    tags: ['Pandemic', 'Crisis Support', 'Online Therapy', 'Resilience']
+  }
+];
 ---
 
 <BaseLayout>

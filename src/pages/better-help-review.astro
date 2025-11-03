@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RatingBreakdown from '../components/RatingBreakdown.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
 
 const renderStars = (rating: number) => {
@@ -7,6 +8,34 @@ const renderStars = (rating: number) => {
   const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
   return starsArray;
 };
+
+const ratingCategories = [
+  {
+    name: "Therapist Quality",
+    score: 4.5,
+    description: "Licensed professionals with diverse specialties and strong credentials"
+  },
+  {
+    name: "User Experience",
+    score: 4.2,
+    description: "Intuitive platform with seamless messaging and scheduling"
+  },
+  {
+    name: "Value for Money",
+    score: 3.8,
+    description: "Competitive pricing but no insurance coverage"
+  },
+  {
+    name: "Communication Options",
+    score: 4.3,
+    description: "Multiple formats including messaging, video, phone, and live chat"
+  },
+  {
+    name: "Customer Support",
+    score: 3.9,
+    description: "Responsive support team with room for improvement"
+  }
+];
 
 ---
 
@@ -101,15 +130,12 @@ const renderStars = (rating: number) => {
         </div>
 
         {/* Rating Breakdown */}
-        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="mb-8">
-          {/*
           <RatingBreakdown
             overallRating={4.0}
             categories={ratingCategories}
             showDescription={true}
           />
-          */}
         </div>
 
         {/* Quick Facts */}

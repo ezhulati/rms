@@ -17,7 +17,10 @@
     "fix-buttons": "node scripts/fix-button-styles.js",
     "crawl-404s": "node scripts/crawl-404s.js",
     "migrate-reviewers": "node scripts/migrate-reviewers.js",
-    "generate-headshots": "node scripts/generate-headshots.js"
+    "generate-headshots": "node scripts/generate-headshots.js",
+    "cleanup-reviewers": "node scripts/cleanup-reviewers.js",
+    "regenerate-missing": "node scripts/regenerate-missing-headshots.js",
+    "finalize-migration": "node scripts/finalize-migration.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

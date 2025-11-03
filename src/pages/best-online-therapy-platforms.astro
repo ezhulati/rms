@@ -1,8 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { platforms } from '../siteData';
+import RatingBreakdown from '../components/RatingBreakdown.astro';
+import { platforms } from '../siteData';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Shield, Users, Brain, DollarSign, Award, Search } from 'lucide-react';
+import { platforms } from '../siteData';
 
-const platforms = [];
+// const platforms = []; // Now using real data from siteData
+
+const ratingCategories = [
+  {
+    category: "Therapist Quality",
+    rating: 4.5,
+    description: "We evaluate therapist credentials, experience levels, specializations, and vetting processes. The best platforms require Master's degrees or higher, active state licensure, and thousands of hours of clinical experience."
+  },
+  {
+    category: "User Experience",
+    rating: 4.3,
+    description: "We assess platform design, ease of use, mobile app functionality, appointment scheduling, and overall user satisfaction. Platforms should be intuitive, reliable, and accessible across devices."
+  },
+  {
+    category: "Value for Money",
+    rating: 4.2,
+    description: "We compare pricing structures, included features, insurance coverage options, and financial aid availability. The best platforms offer transparent pricing and good value relative to traditional therapy costs."
+  },
+  {
+    category: "Communication Options",
+    rating: 4.4,
+    description: "We evaluate the variety and quality of communication methods (messaging, video, phone, live chat), response times, and session frequency. More communication options generally provide better therapeutic support."
+  },
+  {
+    category: "Privacy & Security",
+    rating: 4.7,
+    description: "We verify HIPAA compliance, data encryption standards, privacy policies, and security measures. All recommended platforms must maintain the highest standards for protecting user information and confidential therapeutic communications."
+  }
+];
 const features = [];
 
 const renderStars = (rating: number) => {
@@ -357,7 +389,7 @@ const renderStars = (rating: number) => {
                         {renderStars(platform.rating)}
                       </div>
                     </td>
-                    <td class="py-4 px-4 text-sm">{platform.bestFor.split(',')[0]}</td>
+                    <td class="py-4 px-4 text-sm">{platform.bestFor[0]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -378,13 +410,15 @@ const renderStars = (rating: number) => {
               Our comprehensive evaluation process involves hands-on testing, user feedback analysis, and expert consultation to provide you with accurate, unbiased information. We evaluate each platform based on therapist qualifications, user experience, pricing transparency, privacy measures, and specialized services.
             </p>
 
-            {/* TODO: Add RatingBreakdown component with proper data
-            <RatingBreakdown
-              overallRating={4.2}
-              categories={ratingCategories}
-              showDescription={true}
-            />
-            */}
+            <div class="space-y-6">
+              {ratingCategories.map((item) => (
+                <RatingBreakdown
+                  category={item.category}
+                  rating={item.rating}
+                  description={item.description}
+                />
+              ))}
+            </div>
           </div>
           
           <div class="bg-indigo-50 rounded-lg p-6">

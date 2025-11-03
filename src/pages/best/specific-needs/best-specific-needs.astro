@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms } from '../../../siteData';
 import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Heart, Users, Brain, DollarSign } from 'lucide-react';
+import { platforms } from '../../../siteData';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -8,7 +10,7 @@ const renderStars = (rating: number) => {
   return starsArray;
 };
 
-const platforms = [];
+// const platforms = []; // Now using real data from siteData
 const needCategories = [];
 
 
@@ -49,7 +51,7 @@ const features = [];
                   </li>
                 ))}
               </ul>
-              <Link to={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`} class="text-indigo-600 hover:text-indigo-800 flex items-center">
+              <a href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`} class="text-indigo-600 hover:text-indigo-800 flex items-center">
                 View details <ArrowRight class="h-4 w-4 ml-1" />
               </a>
             </div>

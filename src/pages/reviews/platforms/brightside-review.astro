@@ -1,6 +1,35 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import RatingBreakdown from '../../../components/RatingBreakdown.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const ratingCategories = [
+  {
+    category: "Therapist Quality",
+    rating: 4.3,
+    description: "Brightside employs licensed therapists and board-certified psychiatrists specializing in depression and anxiety treatment. All providers are experienced in the platform's data-driven approach and evidence-based CBT techniques."
+  },
+  {
+    category: "User Experience",
+    rating: 4.1,
+    description: "The platform offers a clean, professional interface focused on treatment tracking and progress monitoring. The structured approach and data visualizations are helpful, though some users may find it less flexible than general therapy platforms."
+  },
+  {
+    category: "Value for Money",
+    rating: 3.8,
+    description: "Pricing is higher than some competitors without insurance, but the specialized depression/anxiety treatment and integrated medication management provide good value. Insurance coverage can significantly reduce costs."
+  },
+  {
+    category: "Communication Options",
+    rating: 4.0,
+    description: "Offers weekly video sessions and unlimited messaging support. The communication features are solid, though not as extensive as some larger platforms. The focus is on clinical effectiveness over communication variety."
+  },
+  {
+    category: "Treatment Effectiveness",
+    rating: 4.5,
+    description: "Brightside's PrecisionRx technology and data-driven approach show strong outcomes: 86% of members report significant improvement, and 71% achieve remission within 12 weeks. The specialized focus on depression and anxiety delivers excellent results."
+  }
+];
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -101,15 +130,17 @@ const renderStars = (rating: number) => {
         </div>
 
         {/* Rating Breakdown */}
-        {/* TODO: Add RatingBreakdown component with proper data */}
-        <div class="mb-8">
-          {/*
-          <RatingBreakdown
-            overallRating={4.2}
-            categories={ratingCategories}
-            showDescription={true}
-          />
-          */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Rating Breakdown</h2>
+          <div class="space-y-6">
+            {ratingCategories.map((item) => (
+              <RatingBreakdown
+                category={item.category}
+                rating={item.rating}
+                description={item.description}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Quick Facts */}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, DollarSign, Brain, Shield, ChevronDown, ChevronUp, Check } from 'lucide-react';
 
 // Define platform interface
@@ -460,9 +459,9 @@ const PlatformFinder: React.FC = () => {
                         <span className="text-red-600">Not Accepted</span>
                       )}
                     </div>
-                    <Link to={`/reviews/platforms/${platform.slug}-review`} className="text-indigo-600 hover:text-indigo-800 flex items-center text-sm">
+                    <a href={`/reviews/platforms/${platform.slug}-review`} className="text-indigo-600 hover:text-indigo-800 flex items-center text-sm">
                       Read Full Review <ArrowRight className="h-3 w-3 ml-1" />
-                    </Link>
+                    </a>
                   </div>
                   
                   <div className="md:w-3/4 md:pl-6">

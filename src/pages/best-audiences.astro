@@ -8,8 +8,75 @@ const renderStars = (rating: number) => {
   return starsArray;
 };
 
-const audiences = [];
-const featuredAudience = null;
+const audiences = [
+  {
+    name: 'Couples',
+    slug: 'couples',
+    image: '/images/audiences/couples.jpg',
+    description: 'Specialized platforms offering relationship counseling, couples therapy, and marriage support with therapists trained in relationship dynamics and communication.',
+    platforms: [
+      { name: 'ReGain', rating: 4.9 },
+      { name: 'Talkspace', rating: 4.6 },
+      { name: 'BetterHelp', rating: 4.4 }
+    ]
+  },
+  {
+    name: 'LGBTQ+',
+    slug: 'lgbtq',
+    image: '/images/audiences/lgbtq.jpg',
+    description: 'Affirming therapy platforms with LGBTQ+-specialized therapists who understand unique challenges like identity, coming out, discrimination, and gender dysphoria.',
+    platforms: [
+      { name: 'Pride Counseling', rating: 4.8 },
+      { name: 'BetterHelp', rating: 4.7 },
+      { name: 'Talkspace', rating: 4.5 }
+    ]
+  },
+  {
+    name: 'Teens',
+    slug: 'teens',
+    image: '/images/audiences/teens.jpg',
+    description: 'Age-appropriate therapy services for adolescents aged 13-19 with parental involvement options and therapists specializing in teen development and issues.',
+    platforms: [
+      { name: 'Teen Counseling', rating: 4.7 },
+      { name: 'Talkspace', rating: 4.5 },
+      { name: 'BetterHelp', rating: 4.4 }
+    ]
+  },
+  {
+    name: 'Veterans',
+    slug: 'veterans',
+    image: '/images/audiences/veterans.jpg',
+    description: 'Platforms with therapists trained in military culture, PTSD, trauma, and transition challenges specific to veterans and active duty service members.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.6 },
+      { name: 'Talkspace', rating: 4.5 },
+      { name: 'Online-Therapy.com', rating: 4.3 }
+    ]
+  },
+  {
+    name: 'Parents',
+    slug: 'parents',
+    image: '/images/audiences/parents.jpg',
+    description: 'Support for parenting challenges, postpartum depression, work-life balance, and family dynamics with therapists who specialize in parenting issues.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.7 },
+      { name: 'Talkspace', rating: 4.6 },
+      { name: 'Calmerry', rating: 4.4 }
+    ]
+  },
+  {
+    name: 'Seniors',
+    slug: 'seniors',
+    image: '/images/audiences/seniors.jpg',
+    description: 'Accessible therapy platforms for older adults dealing with aging, life transitions, grief, isolation, and age-related mental health challenges.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.5 },
+      { name: 'Talkspace', rating: 4.4 },
+      { name: 'Calmerry', rating: 4.3 }
+    ]
+  }
+];
+const featuredAudience = audiences[0];
 ---
 
 <BaseLayout>

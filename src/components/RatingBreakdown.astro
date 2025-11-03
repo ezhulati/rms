@@ -1,0 +1,119 @@
+---
+import { Star } from 'lucide-react';
+
+interface Props {
+  category?: string;
+  rating?: number;
+  description?: string;
+  overallRating?: number;
+  categories?: {
+    name: string;
+    score: number;
+    description?: string;
+  }[];
+  showDescription?: boolean;
+}
+
+const { category, rating, description, overallRating, categories, showDescription } = Astro.props;
+
+// Render stars based on rating
+const renderStars = (rating: number) => {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    stars.push({
+      filled: i <= Math.floor(rating),
+      key: i
+    });
+  }
+  return stars;
+};
+
+// Determine which layout to use
+const useSingleRating = category && rating !== undefined;
+---
+
+{useSingleRating ? (
+  <!-- Single category rating -->
+  <div class="bg-white rounded-lg p-6 border border-gray-200">
+    <div class="flex items-center justify-between mb-2">
+      <h3 class="text-lg font-bold text-gray-800">{category}</h3>
+      <div class="flex items-center">
+        <div class="flex text-yellow-400 mr-2">
+          {renderStars(rating!).map((star) => (
+            <Star
+              key={star.key}
+              class={`h-4 w-4 ${star.filled ? 'fill-current' : ''}`}
+              strokeWidth={star.filled ? 2 : 1}
+            />
+          ))}
+        </div>
+        <span class="text-gray-600">{rating}/5</span>
+      </div>
+    </div>
+
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+      <div
+        class="bg-indigo-600 h-2.5 rounded-full"
+        style={`width: ${(rating! / 5) * 100}%`}
+      ></div>
+    </div>
+
+    {description && (
+      <p class="text-sm text-gray-600">{description}</p>
+    )}
+  </div>
+) : (
+  <!-- Multiple categories rating -->
+  <div class="bg-white rounded-lg shadow-md p-6">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="text-xl font-bold text-gray-800">Rating Breakdown</h3>
+      {overallRating && (
+        <div class="flex items-center">
+          <div class="flex text-yellow-400 mr-2">
+            {renderStars(overallRating).map((star) => (
+              <Star
+                key={star.key}
+                class={`h-4 w-4 ${star.filled ? 'fill-current' : ''}`}
+                strokeWidth={star.filled ? 2 : 1}
+              />
+            ))}
+          </div>
+          <span class="text-lg font-bold text-gray-700">{overallRating}/5</span>
+        </div>
+      )}
+    </div>
+
+    <div class="space-y-4">
+      {categories && categories.map((cat) => (
+        <div key={cat.name} class="mb-4">
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-medium text-gray-700">{cat.name}</span>
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 mr-2">
+                {renderStars(cat.score).map((star) => (
+                  <Star
+                    key={star.key}
+                    class={`h-4 w-4 ${star.filled ? 'fill-current' : ''}`}
+                    strokeWidth={star.filled ? 2 : 1}
+                  />
+                ))}
+              </div>
+              <span class="text-gray-600">{cat.score}/5</span>
+            </div>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div
+              class="bg-indigo-600 h-2.5 rounded-full"
+              style={`width: ${(cat.score / 5) * 100}%`}
+            ></div>
+          </div>
+
+          {showDescription && cat.description && (
+            <p class="text-sm text-gray-600 mt-1">{cat.description}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+)}

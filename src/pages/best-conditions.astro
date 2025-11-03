@@ -8,8 +8,75 @@ const renderStars = (rating: number) => {
   return starsArray;
 };
 
-const conditions = [];
-const featuredCondition = null;
+const conditions = [
+  {
+    name: 'Anxiety',
+    slug: 'anxiety',
+    image: '/images/conditions/anxiety.jpg',
+    description: 'Platforms with therapists specializing in anxiety disorders including GAD, panic disorder, social anxiety, and phobias using CBT and exposure therapy techniques.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.8 },
+      { name: 'Talkspace', rating: 4.7 },
+      { name: 'Online-Therapy.com', rating: 4.5 }
+    ]
+  },
+  {
+    name: 'Depression',
+    slug: 'depression',
+    image: '/images/conditions/depression.jpg',
+    description: 'Evidence-based treatment for major depression, persistent depressive disorder, and seasonal affective disorder with medication management options available.',
+    platforms: [
+      { name: 'Cerebral', rating: 4.6 },
+      { name: 'Brightside', rating: 4.5 },
+      { name: 'BetterHelp', rating: 4.7 }
+    ]
+  },
+  {
+    name: 'PTSD',
+    slug: 'ptsd',
+    image: '/images/conditions/ptsd.jpg',
+    description: 'Trauma-focused therapy platforms offering EMDR, trauma-informed CBT, and specialized care for PTSD and complex trauma with experienced therapists.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.6 },
+      { name: 'Talkspace', rating: 4.5 },
+      { name: 'Online-Therapy.com', rating: 4.3 }
+    ]
+  },
+  {
+    name: 'OCD',
+    slug: 'ocd',
+    image: '/images/conditions/ocd.jpg',
+    description: 'Specialized platforms for OCD treatment featuring therapists trained in Exposure and Response Prevention (ERP) therapy, the gold standard for OCD treatment.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.5 },
+      { name: 'Talkspace', rating: 4.4 },
+      { name: 'NOCD', rating: 4.8 }
+    ]
+  },
+  {
+    name: 'Eating Disorders',
+    slug: 'eating-disorders',
+    image: '/images/conditions/eating-disorders.jpg',
+    description: 'Compassionate care for anorexia, bulimia, binge eating disorder, and related issues with therapists specializing in eating disorder treatment and recovery.',
+    platforms: [
+      { name: 'Talkspace', rating: 4.5 },
+      { name: 'BetterHelp', rating: 4.4 },
+      { name: 'Equip', rating: 4.7 }
+    ]
+  },
+  {
+    name: 'Addiction',
+    slug: 'addiction',
+    image: '/images/conditions/addiction.jpg',
+    description: 'Recovery-focused platforms for substance use disorders and behavioral addictions with therapists experienced in addiction counseling and relapse prevention.',
+    platforms: [
+      { name: 'BetterHelp', rating: 4.4 },
+      { name: 'Talkspace', rating: 4.3 },
+      { name: 'Monument', rating: 4.6 }
+    ]
+  }
+];
+const featuredCondition = conditions[0];
 ---
 
 <BaseLayout>
@@ -52,7 +119,7 @@ const featuredCondition = null;
                     </div>
                   ))}
                 </div>
-                <Link to={`/best/conditions/best-for-${condition.slug}`} class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
+                <a href={`/best/conditions/best-for-${condition.slug}`} class="text-indigo-600 font-medium flex items-center hover:text-indigo-800">
                   View full analysis <ArrowRight class="h-4 w-4 ml-1" />
                 </a>
               </div>

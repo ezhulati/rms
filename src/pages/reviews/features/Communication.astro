@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { platforms } from '../../../siteData';
 import { Star, CheckCircle, XCircle, MessageCircle, Video, Phone, Clock } from 'lucide-react';
 
-const platforms = [];
+// const platforms = []; // Now using real data from siteData
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -13,7 +14,80 @@ const renderStars = (rating: number) => {
 
 const benefits = [];
 
-const communicationMethods = [];
+const communicationMethods = [
+  {
+    method: "Messaging",
+    icon: "MessageCircle",
+    description: "Asynchronous text-based communication with your therapist",
+    benefits: [
+      "Flexibility to send messages anytime",
+      "Time to reflect before responding",
+      "Written record of conversations",
+      "Less pressure than live sessions"
+    ],
+    limitations: [
+      "Delayed responses (typically 24-48 hours)",
+      "Lack of nonverbal cues",
+      "May feel less personal",
+      "Not suitable for crisis situations"
+    ],
+    bestFor: "People with busy schedules, those who process thoughts through writing, or individuals who prefer time to reflect."
+  },
+  {
+    method: "Video Sessions",
+    icon: "Video",
+    description: "Live face-to-face sessions via video conference",
+    benefits: [
+      "Most similar to traditional therapy",
+      "Nonverbal communication visible",
+      "Immediate feedback and interaction",
+      "Stronger therapeutic connection"
+    ],
+    limitations: [
+      "Requires scheduling",
+      "Need reliable internet connection",
+      "Less privacy/flexibility in location",
+      "Can be more intimidating for some"
+    ],
+    bestFor: "Those who value face-to-face interaction, need immediate feedback, or are working on complex emotional issues."
+  },
+  {
+    method: "Phone Sessions",
+    icon: "Phone",
+    description: "Live audio-only therapy sessions",
+    benefits: [
+      "More privacy than video",
+      "Better for poor internet connections",
+      "Can participate while on the go",
+      "Less self-conscious without video"
+    ],
+    limitations: [
+      "No visual cues",
+      "Requires scheduling",
+      "Potential for distractions",
+      "May feel less connected"
+    ],
+    bestFor: "People with limited privacy, poor internet connections, or those who feel uncomfortable with video."
+  },
+  {
+    method: "Live Chat",
+    icon: "MessageCircle",
+    description: "Real-time text-based sessions with your therapist",
+    benefits: [
+      "Immediate interaction without video/audio",
+      "Written record of sessions",
+      "Can be done anywhere discreetly",
+      "Less pressure than video"
+    ],
+    limitations: [
+      "Requires scheduling",
+      "Slower than verbal communication",
+      "No tone of voice cues",
+      "May feel less personal"
+    ],
+    bestFor: "Those who want real-time support but prefer text-based communication over video or phone."
+  }
+];
 ---
 
 <BaseLayout>
@@ -50,7 +124,9 @@ const communicationMethods = [];
             {communicationMethods.map((method, index) => (
               <div key={index} class="border-b border-gray-200 pb-8 last:border-0 last:pb-0">
                 <div class="flex items-center mb-4">
-                  {method.icon}
+                  {method.icon === "MessageCircle" && <MessageCircle class="h-6 w-6 text-indigo-600" />}
+                  {method.icon === "Video" && <Video class="h-6 w-6 text-indigo-600" />}
+                  {method.icon === "Phone" && <Phone class="h-6 w-6 text-indigo-600" />}
                   <h3 class="text-xl font-bold text-gray-800 ml-3">{method.method}</h3>
                 </div>
                 <p class="text-gray-600 mb-4">{method.description}</p>
@@ -206,7 +282,7 @@ const communicationMethods = [];
                         Messaging Features
                       </h4>
                       <ul class="space-y-2">
-                        {platform.messagingFeatures.map((feature, i) => (
+                        {(platform.messagingFeatures || platform.features || []).slice(0, 3).map((feature, i) => (
                           <li key={i} class="flex items-start">
                             <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                             <span class="text-gray-600">{feature}</span>
@@ -221,7 +297,7 @@ const communicationMethods = [];
                         Live Session Features
                       </h4>
                       <ul class="space-y-2">
-                        {platform.liveSessionFeatures.map((feature, i) => (
+                        {(platform.liveSessionFeatures || platform.features || []).slice(0, 3).map((feature, i) => (
                           <li key={i} class="flex items-start">
                             <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                             <span class="text-gray-600">{feature}</span>
@@ -234,7 +310,7 @@ const communicationMethods = [];
                       <div>
                         <h4 class="font-bold text-gray-800 mb-3">Harper Wilson</h4>
                         <ul class="space-y-2">
-                          {platform.pros.map((pro, i) => (
+                          {(platform.pros || []).slice(0, 3).map((pro, i) => (
                             <li key={i} class="flex items-start">
                               <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                               <span class="text-gray-600">{pro}</span>
@@ -246,7 +322,7 @@ const communicationMethods = [];
                       <div>
                         <h4 class="font-bold text-gray-800 mb-3">James O'Brien</h4>
                         <ul class="space-y-2">
-                          {platform.cons.map((con, i) => (
+                          {(platform.cons || []).slice(0, 3).map((con, i) => (
                             <li key={i} class="flex items-start">
                               <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
                               <span class="text-gray-600">{con}</span>

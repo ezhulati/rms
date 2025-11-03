@@ -3,17 +3,73 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
 
 const featuredArticle = {
-  image: '',
-  title: '',
-  date: '',
-  author: '',
-  readTime: '',
-  excerpt: '',
-  url: '#',
-  tags: []
+  image: '/images/blog/ai-therapy.jpg',
+  title: 'AI-Powered Mental Health Tools: Promise and Concerns',
+  date: 'Jan 28, 2025',
+  author: 'Dr. Michael Chen',
+  readTime: '8 min read',
+  excerpt: 'Artificial intelligence is transforming mental health care with chatbots, diagnostic tools, and therapy assistants. Experts weigh in on the potential benefits and ethical concerns of this rapidly evolving technology.',
+  url: '/blog/news/ai-therapy-tools',
+  tags: ['Technology', 'AI', 'Innovation', 'Ethics']
 };
-const newsArticles = [];
-const otherArticles = [];
+const newsArticles = [
+  {
+    id: 'ai-therapy-tools',
+    image: '/images/blog/ai-therapy.jpg',
+    title: 'AI-Powered Mental Health Tools: Promise and Concerns',
+    date: 'Jan 28, 2025',
+    author: 'Dr. Michael Chen',
+    readTime: '8 min read',
+    excerpt: 'Artificial intelligence is transforming mental health care with chatbots, diagnostic tools, and therapy assistants. Experts weigh in on the potential benefits and ethical concerns of this rapidly evolving technology.',
+    url: '/blog/news/ai-therapy-tools',
+    tags: ['Technology', 'AI', 'Innovation', 'Ethics']
+  },
+  {
+    id: 'therapy-research-2025',
+    image: '/images/blog/research-findings.jpg',
+    title: 'Latest Mental Health Research Findings from 2025',
+    date: 'Jan 22, 2025',
+    author: 'Dr. Sarah Johnson',
+    readTime: '10 min read',
+    excerpt: 'New studies reveal breakthrough findings on depression treatment, anxiety interventions, and the effectiveness of online therapy platforms compared to traditional in-person care.',
+    url: '/blog/news/latest-therapy-research',
+    tags: ['Research', 'Studies', 'Evidence-Based', 'Science']
+  },
+  {
+    id: 'mental-health-policy',
+    image: '/images/blog/policy-update.jpg',
+    title: 'Mental Health Parity Act Updates: What You Need to Know',
+    date: 'Jan 15, 2025',
+    author: 'Emily Rodriguez',
+    readTime: '7 min read',
+    excerpt: 'Recent policy changes strengthen mental health insurance coverage requirements. Learn how these updates affect your access to therapy and what platforms now accept insurance.',
+    url: '/blog/news/mental-health-policy-updates',
+    tags: ['Policy', 'Insurance', 'Healthcare', 'Legislation']
+  },
+  {
+    id: 'who-global-report',
+    image: '/images/blog/who-report.jpg',
+    title: 'WHO Releases Global Mental Health Report 2025',
+    date: 'Jan 8, 2025',
+    author: 'Dr. Maya Patel',
+    readTime: '12 min read',
+    excerpt: 'The World Health Organization\'s latest report highlights the global mental health crisis and the critical role of digital mental health services in expanding access to care worldwide.',
+    url: '/blog/news/who-global-report',
+    tags: ['Global Health', 'WHO', 'Statistics', 'Access']
+  },
+  {
+    id: 'platform-merger',
+    image: '/images/blog/industry-news.jpg',
+    title: 'Major Online Therapy Platform Merger Announced',
+    date: 'Dec 20, 2024',
+    author: 'James Wilson',
+    readTime: '6 min read',
+    excerpt: 'Two leading therapy platforms announce merger plans, potentially reshaping the online mental health landscape. Industry experts discuss what this means for consumers and providers.',
+    url: '/blog/news/platform-merger',
+    tags: ['Industry', 'Business', 'Platforms', 'Mergers']
+  }
+];
+const otherArticles = newsArticles.slice(1);
 ---
 
 <BaseLayout>

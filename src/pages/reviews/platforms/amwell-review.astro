@@ -1,8 +1,37 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import RatingBreakdown from '../../../components/RatingBreakdown.astro';
 import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 const features = [];
+
+const ratingCategories = [
+  {
+    category: "Therapist Quality",
+    rating: 4.5,
+    description: "Amwell employs licensed therapists and board-certified psychiatrists with an average of 15 years of experience. All providers are credentialed and go through a thorough vetting process. The quality of providers is generally high, though the selection may be more limited than on some dedicated mental health platforms."
+  },
+  {
+    category: "User Experience",
+    rating: 4.0,
+    description: "The platform offers a straightforward booking process and reliable video sessions. However, the user interface feels more clinical than some competitors, and the mobile app receives mixed reviews. The lack of messaging options and between-session support tools limits the overall experience."
+  },
+  {
+    category: "Pricing",
+    rating: 3.5,
+    description: "Without insurance, Amwell's per-session costs are higher than subscription-based platforms. However, with insurance coverage, it can be very affordable, sometimes requiring only a copay. The pay-per-visit model offers flexibility but may be more expensive for those seeking regular weekly therapy."
+  },
+  {
+    category: "Customer Support",
+    rating: 4.0,
+    description: "Amwell provides 24/7 customer support via phone and email. Their support team is generally responsive and helpful, particularly with insurance and technical issues. The platform also offers detailed FAQs and resources to help users navigate their services."
+  },
+  {
+    category: "Features & Resources",
+    rating: 4.0,
+    description: "As a comprehensive telehealth platform, Amwell offers the convenience of medical and mental health services in one place. However, it lacks some specialized mental health features found on dedicated platforms, such as worksheets, journaling tools, or messaging-based therapy options."
+  }
+];
 
 const ratings = {
   overall: 4.5,
@@ -60,37 +89,16 @@ const renderStars = (rating: number) => {
         </div>
 
         {/* Rating Breakdown */}
-        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-12">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Rating Breakdown</h2>
           <div class="space-y-6">
-            {/*
-            <RatingBreakdown
-              category="Therapist Quality"
-              rating={ratings.therapistQuality}
-              description="Amwell employs licensed therapists and board-certified psychiatrists with an average of 15 years of experience. All providers are credentialed and go through a thorough vetting process. The quality of providers is generally high, though the selection may be more limited than on some dedicated mental health platforms."
-            />
-            <RatingBreakdown
-              category="User Experience"
-              rating={ratings.userExperience}
-              description="The platform offers a straightforward booking process and reliable video sessions. However, the user interface feels more clinical than some competitors, and the mobile app receives mixed reviews. The lack of messaging options and between-session support tools limits the overall experience."
-            />
-            <RatingBreakdown
-              category="Pricing"
-              rating={ratings.pricing}
-              description="Without insurance, Amwell's per-session costs are higher than subscription-based platforms. However, with insurance coverage, it can be very affordable, sometimes requiring only a copay. The pay-per-visit model offers flexibility but may be more expensive for those seeking regular weekly therapy."
-            />
-            <RatingBreakdown
-              category="Customer Service"
-              rating={ratings.customerService}
-              description="Amwell provides 24/7 customer support via phone and email. Their support team is generally responsive and helpful, particularly with insurance and technical issues. The platform also offers detailed FAQs and resources to help users navigate their services."
-            />
-            <RatingBreakdown
-              category="Features & Resources"
-              rating={ratings.features}
-              description="As a comprehensive telehealth platform, Amwell offers the convenience of medical and mental health services in one place. However, it lacks some specialized mental health features found on dedicated platforms, such as worksheets, journaling tools, or messaging-based therapy options."
-            />
-            */}
+            {ratingCategories.map((item) => (
+              <RatingBreakdown
+                category={item.category}
+                rating={item.rating}
+                description={item.description}
+              />
+            ))}
           </div>
         </div>
 

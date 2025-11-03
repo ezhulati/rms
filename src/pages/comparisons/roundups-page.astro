@@ -18,7 +18,7 @@ const roundups = [];
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {roundups.map((roundup, index) => (
             <div key={index} class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
-              <Link to={roundup.path}>
+              <a href={roundup.path}>
                 <div class="h-48 overflow-hidden">
                   <img 
                     src={roundup.image} 

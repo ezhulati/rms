@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PlatformFinder from '../components/PlatformFinder';
 import { ArrowRight } from 'lucide-react';
-// import PlatformFinder from '../components/PlatformFinder';
 ---
 
 <BaseLayout>
@@ -16,15 +16,7 @@ import { ArrowRight } from 'lucide-react';
           </p>
         </div>
 
-        {/* TODO: Convert PlatformFinder to Astro component or React island
         <PlatformFinder client:load />
-        */}
-
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-          <p class="text-gray-600 text-center">
-            Interactive platform finder coming soon! In the meantime, explore our <a href="/best" class="text-indigo-600 hover:text-indigo-800">best platforms</a> and <a href="/reviews" class="text-indigo-600 hover:text-indigo-800">detailed reviews</a>.
-          </p>
-        </div>
         
         <div class="mt-12 bg-white rounded-lg shadow-md p-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Online Therapy Platform</h2>

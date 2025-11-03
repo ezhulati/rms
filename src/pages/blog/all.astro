@@ -1,11 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { blogArticles } from '../../siteData';
 import { ArrowRight, Calendar, User, Tag, Search, Filter } from 'lucide-react';
 
 const searchTerm = '';
 const selectedCategory = 'all';
-const blogPosts = [];
-const filteredPosts = [];
+const blogPosts = blogArticles; // Using real data
+const filteredPosts = blogArticles.map(article => ({
+  id: article.id,
+  title: article.title,
+  excerpt: article.excerpt,
+  image: article.image,
+  category: article.category,
+  categoryLabel: article.category === 'news' ? 'News & Research' : article.category === 'stories' ? 'Stories & Interviews' : 'Practical Guides',
+  date: new Date(article.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+  author: article.author.name,
+  tags: article.tags,
+  url: `/blog/${article.category}/${article.slug}`
+}));
 ---
 
 <BaseLayout>
@@ -30,7 +42,7 @@ const filteredPosts = [];
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  class="whitespace-nowrap pl-10 pr-4 py-3 px-4 sm:px-6 lg:px-8 border border-gray-300 rounded-md w-full min-w-0 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 text-base"
+                  class="whitespace-nowrap pl-10 pr-4 px-6 py-3 border border-gray-300 rounded-md w-full min-w-0 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800 shadow-sm transition-all duration-200 hover:border-indigo-300 text-base"
                 />
               </div>
               
@@ -99,8 +111,8 @@ const filteredPosts = [];
                   </div>
                 </div>
                 <div class="px-6 pb-6">
-                  <Link 
-                    to={post.url} 
+                  <a
+                    href={post.url}
                     class="text-indigo-600 font-medium flex items-center hover:text-indigo-800 bg-indigo-50 px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-100 transition-all duration-200 inline-flex w-auto"
                   >
                     Read full article <ArrowRight class="h-4 w-4 ml-1" />
@@ -112,7 +124,7 @@ const filteredPosts = [];
           
           {/* No Results */}
           {filteredPosts.length === 0 && (
-            <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center py-12">
               <h3 class="text-xl font-bold text-gray-800 mb-2">No articles found</h3>
               <p class="text-gray-600 mb-4">
                 Try adjusting your search terms or filters to find what you're looking for.
