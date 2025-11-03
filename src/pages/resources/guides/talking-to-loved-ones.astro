@@ -1,22 +1,517 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Heart, MessageCircle, Users, Shield, AlertTriangle, CheckCircle, X, Lightbulb, BookOpen } from 'lucide-react';
 ---
 
-<BaseLayout title="Talking to Loved Ones | RealMindSolutions" description="Talking to Loved Ones About Mental Health">
+<BaseLayout title="Talking to Loved Ones About Mental Health | RealMindSolutions" description="Comprehensive guide to discussing mental health with family and friends, including how to prepare, what to say, asking for support, and handling difficult reactions.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Talking to Loved Ones About Mental Health</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">How to discuss mental health with family.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">How to open up about your struggles and ask for support from family and friends.</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Heart className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Why This Conversation Matters</h2>
+            <p class="text-gray-700 mb-4">
+              Talking to loved ones about your mental health can feel vulnerable and scary—but it's also one of the most powerful steps you can take. <strong>You don't have to suffer in silence.</strong>
+            </p>
+            <p class="text-gray-700 mb-4">
+              Opening up allows your loved ones to understand what you're going through, offer support, and feel less shut out. It also reduces the burden of hiding your struggles and can deepen your relationships.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">Remember:</h3>
+              <p class="text-sm text-gray-700 italic">
+                You deserve support. Mental health struggles are not a sign of weakness, and asking for help is an act of courage, not burden.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Preparing for the Conversation */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <BookOpen className="h-8 w-8 text-blue-600 mr-3" />
+          Preparing for the Conversation
+        </h2>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">1. Choose the Right Person</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              You don't have to tell everyone. Start with someone you trust—someone who's been supportive in the past, listens well, and doesn't judge.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs">
+              <strong>Consider:</strong> Who has been there for you before? Who respects your privacy? Who will take you seriously?
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">2. Pick the Right Time and Place</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Choose a private, quiet setting where you won't be interrupted or rushed. Avoid bringing it up during an argument or when either of you is stressed.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs">
+              <strong>Good times:</strong> A calm evening at home, during a walk together, over coffee<br/>
+              <strong>Avoid:</strong> In public, during family gatherings, when either person is drunk or angry
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">3. Clarify What You Want</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Before the conversation, ask yourself: What do I need? Just to be heard? Practical help? Emotional support? Knowing this helps you communicate clearly.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+              <div class="bg-green-50 rounded p-3">
+                <strong class="text-green-900">To be heard:</strong> "I just need you to listen."
+              </div>
+              <div class="bg-green-50 rounded p-3">
+                <strong class="text-green-900">Practical help:</strong> "Can you help me find a therapist?"
+              </div>
+              <div class="bg-green-50 rounded p-3">
+                <strong class="text-green-900">Emotional support:</strong> "I need to know you're there for me."
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">4. Prepare What You Want to Say</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              You don't need a script, but organizing your thoughts helps. Consider writing down key points or even practicing with a therapist first.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* How to Start the Conversation */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <MessageCircle className="h-8 w-8 text-brand-primary mr-3" />
+          How to Start the Conversation
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Starting is often the hardest part. Here are some ways to open the conversation:
+        </p>
+
+        <div class="space-y-4">
+          <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Direct Approach</h3>
+            <p class="text-sm text-gray-700 mb-3">Be straightforward about what you're going through.</p>
+            <div class="space-y-2">
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "I need to talk to you about something important. I've been struggling with my mental health lately, and I wanted you to know what's going on."
+              </div>
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "I've been dealing with [anxiety/depression/etc.] and it's been really hard. I'm not looking for you to fix it, but I need you to know."
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Easing Into It</h3>
+            <p class="text-sm text-gray-700 mb-3">If you're nervous, you can start gently.</p>
+            <div class="space-y-2">
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "I haven't been feeling like myself lately, and I think it's more than just a bad week. Can we talk about it?"
+              </div>
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "You know how I've seemed really withdrawn/tired/upset recently? There's a reason for that, and I'd like to explain."
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Asking for Specific Support</h3>
+            <p class="text-sm text-gray-700 mb-3">If you know what you need, ask directly.</p>
+            <div class="space-y-2">
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "I've been struggling with depression, and I've decided to start therapy. I wanted to let you know, and I'd appreciate your support."
+              </div>
+              <div class="bg-white rounded p-3 text-sm text-gray-700">
+                "I'm having a really hard time right now with [specific issue]. I need help, and I'm not sure where to start. Can we talk?"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* What to Say (and Not Say) */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">What to Say (and Not Say)</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* What TO Do */}
+          <div class="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+            <h3 class="font-bold text-green-900 mb-4 flex items-center">
+              <CheckCircle className="h-6 w-6 mr-2" />
+              DO: Helpful Ways to Communicate
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Be honest</strong> about how you're feeling, even if it's hard to put into words</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Use "I" statements:</strong> "I feel overwhelmed" rather than "You make me feel..."</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Describe specific symptoms</strong> if possible (e.g., "I can't sleep," "I've lost interest in things I used to enjoy")</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Explain what you need</strong> from them (listening, practical help, space, etc.)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Acknowledge it might be hard for them too:</strong> "I know this might be difficult to hear"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2 mt-1">✓</span>
+                <span><strong>Give them time to process</strong> if they seem shocked</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* What NOT to Do */}
+          <div class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+            <h3 class="font-bold text-red-900 mb-4 flex items-center">
+              <X className="h-6 w-6 mr-2" />
+              DON'T: Things to Avoid
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Minimize your struggles:</strong> "It's not a big deal, I'll be fine"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Apologize excessively:</strong> You don't need to say sorry for having mental health struggles</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Expect them to immediately understand</strong> everything about mental health</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Blame them</strong> for your mental health (even if they contributed to stress)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Drop the conversation abruptly</strong> if it gets uncomfortable—try to push through</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2 mt-1">✗</span>
+                <span><strong>Test them</strong> by being vague and expecting them to "just know" what you need</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* How to Ask for Specific Help */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Users className="h-8 w-8 text-purple-600 mr-3" />
+          How to Ask for Specific Help
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          It's okay to ask for specific types of support. Here are examples:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Emotional Support</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "I need you to check in on me this week."</li>
+              <li>• "Can I call you when I'm feeling overwhelmed?"</li>
+              <li>• "I just need you to listen without trying to fix it."</li>
+              <li>• "Please remind me that this will pass when I'm stuck."</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Practical Help</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "Can you help me research therapists?"</li>
+              <li>• "I need help with [household task] while I'm struggling."</li>
+              <li>• "Can you come with me to my first therapy appointment?"</li>
+              <li>• "I need someone to keep me accountable for [specific self-care task]."</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Space & Understanding</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "I need some alone time to recharge. It's not about you."</li>
+              <li>• "Please don't take it personally if I'm quiet lately."</li>
+              <li>• "I might cancel plans sometimes—I hope you understand."</li>
+              <li>• "Please be patient with me while I work through this."</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Setting Boundaries</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "I'm not ready to talk about details yet, but I wanted you to know."</li>
+              <li>• "Please don't share this with others without asking me first."</li>
+              <li>• "I need you to trust my decision to see a therapist/take medication."</li>
+              <li>• "I can't handle advice right now—just support."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Handling Different Reactions */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Shield className="h-8 w-8 text-orange-600 mr-3" />
+          Handling Different Reactions
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Not everyone will respond perfectly. Here's how to navigate common reactions:
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They're Supportive ✓</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              <strong>This is ideal!</strong> They listen, validate your feelings, offer help, and don't judge.
+            </p>
+            <div class="bg-green-50 rounded p-3 text-xs">
+              <strong>Response:</strong> Thank them for their support. Let them know what they're doing that's helpful. Keep them updated on your progress.
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They Minimize It</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              They say things like "Everyone gets sad," "Just think positive," "It's not that bad."
+            </p>
+            <div class="bg-yellow-50 rounded p-3 text-xs">
+              <strong>Response:</strong> "I understand you're trying to help, but this is more serious than just feeling down. I've been struggling for [timeframe], and it's affecting my daily life. I need you to take this seriously."
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They Try to "Fix" You</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              They offer unsolicited advice: "Have you tried yoga?" "You should just exercise more."
+            </p>
+            <div class="bg-yellow-50 rounded p-3 text-xs">
+              <strong>Response:</strong> "I appreciate that you want to help. Right now, I don't need solutions—I just need you to listen and be here for me. When I'm ready for advice, I'll ask."
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They Get Defensive or Blame Themselves</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              "Did I cause this?" "What did I do wrong?" "Why didn't you tell me sooner?"
+            </p>
+            <div class="bg-yellow-50 rounded p-3 text-xs">
+              <strong>Response:</strong> "This isn't about you or anything you did. Mental health issues have many causes. I'm telling you now because I trust you and need your support."
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They Dismiss Mental Health in General</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              "Mental illness isn't real," "Therapy is a scam," "You don't need medication."
+            </p>
+            <div class="bg-red-50 rounded p-3 text-xs">
+              <strong>Response:</strong> You don't need to convince them. "I understand you have different views, but this is what I need right now. I hope you can respect my decision." Consider confiding in someone more understanding.
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">If They're Shocked and Need Time</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              They go quiet, seem overwhelmed, or don't know what to say.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs">
+              <strong>Response:</strong> "I know this is a lot to take in. You don't have to say the perfect thing—I just wanted you to know. We can talk more when you've had time to process."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* What to Do If It Doesn't Go Well */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb className="h-8 w-8 text-yellow-500 mr-3" />
+          What to Do If It Doesn't Go Well
+        </h2>
+
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <p class="text-yellow-900 mb-4">
+            Sometimes, even with careful preparation, the conversation doesn't go as you hoped. <strong>That doesn't mean you made a mistake.</strong>
+          </p>
+          <div class="space-y-3 text-sm text-yellow-900">
+            <div class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Remember: Their reaction is about them, not you.</strong> Their discomfort with mental health doesn't invalidate your experience.</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Seek support elsewhere.</strong> If one person doesn't respond well, try confiding in someone else—a friend, another family member, or a therapist.</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Give them time.</strong> Sometimes people need to process before they can respond supportively. Follow up in a few days.</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Protect your mental health.</strong> If someone consistently invalidates or harms you, it's okay to limit how much you share with them.</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>You did something brave.</strong> Opening up takes courage. Be proud of yourself for trying, regardless of how they responded.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Talking to Different People */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Talking to Different People in Your Life</h2>
+
+        <div class="space-y-4">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Parents</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Parents may feel guilty, defensive, or overprotective. Reassure them this isn't their fault, and be clear about what you need.
+            </p>
+            <p class="text-xs text-gray-600 italic">Tip: If your parents are resistant to therapy/medication, bring educational resources or ask them to come to an appointment with you.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Partner/Spouse</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Your partner needs to know how your mental health affects the relationship and what support looks like. Be honest, but also affirm your commitment.
+            </p>
+            <p class="text-xs text-gray-600 italic">Tip: Consider couples therapy if mental health is impacting your relationship significantly.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Friends</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              Good friends want to support you but may not know how. Tell them what's helpful (checking in, inviting you out, respecting when you need space).
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Employer/Coworkers</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              You're not obligated to disclose mental health at work. If you do, keep it professional, focus on how it impacts your work, and know your rights (ADA protections in the US).
+            </p>
+            <p class="text-xs text-gray-600 italic">Consider: "I'm dealing with a health issue that may affect my attendance/performance. I'm working with a doctor and will keep you updated."</p>
+          </div>
+        </div>
+      </div>
+
+      {/* When Professional Help is Needed */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When to Seek Professional Support
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Talking to loved ones is important, but it's not a substitute for professional help. See a therapist if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms are severe or have lasted more than 2 weeks</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're having thoughts of self-harm or suicide</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your mental health is interfering with work, relationships, or daily life</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You need help navigating difficult conversations with family</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            A therapist can help you process emotions, build coping skills, and prepare for difficult conversations. <a href="/compare" class="text-brand-primary font-bold hover:underline">Find an online therapist</a> who can support you.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis, free support is available 24/7:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/guides/self-care-strategies" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Self-Care Strategies</h3>
+            <p class="text-sm text-gray-600">Build sustainable self-care practices</p>
+          </a>
+          <a href="/resources/worksheets/therapy-session-preparation" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Therapy Session Preparation</h3>
+            <p class="text-sm text-gray-600">Make the most of your therapy sessions</p>
+          </a>
+          <a href="/tools/assessments/mental-health-assessment" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mental Health Assessment</h3>
+            <p class="text-sm text-gray-600">Assess your mental health symptoms</p>
+          </a>
+          <a href="/compare" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Compare Therapy Platforms</h3>
+            <p class="text-sm text-gray-600">Find professional support online</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+  }
+</style>
