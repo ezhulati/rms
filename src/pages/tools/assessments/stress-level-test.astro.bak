@@ -157,27 +157,9 @@ const recommendations = {
 
 <BaseLayout>
   {/* Hero Section */}
-  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
-    {/* Background decoration */}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-      {/* Breadcrumb Navigation */}
-      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
-        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
-        <span>/</span>
-        <a href="/tools" class="hover:text-brand-primary-600 transition">Tools</a>
-        <span>/</span>
-        <a href="/tools/assessments" class="hover:text-brand-primary-600 transition">Assessments</a>
-        <span>/</span>
-        <span class="text-neutral-900 font-medium">Stress Level Assessment</span>
-      </nav>
-
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 animate-fade-in">Stress Level Assessment</h1>
+  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Stress Level Assessment</h1>
       <p class="font-serif italic text-lg md:text-xl text-neutral-600">
         Evaluate your stress levels and understand how stress is impacting your daily life
       </p>
@@ -192,7 +174,7 @@ const recommendations = {
         <div class="p-6">
           <div class="space-y-4 mb-6">
             <div class="flex items-start">
-              <Info class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5 flex-shrink-0" />
+              <Info class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
               <div>
                 <h2 class="font-bold text-gray-800">About This Assessment</h2>
                 <p class="text-gray-600">
@@ -202,7 +184,7 @@ const recommendations = {
             </div>
 
             <div class="flex items-start">
-              <Brain class="h-5 w-5 text-brand-primary-600 mr-2 mt-0.5 flex-shrink-0" />
+              <Brain class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
               <div>
                 <h2 class="font-bold text-gray-800">What It Measures</h2>
                 <p class="text-gray-600">
@@ -262,13 +244,13 @@ const recommendations = {
             </div>
 
             <div class="flex flex-wrap gap-4">
-              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">
+              <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
                 Find a Stress Management Specialist
               </a>
-              <a href="/best/conditions/best-for-anxiety" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">
+              <a href="/best/conditions/best-for-anxiety" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">
                 View Best Therapy Options
               </a>
-              <a href="/blog/guides/therapy-modalities-explained" class="inline-flex items-center border-2 border-brand-primary-600 text-brand-primary-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-50 transition">
+              <a href="/blog/guides/therapy-modalities-explained" class="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-50 transition">
                 Learn About Stress Management
               </a>
             </div>
