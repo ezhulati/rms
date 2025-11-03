@@ -1,22 +1,515 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Zap, Wind, Brain, Heart, Users, Target, Smile, Moon, Clock, CheckCircle, AlertCircle, Printer, Info } from 'lucide-react';
 ---
 
-<BaseLayout title="Stress Management Techniques | RealMindSolutions" description="Stress Management Techniques Worksheet">
+<BaseLayout title="Evidence-Based Stress Management Techniques | RealMindSolutions" description="Comprehensive guide to proven stress management techniques including breathing exercises, mindfulness, progressive muscle relaxation, and cognitive strategies to reduce stress and anxiety.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Stress Management Techniques Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Practice stress management skills.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <Zap class="h-8 w-8 text-brand-primary" />
+        <span class="text-brand-primary font-semibold">Free Stress Relief Guide</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Evidence-Based Stress Management Techniques
+      </h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Practical, proven strategies to reduce stress and improve your mental wellbeing
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button onclick="window.print()" class="inline-flex items-center bg-brand-primary text-white px-6 py-3 rounded-md hover:bg-brand-primary/90 transition font-medium">
+          <Printer class="h-5 w-5 mr-2" />
+          Print Guide
+        </button>
+        <a href="/resources/worksheets" class="inline-flex items-center border-2 border-brand-primary text-brand-primary px-6 py-3 rounded-md hover:bg-brand-primary-50 transition font-medium">
+          More Resources
+        </a>
+      </div>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+
+      {/* Quick Relief Section */}
+      <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Zap class="h-6 w-6 text-red-600 mr-3 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Quick Stress Relief (Use Right Now)</h2>
+            <p class="text-gray-700 mb-4">
+              When you're feeling overwhelmed, these techniques provide immediate relief in 5 minutes or less:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h3 class="font-bold text-gray-900 mb-2">Box Breathing (2 minutes)</h3>
+                <ol class="text-sm text-gray-700 space-y-1">
+                  <li>1. Breathe in for 4 counts</li>
+                  <li>2. Hold for 4 counts</li>
+                  <li>3. Breathe out for 4 counts</li>
+                  <li>4. Hold for 4 counts</li>
+                  <li>5. Repeat 4-5 times</li>
+                </ol>
+              </div>
+              <div class="bg-white rounded-lg p-4">
+                <h3 class="font-bold text-gray-900 mb-2">5-4-3-2-1 Grounding (3 minutes)</h3>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• Name 5 things you can see</li>
+                  <li>• 4 things you can touch</li>
+                  <li>• 3 things you can hear</li>
+                  <li>• 2 things you can smell</li>
+                  <li>• 1 thing you can taste</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Breathing Techniques */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Wind class="h-8 w-8 text-brand-primary mr-3" />
+          Breathing Techniques
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Controlled breathing activates your parasympathetic nervous system, reducing stress hormones and promoting calm. These techniques are free, portable, and effective.
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Diaphragmatic (Belly) Breathing</h3>
+            <p class="text-gray-700 mb-3"><strong>Best for:</strong> General stress, anxiety, improving sleep</p>
+            <div class="bg-blue-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to do it:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Sit or lie comfortably. Place one hand on your chest, one on your belly.</li>
+                <li>2. Breathe in slowly through your nose for 4 counts. Your belly should rise, chest stays still.</li>
+                <li>3. Breathe out slowly through your mouth for 6 counts. Belly falls.</li>
+                <li>4. Continue for 5-10 minutes.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600"><strong>Practice:</strong> 2-3 times daily or when stressed. Most effective with regular practice.</p>
+          </div>
+
+          <div class="bg-white border-2 border-green-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">4-7-8 Breathing (Dr. Andrew Weil)</h3>
+            <p class="text-gray-700 mb-3"><strong>Best for:</strong> Falling asleep, managing acute anxiety</p>
+            <div class="bg-green-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to do it:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Exhale completely through your mouth (whoosh sound).</li>
+                <li>2. Close your mouth. Inhale quietly through nose for 4 counts.</li>
+                <li>3. Hold breath for 7 counts.</li>
+                <li>4. Exhale completely through mouth for 8 counts (whoosh).</li>
+                <li>5. Repeat cycle 4 times.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600"><strong>Practice:</strong> Twice daily. Do NOT exceed 4 breath cycles initially.</p>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Alternate Nostril Breathing (Nadi Shodhana)</h3>
+            <p class="text-gray-700 mb-3"><strong>Best for:</strong> Balancing energy, reducing anxiety, improving focus</p>
+            <div class="bg-purple-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to do it:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Sit comfortably. Use right thumb to close right nostril.</li>
+                <li>2. Inhale through left nostril for 4 counts.</li>
+                <li>3. Close left nostril with ring finger, release right nostril.</li>
+                <li>4. Exhale through right nostril for 4 counts.</li>
+                <li>5. Inhale through right, switch, exhale through left. Repeat 5-10 rounds.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600"><strong>Practice:</strong> Morning routine or mid-day reset. Avoid if you have a stuffy nose.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mindfulness & Meditation */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Brain class="h-8 w-8 text-brand-primary mr-3" />
+          Mindfulness & Meditation
+        </h2>
+
+        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 mb-6">
+          <p class="text-gray-700 mb-4">
+            <strong>Mindfulness</strong> means paying attention to the present moment without judgment. Research shows regular practice reduces stress, anxiety, and depression while improving focus and emotional regulation.
+          </p>
+          <p class="text-gray-700 text-sm">
+            <strong>You don't need to "clear your mind"</strong> or sit in lotus position. Start with just 5 minutes daily.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Body Scan Meditation</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Duration:</strong> 10-20 minutes | <strong>Best for:</strong> Releasing physical tension, improving body awareness</p>
+            <ol class="space-y-2 text-sm text-gray-700">
+              <li>1. Lie down or sit comfortably. Close your eyes.</li>
+              <li>2. Bring attention to your toes. Notice any sensations without changing them.</li>
+              <li>3. Slowly move attention up: feet → ankles → calves → knees → thighs → hips.</li>
+              <li>4. Continue through stomach, chest, fingers, arms, shoulders, neck, face, head.</li>
+              <li>5. If you notice tension, breathe into that area and consciously relax it.</li>
+              <li>6. Spend 30-60 seconds on each body part.</li>
+            </ol>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Mindful Breathing Meditation</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Duration:</strong> 5-15 minutes | <strong>Best for:</strong> Beginners, daily practice</p>
+            <ol class="space-y-2 text-sm text-gray-700">
+              <li>1. Sit comfortably with back straight (chair or floor).</li>
+              <li>2. Set a timer for 5 minutes.</li>
+              <li>3. Focus on your natural breath. Notice the sensation of air entering and leaving.</li>
+              <li>4. When your mind wanders (it will!), gently return focus to breath. No judgment.</li>
+              <li>5. Count breaths if helpful: "in-1, out-1, in-2, out-2..." up to 10, then restart.</li>
+            </ol>
+            <p class="text-xs text-gray-600 mt-3"><strong>Remember:</strong> Mind wandering is NORMAL. The practice is noticing and returning to breath, not preventing thoughts.</p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Loving-Kindness Meditation (Metta)</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Duration:</strong> 10-15 minutes | <strong>Best for:</strong> Self-compassion, reducing negative self-talk</p>
+            <ol class="space-y-2 text-sm text-gray-700">
+              <li>1. Sit comfortably. Take a few deep breaths.</li>
+              <li>2. Silently repeat these phrases, directing them toward yourself:
+                <div class="ml-4 mt-2 space-y-1 italic text-gray-600">
+                  <div>"May I be safe."</div>
+                  <div>"May I be healthy."</div>
+                  <div>"May I be happy."</div>
+                  <div>"May I live with ease."</div>
+                </div>
+              </li>
+              <li>3. After 5 minutes, direct the same phrases toward a loved one.</li>
+              <li>4. Then toward a neutral person (cashier, neighbor).</li>
+              <li>5. Advanced: Eventually include someone you find difficult.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      {/* Progressive Muscle Relaxation */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Heart class="h-8 w-8 text-brand-primary mr-3" />
+          Progressive Muscle Relaxation (PMR)
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          PMR reduces physical tension by systematically tensing and releasing muscle groups. Developed in the 1920s, it's proven effective for anxiety, insomnia, and chronic pain.
+        </p>
+
+        <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Full PMR Sequence (15-20 minutes)</h3>
+
+          <div class="bg-white rounded-lg p-6 space-y-4">
+            <p class="text-sm text-gray-700 mb-4">
+              <strong>For each muscle group:</strong> Tense for 5 seconds → Release and notice relaxation for 10-15 seconds
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Lower Body:</h4>
+                <ol class="space-y-1 text-gray-700">
+                  <li>1. Right foot: Curl toes</li>
+                  <li>2. Right calf: Point toes up</li>
+                  <li>3. Right thigh: Tighten</li>
+                  <li>4. Repeat for left side</li>
+                  <li>5. Buttocks: Squeeze</li>
+                  <li>6. Stomach: Pull in</li>
+                </ol>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Upper Body:</h4>
+                <ol class="space-y-1 text-gray-700">
+                  <li>7. Chest: Take deep breath</li>
+                  <li>8. Back: Squeeze shoulder blades</li>
+                  <li>9. Right hand: Make fist</li>
+                  <li>10. Right arm: Tense bicep</li>
+                  <li>11. Repeat for left side</li>
+                </ol>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Face & Neck:</h4>
+                <ol class="space-y-1 text-gray-700">
+                  <li>12. Shoulders: Raise to ears</li>
+                  <li>13. Neck: Gently tilt head back</li>
+                  <li>14. Jaw: Clench teeth</li>
+                  <li>15. Face: Scrunch everything</li>
+                  <li>16. Forehead: Raise eyebrows</li>
+                </ol>
+              </div>
+
+              <div class="bg-yellow-50 rounded p-4">
+                <p class="text-xs text-gray-700">
+                  <strong>Caution:</strong> Don't tense so hard it hurts. Stop if you feel pain. Consult a doctor if you have muscle/joint issues.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <h4 class="font-bold text-gray-900 mb-2">Quick PMR (5 minutes):</h4>
+              <p class="text-sm text-gray-700">Tense and release these 4 groups only: (1) hands/arms, (2) face/neck, (3) chest/shoulders/back, (4) legs/feet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cognitive Strategies */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Target class="h-8 w-8 text-brand-primary mr-3" />
+          Cognitive Stress Management
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          How you think about stressors affects how much they impact you. These cognitive strategies help you reframe and manage stress more effectively.
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white border-2 border-orange-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Worry Window Technique</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Best for:</strong> Rumination, racing thoughts</p>
+            <div class="space-y-2 text-sm text-gray-700">
+              <p><strong>The Problem:</strong> Worries intrude throughout the day, disrupting focus and relaxation.</p>
+              <p><strong>The Solution:</strong> Schedule a daily 15-minute "worry window."</p>
+              <ol class="space-y-1 ml-4">
+                <li>1. Choose a consistent time (e.g., 5 PM daily).</li>
+                <li>2. When worries arise during the day, write them down and say, "I'll think about this at 5 PM."</li>
+                <li>3. At 5 PM, review your worry list. Many will no longer seem urgent.</li>
+                <li>4. Spend 15 minutes problem-solving or journaling about remaining worries.</li>
+                <li>5. When time's up, close the notebook and move on.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">The 10-10-10 Rule</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Best for:</strong> Decision-making stress, catastrophizing</p>
+            <div class="space-y-2 text-sm text-gray-700">
+              <p>When facing a stressful decision or situation, ask yourself:</p>
+              <ul class="space-y-1 ml-4">
+                <li>• How will I feel about this in <strong>10 minutes?</strong></li>
+                <li>• How will I feel about this in <strong>10 months?</strong></li>
+                <li>• How will I feel about this in <strong>10 years?</strong></li>
+              </ul>
+              <p class="mt-3">This perspective helps you determine if something warrants your stress or is a temporary inconvenience.</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Reframing Exercise</h3>
+            <p class="text-gray-700 mb-3 text-sm"><strong>Best for:</strong> Negative thinking patterns</p>
+            <div class="bg-gray-50 rounded p-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="font-bold text-red-700 mb-2">Stress-Inducing Thought:</div>
+                  <p class="text-gray-700">"I have so much to do. I'll never finish everything."</p>
+                </div>
+                <div>
+                  <div class="font-bold text-green-700 mb-2">Reframed Thought:</div>
+                  <p class="text-gray-700">"I have a lot to do. I'll prioritize the most important tasks and do my best."</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600 mt-3">
+              <strong>Practice:</strong> When stressed, write down your thought. Then ask: "Is there another way to look at this?" or "What would I tell a friend thinking this?"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Lifestyle Strategies */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Smile class="h-8 w-8 text-brand-primary mr-3" />
+          Lifestyle Stress Management
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+              <Moon class="h-5 w-5 text-indigo-600 mr-2" />
+              Sleep Hygiene
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• Consistent sleep/wake times (even weekends)</li>
+              <li>• 7-9 hours nightly</li>
+              <li>• No screens 1 hour before bed</li>
+              <li>• Cool, dark, quiet room (60-67°F)</li>
+              <li>• Avoid caffeine after 2 PM</li>
+              <li>• Wind-down routine (reading, stretching)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+              <Heart class="h-5 w-5 text-red-600 mr-2" />
+              Physical Activity
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• 30 minutes moderate exercise, 5x/week</li>
+              <li>• Walking, swimming, cycling, dancing</li>
+              <li>• Yoga combines movement + mindfulness</li>
+              <li>• Even 10-minute walks reduce stress</li>
+              <li>• Outdoor exercise = extra benefits</li>
+              <li>• Find something you enjoy</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+              <Users class="h-5 w-5 text-green-600 mr-2" />
+              Social Connection
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• Regular contact with friends/family</li>
+              <li>• Join clubs, groups, or classes</li>
+              <li>• Volunteer work</li>
+              <li>• Quality over quantity</li>
+              <li>• Express feelings to trusted people</li>
+              <li>• Limit toxic relationships</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+              <Clock class="h-5 w-5 text-blue-600 mr-2" />
+              Time Management
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• Prioritize tasks (urgent vs. important)</li>
+              <li>• Break large projects into steps</li>
+              <li>• Say "no" to non-essential commitments</li>
+              <li>• Schedule breaks and downtime</li>
+              <li>• Delegate when possible</li>
+              <li>• Set realistic daily goals (3 max)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Your Personalized Stress Management Plan */}
+      <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Build Your Stress Management Toolkit</h2>
+
+        <p class="text-gray-700 mb-6">
+          Don't try everything at once! Choose 2-3 techniques to practice consistently for 2 weeks, then add more.
+        </p>
+
+        <div class="bg-white rounded-lg p-6">
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">My Quick Relief Techniques (Use when stressed):</h3>
+              <div class="space-y-2">
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> 1. _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> 2. _________________________________</div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">My Daily Practice (Build resilience):</h3>
+              <div class="space-y-2">
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Technique: _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> When: _________________ Duration: ___________</div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">My Lifestyle Changes:</h3>
+              <div class="space-y-2">
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Sleep: _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Exercise: _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Social: _________________________________</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Help */}
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg p-6 mb-12">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">When Stress Management Isn't Enough</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              These techniques are helpful, but sometimes professional support is needed. Consider therapy if:
+            </p>
+            <ul class="space-y-1 text-sm text-gray-700">
+              <li>• Stress interferes with daily functioning for more than 2 weeks</li>
+              <li>• You feel overwhelmed despite trying coping strategies</li>
+              <li>• You experience panic attacks, severe anxiety, or depression</li>
+              <li>• You're using alcohol, drugs, or other unhealthy coping mechanisms</li>
+              <li>• Physical symptoms persist (headaches, stomach issues, insomnia)</li>
+              <li>• You have thoughts of self-harm</li>
+            </ul>
+            <p class="text-sm text-gray-700 mt-3">
+              <strong>Remember:</strong> Seeking help is a sign of strength, not weakness. Therapists can teach additional skills and help you address underlying causes of chronic stress.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-6 mb-12">
+        <div class="flex items-start">
+          <AlertCircle class="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+          <div>
+            <p class="text-sm text-red-900 font-bold mb-1">In Crisis?</p>
+            <p class="text-sm text-red-800">
+              988 Suicide & Crisis Lifeline: Call/text 988 • Crisis Text Line: Text HOME to 741741 • Emergency: Call 911
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">More Worksheets</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/resources/worksheets/mood-tracking" class="text-brand-primary hover:underline">→ Mood Tracking Worksheet</a></li>
+              <li><a href="/resources/worksheets/cognitive-distortion-worksheet" class="text-brand-primary hover:underline">→ Cognitive Distortion Worksheet</a></li>
+              <li><a href="/resources/worksheets/therapy-session-preparation" class="text-brand-primary hover:underline">→ Therapy Session Preparation</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Find Professional Support</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">→ Find an Online Therapist</a></li>
+              <li><a href="/tools/assessments/anxiety-assessment" class="text-brand-primary hover:underline">→ Take an Anxiety Assessment</a></li>
+              <li><a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">→ Best Online Therapy Platforms 2025</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none !important;
+      }
+
+      .bg-gradient-to-b,
+      .bg-gradient-to-r {
+        background: white !important;
+      }
+    }
+  </style>
 </BaseLayout>
