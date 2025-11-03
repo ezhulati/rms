@@ -1,22 +1,518 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Clipboard, CheckCircle, MessageSquare, Target, TrendingUp, Clock, Lightbulb, AlertCircle, Printer, Info, Heart } from 'lucide-react';
 ---
 
-<BaseLayout title="Therapy Session Preparation | RealMindSolutions" description="Therapy Session Preparation Worksheet">
+<BaseLayout title="Therapy Session Preparation Worksheet - Get More from Therapy | RealMindSolutions" description="Free therapy session preparation worksheet to help you prepare for sessions, track progress between appointments, and maximize the value of your therapy time.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Therapy Session Preparation Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Prepare for therapy sessions effectively.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <Clipboard class="h-8 w-8 text-brand-primary" />
+        <span class="text-brand-primary font-semibold">Free Therapy Tool</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Therapy Session Preparation Worksheet
+      </h1>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600 mb-8">
+        Maximize the value of your therapy sessions with structured preparation and reflection
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button onclick="window.print()" class="inline-flex items-center bg-brand-primary text-white px-6 py-3 rounded-md hover:bg-brand-primary/90 transition font-medium">
+          <Printer class="h-5 w-5 mr-2" />
+          Print Worksheet
+        </button>
+        <a href="/resources/worksheets" class="inline-flex items-center border-2 border-brand-primary text-brand-primary px-6 py-3 rounded-md hover:bg-brand-primary-50 transition font-medium">
+          More Worksheets
+        </a>
+      </div>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+
+      {/* Why Prepare */}
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <Info class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Why Prepare for Therapy Sessions?</h2>
+            <p class="text-gray-700 mb-4">
+              Therapy sessions typically last 45-60 minutes, and it's easy to lose track of important topics or forget what you wanted to discuss. Preparation helps you:
+            </p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Use time efficiently:</strong> Focus on your most pressing concerns rather than scrambling to remember what to discuss</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Track patterns:</strong> Notice what's improving, what's challenging, and what triggers certain feelings</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Communicate clearly:</strong> Articulate your thoughts and feelings more effectively during sessions</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Stay accountable:</strong> Review homework or strategies you agreed to try between sessions</span>
+              </li>
+              <li class="flex items-start">
+                <CheckCircle class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span><strong>Measure progress:</strong> Reflect on growth and changes over time</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      {/* Pre-Session Checklist */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Clock class="h-8 w-8 text-brand-primary mr-3" />
+          Pre-Session Preparation (24-48 Hours Before)
+        </h2>
+
+        <div class="bg-gradient-to-r from-brand-primary-50 to-brand-secondary-50 rounded-lg p-8">
+          <div class="bg-white rounded-lg p-6 space-y-6">
+
+            {/* What Happened Since Last Session */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3">1</div>
+                What's Happened Since Last Session?
+              </h3>
+              <p class="text-sm text-gray-600 mb-3">Briefly note significant events, experiences, or changes in your life.</p>
+              <div class="bg-gray-50 rounded p-4 min-h-[100px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Examples: "Had a difficult conversation with my partner," "Felt anxious about upcoming presentation," "Noticed I was sleeping better this week," "Tried the breathing technique we discussed."</p>
+              </div>
+            </div>
+
+            {/* How's Your Mood */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3">2</div>
+                How's Your Overall Mood Been?
+              </h3>
+              <p class="text-sm text-gray-600 mb-3">Rate your overall mood this week and note any significant changes.</p>
+              <div class="bg-gray-50 rounded p-4 border-2 border-dashed border-gray-300">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-700 mb-2">Overall mood (1-5): ____</p>
+                    <p class="text-xs text-gray-500">1 = Very Poor, 5 = Excellent</p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-gray-700 mb-2">Compared to last week:</p>
+                    <p class="text-xs text-gray-500">☐ Better  ☐ Same  ☐ Worse</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Homework/Action Items Review */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3">3</div>
+                Review Homework or Action Items
+              </h3>
+              <p class="text-sm text-gray-600 mb-3">Did you complete any exercises, practices, or strategies you discussed last session?</p>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                <div class="space-y-2">
+                  <div><strong class="text-sm">What I tried:</strong> ___________________________________</div>
+                  <div><strong class="text-sm">What worked well:</strong> ___________________________________</div>
+                  <div><strong class="text-sm">What was challenging:</strong> ___________________________________</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Priority Topics */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3">4</div>
+                What Do You Want to Focus On Today?
+              </h3>
+              <p class="text-sm text-gray-600 mb-3">List 1-3 topics you'd like to discuss, in order of priority.</p>
+              <div class="bg-gray-50 rounded p-4 border-2 border-dashed border-gray-300">
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <span class="font-bold text-brand-primary mr-3">1.</span>
+                    <div class="flex-1 border-b border-dashed border-gray-400 pb-2">_____________________________________</div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="font-bold text-gray-500 mr-3">2.</span>
+                    <div class="flex-1 border-b border-dashed border-gray-400 pb-2">_____________________________________</div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="font-bold text-gray-400 mr-3">3.</span>
+                    <div class="flex-1 border-b border-dashed border-gray-400 pb-2">_____________________________________</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Questions for Therapist */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3">5</div>
+                Questions for Your Therapist
+              </h3>
+              <p class="text-sm text-gray-600 mb-3">Any questions about therapy, techniques, or your progress?</p>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Examples: "Can you explain how CBT works for anxiety?" "What should I expect in terms of progress timeline?" "Are there techniques I can use for panic attacks?"</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* During Session Checklist */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <MessageSquare class="h-6 w-6 text-brand-primary mr-2" />
+          During Your Session
+        </h2>
+
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <CheckCircle class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Start with your priority topic</h3>
+              <p class="text-sm text-gray-700">Lead with your #1 topic to ensure you address what's most important, even if time runs short.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <CheckCircle class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Be honest and specific</h3>
+              <p class="text-sm text-gray-700">Share concrete examples. Instead of "I felt bad," try "I felt overwhelmed when my boss criticized my report."</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <CheckCircle class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Ask for clarification</h3>
+              <p class="text-sm text-gray-700">If something is unclear or you don't understand a technique, speak up. Good therapists welcome questions.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <CheckCircle class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Take notes if helpful</h3>
+              <p class="text-sm text-gray-700">Jot down key insights, homework assignments, or coping strategies to remember later.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <CheckCircle class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Discuss what's working (and what's not)</h3>
+              <p class="text-sm text-gray-700">Therapy should be collaborative. If something isn't helping, tell your therapist so they can adjust the approach.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Post-Session Reflection */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+          <Lightbulb class="h-8 w-8 text-brand-primary mr-3" />
+          Post-Session Reflection (Right After or Same Day)
+        </h2>
+
+        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-8">
+          <div class="bg-white rounded-lg p-6 space-y-6">
+
+            {/* Key Insights */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What were the key insights or "aha" moments?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Example: "Realized my anxiety spikes when I feel like I'm not in control. Need to work on accepting uncertainty."</p>
+              </div>
+            </div>
+
+            {/* Action Items */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What action items or homework did you agree to try?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Example: "Practice 5-minute breathing exercise daily. Use thought record when anxious. Text friend once this week."</p>
+              </div>
+            </div>
+
+            {/* Techniques/Strategies */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What new techniques or strategies did you learn?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Example: "Learned '5-4-3-2-1' grounding technique for panic attacks. Dr. showed me how to challenge catastrophic thinking."</p>
+              </div>
+            </div>
+
+            {/* How You're Feeling */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">How are you feeling about the session?</h3>
+              <div class="bg-gray-50 rounded p-4 border-2 border-dashed border-gray-300">
+                <div class="space-y-2">
+                  <div>☐ Helpful and productive</div>
+                  <div>☐ Some useful insights, but want to dig deeper</div>
+                  <div>☐ Difficult/emotional, but necessary</div>
+                  <div>☐ Not as helpful as hoped (discuss with therapist next time)</div>
+                  <div>☐ Other: _______________________________________</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Follow-up Questions */}
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What do you want to explore more next time?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[60px] border-2 border-dashed border-gray-300">
+                <p class="text-gray-400 text-xs italic">Note topics you didn't have time to cover or new questions that arose.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Between Sessions Tracking */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <TrendingUp class="h-6 w-6 text-brand-primary mr-2" />
+          Between Sessions: Track Your Progress
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Use this space to track your practice and progress between sessions. Bring these notes to your next appointment.
+        </p>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Action Items Progress</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Task 1: _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Task 2: _________________________________</div>
+                <div class="flex items-center"><input type="checkbox" class="mr-2"/> Task 3: _________________________________</div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Skills Practice Log</h3>
+              <table class="w-full text-xs border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-200">
+                    <th class="border border-gray-300 p-2">Date</th>
+                    <th class="border border-gray-300 p-2">Technique/Skill Used</th>
+                    <th class="border border-gray-300 p-2">Helpful? (Y/N)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="border border-gray-300 p-2">__/__</td><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                  <tr><td class="border border-gray-300 p-2">__/__</td><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                  <tr><td class="border border-gray-300 p-2">__/__</td><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                  <tr><td class="border border-gray-300 p-2">__/__</td><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Important Observations or Patterns</h3>
+              <div class="min-h-[60px] border-2 border-dashed border-gray-300 rounded p-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Questions to Ask Your Therapist */}
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <Target class="h-6 w-6 text-purple-600 mr-2" />
+          Helpful Questions to Ask Your Therapist
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">About Your Progress</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "How am I progressing toward my therapy goals?"</li>
+              <li>• "What patterns have you noticed in our sessions?"</li>
+              <li>• "Are there areas where you think I should focus more?"</li>
+              <li>• "What skills have I improved on?"</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">About Therapy Approach</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "What therapy approach are we using and why?"</li>
+              <li>• "How long should I expect to be in therapy?"</li>
+              <li>• "What can I do between sessions to maximize progress?"</li>
+              <li>• "Are there books or resources you'd recommend?"</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">About Specific Issues</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "What's causing my [anxiety/depression/etc.]?"</li>
+              <li>• "What coping strategies work best for this issue?"</li>
+              <li>• "Should I consider medication?"</li>
+              <li>• "How do I know if I need a different level of care?"</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">When You're Stuck</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• "I don't feel like therapy is helping. Can we try something different?"</li>
+              <li>• "I'm struggling to complete homework. How can we adjust?"</li>
+              <li>• "Can we revisit my therapy goals?"</li>
+              <li>• "Would a different therapeutic approach be better for me?"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <Heart class="h-6 w-6 text-brand-primary mr-2" />
+          Tips for Getting the Most from Therapy
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">✓ Do's</h3>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• Be honest, even when it's uncomfortable</li>
+                <li>• Practice skills between sessions</li>
+                <li>• Give feedback about what's working/not working</li>
+                <li>• Set clear, specific goals</li>
+                <li>• Complete homework assignments</li>
+                <li>• Ask questions when confused</li>
+                <li>• Track your progress and patterns</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">✗ Don'ts</h3>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• Don't expect instant results</li>
+                <li>• Don't hide important information</li>
+                <li>• Don't skip sessions without rescheduling</li>
+                <li>• Don't wait until the end to bring up important topics</li>
+                <li>• Don't stay with a therapist who's not a good fit</li>
+                <li>• Don't compare your progress to others</li>
+                <li>• Don't give up if one approach doesn't work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Consider Changing Therapists */}
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg p-6 mb-12">
+        <div class="flex items-start">
+          <AlertCircle class="h-6 w-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">When to Consider Changing Therapists</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Sometimes, despite your best efforts, a therapeutic relationship isn't the right fit. Consider finding a new therapist if:
+            </p>
+            <ul class="space-y-1 text-sm text-gray-700">
+              <li>• You don't feel heard or understood consistently</li>
+              <li>• Your therapist judges you or makes you feel worse</li>
+              <li>• There's no progress after 3+ months of consistent work</li>
+              <li>• Your therapist crosses professional boundaries</li>
+              <li>• You need specialized expertise your current therapist doesn't have</li>
+              <li>• The therapeutic approach doesn't match your needs or values</li>
+            </ul>
+            <p class="text-xs text-gray-600 mt-3">
+              <strong>Note:</strong> It's okay to switch therapists. Finding the right fit is crucial for effective therapy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">More Worksheets</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/resources/worksheets/mood-tracking" class="text-brand-primary hover:underline">
+                  → Mood Tracking Worksheet
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/cognitive-distortion-worksheet" class="text-brand-primary hover:underline">
+                  → Cognitive Distortion Worksheet
+                </a>
+              </li>
+              <li>
+                <a href="/resources/worksheets/stress-management-techniques" class="text-brand-primary hover:underline">
+                  → Stress Management Techniques
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-3">Find a Therapist</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="/tools/matchers/therapy-platform-matcher" class="text-brand-primary hover:underline">
+                  → Find an Online Therapist
+                </a>
+              </li>
+              <li>
+                <a href="/guides/selection/choosing-right-therapist" class="text-brand-primary hover:underline">
+                  → How to Choose the Right Therapist
+                </a>
+              </li>
+              <li>
+                <a href="/best/overall/best-online-therapy" class="text-brand-primary hover:underline">
+                  → Best Online Therapy Platforms 2025
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none !important;
+      }
+
+      .bg-gradient-to-b,
+      .bg-gradient-to-r {
+        background: white !important;
+      }
+
+      .border-dashed {
+        border-style: solid !important;
+        min-height: 80px !important;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
 </BaseLayout>

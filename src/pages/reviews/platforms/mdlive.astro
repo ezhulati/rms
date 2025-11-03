@@ -277,7 +277,7 @@ const renderStars = (rating: number) => {
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-8">Specialties</h2>
         <div class="flex flex-wrap gap-3">
           {platform.specialties.map((specialty, index) => (
-            <span class="bg-gradient-to-r from-brand-primary-100 to-brand-accent-100 text-brand-primary-700 px-6 py-3 rounded-full font-sans font-semibold text-sm hover:shadow-md transition-all cursor-default">
+            <span class="bg-white border-2 border-brand-primary-200 text-brand-primary-700 px-5 py-2.5 rounded-lg font-sans font-medium text-sm hover:border-brand-primary-300 hover:bg-brand-primary-50 transition-all">
               {specialty}
             </span>
           ))}
@@ -285,21 +285,15 @@ const renderStars = (rating: number) => {
       </div>
 
       {/* Final CTA - Enhanced */}
-      <div class="relative bg-gradient-to-br from-brand-primary-600 via-brand-secondary-600 to-brand-accent-600 rounded-3xl p-12 text-white text-center overflow-hidden shadow-xl">
-        {/* Background pattern */}
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">
+      <div class="bg-gradient-to-br from-brand-primary-50 via-white to-brand-accent-50 rounded-2xl border border-brand-primary-100 p-12 text-center shadow-sb">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Ready to Get Started with {platform.name}?
           </h2>
-          <p class="font-sans text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p class="font-sans text-lg md:text-xl text-neutral-600 mb-8">
             Take the first step toward better mental health with professional, licensed therapists.
           </p>
-          <a href="#" class="btn btn-light inline-flex items-center font-sans font-bold text-lg px-8 py-4 shadow-xl hover:shadow-2xl">
+          <a href="#" class="inline-flex items-center justify-center bg-brand-primary-600 text-white px-8 py-4 rounded-lg font-heading font-medium hover:bg-brand-primary-700 transition-all shadow-sb hover:shadow-sb-hover">
             Visit {platform.name}
             <ArrowRight class="ml-2 h-6 w-6" />
           </a>
