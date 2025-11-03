@@ -1,21 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ArrowRight } from 'lucide-react';
+// import PlatformFinder from '../components/PlatformFinder';
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+
+
+      <div class="sb-container py-12">
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Find Your Perfect Therapy Platform</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Use our interactive tool to discover the ideal online therapy service based on your specific needs, budget, and preferences.
           </p>
         </div>
-        
-        <PlatformFinder />
+
+        {/* TODO: Convert PlatformFinder to Astro component or React island
+        <PlatformFinder client:load />
+        */}
+
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <p class="text-gray-600 text-center">
+            Interactive platform finder coming soon! In the meantime, explore our <a href="/best" class="text-indigo-600 hover:text-indigo-800">best platforms</a> and <a href="/reviews" class="text-indigo-600 hover:text-indigo-800">detailed reviews</a>.
+          </p>
+        </div>
         
         <div class="mt-12 bg-white rounded-lg shadow-md p-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Online Therapy Platform</h2>

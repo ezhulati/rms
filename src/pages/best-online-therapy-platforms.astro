@@ -4,11 +4,18 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
 
 const platforms = [];
 const features = [];
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Online Therapy Platforms of 2025</h1>
@@ -368,14 +375,16 @@ const features = [];
           
           <div class="mb-8">
             <p class="text-gray-600 mb-6">
-              Our comprehensive evaluation process involves hands-on testing, user feedback analysis, and expert consultation to provide you with accurate, unbiased information. Here's how we rate each platform:
+              Our comprehensive evaluation process involves hands-on testing, user feedback analysis, and expert consultation to provide you with accurate, unbiased information. We evaluate each platform based on therapist qualifications, user experience, pricing transparency, privacy measures, and specialized services.
             </p>
-            
-            <RatingBreakdown 
-              overallRating={4.2} 
+
+            {/* TODO: Add RatingBreakdown component with proper data
+            <RatingBreakdown
+              overallRating={4.2}
               categories={ratingCategories}
               showDescription={true}
             />
+            */}
           </div>
           
           <div class="bg-indigo-50 rounded-lg p-6">

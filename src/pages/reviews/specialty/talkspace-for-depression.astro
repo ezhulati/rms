@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar, Clock, Users } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -311,7 +318,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
               </li>
               <li class="flex items-start">
                 <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span class="text-gray-600">Individuals who benefit from combined therapy and medication</span>
+                <span class="text-gray-600">folks who benefit from combined therapy and medication</span>
               </li>
               <li class="flex items-start">
                 <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
@@ -366,7 +373,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
                 <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-3">
                   <Users class="h-5 w-5 text-indigo-600" />
                 </div>
-                <h4 class="font-bold text-gray-800 mb-2">Specialized Therapists</h4>
+                <h4 class="font-bold text-gray-800 mb-2">Noah Garcia</h4>
                 <p class="text-gray-600 text-sm">
                   Talkspace matches users with therapists who have specific experience treating depression and related conditions.
                 </p>
@@ -375,7 +382,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
                 <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-3">
                   <Brain class="h-5 w-5 text-indigo-600" />
                 </div>
-                <h4 class="font-bold text-gray-800 mb-2">Mood Tracking</h4>
+                <h4 class="font-bold text-gray-800 mb-2">Lucas Kim</h4>
                 <p class="text-gray-600 text-sm">
                   Built-in tools to monitor depression symptoms over time, helping both user and therapist track progress and identify patterns.
                 </p>
@@ -384,7 +391,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Brain, MessageCircle, Calendar,
                 <div class="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center mb-3">
                   <MessageCircle class="h-5 w-5 text-indigo-600" />
                 </div>
-                <h4 class="font-bold text-gray-800 mb-2">Depression Resources</h4>
+                <h4 class="font-bold text-gray-800 mb-2">Isabella Taylor</h4>
                 <p class="text-gray-600 text-sm">
                   Access to worksheets, exercises, and educational materials specifically designed for depression management.
                 </p>

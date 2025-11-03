@@ -1,0 +1,416 @@
+[
+  {
+    "oldName": "Jennifer",
+    "newName": "Amelia Patel",
+    "context": "case-study",
+    "demographics": {
+      "age": 42,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "Sophia",
+    "newName": "Sebastian Yang",
+    "context": "case-study",
+    "demographics": {
+      "age": 20,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "James",
+    "newName": "Camila O'Brien",
+    "context": "case-study",
+    "demographics": {
+      "age": 29,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "Emma",
+    "newName": "Diego Brown",
+    "context": "case-study",
+    "demographics": {
+      "age": 26,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "Michael",
+    "newName": "Mason Torres",
+    "context": "case-study",
+    "demographics": {
+      "age": 45,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "Sarah",
+    "newName": "Lucas Thomas",
+    "context": "case-study",
+    "demographics": {
+      "age": 32,
+      "gender": "unknown"
+    }
+  },
+  {
+    "oldName": "Rachel Martinez",
+    "newName": "Olivia Ramirez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Kevin Tran",
+    "newName": "Benjamin Wang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Laura Bennett",
+    "newName": "Daniel Thompson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Sarah Williams",
+    "newName": "Xavier Wang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "David Kim",
+    "newName": "Carlos Taylor",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Jessica Martinez",
+    "newName": "Sophia Rivera",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "David Wilson",
+    "newName": "Leah Wu",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Emma Rodriguez",
+    "newName": "Hannah Murphy",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Jennifer Lopez",
+    "newName": "Devon Levy",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Sarah Johnson",
+    "newName": "Miles Lee",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Michael Chen",
+    "newName": "Cameron Thompson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Personal Journeys",
+    "newName": "Jayden Levy",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Therapist Perspectives",
+    "newName": "Luna Wilson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Client Experiences",
+    "newName": "Noah Chen",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Jessica Chen",
+    "newName": "Layla Zhang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Michael Torres",
+    "newName": "Matthew Liu",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Samantha Lee",
+    "newName": "Jackson Yang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Specialized Therapists",
+    "newName": "Noah Garcia",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Mood Tracking",
+    "newName": "Lucas Kim",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Depression Resources",
+    "newName": "Isabella Taylor",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Coverage Details",
+    "newName": "James Lopez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Supported Platforms",
+    "newName": "Harper Sanchez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Session Limits",
+    "newName": "Grace Wang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Payment Plans",
+    "newName": "Sebastian Gonzalez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Program Structure",
+    "newName": "Amelia Zhang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Additional Resources",
+    "newName": "Victoria Tran",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Therapist Interaction",
+    "newName": "Ethan Ramirez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Subscription Plans",
+    "newName": "Sophia Sullivan",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Value Assessment",
+    "newName": "Henry Liu",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Ideal For",
+    "newName": "Elijah Ramirez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Getting Started",
+    "newName": "Isaac Sullivan",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Communication Options",
+    "newName": "Emily Harris",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Platform Features",
+    "newName": "Olivia Williams",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Subscription Plans",
+    "newName": "Kai Lee",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Value Assessment",
+    "newName": "Isaac Walsh",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Ideal For",
+    "newName": "Noah Wang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Getting Started",
+    "newName": "Miles Nguyen",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Treatment Programs",
+    "newName": "Jordan Park",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Treatment Approach",
+    "newName": "Lucas Johnson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "PrecisionRx Technology",
+    "newName": "Marcus Sanchez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Subscription Plans",
+    "newName": "Natalie Rosenberg",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Insurance Coverage",
+    "newName": "Henry Cohen",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Additional Costs",
+    "newName": "Carlos Wilson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Value Assessment",
+    "newName": "James Johnson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Provider Types",
+    "newName": "Isaac Jackson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Treatment Effectiveness",
+    "newName": "Matthew Rosenberg",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Ideal For",
+    "newName": "Aria Kim",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Technical Performance",
+    "newName": "Daniel White",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Backup Plan",
+    "newName": "Harper Cohen",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Private Space",
+    "newName": "Jackson Martinez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Best For",
+    "newName": "Oliver Torres",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Communication Pros",
+    "newName": "Harper Wilson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Communication Cons",
+    "newName": "James O'Brien",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Key Features",
+    "newName": "Daniel Davis",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Best For",
+    "newName": "Ava Harris",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Best For",
+    "newName": "Amelia Garcia",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Key Features",
+    "newName": "Jordan Zhang",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Individual Therapy",
+    "newName": "Natalie Wilson",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Group Therapy",
+    "newName": "Xavier Rodriguez",
+    "context": "blog-comment",
+    "demographics": {}
+  },
+  {
+    "oldName": "Psychodynamic Therapy",
+    "newName": "Matthew Johnson",
+    "context": "blog-comment",
+    "demographics": {}
+  }
+]

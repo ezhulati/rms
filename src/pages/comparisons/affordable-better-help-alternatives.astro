@@ -4,11 +4,18 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
 
 const platforms = [];
 const features = [];
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Affordable BetterHelp Alternatives in 2025</h1>

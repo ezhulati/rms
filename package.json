@@ -15,7 +15,9 @@
     "update-components": "node scripts/update-components.js",
     "bulk-replace": "node scripts/bulk-replace-images.js",
     "fix-buttons": "node scripts/fix-button-styles.js",
-    "crawl-404s": "node scripts/crawl-404s.js"
+    "crawl-404s": "node scripts/crawl-404s.js",
+    "migrate-reviewers": "node scripts/migrate-reviewers.js",
+    "generate-headshots": "node scripts/generate-headshots.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

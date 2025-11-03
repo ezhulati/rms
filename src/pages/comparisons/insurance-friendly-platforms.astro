@@ -4,11 +4,18 @@ import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Se
 
 const platforms = [];
 const features = [];
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Insurance-Friendly Online Therapy Platforms</h1>
@@ -105,7 +112,7 @@ const features = [];
                   </ul>
                 </div>
                 <div>
-                  <h4 class="font-bold text-gray-800 mb-3">Key Features</h4>
+                  <h4 class="font-bold text-gray-800 mb-3">Jordan Zhang</h4>
                   <ul class="space-y-2">
                     {platform.features.map((feature, i) => (
                       <li key={i} class="flex items-start">

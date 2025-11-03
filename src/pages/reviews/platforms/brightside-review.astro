@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -94,12 +101,15 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         </div>
 
         {/* Rating Breakdown */}
+        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="mb-8">
-          <RatingBreakdown 
-            overallRating={4.2} 
+          {/*
+          <RatingBreakdown
+            overallRating={4.2}
             categories={ratingCategories}
             showDescription={true}
           />
+          */}
         </div>
 
         {/* Quick Facts */}
@@ -207,7 +217,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             <h3 class="text-xl font-bold text-gray-800 mb-4">How Brightside Works</h3>
             
             <div class="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 class="font-bold text-gray-800 mb-3">Getting Started</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Miles Nguyen</h4>
               <ol class="list-decimal pl-5 space-y-2 text-gray-600">
                 <li>Complete comprehensive assessment about symptoms and history</li>
                 <li>Choose between therapy, medication, or combined care</li>
@@ -219,7 +229,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h4 class="font-bold text-gray-800 mb-3">Treatment Programs</h4>
+                <h4 class="font-bold text-gray-800 mb-3">Jordan Park</h4>
                 <p class="text-gray-600 mb-3">
                   Brightside offers three main treatment options:
                 </p>
@@ -234,7 +244,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
               </div>
               
               <div>
-                <h4 class="font-bold text-gray-800 mb-3">Treatment Approach</h4>
+                <h4 class="font-bold text-gray-800 mb-3">Lucas Johnson</h4>
                 <p class="text-gray-600 mb-3">
                   Brightside uses evidence-based approaches including:
                 </p>
@@ -248,7 +258,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">PrecisionRx Technology</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Marcus Sanchez</h4>
               <p class="text-gray-600 mb-3">
                 Brightside's unique feature is their PrecisionRx technology, which:
               </p>
@@ -278,7 +288,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-indigo-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Subscription Plans</h4>
+                <h4 class="font-bold text-gray-800">Natalie Rosenberg</h4>
               </div>
               <div class="p-4">
                 <div class="space-y-4">
@@ -321,7 +331,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
                 <div class="bg-indigo-50 p-4 border-b border-gray-200">
-                  <h4 class="font-bold text-gray-800">Insurance Coverage</h4>
+                  <h4 class="font-bold text-gray-800">Henry Cohen</h4>
                 </div>
                 <div class="p-4">
                   <p class="text-gray-600">
@@ -338,7 +348,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
               
               <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
                 <div class="bg-indigo-50 p-4 border-b border-gray-200">
-                  <h4 class="font-bold text-gray-800">Additional Costs</h4>
+                  <h4 class="font-bold text-gray-800">Carlos Wilson</h4>
                 </div>
                 <div class="p-4">
                   <ul class="space-y-2 text-gray-600">
@@ -360,7 +370,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <h4 class="font-bold text-gray-800 mb-3">James Johnson</h4>
               <p class="text-gray-600 mb-3">
                 Brightside's value proposition depends on your needs and insurance coverage:
               </p>
@@ -400,7 +410,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </ul>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Provider Types</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Isaac Jackson</h4>
               <p class="text-gray-600 mb-3">
                 Brightside maintains two types of providers:
               </p>
@@ -443,7 +453,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Treatment Effectiveness</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Matthew Rosenberg</h4>
               <p class="text-gray-600 mb-3">
                 Brightside reports strong outcomes for their treatment approach:
               </p>
@@ -473,16 +483,16 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-green-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Ideal For</h4>
+                <h4 class="font-bold text-gray-800">Aria Kim</h4>
               </div>
               <div class="p-4">
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                  <li><strong>Individuals with depression or anxiety</strong> seeking specialized, evidence-based treatment</li>
+                  <li><strong>people with depression or anxiety</strong> seeking specialized, evidence-based treatment</li>
                   <li><strong>Those who prefer a data-driven approach</strong> to mental health treatment</li>
                   <li><strong>People needing both therapy and medication</strong> in an integrated platform</li>
                   <li><strong>Insurance holders</strong> looking for covered mental health care</li>
                   <li><strong>Those who value structured treatment</strong> with regular progress tracking</li>
-                  <li><strong>Individuals seeking precision medication management</strong> for mood disorders</li>
+                  <li><strong>folks seeking precision medication management</strong> for mood disorders</li>
                 </ul>
               </div>
             </div>
@@ -495,10 +505,10 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
                   <li><strong>Those seeking treatment for other mental health conditions</strong> beyond depression and anxiety</li>
                   <li><strong>People who prefer a more flexible, less structured approach</strong> to therapy</li>
-                  <li><strong>Individuals seeking the lowest-cost option</strong> without insurance coverage</li>
+                  <li><strong>individuals seeking the lowest-cost option</strong> without insurance coverage</li>
                   <li><strong>Those needing couples or family therapy</strong></li>
                   <li><strong>People in crisis</strong> or with severe mental health conditions requiring intensive care</li>
-                  <li><strong>Individuals in states where Brightside isn't available</strong></li>
+                  <li><strong>people in states where Brightside isn't available</strong></li>
                 </ul>
               </div>
             </div>
@@ -578,11 +588,11 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </p>
             
             <p class="text-gray-600 mb-4">
-              While the platform's focus on specific conditions and structured approach may not suit everyone, it provides excellent value for those seeking targeted treatment for depression or anxiety, especially with insurance coverage. The PrecisionRx technology and comprehensive care model demonstrate a commitment to evidence-based treatment.
+              While the platform's focus on specific conditions and structured approach may not suit everyone, it provides excellent value for those seeking targeted treatment for depression or anxiety, especially with insurance coverage. The PrecisionRx technology and comprehensive care model show a commitment to evidence-based treatment.
             </p>
             
             <p class="text-gray-600">
-              Brightside is best suited for individuals specifically seeking treatment for depression or anxiety who appreciate a data-driven, structured approach to mental health care. The combination of therapy, medication management, and progress tracking makes it particularly effective for those who want comprehensive, measurable care. However, those seeking treatment for other conditions or preferring a more flexible approach should consider alternatives.
+              Brightside is best suited for people specifically seeking treatment for depression or anxiety who appreciate a data-driven, structured approach to mental health care. The combination of therapy, medication management, and progress tracking makes it particularly effective for those who want comprehensive, measurable care. However, those seeking treatment for other conditions or preferring a more flexible approach should consider alternatives.
             </p>
           </div>
         </div>

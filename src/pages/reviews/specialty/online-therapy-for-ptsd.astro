@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, Heart } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -28,7 +35,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, He
                 <span class="text-gray-600">4.0/5 - PTSD Treatment Rating</span>
               </div>
               <div class="flex flex-wrap gap-4">
-                <a href="/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Best Platforms for PTSD</a>
+                <a href="/best/conditions/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Best Platforms for PTSD</a>
                 <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Best Match</a>
               </div>
             </div>
@@ -180,7 +187,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, Shield, Clock, Users, Brain, He
             Connect with a specialized trauma therapist through one of our recommended online therapy platforms.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Top PTSD Platforms</a>
+            <a href="/best/conditions/best-for-ptsd" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">View Top PTSD Platforms</a>
             <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find Your Best Match</a>
           </div>
         </div>

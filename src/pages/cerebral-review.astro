@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -94,12 +101,15 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         </div>
 
         {/* Rating Breakdown */}
+        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="mb-8">
-          <RatingBreakdown 
-            overallRating={4.0} 
+          {/*
+          <RatingBreakdown
+            overallRating={4.0}
             categories={ratingCategories}
             showDescription={true}
           />
+          */}
         </div>
 
         {/* Quick Facts */}

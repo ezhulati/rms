@@ -1,10 +1,24 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
+
+const featuredArticle = {
+  image: '',
+  title: '',
+  date: '',
+  author: '',
+  readTime: '',
+  excerpt: '',
+  url: '#',
+  tags: []
+};
+const newsArticles = [];
+const otherArticles = [];
 ---
 
 <BaseLayout>
-<BlogLayout>
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
       {/* Breadcrumb */}
       <div class="flex items-center text-sm text-gray-500 mb-6">
         <a href="/" class="hover:text-indigo-600">Home</a>
@@ -22,7 +36,7 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
         </p>
       </div>
 
-      {/* Featured Article */}
+{/*       {/* Featured Article */}
       <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
         <div class="md:flex">
           <div class="md:w-1/2">
@@ -49,7 +63,7 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
             </div>
             
             <h2 class="text-2xl font-bold text-gray-800 mb-4">
-              <Link to={featuredArticle.url} class="hover:text-indigo-600">
+              <a href={featuredArticle.url} class="hover:text-indigo-600">
                 {featuredArticle.title}
               </a>
             </h2>
@@ -66,15 +80,15 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
               ))}
             </div>
             
-            <Link 
-              to={featuredArticle.url} 
+            <a
+              href={featuredArticle.url}
               class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
             >
               Read full article <ArrowRight class="h-4 w-4 ml-1" />
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Article Grid */}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -98,7 +112,7 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
               </div>
               
               <h3 class="text-xl font-bold text-gray-800 mb-3">
-                <Link to={article.url} class="hover:text-indigo-600">
+                <a href={article.url} class="hover:text-indigo-600">
                   {article.title}
                 </a>
               </h3>
@@ -117,8 +131,8 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
               
               <div class="flex justify-between items-center">
                 <span class="text-sm text-gray-500">{article.author}</span>
-                <Link 
-                  to={article.url} 
+                <a
+                  href={article.url}
                   class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
                 >
                   Read more <ArrowRight class="h-4 w-4 ml-1" />
@@ -180,5 +194,6 @@ import { Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
           </a>
         </div>
       </div>
-    </BlogLayout>
+    </div>
+  </div>
 </BaseLayout>

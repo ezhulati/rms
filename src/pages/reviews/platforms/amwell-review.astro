@@ -3,12 +3,32 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 const features = [];
+
+const ratings = {
+  overall: 4.5,
+  therapistQuality: 4.5,
+  userExperience: 4.0,
+  pricing: 3.5,
+  customerService: 4.0,
+  features: 4.0
+};
+
+const pros = [];
+const cons = [];
+const pricingTiers = [];
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
       
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Amwell Online Therapy Review</h1>
@@ -40,34 +60,37 @@ const features = [];
         </div>
 
         {/* Rating Breakdown */}
+        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="bg-white rounded-lg shadow-md p-8 mb-12">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Rating Breakdown</h2>
           <div class="space-y-6">
-            <RatingBreakdown 
-              category="Therapist Quality" 
-              rating={ratings.therapistQuality} 
+            {/*
+            <RatingBreakdown
+              category="Therapist Quality"
+              rating={ratings.therapistQuality}
               description="Amwell employs licensed therapists and board-certified psychiatrists with an average of 15 years of experience. All providers are credentialed and go through a thorough vetting process. The quality of providers is generally high, though the selection may be more limited than on some dedicated mental health platforms."
             />
-            <RatingBreakdown 
-              category="User Experience" 
-              rating={ratings.userExperience} 
+            <RatingBreakdown
+              category="User Experience"
+              rating={ratings.userExperience}
               description="The platform offers a straightforward booking process and reliable video sessions. However, the user interface feels more clinical than some competitors, and the mobile app receives mixed reviews. The lack of messaging options and between-session support tools limits the overall experience."
             />
-            <RatingBreakdown 
-              category="Pricing" 
-              rating={ratings.pricing} 
+            <RatingBreakdown
+              category="Pricing"
+              rating={ratings.pricing}
               description="Without insurance, Amwell's per-session costs are higher than subscription-based platforms. However, with insurance coverage, it can be very affordable, sometimes requiring only a copay. The pay-per-visit model offers flexibility but may be more expensive for those seeking regular weekly therapy."
             />
-            <RatingBreakdown 
-              category="Customer Service" 
-              rating={ratings.customerService} 
+            <RatingBreakdown
+              category="Customer Service"
+              rating={ratings.customerService}
               description="Amwell provides 24/7 customer support via phone and email. Their support team is generally responsive and helpful, particularly with insurance and technical issues. The platform also offers detailed FAQs and resources to help users navigate their services."
             />
-            <RatingBreakdown 
-              category="Features & Resources" 
-              rating={ratings.features} 
+            <RatingBreakdown
+              category="Features & Resources"
+              rating={ratings.features}
               description="As a comprehensive telehealth platform, Amwell offers the convenience of medical and mental health services in one place. However, it lacks some specialized mental health features found on dedicated platforms, such as worksheets, journaling tools, or messaging-based therapy options."
             />
+            */}
           </div>
         </div>
 

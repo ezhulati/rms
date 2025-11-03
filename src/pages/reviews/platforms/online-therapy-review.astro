@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -94,12 +101,15 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         </div>
 
         {/* Rating Breakdown */}
+        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="mb-8">
-          <RatingBreakdown 
-            overallRating={4.0} 
+          {/*
+          <RatingBreakdown
+            overallRating={4.0}
             categories={ratingCategories}
             showDescription={true}
           />
+          */}
         </div>
 
         {/* Quick Facts */}
@@ -207,7 +217,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             <h3 class="text-xl font-bold text-gray-800 mb-4">How Online-Therapy.com Works</h3>
             
             <div class="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 class="font-bold text-gray-800 mb-3">Program Structure</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Amelia Zhang</h4>
               <ol class="list-decimal pl-5 space-y-2 text-gray-600">
                 <li>Complete initial assessment and CBT introduction</li>
                 <li>Work through structured CBT sections at your own pace</li>
@@ -236,7 +246,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
               </div>
               
               <div>
-                <h4 class="font-bold text-gray-800 mb-3">Additional Resources</h4>
+                <h4 class="font-bold text-gray-800 mb-3">Victoria Tran</h4>
                 <p class="text-gray-600 mb-3">
                   Beyond the core CBT program, users get access to:
                 </p>
@@ -252,7 +262,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Therapist Interaction</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Ethan Ramirez</h4>
               <p class="text-gray-600 mb-3">
                 Therapist support varies by subscription plan:
               </p>
@@ -282,7 +292,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-indigo-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Subscription Plans</h4>
+                <h4 class="font-bold text-gray-800">Sophia Sullivan</h4>
               </div>
               <div class="p-4">
                 <div class="space-y-4">
@@ -323,7 +333,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Henry Liu</h4>
               <p class="text-gray-600 mb-3">
                 Online-Therapy.com's value proposition depends on what you're looking for:
               </p>
@@ -334,7 +344,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 </li>
                 <li class="flex items-start">
                   <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                  <span>Cost-effective for self-motivated individuals who will use the resources</span>
+                  <span>Cost-effective for self-motivated people who will use the resources</span>
                 </li>
                 <li class="flex items-start">
                   <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
@@ -353,16 +363,16 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-green-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Ideal For</h4>
+                <h4 class="font-bold text-gray-800">Elijah Ramirez</h4>
               </div>
               <div class="p-4">
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
                   <li><strong>People specifically seeking CBT</strong> who want a structured, evidence-based approach</li>
-                  <li><strong>Self-motivated individuals</strong> who will engage with the program materials</li>
+                  <li><strong>Self-motivated folks</strong> who will engage with the program materials</li>
                   <li><strong>Those dealing with anxiety, depression, or stress</strong> that responds well to CBT</li>
                   <li><strong>People who want daily support</strong> through feedback and resources</li>
                   <li><strong>Those who prefer a structured learning approach</strong> to therapy</li>
-                  <li><strong>Individuals interested in holistic wellness</strong> with yoga and meditation</li>
+                  <li><strong>individuals interested in holistic wellness</strong> with yoga and meditation</li>
                 </ul>
               </div>
             </div>
@@ -375,7 +385,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
                   <li><strong>Those needing medication management</strong> as this is not available</li>
                   <li><strong>People seeking insurance coverage</strong> for therapy</li>
-                  <li><strong>Individuals who prefer other therapy approaches</strong> besides CBT</li>
+                  <li><strong>individuals who prefer other therapy approaches</strong> besides CBT</li>
                   <li><strong>Those with severe mental health conditions</strong> requiring intensive treatment</li>
                   <li><strong>People who prefer more flexible, unstructured therapy</strong></li>
                   <li><strong>Those needing crisis support</strong> or immediate assistance</li>

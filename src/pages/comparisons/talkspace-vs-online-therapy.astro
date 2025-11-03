@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="p-8">
@@ -388,15 +395,15 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         <div class="bg-white rounded-lg shadow-md p-6 mb-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Related Comparisons</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/compare/platforms/betterhelp-vs-talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+            <a href="/better-help-vs-talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
               <h3 class="font-bold text-gray-800 mb-2">BetterHelp vs Talkspace</h3>
               <p class="text-gray-600 text-sm">Compare two of the largest online therapy platforms.</p>
             </a>
-            <a href="/compare/platforms/betterhelp-vs-online-therapy" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+            <a href="/comparisons/better-help-vs-online-therapy" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
               <h3 class="font-bold text-gray-800 mb-2">BetterHelp vs Online-Therapy.com</h3>
               <p class="text-gray-600 text-sm">Compare general therapy with specialized CBT approach.</p>
             </a>
-            <a href="/compare/platforms/cerebral-vs-talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+            <a href="/comparisons/cerebral-vs-talkspace" class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
               <h3 class="font-bold text-gray-800 mb-2">Cerebral vs Talkspace</h3>
               <p class="text-gray-600 text-sm">Compare two platforms offering medication management.</p>
             </a>

@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users, Brain } from 'lucide-react';
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div class="md:flex">
@@ -94,12 +101,15 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
         </div>
 
         {/* Rating Breakdown */}
+        {/* TODO: Add RatingBreakdown component with proper data */}
         <div class="mb-8">
-          <RatingBreakdown 
-            overallRating={4.0} 
+          {/*
+          <RatingBreakdown
+            overallRating={4.0}
             categories={ratingCategories}
             showDescription={true}
           />
+          */}
         </div>
 
         {/* Quick Facts */}
@@ -126,7 +136,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 </div>
               </div>
               <div>
-                <h3 class="font-bold text-gray-800 mb-1">Communication Options</h3>
+                <h3 class="font-bold text-gray-800 mb-1">Emily Harris</h3>
                 <div class="flex space-x-2 mb-1">
                   <MessageSquare class="h-4 w-4 text-indigo-600" title="Messaging" />
                   <Video class="h-4 w-4 text-indigo-600" title="Video" />
@@ -207,7 +217,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             <h3 class="text-xl font-bold text-gray-800 mb-4">How Calmerry Works</h3>
             
             <div class="bg-gray-50 rounded-lg p-6 mb-6">
-              <h4 class="font-bold text-gray-800 mb-3">Getting Started</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Isaac Sullivan</h4>
               <ol class="list-decimal pl-5 space-y-2 text-gray-600">
                 <li>Complete brief assessment about your needs and preferences</li>
                 <li>Choose your subscription plan</li>
@@ -219,7 +229,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h4 class="font-bold text-gray-800 mb-3">Communication Options</h4>
+                <h4 class="font-bold text-gray-800 mb-3">Emily Harris</h4>
                 <p class="text-gray-600 mb-3">
                   Calmerry offers two main ways to communicate with your therapist:
                 </p>
@@ -232,7 +242,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
               </div>
               
               <div>
-                <h4 class="font-bold text-gray-800 mb-3">Platform Features</h4>
+                <h4 class="font-bold text-gray-800 mb-3">Olivia Williams</h4>
                 <p class="text-gray-600 mb-3">
                   The platform includes several helpful features:
                 </p>
@@ -251,7 +261,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-indigo-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Subscription Plans</h4>
+                <h4 class="font-bold text-gray-800">Kai Lee</h4>
               </div>
               <div class="p-4">
                 <div class="space-y-4">
@@ -289,7 +299,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6">
-              <h4 class="font-bold text-gray-800 mb-3">Value Assessment</h4>
+              <h4 class="font-bold text-gray-800 mb-3">Isaac Walsh</h4>
               <p class="text-gray-600 mb-3">
                 Calmerry's value proposition centers on affordability and flexibility:
               </p>
@@ -319,11 +329,11 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
               <div class="bg-green-50 p-4 border-b border-gray-200">
-                <h4 class="font-bold text-gray-800">Ideal For</h4>
+                <h4 class="font-bold text-gray-800">Noah Wang</h4>
               </div>
               <div class="p-4">
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                  <li><strong>Budget-conscious individuals</strong> seeking affordable therapy options</li>
+                  <li><strong>Budget-conscious folks</strong> seeking affordable therapy options</li>
                   <li><strong>People who prefer text-based communication</strong> and flexible scheduling</li>
                   <li><strong>Those dealing with mild to moderate mental health issues</strong> like anxiety or depression</li>
                   <li><strong>Users who want a simple, straightforward therapy experience</strong> without extra features</li>
@@ -340,7 +350,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
                   <li><strong>Those needing insurance coverage</strong> for therapy</li>
                   <li><strong>People seeking medication management</strong> services</li>
-                  <li><strong>Individuals with severe mental health conditions</strong> requiring intensive treatment</li>
+                  <li><strong>folks with severe mental health conditions</strong> requiring intensive treatment</li>
                   <li><strong>Users wanting extensive self-help resources</strong> and tools</li>
                   <li><strong>Those preferring a large selection of therapists</strong> to choose from</li>
                 </ul>
@@ -426,7 +436,7 @@ import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Vi
             </p>
             
             <p class="text-gray-600">
-              Calmerry is best suited for budget-conscious individuals seeking therapy for mild to moderate mental health concerns. Its combination of affordable pricing, flexible plans, and quality basic services makes it an excellent choice for those who want professional support without the higher costs of premium platforms. However, those needing insurance coverage or additional services like medication management should consider alternatives.
+              Calmerry is best suited for budget-conscious folks seeking therapy for mild to moderate mental health concerns. Its combination of affordable pricing, flexible plans, and quality basic services makes it an excellent choice for those who want professional support without the higher costs of premium platforms. However, those needing insurance coverage or additional services like medication management should consider alternatives.
             </p>
           </div>
         </div>

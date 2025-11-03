@@ -1,10 +1,23 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lucide-react';
+
+const featuredStory = {
+  image: '',
+  title: '',
+  date: '',
+  author: '',
+  readTime: '',
+  excerpt: '',
+  url: '#',
+  tags: []
+};
+const otherStories = [];
 ---
 
 <BaseLayout>
-<BlogLayout>
+<div class="bg-gray-50 min-h-screen">
+      <div class="sb-container py-12">
       {/* Breadcrumb */}
       <div class="flex items-center text-sm text-gray-500 mb-6">
         <a href="/" class="hover:text-indigo-600">Home</a>
@@ -49,7 +62,7 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
             </div>
             
             <h2 class="text-2xl font-bold text-gray-800 mb-4">
-              <Link to={featuredStory.url} class="hover:text-indigo-600">
+              <a href={featuredStory.url} class="hover:text-indigo-600">
                 {featuredStory.title}
               </a>
             </h2>
@@ -66,8 +79,8 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
               ))}
             </div>
             
-            <Link 
-              to={featuredStory.url} 
+            <a
+              href={featuredStory.url}
               class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
             >
               Read full story <ArrowRight class="h-4 w-4 ml-1" />
@@ -98,7 +111,7 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
               </div>
               
               <h3 class="text-xl font-bold text-gray-800 mb-3">
-                <Link to={story.url} class="hover:text-indigo-600">
+                <a href={story.url} class="hover:text-indigo-600">
                   {story.title}
                 </a>
               </h3>
@@ -117,8 +130,8 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
               
               <div class="flex justify-between items-center">
                 <span class="text-sm text-gray-500">{story.author}</span>
-                <Link 
-                  to={story.url} 
+                <a
+                  href={story.url}
                   class="inline-flex items-center text-indigo-600 hover:text-indigo-800"
                 >
                   Read more <ArrowRight class="h-4 w-4 ml-1" />
@@ -135,8 +148,8 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div class="bg-pink-50 rounded-lg p-6 text-center">
             <Heart class="h-8 w-8 text-pink-600 mx-auto mb-3" />
-            <h4 class="font-bold text-gray-800 mb-2">Personal Journeys</h4>
-            <p class="text-sm text-gray-600 mb-3">Stories of individual mental health experiences and recovery</p>
+            <h4 class="font-bold text-gray-800 mb-2">Jayden Levy</h4>
+            <p class="text-sm text-gray-600 mb-3">Stories of folks mental health experiences and recovery</p>
             <a href="#" class="text-pink-600 hover:text-pink-800 text-sm font-medium">
               View stories <ArrowRight class="h-3 w-3 inline ml-1" />
             </a>
@@ -144,7 +157,7 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
           
           <div class="bg-blue-50 rounded-lg p-6 text-center">
             <MessageCircle class="h-8 w-8 text-blue-600 mx-auto mb-3" />
-            <h4 class="font-bold text-gray-800 mb-2">Therapist Perspectives</h4>
+            <h4 class="font-bold text-gray-800 mb-2">Luna Wilson</h4>
             <p class="text-sm text-gray-600 mb-3">Insights and experiences from mental health professionals</p>
             <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
               View stories <ArrowRight class="h-3 w-3 inline ml-1" />
@@ -153,7 +166,7 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
           
           <div class="bg-green-50 rounded-lg p-6 text-center">
             <User class="h-8 w-8 text-green-600 mx-auto mb-3" />
-            <h4 class="font-bold text-gray-800 mb-2">Client Experiences</h4>
+            <h4 class="font-bold text-gray-800 mb-2">Noah Chen</h4>
             <p class="text-sm text-gray-600 mb-3">First-hand accounts of therapy and mental health treatment</p>
             <a href="#" class="text-green-600 hover:text-green-800 text-sm font-medium">
               View stories <ArrowRight class="h-3 w-3 inline ml-1" />
@@ -175,5 +188,6 @@ import { Calendar, User, Tag, Clock, ArrowRight, Heart, MessageCircle } from 'lu
           All submissions are reviewed by our editorial team. We prioritize diverse perspectives and authentic experiences.
         </p>
       </div>
-    </BlogLayout>
+    </div>
+  </div>
 </BaseLayout>

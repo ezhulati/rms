@@ -3,12 +3,23 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Star, CheckCircle, XCircle, MessageCircle, Video, Phone, Clock } from 'lucide-react';
 
 const platforms = [];
+
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const starsArray = Array(5).fill(0).map((_, i) => i < fullStars);
+  return starsArray;
+};
+
+
+const benefits = [];
+
+const communicationMethods = [];
 ---
 
 <BaseLayout>
-<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+<div class="bg-gray-50 min-h-screen">
       
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="sb-container py-12">
         {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Online Therapy Communication Features Compared</h1>
@@ -76,7 +87,7 @@ const platforms = [];
                 </div>
                 
                 <div class="bg-indigo-50 rounded-lg p-4">
-                  <h4 class="font-bold text-gray-800 mb-1">Best For</h4>
+                  <h4 class="font-bold text-gray-800 mb-1">Oliver Torres</h4>
                   <p class="text-gray-700">{method.bestFor}</p>
                 </div>
               </div>
@@ -221,7 +232,7 @@ const platforms = [];
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Communication Pros</h4>
+                        <h4 class="font-bold text-gray-800 mb-3">Harper Wilson</h4>
                         <ul class="space-y-2">
                           {platform.pros.map((pro, i) => (
                             <li key={i} class="flex items-start">
@@ -233,7 +244,7 @@ const platforms = [];
                       </div>
 
                       <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Communication Cons</h4>
+                        <h4 class="font-bold text-gray-800 mb-3">James O'Brien</h4>
                         <ul class="space-y-2">
                           {platform.cons.map((con, i) => (
                             <li key={i} class="flex items-start">
