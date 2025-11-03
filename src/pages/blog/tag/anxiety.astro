@@ -1,21 +1,210 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Heart, FileText, Target, CheckCircle, ArrowRight, BookOpen, Users } from 'lucide-react';
 ---
 
-<BaseLayout title="Anxiety | RealMindSolutions" description="Anxiety Resources">
+<BaseLayout title="Anxiety Resources & Articles | RealMindSolutions" description="Comprehensive anxiety resources—articles, guides, therapy platform reviews, and tools for managing anxiety disorders, panic attacks, and stress.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Anxiety Resources</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Anxiety-related articles</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Everything you need to understand, manage, and find treatment for anxiety disorders.</p>
     </div>
   </section>
 
-  {/* Main Content */}
+  {/* Introduction */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Anxiety is one of the most common mental health conditions, affecting millions of people worldwide. Whether you're experiencing generalized anxiety, panic attacks, social anxiety, or specific phobias, you're not alone—and effective treatment is available.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This resource hub brings together everything we've published about anxiety: therapy platform reviews, evidence-based treatment information, self-help tools, and practical guides for managing symptoms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Best Resources for Anxiety */}
+  <section class="bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Top Anxiety Resources</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/best/conditions/best-for-anxiety" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Target className="h-6 w-6 text-brand-primary mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Best Platforms for Anxiety</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Top-rated online therapy platforms specifically for anxiety disorders, with CBT, exposure therapy, and specialized anxiety treatment.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Best Platforms
+          </div>
+        </a>
+
+        <a href="/tools/assessments/anxiety-screening" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <CheckCircle className="h-6 w-6 text-green-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Anxiety Screening Tool</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free, clinically-validated anxiety assessment to help you understand your symptoms and severity level.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Take Assessment
+          </div>
+        </a>
+
+        <a href="/resources/guides/therapy-types-explained" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <BookOpen className="h-6 w-6 text-purple-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Therapy Types for Anxiety</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Learn about CBT, exposure therapy, ACT, and other evidence-based approaches for treating anxiety disorders.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Explore Therapy Types
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/thought-record-worksheet" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <FileText className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">CBT Thought Record</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Free downloadable worksheet for identifying and challenging anxious thoughts using cognitive behavioral therapy techniques.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Download Worksheet
+          </div>
+        </a>
+
+        <a href="/resources/worksheets/stress-management-techniques" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Heart className="h-6 w-6 text-red-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Stress Management Techniques</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Breathing exercises, progressive muscle relaxation, and mindfulness practices for immediate anxiety relief.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            View Techniques
+          </div>
+        </a>
+
+        <a href="/resources/guides/crisis-resources" class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-3">
+            <Users className="h-6 w-6 text-orange-600 mr-2" />
+            <h3 class="text-xl font-bold text-gray-900">Crisis Resources</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">
+            Immediate support hotlines and resources if you're experiencing a mental health crisis or severe anxiety attack.
+          </p>
+          <div class="flex items-center text-sm text-brand-primary font-semibold">
+            <ArrowRight className="h-4 w-4 mr-1" />
+            Get Help Now
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Understanding Anxiety */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Understanding Anxiety</h2>
+
       <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+        <p class="text-gray-700 mb-4">
+          Anxiety disorders include generalized anxiety disorder (GAD), panic disorder, social anxiety disorder, specific phobias, and separation anxiety. While each has unique features, all involve excessive worry, fear, or nervousness that interferes with daily life.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Common Anxiety Symptoms:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 not-prose">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <h4 class="font-bold text-blue-900 mb-2">Physical Symptoms:</h4>
+            <ul class="space-y-1 text-sm text-blue-800">
+              <li>• Rapid heartbeat or palpitations</li>
+              <li>• Shortness of breath or hyperventilation</li>
+              <li>• Sweating, trembling, or shaking</li>
+              <li>• Muscle tension or restlessness</li>
+              <li>• Fatigue or difficulty sleeping</li>
+              <li>• Digestive problems</li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-4">
+            <h4 class="font-bold text-purple-900 mb-2">Mental/Emotional Symptoms:</h4>
+            <ul class="space-y-1 text-sm text-purple-800">
+              <li>• Excessive worry or rumination</li>
+              <li>• Racing thoughts or mind going blank</li>
+              <li>• Difficulty concentrating</li>
+              <li>• Irritability or feeling on edge</li>
+              <li>• Sense of impending danger or doom</li>
+              <li>• Avoidance of anxiety-triggering situations</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Evidence-Based Treatments:</h3>
+        <p class="text-gray-700 mb-4">
+          The most effective treatments for anxiety disorders include:
+        </p>
+        <ul class="text-gray-700 space-y-2 mb-6">
+          <li><strong>Cognitive Behavioral Therapy (CBT):</strong> Helps identify and change anxious thought patterns</li>
+          <li><strong>Exposure Therapy:</strong> Gradually facing feared situations to reduce avoidance</li>
+          <li><strong>Acceptance and Commitment Therapy (ACT):</strong> Building psychological flexibility around anxiety</li>
+          <li><strong>Mindfulness-Based Therapies:</strong> Learning to observe anxiety without judgment</li>
+          <li><strong>Medication:</strong> SSRIs, SNRIs, or anti-anxiety medications when appropriate</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Articles Coming Soon */}
+  <section class="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Anxiety Blog Articles</h2>
+        <p class="text-gray-700 mb-4">
+          We're building a comprehensive library of anxiety-related blog articles. Future posts will cover topics like:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+          <li>• Managing panic attacks at work</li>
+          <li>• Social anxiety in the digital age</li>
+          <li>• Anxiety vs. normal worry: knowing the difference</li>
+          <li>• Breathing techniques for immediate relief</li>
+          <li>• When to seek professional help for anxiety</li>
+          <li>• Anxiety and sleep: breaking the cycle</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          In the meantime, explore our existing anxiety resources above, or browse related tags below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Related Tags */}
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Related Topics</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/blog/tag/mental-health" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mental Health</a>
+        <a href="/blog/tag/therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy</a>
+        <a href="/blog/tag/therapy-types" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Therapy Types</a>
+        <a href="/blog/tag/self-care" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Self-Care</a>
+        <a href="/blog/tag/mindfulness" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Mindfulness</a>
+        <a href="/blog/tag/online-therapy" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">Online Therapy</a>
       </div>
     </div>
   </section>
