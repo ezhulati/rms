@@ -1,22 +1,564 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, AlertTriangle, CheckCircle, Lightbulb, BookOpen, TrendingUp, Zap } from 'lucide-react';
 ---
 
-<BaseLayout title="Thought Record Worksheet | RealMindSolutions" description="Thought Record Worksheet">
+<BaseLayout title="Thought Record Worksheet | RealMindSolutions" description="Standard CBT thought record for identifying and challenging automatic thoughts that trigger distressing emotions across anxiety, anger, sadness, and other difficult feelings.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Thought Record Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Standard CBT thought record.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Challenge distorted thinking patterns using Cognitive Behavioral Therapy (CBT).</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-blue-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start mb-6">
+          <Brain className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">How Thoughts Shape Your Emotions</h2>
+            <p class="text-gray-700 mb-4">
+              <strong>Cognitive Behavioral Therapy (CBT)</strong> is based on a simple but powerful principle: <em>It's not situations themselves that cause our emotions—it's how we interpret those situations.</em>
+            </p>
+            <div class="bg-white rounded-lg p-6 mb-4">
+              <h3 class="font-bold text-gray-900 mb-3 text-center">The CBT Model</h3>
+              <div class="flex items-center justify-center space-x-4">
+                <div class="bg-blue-100 rounded-lg p-4 text-center">
+                  <div class="font-bold text-blue-900 mb-1">Situation</div>
+                  <p class="text-xs text-blue-800">Something happens</p>
+                </div>
+                <div class="text-2xl text-gray-400">→</div>
+                <div class="bg-purple-100 rounded-lg p-4 text-center">
+                  <div class="font-bold text-purple-900 mb-1">Thought</div>
+                  <p class="text-xs text-purple-800">You interpret it</p>
+                </div>
+                <div class="text-2xl text-gray-400">→</div>
+                <div class="bg-pink-100 rounded-lg p-4 text-center">
+                  <div class="font-bold text-pink-900 mb-1">Emotion</div>
+                  <p class="text-xs text-pink-800">You feel something</p>
+                </div>
+                <div class="text-2xl text-gray-400">→</div>
+                <div class="bg-green-100 rounded-lg p-4 text-center">
+                  <div class="font-bold text-green-900 mb-1">Behavior</div>
+                  <p class="text-xs text-green-800">You react</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4">
+              <strong>Example:</strong> Your friend doesn't text you back.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div class="bg-red-50 rounded p-4">
+                <p class="font-bold text-red-900 mb-2">Unhelpful thought:</p>
+                <p class="text-red-800 mb-3">"They're mad at me. I did something wrong."</p>
+                <p class="font-bold text-red-900 mb-2">Emotion & behavior:</p>
+                <p class="text-red-800">Feel anxious (80%), ruminate all evening, avoid reaching out</p>
+              </div>
+              <div class="bg-green-50 rounded p-4">
+                <p class="font-bold text-green-900 mb-2">Balanced thought:</p>
+                <p class="text-green-800 mb-3">"They might be busy. I don't have evidence they're upset."</p>
+                <p class="font-bold text-green-900 mb-2">Emotion & behavior:</p>
+                <p class="text-green-800">Feel mildly concerned (30%), send a friendly check-in later</p>
+              </div>
+            </div>
+            <p class="text-gray-700 mt-4">
+              <strong>The key insight:</strong> By identifying and challenging unhelpful automatic thoughts, you can change how you feel and respond.
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* What Are Automatic Thoughts */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Zap className="h-8 w-8 text-yellow-500 mr-3" />
+          What Are Automatic Thoughts?
+        </h2>
+
+        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 mb-6">
+          <p class="text-gray-700 mb-4">
+            <strong>Automatic thoughts</strong> are the immediate interpretations or judgments that pop into your mind in response to a situation. They happen so quickly that we often don't notice them—but they have a powerful effect on our emotions.
+          </p>
+          <div class="bg-white rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-3">Characteristics of Automatic Thoughts:</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                <span><strong>Rapid</strong> — They happen automatically, without effort</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                <span><strong>Believable</strong> — They feel like facts, even when they're not</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                <span><strong>Distorted</strong> — They often contain cognitive errors</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">•</span>
+                <span><strong>Specific to the situation</strong> — They're about "right now," not general rules</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+          <h3 class="font-bold text-gray-900 mb-4">How to Catch Your Automatic Thoughts</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            When you notice a shift in your mood (anxiety, sadness, anger, shame), pause and ask:
+          </p>
+          <div class="space-y-2">
+            <div class="bg-blue-50 rounded p-3 text-sm text-blue-900">
+              <strong>•</strong> What just went through my mind?
+            </div>
+            <div class="bg-blue-50 rounded p-3 text-sm text-blue-900">
+              <strong>•</strong> What does this situation mean about me, others, or my future?
+            </div>
+            <div class="bg-blue-50 rounded p-3 text-sm text-blue-900">
+              <strong>•</strong> What am I afraid might happen?
+            </div>
+            <div class="bg-blue-50 rounded p-3 text-sm text-blue-900">
+              <strong>•</strong> What's the worst part about this situation for me?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Thought Record Template */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <BookOpen className="h-8 w-8 text-brand-primary mr-3" />
+          Thought Record
+        </h2>
+
+        <div class="bg-white border-2 border-gray-300 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-4">How to Use This Worksheet</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">1</div>
+                <div>
+                  <p class="font-bold text-gray-900">Situation</p>
+                  <p class="text-xs">When & where did this happen? Who was there? Be specific.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">2</div>
+                <div>
+                  <p class="font-bold text-gray-900">Emotions</p>
+                  <p class="text-xs">What did you feel? (anxious, sad, angry, ashamed?) Rate intensity 0-100%.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">3</div>
+                <div>
+                  <p class="font-bold text-gray-900">Automatic Thought</p>
+                  <p class="text-xs">What went through your mind? Write it as you thought it.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">4</div>
+                <div>
+                  <p class="font-bold text-gray-900">Evidence For</p>
+                  <p class="text-xs">What facts support this thought?</p>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">5</div>
+                <div>
+                  <p class="font-bold text-gray-900">Evidence Against</p>
+                  <p class="text-xs">What facts contradict this thought? What would you tell a friend?</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">6</div>
+                <div>
+                  <p class="font-bold text-gray-900">Balanced Thought</p>
+                  <p class="text-xs">What's a more realistic way to view this?</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">7</div>
+                <div>
+                  <p class="font-bold text-gray-900">Re-rate Emotions</p>
+                  <p class="text-xs">How intense are the emotions now? 0-100%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Thought Record Table */}
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs border-2 border-gray-300">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 12%">Situation<br/><span class="font-normal text-xs italic">When? Where?</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 10%">Emotions<br/><span class="font-normal text-xs italic">Type & intensity</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 15%">Automatic Thought<br/><span class="font-normal text-xs italic">What went through your mind?</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 13%">Evidence For<br/><span class="font-normal text-xs italic">Supporting facts</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 15%">Evidence Against<br/><span class="font-normal text-xs italic">Contradicting facts</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 18%">Balanced Thought<br/><span class="font-normal text-xs italic">More realistic view</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 7%">Re-rate<br/><span class="font-normal text-xs italic">0-100%</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Example row 1 - Anxiety */}
+              <tr class="bg-blue-50">
+                <td class="border border-gray-300 p-2">
+                  <strong class="text-blue-900">Example 1:</strong><br/>
+                  Boss asked to meet tomorrow, 3pm at office
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Anxious 85%<br/>
+                  Worried 75%
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "I'm going to get fired. I must have done something wrong."
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Meeting was scheduled suddenly. Boss seemed serious on email.
+                </td>
+                <td class="border border-gray-300 p-2">
+                  • My last performance review was good<br/>
+                  • I just completed a major project successfully<br/>
+                  • Boss schedules regular check-ins<br/>
+                  • I don't have evidence I'm getting fired
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "It's probably a routine check-in or about a new project. Even if there's a problem, that doesn't mean I'm getting fired. I'll find out tomorrow what it's about."
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Anxious 40%<br/>
+                  Worried 30%
+                </td>
+              </tr>
+
+              {/* Example row 2 - Social anxiety */}
+              <tr class="bg-purple-50">
+                <td class="border border-gray-300 p-2">
+                  <strong class="text-purple-900">Example 2:</strong><br/>
+                  Friend didn't laugh at my joke at dinner
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Embarrassed 70%<br/>
+                  Anxious 60%
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "I'm so awkward. They think I'm weird. I shouldn't have said that."
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Friend didn't laugh. There was an awkward pause.
+                </td>
+                <td class="border border-gray-300 p-2">
+                  • Friend smiled and moved conversation forward<br/>
+                  • Not every joke lands, that's normal<br/>
+                  • Friend still invited me to next week's event<br/>
+                  • We had good conversation rest of evening
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "One joke falling flat doesn't make me awkward. My friend didn't seem bothered—I'm overanalyzing. People don't judge friendships on single moments."
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Embarrassed 25%<br/>
+                  Anxious 20%
+                </td>
+              </tr>
+
+              {/* Blank rows for user */}
+              {[...Array(3)].map((_, i) => (
+                <tr key={i}>
+                  <td class="border border-gray-300 p-2 min-h-[100px]">&nbsp;<br/><br/><br/><br/></td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Questions to Challenge Thoughts */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb className="h-8 w-8 text-yellow-500 mr-3" />
+          Questions to Challenge Your Automatic Thoughts
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          When examining evidence against your thought, use these questions to think more objectively:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I confusing a thought with a fact?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> What evidence do I have that contradicts this thought?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> What would I tell a friend who had this thought?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I jumping to conclusions?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I focusing only on the negative and ignoring the positive?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I mind-reading (assuming I know what others think)?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I fortune-telling (predicting the future without evidence)?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> What's the worst that could happen? How likely is that?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I using extreme words like "always," "never," "completely"?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Is this thought helpful, even if it's partially true?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> What's another way to look at this situation?</p>
+          </div>
+          <div class="bg-blue-50 rounded p-3">
+            <p class="text-sm text-blue-900"><strong>•</strong> Am I setting unrealistic standards for myself?</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Common Cognitive Distortions Quick Reference */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Cognitive Distortions Quick Reference</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">All-or-Nothing Thinking</h3>
+            <p class="text-xs text-gray-600">Seeing things in black-and-white categories. "I didn't do it perfectly, so I failed."</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Overgeneralization</h3>
+            <p class="text-xs text-gray-600">One negative event becomes a pattern. "This always happens to me."</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Mental Filter</h3>
+            <p class="text-xs text-gray-600">Focusing exclusively on negatives, filtering out positives.</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Jumping to Conclusions</h3>
+            <p class="text-xs text-gray-600">Mind-reading or fortune-telling without evidence.</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Catastrophizing</h3>
+            <p class="text-xs text-gray-600">Expecting disaster. "What if...?" worst-case scenarios.</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Emotional Reasoning</h3>
+            <p class="text-xs text-gray-600">"I feel it, therefore it must be true."</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Should Statements</h3>
+            <p class="text-xs text-gray-600">Rigid rules using "should," "must," "ought." Leads to guilt and frustration.</p>
+          </div>
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
+            <h3 class="font-bold text-gray-900 mb-2 text-sm">Personalization</h3>
+            <p class="text-xs text-gray-600">Blaming yourself for things outside your control.</p>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-blue-100 rounded-lg p-4">
+          <p class="text-blue-900 text-sm">
+            <strong>Want more detail?</strong> See our <a href="/resources/worksheets/cognitive-distortion-worksheet" class="text-brand-primary font-bold hover:underline">Cognitive Distortion Worksheet</a> for in-depth examples and exercises.
+          </p>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+          Tips for Using Thought Records Effectively
+        </h2>
+
+        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-8">
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Fill it out when your mood shifts</h3>
+                <p class="text-sm text-gray-700">Don't wait hours later. Catch the thought while it's fresh.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Be specific about the situation</h3>
+                <p class="text-sm text-gray-700">Include time, place, who was there. Specificity helps identify patterns.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Identify the "hot thought"</h3>
+                <p class="text-sm text-gray-700">You may have multiple thoughts. Which one caused the strongest emotion?</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Separate facts from interpretations</h3>
+                <p class="text-sm text-gray-700">Evidence = observable facts. "She frowned" is a fact. "She hates me" is an interpretation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Your balanced thought doesn't have to be positive</h3>
+                <p class="text-sm text-gray-700">It just needs to be more realistic. "This is hard" is balanced. "Everything's great!" might not be.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Practice regularly</h3>
+                <p class="text-sm text-gray-700">This is a skill that improves with practice. Do 1-2 thought records daily for a few weeks.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Progress isn't about eliminating emotions</h3>
+                <p class="text-sm text-gray-700">Even a 20-30% reduction in distress is meaningful. Small changes compound over time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Help */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When to Seek Professional Support
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Thought records are a powerful self-help tool, but they work best with professional guidance. Consider therapy if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're struggling with anxiety, depression, or other mental health symptoms</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You find it very difficult to challenge your thoughts on your own</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your distressing thoughts are intrusive and persistent</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're not seeing improvement after several weeks of practice</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms interfere with work, relationships, or daily life</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            A CBT therapist can help you apply these techniques more effectively and address deeper patterns. <a href="/compare" class="text-brand-primary font-bold hover:underline">Compare online therapy platforms</a> to find a CBT therapist.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis or having thoughts of self-harm, please reach out for immediate help:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Emergency</div>
+            <div>Call <strong>911</strong> or go to your nearest emergency room</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/worksheets/cognitive-distortion-worksheet" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Cognitive Distortion Worksheet</h3>
+            <p class="text-sm text-gray-600">In-depth guide to identifying 10 thinking errors</p>
+          </a>
+          <a href="/resources/worksheets/depression-thought-record" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Depression Thought Record</h3>
+            <p class="text-sm text-gray-600">Specialized thought record for depression</p>
+          </a>
+          <a href="/resources/worksheets/mood-tracking" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mood Tracking Worksheet</h3>
+            <p class="text-sm text-gray-600">Track daily moods and identify patterns</p>
+          </a>
+          <a href="/tools/assessments/anxiety-gad7" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Anxiety Screening (GAD-7)</h3>
+            <p class="text-sm text-gray-600">Assess your anxiety levels with validated tool</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+
+    table {
+      page-break-inside: avoid;
+      font-size: 9px;
+    }
+
+    th, td {
+      padding: 6px !important;
+    }
+  }
+</style>

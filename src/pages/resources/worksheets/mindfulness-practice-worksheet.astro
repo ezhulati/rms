@@ -1,22 +1,544 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, Heart, Clock, CheckCircle, TrendingUp, Lightbulb, AlertTriangle, Sun, Wind, Footprints, Zap } from 'lucide-react';
 ---
 
-<BaseLayout title="Mindfulness Practice Worksheet | RealMindSolutions" description="Mindfulness Practice Worksheet">
+<BaseLayout title="Mindfulness Practice Worksheet | RealMindSolutions" description="Comprehensive mindfulness practice tracker and guide covering breathing meditation, body scans, mindful movement, and building a sustainable mindfulness habit.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Mindfulness Practice Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Track your mindfulness practice.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Build and track your mindfulness meditation practice for reduced stress and greater well-being.</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start mb-6">
+          <Brain className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">What is Mindfulness?</h2>
+            <p class="text-gray-700 mb-4">
+              <strong>Mindfulness</strong> is the practice of paying attention to the present moment with openness, curiosity, and without judgment. Instead of being lost in thoughts about the past or future, you intentionally bring your awareness to what's happening <em>right now</em>—your breath, bodily sensations, sounds, or thoughts.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Mindfulness isn't about clearing your mind or stopping thoughts. It's about changing your <em>relationship</em> with your thoughts and experiences—observing them without getting caught up in them.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">Research-Backed Benefits:</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700">
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Reduces stress, anxiety, and depression</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Improves focus and concentration</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Enhances emotional regulation</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Increases self-awareness</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Improves sleep quality</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Strengthens immune system</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Core Mindfulness Practices */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Core Mindfulness Practices</h2>
+
+        <div class="space-y-6">
+          {/* Mindful Breathing */}
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Wind className="h-8 w-8 text-blue-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Mindful Breathing Meditation</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Duration:</strong> 5-20 minutes | <strong>Best for:</strong> Beginners, anxiety, stress, improving focus
+            </p>
+            <div class="bg-blue-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to Practice:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Sit comfortably with your back straight (chair or floor). Close your eyes or soften your gaze.</li>
+                <li>2. Bring your attention to your breath. Notice the sensation of air entering and leaving your nostrils, or your belly rising and falling.</li>
+                <li>3. When your mind wanders (and it will!), gently notice where it went, then return attention to your breath. No judgment.</li>
+                <li>4. Continue for your chosen duration. Each time you notice your mind wandering and bring it back, you're building your "mindfulness muscle."</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600 italic">
+              <strong>Tip:</strong> "Mind wandering" isn't a failure—it's an opportunity to practice returning your attention. That's the exercise.
+            </p>
+          </div>
+
+          {/* Body Scan */}
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Heart className="h-8 w-8 text-purple-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Body Scan Meditation</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Duration:</strong> 10-30 minutes | <strong>Best for:</strong> Releasing tension, sleep preparation, connecting with physical sensations
+            </p>
+            <div class="bg-purple-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to Practice:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Lie down on your back (or sit comfortably). Close your eyes.</li>
+                <li>2. Starting with your toes, bring gentle attention to each part of your body, moving slowly upward: feet → calves → thighs → hips → abdomen → chest → hands → arms → shoulders → neck → face → head.</li>
+                <li>3. For each body part, notice any sensations (warmth, tingling, tightness, relaxation) without trying to change them. Just observe.</li>
+                <li>4. If you notice tension, you can imagine breathing into that area and releasing on the exhale.</li>
+                <li>5. When your mind wanders to thoughts, gently guide it back to the body part you're focusing on.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600 italic">
+              <strong>Tip:</strong> This practice is excellent before bed for improving sleep quality.
+            </p>
+          </div>
+
+          {/* Walking Meditation */}
+          <div class="bg-white border-2 border-green-200 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Footprints className="h-8 w-8 text-green-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Walking Meditation</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Duration:</strong> 10-20 minutes | <strong>Best for:</strong> Restlessness, integrating mindfulness into daily life, physical grounding
+            </p>
+            <div class="bg-green-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to Practice:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Find a quiet path (indoors or outdoors) where you can walk back and forth for 10-20 paces.</li>
+                <li>2. Walk slowly and deliberately. Feel your feet lifting, moving through air, and making contact with the ground.</li>
+                <li>3. Notice the shifting of weight from heel to toe, the movement of your legs, the swing of your arms.</li>
+                <li>4. You can silently label each step: "lifting, moving, placing" or simply stay with the sensations.</li>
+                <li>5. When your mind wanders, return attention to the physical sensations of walking.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600 italic">
+              <strong>Tip:</strong> This is a great option if sitting still feels too difficult or uncomfortable.
+            </p>
+          </div>
+
+          {/* Loving-Kindness */}
+          <div class="bg-white border-2 border-pink-200 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Heart className="h-8 w-8 text-pink-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Loving-Kindness Meditation (Metta)</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Duration:</strong> 10-15 minutes | <strong>Best for:</strong> Self-criticism, relationship difficulties, cultivating compassion
+            </p>
+            <div class="bg-pink-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to Practice:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Sit comfortably and close your eyes. Take a few deep breaths.</li>
+                <li>2. Begin by directing kind wishes toward yourself. Silently repeat phrases like:
+                  <ul class="ml-4 mt-1 space-y-1 italic text-xs">
+                    <li>• "May I be happy"</li>
+                    <li>• "May I be healthy"</li>
+                    <li>• "May I be safe"</li>
+                    <li>• "May I live with ease"</li>
+                  </ul>
+                </li>
+                <li>3. After a few minutes, extend these wishes to a loved one, then to a neutral person, then to someone difficult, then to all beings.</li>
+                <li>4. Notice any warmth, resistance, or emotions that arise. This is all part of the practice.</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600 italic">
+              <strong>Tip:</strong> If directing kindness to yourself feels awkward at first, that's normal. Keep practicing—it gets easier.
+            </p>
+          </div>
+
+          {/* Mindful Observation */}
+          <div class="bg-white border-2 border-yellow-200 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Sun className="h-8 w-8 text-yellow-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Mindful Observation (5 Senses)</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Duration:</strong> 5-10 minutes | <strong>Best for:</strong> Grounding during anxiety, quick reset, beginners
+            </p>
+            <div class="bg-yellow-50 rounded p-4 mb-3">
+              <h4 class="font-bold text-gray-900 mb-2">How to Practice:</h4>
+              <ol class="space-y-2 text-sm text-gray-700">
+                <li>1. Pause wherever you are. Take 3 deep breaths.</li>
+                <li>2. <strong>See:</strong> Notice 5 things you can see (colors, shapes, textures)</li>
+                <li>3. <strong>Touch:</strong> Notice 4 things you can feel (chair beneath you, clothing, air temperature)</li>
+                <li>4. <strong>Hear:</strong> Notice 3 sounds (near, far, subtle)</li>
+                <li>5. <strong>Smell:</strong> Notice 2 things you can smell (or 2 smells you like)</li>
+                <li>6. <strong>Taste:</strong> Notice 1 thing you can taste (or take a mindful sip/bite of something)</li>
+              </ol>
+            </div>
+            <p class="text-xs text-gray-600 italic">
+              <strong>Tip:</strong> This "5-4-3-2-1" technique is excellent for interrupting anxiety spirals or panic.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mindfulness Practice Log */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Clock className="h-8 w-8 text-brand-primary mr-3" />
+          Mindfulness Practice Log
+        </h2>
+
+        <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+          <p class="text-gray-700 mb-6 text-sm">
+            <strong>Instructions:</strong> Track your mindfulness practice for one week. Consistency matters more than duration—even 5 minutes daily is more beneficial than 30 minutes once a week.
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs border-2 border-gray-300">
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="border border-gray-300 p-2 font-bold text-left">Date</th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">Time of Day</th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">Type of Practice</th>
+                  <th class="border border-gray-300 p-2 font-bold text-center">Duration (min)</th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">Before Practice<br/><span class="font-normal italic">(mood, stress 0-10)</span></th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">After Practice<br/><span class="font-normal italic">(mood, stress 0-10)</span></th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">Notes / Observations</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Example row */}
+                <tr class="bg-blue-50">
+                  <td class="border border-gray-300 p-2">
+                    <strong class="text-blue-900">Example:</strong><br/>3/15
+                  </td>
+                  <td class="border border-gray-300 p-2">Morning (7am)</td>
+                  <td class="border border-gray-300 p-2">Mindful breathing</td>
+                  <td class="border border-gray-300 p-2 text-center">10</td>
+                  <td class="border border-gray-300 p-2">Stress: 7/10<br/>Anxious</td>
+                  <td class="border border-gray-300 p-2">Stress: 4/10<br/>Calmer</td>
+                  <td class="border border-gray-300 p-2 text-xs">Mind wandered a lot but I noticed it and came back. Felt more grounded after.</td>
+                </tr>
+
+                {/* Blank rows */}
+                {[...Array(7)].map((_, i) => (
+                  <tr key={i}>
+                    <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;<br/><br/></td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                    <td class="border border-gray-300 p-2">&nbsp;</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 bg-blue-50 rounded p-4">
+            <h3 class="font-bold text-gray-900 mb-3">Weekly Reflection Questions:</h3>
+            <div class="space-y-3">
+              <div>
+                <p class="font-bold text-gray-900 text-sm mb-2">1. How many days this week did you practice?</p>
+                <div class="bg-white rounded p-3 min-h-[40px] border-2 border-dashed border-gray-300"></div>
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm mb-2">2. What patterns did you notice in your before/after mood ratings?</p>
+                <div class="bg-white rounded p-3 min-h-[60px] border-2 border-dashed border-gray-300"></div>
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm mb-2">3. Which practice(s) felt most helpful? Why?</p>
+                <div class="bg-white rounded p-3 min-h-[60px] border-2 border-dashed border-gray-300"></div>
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm mb-2">4. What obstacles came up, and how can you address them next week?</p>
+                <div class="bg-white rounded p-3 min-h-[60px] border-2 border-dashed border-gray-300"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Building a Sustainable Practice */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <TrendingUp className="h-8 w-8 text-green-600 mr-3" />
+          Building a Sustainable Mindfulness Habit
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-green-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Start Small</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Don't aim for 30-minute sessions if you're a beginner. Start with 5 minutes daily. Consistency beats duration.
+            </p>
+            <div class="bg-green-50 rounded p-3 text-xs">
+              <strong>Suggested progression:</strong><br/>
+              Week 1-2: 5 min/day<br/>
+              Week 3-4: 10 min/day<br/>
+              Week 5+: 15-20 min/day
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-blue-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Same Time, Same Place</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Build the habit by anchoring it to an existing routine and a specific location.
+            </p>
+            <div class="bg-blue-50 rounded p-3 text-xs">
+              <strong>Examples:</strong><br/>
+              • Right after morning coffee at kitchen table<br/>
+              • Before bed in a designated meditation corner<br/>
+              • During lunch break at your desk
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Use Guided Meditations</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Especially as a beginner, guided meditations (apps, YouTube) provide structure and gentle reminders to return attention.
+            </p>
+            <div class="bg-purple-50 rounded p-3 text-xs">
+              <strong>Popular apps:</strong> Headspace, Calm, Insight Timer (free), 10% Happier
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-yellow-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Track Your Practice</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Use this worksheet or a habit tracker. Seeing your streak builds motivation and accountability.
+            </p>
+            <div class="bg-yellow-50 rounded p-3 text-xs">
+              <strong>Tip:</strong> Put a checkmark on your calendar for each day you practice. Don't break the chain!
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-pink-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Be Patient and Kind</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              You won't "master" mindfulness. Your mind will always wander. That's normal. Progress is measured by how quickly you notice and return.
+            </p>
+            <div class="bg-pink-50 rounded p-3 text-xs">
+              <strong>Remember:</strong> Noticing mind-wandering <em>is</em> mindfulness. It's not a failure.
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-teal-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Integrate into Daily Life</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Formal practice is important, but you can also practice mindfulness during everyday activities.
+            </p>
+            <div class="bg-teal-50 rounded p-3 text-xs">
+              <strong>Try:</strong> Mindful eating, mindful showering, mindful listening in conversations, mindful dishwashing
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Overcoming Common Obstacles */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb className="h-8 w-8 text-yellow-500 mr-3" />
+          Overcoming Common Obstacles
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">"My mind won't stop thinking"</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              <strong>This is not a problem.</strong> The point isn't to stop thoughts—it's to notice them and return to your anchor (breath, body, etc.). Every time you notice and return, you're succeeding.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">"I don't have time"</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Even 5 minutes makes a difference. Can you wake up 5 minutes earlier or practice during your commute/lunch break? Mindfulness doesn't require a meditation cushion or special setup.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">"I feel more anxious when I try to meditate"</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              This is common, especially for people with anxiety. When you slow down, suppressed emotions can surface. Try shorter sessions (2-3 min), walking meditation, or eyes-open practices. Work with a therapist if needed.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">"I keep forgetting to practice"</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Set a daily reminder on your phone. Link it to an existing habit ("After I pour my coffee, I'll meditate for 5 min"). Put your meditation cushion/chair somewhere visible as a cue.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">"I don't feel anything / It's not working"</h3>
+            <p class="text-sm text-gray-700 mb-3">
+              Mindfulness isn't about feeling relaxed or blissful (though that can happen). It's about building awareness. Benefits are often subtle and cumulative. Give it 2-3 weeks of consistent practice before evaluating.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="mb-12">
+        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+            Tips for Successful Mindfulness Practice
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Practice at the same time each day</strong> to build the habit</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Start with just 5 minutes</strong>—consistency matters more than duration</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Use guided meditations</strong> if you're new to practice</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Be patient with yourself</strong>—mind wandering is normal and expected</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Track your practice</strong> using this worksheet to stay accountable</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Experiment with different practices</strong> to find what resonates</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Integrate mindfulness into daily activities</strong> (eating, walking, etc.)</p>
+            </div>
+            <div class="flex items-start">
+              <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
+              <p class="text-sm text-gray-700"><strong>Join a class or group</strong> for support and accountability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Help */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When Mindfulness Isn't Enough
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Mindfulness is a powerful tool, but it's not a replacement for professional mental health treatment. Seek help if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're experiencing severe anxiety, depression, or trauma symptoms</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Meditation consistently increases your distress (some people need trauma-informed approaches)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're having thoughts of self-harm or suicide</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms are interfering significantly with daily functioning</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            Many therapists incorporate mindfulness into treatment (especially in Dialectical Behavior Therapy and Acceptance & Commitment Therapy). <a href="/compare" class="text-brand-primary font-bold hover:underline">Find an online therapist</a> who can guide you.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis or having thoughts of suicide, please reach out for immediate help:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Emergency</div>
+            <div>Call <strong>911</strong> or go to your nearest emergency room</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/worksheets/stress-management-techniques" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Stress Management Techniques</h3>
+            <p class="text-sm text-gray-600">Breathing exercises, PMR, and cognitive strategies</p>
+          </a>
+          <a href="/resources/worksheets/mood-tracking" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mood Tracking Worksheet</h3>
+            <p class="text-sm text-gray-600">Track daily moods and identify patterns</p>
+          </a>
+          <a href="/tools/assessments/anxiety-gad7" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Anxiety Screening (GAD-7)</h3>
+            <p class="text-sm text-gray-600">Assess your anxiety levels with validated tool</p>
+          </a>
+          <a href="/best/conditions/anxiety-therapy-platforms" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Best Therapy for Anxiety</h3>
+            <p class="text-sm text-gray-600">Find platforms offering mindfulness-based therapy</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+
+    table {
+      page-break-inside: avoid;
+      font-size: 9px;
+    }
+
+    th, td {
+      padding: 6px !important;
+    }
+  }
+</style>
