@@ -1,22 +1,705 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Calendar, CheckCircle, TrendingUp, AlertTriangle, Target, Clock, Heart, Award, Lightbulb, Users, Sun, BookOpen } from 'lucide-react';
 ---
 
-<BaseLayout title="Activity Planning Worksheet | RealMindSolutions" description="Activity Planning Worksheet">
+<BaseLayout title="Activity Planning Worksheet | RealMindSolutions" description="Behavioral activation worksheet to break the depression-inactivity cycle through structured activity scheduling and goal-setting.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Activity Planning Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Behavioral activation activity planning tool.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Break the depression-inactivity cycle through structured behavioral activation.</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-blue-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start mb-6">
+          <TrendingUp className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Why Activity Planning Works</h2>
+            <p class="text-gray-700 mb-4">
+              <strong>Behavioral Activation (BA)</strong> is one of the most evidence-based treatments for depression. Research shows that when we're depressed, we withdraw from activities and relationships, which <em>deepens</em> the depression. This creates a vicious cycle.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Activity planning breaks this cycle by gradually reintroducing meaningful, enjoyable, or productive activities into your life—even when you don't feel like it. Action comes before motivation.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">Key Principle:</h3>
+              <p class="text-gray-700 text-sm italic">"Don't wait to feel motivated to do something—do the activity first, and motivation often follows."</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* The Depression-Inactivity Cycle */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <AlertTriangle className="h-8 w-8 text-orange-500 mr-3" />
+          Understanding the Depression-Inactivity Cycle
+        </h2>
+
+        <div class="bg-white border-2 border-orange-200 rounded-lg p-6">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="bg-red-100 rounded-lg p-4 mb-3">
+                <div class="text-3xl font-bold text-red-600 mb-2">1</div>
+                <p class="text-sm font-bold text-red-900">Feel depressed, low energy, hopeless</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-orange-100 rounded-lg p-4 mb-3">
+                <div class="text-3xl font-bold text-orange-600 mb-2">2</div>
+                <p class="text-sm font-bold text-orange-900">Withdraw from activities, isolate, avoid</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-yellow-100 rounded-lg p-4 mb-3">
+                <div class="text-3xl font-bold text-yellow-700 mb-2">3</div>
+                <p class="text-sm font-bold text-yellow-900">Miss out on positive experiences, lose sense of purpose</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-red-100 rounded-lg p-4 mb-3">
+                <div class="text-3xl font-bold text-red-600 mb-2">4</div>
+                <p class="text-sm font-bold text-red-900">Depression worsens → Cycle repeats</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-green-50 rounded-lg p-4">
+            <p class="text-green-900 font-bold mb-2">Breaking the Cycle:</p>
+            <p class="text-green-800 text-sm">Activity planning interrupts this cycle at step 2 by intentionally scheduling and completing activities, which leads to improved mood over time.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Types of Activities */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Two Types of Activities</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Pleasure Activities */}
+          <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Heart className="h-8 w-8 text-pink-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Pleasure Activities</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Purpose:</strong> Enjoyment, fun, relaxation, connection
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Examples:</h4>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>• Listening to music you love</li>
+                <li>• Taking a warm bath</li>
+                <li>• Watching a favorite show</li>
+                <li>• Spending time with a pet</li>
+                <li>• Reading for pleasure</li>
+                <li>• Going for a nature walk</li>
+                <li>• Cooking a favorite meal</li>
+                <li>• Video chatting with a friend</li>
+                <li>• Enjoying a cup of coffee/tea mindfully</li>
+                <li>• Gardening or crafts</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Mastery Activities */}
+          <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <Award className="h-8 w-8 text-blue-600 mr-3" />
+              <h3 class="text-xl font-bold text-gray-900">Mastery Activities</h3>
+            </div>
+            <p class="text-gray-700 mb-4 text-sm">
+              <strong>Purpose:</strong> Accomplishment, productivity, competence
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Examples:</h4>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>• Completing a work task</li>
+                <li>• Doing the laundry or dishes</li>
+                <li>• Paying bills or organizing finances</li>
+                <li>• Exercising or going to the gym</li>
+                <li>• Learning a new skill</li>
+                <li>• Organizing a closet or desk</li>
+                <li>• Completing a home repair</li>
+                <li>• Attending a class or workshop</li>
+                <li>• Making a difficult phone call</li>
+                <li>• Meal prepping for the week</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-blue-100 rounded-lg p-4">
+          <p class="text-blue-900 text-sm">
+            <strong>Balance is key:</strong> A healthy activity schedule includes both pleasure activities (for enjoyment) and mastery activities (for accomplishment). Both improve mood in different ways.
+          </p>
+        </div>
+      </div>
+
+      {/* Weekly Activity Planning Worksheet */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Calendar className="h-8 w-8 text-brand-primary mr-3" />
+          Weekly Activity Planning Worksheet
+        </h2>
+
+        <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+          <p class="text-gray-700 mb-6 text-sm">
+            <strong>Instructions:</strong> Plan activities for the upcoming week. Include specific times, and balance pleasure (P) and mastery (M) activities. After completing each activity, rate your mood before and after (0-10 scale).
+          </p>
+
+          {/* Weekly Schedule Table */}
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs border-2 border-gray-300">
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="border border-gray-300 p-2 font-bold text-left">Day/Time</th>
+                  <th class="border border-gray-300 p-2 font-bold text-left">Planned Activity</th>
+                  <th class="border border-gray-300 p-2 font-bold text-center">Type (P/M)</th>
+                  <th class="border border-gray-300 p-2 font-bold text-center">Mood Before (0-10)</th>
+                  <th class="border border-gray-300 p-2 font-bold text-center">Mood After (0-10)</th>
+                  <th class="border border-gray-300 p-2 font-bold text-center">Completed? (✓)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Monday */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-blue-50">Monday Morning</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-blue-50">Monday Afternoon</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-blue-50">Monday Evening</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+
+                {/* Tuesday */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-green-50">Tuesday Morning</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-green-50">Tuesday Afternoon</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-green-50">Tuesday Evening</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+
+                {/* Wednesday */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-yellow-50">Wednesday Morning</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-yellow-50">Wednesday Afternoon</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-yellow-50">Wednesday Evening</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+
+                {/* Thursday */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-purple-50">Thursday Morning</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-purple-50">Thursday Afternoon</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-purple-50">Thursday Evening</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+
+                {/* Friday */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-pink-50">Friday Morning</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-pink-50">Friday Afternoon</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-pink-50">Friday Evening</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+
+                {/* Weekend */}
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-orange-50">Saturday</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2 font-bold bg-teal-50">Sunday</td>
+                  <td class="border border-gray-300 p-2 min-h-[60px]">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                  <td class="border border-gray-300 p-2">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      {/* SMART Goal Setting */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Target className="h-8 w-8 text-green-600 mr-3" />
+          Setting SMART Activity Goals
+        </h2>
+
+        <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-8">
+          <p class="text-gray-700 mb-6">
+            When planning activities, make them <strong>SMART</strong> to increase the likelihood you'll complete them:
+          </p>
+
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">
+                <span class="text-green-600 text-xl">S</span>pecific
+              </h3>
+              <p class="text-sm text-gray-700 mb-2">State exactly what you'll do, when, and where.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="bg-red-50 rounded p-3">
+                  <div class="font-bold text-red-900 mb-1">❌ Vague:</div>
+                  <p class="text-red-800">"Exercise more"</p>
+                </div>
+                <div class="bg-green-50 rounded p-3">
+                  <div class="font-bold text-green-900 mb-1">✓ Specific:</div>
+                  <p class="text-green-800">"Walk for 15 minutes around the block Tuesday at 10am"</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">
+                <span class="text-green-600 text-xl">M</span>easurable
+              </h3>
+              <p class="text-sm text-gray-700 mb-2">Include details so you know when you've completed it.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="bg-red-50 rounded p-3">
+                  <div class="font-bold text-red-900 mb-1">❌ Vague:</div>
+                  <p class="text-red-800">"Clean the house"</p>
+                </div>
+                <div class="bg-green-50 rounded p-3">
+                  <div class="font-bold text-green-900 mb-1">✓ Measurable:</div>
+                  <p class="text-green-800">"Wash and put away dishes, take out trash"</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">
+                <span class="text-green-600 text-xl">A</span>chievable
+              </h3>
+              <p class="text-sm text-gray-700 mb-2">Start small. Better to succeed at something small than fail at something big.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="bg-red-50 rounded p-3">
+                  <div class="font-bold text-red-900 mb-1">❌ Overwhelming:</div>
+                  <p class="text-red-800">"Run a marathon this month"</p>
+                </div>
+                <div class="bg-green-50 rounded p-3">
+                  <div class="font-bold text-green-900 mb-1">✓ Achievable:</div>
+                  <p class="text-green-800">"Walk for 10 minutes 3 times this week"</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">
+                <span class="text-green-600 text-xl">R</span>elevant
+              </h3>
+              <p class="text-sm text-gray-700 mb-2">Choose activities aligned with your values and goals.</p>
+              <p class="text-xs text-gray-600 italic">Example: If you value connection, prioritize social activities like calling a friend.</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">
+                <span class="text-green-600 text-xl">T</span>ime-bound
+              </h3>
+              <p class="text-sm text-gray-700 mb-2">Set a specific day and time. Add to your calendar.</p>
+              <p class="text-xs text-gray-600 italic">Example: "Thursday at 2pm" instead of "sometime this week"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Overcoming Barriers */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb className="h-8 w-8 text-yellow-500 mr-3" />
+          Overcoming Common Barriers
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">"I don't feel motivated"</h3>
+            <p class="text-gray-700 mb-3 text-sm">
+              This is the most common barrier—and it's exactly why behavioral activation works. <strong>You don't need to feel motivated first.</strong>
+            </p>
+            <div class="bg-blue-50 rounded p-4">
+              <p class="text-blue-900 font-bold text-sm mb-2">Strategy:</p>
+              <ul class="space-y-1 text-xs text-blue-800">
+                <li>• Commit to doing the activity for just 5 minutes. Often you'll continue once you start.</li>
+                <li>• Remind yourself: "Action comes before motivation, not the other way around."</li>
+                <li>• Focus on the behavior, not the feeling. Your job is to <em>do</em> the activity, not to <em>enjoy</em> it (yet).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">"I'm too tired"</h3>
+            <p class="text-gray-700 mb-3 text-sm">
+              Depression often causes fatigue. Waiting to have energy perpetuates the cycle.
+            </p>
+            <div class="bg-blue-50 rounded p-4">
+              <p class="text-blue-900 font-bold text-sm mb-2">Strategy:</p>
+              <ul class="space-y-1 text-xs text-blue-800">
+                <li>• Choose very small, low-energy activities (e.g., 5-minute walk instead of 30-minute run).</li>
+                <li>• Schedule activities during your highest-energy time of day.</li>
+                <li>• Movement often <em>increases</em> energy. Try it as an experiment.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">"What's the point? Nothing will help"</h3>
+            <p class="text-gray-700 mb-3 text-sm">
+              Hopelessness is a symptom of depression, not a fact about your future.
+            </p>
+            <div class="bg-blue-50 rounded p-4">
+              <p class="text-blue-900 font-bold text-sm mb-2">Strategy:</p>
+              <ul class="space-y-1 text-xs text-blue-800">
+                <li>• Treat activity planning as a <strong>behavioral experiment</strong>. You're testing whether it helps, not assuming it won't.</li>
+                <li>• Track your mood before and after activities. Let the data speak.</li>
+                <li>• Reminder: Behavioral activation is one of the most evidence-based treatments for depression. It works for most people who stick with it.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">"I don't have time"</h3>
+            <div class="bg-blue-50 rounded p-4">
+              <p class="text-blue-900 font-bold text-sm mb-2">Strategy:</p>
+              <ul class="space-y-1 text-xs text-blue-800">
+                <li>• Start with just 5-10 minute activities.</li>
+                <li>• Combine activities (e.g., call a friend while folding laundry).</li>
+                <li>• Remember: Improving your mental health <em>is</em> a productive use of time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Weekly Reflection */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <BookOpen className="h-8 w-8 text-purple-600 mr-3" />
+          Weekly Reflection
+        </h2>
+
+        <div class="bg-white border-2 border-purple-200 rounded-lg p-6">
+          <p class="text-gray-700 mb-6 text-sm">
+            At the end of each week, reflect on your activity planning to identify patterns and adjust your approach.
+          </p>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">1. What percentage of planned activities did you complete?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[60px] border-2 border-dashed border-gray-300"></div>
+              <p class="text-xs text-gray-600 mt-2 italic">If less than 50%, your activities may be too difficult. Try easier or shorter activities next week.</p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">2. Which activities improved your mood the most?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300"></div>
+              <p class="text-xs text-gray-600 mt-2 italic">Do more of these activities next week.</p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">3. What barriers came up, and how can you address them?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300"></div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">4. Did you notice any changes in your overall mood this week?</h3>
+              <div class="bg-gray-50 rounded p-4 min-h-[80px] border-2 border-dashed border-gray-300"></div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-3">5. What will you continue, start, or stop doing next week?</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <div class="font-bold text-green-900 mb-2 text-sm">Continue:</div>
+                  <div class="bg-green-50 rounded p-3 min-h-[60px] border-2 border-dashed border-green-300"></div>
+                </div>
+                <div>
+                  <div class="font-bold text-blue-900 mb-2 text-sm">Start:</div>
+                  <div class="bg-blue-50 rounded p-3 min-h-[60px] border-2 border-dashed border-blue-300"></div>
+                </div>
+                <div>
+                  <div class="font-bold text-orange-900 mb-2 text-sm">Stop:</div>
+                  <div class="bg-orange-50 rounded p-3 min-h-[60px] border-2 border-dashed border-orange-300"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+          Tips for Success
+        </h2>
+
+        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Start incredibly small</h3>
+                  <p class="text-sm text-gray-700">If you're stuck, start with 5-minute activities. Success builds momentum.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Schedule activities in advance</h3>
+                  <p class="text-sm text-gray-700">Add to your calendar. Don't wait to "feel like it" in the moment.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Track your mood before/after</h3>
+                  <p class="text-sm text-gray-700">This helps you see evidence that activities improve mood—even when you don't expect it.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Balance pleasure and mastery</h3>
+                  <p class="text-sm text-gray-700">Include both fun activities and productive tasks. Both matter.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Celebrate partial completion</h3>
+                  <p class="text-sm text-gray-700">If you planned a 30-min walk but only did 10 minutes, that's still a win. Progress > perfection.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6">
+              <div class="flex items-start">
+                <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-2">Be consistent</h3>
+                  <p class="text-sm text-gray-700">Activity planning works best when practiced regularly over weeks, not just once or twice.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Help */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When to Seek Professional Support
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Activity planning is a powerful tool, but it works best as part of therapy for depression. Consider seeking professional help if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your depression is severe or has lasted more than 2 weeks</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're having thoughts of self-harm or suicide</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You've tried activity planning for several weeks with no improvement</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms are interfering significantly with work, relationships, or daily functioning</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            A therapist trained in Behavioral Activation can help you customize this approach and address barriers that come up. <a href="/compare" class="text-brand-primary font-bold hover:underline">Compare online therapy platforms</a> to find support.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          If you're in crisis or having thoughts of suicide, reach out for immediate help:
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Emergency</div>
+            <div>Call <strong>911</strong> or go to your nearest emergency room</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/worksheets/mood-tracking" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Mood Tracking Worksheet</h3>
+            <p class="text-sm text-gray-600">Track daily mood patterns and identify triggers</p>
+          </a>
+          <a href="/resources/worksheets/depression-thought-record" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Depression Thought Record</h3>
+            <p class="text-sm text-gray-600">Challenge negative thoughts that maintain depression</p>
+          </a>
+          <a href="/tools/assessments/depression-phq9" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Depression Screening (PHQ-9)</h3>
+            <p class="text-sm text-gray-600">Assess your depression severity with validated tool</p>
+          </a>
+          <a href="/best/conditions/depression-therapy-platforms" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Best Platforms for Depression</h3>
+            <p class="text-sm text-gray-600">Find online therapy specialized in treating depression</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+
+    table {
+      page-break-inside: avoid;
+    }
+
+    .border-dashed {
+      min-height: 80px;
+    }
+  }
+</style>

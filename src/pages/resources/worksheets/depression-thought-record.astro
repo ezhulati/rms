@@ -1,22 +1,647 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Brain, AlertTriangle, CheckCircle, Lightbulb, TrendingUp, BookOpen, Heart, CloudRain } from 'lucide-react';
 ---
 
-<BaseLayout title="Depression Thought Record | RealMindSolutions" description="Depression Thought Record Worksheet">
+<BaseLayout title="Depression Thought Record | RealMindSolutions" description="Specialized CBT thought record for identifying and challenging depression-maintaining thoughts including hopelessness, worthlessness, and helplessness.">
   {/* Hero Section */}
   <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Depression Thought Record Worksheet</h1>
-      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Specialized thought record for depression.</p>
+      <p class="font-serif italic text-lg md:text-xl text-neutral-600">Identify and challenge thoughts that maintain depression using Cognitive Behavioral Therapy (CBT).</p>
     </div>
   </section>
 
   {/* Main Content */}
   <section class="bg-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="prose prose-lg max-w-4xl">
-        <p>Content coming soon...</p>
+
+      {/* Introduction */}
+      <div class="bg-blue-50 rounded-lg p-8 mb-12">
+        <div class="flex items-start mb-6">
+          <Brain className="h-8 w-8 text-brand-primary mr-4 mt-1 flex-shrink-0" />
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">How Depression Affects Your Thinking</h2>
+            <p class="text-gray-700 mb-4">
+              Depression doesn't just affect your mood—it profoundly changes the way you think. When you're depressed, your brain develops a <strong>negative filter</strong> that systematically distorts how you see yourself, your world, and your future.
+            </p>
+            <p class="text-gray-700 mb-4">
+              This thought record is designed to help you identify these distorted thoughts and challenge them with more balanced, realistic thinking. This is a core technique in Cognitive Behavioral Therapy (CBT), one of the most evidence-based treatments for depression.
+            </p>
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-gray-900 mb-2">Key Insight:</h3>
+              <p class="text-gray-700 text-sm italic">"Your thoughts when you're depressed are symptoms of the illness—they're not accurate reflections of reality, even when they feel true."</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* The Negative Triad */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CloudRain className="h-8 w-8 text-gray-600 mr-3" />
+          The Negative Triad of Depression
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          Psychologist Aaron Beck identified that depression typically involves negative thoughts in three areas:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">1. Negative View of Self</h3>
+            <p class="text-sm text-gray-700 mb-3">Thoughts about being worthless, defective, or inadequate.</p>
+            <div class="bg-white rounded-lg p-4 text-xs">
+              <p class="font-bold text-red-900 mb-2">Examples:</p>
+              <ul class="space-y-1 text-red-800">
+                <li>• "I'm a failure"</li>
+                <li>• "I'm worthless"</li>
+                <li>• "There's something wrong with me"</li>
+                <li>• "Nobody could love me"</li>
+                <li>• "I'm a burden to everyone"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">2. Negative View of the World</h3>
+            <p class="text-sm text-gray-700 mb-3">Thoughts that life is unfair, difficult, or that nothing ever works out.</p>
+            <div class="bg-white rounded-lg p-4 text-xs">
+              <p class="font-bold text-orange-900 mb-2">Examples:</p>
+              <ul class="space-y-1 text-orange-800">
+                <li>• "Nothing ever goes right"</li>
+                <li>• "The world is a terrible place"</li>
+                <li>• "Everyone else has it easier"</li>
+                <li>• "Life is just suffering"</li>
+                <li>• "No one can be trusted"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">3. Negative View of the Future</h3>
+            <p class="text-sm text-gray-700 mb-3">Thoughts that things will never improve or that there's no point trying (hopelessness).</p>
+            <div class="bg-white rounded-lg p-4 text-xs">
+              <p class="font-bold text-yellow-900 mb-2">Examples:</p>
+              <ul class="space-y-1 text-yellow-800">
+                <li>• "Things will never get better"</li>
+                <li>• "There's no point in trying"</li>
+                <li>• "I'll always feel this way"</li>
+                <li>• "Nothing I do will make a difference"</li>
+                <li>• "My situation is hopeless"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Common Thinking Patterns in Depression */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Thinking Patterns in Depression</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Overgeneralization</h3>
+            <p class="text-sm text-gray-700 mb-3">Taking one negative event and assuming it applies to everything.</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "I failed this test, so I'm a complete failure at everything."</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Mental Filter</h3>
+            <p class="text-sm text-gray-700 mb-3">Focusing only on negative details while ignoring positive ones.</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "My presentation went terribly" (ignoring 5 compliments, focusing on 1 critical question).</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Disqualifying the Positive</h3>
+            <p class="text-sm text-gray-700 mb-3">Rejecting positive experiences as "not counting."</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "They only said that to be nice, they don't really mean it."</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Emotional Reasoning</h3>
+            <p class="text-sm text-gray-700 mb-3">Assuming that because you feel something, it must be true.</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "I feel worthless, therefore I am worthless."</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Personalization</h3>
+            <p class="text-sm text-gray-700 mb-3">Blaming yourself for things outside your control.</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "My friend is upset. It must be my fault."</p>
+            </div>
+          </div>
+
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-3">Should Statements</h3>
+            <p class="text-sm text-gray-700 mb-3">Harsh self-criticism using "should," "must," or "ought."</p>
+            <div class="bg-red-50 rounded p-3 mb-2">
+              <p class="text-xs text-red-900"><strong>Example:</strong> "I should be able to handle this. What's wrong with me?"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Depression Thought Record Template */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <BookOpen className="h-8 w-8 text-brand-primary mr-3" />
+          Depression Thought Record
+        </h2>
+
+        <div class="bg-white border-2 border-gray-300 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-gray-900 mb-4">How to Use This Worksheet</h3>
+          <div class="space-y-3 text-sm text-gray-700">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">1</div>
+              <p><strong>Situation:</strong> Describe what happened. Where were you? What were you doing? Who was present?</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">2</div>
+              <p><strong>Mood:</strong> What emotions did you feel? Rate intensity 0-100%.</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">3</div>
+              <p><strong>Automatic Thoughts:</strong> What went through your mind? What does this mean about you, others, or your future?</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">4</div>
+              <p><strong>Evidence For:</strong> What facts support this thought?</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">5</div>
+              <p><strong>Evidence Against:</strong> What facts contradict this thought? What would you tell a friend?</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">6</div>
+              <p><strong>Balanced Thought:</strong> What's a more realistic, balanced way of viewing this situation?</p>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs">7</div>
+              <p><strong>Re-rate Mood:</strong> How intense is the emotion now? 0-100%</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Thought Record Table */}
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs border-2 border-gray-300">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 12%">Situation<br/><span class="font-normal text-xs italic">When? Where? With whom?</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 10%">Mood(s)<br/><span class="font-normal text-xs italic">0-100%</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 15%">Automatic Thoughts<br/><span class="font-normal text-xs italic">What went through your mind?</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 12%">Evidence For<br/><span class="font-normal text-xs italic">Facts supporting thought</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 15%">Evidence Against<br/><span class="font-normal text-xs italic">Facts contradicting thought</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 18%">Balanced Thought<br/><span class="font-normal text-xs italic">More realistic view</span></th>
+                <th class="border border-gray-300 p-2 font-bold text-left" style="width: 8%">Re-rate Mood<br/><span class="font-normal text-xs italic">0-100%</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Example row */}
+              <tr class="bg-blue-50">
+                <td class="border border-gray-300 p-2">
+                  <strong class="text-blue-900">Example:</strong><br/>
+                  Applying for jobs Saturday afternoon, alone at home
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Sad 85%<br/>
+                  Hopeless 90%<br/>
+                  Worthless 80%
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "I'm never going to get hired. I'm a complete failure. What's the point?"
+                </td>
+                <td class="border border-gray-300 p-2">
+                  I've been rejected from 5 jobs recently
+                </td>
+                <td class="border border-gray-300 p-2">
+                  • Job market is competitive right now<br/>
+                  • 5 rejections is normal in a job search<br/>
+                  • I got 2 interviews last week<br/>
+                  • I've had jobs before<br/>
+                  • My friend applied to 30+ before getting hired
+                </td>
+                <td class="border border-gray-300 p-2">
+                  "Job searching is hard and takes time, but it doesn't mean I'm a failure. Rejection is a normal part of the process. I just need to keep going."
+                </td>
+                <td class="border border-gray-300 p-2">
+                  Sad 40%<br/>
+                  Hopeless 30%<br/>
+                  Worthless 20%
+                </td>
+              </tr>
+
+              {/* Blank rows for user */}
+              <tr>
+                <td class="border border-gray-300 p-2 min-h-[100px]">&nbsp;<br/><br/><br/><br/></td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2 min-h-[100px]">&nbsp;<br/><br/><br/><br/></td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2 min-h-[100px]">&nbsp;<br/><br/><br/><br/></td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+                <td class="border border-gray-300 p-2">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Helpful Questions for Challenging Thoughts */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <Lightbulb className="h-8 w-8 text-yellow-500 mr-3" />
+          Questions to Challenge Depression Thoughts
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          When examining the evidence against your automatic thought, these questions can help you think more objectively:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> What would I tell a friend who had this thought?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I confusing a thought with a fact?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I jumping to conclusions based on feelings rather than facts?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> What evidence do I have that contradicts this thought?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I ignoring the positive or focusing only on the negative?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I predicting the future instead of dealing with the present?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Is this thought helpful? What would be a more helpful way to think about this?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> What's the worst that could happen? How likely is that? Could I cope if it did?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I setting unrealistic standards for myself?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Have there been times when this thought wasn't true?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> Am I using words like "always," "never," "completely," "totally"? Is that realistic?
+            </p>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>•</strong> What's a more balanced or compassionate way to view this?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Common Depression Thoughts and Balanced Alternatives */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Depression Thoughts & Balanced Alternatives</h2>
+
+        <div class="space-y-4">
+          {/* Worthlessness */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Worthlessness / Self-Criticism</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"I'm worthless and have nothing to offer."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"Depression makes me feel worthless, but that feeling isn't a fact. I have strengths and qualities even if I can't see them right now."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Hopelessness */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Hopelessness</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"Things will never get better. I'll always feel this way."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"Depression is an illness, not a life sentence. With treatment, most people recover. This feeling won't last forever, even though it feels permanent right now."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Burden */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Feeling Like a Burden</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"I'm a burden to everyone. They'd be better off without me."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"The people who care about me want to help. Everyone needs support sometimes. I've been there for others in the past, and I can accept help now."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Helplessness */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Helplessness</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"There's nothing I can do. I'm completely helpless."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"Depression makes me feel helpless, but I can take small steps. Even completing this worksheet is doing something."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Failure */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Failure / Not Good Enough</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"I'm a complete failure. Everyone else can do this except me."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"Everyone struggles sometimes. I'm comparing my insides to other people's outsides. I've succeeded at things before and can again."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Lack of purpose */}
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h3 class="font-bold text-gray-900 mb-4">Lack of Purpose / Point</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <div class="bg-red-50 rounded p-4 mb-3">
+                  <p class="font-bold text-red-900 mb-2 text-sm">Depressive Thought:</p>
+                  <p class="text-red-800 text-xs">"What's the point? Nothing I do matters anyway."</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-green-50 rounded p-4">
+                  <p class="font-bold text-green-900 mb-2 text-sm">Balanced Alternative:</p>
+                  <p class="text-green-800 text-xs">"Depression robs me of my sense of purpose, but that doesn't mean there isn't one. When I feel better, I'll reconnect with what matters to me."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tips for Success */}
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+          <CheckCircle className="h-8 w-8 text-brand-primary mr-3" />
+          Tips for Using This Thought Record
+        </h2>
+
+        <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg p-8">
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Complete the record when your mood shifts</h3>
+                <p class="text-sm text-gray-700">Don't wait until the end of the day. Catch the thoughts while they're fresh.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Be specific about the situation</h3>
+                <p class="text-sm text-gray-700">Vague situations make it harder to identify thoughts. Include time, place, and people present.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Identify the "hot thought"</h3>
+                <p class="text-sm text-gray-700">You may have multiple thoughts. Which one triggered the strongest emotion? Start there.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Look for facts, not interpretations</h3>
+                <p class="text-sm text-gray-700">Evidence = observable facts. "She didn't text back" is a fact. "She hates me" is an interpretation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Your balanced thought doesn't have to be positive</h3>
+                <p class="text-sm text-gray-700">It just needs to be more realistic. "This is really hard" is balanced. "Everything is perfect!" is not.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Practice regularly, even when you feel okay</h3>
+                <p class="text-sm text-gray-700">This is a skill. The more you practice, the better you'll get at catching and challenging negative thoughts.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Don't expect your mood to drop to 0%</h3>
+                <p class="text-sm text-gray-700">Even a 20-30% reduction in distress is progress. Small improvements add up over time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Seek Help */}
+      <div class="mb-12">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+          <h2 class="text-2xl font-bold text-yellow-900 mb-4 flex items-center">
+            <AlertTriangle className="h-6 w-6 mr-3" />
+            When to Seek Professional Support
+          </h2>
+          <p class="text-yellow-900 mb-4">
+            Thought records are a helpful tool, but depression often requires professional treatment. Seek help if:
+          </p>
+          <ul class="space-y-2 text-yellow-900 mb-4">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your depression symptoms have lasted more than 2 weeks</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're having thoughts of self-harm or suicide</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You find it very difficult to challenge your negative thoughts on your own</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Your symptoms are interfering with work, relationships, or daily functioning</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>You're not seeing improvement after several weeks of practicing these techniques</span>
+            </li>
+          </ul>
+          <p class="text-yellow-900 text-sm">
+            A therapist trained in CBT can help you apply these techniques more effectively and provide additional support. <a href="/compare" class="text-brand-primary font-bold hover:underline">Compare online therapy platforms</a> to find a CBT therapist.
+          </p>
+        </div>
+      </div>
+
+      {/* Crisis Resources */}
+      <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-red-900 mb-4">Crisis Support</h2>
+        <p class="text-red-900 mb-4">
+          <strong>If you're in crisis or having thoughts of suicide, please reach out for immediate help:</strong>
+        </p>
+        <div class="space-y-3 text-red-900">
+          <div>
+            <div class="font-bold">988 Suicide & Crisis Lifeline</div>
+            <div>Call or text <strong>988</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Crisis Text Line</div>
+            <div>Text <strong>HOME</strong> to <strong>741741</strong> • Available 24/7</div>
+          </div>
+          <div>
+            <div class="font-bold">Emergency</div>
+            <div>Call <strong>911</strong> or go to your nearest emergency room</div>
+          </div>
+        </div>
+        <p class="text-red-900 mt-4">
+          <a href="/resources/guides/crisis-resources" class="text-brand-primary font-bold hover:underline">View complete crisis resources →</a>
+        </p>
+      </div>
+
+      {/* Related Resources */}
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/resources/worksheets/cognitive-distortion-worksheet" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Cognitive Distortion Worksheet</h3>
+            <p class="text-sm text-gray-600">Learn to identify 10 common thinking errors</p>
+          </a>
+          <a href="/resources/worksheets/activity-planning" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Activity Planning Worksheet</h3>
+            <p class="text-sm text-gray-600">Break the depression-inactivity cycle with behavioral activation</p>
+          </a>
+          <a href="/tools/assessments/depression-phq9" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Depression Screening (PHQ-9)</h3>
+            <p class="text-sm text-gray-600">Assess your depression severity with validated questionnaire</p>
+          </a>
+          <a href="/best/conditions/depression-therapy-platforms" class="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-brand-primary mb-2">Best Therapy for Depression</h3>
+            <p class="text-sm text-gray-600">Find online platforms offering CBT for depression</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @media print {
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+      background: white !important;
+    }
+
+    table {
+      page-break-inside: avoid;
+      font-size: 9px;
+    }
+
+    th, td {
+      padding: 6px !important;
+    }
+  }
+</style>
