@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Mental Health Assessments | RealMindSolutions"
+  description="Free mental health screening tools"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Mental Health Assessments</h1>
+    <p class="text-xl text-gray-600 mb-12">Free screening tools and assessments</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/tools/assessments/mental-health-assessment" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">General Assessment</h3>
+        <p class="text-gray-600">Overall mental health screening</p>
+      </a>
+      <a href="/tools/assessments/anxiety-screening" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Anxiety Screening</h3>
+        <p class="text-gray-600">Anxiety disorder assessment</p>
+      </a>
+      <a href="/tools/assessments/depression-screening" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Depression Screening</h3>
+        <p class="text-gray-600">Depression assessment tool</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

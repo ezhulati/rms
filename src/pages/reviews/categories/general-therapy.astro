@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { ArrowRight, Star, CheckCircle, MessageSquare, Video, Phone, Calendar, DollarSign, Shield, Users } from 'lucide-react';
+
+const platforms = [];
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">General Online Therapy Reviews</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive reviews of online therapy platforms offering general mental health counseling for anxiety, depression, stress, and more.
+          </p>
+        </div>
+
+        {/* What is Online Therapy */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">What is Online Therapy?</h2>
+          <div class="md:flex gap-8">
+            <div class="md:w-2/3">
+              <p class="text-gray-600 mb-4">
+                Online therapy (also known as teletherapy or virtual therapy) provides mental health counseling and support through digital platforms. It connects clients with licensed therapists through secure video calls, phone sessions, or text-based communication.
+              </p>
+              <p class="text-gray-600 mb-4">
+                General online therapy platforms typically offer support for common mental health concerns like anxiety, depression, stress, relationship issues, grief, and personal growth. These services make therapy more accessible by eliminating geographical barriers, reducing costs, and providing flexible scheduling options.
+              </p>
+              <p class="text-gray-600">
+                Most platforms offer subscription-based models with weekly live sessions and additional communication options, though specific features vary by provider. Research shows that online therapy can be as effective as in-person therapy for many common mental health concerns.
+              </p>
+            </div>
+            <div class="md:w-1/3 mt-6 md:mt-0">
+              <div class="bg-indigo-50 rounded-lg p-6">
+                <h3 class="font-bold text-gray-800 mb-3">Key Benefits</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Convenient access from anywhere</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>More affordable than traditional therapy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Flexible communication options</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Greater privacy and comfort</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Wide selection of therapists</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Top Rated Platforms */}
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">Top-Rated General Therapy Platforms</h2>
+        
+        {platforms.map((platform, index) => (
+          <div key={platform.name} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+            <div class="md:flex">
+              <div class="md:w-1/3">
+                <img 
+                  src={platform.image}
+                  alt={platform.name}
+                  class="w-full min-w-0 h-full object-cover"
+                />
+              </div>
+              <div class="p-8 md:w-2/3">
+                <div class="flex flex-wrap items-center justify-between mb-4">
+                  <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                  <div class="flex items-center">
+                    <div class="flex items-center mr-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          class={`h-5 w-5 ${i < Math.floor(platform.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                        />
+                      ))}
+                    </div>
+                    <span class="font-bold">{platform.rating}/5</span>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                  {platform.description}
+                </p>
+                <div class="mb-6">
+                  <span class="font-bold text-gray-800">Best for: </span>
+                  <span class="text-gray-600">{platform.bestFor}</span>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+                    <ul class="space-y-1">
+                      {platform.pros.map((pro, i) => (
+                        <li key={i} class="flex items-start">
+                          <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <span class="text-gray-600">{pro}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+                    <ul class="space-y-1">
+                      {platform.cons.map((con, i) => (
+                        <li key={i} class="flex items-start">
+                          <ArrowRight class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <span class="text-gray-600">{con}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Read Full Review</button>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Communication Methods */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Communication Methods</h2>
+          <p class="text-gray-600 mb-8">
+            Online therapy platforms offer various ways to communicate with your therapist. Each method has its own advantages and may be better suited to different needs and preferences.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {communicationMethods.map((method) => (
+              <div key={method.name} class="bg-gray-50 rounded-lg p-6">
+                <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <method.icon class="h-6 w-6 text-indigo-600" />
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">{method.name}</h3>
+                <p class="text-gray-600 mb-4">{method.description}</p>
+                <h4 class="font-bold text-gray-800 mb-2">Benefits:</h4>
+                <ul class="space-y-1">
+                  {method.benefits.map((benefit, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-600">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* How We Review */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How We Review Online Therapy Platforms</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Therapist Qualifications</h3>
+              <p class="text-gray-600">
+                We evaluate the credentials, licensing, and vetting process for therapists on each platform, as well as the breadth and depth of expertise available.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Calendar class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Session Quality & Availability</h3>
+              <p class="text-gray-600">
+                We assess the quality, frequency, and duration of therapy sessions, along with the responsiveness and availability of therapists.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Value & Pricing</h3>
+              <p class="text-gray-600">
+                We analyze subscription costs, what's included in each plan, insurance coverage options, and overall value compared to traditional therapy.
+              </p>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Privacy & Security</h3>
+              <p class="text-gray-600">
+                We examine each platform's privacy policies, data protection measures, and compliance with healthcare regulations like HIPAA.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <MessageSquare class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Communication Options</h3>
+              <p class="text-gray-600">
+                We evaluate the variety and quality of communication methods available, including text, audio, video, and live sessions.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">User Experience</h3>
+              <p class="text-gray-600">
+                We consider the platform's ease of use, accessibility, customer support, and overall client satisfaction based on user reviews.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is online therapy as effective as in-person therapy?</h3>
+              <p class="text-gray-600">
+                Research shows that online therapy can be just as effective as in-person therapy for many common mental health concerns, including anxiety, depression, and stress. Multiple studies have found comparable outcomes between virtual and face-to-face therapy. However, online therapy may not be suitable for severe mental health conditions, crises, or situations requiring in-person intervention.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How much does online therapy cost?</h3>
+              <p class="text-gray-600">
+                Online therapy typically costs between $60-$120 per week, depending on the platform and subscription plan. This is often more affordable than traditional therapy, which can range from $100-$200 per session. Many platforms offer subscription models that include weekly live sessions and additional features like messaging. Some services accept insurance, while others provide superbills for out-of-network reimbursement.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">How do I choose the right therapist?</h3>
+              <p class="text-gray-600">
+                Most platforms offer therapist matching services based on your needs and preferences. When selecting a therapist, consider their specializations, therapeutic approaches, and experience with your specific concerns. Many services allow you to switch therapists if the initial match isn't a good fit. It's important to find someone you feel comfortable with, as the therapeutic relationship is a key factor in successful therapy outcomes.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Is online therapy confidential and secure?</h3>
+              <p class="text-gray-600">
+                Reputable online therapy platforms use encryption and other security measures to protect your privacy. They should be HIPAA-compliant and have clear privacy policies. Therapists are bound by the same confidentiality rules as in-person therapy, with similar exceptions (such as risk of harm to self or others). For additional privacy, consider your own environment when having sessions and use secure internet connections.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Find Your Perfect Therapy Match</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Take our assessment to get matched with the best online therapy platform for your specific needs, preferences, and budget.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Match</a>
+            <a href="/best/platforms/best-online-therapy-platforms" class="border-white text-white hover:bg-white hover:bg-opacity-10">View Top-Rated Platforms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

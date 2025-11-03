@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { Star, CheckCircle, XCircle, ArrowRight, ExternalLink, MessageSquare, Video, Phone, Search, Brain, Shield, Users, DollarSign } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Brain, Shield, Users, DollarSign } from 'lucide-react';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -11,11 +11,14 @@ const renderStars = (rating: number) => {
 
 const platforms = [];
 
+
+const features = [];
 ---
 
 <BaseLayout>
 <div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">Best Online Therapy for Depression</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -70,7 +73,7 @@ const platforms = [];
                 </div>
               </div>
               <p class="text-gray-600 mb-4">
-                Wide range of therapeutic approaches for depression with financial aid options.
+                Affordable therapy with financial aid options and flexible scheduling.
               </p>
               <div class="text-sm text-gray-600 mb-4">
                 <strong>Price:</strong> $60-$90/week
@@ -239,6 +242,11 @@ const platforms = [];
                           </div>
                         ))}
                       </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
+                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
+                      <p class="text-gray-700">{platform.bestFor}</p>
                     </div>
                   </div>
                 </div>

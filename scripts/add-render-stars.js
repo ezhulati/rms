@@ -21,23 +21,33 @@ const renderStars = (rating: number) => {
 };
 `;
 
-const filesToFix = [
-  'src/pages/best/audiences/BestForLGBTQ.astro',
-  'src/pages/best/audiences/BestForParents.astro',
-  'src/pages/best/audiences/BestForSeniors.astro',
-  'src/pages/best/audiences/BestForTeens.astro',
-  'src/pages/best/audiences/BestForVeterans.astro',
-  'src/pages/best/conditions/BestForAddiction.astro',
-  'src/pages/best/conditions/BestForAnxiety.astro',
-  'src/pages/best/conditions/BestForDepression.astro',
-  'src/pages/best/conditions/BestForEatingDisorders.astro',
-  'src/pages/best/conditions/best-for-depression.astro',
-  'src/pages/best/conditions/BestForOCD.astro',
-  'src/pages/best/conditions/BestForPTSD.astro',
-  'src/pages/best/platforms/BestMedicationTherapyPlatforms.astro',
-  'src/pages/best/platforms/BestSpecializedPlatforms.astro',
-  'src/pages/best/specific-needs/BestSpecificNeeds.astro',
-];
+// Auto-detect files that use renderStars but don't have it defined
+async function getFilesToFix() {
+  const { glob } = await import('glob');
+  const { execSync } = await import('child_process');
+  const path = await import('path');
+
+  const rootDir = path.resolve(process.cwd());
+  const allFiles = await glob('src/pages/**/*.astro', { cwd: rootDir, absolute: true });
+
+  const filesToFix = [];
+
+  for (const file of allFiles) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      const usesRenderStars = content.includes('renderStars(');
+      const hasRenderStars = content.includes('const renderStars');
+
+      if (usesRenderStars && !hasRenderStars) {
+        filesToFix.push(file);
+      }
+    } catch (e) {
+      // Skip files that can't be read
+    }
+  }
+
+  return filesToFix;
+}
 
 async function fixFile(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -74,17 +84,22 @@ async function fixFile(filePath) {
 
 async function main() {
   const rootDir = path.resolve(__dirname, '..');
+
+  const filesToFix = await getFilesToFix();
+  console.log(`Found ${filesToFix.length} files that need renderStars\n`);
+
   let fixedCount = 0;
 
-  for (const relPath of filesToFix) {
-    const filePath = path.join(rootDir, relPath);
+  for (const filePath of filesToFix) {
     try {
       const fixed = await fixFile(filePath);
       if (fixed) {
         fixedCount++;
+        const relPath = path.relative(rootDir, filePath);
         console.log(`✅ Fixed: ${relPath}`);
       }
     } catch (error) {
+      const relPath = path.relative(rootDir, filePath);
       console.error(`❌ Error processing ${relPath}:`, error.message);
     }
   }

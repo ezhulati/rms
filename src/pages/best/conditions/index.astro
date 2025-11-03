@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Best by Condition | RealMindSolutions"
+  description="Best platforms for specific mental health conditions"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best by Condition</h1>
+    <p class="text-xl text-gray-600 mb-12">Top platforms for specific conditions</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/best/conditions/best-for-anxiety" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for Anxiety</h3>
+        <p class="text-gray-600">Anxiety disorder treatment</p>
+      </a>
+      <a href="/best/conditions/best-for-depression" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for Depression</h3>
+        <p class="text-gray-600">Depression treatment online</p>
+      </a>
+      <a href="/best/conditions/best-for-ptsd" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for PTSD</h3>
+        <p class="text-gray-600">Trauma-focused platforms</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

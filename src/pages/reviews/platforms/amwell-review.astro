@@ -1,0 +1,465 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Star, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+
+const features = [];
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Amwell Online Therapy Review</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            A comprehensive analysis of Amwell's telehealth platform for therapy and psychiatry services
+          </p>
+          <div class="flex justify-center items-center mb-4">
+            {renderStars(ratings.overall)}
+            <span class="ml-2 text-2xl font-bold text-gray-800">{ratings.overall}/5</span>
+          </div>
+          <div class="flex justify-center space-x-4 mb-8">
+            <a href="https://www.amwell.com" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Visit Amwell</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Compare Platforms</a>
+          </div>
+        </div>
+
+        {/* Overview Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Amwell Overview</h2>
+          <p class="text-gray-600 mb-4">
+            Amwell (formerly American Well) is a comprehensive telehealth platform that offers both medical and mental health services. Founded in 2006, it's one of the longest-established telehealth providers in the United States. Unlike dedicated mental health platforms, Amwell provides a broader range of healthcare services, with therapy and psychiatry being part of their overall offering.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The platform operates on a pay-per-visit model rather than a subscription basis, making it more similar to traditional healthcare than many online therapy competitors. Amwell accepts insurance from many major providers, potentially making it an affordable option for those with coverage.
+          </p>
+          <p class="text-gray-600">
+            Amwell's mental health services include therapy with licensed psychologists, counselors, and social workers, as well as psychiatry services with board-certified psychiatrists who can diagnose conditions and prescribe medication when appropriate.
+          </p>
+        </div>
+
+        {/* Rating Breakdown */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Rating Breakdown</h2>
+          <div class="space-y-6">
+            <RatingBreakdown 
+              category="Therapist Quality" 
+              rating={ratings.therapistQuality} 
+              description="Amwell employs licensed therapists and board-certified psychiatrists with an average of 15 years of experience. All providers are credentialed and go through a thorough vetting process. The quality of providers is generally high, though the selection may be more limited than on some dedicated mental health platforms."
+            />
+            <RatingBreakdown 
+              category="User Experience" 
+              rating={ratings.userExperience} 
+              description="The platform offers a straightforward booking process and reliable video sessions. However, the user interface feels more clinical than some competitors, and the mobile app receives mixed reviews. The lack of messaging options and between-session support tools limits the overall experience."
+            />
+            <RatingBreakdown 
+              category="Pricing" 
+              rating={ratings.pricing} 
+              description="Without insurance, Amwell's per-session costs are higher than subscription-based platforms. However, with insurance coverage, it can be very affordable, sometimes requiring only a copay. The pay-per-visit model offers flexibility but may be more expensive for those seeking regular weekly therapy."
+            />
+            <RatingBreakdown 
+              category="Customer Service" 
+              rating={ratings.customerService} 
+              description="Amwell provides 24/7 customer support via phone and email. Their support team is generally responsive and helpful, particularly with insurance and technical issues. The platform also offers detailed FAQs and resources to help users navigate their services."
+            />
+            <RatingBreakdown 
+              category="Features & Resources" 
+              rating={ratings.features} 
+              description="As a comprehensive telehealth platform, Amwell offers the convenience of medical and mental health services in one place. However, it lacks some specialized mental health features found on dedicated platforms, such as worksheets, journaling tools, or messaging-based therapy options."
+            />
+          </div>
+        </div>
+
+        {/* Pros and Cons */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Pros and Cons</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <CheckCircle class="h-6 w-6 text-green-500 mr-2" />
+                Pros
+              </h3>
+              <ul class="space-y-3">
+                {pros.map((pro, index) => (
+                  <li key={index} class="flex items-start">
+                    <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <XCircle class="h-6 w-6 text-red-500 mr-2" />
+                Cons
+              </h3>
+              <ul class="space-y-3">
+                {cons.map((con, index) => (
+                  <li key={index} class="flex items-start">
+                    <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-gray-600">{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Pricing</h2>
+          <p class="text-gray-600 mb-6">
+            Amwell operates on a pay-per-visit model rather than a subscription basis. Costs vary depending on the type of service and provider credentials. Insurance coverage can significantly reduce these costs, sometimes to just a standard copay.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} class="border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">{tier.name}</h3>
+                <p class="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</p>
+                <p class="text-gray-600 mb-4">{tier.description}</p>
+                <ul class="space-y-2">
+                  {tier.features.map((feature, i) => (
+                    <li key={i} class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          <div class="bg-indigo-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Insurance Coverage</h3>
+            <p class="text-gray-600 mb-4">
+              Amwell works with many major insurance providers, including:
+            </p>
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Aetna</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Blue Cross Blue Shield</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Cigna</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">UnitedHealthcare</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Humana</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Medicare</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Medicaid (select states)</li>
+              <li class="bg-white rounded-lg p-3 text-center text-gray-700">Many regional plans</li>
+            </ul>
+            <p class="text-gray-600">
+              To verify your specific coverage, you can enter your insurance information during the registration process or contact your insurance provider directly.
+            </p>
+          </div>
+        </div>
+
+        {/* How It Works */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How Amwell Works</h2>
+          
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">1. Sign Up and Create an Account</h3>
+              <p class="text-gray-600">
+                Registration is straightforward and takes about 5-10 minutes. You'll provide basic information, including your insurance details if applicable. Amwell will verify your identity and insurance coverage during this process.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">2. Choose a Provider</h3>
+              <p class="text-gray-600">
+                Browse available therapists or psychiatrists based on their specialties, experience, and availability. You can view provider profiles, credentials, and patient ratings to help make your selection. Unlike subscription-based platforms, you directly choose your provider rather than being matched.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">3. Schedule an Appointment</h3>
+              <p class="text-gray-600">
+                Select an available time slot that works for you. Amwell often has same-day or next-day availability, particularly for therapy appointments. You'll receive a confirmation email with details about your upcoming session.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">4. Attend Your Video Session</h3>
+              <p class="text-gray-600">
+                At your scheduled time, log in to your Amwell account and enter the virtual waiting room. When your provider is ready, you'll be connected for your video session. Therapy sessions typically last 45 minutes, while initial psychiatry consultations are 45 minutes and follow-ups are 15 minutes.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">5. Follow-Up and Ongoing Care</h3>
+              <p class="text-gray-600">
+                After your session, you can schedule follow-up appointments as recommended by your provider. Since Amwell uses a pay-per-visit model, you have flexibility in how frequently you schedule sessions. If prescribed medication, you can pick it up at your local pharmacy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Therapist Quality */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Therapist Quality and Credentials</h2>
+          
+          <p class="text-gray-600 mb-6">
+            Amwell maintains high standards for their mental health providers, requiring appropriate licensing, credentials, and experience. Here's what you can expect:
+          </p>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Therapist Credentials</h3>
+              <p class="text-gray-600 mb-3">
+                Amwell's therapy providers include:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Licensed Psychologists (PhD/PsyD)</strong> - Doctoral-level providers who can conduct psychological testing and provide therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Licensed Clinical Social Workers (LCSW)</strong> - Master's-level providers specializing in therapy and case management</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Licensed Professional Counselors (LPC)</strong> - Master's-level providers trained in various therapeutic approaches</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Licensed Marriage and Family Therapists (LMFT)</strong> - Specialists in relationship and family dynamics</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Psychiatrist Credentials</h3>
+              <p class="text-gray-600 mb-3">
+                Amwell's psychiatry providers include:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Board-Certified Psychiatrists (MD/DO)</strong> - Medical doctors specialized in mental health who can diagnose conditions and prescribe medication</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Psychiatric Nurse Practitioners (PMHNP)</strong> - Advanced practice nurses with specialized training in psychiatry who can prescribe medication in most states</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Vetting Process</h3>
+              <p class="text-gray-600">
+                Amwell conducts thorough background checks and credential verification for all providers. They check state licenses, board certifications, education history, and practice history. Providers must also complete Amwell's telehealth training program to ensure they can effectively deliver care in a virtual setting.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Experience Level</h3>
+              <p class="text-gray-600">
+                Amwell reports that their mental health providers have an average of 15 years of clinical experience. Many have experience in both in-person and telehealth settings. Provider profiles display their years of experience, areas of specialty, and patient ratings to help users make informed choices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* User Experience */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">User Experience</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Platform Interface</h3>
+              <p class="text-gray-600">
+                Amwell's interface is clean and functional, though it has a more clinical feel than some dedicated therapy platforms. The website and app are designed to facilitate quick access to appointments, with a straightforward navigation system. The video platform is generally reliable, with good audio and video quality for sessions.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Appointment Scheduling</h3>
+              <p class="text-gray-600">
+                The scheduling process is simple and efficient. Users can view available time slots for their chosen provider and book directly. The platform offers good availability, often with same-day or next-day appointments, particularly for therapy services. Rescheduling is also straightforward, though cancellation policies vary by provider.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Communication Options</h3>
+              <p class="text-gray-600">
+                Amwell primarily offers video sessions for mental health services. Unlike some competitors, they don't provide messaging-based therapy or between-session communication with providers. This limitation means all therapeutic interaction happens during scheduled video appointments, which may not suit those looking for more continuous support.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Mobile Experience</h3>
+              <p class="text-gray-600">
+                Amwell offers mobile apps for iOS and Android devices, allowing users to schedule and attend appointments on the go. While the core functionality works well, the mobile apps receive mixed reviews, with some users reporting technical issues or finding the interface less intuitive than the website.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Privacy and Security</h3>
+              <p class="text-gray-600">
+                Amwell takes privacy and security seriously, with HIPAA-compliant video sessions and secure data storage. They use encryption for all sensitive information and provide clear privacy policies. The platform also offers private browsing options and discreet billing statements for those concerned about confidentiality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Who It's Best For */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Who Amwell Is Best For</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Ideal For:</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Insurance holders</strong> - Those with insurance coverage from major providers can often access Amwell's services at reduced rates, sometimes just paying a copay</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>People needing both medical and mental health care</strong> - Amwell's comprehensive platform allows users to address various health needs in one place</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Those seeking medication management</strong> - With board-certified psychiatrists who can prescribe medication, Amwell is suitable for those needing psychiatric evaluation and prescriptions</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>People who prefer traditional therapy formats</strong> - The video session format closely resembles traditional in-person therapy, making it familiar and comfortable for many users</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Those who want flexibility without subscriptions</strong> - The pay-per-visit model allows users to schedule sessions as needed without ongoing financial commitment</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Less Suitable For:</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Those seeking text-based therapy</strong> - Amwell doesn't offer messaging-based therapy options, which some users prefer for convenience or comfort</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Budget-conscious users without insurance</strong> - Without insurance coverage, Amwell's per-session costs can be higher than subscription-based platforms for frequent users</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>People wanting between-session support</strong> - The lack of messaging or tools between appointments means all therapeutic work happens during scheduled sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Those seeking highly specialized mental health treatment</strong> - While Amwell has qualified providers, dedicated mental health platforms may offer more specialized treatment for specific conditions</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Users wanting a modern, app-focused experience</strong> - Amwell's more clinical interface may feel less engaging than some newer therapy platforms designed specifically for digital-native users</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Comparison Section */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">How Amwell Compares</h2>
+          
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Amwell vs. Teladoc</h3>
+              <p class="text-gray-600 mb-3">
+                Both Amwell and Teladoc are comprehensive telehealth platforms offering medical and mental health services. Key differences include:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Pricing:</strong> Teladoc's therapy sessions are similarly priced, but their psychiatry services tend to be slightly less expensive</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Provider Network:</strong> Teladoc has a larger overall provider network, potentially offering more selection</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>User Experience:</strong> Amwell's platform is generally considered more user-friendly, with a smoother booking process</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Amwell vs. BetterHelp</h3>
+              <p class="text-gray-600 mb-3">
+                Amwell and BetterHelp represent different approaches to online therapy:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Business Model:</strong> Amwell uses pay-per-visit pricing, while BetterHelp offers subscription-based therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Communication:</strong> BetterHelp offers messaging, live chat, phone, and video options, while Amwell only provides video sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Insurance:</strong> Amwell accepts insurance from many major providers, while BetterHelp is generally self-pay</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Amwell vs. Talkspace</h3>
+              <p class="text-gray-600 mb-3">
+                Comparing Amwell to Talkspace highlights different service models:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Communication Style:</strong> Talkspace emphasizes asynchronous messaging therapy, while Amwell focuses on video sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Pricing Structure:</strong> Talkspace uses subscription pricing, while Amwell charges per session</span>
+                </li>
+                <li class="flex items-start">
+                  <ArrowRight class="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-600"><strong>Service Scope:</strong> Amwell offers broader healthcare services, while Talkspace is focused exclusively on mental health</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Verdict</h2>
+          <p class="text-gray-600 mb-4">
+            Amwell offers a solid telehealth platform for those seeking therapy or psychiatric services, particularly for users with insurance coverage. Its pay-per-visit model and integration with broader medical services make it a practical choice for many users, especially those who prefer a traditional therapy format delivered via video.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The platform's strengths lie in its established reputation, qualified providers, insurance acceptance, and comprehensive healthcare approach. However, it lacks some of the specialized mental health features and communication options found on dedicated therapy platforms.
+          </p>
+          <p class="text-gray-600">
+            Amwell is best suited for insurance holders seeking occasional therapy or psychiatric services, particularly those who value the ability to address both medical and mental health needs on a single platform. For those seeking more intensive therapy with frequent communication or specialized mental health features, dedicated therapy platforms might be more appropriate.
+          </p>
+        </div>
+
+        {/* How We Reviewed */}
+        
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Find Your Perfect Therapy Match</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Not sure if Amwell is right for you? Take our personalized assessment to find the best online therapy platform for your specific needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/compare/platforms/top-therapy-platforms-compared" class="border-white text-white hover:bg-white hover:bg-opacity-10">Compare All Platforms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

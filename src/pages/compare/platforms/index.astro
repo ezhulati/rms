@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Platform Comparisons | RealMindSolutions"
+  description="Compare online therapy platforms side-by-side"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Platform Comparisons</h1>
+    <p class="text-xl text-gray-600 mb-12">Side-by-side comparisons of popular online therapy platforms</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/better-help-vs-talkspace" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">BetterHelp vs Talkspace</h3>
+        <p class="text-gray-600">Compare the two largest platforms</p>
+      </a>
+      <a href="/comparisons/better-help-vs-cerebral" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">BetterHelp vs Cerebral</h3>
+        <p class="text-gray-600">Therapy vs medication management</p>
+      </a>
+      <a href="/comparisons/talkspace-vs-cerebral" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Talkspace vs Cerebral</h3>
+        <p class="text-gray-600">Traditional vs medication-focused</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

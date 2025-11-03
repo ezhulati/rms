@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Therapy Modality Comparisons | RealMindSolutions"
+  description="Compare different therapy approaches and modalities"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Therapy Modality Comparisons</h1>
+    <p class="text-xl text-gray-600 mb-12">Understand the differences between therapy approaches</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/comparisons/cbt-vs-psychodynamic" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">CBT vs Psychodynamic</h3>
+        <p class="text-gray-600">Compare therapeutic approaches</p>
+      </a>
+      <a href="/comparisons/online-vs-traditional-therapy" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Online vs Traditional</h3>
+        <p class="text-gray-600">Telehealth vs in-person therapy</p>
+      </a>
+      <a href="/comparisons/text-vs-video-therapy" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Text vs Video</h3>
+        <p class="text-gray-600">Different communication methods</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

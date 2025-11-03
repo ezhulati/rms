@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Platform Roundups | RealMindSolutions"
+  description="Comprehensive roundup comparisons of therapy platforms"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Platform Roundups</h1>
+    <p class="text-xl text-gray-600 mb-12">Compare multiple platforms at once</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/comparisons/top-therapy-platforms-compared" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Top Platforms Compared</h3>
+        <p class="text-gray-600">Best overall platforms</p>
+      </a>
+      <a href="/comparisons/best-therapy-apps-compared" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best Apps Compared</h3>
+        <p class="text-gray-600">Mobile-friendly options</p>
+      </a>
+      <a href="/comparisons/insurance-friendly-platforms" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Insurance-Friendly Platforms</h3>
+        <p class="text-gray-600">Platforms accepting insurance</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

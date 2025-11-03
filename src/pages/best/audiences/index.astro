@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Best by Audience | RealMindSolutions"
+  description="Best platforms for specific demographics"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Best by Audience</h1>
+    <p class="text-xl text-gray-600 mb-12">Top platforms for specific groups</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/best/audiences/best-for-teens" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for Teens</h3>
+        <p class="text-gray-600">Teen-friendly platforms</p>
+      </a>
+      <a href="/best/audiences/best-for-couples" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for Couples</h3>
+        <p class="text-gray-600">Couples therapy online</p>
+      </a>
+      <a href="/best/audiences/best-for-lgbtq" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Best for LGBTQ+</h3>
+        <p class="text-gray-600">LGBTQ+-friendly services</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

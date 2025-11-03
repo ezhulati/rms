@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Brain, ArrowRight, CheckCircle, AlertCircle, Star, Search, FileText, Clock, Shield } from 'lucide-react';
+
+const features = [];
+---
+
+<BaseLayout>
+<div class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Mental Health Assessments</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Free, clinically-informed screening tools to help you understand your mental health and find appropriate support.
+          </p>
+          <div class="flex justify-center">
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the comprehensive assessment</a>
+          </div>
+        </div>
+
+        {/* Featured Assessment */}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-16">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img 
+                src={assessments[0].image}
+                alt="Mental Health Assessment"
+                class="w-full min-w-0 h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-2/3">
+              <div class="flex items-center mb-4">
+                <Brain class="h-8 w-8 text-indigo-600 mr-3" />
+                <h2 class="text-2xl font-bold text-gray-800">Mental Health Assessment</h2>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Our most comprehensive assessment screens for common mental health conditions and provides personalized recommendations for support and treatment options.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-2">What You'll Learn</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Potential mental health concerns</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Symptom severity levels</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Treatment recommendations</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Support resources</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-2">Assessment Details</h3>
+                  <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                      <FileText class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>{assessments[0].questionCount} questions</span>
+                    </li>
+                    <li class="flex items-center">
+                      <Clock class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>{assessments[0].duration}</span>
+                    </li>
+                    <li class="flex items-center">
+                      <Shield class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>Private & confidential</span>
+                    </li>
+                    <li class="flex items-center">
+                      <FileText class="h-5 w-5 text-indigo-600 mr-2" />
+                      <span>Detailed results</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Start Assessment</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Condition-Specific Assessments */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Condition-Specific Assessments</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {assessments
+              .filter(assessment => assessment.category === 'condition')
+              .map(assessment => (
+                <div key={assessment.id} class="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img 
+                    src={assessment.image}
+                    alt={assessment.name}
+                    class="w-full min-w-0 h-48 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">{assessment.name}</h3>
+                    <p class="text-gray-600 mb-4">{assessment.description}</p>
+                    <div class="space-y-3 mb-4">
+                      <div class="flex items-center text-sm text-gray-600">
+                        <FileText class="h-4 w-4 text-indigo-600 mr-2" />
+                        <span>{assessment.questionCount} questions • {assessment.duration}</span>
+                      </div>
+                      <div class="space-y-1">
+                        {assessment.features.slice(0, 2).map((feature, index) => (
+                          <div key={index} class="flex items-center text-sm">
+                            <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <button class="w-full min-w-0 justify-center">Take Assessment</button>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {/* Specialized Assessments */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8">Specialized Assessments</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {assessments
+              .filter(assessment => assessment.category === 'specialized')
+              .map(assessment => (
+                <div key={assessment.id} class="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div class="md:flex">
+                    <div class="md:w-2/5">
+                      <img 
+                        src={assessment.image}
+                        alt={assessment.name}
+                        class="w-full min-w-0 h-full object-cover"
+                      />
+                    </div>
+                    <div class="p-6 md:w-3/5">
+                      <h3 class="text-xl font-bold text-gray-800 mb-3">{assessment.name}</h3>
+                      <p class="text-gray-600 mb-4">{assessment.description}</p>
+                      <div class="space-y-3 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                          <FileText class="h-4 w-4 text-indigo-600 mr-2" />
+                          <span>{assessment.questionCount} questions • {assessment.duration}</span>
+                        </div>
+                        <div class="space-y-1">
+                          {assessment.features.map((feature, index) => (
+                            <div key={index} class="flex items-center text-sm">
+                              <CheckCircle class="h-4 w-4 text-green-500 mr-2" />
+                              <span>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <button class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take Assessment</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {/* About Our Assessments */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">About Our Assessments</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Brain class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Evidence-Based</h3>
+              <p class="text-gray-600">
+                Our assessments are based on clinically validated screening tools and best practices in mental health assessment.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Shield class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Private & Secure</h3>
+              <p class="text-gray-600">
+                Your privacy is protected. All assessments are anonymous and your data is never shared without your consent.
+              </p>
+            </div>
+            
+            <div>
+              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <FileText class="h-6 w-6 text-indigo-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Actionable Results</h3>
+              <p class="text-gray-600">
+                Get personalized recommendations and clear next steps based on your assessment results.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-8 bg-yellow-50 rounded-lg p-6">
+            <div class="flex items-start">
+              <AlertCircle class="h-6 w-6 text-yellow-500 mr-3 mt-1" />
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Important Note</h3>
+                <p class="text-gray-600">
+                  These assessments are screening tools, not diagnostic instruments. They are designed to help you understand your mental health and determine if professional help might be beneficial. For a proper diagnosis, please consult with a mental health professional.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">Ready to Take the First Step?</h2>
+          <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Start with our comprehensive mental health assessment to understand your needs and get personalized recommendations.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/tools/assessments/mental-health-assessment" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Take the Assessment</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="border-white text-white hover:bg-white hover:bg-opacity-10">Find a Therapist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</BaseLayout>

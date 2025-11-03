@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Feature Reviews | RealMindSolutions"
+  description="Reviews of specific therapy platform features"
+>
+  <div class="sb-container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Feature Reviews</h1>
+    <p class="text-xl text-gray-600 mb-12">Deep dives into platform features</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/reviews/features/therapist-matching-systems" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Therapist Matching</h3>
+        <p class="text-gray-600">How platforms match you with therapists</p>
+      </a>
+      <a href="/reviews/features/communication" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Communication Features</h3>
+        <p class="text-gray-600">Messaging and video options</p>
+      </a>
+      <a href="/reviews/features/video-session-quality" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Video Quality</h3>
+        <p class="text-gray-600">Video session experience</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
