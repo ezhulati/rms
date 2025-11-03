@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Heart, Users, Brain, DollarSign } from 'lucide-react';
+import { platforms, getPlatformBySlug } from '../../../siteData';
+import { ArrowRight, Star, CheckCircle, XCircle, MessageSquare, Video, Phone, Search, Shield, Users, Brain, DollarSign, Heart, Sparkles, Award } from 'lucide-react';
 
 const renderStars = (rating: number) => {
   const fullStars = Math.floor(rating);
@@ -8,62 +9,54 @@ const renderStars = (rating: number) => {
   return starsArray;
 };
 
-const platforms = [
-  {
-    slug: 'regain',
-    name: 'ReGain',
-    rating: 4.8,
-    price: '$60-90/week',
-    description: 'ReGain specializes exclusively in couples therapy and relationship counseling.',
-    communication: ['messaging', 'video', 'phone'],
-    insurance: false,
-    pros: ['Specialized in couples therapy', 'Experienced relationship counselors', 'Flexible scheduling'],
-    cons: ['No insurance coverage', 'Higher price point'],
-    features: ['Unlimited messaging', 'Live video sessions', 'Couples-focused therapy'],
-    bestFor: 'Couples seeking specialized relationship counseling with experienced therapists.',
-  },
-  {
-    slug: 'talkspace',
-    name: 'Talkspace',
-    rating: 4.6,
-    price: '$69+/week',
-    description: 'Talkspace offers comprehensive couples therapy with insurance coverage options.',
-    communication: ['messaging', 'video'],
-    insurance: true,
-    pros: ['Accepts insurance', 'Large therapist network', 'Multiple communication options'],
-    cons: ['Can be expensive without insurance', 'Less specialized in couples therapy'],
-    features: ['Insurance accepted', 'Live video sessions', 'Unlimited messaging'],
-    bestFor: 'Couples who want to use insurance for therapy coverage.',
-  },
-  {
-    slug: 'lasting',
-    name: 'Lasting',
-    rating: 4.5,
-    price: '$11.99/month',
-    description: 'Lasting provides app-based relationship counseling with structured programs.',
-    communication: ['messaging'],
-    insurance: false,
-    pros: ['Very affordable', 'Structured programs', 'Self-guided exercises'],
-    cons: ['No live therapist sessions', 'App-based only'],
-    features: ['Relationship exercises', 'Progress tracking', 'Research-based programs'],
-    bestFor: 'Couples looking for affordable self-guided relationship improvement programs.',
-  },
-];
+
+// const platforms = []; // Now using real data from siteData
+
 
 const features = [];
 ---
 
-<BaseLayout>
-  {/* Hero Section */}
-  <section class="bg-gradient-to-b from-white via-brand-primary-50/30 to-white pt-16 pb-12 md:pt-24 md:pb-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-12">
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Couples</h1>
-        <p class="font-serif italic text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
-          Compare the top online therapy platforms designed for couples and relationship counseling.
+<BaseLayout title="Best Online Therapy for Couples 2025 | Expert Reviews" description="Find specialized online therapy platforms designed for couples seeking relationship counseling with proven results.">
+
+  {/* Hero Section - Enhanced */}
+  <section class="relative bg-gradient-to-b from-white via-brand-primary-50/20 to-white pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    {/* Background decoration */}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-brand-primary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 left-20 w-96 h-96 bg-brand-secondary-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-accent-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      {/* Breadcrumb */}
+      <nav class="flex items-center space-x-2 text-sm text-neutral-600 mb-8 animate-fade-in">
+        <a href="/" class="hover:text-brand-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/best" class="hover:text-brand-primary-600 transition">Best Platforms</a>
+        <span>/</span>
+        <a href="/best/audiences" class="hover:text-brand-primary-600 transition">Audiences</a>
+        <span>/</span>
+        <span class="text-neutral-900 font-medium">Couples</span>
+      </nav>
+
+      <div class="text-center animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-brand-primary-100 text-brand-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <Sparkles class="h-4 w-4" />
+          <span>Expert-Reviewed Couples Therapy Platforms</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">Best Online Therapy for Couples 2025</h1>
+        <p class="font-sans text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+          Find specialized online therapy platforms designed for couples seeking relationship counseling with proven results.
         </p>
-        <div class="flex justify-center">
-          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find your perfect couples therapy match</a>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center gap-2 bg-brand-primary-600 text-white px-8 py-4 rounded-xl hover:bg-brand-primary-700 transition-all hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+            <Search class="h-5 w-5" />
+            Find Your Perfect Match
+          </a>
+          <a href="/best/audiences" class="inline-flex items-center gap-2 bg-white text-brand-primary-600 border-2 border-brand-primary-200 px-8 py-4 rounded-xl hover:border-brand-primary-400 transition-all hover:scale-105 shadow-sm hover:shadow-md font-medium">
+            <Users class="h-5 w-5" />
+            View All Audiences
+          </a>
         </div>
       </div>
     </div>
@@ -74,30 +67,30 @@ const features = [];
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Quick Summary */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Picks for Couples Therapy</h2>
+        <div class="bg-white rounded-xl shadow-sm p-8 mb-10">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-6">Top Picks for Couples Therapy</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Best Overall */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+            <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl p-6 relative">
+              <div class="absolute top-0 right-0 bg-brand-primary-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
                 Best Overall
               </div>
               <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">ReGain</h3>
+                <h3 class="text-xl font-bold text-neutral-900 mr-3">ReGain</h3>
                 <div class="flex items-center">
                   <div class="flex mr-1">
                     {renderStars(4.8).map((filled) => (
                       <Star class={`h-5 w-5 ${filled ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
                     ))}
                   </div>
-                  <span class="text-gray-600">4.8/5</span>
+                  <span class="text-neutral-600">4.8/5</span>
                 </div>
               </div>
-              <p class="text-gray-600 mb-4">
+              <p class="text-neutral-600 mb-4">
                 Specialized platform exclusively for couples with dedicated relationship counselors.
               </p>
-              <div class="text-sm text-gray-600 mb-4">
+              <div class="text-sm text-neutral-600 mb-4">
                 <strong>Price:</strong> $60-$90/week
               </div>
               <a href="/reviews/platforms/regain" class="w-full min-w-0 justify-center mb-2">Read full review</a>
@@ -105,25 +98,25 @@ const features = [];
             </div>
             
             {/* Best with Insurance */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+            <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl p-6 relative">
+              <div class="absolute top-0 right-0 bg-brand-primary-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
                 Best with Insurance
               </div>
               <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Talkspace</h3>
+                <h3 class="text-xl font-bold text-neutral-900 mr-3">Talkspace</h3>
                 <div class="flex items-center">
                   <div class="flex mr-1">
                     {renderStars(4.6).map((filled) => (
                       <Star class={`h-5 w-5 ${filled ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
                     ))}
                   </div>
-                  <span class="text-gray-600">4.6/5</span>
+                  <span class="text-neutral-600">4.6/5</span>
                 </div>
               </div>
-              <p class="text-gray-600 mb-4">
+              <p class="text-neutral-600 mb-4">
                 Comprehensive platform offering couples therapy with insurance coverage options.
               </p>
-              <div class="text-sm text-gray-600 mb-4">
+              <div class="text-sm text-neutral-600 mb-4">
                 <strong>Price:</strong> $99-$139/week
               </div>
               <a href="/reviews/platforms/talkspace" class="w-full min-w-0 justify-center mb-2">Read full review</a>
@@ -131,25 +124,25 @@ const features = [];
             </div>
             
             {/* Best Self-Guided */}
-            <div class="bg-indigo-50 rounded-lg p-6 relative">
-              <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+            <div class="bg-gradient-to-br from-brand-primary-50 to-white rounded-xl p-6 relative">
+              <div class="absolute top-0 right-0 bg-brand-primary-600 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
                 Best Self-Guided
               </div>
               <div class="flex items-center mb-3">
-                <h3 class="text-xl font-bold text-gray-800 mr-3">Lasting</h3>
+                <h3 class="text-xl font-bold text-neutral-900 mr-3">Lasting</h3>
                 <div class="flex items-center">
                   <div class="flex mr-1">
                     {renderStars(4.5).map((filled) => (
                       <Star class={`h-5 w-5 ${filled ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
                     ))}
                   </div>
-                  <span class="text-gray-600">4.5/5</span>
+                  <span class="text-neutral-600">4.5/5</span>
                 </div>
               </div>
-              <p class="text-gray-600 mb-4">
+              <p class="text-neutral-600 mb-4">
                 App-based relationship counseling with structured programs and exercises.
               </p>
-              <div class="text-sm text-gray-600 mb-4">
+              <div class="text-sm text-neutral-600 mb-4">
                 <strong>Price:</strong> $15-$89/month
               </div>
               <a href="/reviews/platforms/lasting" class="w-full min-w-0 justify-center mb-2">Read full review</a>
@@ -159,12 +152,12 @@ const features = [];
         </div>
 
         {/* Understanding Couples Therapy */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Online Couples Therapy</h2>
+        <div class="bg-white rounded-xl shadow-sm p-8 mb-10">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-6">Understanding Online Couples Therapy</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Key Benefits</h3>
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">Key Benefits</h3>
               <ul class="space-y-2">
                 <li class="flex items-start">
                   <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5" />
@@ -190,7 +183,7 @@ const features = [];
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">Important Considerations</h3>
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">Important Considerations</h3>
               <ul class="space-y-2">
                 <li class="flex items-start">
                   <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5" />
@@ -219,16 +212,16 @@ const features = [];
 
         {/* Detailed Reviews */}
         <div class="mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">Detailed Platform Reviews</h2>
+          <h2 class="text-2xl font-bold text-neutral-900 mb-8">Detailed Platform Reviews</h2>
           
           {platforms.map((platform, index) => (
-            <div key={platform.slug} class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+            <div key={platform.slug} class="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
               <div class="p-8">
                 <div class="flex flex-col md:flex-row">
                   <div class="md:w-1/4 mb-6 md:mb-0">
                     <div class="flex items-center mb-3">
-                      <span class="text-3xl font-bold text-indigo-600 mr-3">{index + 1}</span>
-                      <h3 class="text-2xl font-bold text-gray-800">{platform.name}</h3>
+                      <span class="text-3xl font-bold text-brand-primary-600 mr-3">{index + 1}</span>
+                      <h3 class="text-2xl font-bold text-neutral-900">{platform.name}</h3>
                     </div>
                     <div class="flex items-center mb-4">
                       <div class="flex mr-2">
@@ -236,26 +229,26 @@ const features = [];
                           <Star class={`h-5 w-5 ${filled ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
                         ))}
                       </div>
-                      <span class="text-gray-600">{platform.rating}/5</span>
+                      <span class="text-neutral-600">{platform.rating}/5</span>
                     </div>
                     <div class="space-y-3 mb-6">
                       <div class="flex items-center">
-                        <DollarSign class="h-5 w-5 text-indigo-600 mr-2" />
-                        <span class="text-gray-600">{platform.price}</span>
+                        <DollarSign class="h-5 w-5 text-brand-primary-600 mr-2" />
+                        <span class="text-neutral-600">{platform.price}</span>
                       </div>
                       <div class="flex items-center">
                         <div class="flex space-x-1 mr-2">
                           {platform.communication.includes('messaging') && (
-                            <MessageSquare class="h-4 w-4 text-indigo-600" aria-label="Messaging" />
+                            <MessageSquare class="h-4 w-4 text-brand-primary-600" aria-label="Messaging" />
                           )}
                           {platform.communication.includes('video') && (
-                            <Video class="h-4 w-4 text-indigo-600" aria-label="Video" />
+                            <Video class="h-4 w-4 text-brand-primary-600" aria-label="Video" />
                           )}
                           {platform.communication.includes('phone') && (
-                            <Phone class="h-4 w-4 text-indigo-600" aria-label="Phone" />
+                            <Phone class="h-4 w-4 text-brand-primary-600" aria-label="Phone" />
                           )}
                         </div>
-                        <span class="text-gray-600">Communication</span>
+                        <span class="text-neutral-600">Communication</span>
                       </div>
                       <div class="flex items-center">
                         {platform.insurance ? (
@@ -263,7 +256,7 @@ const features = [];
                         ) : (
                           <XCircle class="h-5 w-5 text-red-500 mr-2" />
                         )}
-                        <span class="text-gray-600">Insurance Coverage</span>
+                        <span class="text-neutral-600">Insurance Coverage</span>
                       </div>
                     </div>
                     <div class="space-y-2">
@@ -273,31 +266,31 @@ const features = [];
                   </div>
                   
                   <div class="md:w-3/4 md:pl-8">
-                    <h4 class="font-bold text-gray-800 mb-3">Why We Recommend It for Couples</h4>
-                    <p class="text-gray-600 mb-6">
+                    <h4 class="font-bold text-neutral-900 mb-3">Why We Recommend It for Couples</h4>
+                    <p class="text-neutral-600 mb-6">
                       {platform.description}
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Pros</h5>
+                        <h5 class="font-bold text-neutral-900 mb-3">Pros</h5>
                         <ul class="space-y-2">
                           {platform.pros.map((pro, i) => (
                             <li key={i} class="flex items-start">
                               <CheckCircle class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{pro}</span>
+                              <span class="text-neutral-600">{pro}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h5 class="font-bold text-gray-800 mb-3">Cons</h5>
+                        <h5 class="font-bold text-neutral-900 mb-3">Cons</h5>
                         <ul class="space-y-2">
                           {platform.cons.map((con, i) => (
                             <li key={i} class="flex items-start">
                               <XCircle class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span class="text-gray-600">{con}</span>
+                              <span class="text-neutral-600">{con}</span>
                             </li>
                           ))}
                         </ul>
@@ -305,20 +298,20 @@ const features = [];
                     </div>
                     
                     <div>
-                      <h5 class="font-bold text-gray-800 mb-3">Couples-Specific Features</h5>
+                      <h5 class="font-bold text-neutral-900 mb-3">Couples-Specific Features</h5>
                       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {platform.features.map((feature, i) => (
-                          <div key={i} class="bg-gray-50 rounded-lg p-3 flex items-center">
-                            <CheckCircle class="h-4 w-4 text-indigo-600 mr-2 flex-shrink-0" />
-                            <span class="text-gray-700 text-sm">{feature}</span>
+                          <div key={i} class="bg-neutral-50 rounded-xl p-3 flex items-center">
+                            <CheckCircle class="h-4 w-4 text-brand-primary-600 mr-2 flex-shrink-0" />
+                            <span class="text-neutral-700 text-sm">{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
                     
-                    <div class="mt-6 bg-indigo-50 rounded-lg p-4">
-                      <h5 class="font-bold text-gray-800 mb-2">Best For</h5>
-                      <p class="text-gray-700">{platform.bestFor}</p>
+                    <div class="mt-6 bg-gradient-to-br from-brand-primary-50 to-white rounded-xl p-4">
+                      <h5 class="font-bold text-neutral-900 mb-2">Best For</h5>
+                      <p class="text-neutral-700">{platform.bestFor}</p>
                     </div>
                   </div>
                 </div>
@@ -328,44 +321,44 @@ const features = [];
         </div>
 
         {/* Choosing the Right Platform */}
-        <div class="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">How to Choose the Right Couples Therapy Platform</h2>
+        <div class="bg-white rounded-xl shadow-sm p-8 mb-16">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-6">How to Choose the Right Couples Therapy Platform</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Heart class="h-6 w-6 text-indigo-600" />
+              <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Heart class="h-6 w-6 text-brand-primary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Relationship Goals</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-2">Relationship Goals</h3>
+              <p class="text-neutral-600">
                 Consider your specific relationship challenges and what type of support would be most helpful.
               </p>
             </div>
             
             <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Users class="h-6 w-6 text-indigo-600" />
+              <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <Users class="h-6 w-6 text-brand-primary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Joint Participation</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-2">Joint Participation</h3>
+              <p class="text-neutral-600">
                 Ensure both partners are comfortable with the chosen platform and communication methods.
               </p>
             </div>
             
             <div>
-              <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <DollarSign class="h-6 w-6 text-indigo-600" />
+              <div class="bg-brand-primary-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign class="h-6 w-6 text-brand-primary-600" />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-2">Practical Factors</h3>
-              <p class="text-gray-600">
+              <h3 class="text-lg font-bold text-neutral-900 mb-2">Practical Factors</h3>
+              <p class="text-neutral-600">
                 Consider budget, scheduling flexibility, and technical requirements for joint sessions.
               </p>
             </div>
           </div>
           
-          <div class="mt-8 bg-indigo-50 rounded-lg p-6">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">Our Recommendation</h3>
-            <p class="text-gray-700 mb-4">
+          <div class="mt-8 bg-gradient-to-br from-brand-primary-50 to-white rounded-xl p-6">
+            <h3 class="text-lg font-bold text-neutral-900 mb-3">Our Recommendation</h3>
+            <p class="text-neutral-700 mb-4">
               For most couples, we recommend:
             </p>
             <ul class="space-y-2">
@@ -386,13 +379,13 @@ const features = [];
         </div>
 
         {/* CTA Section */}
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-white text-center">
           <h2 class="text-2xl font-bold mb-4">Ready to Start Couples Therapy?</h2>
           <p class="text-lg mb-6 max-w-2xl mx-auto">
             Take our personalized assessment to get matched with the perfect couples therapy platform for your relationship.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-indigo-700 transition">Find Your Perfect Match</a>
+            <a href="/tools/matchers/therapy-platform-matcher" class="inline-flex items-center bg-brand-primary-600 text-white px-6 py-3 whitespace-nowrap rounded-md hover:bg-brand-primary-700 transition">Find Your Perfect Match</a>
             <a href="/tools/assessments/relationship-assessment" class="border-white text-white hover:bg-white hover:bg-opacity-10">Take Relationship Assessment</a>
           </div>
         </div>
